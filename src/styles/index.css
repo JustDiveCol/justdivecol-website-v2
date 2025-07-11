@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-primary-dark: #0a264f;
+  --color-brand-primary-medium: #133e70;
+  --color-brand-primary-light: #36598b;
+  --color-brand-neutral: #e0e0e0;
+  --color-brand-white: #ffffff;
+  --color-brand-cta-orange: #ff7a00;
+  --color-brand-cta-green: #40d798;
+  --color-brand-cta-yellow: #f7d94c;
+
+  --font-sans: Montserrat, sans-serif;
+  --font-serif: Lora, serif;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
