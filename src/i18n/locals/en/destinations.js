@@ -1,5 +1,6 @@
 // src/i18n/locales/en/destinations.js
 export default {
+  destinationUpcomingTripsTitle: 'Upcoming trips to this destination',
   // Santa Marta
   smName: 'Santa Marta',
   smCardDescription:
