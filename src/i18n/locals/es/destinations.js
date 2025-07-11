@@ -42,4 +42,7 @@ export default {
     'La vibrante vida nocturna y cultural de Santa Marta y Taganga.',
   smUniqueFind4:
     'La oportunidad de obtener tu primera certificación en un entorno espectacular.',
+  smSeoTitle: 'Buceo en Santa Marta | Explora Tayrona y Arrecifes del Caribe',
+  smSeoDesc:
+    'Sumérgete en las ricas aguas de Santa Marta. Descubre vibrante vida marina, impresionantes arrecifes de coral y sitios de buceo únicos cerca del Parque Tayrona con JustDiveCol.',
 };

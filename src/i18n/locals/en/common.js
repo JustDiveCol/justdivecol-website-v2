@@ -24,5 +24,14 @@ export default {
 
   viewTripDetails: 'View trip details',
 
-  loading: 'Loading',
+  loading: 'Loading', //
+
+  // --- Under Construction Page ---
+  underConstructionSeoTitle: 'Under Construction | JustDiveCol',
+  underConstructionSeoDesc:
+    'This page is currently under construction. Please check back soon!',
+  underConstructionTitle: 'Preparing the equipment',
+  underConstructionSubtitle:
+    "We're making our safety stop... This section will be ready for your next dive very soon! Thanks for your patience.",
+  underConstructionCtaText: 'Go to Home',
 };

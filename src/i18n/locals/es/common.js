@@ -26,4 +26,13 @@ export default {
   viewTripDetails: 'Ver detalles del viaje',
 
   loading: 'Cargando',
+
+  // --- Página en Construcción ---
+  underConstructionSeoTitle: 'En Construcción | JustDiveCol',
+  underConstructionSeoDesc:
+    'Esta página está actualmente en construcción. ¡Vuelve pronto!',
+  underConstructionTitle: 'Preparando el equipo',
+  underConstructionSubtitle:
+    'Estamos haciendo nuestra parada de seguridad... ¡Esta sección estará lista para tu próxima inmersión muy pronto! Gracias por tu paciencia.',
+  underConstructionCtaText: 'Ir al Inicio',
 };

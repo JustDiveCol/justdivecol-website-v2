@@ -9,12 +9,18 @@ import DescriptionSection from '../../common/Sections/DescriptionSection';
 import GallerySection from '../../common/Sections/GallerySection';
 import DetailsCard from '../../common/Cards/DetailsCard';
 import ChecklistCard from '../../common/Cards/ChecklistCard';
-import UpcomingTripsHorizontalSection from '../../common/Sections/UpcomingTripsHorizontalSection';
-import CtaComponent from '../../../../components/CtaComponent';
+import UpcomingTripsVerticalSection from '../../common/Sections/UpcomingTripsVerticalSection'; // Using vertical as per your last request
+import CtaCard from '../../common/Cards/CtaCard';
 import { contactPageData } from '../../../../data/pages/contactData';
+import { experiencesPageData } from '../../../../data/pages/experiencesData'; // Import experiencesPageData to get reusable CTA keys
 
 const DestinationLayout = ({ destinationData, upcomingTrips }) => {
-  const { t } = useTranslation(['destinations', 'common', 'contact']);
+  const { t } = useTranslation([
+    'destinations',
+    'common',
+    'contact',
+    'experiencesPage',
+  ]); // Add 'experiencesPage' namespace
 
   if (!destinationData || !destinationData.page) {
     return (
@@ -50,13 +56,12 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
       />
 
       <div className='container mx-auto p-4 md:p-8 grid lg:grid-cols-3 gap-8'>
-        <main className='lg:col-span-2 space-y-16'>
+        <main className='lg:col-span-2 space-y-16 lg:sticky top-24 h-fit'>
           <DescriptionSection
             descriptionData={destinationData.page.destinationInfo}
             translationNS='destinations'
           />
 
-          {/* Dive Sites Section - using inline rendering for now, could be a component */}
           <section>
             <h2 className='text-3xl font-sans font-bold text-brand-white mb-6'>
               {t(destinationData.page.diveSites.titleKey, {
@@ -97,24 +102,22 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
             translationNS='destinations'
           />
 
-          {/* CORRECTED USAGE: Using UpcomingTripsHorizontalSection with new titleKey */}
-          <UpcomingTripsHorizontalSection
+          <UpcomingTripsVerticalSection
             availableTrips={upcomingTrips}
-            titleKey='destinationUpcomingTripsTitle' // Use the new translation key
+            titleKey='destinationUpcomingTripsTitle'
             noTripsMessageKey='noUpcomingTrips'
-            translationNS='destinations' // Namespace for this section's title and upcoming trip details
+            translationNS='destinations'
           />
 
-          <CtaComponent
-            sectionData={{
-              titleKey: 'expCtaTitle',
-              subtitleKey: 'expCtaSubtitle',
-              ctaTextKey: 'expCtaButton',
-              ctaLink: whatsappUrl,
-              imageUrl:
-                'https://placehold.co/1920x600/000/fff?text=Private+Experience+Banner',
+          {/* CORRECTED: Using CtaCard instead of CtaComponent */}
+          <CtaCard
+            ctaData={{
+              titleKey: experiencesPageData.customTripCta.titleKey, // Reusing key from experiencesPageData
+              buttonTextKey: experiencesPageData.customTripCta.ctaTextKey, // Reusing key
+              link: whatsappUrl, // Use the generated WhatsApp URL
+              isExternal: true, // It's an external link
             }}
-            translationNS='experiencesPage'
+            translationNS='experiencesPage' // Namespace where these keys are defined
           />
         </aside>
       </div>

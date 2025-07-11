@@ -41,4 +41,7 @@ export default {
     'The vibrant nightlife and culture of Santa Marta and Taganga.',
   smUniqueFind4:
     'The opportunity to get your first certification in a spectacular setting.',
+  smSeoTitle: 'Santa Marta Diving | Explore Tayrona & Caribbean Reefs',
+  smSeoDesc:
+    'Dive into the rich waters of Santa Marta. Discover vibrant marine life, stunning coral reefs, and unique dive sites near Tayrona National Park with JustDiveCol.',
 };

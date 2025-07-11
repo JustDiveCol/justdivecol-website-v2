@@ -1,8 +1,8 @@
 // src/data/content/destinations/_index.js
 import { publishedExperiences } from '../experiences/_index.js';
-import { santaMartaDestination } from './santa-marta.js';
-// --- Import other destinations here as you create them ---
+import { santaMartaDestination } from './santa-marta.js'; // Imports the full object
 
+// This should reference the full object imported from santa-marta.js
 export const destinationsById = {
   'santa-marta': santaMartaDestination,
 };

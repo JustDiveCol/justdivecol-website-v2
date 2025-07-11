@@ -66,4 +66,8 @@ export const santaMartaDestination = {
       ],
     },
   },
+  seo: {
+    titleKey: 'smSeoTitle',
+    descriptionKey: 'smSeoDesc',
+  },
 };

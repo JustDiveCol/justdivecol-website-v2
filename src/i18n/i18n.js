@@ -21,6 +21,7 @@ import contactEN from './locals/en/contact.js';
 import coursesEN from './locals/en/courses.js';
 import destinationsEN from './locals/en/destinations.js';
 import experiencesEN from './locals/en/experiences.js';
+import policiesEN from './locals/en/policies.js';
 
 // --- Spanish Imports ---
 import navbarES from './locals/es/navbar.js';
@@ -37,6 +38,7 @@ import contactES from './locals/es/contact.js';
 import coursesES from './locals/es/courses.js';
 import destinationsES from './locals/es/destinations.js';
 import experiencesES from './locals/es/experiences.js';
+import policiesES from './locals/es/policies.js';
 
 const resources = {
   // English resources
@@ -53,6 +55,7 @@ const resources = {
     destinations: destinationsEN,
     experiences: experiencesEN,
     common: commonEN,
+    policies: policiesEN,
   },
   // Spanish resources
   es: {
@@ -68,6 +71,7 @@ const resources = {
     destinations: destinationsES,
     experiences: experiencesES,
     common: commonES,
+    policies: policiesES,
   },
 };
 
@@ -90,6 +94,7 @@ i18n.use(initReactI18next).init({
     'destinations',
     'experiences',
     'common',
+    'policies',
   ],
 
   // It's useful to have a default, though we often specify it

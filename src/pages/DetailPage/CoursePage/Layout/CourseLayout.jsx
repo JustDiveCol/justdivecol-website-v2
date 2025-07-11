@@ -46,7 +46,7 @@ const CourseLayout = ({ courseData, availableTrips }) => {
       {/* Main content container (2-column layout on desktop) */}
       <div className='container mx-auto p-4 md:p-8 grid lg:grid-cols-3 gap-8'>
         {/* Main content column */}
-        <main className='lg:col-span-2 space-y-16'>
+        <main className='lg:col-span-2 space-y-16 lg:sticky top-24 h-fit'>
           {/* Description Section */}
           <DescriptionSection
             descriptionData={courseData.description} // Pass description data
