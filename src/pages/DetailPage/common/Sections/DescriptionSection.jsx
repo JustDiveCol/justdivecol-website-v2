@@ -1,20 +1,21 @@
+// src/pages/DetailPage/common/Sections/DescriptionSection.jsx
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const DescriptionSection = () => {
+const DescriptionSection = ({ descriptionData, translationNS }) => {
+  const { t } = useTranslation(translationNS); // Use the passed namespace
+
+  if (!descriptionData) return null; // Handle cases where data might be missing
+
   return (
     <section>
       <h2 className='text-3xl font-sans font-bold text-brand-white mb-4'>
-        {/* {description.title} */}
-        Description Title
+        {t(descriptionData.titleKey)} {/* Use data and translate */}
       </h2>
       <div className='space-y-4 font-serif text-lg text-brand-neutral/90'>
-        {/* {description.paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))} */}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minus
-        eum. Ut laborum reprehenderit asperiores itaque. Doloribus debitis
-        quidem repellendus minus obcaecati, dolorem accusamus ipsa placeat, ea
-        officia architecto id.
+        {descriptionData.paragraphs.map((pKey) => (
+          <p key={pKey}>{t(pKey)}</p> // Map and translate paragraphs
+        ))}
       </div>
     </section>
   );
