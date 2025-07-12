@@ -38,6 +38,6 @@ export const experiencesPageData = {
     subtitleKey: 'expCtaSubtitle',
     ctaTextKey: 'expCtaButton',
     ctaLink: '/contacto',
-    imageUrl: experiences_cta_background,
+    headerImageUrl: experiences_cta_background,
   },
 };

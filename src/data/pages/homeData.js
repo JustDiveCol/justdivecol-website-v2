@@ -88,6 +88,6 @@ export const homePageData = {
     subtitleKey: 'homeFinalCtaSubtitle',
     ctaTextKey: 'homeFinalCtaText',
     ctaLink: '/contacto',
-    imageUrl: home_cta_background,
+    headerImageUrl: home_cta_background,
   },
 };
