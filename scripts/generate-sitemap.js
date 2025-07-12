@@ -1,9 +1,9 @@
 // scripts/generate-sitemap.js
 import fs from 'fs';
-import { allDestinations } from '../src/data/content/destinations/_index.js';
-import { publishedExperiences } from '../src/data/content/experiences/_index.js';
-import { publishedCourses } from '../src/data/content/courses/_index.js';
-import { navLinks } from '../src/data/global/navbarData.js';
+import { allDestinationsLite } from '../src/data/sitemap/destinations-lite.js';
+import { publishedExperiencesLite } from '../src/data/sitemap/experiences-lite.js';
+import { publishedCoursesLite } from '../src/data/sitemap/courses-lite.js';
+import { navLinks } from '../src/data/global/navbarData.js'; // este parece no tener problemas
 
 const BASE_URL = 'https://www.justdivecol.com';
 
@@ -12,13 +12,15 @@ const generateSitemap = async () => {
   const staticPages = navLinks.map((link) => link.path);
 
   // Dynamic pages
-  const destinationPages = allDestinations.map(
+  const destinationPages = allDestinationsLite.map(
     (dest) => `/destinos/${dest.id}`
   );
-  const experiencePages = publishedExperiences.map(
+  const experiencePages = publishedExperiencesLite.map(
     (exp) => `/expediciones/${exp.id}`
   );
-  const coursePages = publishedCourses.map((course) => `/cursos/${course.id}`);
+  const coursePages = publishedCoursesLite.map(
+    (course) => `/cursos/${course.id}`
+  );
 
   // All unique routes
   const allRoutes = [

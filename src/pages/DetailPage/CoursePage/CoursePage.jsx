@@ -43,18 +43,18 @@ const CoursePage = () => {
 
   if (isLoading) {
     return (
-      <Navigate
-        to='/404'
-        replace
-      />
+      <div className='flex items-center justify-center min-h-screen text-brand-white text-2xl'>
+        {t('common:loading')}...
+      </div>
     );
   }
 
   if (error || !courseData) {
     return (
-      <div className='flex items-center justify-center min-h-screen text-red-500 text-2xl'>
-        Course not found or an error occurred.
-      </div>
+      <Navigate
+        to='/404'
+        replace
+      />
     );
   }
 
