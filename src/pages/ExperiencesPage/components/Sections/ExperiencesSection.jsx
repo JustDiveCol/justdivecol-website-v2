@@ -1,15 +1,21 @@
+// src/pages/ExperiencesPage/components/Sections/ExperiencesSection.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 
-// Import the data structure from our single source for the homepage
+// Data sources and animations
 import { homePageData } from '../../../../data/pages/homeData';
-
-import SimpleCardComponent from '../../../../components/common/Card/SimpleCardComponent';
-
 import { staggerContainer } from '../../../../hooks/animations';
 
+// Child Components
+import SimpleCardComponent from '../../../../components/common/Card/SimpleCardComponent';
+
+/**
+ * Renders the top section of the Experiences page, displaying the main
+ * categories (Courses, Trips, Private) as a grid of cards.
+ * It reuses the category data defined in homePageData.
+ */
 const ExperiencesSection = () => {
-  // Destructure the relevant data for this section from our homeData file
+  // Destructure the categories data from the shared home page data file.
   const { categories } = homePageData.featuredExperiences;
 
   return (
@@ -17,7 +23,6 @@ const ExperiencesSection = () => {
       <motion.div
         variants={staggerContainer}
         className='container mx-auto text-center'>
-        {/* The card grid doesn't need to be animated itself, but its parent does. */}
         <motion.div
           variants={staggerContainer}
           className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center'>

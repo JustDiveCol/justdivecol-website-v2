@@ -1,12 +1,22 @@
 // src/pages/DetailPage/common/Cards/DetailsCard.jsx
 import React from 'react';
-import { useTranslation } from 'react-i18next'; // Import useTranslation
+import { useTranslation } from 'react-i18next';
 
-// Accept detailsData and translationNS as props
+/**
+ * Renders a card that displays a list of key-value pairs, such as course or trip details.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.detailsData - The data object for the details list.
+ * @param {string} props.detailsData.titleKey - The translation key for the card's title.
+ * @param {object[]} props.detailsData.items - An array of objects, each representing a detail item.
+ * @param {string} props.detailsData.items[].labelKey - The translation key for the detail's label.
+ * @param {string} props.detailsData.items[].valueKey - The translation key for the detail's value.
+ * @param {string} props.translationNS - The i18next namespace for the translations.
+ */
 const DetailsCard = ({ detailsData, translationNS }) => {
-  const { t } = useTranslation(translationNS); // Use the passed namespace
+  const { t } = useTranslation(translationNS);
 
-  // Render nothing if detailsData is not provided or if there are no items
+  // Do not render the component if there is no data to display.
   if (!detailsData || !detailsData.items || detailsData.items.length === 0) {
     return null;
   }
@@ -14,19 +24,16 @@ const DetailsCard = ({ detailsData, translationNS }) => {
   return (
     <div className='bg-brand-primary-medium p-6 rounded-lg shadow-lg'>
       <h3 className='text-2xl font-sans font-bold text-brand-white mb-4'>
-        {t(detailsData.titleKey)} {/* Use data and translate */}
+        {t(detailsData.titleKey)}
       </h3>
       <ul className='space-y-3 font-serif'>
         {detailsData.items.map((item, index) => (
           <li
-            key={item.labelKey || index} // Use labelKey as key if available, otherwise index
+            key={item.labelKey || index} // Fallback to index if labelKey is missing.
             className='flex items-baseline justify-between gap-4'>
-            <span className='text-brand-neutral/80'>
-              {t(item.labelKey)}: {/* Use data and translate */}
-            </span>
+            <span className='text-brand-neutral/80'>{t(item.labelKey)}:</span>
             <span className='text-brand-white text-right'>
-              {t(item.valueKey)}{' '}
-              {/* Use data and translate (assuming valueKey holds a translation key) */}
+              {t(item.valueKey)}
             </span>
           </li>
         ))}

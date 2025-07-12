@@ -3,24 +3,35 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
+// Animation variants and data
 import { staggerContainer } from '../../../../hooks/animations';
+import { paymentMethodsData } from '../../../../data/global/paymentMethodsData';
+import { contactPageData } from '../../../../data/pages/contactData';
+import { publishedExperiences } from '../../../../data/content/experiences/_index';
+
+// Reusable section and card components
 import HeaderComponent from '../../../../components/HeaderComponent';
-import UpcomingTripsHorizontalSection from '../../common/Sections/UpcomingTripsHorizontalSection';
 import DescriptionSection from '../../common/Sections/DescriptionSection';
 import GallerySection from '../../common/Sections/GallerySection';
 import DetailsCard from '../../common/Cards/DetailsCard';
 import PaymentCard from '../../common/Cards/PaymentCard';
 import ChecklistCard from '../../common/Cards/ChecklistCard';
 import CtaCard from '../../common/Cards/CtaCard';
-import UpcomingCoursesHorizontalSection from '../../common/Sections/UpcomingCoursesHorizontalSection'; // For offered courses
+import UpcomingTripsHorizontalSection from '../../common/Sections/UpcomingTripsHorizontalSection';
+import UpcomingCoursesHorizontalSection from '../../common/Sections/UpcomingCoursesHorizontalSection';
+import ItinerarySection from '../../common/Sections/ItinerarySection';
+import { InfoIcon } from '../../../../assets/icons/InfoIcon';
 
-import { paymentMethodsData } from '../../../../data/global/paymentMethodsData';
-import { contactPageData } from '../../../../data/pages/contactData';
-import { publishedExperiences } from '../../../../data/content/experiences/_index';
-import { InfoIcon } from '../../../../assets/icons/InfoIcon'; // Ensure InfoIcon is imported
-
+/**
+ * The main layout component for the experience detail page.
+ * It assembles all necessary sections and cards to display expedition information.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.experienceData - The complete data object for the experience/trip.
+ * @param {object[]} props.offeredCoursesData - An array of course data objects offered with this trip.
+ */
 const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
-  const { t, i18n } = useTranslation([
+  const { t } = useTranslation([
     'experiences',
     'common',
     'payment',
@@ -29,6 +40,7 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
     'destinations',
   ]);
 
+  // A guard clause to prevent rendering if the essential page data is missing.
   if (!experienceData) {
     return (
       <div className='flex items-center justify-center min-h-screen text-red-500 text-2xl'>
@@ -37,12 +49,12 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
     );
   }
 
-  // Define primaryCourseData if an offered course exists (assuming first in array is primary)
-  const primaryCourseData =
-    offeredCoursesData && offeredCoursesData.length > 0
-      ? offeredCoursesData[0]
-      : null;
+  // --- Logic and Data Preparation ---
 
+  // For simplicity, we only show the "What's Included" for the first offered course.
+  const primaryCourseData = offeredCoursesData?.[0] || null;
+
+  // Construct a pre-filled WhatsApp URL for experience-specific inquiries.
   const prefilledText = t('contactWhatsAppMessage', {
     ns: 'contact',
     experienceName: t(experienceData.nameKey, { ns: 'experiences' }),
@@ -52,11 +64,12 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
     ''
   )}?text=${encodeURIComponent(prefilledText)}`;
 
+  // Find other upcoming trips to the same destination to show as alternatives.
   const otherTripsToThisDestination = experienceData.destinationId
     ? publishedExperiences.filter(
         (trip) =>
           trip.destinationId === experienceData.destinationId &&
-          trip.id !== experienceData.id && // Exclude current trip
+          trip.id !== experienceData.id && // Exclude the current trip.
           new Date(trip.details.endDate) >= new Date().setHours(0, 0, 0, 0)
       )
     : [];
@@ -67,18 +80,14 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
       initial='hidden'
       animate='show'
       exit='hidden'>
-      {/* Header */}
       <HeaderComponent
         sectionData={experienceData.header}
         translationNS='experiences'
       />
 
-      {/* Main content container (2 columns on desktop) */}
       <div className='container mx-auto p-4 md:p-8 grid lg:grid-cols-3 gap-8 items-start'>
-        {/* Main content column */}
-        {/* REVERTED: Removed ref and style from here */}
+        {/* --- Main Content Column (Left) --- */}
         <main className='lg:col-span-2 space-y-16 lg:sticky top-24 h-fit'>
-          {/* Upcoming Trips Section (showing other trips to this destination) */}
           {otherTripsToThisDestination.length > 0 && (
             <UpcomingTripsHorizontalSection
               availableTrips={otherTripsToThisDestination}
@@ -88,50 +97,18 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
             />
           )}
 
-          {/* Description Section */}
           <DescriptionSection
             descriptionData={experienceData.description}
             translationNS='experiences'
           />
 
-          {/* Itinerary Section */}
-          {experienceData.itinerary &&
-            experienceData.itinerary.days?.length > 0 && (
-              <section>
-                <h2 className='text-3xl font-sans font-bold text-brand-white mb-6'>
-                  {t(experienceData.itinerary.titleKey, { ns: 'experiences' })}
-                </h2>
-                <div className='space-y-6'>
-                  {experienceData.itinerary.days.map((dayData) => (
-                    <div key={dayData.day}>
-                      <h3 className='text-2xl font-sans font-semibold text-brand-cta-green'>
-                        {t(dayData.titleKey, { ns: 'experiences' })}
-                      </h3>
-                      <p className='mt-1 font-serif text-brand-neutral/90'>
-                        {t(dayData.descriptionKey, { ns: 'experiences' })}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                {experienceData.itinerary.notes &&
-                  experienceData.itinerary.notes.length > 0 && (
-                    <div className='mt-6 space-y-2'>
-                      {experienceData.itinerary.notes.map((noteKey, index) => (
-                        <div
-                          key={index}
-                          className='flex items-start p-4 bg-brand-primary-light/30 rounded-lg text-brand-neutral/80'>
-                          <InfoIcon />
-                          <p className='font-serif text-sm'>
-                            {t(noteKey, { ns: 'experiences' })}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-              </section>
-            )}
+          {experienceData.itinerary && (
+            <ItinerarySection
+              itineraryData={experienceData.itinerary}
+              translationNS='experiences'
+            />
+          )}
 
-          {/* Offered Courses Section - Using UpcomingCoursesHorizontalSection */}
           {offeredCoursesData && offeredCoursesData.length > 0 && (
             <UpcomingCoursesHorizontalSection
               availableCourses={offeredCoursesData}
@@ -141,36 +118,29 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
             />
           )}
 
-          {/* Gallery Section */}
           <GallerySection
             galleryData={experienceData.gallery}
             translationNS='experiences'
           />
         </main>
 
-        {/* Sidebar with key information */}
-        {/* REVERTED: Removed ref, style, and 'relative' class if it was only for the hook */}
+        {/* --- Sidebar Column (Right) --- */}
         <aside className='lg:col-span-1 space-y-8 lg:sticky top-24 h-fit'>
-          {/* Details Card */}
           <DetailsCard
             detailsData={experienceData.details}
             translationNS='experiences'
           />
-
-          {/* Payment Methods */}
           <PaymentCard
             paymentData={paymentMethodsData}
             translationNS='payment'
           />
-
-          {/* What Is Included (for the Experience/Trip) */}
           <ChecklistCard
             checklistData={experienceData.whatIsIncluded}
             translationNS='experiences'
             type='included'
           />
 
-          {/* NEW CARD: What Is Included (for the Course) */}
+          {/* If a course is offered, show what's included with that course as well. */}
           {primaryCourseData && (
             <ChecklistCard
               checklistData={primaryCourseData.whatIsIncluded}
@@ -179,14 +149,12 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
             />
           )}
 
-          {/* What Is NOT Included (for the Experience) */}
           <ChecklistCard
             checklistData={experienceData.whatIsNotIncluded}
             translationNS='experiences'
             type='excluded'
           />
 
-          {/* Call to Action (CtaCard) */}
           <CtaCard
             ctaData={{
               titleKey: experienceData.cta.titleKey,

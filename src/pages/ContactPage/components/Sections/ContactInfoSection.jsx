@@ -7,8 +7,21 @@ import { InstagramIcon } from '../../../../assets/icons/InstagramIcon';
 import { TikTokIcon } from '../../../../assets/icons/TikTokIcon';
 import { YouTubeIcon } from '../../../../assets/icons/YouTubeIcon';
 
+/**
+ * Renders the contact information section, including email, phone, and social media links.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.contactInfoData - The data object for the contact information.
+ * @param {string} props.contactInfoData.titleKey - Translation key for the section title.
+ * @param {string} props.contactInfoData.email - The contact email address.
+ * @param {string} props.contactInfoData.phone - The contact phone number.
+ * @param {object[]} props.contactInfoData.socials - An array of social media link objects.
+ */
 const ContactInfoSection = ({ contactInfoData }) => {
   const { t } = useTranslation('contact');
+
+  // Maps icon names from the data file to their corresponding imported components.
+  // This allows for dynamically rendering the correct icon for each social media link.
   const socialIcons = {
     instagram: <InstagramIcon />,
     tiktok: <TikTokIcon />,
@@ -33,6 +46,8 @@ const ContactInfoSection = ({ contactInfoData }) => {
           rel='noopener noreferrer'
           className='flex items-center hover:text-brand-cta-orange transition-colors'>
           <PhoneIcon />
+          {/* Note: The "(WhatsApp)" text is hardcoded here for simplicity,
+              but could be moved to a translation file if needed. */}
           <span>{contactInfoData.phone} (WhatsApp)</span>
         </a>
       </div>

@@ -1,3 +1,4 @@
+// src/components/icons/InstagramIcon.jsx
 export const InstagramIcon = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'

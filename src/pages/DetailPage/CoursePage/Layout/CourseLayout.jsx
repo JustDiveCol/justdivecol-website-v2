@@ -1,9 +1,14 @@
+// src/pages/DetailPage/CoursePage/Layout/CourseLayout.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
+// Animation variants and data
 import { staggerContainer } from '../../../../hooks/animations';
+import { paymentMethodsData } from '../../../../data/global/paymentMethodsData';
+import { contactPageData } from '../../../../data/pages/contactData';
 
+// Reusable section and card components
 import HeaderComponent from '../../../../components/HeaderComponent';
 import DescriptionSection from '../../common/Sections/DescriptionSection';
 import CurriculumSection from '../../common/Sections/CurriculumSection';
@@ -14,18 +19,22 @@ import CtaCard from '../../common/Cards/CtaCard';
 import UpcomingTripsHorizontalSection from '../../common/Sections/UpcomingTripsHorizontalSection';
 import PaymentCard from '../../common/Cards/PaymentCard';
 
-import { paymentMethodsData } from '../../../../data/global/paymentMethodsData';
-import { contactPageData } from '../../../../data/pages/contactData';
-
+/**
+ * The main layout component for the course detail page.
+ * It assembles all the necessary sections and cards to display course information.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.courseData - The complete data object for the course.
+ * @param {object[]} props.availableTrips - An array of trip objects where this course can be taken.
+ */
 const CourseLayout = ({ courseData, availableTrips }) => {
-  const { t } = useTranslation(['courses', 'common', 'contact']); // Load necessary namespaces
+  const { t } = useTranslation(['courses', 'common', 'contact']);
 
-  // Construct WhatsApp URL for CTA
-  const prefilledText = t('contactWhatsAppMessage', {
+  // Construct a pre-filled WhatsApp URL for course inquiries.
+  const prefilledText = t('courseInquiryMessage', {
     ns: 'contact',
-    courseName: t(courseData.header.titleKey, { ns: 'courses' }), // Pass course name for inquiry
+    courseName: t(courseData.header.titleKey, { ns: 'courses' }),
   });
-
   const whatsappUrl = `https://wa.me/${contactPageData.contactInfo.phone.replace(
     /\s/g,
     ''
@@ -37,89 +46,74 @@ const CourseLayout = ({ courseData, availableTrips }) => {
       initial='hidden'
       animate='show'
       exit='hidden'>
-      {/* Header - use courseData for header props */}
       <HeaderComponent
-        sectionData={courseData.header} // Pass specific header data from courseData
-        translationNS='courses' // Specify namespace for header translations
+        sectionData={courseData.header}
+        translationNS='courses'
       />
 
-      {/* Main content container (2-column layout on desktop) */}
+      {/* Main two-column layout for the page content. */}
       <div className='container mx-auto p-4 md:p-8 grid lg:grid-cols-3 gap-8'>
-        {/* Main content column */}
+        {/* Main content column (left) */}
         <main className='lg:col-span-2 space-y-16 lg:sticky top-24 h-fit'>
-          {/* Description Section */}
           <DescriptionSection
-            descriptionData={courseData.description} // Pass description data
-            translationNS='courses' // Specify namespace
+            descriptionData={courseData.description}
+            translationNS='courses'
           />
-
-          {/* Curriculum Section */}
           <CurriculumSection
-            curriculumData={courseData.curriculum} // Pass curriculum data
-            translationNS='courses' // Specify namespace
+            curriculumData={courseData.curriculum}
+            translationNS='courses'
           />
-
-          {/* Gallery Section */}
           <GallerySection
-            galleryData={courseData.gallery} // Pass gallery data
-            translationNS='courses' // Specify namespace
+            galleryData={courseData.gallery}
+            translationNS='courses'
           />
         </main>
 
-        {/* Sidebar with key information */}
+        {/* Sidebar column (right) */}
         <aside className='lg:col-span-1 space-y-8 lg:sticky top-24 h-fit'>
-          {/* Course Details */}
           <DetailsCard
-            detailsData={courseData.details} // Pass details data
-            translationNS='courses' // Specify namespace
+            detailsData={courseData.details}
+            translationNS='courses'
           />
-
-          {/* Payment Methods */}
           <PaymentCard
-            paymentData={paymentMethodsData} // Pass payment methods data
-            translationNS='payment' // Specify namespace for payment
+            paymentData={paymentMethodsData}
+            translationNS='payment'
           />
-
-          {/* What's Included */}
           <ChecklistCard
-            checklistData={courseData.whatIsIncluded} // Pass included items data
-            translationNS='courses' // Specify namespace
-            type='included' // Add a type prop to differentiate styling if needed
+            checklistData={courseData.whatIsIncluded}
+            translationNS='courses'
+            type='included'
           />
-
-          {/* Requirements */}
           <ChecklistCard
-            checklistData={courseData.requirements} // Pass requirements data
-            translationNS='courses' // Specify namespace
-            type='requirements' // Add a type prop to differentiate styling if needed
+            checklistData={courseData.requirements}
+            translationNS='courses'
+            type='requirements'
           />
-
-          {/* Available Trips (can be horizontal or vertical depending on prop) */}
           <UpcomingTripsHorizontalSection
-            availableTrips={availableTrips} // Pass available trips
-            titleKey='availableTripsTitle' // Key for section title
-            noTripsMessageKey='noUpcomingTrips' // Key for no trips message
-            translationNS='courses' // Specify namespace
+            availableTrips={availableTrips}
+            titleKey='availableTripsTitle'
+            noTripsMessageKey='noUpcomingTrips'
+            translationNS='courses'
           />
 
-          {/* Call to Action (CTA) - conditional based on available trips */}
+          {/* This CTA is conditional: its content changes based on whether trips are available. */}
           <CtaCard
             ctaData={
               availableTrips && availableTrips.length > 0
                 ? {
-                    titleKey: 'courseCtaAvailableTitle', //
-                    buttonTextKey: 'courseCtaAvailableButton', //
-                    link: '/politicas', // Link to policies page
+                    titleKey: 'courseCtaAvailableTitle',
+                    buttonTextKey: 'courseCtaAvailableButton',
+                    link: '/politicas', // Link to policies page if trips are scheduled.
                     isExternal: false,
                   }
                 : {
-                    titleKey: courseData.cta.titleKey, //
-                    buttonTextKey: courseData.cta.buttonTextKey, //
-                    link: whatsappUrl, // Use the generated WhatsApp URL
-                    isExternal: true, // Mark as external link
+                    titleKey: courseData.cta.titleKey,
+                    buttonTextKey: courseData.cta.buttonTextKey,
+                    link: whatsappUrl, // Link to WhatsApp if no trips are scheduled.
+                    isExternal: true,
                   }
             }
-            translationNS='courses' // Specify namespace
+            translationNS='courses'
           />
         </aside>
       </div>

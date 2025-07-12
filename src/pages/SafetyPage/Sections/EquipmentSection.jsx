@@ -2,16 +2,29 @@
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
+// Animations and Child Components
 import { staggerContainer, fadeInUp } from '../../../hooks/animations';
+import { EquipmentCardComponent } from '../Card/EquipmentCardComponent';
 
+// Icons
 import { RegulatorIcon } from '../../../assets/icons/RegulatorIcon';
 import { BcdIcon } from '../../../assets/icons/BcdIcon';
 import { ComputerIcon } from '../../../assets/icons/ComputerIcon';
 
-import { EquipmentCardComponent } from '../Card/EquipmentCardComponent';
-
+/**
+ * Renders the "Equipment" section of the Safety page.
+ * It displays a title, subtitle, and a grid of cards for each piece of equipment.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.equipmentData - The data object for this section.
+ * @param {string} props.equipmentData.titleKey - The translation key for the section title.
+ * @param {string} props.equipmentData.subtitleKey - The translation key for the section subtitle.
+ * @param {object[]} props.equipmentData.items - An array of equipment item objects.
+ */
 const EquipmentSection = ({ equipmentData }) => {
   const { t } = useTranslation('safety');
+
+  // Maps icon string identifiers from data to the actual imported icon components.
   const iconMap = {
     regulator: <RegulatorIcon />,
     bcd: <BcdIcon />,
@@ -40,7 +53,7 @@ const EquipmentSection = ({ equipmentData }) => {
             <EquipmentCardComponent
               key={item.id}
               itemData={item}
-              icon={iconMap[item.icon]}
+              icon={iconMap[item.icon]} // The resolved icon component is passed as a prop.
             />
           ))}
         </motion.div>

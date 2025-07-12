@@ -1,3 +1,4 @@
+// src/components/CtaComponent.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
@@ -14,7 +15,7 @@ const CTAComponent = ({ sectionData, translationNS }) => {
     <section
       className='relative bg-cover bg-center py-24 px-4 text-brand-white'
       style={{ backgroundImage: `url(${imageUrl})` }}>
-      {/* Dark overlay for text readability */}
+      {/* Adds a dark overlay to ensure text readability over the background image. */}
       <div className='absolute inset-0 bg-brand-primary-dark/80'></div>
 
       <motion.div
@@ -23,7 +24,6 @@ const CTAComponent = ({ sectionData, translationNS }) => {
         whileInView='animate'
         viewport={{ once: true, amount: 0.3 }}
         className='relative container mx-auto text-center'>
-        {/* ... (el resto del código del componente es idéntico) ... */}
         <motion.h2
           variants={fadeInUp}
           className='text-4xl md:text-5xl font-sans font-extrabold uppercase'>

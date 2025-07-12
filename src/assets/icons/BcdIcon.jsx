@@ -1,3 +1,4 @@
+// src/components/icons/BcdIcon.jsx
 export const BcdIcon = () => (
   <svg
     className='h-12 w-12'

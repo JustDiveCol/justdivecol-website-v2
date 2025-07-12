@@ -3,8 +3,18 @@ import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
 
+/**
+ * Renders the "Our History" section with a title, paragraphs, and a feature image.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.historyData - The data object for this section.
+ * @param {string} props.historyData.titleKey - The translation key for the section title.
+ * @param {string[]} props.historyData.paragraphs - An array of translation keys for the paragraphs.
+ * @param {string} props.historyData.imageUrl - The URL for the section's image.
+ */
 const HistorySection = ({ historyData }) => {
   const { t } = useTranslation('aboutUs');
+
   return (
     <motion.section
       variants={staggerContainer}
@@ -27,6 +37,7 @@ const HistorySection = ({ historyData }) => {
             src={historyData.imageUrl}
             alt={t(historyData.titleKey)}
             className='w-full h-full object-cover'
+            loading='lazy'
           />
         </motion.div>
       </div>

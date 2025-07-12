@@ -1,20 +1,32 @@
+// src/pages/HomePage/components/Cards/SafetyCardComponent.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../../hooks/animations';
 
-// Import the icons
+// Import the icons required for this component.
 import { ShieldCheckIcon } from '../../../../assets/icons/ShieldCheckIcon';
 import { CogIcon } from '../../../../assets/icons/CogIcon';
 import { ClipboardListIcon } from '../../../../assets/icons/ClipboardListIcon';
 
-// Map keys to Icon components. We can expand this map as needed.
+// Maps string identifiers from the data file to the actual imported icon components.
+// This allows the data layer to remain simple (e.g., "id: 'guias'").
 const iconMap = {
   guias: <ShieldCheckIcon />,
   equipos: <CogIcon />,
   protocolos: <ClipboardListIcon />,
 };
 
+/**
+ * Renders a card highlighting a single safety feature.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.item - The data object for the safety point.
+ * @param {string} props.item.id - The unique ID used as a key and for the icon map.
+ * @param {string} props.item.titleKey - The translation key for the card's title.
+ * @param {string} props.item.descriptionKey - The translation key for the card's description.
+ * @param {string} props.translationNS - The i18next namespace for the translations.
+ */
 const SafetyCardComponent = ({ item, translationNS }) => {
   const { t } = useTranslation(translationNS);
 

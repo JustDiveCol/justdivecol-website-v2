@@ -1,3 +1,4 @@
+// src/components/icons/ShieldIcon.jsx
 export const ShieldIcon = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'

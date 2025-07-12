@@ -1,3 +1,4 @@
+// src/components/icons/ScubaMaskIcon.jsx
 export const ScubaMaskIcon = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'

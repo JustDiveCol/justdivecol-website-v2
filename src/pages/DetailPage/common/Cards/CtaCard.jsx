@@ -1,27 +1,38 @@
 // src/pages/DetailPage/common/Cards/CtaCard.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'; // Import useTranslation
+import { useTranslation } from 'react-i18next';
 
-// Accept ctaData and translationNS as props
+/**
+ * Renders a call-to-action (CTA) card with a title and a prominent button.
+ * The button can act as an internal React Router Link or a standard external anchor tag.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.ctaData - The data object for the CTA.
+ * @param {string} props.ctaData.titleKey - The translation key for the card's title.
+ * @param {string} props.ctaData.buttonTextKey - The translation key for the button's text.
+ * @param {string} props.ctaData.link - The destination URL or path.
+ * @param {boolean} [props.ctaData.isExternal=false] - If true, renders an 'a' tag for external links.
+ * @param {string} props.translationNS - The i18next namespace for translations.
+ */
 const CtaCard = ({ ctaData, translationNS }) => {
-  const { t } = useTranslation(translationNS); // Use the passed namespace
+  const { t } = useTranslation(translationNS);
 
-  // Render nothing if ctaData is not provided or if essential keys are missing
+  // Do not render if essential data is missing.
   if (!ctaData || !ctaData.titleKey || !ctaData.buttonTextKey) {
     return null;
   }
 
-  // Determine if it's an external link or an internal React Router link
+  // Determine if the link is external (opens in a new tab) or an internal route.
   const isExternalLink = ctaData.isExternal || ctaData.link.startsWith('http');
 
   const CtaContent = (
     <>
       <h3 className='text-2xl font-sans font-bold text-brand-white'>
-        {t(ctaData.titleKey)} {/* Use data and translate */}
+        {t(ctaData.titleKey)}
       </h3>
       <span className='mt-4 inline-block w-full bg-brand-cta-orange text-brand-white font-sans font-bold uppercase py-3 rounded-md shadow-lg transition-all duration-300 ease-in-out hover:bg-opacity-90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-cta-yellow'>
-        {t(ctaData.buttonTextKey)} {/* Use data and translate */}
+        {t(ctaData.buttonTextKey)}
       </span>
     </>
   );
@@ -29,21 +40,19 @@ const CtaCard = ({ ctaData, translationNS }) => {
   return (
     <div className='bg-brand-primary-light p-6 rounded-lg shadow-lg text-center'>
       {isExternalLink ? (
+        // Use a standard anchor tag for external links.
         <a
           href={ctaData.link}
           target='_blank'
           rel='noopener noreferrer'
           className='block'>
-          {' '}
-          {/* Ensure the anchor tag is a block element to fill width */}
           {CtaContent}
         </a>
       ) : (
+        // Use React Router's Link component for internal navigation.
         <Link
           to={ctaData.link}
           className='block'>
-          {' '}
-          {/* Ensure the Link component is a block element to fill width */}
           {CtaContent}
         </Link>
       )}

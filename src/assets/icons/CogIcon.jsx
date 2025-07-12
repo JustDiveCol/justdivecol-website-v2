@@ -1,3 +1,4 @@
+// src/components/icons/CogIcon.jsx
 export const CogIcon = () => (
   <svg
     className='h-12 w-12'

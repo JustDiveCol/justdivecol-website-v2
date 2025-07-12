@@ -6,6 +6,17 @@ import { useTranslation } from 'react-i18next';
 import { formatDateRange } from '../../../../utils/formatters';
 import { fadeInUp } from '../../../../hooks/animations';
 
+/**
+ * Renders a card for a single destination, showing its image, name, description,
+ * and a list of upcoming trips to that destination.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.destinationData - The data object for the destination.
+ * @param {string} props.destinationData.id - Unique identifier for the destination.
+ * @param {string} props.destinationData.nameKey - Translation key for the destination's name.
+ * @param {object} props.destinationData.card - Data specific to the card's appearance.
+ * @param {string[]} props.destinationData.upcomingTrips - An array of trip data objects.
+ */
 const DestinationCardComponent = ({ destinationData }) => {
   const { t, i18n } = useTranslation(['destinations', 'common']);
   const { id, nameKey, card, upcomingTrips } = destinationData;
@@ -18,6 +29,7 @@ const DestinationCardComponent = ({ destinationData }) => {
         src={card.imageUrl}
         alt={t(nameKey)}
         className='w-full h-56 object-cover'
+        loading='lazy' // Defer image loading to improve initial page performance.
       />
       <div className='p-6 flex flex-col flex-grow'>
         <h3 className='text-2xl font-bold font-sans text-brand-white'>
@@ -53,6 +65,7 @@ const DestinationCardComponent = ({ destinationData }) => {
               ))}
             </ul>
           ) : (
+            // Fallback message if there are no scheduled trips.
             <p className='font-serif text-sm text-brand-neutral/70'>
               {t('common:noScheduledDates')}
             </p>

@@ -6,8 +6,13 @@ import { fadeInUp } from '../../../../hooks/animations';
 
 /**
  * Renders a single "commitment" card with an icon, title, and description.
- * @param {object} pointData - The data for a single commitment point.
- * @param {React.ReactNode} icon - The actual icon component to render.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.pointData - The data object for a single commitment point.
+ * @param {string} props.pointData.id - A unique identifier for the key prop.
+ * @param {string} props.pointData.titleKey - The translation key for the title.
+ * @param {string} props.pointData.descriptionKey - The translation key for the description.
+ * @param {React.ReactNode} props.icon - The actual icon component to render.
  */
 const CommitmentCardComponent = ({ pointData, icon }) => {
   const { t } = useTranslation('aboutUs');
@@ -17,7 +22,7 @@ const CommitmentCardComponent = ({ pointData, icon }) => {
       variants={fadeInUp}
       key={pointData.id}
       className='flex flex-col items-center'>
-      {/* The icon is passed as a ready-to-render component */}
+      {/* The icon is passed as a ready-to-render component. */}
       <div className='text-brand-cta-green mb-4'>{icon}</div>
 
       <h3 className='text-2xl font-sans font-semibold text-brand-white'>

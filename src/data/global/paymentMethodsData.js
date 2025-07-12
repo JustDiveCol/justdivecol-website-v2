@@ -1,4 +1,5 @@
 // src/data/global/paymentMethods.js
+
 export const paymentMethodsData = {
   titleKey: 'paymentTitle',
   methods: [

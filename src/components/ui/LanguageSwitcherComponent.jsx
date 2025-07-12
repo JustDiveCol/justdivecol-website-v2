@@ -1,16 +1,20 @@
 // src/components/ui/LanguageSwitcherComponent.jsx
 import React, { useContext } from 'react';
-import { LanguageContext } from '../../context/LanguageContext'; // Import the context
+import { LanguageContext } from '../../context/LanguageContext';
 
+/**
+ * A UI component that allows the user to switch between supported languages.
+ * It uses the LanguageContext to get and set the current language.
+ */
 const LanguageSwitcherComponent = () => {
-  // Consume the context to get the current language and the function to change it
+  // Consume the LanguageContext to get the current language and the setter function.
   const { language, setLanguage } = useContext(LanguageContext);
 
   return (
     <div className='flex items-center space-x-3 text-sm font-bold uppercase'>
       <button
         onClick={() => setLanguage('es')}
-        // Apply a style if Spanish is the active language
+        // Apply a specific style if this is the active language.
         className={
           language === 'es'
             ? 'text-brand-cta-orange'
@@ -21,7 +25,7 @@ const LanguageSwitcherComponent = () => {
       <span className='text-brand-white/50'>|</span>
       <button
         onClick={() => setLanguage('en')}
-        // Apply a style if English is the active language
+        // Apply a specific style if this is the active language.
         className={
           language === 'en'
             ? 'text-brand-cta-orange'

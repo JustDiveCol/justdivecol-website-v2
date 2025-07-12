@@ -1,4 +1,4 @@
-// src/components/icons/InstagramIcon.jsx
+// src/components/icons/WhatsAppIcon.jsx
 export const WhatsAppIcon = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'

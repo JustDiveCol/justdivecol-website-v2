@@ -1,38 +1,42 @@
 // src/pages/DetailPage/DestinationPage/DestinationPage.jsx
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
+// UI, Layout, and Animation
 import SEOComponent from '../../../components/ui/SEOComponent';
 import DestinationLayout from './Layout/DestinationLayout';
+import { staggerContainer } from '../../../hooks/animations';
+
+// Data fetching utilities
 import { destinationsById } from '../../../data/content/destinations/_index';
 import { publishedExperiences } from '../../../data/content/experiences/_index';
 
-import { staggerContainer } from '../../../hooks/animations';
-
+/**
+ * Renders the detail page for a specific destination.
+ * It fetches destination data and its associated upcoming trips based on the 'destinationId'
+ * from the URL, handles loading/error states, and passes the data to the DestinationLayout.
+ */
 const DestinationPage = () => {
   const { destinationId } = useParams();
   const { t } = useTranslation(['destinations', 'common']);
 
+  // State for managing destination data, trips, loading, and errors.
   const [destinationData, setDestinationData] = useState(null);
   const [upcomingTrips, setUpcomingTrips] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  // Effect to fetch all necessary data when the destinationId changes.
   useEffect(() => {
     const baseDestination = destinationsById[destinationId];
 
-    // NEW PRECISE LOG: Check baseDestination.seo immediately
-    console.log(
-      'DestinationPage: baseDestination.seo (PRECISE CHECK):',
-      baseDestination?.seo
-    );
-
     if (baseDestination) {
       const today = new Date();
-      today.setHours(0, 0, 0, 0);
+      today.setHours(0, 0, 0, 0); // Set to the beginning of the day for accurate comparison.
 
+      // Filter and sort all published experiences to find ones matching this destination.
       const filteredUpcomingTrips = publishedExperiences
         .filter(
           (trip) =>
@@ -46,25 +50,15 @@ const DestinationPage = () => {
 
       setDestinationData(baseDestination);
       setUpcomingTrips(filteredUpcomingTrips);
-      setIsLoading(false);
-
-      console.log(
-        'DestinationPage: baseDestination (entire object):',
-        baseDestination
-      );
-      console.log(
-        'DestinationPage: filteredUpcomingTrips:',
-        filteredUpcomingTrips
-      );
     } else {
-      console.error(
-        'DestinationPage: Destination ID not found:',
-        destinationId
-      );
+      // If no destination matches the ID, set an error state.
       setError(true);
-      setIsLoading(false);
     }
-  }, [destinationId]);
+
+    setIsLoading(false);
+  }, [destinationId]); // Rerun effect if the destinationId in the URL changes.
+
+  // --- Render based on component state ---
 
   if (isLoading) {
     return (
@@ -74,16 +68,12 @@ const DestinationPage = () => {
     );
   }
 
-  if (error || !destinationData || !destinationData.seo) {
-    console.error(
-      'DestinationPage: Render error - Destination data or SEO information is missing/invalid.',
-      { destinationData, error }
-    );
+  if (error || !destinationData) {
     return (
-      <div className='flex items-center justify-center min-h-screen text-red-500 text-2xl'>
-        Destination data or SEO information missing. Please check destination ID
-        and data structure.
-      </div>
+      <Navigate
+        to='/404'
+        replace
+      />
     );
   }
 
@@ -94,6 +84,8 @@ const DestinationPage = () => {
         description={t(destinationData.seo.descriptionKey, {
           ns: 'destinations',
         })}
+        imageUrl={destinationData.page.headerImageUrl}
+        url={`/destinos/${destinationData.id}`}
       />
       <motion.div
         variants={staggerContainer}

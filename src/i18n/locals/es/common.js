@@ -26,6 +26,7 @@ export default {
   viewTripDetails: 'Ver detalles del viaje',
 
   loading: 'Cargando',
+  day: 'Día',
 
   // --- Página en Construcción ---
   underConstructionSeoTitle: 'En Construcción | JustDiveCol',
@@ -35,4 +36,9 @@ export default {
   underConstructionSubtitle:
     'Estamos haciendo nuestra parada de seguridad... ¡Esta sección estará lista para tu próxima inmersión muy pronto! Gracias por tu paciencia.',
   underConstructionCtaText: 'Ir al Inicio',
+
+  notFoundTitle: '404: RUTA PERDIDA',
+  notFoundSubtitle:
+    '¡Ups! Olvidaste ecualizar y terminaste aquí. Regresemos a la superficie antes de que duela.',
+  notFoundCtaText: 'Volver a la Superficie',
 };

@@ -1,3 +1,4 @@
+// src/components/icons/LostDiverIcon.jsx
 export const LostDiverIcon = () => (
   <svg
     className='h-24 w-24 text-brand-cta-yellow'

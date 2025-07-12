@@ -1,23 +1,27 @@
-// src/components/CalendarExperienceCardComponent.jsx
+// src/pages/ExperiencesPage/components/Cards/CalendarExperienceCardComponent.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-// Import utilities and components we've created
 import { formatDateRange } from '../../../../utils/formatters';
 import { CalendarIcon } from '../../../../assets/icons/CalendarIcon';
-
 import { fadeInUp } from '../../../../hooks/animations';
 
 /**
- * A card component that displays a single upcoming trip or experience.
+ * A card component that displays a single upcoming trip in a calendar-like list.
  * Used within the CalendarExperiencesSection.
- * @param {object} tripData - The data object for a specific trip.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.tripData - The data object for a specific trip.
+ * @param {string} props.tripData.id - The unique identifier for the trip.
+ * @param {string} props.tripData.nameKey - The translation key for the trip's name.
+ * @param {object} props.tripData.details - An object containing date information.
+ * @param {string} props.tripData.details.startDate - The start date of the trip.
+ * @param {string} props.tripData.details.endDate - The end date of the trip.
  */
 const CalendarExperienceCardComponent = ({ tripData }) => {
-  // We load both 'common' and 'experiences' namespaces
-  // 'experiences' for the trip name, 'common' for button texts
+  // We load both 'common' and 'experiences' namespaces for trip names and generic button texts.
   const { t, i18n } = useTranslation(['common', 'experiences']);
   const { id, nameKey, details } = tripData;
 
@@ -30,11 +34,9 @@ const CalendarExperienceCardComponent = ({ tripData }) => {
         <CalendarIcon />
         <div className='ml-4'>
           <h3 className='text-xl font-sans font-semibold text-brand-white'>
-            {/* We specify the namespace 'experiences' for clarity */}
             {t(nameKey, { ns: 'experiences' })}
           </h3>
           <p className='text-md font-serif text-brand-neutral/80'>
-            {/* We pass all necessary parameters to our formatter function */}
             {formatDateRange(
               details.startDate,
               details.endDate,
@@ -50,7 +52,6 @@ const CalendarExperienceCardComponent = ({ tripData }) => {
         <Link
           to={`/expediciones/${id}`}
           className='bg-brand-cta-orange text-white font-sans font-bold text-sm uppercase py-2 px-5 rounded-md hover:bg-opacity-90 transition-colors duration-300'>
-          {/* We specify the namespace 'common' for this shared text */}
           {t('viewDetails', { ns: 'common' })}
         </Link>
       </div>

@@ -1,3 +1,4 @@
+// src/components/icons/RegulatorIcon.jsx
 export const RegulatorIcon = () => (
   <svg
     className='h-12 w-12'

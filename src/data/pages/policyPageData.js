@@ -1,4 +1,7 @@
 // src/data/pages/policyPageData.js
+
+import policy_header_background from '../../assets/images/page-specific/policy/policy-header-background.webp';
+
 export const policyPageData = {
   seo: {
     titleKey: 'policiesSeoTitle',
@@ -7,8 +10,7 @@ export const policyPageData = {
   header: {
     titleKey: 'policiesHeaderTitle',
     subtitleKey: 'policiesHeaderSubtitle',
-    imageUrl:
-      'https://placehold.co/1920x600/0A264F/FF7A00?text=Policies+Banner', // Placeholder image
+    imageUrl: policy_header_background,
   },
   sections: [
     {

@@ -7,8 +7,14 @@ import { getDestinationsWithUpcomingTrips } from '../../../../data/content/desti
 import { staggerContainer } from '../../../../hooks/animations';
 import DestinationCardComponent from '../Cards/DestinationCardComponent';
 
+/**
+ * Renders the "Memorable Destinations" section of the Experiences page.
+ * It fetches all published destinations and their associated upcoming trips.
+ */
 const DestinationsSection = () => {
   const { t } = useTranslation('experiencesPage');
+
+  // Fetches all published destinations and attaches a list of their respective upcoming trips.
   const destinationsWithTrips = getDestinationsWithUpcomingTrips();
 
   const { sectionId, titleKey } = experiencesPageData.fullCatalog.destinations;

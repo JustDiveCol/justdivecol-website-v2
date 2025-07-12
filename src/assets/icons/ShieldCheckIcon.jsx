@@ -1,3 +1,4 @@
+// src/components/icons/ShieldCheckIcon.jsx
 export const ShieldCheckIcon = () => (
   <svg
     className='h-12 w-12'

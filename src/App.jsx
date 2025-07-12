@@ -16,13 +16,12 @@ export const App = () => {
 
   return (
     <div className='flex flex-col min-h-screen bg-brand-primary-dark'>
-      {/* Fixed Navbar for all pages */}
       <Navbar />
 
-      {/* "Invisible" Component that scroll up automatically */}
+      {/* Handles scroll-to-top behavior on route changes. */}
       <RouteScrollManagerComponent />
 
-      {/* Allow to animate components */}
+      {/* Enables page transition animations. */}
       <AnimatePresence mode='wait'>
         <main
           key={location.pathname}
@@ -30,6 +29,7 @@ export const App = () => {
           <Outlet />
         </main>
       </AnimatePresence>
+
       <Footer />
       <FloatingActionsComponent />
     </div>

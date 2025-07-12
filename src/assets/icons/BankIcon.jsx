@@ -1,3 +1,4 @@
+// src/components/icons/BankIcon.jsx
 export const BankIcon = () => (
   <svg
     xmlns='[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)'

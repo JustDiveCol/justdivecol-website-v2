@@ -1,6 +1,16 @@
 // src/pages/ContactPage/components/WhatsAppCtaSection.jsx
 import { useTranslation } from 'react-i18next';
 
+/**
+ * Renders a call-to-action section that prompts the user to start a WhatsApp chat.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.whatsAppActionData - The data object for the CTA content.
+ * @param {string} props.whatsAppActionData.titleKey - The translation key for the title.
+ * @param {string} props.whatsAppActionData.descriptionKey - The translation key for the description.
+ * @param {string} props.whatsAppActionData.ctaTextKey - The translation key for the button text.
+ * @param {string} props.whatsappUrl - The fully constructed WhatsApp URL with a pre-filled message.
+ */
 const WhatsAppCtaSection = ({ whatsAppActionData, whatsappUrl }) => {
   const { t } = useTranslation('contact');
   return (

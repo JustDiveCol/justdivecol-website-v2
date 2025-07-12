@@ -1,5 +1,5 @@
 // src/data/pages/contact.js
-// import contactHeaderImage from '../../assets/contact/contact-header.jpg'; // Placeholder, replace with your image
+import contact_header_background from '../../assets/images/page-specific/contact/contact-header-background.webp'; // Placeholder, replace with your image
 
 export const contactPageData = {
   seo: {
@@ -9,7 +9,7 @@ export const contactPageData = {
   header: {
     titleKey: 'contactHeaderTitle',
     subtitleKey: 'contactHeaderSubtitle',
-    imageUrl: 'https://placehold.co/1920x600?text=Contact+Header',
+    imageUrl: contact_header_background,
     ctaTextKey: 'contactHeaderCtaButton',
     ctaLink: '/contacto',
   },

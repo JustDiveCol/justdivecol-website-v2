@@ -24,4 +24,6 @@ export default {
 
   courseInquiryMessage:
     'Hola, equipo de JustDiveCol. Me gustaría recibir más información sobre el curso "{{courseName}}".',
+
+  contactFollowUs: 'Siguenos',
 };

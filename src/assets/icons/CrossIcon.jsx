@@ -1,3 +1,4 @@
+// src/components/icons/CrossIcon.jsx
 export const CrossIcon = () => (
   <svg
     className='h-6 w-6 text-red-400'

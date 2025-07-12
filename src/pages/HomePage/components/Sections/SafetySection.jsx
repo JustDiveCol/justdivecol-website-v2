@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { homePageData } from '../../../../data/pages/homeData';
 import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
-
 import SafetyCardComponent from '../Cards/SafetyCardComponent';
 
+/**
+ * Renders the "Safety" section for the homepage.
+ * It displays a title, subtitle, a grid of safety points, and a call-to-action button.
+ */
 const SafetySection = () => {
   const { t } = useTranslation('home');
   const { safety: data } = homePageData;
@@ -20,7 +23,7 @@ const SafetySection = () => {
         whileInView='animate'
         viewport={{ once: true, amount: 0.2 }}
         className='container mx-auto text-center text-brand-white'>
-        {/* Main title and subtitle */}
+        {/* Section title and subtitle */}
         <motion.h2
           variants={fadeInUp}
           className='text-4xl md:text-5xl font-sans font-bold uppercase'>
@@ -32,7 +35,7 @@ const SafetySection = () => {
           {t(data.subtitleKey)}
         </motion.p>
 
-        {/* Safety Card Component */}
+        {/* Grid of safety feature cards */}
         <motion.div
           variants={staggerContainer}
           initial='initial'
@@ -48,7 +51,7 @@ const SafetySection = () => {
           ))}
         </motion.div>
 
-        {/* Call to action button */}
+        {/* Call-to-action button linking to the main Safety page. */}
         <motion.div variants={fadeInUp}>
           <Link
             to={data.ctaLink}

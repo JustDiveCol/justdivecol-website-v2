@@ -7,10 +7,8 @@ import { useTranslation } from 'react-i18next';
 import { footerData } from '../../../data/global/footerData.js';
 import { contactPageData } from '../../../data/pages/contactData.js';
 
-// Logo Import
+// Asset Imports
 import logo from '../../../assets/images/logos/logo.png';
-
-// Icon Imports
 import { InstagramIcon } from '../../../assets/icons/InstagramIcon.jsx';
 import { TikTokIcon } from '../../../assets/icons/TikTokIcon.jsx';
 import { YouTubeIcon } from '../../../assets/icons/YouTubeIcon.jsx';
@@ -19,15 +17,30 @@ import { WhatsAppIcon } from '../../../assets/icons/WhatsAppIcon.jsx';
 import { ArrowUpIcon } from '../../../assets/icons/ArrowUpIcon.jsx';
 import { ScubaMaskIcon } from '../../../assets/icons/ScubaMaskIcon.jsx';
 
+/**
+ * The main footer component for the website.
+ * Includes navigation, contact info, and a scroll-to-top button.
+ */
 const Footer = () => {
-  // Load multiple namespaces: 'footer' for footer texts, 'contact' for contact info
+  // Load multiple i18next namespaces for footer-specific and contact data.
   const { t } = useTranslation(['footer', 'contact']);
 
   const [isVisible, setIsVisible] = useState(false);
 
+  // Effect to show or hide the scroll-to-top button based on scroll position.
   useEffect(() => {
-    const toggleVisibility = () => setIsVisible(window.pageYOffset > 300);
+    const toggleVisibility = () => {
+      // Show the button if the user has scrolled more than 300px down.
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
     window.addEventListener('scroll', toggleVisibility);
+
+    // Cleanup function to remove the event listener when the component unmounts.
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
@@ -35,14 +48,14 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Map icon names from data to imported components
+  // Maps social media icon keys from data to their respective components.
   const socialIcons = {
     instagram: <InstagramIcon />,
     tiktok: <TikTokIcon />,
     youtube: <YouTubeIcon />,
   };
 
-  // Build WhatsApp URL using translated text
+  // Build the WhatsApp URL with a pre-filled message from translation files.
   const prefilledText = t(contactPageData.whatsAppAction.prefilledMessageKey, {
     ns: 'contact',
   });
@@ -63,7 +76,7 @@ const Footer = () => {
             />
           </Link>
           <p className='mt-4 text-lg max-w-xl'>{t(footerData.sloganKey)}</p>
-          <p className='mt-2 text-lg max-w-xl font-sans font-semibold text-brand-white'>
+          <p className='mt-2 text-sm max-w-xl font-sans font-semibold text-brand-white'>
             {t(footerData.closingMessageKey)}
           </p>
 
@@ -96,6 +109,7 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Decorative divider */}
         <div className='flex items-center justify-center my-10'>
           <div className='flex-grow border-t border-brand-primary-light/20'></div>
           <div className='px-4'>
@@ -114,6 +128,7 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Scroll-to-top button, rendered conditionally */}
       {isVisible && (
         <button
           onClick={scrollToTop}

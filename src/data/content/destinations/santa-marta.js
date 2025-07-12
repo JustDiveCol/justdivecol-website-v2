@@ -1,17 +1,37 @@
 // src/data/content/destinations/santa-marta.js
-// ... import other gallery images
 
+// Import all local images for this destination.
+import santa_marta_header_background from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-header-background.webp';
+import santa_marta_card from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-card.webp';
+import santa_marta_gallery_01 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-01.webp';
+import santa_marta_gallery_02 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-02.webp';
+import santa_marta_gallery_03 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-03.webp';
+import santa_marta_gallery_04 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-04.webp';
+import santa_marta_gallery_05 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-05.webp';
+import santa_marta_gallery_06 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-06.webp';
+
+/**
+ * Data structure for the Santa Marta destination.
+ * This object serves as the single source of truth for all content related to this destination.
+ */
 export const santaMartaDestination = {
-  id: 'santa-marta',
-  status: 'published',
-  nameKey: 'smName',
+  // --- Metadata ---
+  id: 'santa-marta', // Unique identifier for the destination.
+  status: 'published', // 'published' or 'draft'.
+  nameKey: 'smName', // Translation key for the destination's name.
+
+  // --- Card Data ---
+  // Used for the destination card on the Experiences page.
   card: {
     descriptionKey: 'smCardDescription',
-    imageUrl: 'https://placehold.co/800x600/000/fff?text=Card+Description',
+    imageUrl: santa_marta_card,
     link: '/destinos/santa-marta',
   },
+
+  // --- Page Content ---
+  // Contains all the data needed to build the destination's detail page.
   page: {
-    headerImageUrl: 'https://placehold.co/1920x600/000/fff?text=Banner',
+    headerImageUrl: santa_marta_header_background,
     destinationInfo: {
       titleKey: 'smInfoTitle',
       paragraphs: ['smInfoP1', 'smInfoP2'],
@@ -44,7 +64,12 @@ export const santaMartaDestination = {
     gallery: {
       titleKey: 'smGalleryTitle',
       images: [
-        'https://placehold.co/800x600/000/fff?text=Imagen+1' /*, galleryImg2, etc. */,
+        santa_marta_gallery_01,
+        santa_marta_gallery_02,
+        santa_marta_gallery_03,
+        santa_marta_gallery_04,
+        santa_marta_gallery_05,
+        santa_marta_gallery_06,
       ],
     },
     details: {
@@ -66,6 +91,8 @@ export const santaMartaDestination = {
       ],
     },
   },
+
+  // --- SEO Content ---
   seo: {
     titleKey: 'smSeoTitle',
     descriptionKey: 'smSeoDesc',

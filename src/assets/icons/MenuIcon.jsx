@@ -1,4 +1,4 @@
-// @/components/icons/MenuIcon.jsx
+// src/components/icons/MenuIcon.jsx
 export const MenuIcon = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'

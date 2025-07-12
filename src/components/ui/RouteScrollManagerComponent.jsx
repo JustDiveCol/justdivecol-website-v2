@@ -5,30 +5,31 @@ import { useLocation } from 'react-router-dom';
 /**
  * Manages the scroll position on route changes.
  * - If the new route has no hash, it scrolls to the top of the page.
- * - If the new route includes a hash (#), it smoothly scrolls to the corresponding section.
+ * - If a hash is present (e.g., /page#section), it smoothly scrolls to the
+ * corresponding element after a brief delay.
  */
 const RouteScrollManagerComponent = () => {
   const { pathname, hash } = useLocation();
 
+  // This effect runs every time the path or hash changes.
   useEffect(() => {
-    // If the URL has a hash (e.g., /page#section)
     if (hash) {
-      // A short timeout is used to give the browser time to render the page
-      // before attempting to scroll to the element.
+      // A short timeout gives the browser time to render the new page content
+      // before attempting to scroll. 100ms is generally sufficient.
       setTimeout(() => {
         const id = hash.replace('#', '');
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }, 100); // 100ms is generally sufficient.
+      }, 100);
     } else {
-      // If there's no hash, simply scroll to the top.
+      // If there's no hash, scroll to the top of the page on navigation.
       window.scrollTo(0, 0);
     }
-  }, [pathname, hash]); // The effect runs every time the path or hash changes.
+  }, [pathname, hash]);
 
-  // This component does not render any visible UI.
+  // This is a logic-only component and does not render any UI.
   return null;
 };
 

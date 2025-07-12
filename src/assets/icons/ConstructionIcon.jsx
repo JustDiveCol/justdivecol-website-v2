@@ -1,3 +1,4 @@
+// src/components/icons/ConstructionIcon.jsx
 export const ConstructionIcon = () => (
   <svg
     className='h-24 w-24 text-brand-cta-yellow'

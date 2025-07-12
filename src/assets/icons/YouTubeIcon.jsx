@@ -1,3 +1,4 @@
+// src/components/icons/YouTubeIcon.jsx
 export const YouTubeIcon = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'

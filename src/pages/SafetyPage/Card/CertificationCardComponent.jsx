@@ -1,13 +1,17 @@
-// src/pages/SafetyPage/components/Cards/CertificationCardComponent.jsx
+// src/pages/SafetyPage/Card/CertificationCardComponent.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-
 import { fadeInUp } from '../../../hooks/animations';
 
 /**
- * Renders a single card for a certification partner.
- * @param {object} partnerData - The data for a single partner.
+ * Renders a card for a single certification or partner organization.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.partnerData - The data object for a single partner.
+ * @param {string} props.partnerData.nameKey - The translation key for the partner's name.
+ * @param {string} props.partnerData.descriptionKey - The translation key for the partner's description.
+ * @param {string} props.partnerData.logoUrl - The URL for the partner's logo.
  */
 const CertificationCardComponent = ({ partnerData }) => {
   const { t } = useTranslation('safety');
@@ -22,6 +26,7 @@ const CertificationCardComponent = ({ partnerData }) => {
           src={logoUrl}
           alt={t(nameKey)}
           className='max-h-20'
+          loading='lazy' // Defer loading of logos to improve initial page performance.
         />
       </div>
       <div className='mt-4 flex flex-col flex-grow'>

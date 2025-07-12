@@ -12,13 +12,21 @@ import { ShieldIcon } from '../../../../assets/icons/ShieldIcon';
 import { HeartIcon } from '../../../../assets/icons/HeartIcon';
 
 /**
- * Renders the commitment section, displaying key values of the brand.
- * @param {object} commitmentData - The data object for this section.
+ * Renders the "Our Commitment" section, displaying key brand values.
+ * This component maps string identifiers from data to actual icon components.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.commitmentData - The data object for this section.
+ * @param {string} props.commitmentData.titleKey - The translation key for the section title.
+ * @param {string} props.commitmentData.subtitleKey - The translation key for the section subtitle.
+ * @param {object[]} props.commitmentData.points - An array of commitment points.
  */
 const CommitmentSection = ({ commitmentData }) => {
   const { t } = useTranslation('aboutUs');
 
-  // This map links the 'icon' string from your data to the actual Icon component.
+  // This map links the 'icon' string from the data file to the actual Icon component.
+  // This allows the data to remain simple (e.g., "icon: 'leaf'") while the component
+  // handles the mapping to the correct visual element.
   const iconMap = {
     leaf: <LeafIcon />,
     shield: <ShieldIcon />,
@@ -53,7 +61,7 @@ const CommitmentSection = ({ commitmentData }) => {
             <CommitmentCardComponent
               key={point.id}
               pointData={point}
-              icon={iconMap[point.icon]} // We pass the resolved icon as a prop
+              icon={iconMap[point.icon]} // The resolved icon component is passed as a prop.
             />
           ))}
         </motion.div>

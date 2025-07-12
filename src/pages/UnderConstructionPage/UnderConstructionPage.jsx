@@ -1,18 +1,19 @@
+// src/pages/UnderConstructionPage/UnderConstructionPage.jsx
 import React from 'react';
-import { motion } from 'motion/react'; // Use motion/react for consistency
+import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'; // Import useTranslation
+import { useTranslation } from 'react-i18next';
 
-import { underConstructionData } from '../../data/pages/underConstructionData'; // Corrected path and import name
-import SEOComponent from '../../components/ui/SEOComponent'; // Import SEOComponent
-
+// Data sources and assets
+import { underConstructionData } from '../../data/pages/underConstructionData';
+import SEOComponent from '../../components/ui/SEOComponent';
 import { ConstructionIcon } from '../../assets/icons/ConstructionIcon';
 
 /**
- * Page component to display when a section is under development.
+ * Renders a placeholder page for sections of the website that are under development.
  */
 const UnderConstructionPage = () => {
-  const { t } = useTranslation('common'); // Use the 'common' namespace for translations
+  const { t } = useTranslation('common');
 
   return (
     <>
@@ -21,20 +22,22 @@ const UnderConstructionPage = () => {
         description={t(underConstructionData.seo.descriptionKey, {
           ns: 'common',
         })}
+        url='/proximamente' // Add url for completeness
       />
-      {/* Main container that centers content and takes up screen height. */}
+      {/* Main container that centers content and fills the screen height. */}
+      {/* 'isolate' creates a new stacking context for the z-index to work correctly. */}
       <div className='relative min-h-[calc(100vh-80px)] flex items-center justify-center text-center p-4 isolate overflow-hidden'>
-        {/* Container for background image and overlay layer. */}
+        {/* Background container with an image and a dark overlay. */}
         <div className='absolute inset-0 -z-10'>
           <img
-            src={underConstructionData.imageUrl} // Image now comes from data.
-            alt={t(underConstructionData.titleKey, { ns: 'common' })} // Use translated title for alt text
+            src={underConstructionData.imageUrl}
+            alt={t(underConstructionData.titleKey, { ns: 'common' })}
             className='w-full h-full object-cover'
           />
           <div className='absolute inset-0 bg-brand-primary-dark/85'></div>
         </div>
 
-        {/* Main content container with entry animation. */}
+        {/* Main content container with an entry animation. */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,7 +50,7 @@ const UnderConstructionPage = () => {
             {t(underConstructionData.subtitleKey, { ns: 'common' })}
           </p>
           <div className='mt-10'>
-            {/* Button that redirects the user back to the home page. */}
+            {/* The button redirects the user back to the homepage. */}
             <Link
               to={underConstructionData.ctaLink}
               className='inline-block bg-brand-cta-orange text-brand-white font-sans font-bold uppercase text-lg px-8 py-4 rounded-md shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-brand-cta-yellow/50'>

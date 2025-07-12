@@ -3,10 +3,9 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
-// Data Layer
+// Data sources and animations
 import { publishedExperiences } from '../../../../data/content/experiences/_index.js';
 import { experiencesPageData } from '../../../../data/pages/experiencesData.js';
-
 import { staggerContainer } from '../../../../hooks/animations.js';
 
 // Child Components
@@ -14,34 +13,37 @@ import CalendarExperienceCardComponent from '../Cards/CalendarExperienceCardComp
 import { ArrowLeftIcon } from '../../../../assets/icons/ArrowLeftIcon.jsx';
 import { ArrowRightIcon } from '../../../../assets/icons/ArrowRightIcon.jsx';
 
+/**
+ * Renders a paginated calendar section of all upcoming trips.
+ * It filters and sorts all published experiences to create a chronological list.
+ */
 const CalendarExperiencesSection = () => {
   const { t } = useTranslation('experiencesPage');
   const [currentPage, setCurrentPage] = useState(0);
 
-  // Memoized logic to filter and sort upcoming trips
+  // useMemo is used to filter and sort the trips only once, preventing recalculation on every render.
   const upcomingTrips = useMemo(() => {
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // Set to beginning of the day for accurate comparison
+    today.setHours(0, 0, 0, 0); // Normalize to the start of the day for accurate comparison.
     return publishedExperiences
       .filter((trip) => new Date(trip.details.endDate) >= today)
       .sort(
         (a, b) => new Date(a.details.startDate) - new Date(b.details.startDate)
       );
-  }, []); // Empty dependency array means this runs only once
+  }, []); // The empty dependency array ensures this logic runs only once when the component mounts.
 
+  // --- Pagination Logic ---
   const ITEMS_PER_PAGE = 3;
   const totalPages = Math.ceil(upcomingTrips.length / ITEMS_PER_PAGE);
-
   const handleNext = () => setCurrentPage((prev) => (prev + 1) % totalPages);
   const handlePrev = () =>
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
-
   const currentTrips = upcomingTrips.slice(
     currentPage * ITEMS_PER_PAGE,
     currentPage * ITEMS_PER_PAGE + ITEMS_PER_PAGE
   );
 
-  // Don't render the section if there are no upcoming trips
+  // Do not render the section at all if there are no upcoming trips.
   if (upcomingTrips.length === 0) return null;
 
   const { titleKey, subtitleKey } = experiencesPageData.upcomingTrips;
@@ -59,9 +61,10 @@ const CalendarExperiencesSection = () => {
         </p>
 
         <div className='mt-12 max-w-4xl mx-auto relative'>
+          {/* AnimatePresence handles the exit/enter animations when the page changes. */}
           <AnimatePresence mode='wait'>
             <motion.ul
-              key={currentPage}
+              key={currentPage} // The key is crucial for AnimatePresence to detect changes.
               variants={staggerContainer}
               className='space-y-4'>
               {currentTrips.map((trip) => (
@@ -74,7 +77,7 @@ const CalendarExperiencesSection = () => {
           </AnimatePresence>
         </div>
 
-        {/* Carousel Navigation Controls */}
+        {/* Carousel Navigation Controls - only rendered if there's more than one page. */}
         {totalPages > 1 && (
           <div className='flex items-center justify-center mt-8 space-x-4'>
             <button

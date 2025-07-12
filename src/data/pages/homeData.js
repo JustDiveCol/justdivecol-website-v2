@@ -1,6 +1,9 @@
 // src/data/pages/home.js
 import { experienceCategories } from '../global/sharedData.js';
 
+import home_hero_background from '../../assets/images/page-specific/home/home-hero-background.webp';
+import home_cta_background from '../../assets/images/page-specific/home/home-cta-background.webp';
+
 export const homePageData = {
   // SEO Section
   seo: {
@@ -13,7 +16,7 @@ export const homePageData = {
     subtitleKey: 'homeHeroSubtitle',
     ctaTextKey: 'homeHeroCtaText',
     ctaLink: '/experiencias',
-    imageUrl: 'https://placehold.co/1920x1080/000/fff?text=Hero+Banner',
+    imageUrl: home_hero_background,
   },
   // Featured Experiences Section
   featuredExperiences: {
@@ -52,32 +55,32 @@ export const homePageData = {
   // Testimonials Section
   testimonials: {
     titleKey: 'homeTestimonialsTitle',
-    items: [
-      {
-        id: 1,
-        quoteKey: 'homeTestimonial1Quote',
-        nameKey: 'homeTestimonial1Name',
-        originKey: 'homeTestimonial1Origin',
-        rating: 5,
-        avatarUrl: 'https://placehold.co/100x100/000/fff?text=A1',
-      },
-      {
-        id: 2,
-        quoteKey: 'homeTestimonial2Quote',
-        nameKey: 'homeTestimonial2Name',
-        originKey: 'homeTestimonial2Origin',
-        rating: 5,
-        avatarUrl: 'https://placehold.co/100x100/000/fff?text=A2',
-      },
-      {
-        id: 3,
-        quoteKey: 'homeTestimonial3Quote',
-        nameKey: 'homeTestimonial3Name',
-        originKey: 'homeTestimonial3Origin',
-        rating: 5,
-        avatarUrl: 'https://placehold.co/100x100/000/fff?text=A3',
-      },
-    ],
+    // items: [
+    //   {
+    //     id: 1,
+    //     quoteKey: 'homeTestimonial1Quote',
+    //     nameKey: 'homeTestimonial1Name',
+    //     originKey: 'homeTestimonial1Origin',
+    //     rating: 5,
+    //     avatarUrl: 'https://placehold.co/100x100/000/fff?text=A1',
+    //   },
+    //   {
+    //     id: 2,
+    //     quoteKey: 'homeTestimonial2Quote',
+    //     nameKey: 'homeTestimonial2Name',
+    //     originKey: 'homeTestimonial2Origin',
+    //     rating: 5,
+    //     avatarUrl: 'https://placehold.co/100x100/000/fff?text=A2',
+    //   },
+    //   {
+    //     id: 3,
+    //     quoteKey: 'homeTestimonial3Quote',
+    //     nameKey: 'homeTestimonial3Name',
+    //     originKey: 'homeTestimonial3Origin',
+    //     rating: 5,
+    //     avatarUrl: 'https://placehold.co/100x100/000/fff?text=A3',
+    //   },
+    // ],
   },
   // Final CTA Section
   finalCta: {
@@ -85,6 +88,6 @@ export const homePageData = {
     subtitleKey: 'homeFinalCtaSubtitle',
     ctaTextKey: 'homeFinalCtaText',
     ctaLink: '/contacto',
-    imageUrl: 'https://placehold.co/1920x600/000/fff?text=CTA+Banner',
+    imageUrl: home_cta_background,
   },
 };

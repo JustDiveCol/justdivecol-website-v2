@@ -1,5 +1,7 @@
 // src/data/pages/safety.js
 
+import safety_header_background from '../../assets/images/page-specific/safety/safety-header-background.webp';
+
 export const safetyPageData = {
   seo: {
     titleKey: 'safetySeoTitle',
@@ -8,7 +10,7 @@ export const safetyPageData = {
   header: {
     titleKey: 'safetyHeaderTitle',
     subtitleKey: 'safetyHeaderSubtitle',
-    imageUrl: 'https://placehold.co/1920x1080/000/fff?text=safetyHeaderImage',
+    imageUrl: safety_header_background,
   },
   protocols: {
     titleKey: 'safetyProtocolsTitle',

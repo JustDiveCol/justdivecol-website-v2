@@ -1,51 +1,54 @@
 // src/pages/DetailPage/common/Sections/UpcomingCoursesHorizontalSection.jsx
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-// CORRECTED: Import CoursesCard
 import CoursesCard from '../Cards/CoursesCard';
 
-// CORRECTED: Prop name changed from availableTrips to availableCourses
+/**
+ * Renders a section that displays a list of available courses.
+ * This component is horizontally oriented on larger screens but may stack vertically on smaller ones.
+ *
+ * @param {object} props - The component props.
+ * @param {object[]} props.availableCourses - An array of course data objects to display.
+ * @param {string} props.titleKey - The translation key for the section's title.
+ * @param {string} props.noTripsMessageKey - The translation key for the message shown when no courses are available.
+ * @param {string} props.translationNS - The i18next namespace to use for the section title.
+ */
 const UpcomingCoursesHorizontalSection = ({
-  availableCourses, // Renamed prop
+  availableCourses,
   titleKey,
-  noTripsMessageKey, // This message might need to be rephrased for courses
-  translationNS, // This will be 'experiences' for the Offered Courses section title
+  noTripsMessageKey,
+  translationNS,
 }) => {
-  // Ensure 'courses' namespace is loaded for CoursesCard and its own title if from 'courses'
-  const { t, i18n } = useTranslation([translationNS, 'courses', 'common']); // Added 'courses' explicitly
+  // Loads multiple namespaces to handle section titles, course data, and common terms.
+  const { t, i18n } = useTranslation([translationNS, 'courses', 'common']);
 
-  // CORRECTED: Check for availableCourses
+  // Do not render if the section title or course data is missing.
   if (!titleKey || !availableCourses) {
     return null;
   }
 
   return (
     <div
-      id='available-courses-section-horizontal' // Changed ID to reflect courses
+      id='available-courses-section-horizontal'
       className='bg-brand-primary-medium p-6 rounded-lg shadow-lg scroll-mt-24'>
       <h3 className='text-2xl font-sans font-bold text-brand-white mb-4'>
         {t(titleKey, { ns: translationNS })}
       </h3>
-      {/* CORRECTED: Check for availableCourses and map 'course' instead of 'trip' */}
-      {availableCourses && availableCourses.length > 0 ? (
-        <div className='grid grid-cols-1'>
+      {availableCourses.length > 0 ? (
+        <div className='grid grid-cols-1 gap-4'>
           {availableCourses.map((course) => (
-            <CoursesCard // CORRECTED: Use CoursesCard
+            <CoursesCard
               key={course.id}
-              courseData={course} // CORRECTED: Pass courseData
+              courseData={course}
               lang={i18n.language}
-              t={t}
-              // CoursesCard no longer needs translationNS prop because it implicitly uses 'courses'
+              t={t} // Pass down the 't' function to the child card.
             />
           ))}
         </div>
       ) : (
         <div>
           <p className='font-serif text-sm text-brand-neutral/80'>
-            {/* The message key noTripsMessageKey (from common.js) says "No scheduled dates yet. Contact us for a custom trip!".
-                You might want a new message key for courses like 'noScheduledCourses' in common.js
-                or just reuse this if it's acceptable.
-            */}
+            {/* The fallback message is sourced from the 'common' namespace. */}
             {t(noTripsMessageKey, { ns: 'common' })}
           </p>
         </div>

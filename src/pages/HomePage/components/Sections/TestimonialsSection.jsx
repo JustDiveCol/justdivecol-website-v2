@@ -1,3 +1,4 @@
+// src/pages/HomePage/components/Sections/TestimonialsSection.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
@@ -5,6 +6,10 @@ import { homePageData } from '../../../../data/pages/homeData';
 import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
 import TestimonialCardComponent from '../Cards/TestimonialCardComponent';
 
+/**
+ * Renders the "Testimonials" section for the homepage.
+ * It displays a title and a grid of customer testimonials.
+ */
 const TestimonialsSection = () => {
   const { t } = useTranslation('home');
 

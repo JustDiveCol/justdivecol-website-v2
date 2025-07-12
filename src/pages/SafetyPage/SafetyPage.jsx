@@ -3,19 +3,22 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
-// Data and Animations
+// Data sources and animations
 import { safetyPageData as data } from '../../data/pages/safetyData.js';
 import { staggerContainer } from '../../hooks/animations.js';
 
-// Layout and Reusable Components
+// UI and Section Components
 import SEOComponent from '../../components/ui/SEOComponent.jsx';
 import HeaderComponent from '../../components/HeaderComponent.jsx';
-
-// Page-specific Sections
 import ProtocolsSection from './Sections/ProtocolsSection.jsx';
 import EquipmentSection from './Sections/EquipmentSection.jsx';
 import CertificationsSection from './Sections/CertificationsSection.jsx';
 
+/**
+ * Renders the main "Safety" page.
+ * This component assembles all the sections related to safety protocols,
+ * equipment, and certifications.
+ */
 export const SafetyPage = () => {
   const { t } = useTranslation('safety');
   const { seo, header, protocols, equipment, certifications } = data;
@@ -29,6 +32,8 @@ export const SafetyPage = () => {
       <SEOComponent
         title={t(seo.titleKey)}
         description={t(seo.descriptionKey)}
+        imageUrl={header.imageUrl}
+        url='/seguridad'
       />
 
       <HeaderComponent

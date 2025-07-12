@@ -2,6 +2,17 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 
+/**
+ * A floating action button that reveals text on hover.
+ * Can function as a standard button or a link.
+ *
+ * @param {object} props - The component props.
+ * @param {string} props.text - The text to display on hover.
+ * @param {React.ReactNode} props.icon - The icon to display.
+ * @param {function} [props.onClick] - Optional click handler for button behavior.
+ * @param {boolean} [props.isLink=false] - If true, the component renders as an 'a' tag.
+ * @param {string} [props.href='#'] - The URL for the link if isLink is true.
+ */
 const ActionButtonComponent = ({
   text,
   icon,
@@ -10,10 +21,13 @@ const ActionButtonComponent = ({
   href = '#',
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  // Conditionally render as a 'button' or an 'a' tag based on the isLink prop.
   const Component = isLink ? 'a' : 'button';
 
   const handleClick = (e) => {
     if (onClick) onClick(e);
+    // Ensure the button retracts if the user clicks and moves the mouse away quickly.
     setIsHovered(false);
   };
 

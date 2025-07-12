@@ -1,3 +1,4 @@
+// src/components/icons/ClipboardListIcon.jsx
 export const ClipboardListIcon = () => (
   <svg
     className='h-12 w-12'

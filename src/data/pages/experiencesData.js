@@ -1,6 +1,9 @@
 // src/data/pages/experiences.js
 import { experienceCategories } from '../global/sharedData';
 
+import experiences_header_background from '../../assets/images/page-specific/experiences/experiences-header-background.webp';
+import experiences_cta_background from '../../assets/images/page-specific/experiences/experiences-cta-background.webp';
+
 export const experiencesPageData = {
   seo: {
     titleKey: 'expSeoTitle',
@@ -9,7 +12,7 @@ export const experiencesPageData = {
   header: {
     titleKey: 'expHeaderTitle',
     subtitleKey: 'expHeaderSubtitle',
-    imageUrl: 'https://placehold.co/1920x600/000/fff?text=Experience+Banner',
+    imageUrl: experiences_header_background,
   },
   // We reuse the shared categories and add page-specific anchor links
   categories: experienceCategories.map((cat) => ({
@@ -35,7 +38,6 @@ export const experiencesPageData = {
     subtitleKey: 'expCtaSubtitle',
     ctaTextKey: 'expCtaButton',
     ctaLink: '/contacto',
-    imageUrl:
-      'https://placehold.co/1920x600/000/fff?text=Private+Experience+Banner',
+    imageUrl: experiences_cta_background,
   },
 };

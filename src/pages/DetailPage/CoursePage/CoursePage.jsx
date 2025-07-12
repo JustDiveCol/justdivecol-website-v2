@@ -1,6 +1,6 @@
 // src/pages/DetailPage/CoursePage/CoursePage.jsx
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
@@ -9,35 +9,44 @@ import SEOComponent from '../../../components/ui/SEOComponent';
 import { getCourseDetails } from '../../../data/content/courses/_index';
 import { staggerContainer } from '../../../hooks/animations';
 
+/**
+ * Renders the detail page for a specific course.
+ * It fetches course data based on the 'courseId' from the URL,
+ * handles loading and error states, and then passes the data to the CourseLayout component.
+ */
 const CoursePage = () => {
-  const { courseId } = useParams(); // Get the courseId from the URL
-  const { t } = useTranslation('courses'); // Use the 'courses' namespace for translations
+  const { courseId } = useParams(); // Get the dynamic courseId from the URL.
+  const { t } = useTranslation(['courses', 'common']);
 
+  // State for managing course data, associated trips, loading, and error status.
   const [courseData, setCourseData] = useState(null);
   const [availableTrips, setAvailableTrips] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  // Effect to fetch course details when the component mounts or the courseId changes.
   useEffect(() => {
-    // Fetch course details when the component mounts or courseId changes
-    const fetchedData = getCourseDetails(courseId); //
+    const fetchedData = getCourseDetails(courseId);
 
     if (fetchedData && fetchedData.courseData) {
       setCourseData(fetchedData.courseData);
       setAvailableTrips(fetchedData.availableTrips);
-      setIsLoading(false);
     } else {
+      // If no data is found for the given courseId, set an error state.
       setError(true);
-      setIsLoading(false);
     }
-  }, [courseId]); // Rerun effect if courseId changes
 
-  // Handle loading and error states
+    setIsLoading(false);
+  }, [courseId]); // Rerun this effect if the courseId in the URL changes.
+
+  // --- Render based on state ---
+
   if (isLoading) {
     return (
-      <div className='flex items-center justify-center min-h-screen text-brand-white text-2xl'>
-        {t('common:loading')}...
-      </div>
+      <Navigate
+        to='/404'
+        replace
+      />
     );
   }
 
@@ -52,8 +61,10 @@ const CoursePage = () => {
   return (
     <>
       <SEOComponent
-        title={t(courseData.seo.titleKey)} // Use translated SEO title
-        description={t(courseData.seo.descriptionKey)} // Use translated SEO description
+        title={t(courseData.seo.titleKey)}
+        description={t(courseData.seo.descriptionKey)}
+        imageUrl={courseData.header.bannerImageUrl}
+        url={`/cursos/${courseData.id}`}
       />
       <motion.div
         variants={staggerContainer}
@@ -61,8 +72,8 @@ const CoursePage = () => {
         animate='animate'
         exit='hidden'>
         <CourseLayout
-          courseData={courseData} // Pass the fetched course data
-          availableTrips={availableTrips} // Pass available trips
+          courseData={courseData}
+          availableTrips={availableTrips}
         />
       </motion.div>
     </>

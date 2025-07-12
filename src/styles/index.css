@@ -1,20 +1,39 @@
+/* src/styles/index.css */
+
+/* Import the core Tailwind CSS directives. */
 @import 'tailwindcss';
 
+/*
+ * Define custom design tokens that extend or override Tailwind's default theme.
+ * These variables can be used throughout the project in your utility classes (e.g., bg-brand-primary-dark).
+ */
 @theme {
+  /* --- Brand Colors --- */
   --color-brand-primary-dark: #0a264f;
   --color-brand-primary-medium: #133e70;
   --color-brand-primary-light: #36598b;
   --color-brand-neutral: #e0e0e0;
   --color-brand-white: #ffffff;
+
+  /* --- Call-to-Action (CTA) Colors --- */
   --color-brand-cta-orange: #ff7a00;
   --color-brand-cta-green: #40d798;
-  --color-brand-cta-yellow: #f7d94c;
+  --color-brand-cta-yellow: #f7d794;
 
+  /* --- Brand Fonts --- */
   --font-sans: Montserrat, sans-serif;
   --font-serif: Lora, serif;
 }
 
+/*
+ * Define base styles for foundational elements.
+ * This layer is for setting default styles or overriding browser defaults.
+ */
 @layer base {
+  /*
+   * Sets a default border color for all elements.
+   * This ensures consistency and can be easily overridden by utility classes like 'border-red-500'.
+   */
   *,
   ::after,
   ::before,

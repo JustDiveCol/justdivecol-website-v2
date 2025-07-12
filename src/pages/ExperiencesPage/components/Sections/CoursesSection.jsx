@@ -1,14 +1,21 @@
 // src/pages/ExperiencesPage/components/Sections/CoursesSection.jsx
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { experiencesPageData } from '../../../../data/pages/experiencesData';
 import { getCoursesWithAvailability } from '../../../../data/content/courses/_index';
 import { staggerContainer } from '../../../../hooks/animations';
 import CourseCardComponent from '../Cards/CourseCardComponent';
 
+/**
+ * Renders the "Courses & Certifications" section of the Experiences page.
+ * It fetches all published courses and displays them as cards.
+ */
 const CoursesSection = () => {
   const { t } = useTranslation('experiencesPage');
+
+  // Fetches all published courses and adds an 'availability' status to each
+  // based on whether it's offered in an upcoming trip.
   const coursesWithStatus = getCoursesWithAvailability();
   const { sectionId, titleKey } = experiencesPageData.fullCatalog.courses;
 

@@ -1,3 +1,4 @@
+// src/components/icons/CheckIcon.jsx
 export const CheckIcon = () => (
   <svg
     className='h-6 w-6 text-brand-cta-green'

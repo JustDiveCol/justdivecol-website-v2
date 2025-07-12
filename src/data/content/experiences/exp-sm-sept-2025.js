@@ -1,23 +1,35 @@
 // src/data/content/experiences/exp-sm-sept-2025.js
 
-export const expSmSept2025 = {
-  // --- METADATA ---
-  id: 'expedicion-santa-marta-sept-2025',
-  status: 'published',
-  destinationId: 'santa-marta', // <-- The crucial link to the destination
-  type: 'trip',
-  nameKey: 'expsmsept25Name',
+// Import all local images for this specific experience.
+import sm_sept_2025_header_background from '../../../assets/images/page-specific/experiences/santa-marta-sept-2025/sm-sept-2025-header-background.webp';
+import sm_sept_2025_gallery_01 from '../../../assets/images/page-specific/experiences/santa-marta-sept-2025/sm-sept-2025-gallery-01.webp';
+import sm_sept_2025_gallery_02 from '../../../assets/images/page-specific/experiences/santa-marta-sept-2025/sm-sept-2025-gallery-02.webp';
+import sm_sept_2025_gallery_03 from '../../../assets/images/page-specific/experiences/santa-marta-sept-2025/sm-sept-2025-gallery-03.webp';
+import sm_sept_2025_gallery_04 from '../../../assets/images/page-specific/experiences/santa-marta-sept-2025/sm-sept-2025-gallery-04.webp';
 
-  // --- PAGE CONTENT ---
+/**
+ * Data structure for the "Santa Marta - September 2025" experience.
+ * This object is the single source of truth for all content related to this trip.
+ */
+export const expSmSept2025 = {
+  // --- Metadata ---
+  id: 'expedicion-santa-marta-sept-2025', // Unique identifier for the trip.
+  status: 'published', // 'published' or 'draft'.
+  destinationId: 'santa-marta', // Crucial link to the corresponding destination data file.
+  type: 'trip', // Type of experience.
+  nameKey: 'expsmsept25Name', // Translation key for the trip's name.
+
+  // --- SEO Content ---
   seo: {
     titleKey: 'expsmsept25SeoTitle',
     descriptionKey: 'expsmsept25SeoDesc',
   },
+
+  // --- Page Content ---
   header: {
     titleKey: 'expsmsept25HeaderTitle',
     subtitleKey: 'expsmsept25HeaderSubtitle',
-    bannerImageUrl:
-      'https://placehold.co/1920x600/000/fff?text=Experiencia+Santa+Marta+Banner',
+    imageUrl: sm_sept_2025_header_background,
   },
   description: {
     titleKey: 'expsmsept25DescTitle',
@@ -91,16 +103,25 @@ export const expSmSept2025 = {
       'expsmsept25NotIncludeItem4',
     ],
   },
+
+  // --- Associated Content ---
   offeredCourses: {
     titleKey: 'expsmsept25OfferedCoursesTitle',
-    ids: ['padi-open-water-diver'],
+    ids: ['padi-open-water-diver'], // Array of course IDs offered on this trip.
   },
+
+  // --- Visuals ---
   gallery: {
     titleKey: 'expsmsept25GalleryTitle',
     images: [
-      'https://placehold.co/800x600/000/fff?text=Imagen+1' /*, galleryImg2, etc. */,
+      sm_sept_2025_gallery_01,
+      sm_sept_2025_gallery_02,
+      sm_sept_2025_gallery_03,
+      sm_sept_2025_gallery_04,
     ],
   },
+
+  // --- Final Call to Action ---
   cta: {
     titleKey: 'expsmsept25CtaTitle',
     buttonTextKey: 'expsmsept25CtaButtonText',

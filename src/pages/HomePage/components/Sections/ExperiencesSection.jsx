@@ -3,36 +3,30 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
-// Import the data structure from our single source for the homepage
+// Data sources and animations
 import { homePageData } from '../../../../data/pages/homeData';
-
-// Import our new reusable card component
-import SimpleCardComponent from '../../../../components/common/Card/SimpleCardComponent';
-
 import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
 
+// Child Components
+import SimpleCardComponent from '../../../../components/common/Card/SimpleCardComponent';
+
 /**
- * Main component that renders the "Featured Experiences" section.
- * Commonly used on the homepage to provide a quick overview of services.
+ * Renders the "Featured Experiences" section for the homepage.
+ * It displays the main service categories as a grid of cards.
  */
 const ExperiencesSection = () => {
-  // Get the translation function 't' for the 'experiences' namespace
   const { t } = useTranslation('home');
 
-  // Destructure the relevant data for this section from our homeData file
+  // Destructure the relevant data from the single source of truth for the homepage.
   const { titleKey, subtitleKey, categories } =
     homePageData.featuredExperiences;
 
   return (
     <section className='bg-brand-primary-dark py-20 px-4'>
-      {/*
-          This motion.div acts as the animation container.
-          We apply the stagger variants to it.
-        */}
+      {/* This motion.div acts as the main animation container for the section. */}
       <motion.div
         variants={staggerContainer}
         className='container mx-auto text-center'>
-        {/* The children now only need to reference the 'fadeInUp' variant. */}
         <motion.h2
           variants={fadeInUp}
           className='text-4xl md:text-5xl font-sans font-bold text-brand-white uppercase'>
@@ -45,7 +39,7 @@ const ExperiencesSection = () => {
           {t(subtitleKey)}
         </motion.p>
 
-        {/* The card grid doesn't need to be animated itself, but its parent does. */}
+        {/* This div contains the grid of cards and orchestrates their animation. */}
         <motion.div
           variants={staggerContainer}
           initial='initial'

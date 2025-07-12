@@ -4,16 +4,17 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-// Import data specifically from the home page data file
+// Import data specifically from the home page data file.
 import { homePageData } from '../../../../data/pages/homeData';
 
 /**
- * Main Hero section component for the homepage.
+ * Renders the main Hero section for the homepage, featuring a full-screen
+ * background image, an animated title, subtitle, and a call-to-action button.
  */
 const HeroSection = () => {
   const { t } = useTranslation('home');
 
-  // Destructure the hero-specific data for cleaner access
+  // Destructure the hero-specific data for cleaner access in the JSX.
   const { imageUrl, titleKey, subtitleKey, ctaTextKey, ctaLink } =
     homePageData.hero;
 
@@ -21,12 +22,12 @@ const HeroSection = () => {
     <section
       className='relative min-h-screen flex items-center justify-center text-center text-brand-white bg-cover bg-center bg-no-repeat'
       style={{ backgroundImage: `url(${imageUrl})` }}>
-      {/* Dark overlay */}
+      {/* Dark overlay to ensure text readability over the background image. */}
       <div className='absolute inset-0 bg-brand-primary-dark/70'></div>
 
-      {/* Content container */}
+      {/* Main content container. */}
       <div className='relative z-10 p-4'>
-        {/* Animated main title */}
+        {/* Each element has a staggered animation for a smooth entry effect. */}
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,7 +36,6 @@ const HeroSection = () => {
           {t(titleKey)}
         </motion.h1>
 
-        {/* Animated subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,6 @@ const HeroSection = () => {
           {t(subtitleKey)}
         </motion.p>
 
-        {/* Animated CTA button */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

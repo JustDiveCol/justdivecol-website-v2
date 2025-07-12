@@ -1,12 +1,23 @@
+// src/pages/HomePage/components/Cards/TestimonialCardComponent.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 import { fadeInUp } from '../../../../hooks/animations';
-
 import { QuoteIcon } from '../../../../assets/icons/QuoteIcon';
 import { StarRating } from '../../../../assets/icons/StarRating';
 
+/**
+ * Renders a card displaying a customer testimonial.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.cardData - The data object for the testimonial.
+ * @param {string} props.cardData.quoteKey - The translation key for the testimonial quote.
+ * @param {string} props.cardData.nameKey - The translation key for the customer's name.
+ * @param {string} props.cardData.originKey - The translation key for the customer's origin (e.g., trip or course).
+ * @param {number} props.cardData.rating - The star rating, from 1 to 5.
+ * @param {string} props.cardData.avatarUrl - The URL for the customer's avatar image.
+ */
 const TestimonialCardComponent = ({ cardData }) => {
   const { t } = useTranslation('home');
 
@@ -29,6 +40,7 @@ const TestimonialCardComponent = ({ cardData }) => {
           src={avatarUrl}
           alt={t(nameKey)}
           className='h-14 w-14 rounded-full object-cover border-2 border-brand-cta-green'
+          loading='lazy' // Defer image loading to improve initial page performance.
         />
         <div className='text-left'>
           <StarRating rating={rating} />

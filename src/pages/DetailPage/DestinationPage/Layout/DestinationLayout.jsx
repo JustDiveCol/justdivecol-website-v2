@@ -3,25 +3,39 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
+// Animation variants and data
 import { staggerContainer } from '../../../../hooks/animations';
+import { contactPageData } from '../../../../data/pages/contactData';
+import { experiencesPageData } from '../../../../data/pages/experiencesData';
+
+// Reusable section and card components
 import HeaderComponent from '../../../../components/HeaderComponent';
 import DescriptionSection from '../../common/Sections/DescriptionSection';
 import GallerySection from '../../common/Sections/GallerySection';
 import DetailsCard from '../../common/Cards/DetailsCard';
 import ChecklistCard from '../../common/Cards/ChecklistCard';
-import UpcomingTripsVerticalSection from '../../common/Sections/UpcomingTripsVerticalSection'; // Using vertical as per your last request
+import UpcomingTripsVerticalSection from '../../common/Sections/UpcomingTripsVerticalSection';
 import CtaCard from '../../common/Cards/CtaCard';
-import { contactPageData } from '../../../../data/pages/contactData';
-import { experiencesPageData } from '../../../../data/pages/experiencesData'; // Import experiencesPageData to get reusable CTA keys
+import DiveSitesSection from '../../common/Sections/DiveSitesSection';
 
+/**
+ * The main layout component for the destination detail page.
+ * It assembles all the necessary sections and cards to display destination information.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.destinationData - The complete data object for the destination.
+ * @param {object[]} props.upcomingTrips - An array of trip objects scheduled for this destination.
+ */
 const DestinationLayout = ({ destinationData, upcomingTrips }) => {
+  // Loads multiple i18next namespaces required for this layout.
   const { t } = useTranslation([
     'destinations',
     'common',
     'contact',
     'experiencesPage',
-  ]); // Add 'experiencesPage' namespace
+  ]);
 
+  // A guard clause to prevent rendering if the essential page data is missing.
   if (!destinationData || !destinationData.page) {
     return (
       <div className='flex items-center justify-center min-h-screen text-red-500 text-2xl'>
@@ -30,6 +44,7 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
     );
   }
 
+  // Construct a pre-filled WhatsApp URL for destination-specific inquiries.
   const prefilledText = t('contactWhatsAppMessage', {
     ns: 'contact',
     destinationName: t(destinationData.nameKey, { ns: 'destinations' }),
@@ -48,6 +63,8 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
       className='bg-brand-primary-dark text-brand-neutral'>
       <HeaderComponent
         sectionData={{
+          // Note: Using destinationInfo.titleKey for both title and subtitle
+          // might be intentional or a placeholder. Review if a separate subtitleKey is needed.
           titleKey: destinationData.page.destinationInfo.titleKey,
           subtitleKey: destinationData.page.destinationInfo.titleKey,
           imageUrl: destinationData.page.headerImageUrl,
@@ -55,32 +72,19 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
         translationNS='destinations'
       />
 
+      {/* Main two-column layout for the page content. */}
       <div className='container mx-auto p-4 md:p-8 grid lg:grid-cols-3 gap-8'>
+        {/* Main content column (left) with a sticky position on large screens. */}
         <main className='lg:col-span-2 space-y-16 lg:sticky top-24 h-fit'>
           <DescriptionSection
             descriptionData={destinationData.page.destinationInfo}
             translationNS='destinations'
           />
 
-          <section>
-            <h2 className='text-3xl font-sans font-bold text-brand-white mb-6'>
-              {t(destinationData.page.diveSites.titleKey, {
-                ns: 'destinations',
-              })}
-            </h2>
-            <div className='space-y-6'>
-              {destinationData.page.diveSites.sites.map((site) => (
-                <div key={site.id}>
-                  <h3 className='text-2xl font-sans font-semibold text-brand-cta-green'>
-                    {t(site.nameKey, { ns: 'destinations' })}
-                  </h3>
-                  <p className='mt-1 font-serif text-brand-neutral/90'>
-                    {t(site.descriptionKey, { ns: 'destinations' })}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <DiveSitesSection
+            diveSiteData={destinationData.page.diveSites}
+            translationNS={'destinations'}
+          />
 
           <GallerySection
             galleryData={destinationData.page.gallery}
@@ -88,6 +92,7 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
           />
         </main>
 
+        {/* Sidebar column (right) with a sticky position on large screens. */}
         <aside className='lg:col-span-1 space-y-8 lg:sticky top-24 h-fit'>
           <DetailsCard
             detailsData={destinationData.page.details}
@@ -109,15 +114,15 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
             translationNS='destinations'
           />
 
-          {/* CORRECTED: Using CtaCard instead of CtaComponent */}
+          {/* This CTA reuses keys from experiencesPageData for a consistent message about custom trips. */}
           <CtaCard
             ctaData={{
-              titleKey: experiencesPageData.customTripCta.titleKey, // Reusing key from experiencesPageData
-              buttonTextKey: experiencesPageData.customTripCta.ctaTextKey, // Reusing key
-              link: whatsappUrl, // Use the generated WhatsApp URL
-              isExternal: true, // It's an external link
+              titleKey: experiencesPageData.customTripCta.titleKey,
+              buttonTextKey: experiencesPageData.customTripCta.ctaTextKey,
+              link: whatsappUrl,
+              isExternal: true,
             }}
-            translationNS='experiencesPage' // Namespace where these keys are defined
+            translationNS='experiencesPage'
           />
         </aside>
       </div>

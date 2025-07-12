@@ -4,6 +4,16 @@ import { useTranslation } from 'react-i18next';
 import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
 import TeamCardComponent from '../Cards/TeamCardComponent';
 
+/**
+ * Renders the "Meet the Team" section of the page.
+ * It displays a title, subtitle, and a grid of TeamCardComponent instances.
+ *
+ * @param {object} props - The component props.
+ * @param {object} props.teamData - The data object for this section.
+ * @param {string} props.teamData.titleKey - The translation key for the section title.
+ * @param {string} props.teamData.subtitleKey - The translation key for the section subtitle.
+ * @param {object[]} props.teamData.members - An array of team member data objects.
+ */
 const TeamSection = ({ teamData }) => {
   const { t } = useTranslation('aboutUs');
   return (

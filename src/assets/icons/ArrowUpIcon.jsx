@@ -1,3 +1,4 @@
+// src/components/icons/ArrowUpIcon.jsx
 export const ArrowUpIcon = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'

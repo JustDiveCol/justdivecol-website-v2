@@ -1,5 +1,6 @@
 // src/i18n/locales/es/experiences.js
 export default {
+  day: 'Día',
   // Section texts
   expTitle: 'Nuestras Experiencias',
   expSubtitle:

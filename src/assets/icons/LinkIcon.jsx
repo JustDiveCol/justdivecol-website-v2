@@ -1,3 +1,4 @@
+// src/components/icons/LinkIcon.jsx
 export const LinkIcon = () => (
   <svg
     xmlns='[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)'

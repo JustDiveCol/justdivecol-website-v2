@@ -25,6 +25,7 @@ export default {
   viewTripDetails: 'View trip details',
 
   loading: 'Loading', //
+  day: 'Day',
 
   // --- Under Construction Page ---
   underConstructionSeoTitle: 'Under Construction | JustDiveCol',
@@ -34,4 +35,9 @@ export default {
   underConstructionSubtitle:
     "We're making our safety stop... This section will be ready for your next dive very soon! Thanks for your patience.",
   underConstructionCtaText: 'Go to Home',
+
+  notFoundTitle: '404: ROUTE LOST',
+  notFoundSubtitle:
+    "Oops! You forgot to equalize and ended up here. Let's get back to the surface before it hurts.",
+  notFoundCtaText: 'Back to the Surface',
 };
