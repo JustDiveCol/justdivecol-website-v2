@@ -69,7 +69,7 @@ const ExperiencePage = () => {
           ns: 'experiences',
         })}
         imageUrl={experienceData.header.bannerImageUrl}
-        url={`/expediciones/${experienceData.id}`}
+        url={`/experiencias/${experienceData.id}`}
       />
       <motion.div
         variants={staggerContainer}

@@ -1,3 +1,3 @@
 export const publishedExperiencesLite = [
-  { id: 'expedicion-santa-marta-sept-2025' },
+  { id: 'experiencia-santa-marta-sept-2025' },
 ];

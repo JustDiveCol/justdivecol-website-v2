@@ -24,7 +24,7 @@ import { InfoIcon } from '../../../../assets/icons/InfoIcon';
 
 /**
  * The main layout component for the experience detail page.
- * It assembles all necessary sections and cards to display expedition information.
+ * It assembles all necessary sections and cards to display experience information.
  *
  * @param {object} props - The component props.
  * @param {object} props.experienceData - The complete data object for the experience/trip.

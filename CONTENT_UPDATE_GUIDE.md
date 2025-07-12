@@ -2,11 +2,11 @@
 
 Este documento es un tutorial paso a paso para las tareas de actualización más frecuentes.
 
-## Tarea 1: Añadir una Nueva Expedición (Viaje)
+## Tarea 1: Añadir una Nueva Experiencia (Viaje)
 
 Sigue estos pasos para añadir un nuevo viaje, por ejemplo, **"Malpelo 2026"**.
 
-**Paso 1: Crear el Archivo de la Expedición**
+**Paso 1: Crear el Archivo de la Experiencia**
 
 - Ve a la carpeta `src/data/content/experiences/`.
 - **Copia y pega** un archivo existente (ej: `exp-sm-sept-2025.js`) para usarlo como plantilla.
@@ -15,9 +15,9 @@ Sigue estos pasos para añadir un nuevo viaje, por ejemplo, **"Malpelo 2026"**.
 **Paso 2: Modificar los Datos del Nuevo Archivo**
 Abre tu nuevo archivo `exp-malpelo-2026.js` y edita:
 
-- **`id`**: Asigna un ID único y claro. Ejemplo: `'expedicion-malpelo-2026'`.
+- **`id`**: Asigna un ID único y claro. Ejemplo: `'experiencia-malpelo-2026'`.
 - **`destinationId`**: Enlaza al `id` de un destino existente. Ejemplo: `'malpelo'`. (Si el destino no existe, debes crearlo primero, ver Tarea 2).
-- **Claves de Texto (`...Key`)**: Cambia todas las claves a un formato único para esta expedición para evitar conflictos. Por ejemplo, cambia `expsmsept25Name` a `expmalpelo2026Name`.
+- **Claves de Texto (`...Key`)**: Cambia todas las claves a un formato único para esta experiencia para evitar conflictos. Por ejemplo, cambia `expsmsept25Name` a `expmalpelo2026Name`.
 - **`details`**: Actualiza las fechas (`startDate`, `endDate`), el precio y cualquier otro detalle específico.
 - **Imágenes y URLs**: Reemplaza las URLs de las imágenes y banners.
 
@@ -26,7 +26,7 @@ Abre tu nuevo archivo `exp-malpelo-2026.js` y edita:
 - Abre `src/i18n/locals/es/experiences.js` y `src/i18n/locals/en/experiences.js`.
 - Al final de cada archivo, añade todas las nuevas claves que creaste en el paso anterior (`expmalpelo2026Name`, `expmalpelo2026DescTitle`, etc.) con sus textos correspondientes en español e inglés.
 
-**Paso 4: Registrar la Nueva Expedición**
+**Paso 4: Registrar la Nueva Experiencia**
 
 - Abre `src/data/content/experiences/_index.js`.
 - **Importa** tu nuevo archivo al principio del todo:
@@ -35,9 +35,9 @@ Abre tu nuevo archivo `exp-malpelo-2026.js` y edita:
   ```
 - **Añádelo** al objeto `experiencesById`:
   ```javascript
-  'expedicion-malpelo-2026': expMalpelo2026,
+  'experiencia-malpelo-2026': expMalpelo2026,
   ```
-  ¡Listo! El sitio ya mostrará tu nueva expedición automáticamente.
+  ¡Listo! El sitio ya mostrará tu nueva experiencia automáticamente.
 
 ---
 

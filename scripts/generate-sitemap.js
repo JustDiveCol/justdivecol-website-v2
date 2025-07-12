@@ -16,7 +16,7 @@ const generateSitemap = async () => {
     (dest) => `/destinos/${dest.id}`
   );
   const experiencePages = publishedExperiencesLite.map(
-    (exp) => `/expediciones/${exp.id}`
+    (exp) => `/experiencias/${exp.id}`
   );
   const coursePages = publishedCoursesLite.map(
     (course) => `/cursos/${course.id}`

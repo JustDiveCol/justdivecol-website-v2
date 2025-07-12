@@ -13,7 +13,7 @@ import sm_sept_2025_gallery_04 from '../../../assets/images/page-specific/experi
  */
 export const expSmSept2025 = {
   // --- Metadata ---
-  id: 'expedicion-santa-marta-sept-2025', // Unique identifier for the trip.
+  id: 'experiencia-santa-marta-sept-2025', // Unique identifier for the trip.
   status: 'published', // 'published' or 'draft'.
   destinationId: 'santa-marta', // Crucial link to the corresponding destination data file.
   type: 'trip', // Type of experience.

@@ -209,7 +209,7 @@ export default {
   rdCtaTitle: "Can't find dates that work for you?",
   rdCtaButtonText: 'Contact Us for Personalized Options',
 
-  availableTripsTitle: 'Upcoming Expeditions and Courses Available',
+  availableTripsTitle: 'Upcoming Experiences and Courses Available',
   noUpcomingTrips:
     "Attention, adventurer! Upcoming dates for courses and trips are in the pipeline. Stay tuned, you'll soon be able to get your fins ready for new experiences!",
   courseCtaAvailableTitle: 'Ready to get your certification?',

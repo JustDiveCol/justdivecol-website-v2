@@ -26,7 +26,7 @@ const TripsCard = ({ tripData, translationNS, lang, t }) => {
   return (
     <Link
       key={tripData.id}
-      to={`/expediciones/${tripData.id}`} // Links to the specific expedition page.
+      to={`/experiencias/${tripData.id}`} // Links to the specific experience page.
       className='block bg-brand-primary-dark p-4 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300'>
       <h4 className='font-sans font-bold text-brand-white'>
         {t(tripData.nameKey, { ns: translationNS })}

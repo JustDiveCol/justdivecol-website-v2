@@ -47,7 +47,7 @@ const DestinationCardComponent = ({ destinationData }) => {
               {upcomingTrips.map((trip) => (
                 <li key={trip.id}>
                   <Link
-                    to={`/expediciones/${trip.id}`}
+                    to={`/experiencias/${trip.id}`}
                     className='block bg-brand-primary-dark p-3 rounded-md hover:bg-brand-primary-light transition-colors text-left'>
                     <span className='font-serif text-brand-neutral'>
                       {formatDateRange(

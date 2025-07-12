@@ -1,7 +1,7 @@
 // src/i18n/locales/en/home.js
 export default {
   // SEO Section
-  homeSeoTitle: 'JustDiveCol - Unforgettable Dive Courses and Expeditions',
+  homeSeoTitle: 'JustDiveCol - Unforgettable Dive Courses and Experiences',
   homeSeoDesc:
     "Dive into an underwater adventure that transcends borders. As a tourism company specializing in diving, we offer PADI certifications and personalized trips to the world's most astonishing destinations. Your exploration starts today!",
 
@@ -9,7 +9,7 @@ export default {
   homeHeroTitle: 'Your Next Great Adventure Begins Underwater',
   homeHeroSubtitle:
     'Explore the hidden wonders of the oceans with the safety and passion that sets us apart. We invite you to discover a world of unparalleled beauty and lasting emotions.',
-  homeHeroCtaText: 'Discover Our Expeditions',
+  homeHeroCtaText: 'Discover Our Experiences',
 
   // Experiences Section
   homeExpTitle: 'Experiences That Transform Your View of the World',

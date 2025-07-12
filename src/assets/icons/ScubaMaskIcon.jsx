@@ -1,5 +1,6 @@
 // src/components/icons/ScubaMaskIcon.jsx
-export const ScubaMaskIcon = () => (
+
+export const ScubaMaskIcon = (props) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     className='h-8 w-8 text-brand-cta-orange'
@@ -8,14 +9,16 @@ export const ScubaMaskIcon = () => (
     stroke='currentColor'
     fill='none'
     strokeLinecap='round'
-    strokeLinejoin='round'>
-    <path
-      stroke='none'
-      d='M0 0h24v24H0z'
+    strokeLinejoin='round'
+    {...props}>
+    <g
       fill='none'
-    />
-    <path d='M4 8h16a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1z' />
-    <path d='M10 16v-1a2 2 0 1 1 4 0v1' />
-    <path d='M8 5v-1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v1' />
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='2'>
+      <path d='M4 7h12a1 1 0 0 1 1 1v4.5a2.5 2.5 0 0 1-2.5 2.5H14a2 2 0 0 1-2-2a2 2 0 1 0-4 0a2 2 0 0 1-2 2h-.5A2.5 2.5 0 0 1 3 12.5V8a1 1 0 0 1 1-1z'></path>
+      <path d='M10 17a2 2 0 0 0 2 2h3.5a5.5 5.5 0 0 0 5.5-5.5V4'></path>
+    </g>
   </svg>
 );

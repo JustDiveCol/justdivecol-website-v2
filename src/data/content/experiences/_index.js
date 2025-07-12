@@ -6,12 +6,12 @@ import { expSmSept2025 } from './exp-sm-sept-2025.js';
 
 /**
  * A central registry of all available experiences, indexed by their unique ID.
- * This allows for efficient lookups (e.g., experiencesById['expedicion-santa-marta-sept-2025']).
+ * This allows for efficient lookups (e.g., experiencesById['experiencia-santa-marta-sept-2025']).
  * To add a new experience, import it above and add it to this object.
  */
 export const experiencesById = {
-  'expedicion-santa-marta-sept-2025': expSmSept2025,
-  // 'expedicion-malpelo-2026': expMalpelo2026,
+  'experiencia-santa-marta-sept-2025': expSmSept2025,
+  // 'experiencia-malpelo-2026': expMalpelo2026,
 };
 
 /**

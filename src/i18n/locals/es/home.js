@@ -1,7 +1,7 @@
 // src/i18n/locales/es/home.js
 export default {
   // SEO Section
-  homeSeoTitle: 'JustDiveCol - Cursos y Expediciones de Buceo Inolvidables',
+  homeSeoTitle: 'JustDiveCol - Cursos y Experiencias de Buceo Inolvidables',
   homeSeoDesc:
     'Sumérgete en una aventura submarina que trasciende fronteras. Como empresa de turismo especializada en buceo, ofrecemos certificaciones PADI y viajes personalizados a los destinos más asombrosos del mundo. ¡Tu exploración comienza hoy!',
 

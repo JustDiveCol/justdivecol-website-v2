@@ -32,7 +32,7 @@ Contiene los datos específicos para cada página estática principal.
 
 Esta es la sección más dinámica y el corazón del sitio. Organiza el contenido en "colecciones".
 
-- **`experiences/`**: Contiene un archivo `.js` para cada **expedición o viaje** que ofrece el sitio.
+- **`experiences/`**: Contiene un archivo `.js` para cada **experiencia o viaje** que ofrece el sitio.
 - **`destinations/`**: Contiene un archivo `.js` para cada **destino** de buceo.
 - **`courses/`**: Contiene un archivo `.js` para cada **curso o certificación**.
 

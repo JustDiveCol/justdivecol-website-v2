@@ -50,7 +50,7 @@ const CalendarExperienceCardComponent = ({ tripData }) => {
       {/* Right side: Action Button */}
       <div className='flex items-center space-x-4 w-full sm:w-auto justify-end'>
         <Link
-          to={`/expediciones/${id}`}
+          to={`/experiencias/${id}`}
           className='bg-brand-cta-orange text-white font-sans font-bold text-sm uppercase py-2 px-5 rounded-md hover:bg-opacity-90 transition-colors duration-300'>
           {t('viewDetails', { ns: 'common' })}
         </Link>

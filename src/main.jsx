@@ -47,7 +47,7 @@ const router = createHashRouter([
       // --- Dynamic Detail Pages ---
       // These routes use URL parameters (e.g., :courseId) to render specific content.
       { path: 'cursos/:courseId', element: <CoursePage /> },
-      { path: 'expediciones/:tripId', element: <ExperiencePage /> },
+      { path: 'experiencias/:tripId', element: <ExperiencePage /> },
       { path: 'destinos/:destinationId', element: <DestinationPage /> },
 
       // --- Fallback Route ---
