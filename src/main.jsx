@@ -43,7 +43,7 @@ const DestinationPage = lazy(() =>
 // import CoursePage from './pages/DetailPage/CoursePage/CoursePage.jsx';
 // import ExperiencePage from './pages/DetailPage/ExperiencePage/ExperiencePage.jsx';
 // import DestinationPage from './pages/DetailPage/DestinationPage/DestinationPage.jsx';
-// import PoliciesPage from './pages/PolicyPage/PolicyPage.jsx';
+// import PolicyPage from './pages/PolicyPage/PolicyPage.jsx';
 // import UnderConstructionPage from './pages/UnderConstructionPage/UnderConstructionPage.jsx';
 // import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
 
