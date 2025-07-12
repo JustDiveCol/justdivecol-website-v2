@@ -1,29 +1,29 @@
 // src/i18n/locales/es/contact.js
 export default {
   // SEO
-  contactSeoTitle: 'Contacto | JustDiveCol',
+  contactSeoTitle: 'Contacto | JustDiveCol - Planifica tu aventura submarina',
   contactSeoDesc:
-    '¿Listo para tu próxima aventura? Contáctanos para planificar tu viaje, resolver tus dudas o simplemente para hablar sobre buceo.',
+    '¿Listo para tu próxima inmersión? Contáctanos para planificar tu viaje soñado, resolver todas tus dudas o simplemente para compartir la pasión por el mundo submarino con JustDiveCol.',
 
   // Header
-  contactHeaderTitle: 'Hablemos de tu próxima aventura',
+  contactHeaderTitle: 'Hablemos de tu próxima gran aventura',
   contactHeaderSubtitle:
-    'Estamos aquí para responder tus preguntas, planificar tu viaje soñado o simplemente compartir la pasión por el océano.',
-  contactHeaderCtaButton: 'Contáctanos',
+    'Estamos aquí para responder cada una de tus preguntas, ayudarte a planificar tu viaje soñado o simplemente compartir nuestra pasión por el océano y sus misterios. ¡Te esperamos!',
+  contactHeaderCtaButton: 'Contáctanos ahora',
 
   // Contact Info
-  contactInfoTitle: 'Canales de comunicación',
+  contactInfoTitle: 'Nuestros canales de comunicación',
 
   // WhatsApp Action
-  contactWhatsAppTitle: 'Envíanos un mensaje directo',
+  contactWhatsAppTitle: 'Envíanos un mensaje directo por WhatsApp',
   contactWhatsAppDesc:
-    '¿Tienes una pregunta rápida o prefieres una conversación más directa? Haz clic en el botón para iniciar un chat con nosotros en WhatsApp.',
-  contactWhatsAppButton: 'Iniciar conversación por WhatsApp',
+    '¿Tienes una pregunta rápida, necesitas asesoría personalizada o prefieres una conversación más directa? Haz clic en el botón de abajo para iniciar un chat con nuestro equipo en WhatsApp de forma instantánea. Estamos listos para ayudarte.',
+  contactWhatsAppButton: 'Chatear con JustDiveCol',
   contactWhatsAppMessage:
     'Hola, equipo de JustDiveCol. Me gustaría recibir más información sobre...',
 
   courseInquiryMessage:
     'Hola, equipo de JustDiveCol. Me gustaría recibir más información sobre el curso "{{courseName}}".',
 
-  contactFollowUs: 'Siguenos',
+  contactFollowUs: 'Síguenos en redes',
 };

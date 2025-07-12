@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 
 // Animation variants and data
 import { staggerContainer } from '../../../../hooks/animations';
-import { paymentMethodsData } from '../../../../data/global/paymentMethodsData';
 import { contactPageData } from '../../../../data/pages/contactData';
 
 // Reusable section and card components
@@ -17,7 +16,6 @@ import DetailsCard from '../../common/Cards/DetailsCard';
 import ChecklistCard from '../../common/Cards/ChecklistCard';
 import CtaCard from '../../common/Cards/CtaCard';
 import UpcomingTripsHorizontalSection from '../../common/Sections/UpcomingTripsHorizontalSection';
-import PaymentCard from '../../common/Cards/PaymentCard';
 
 /**
  * The main layout component for the course detail page.
@@ -74,10 +72,6 @@ const CourseLayout = ({ courseData, availableTrips }) => {
           <DetailsCard
             detailsData={courseData.details}
             translationNS='courses'
-          />
-          <PaymentCard
-            paymentData={paymentMethodsData}
-            translationNS='payment'
           />
           <ChecklistCard
             checklistData={courseData.whatIsIncluded}

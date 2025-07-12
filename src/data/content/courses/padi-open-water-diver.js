@@ -28,7 +28,7 @@ export const padiOpenWaterDiverCourse = {
   header: {
     titleKey: 'owdHeaderTitle',
     subtitleKey: 'owdHeaderSubtitle',
-    bannerImageUrl: owd_header_background, // For the detail page banner.
+    headerImageUrl: owd_header_background, // For the detail page banner.
     imageUrl: owd_card_image, // For the course card on the experiences page.
   },
 
@@ -86,6 +86,7 @@ export const padiOpenWaterDiverCourse = {
       'owdIncludeItem5',
       'owdIncludeItem6',
       'owdIncludeItem7',
+      'owdIncludeItem8',
     ],
   },
 

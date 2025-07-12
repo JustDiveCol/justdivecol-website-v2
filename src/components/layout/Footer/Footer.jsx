@@ -118,6 +118,23 @@ const Footer = () => {
           <div className='flex-grow border-t border-brand-primary-light/20'></div>
         </div>
 
+        <div className='text-center mb-8'>
+          {' '}
+          {/* Centra el contenido y añade un margen inferior */}
+          <h3 className='text-xl font-bold text-brand-white mb-4'>
+            {t(footerData.importantLinksTitle)}
+          </h3>{' '}
+          {/* Asume una clave de traducción para el título */}
+          {footerData.navLinks.map((link) => (
+            <Link
+              key={link.nameKey}
+              to={link.path}
+              className='text-brand-neutral/80 hover:text-brand-cta-orange transition-colors text-sm p-2'>
+              {t(link.nameKey)}
+            </Link>
+          ))}
+        </div>
+
         <div className='text-sm'>
           <p>
             &copy; {new Date().getFullYear()} {t(footerData.copyrightKey)}

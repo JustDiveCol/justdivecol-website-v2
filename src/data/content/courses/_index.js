@@ -1,5 +1,8 @@
 // src/data/content/courses/_index.js
 import { padiOpenWaterDiverCourse } from './padi-open-water-diver.js';
+import { padiAdvancedOpenWaterDiverCourse } from './padi-advanced-open-water.js';
+import { padiRescueDiverCourse } from './padi-rescue-diver.js';
+
 import { publishedExperiences } from '../experiences/_index.js';
 // --- Import other course data files here as you create them ---
 // import { advancedOpenWaterCourse } from './padi-advanced.js';
@@ -11,6 +14,8 @@ import { publishedExperiences } from '../experiences/_index.js';
  */
 export const coursesById = {
   'padi-open-water-diver': padiOpenWaterDiverCourse,
+  'padi-advanced-open-water-diver': padiAdvancedOpenWaterDiverCourse,
+  'padi-rescue-diver': padiRescueDiverCourse,
   // 'padi-advanced-open-water': advancedOpenWaterCourse,
 };
 

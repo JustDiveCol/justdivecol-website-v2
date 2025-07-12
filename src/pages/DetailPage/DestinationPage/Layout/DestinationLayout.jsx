@@ -65,9 +65,9 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
         sectionData={{
           // Note: Using destinationInfo.titleKey for both title and subtitle
           // might be intentional or a placeholder. Review if a separate subtitleKey is needed.
-          titleKey: destinationData.page.destinationInfo.titleKey,
-          subtitleKey: destinationData.page.destinationInfo.titleKey,
-          imageUrl: destinationData.page.headerImageUrl,
+          titleKey: destinationData.nameKey,
+          subtitleKey: destinationData.card.descriptionKey,
+          headerImageUrl: destinationData.page.headerImageUrl,
         }}
         translationNS='destinations'
       />

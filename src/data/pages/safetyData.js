@@ -1,6 +1,8 @@
 // src/data/pages/safety.js
 
 import safety_header_background from '../../assets/images/page-specific/safety/safety-header-background.webp';
+import safety_logo_partner_1 from '../../assets/images/page-specific/safety/safety-logo-partner-1.webp';
+import safety_logo_partner_2 from '../../assets/images/page-specific/safety/safety-logo-partner-2.webp';
 
 export const safetyPageData = {
   seo: {
@@ -10,7 +12,7 @@ export const safetyPageData = {
   header: {
     titleKey: 'safetyHeaderTitle',
     subtitleKey: 'safetyHeaderSubtitle',
-    imageUrl: safety_header_background,
+    headerImageUrl: safety_header_background,
   },
   protocols: {
     titleKey: 'safetyProtocolsTitle',
@@ -70,13 +72,13 @@ export const safetyPageData = {
         id: 'buenas-practicas',
         nameKey: 'safetyPartner1Name',
         descriptionKey: 'safetyPartner1Desc',
-        logoUrl: 'https://placehold.co/1920x1080/000/fff?text=partnerLogo1',
+        logoUrl: safety_logo_partner_1,
       },
       {
         id: 'capacitacion',
         nameKey: 'safetyPartner2Name',
         descriptionKey: 'safetyPartner2Desc',
-        logoUrl: 'https://placehold.co/1920x1080/000/fff?text=partnerLogo2',
+        logoUrl: safety_logo_partner_2,
       },
     ],
   },

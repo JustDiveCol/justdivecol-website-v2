@@ -47,7 +47,7 @@ const CourseCardComponent = ({ courseData }) => {
           {t(header.titleKey)}
         </h3>
         {/* Display a truncated version of the first paragraph of the description. */}
-        <p className='mt-2 font-serif text-brand-neutral flex-grow'>
+        <p className='mt-2 font-serif text-brand-neutral flex-grow text-justify'>
           {t(description.paragraphs[0]).substring(0, 100)}...
         </p>
         <div className='mt-6 pt-4 border-t border-brand-primary-light/20 flex justify-between items-center'>

@@ -9,7 +9,7 @@ export const contactPageData = {
   header: {
     titleKey: 'contactHeaderTitle',
     subtitleKey: 'contactHeaderSubtitle',
-    imageUrl: contact_header_background,
+    headerImageUrl: contact_header_background,
     ctaTextKey: 'contactHeaderCtaButton',
     ctaLink: '/contacto',
   },

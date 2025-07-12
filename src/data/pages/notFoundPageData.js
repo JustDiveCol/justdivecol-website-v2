@@ -1,7 +1,7 @@
-// import notFoundImage from '../../assets/images/page-specific/not-found/not-found-background.webp';
+import not_found_background from '../../assets/images/page-specific/not-found/not-found-background.webp';
 
 export const notFoundPageData = {
-  imageUrl: 'https://placehold.co/600x400?text=Not+Found+Page',
+  imageUrl: not_found_background,
   titleKey: 'notFoundTitle',
   subtitleKey: 'notFoundSubtitle',
   ctaTextKey: 'notFoundCtaText',

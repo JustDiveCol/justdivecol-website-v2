@@ -5,16 +5,16 @@ import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../../hooks/animations';
 
 // Import the icons required for this component.
-import { ShieldCheckIcon } from '../../../../assets/icons/ShieldCheckIcon';
-import { CogIcon } from '../../../../assets/icons/CogIcon';
-import { ClipboardListIcon } from '../../../../assets/icons/ClipboardListIcon';
+import { GuidesIcon } from '../../../../assets/icons/GuidesIcon';
+import { EquipmentIcon } from '../../../../assets/icons/EquipmentIcon';
+import { ProtocolsIcon } from '../../../../assets/icons/ProtocolsIcon';
 
 // Maps string identifiers from the data file to the actual imported icon components.
 // This allows the data layer to remain simple (e.g., "id: 'guias'").
 const iconMap = {
-  guias: <ShieldCheckIcon />,
-  equipos: <CogIcon />,
-  protocolos: <ClipboardListIcon />,
+  guias: <GuidesIcon />,
+  equipos: <EquipmentIcon />,
+  protocolos: <ProtocolsIcon />,
 };
 
 /**

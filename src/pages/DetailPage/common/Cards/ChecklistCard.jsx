@@ -55,7 +55,7 @@ const ChecklistCard = ({ checklistData, translationNS, type }) => {
             <div className='flex-shrink-0 w-6 mt-1'>
               <ItemIcon type={type} />
             </div>
-            <span className='ml-2 font-serif text-brand-neutral/90'>
+            <span className='ml-2 font-serif text-brand-neutral/90 text-justify'>
               {t(itemKey)}
             </span>
           </li>

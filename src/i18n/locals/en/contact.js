@@ -1,29 +1,29 @@
 // src/i18n/locales/en/contact.js
 export default {
   // SEO
-  contactSeoTitle: 'Contact | JustDiveCol',
+  contactSeoTitle: 'Contact | JustDiveCol - Plan Your Underwater Adventure',
   contactSeoDesc:
-    'Ready for your next adventure? Contact us to plan your trip, answer your questions, or just to talk about diving.',
+    'Ready for your next dive? Contact us to plan your dream trip, get all your questions answered, or simply share your passion for the underwater world with JustDiveCol.',
 
   // Header
-  contactHeaderTitle: "Let's talk about your next adventure",
+  contactHeaderTitle: "Let's Talk About Your Next Great Adventure",
   contactHeaderSubtitle:
-    'We are here to answer your questions, plan your dream trip, or simply share the passion for the ocean.',
-  contactHeaderCtaButton: 'Contact Us',
+    "We're here to answer your every question, help you plan your dream trip, or simply share our passion for the ocean and its mysteries. We look forward to hearing from you!",
+  contactHeaderCtaButton: 'Contact Us Now',
 
   // Contact Info
-  contactInfoTitle: 'Communication Channels',
+  contactInfoTitle: 'Our Communication Channels',
 
   // WhatsApp Action
-  contactWhatsAppTitle: 'Send us a direct message',
+  contactWhatsAppTitle: 'Send Us a Direct Message via WhatsApp',
   contactWhatsAppDesc:
-    'Have a quick question or prefer a more direct conversation? Click the button to start a chat with us on WhatsApp.',
-  contactWhatsAppButton: 'Start WhatsApp conversation',
+    "Have a quick question, need personalized advice, or prefer a more direct conversation? Click the button below to start an instant chat with our team on WhatsApp. We're ready to help you.",
+  contactWhatsAppButton: 'Chat with JustDiveCol',
   contactWhatsAppMessage:
     'Hello, JustDiveCol team. I would like to receive more information about...',
 
   courseInquiryMessage:
     'Hello, JustDiveCol team. I would like to receive more information about the "{{courseName}}" course.',
 
-  contactFollowUs: 'Follow Us',
+  contactFollowUs: 'Follow Us on Social Media',
 };

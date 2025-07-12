@@ -1,78 +1,92 @@
 // src/i18n/locales/es/experiences.js
 export default {
+  // Common terms for trips/experiences
   day: 'Día',
   // Section texts
-  expTitle: 'Nuestras Experiencias',
+  expTitle: 'Nuestras experiencias submarinas',
   expSubtitle:
-    'Desde tu primera respiración bajo el agua hasta convertirte en un profesional, tenemos una aventura para ti.',
+    'Desde tu primera respiración bajo el agua hasta convertirte en un explorador avanzado, JustDiveCol tiene una aventura diseñada para ti.',
 
   // Card 1
-  expCard1Category: 'Cursos y certificaciones',
-  expCard1Title: 'Tu aventura comienza aquí',
+  expCard1Category: 'Cursos y certificaciones PADI',
+  expCard1Title: 'Tu aventura submarina comienza aquí',
 
   // Card 2
-  expCard2Category: 'Viajes de buceo',
-  expCard2Title: 'Destinos que te quitarán el aliento',
+  expCard2Category: 'Viajes de buceo y exploración',
+  expCard2Title: 'Destinos que te dejarán sin aliento',
 
   // Card 3
   expCard3Category: 'Experiencias a tu medida',
   expCard3Title: 'Diseña la aventura perfecta',
 
-  // --- Santa Marta Sept 2025 Expedition ---
-  expsmsept25Name: 'Viaje de certificación Open Water: Santa Marta',
+  // --- Santa Marta Sept 2025 Experience ---
+  expsmsept25Name: 'Experiencia de certificación Open Water: Santa Marta',
   expsmsept25SeoTitle:
-    'Certificación PADI Open Water en Santa Marta | Viaje de Buceo Tayrona',
+    'Certificación PADI Open Water en Santa Marta | Viaje de Buceo JustDiveCol',
   expsmsept25SeoDesc:
-    'Obtén tu licencia de buceo PADI Open Water en un viaje inolvidable a Santa Marta. Aprende en las aguas cristalinas del Parque Tayrona con JustDiveCol.',
+    'Obtén tu licencia de buceo PADI Open Water en un viaje inolvidable a Santa Marta con JustDiveCol. Aprende en las aguas cristalinas del Caribe colombiano y comienza tu exploración submarina.',
   expsmsept25HeaderTitle: 'Tu aventura submarina comienza aquí',
   expsmsept25HeaderSubtitle:
-    'Obtén tu certificación PADI Open Water en las aguas mágicas de Santa Marta.',
-  expsmsept25DescTitle: 'Donde nace un nuevo explorador',
+    'Obtén tu certificación PADI Open Water en las mágicas aguas de Santa Marta con una experiencia inolvidable.',
+  expsmsept25DescTitle: 'Donde nace un nuevo explorador del mundo azul',
   expsmsept25DescP1:
-    'Imagina tu primera inmersión en las aguas cristalinas del Caribe. Este viaje está diseñado desde cero para ti. Te guiaremos paso a paso en las bahías protegidas del Tayrona.',
+    'Imagina tu primera inmersión, no solo en cualquier lugar, sino en las vibrantes aguas cristalinas del Caribe colombiano, con base en Santa Marta. Esta experiencia está meticulosamente diseñada para que, desde cero, te sumerjas con confianza. Te guiaremos paso a paso a través de las diversas y protegidas bahías de la región, un verdadero paraíso submarino.',
   expsmsept25DescP2:
-    'No es solo un curso, es el inicio de una pasión que te llevará a explorar el 70% del planeta.',
-  expsmsept25DetailsTitle: 'Detalles del viaje',
+    'Más que un curso, este viaje es el inicio de una profunda pasión por el buceo, una que te impulsará a explorar el 70% del planeta. Prepárate para transformar tu percepción del mundo y descubrir un universo lleno de vida y color bajo la superficie.',
+  expsmsept25DetailsTitle: 'Detalles de tu experiencia de certificación',
   expsmsept25DetailLabel1: 'Precio',
   expsmsept25DetailValue1: 'COP 3.500.000',
   expsmsept25DetailLabel2: 'Inmersiones',
   expsmsept25DetailValue2: '5 en aguas confinadas + 4 en aguas abiertas',
-  expsmsept25DetailLabel3: 'Nivel mínimo',
-  expsmsept25DetailValue3: 'Ninguno (Ganas de explorar)',
+  expsmsept25DetailLabel3: 'Nivel mínimo requerido',
+  expsmsept25DetailValue3:
+    'Ninguno (solo ganas de explorar y un espíritu aventurero)',
   expsmsept25DetailLabel4: 'Edad mínima',
-  expsmsept25DetailValue4: '10 años*',
-  expsmsept25ItineraryTitle: 'Tu camino para convertirte en buzo',
+  expsmsept25DetailValue4: '10 años (se aplican condiciones para menores)',
+  expsmsept25ItineraryTitle: 'Tu camino para convertirte en buzo certificado',
   expsmsept25ItineraryDay1Title: 'Llegada y fundamentos en aguas confinadas',
   expsmsept25ItineraryDay1Desc:
-    'Arribo a Santa Marta. Tras el almuerzo, daremos inicio a tu aventura con la primera sesión de habilidades en aguas confinadas.',
-  expsmsept25ItineraryDay2Title: '¡Al mar! Primeras inmersiones',
+    'Arribo a Santa Marta, la puerta al Caribe. Tras un reponedor almuerzo, daremos inicio a tu emocionante aventura con la primera sesión de desarrollo de habilidades en un entorno controlado. Aquí te familiarizarás con el equipo y los principios básicos del buceo.',
+  expsmsept25ItineraryDay2Title:
+    '¡Al mar! tus primeras inmersiones en aguas abiertas',
   expsmsept25ItineraryDay2Desc:
-    'Nos prepararemos para realizar tus primeras dos inmersiones en aguas abiertas. Tarde libre para relajarte.',
-  expsmsept25ItineraryDay3Title: 'Completando la certificación y celebración',
+    'Este es el momento que has estado esperando. Nos prepararemos para realizar tus dos primeras inmersiones en las espectaculares aguas abiertas de Santa Marta y sus alrededores. Descubre la vida marina en su hábitat natural. Tendrás la tarde libre para relajarte y procesar tus nuevas experiencias.',
+  expsmsept25ItineraryDay3Title: 'Completando tu certificación y celebración',
   expsmsept25ItineraryDay3Desc:
-    'Realizamos las dos últimas inmersiones. Por la noche, celebraremos tu logro en nuestra ceremonia de graduación.',
-  expsmsept25ItineraryDay4Title: 'Despedida de un nuevo buzo',
+    'Realizamos las dos últimas inmersiones que completarán tu certificación, consolidando tus habilidades y confianza. Por la noche, celebraremos tu logro con una ceremonia de graduación en un ambiente festivo y memorable.',
+  expsmsept25ItineraryDay4Title: 'Despedida de un nuevo explorador submarino',
   expsmsept25ItineraryDay4Desc:
-    'Disfruta de un último desayuno como buzo certificado antes de realizar el check-out del hotel.',
+    'Disfruta de un último desayuno como buzo PADI Open Water Diver certificado, recordando los increíbles momentos vividos. Después, realizarás el check-out del hotel, llevando contigo no solo una certificación, sino una pasión de por vida.',
   expsmsept25ItineraryNote1:
-    'Recomendamos comprar tu vuelo de regreso para después del mediodía del último día.',
+    'Recomendamos encarecidamente comprar tu vuelo de regreso para después del mediodía del último día, para garantizar un margen de seguridad post-buceo (18-24 horas sin volar).',
   expsmsept25ItineraryNote2:
-    'Para viajes con menores, es obligatorio presentar autorización notariada del acudiente legal.',
-  expsmsept25IncludedTitle: '¿Qué incluye tu viaje?',
-  expsmsept25IncludeItem1: '5 sesiones virtuales de asesoría previas al viaje',
+    'Para experiencias con menores de edad, es obligatorio presentar una autorización notariada del acudiente legal o de ambos padres, según la normativa vigente.',
+  expsmsept25IncludedTitle: '¿Qué incluye tu experiencia de certificación?',
+  expsmsept25IncludeItem1:
+    'Alojamiento por 3 noches y 4 días en hotel seleccionado (habitaciones dobles/triples).',
   expsmsept25IncludeItem2:
-    'Alojamiento por 3 noches y 4 días en hotel seleccionado',
-  expsmsept25IncludeItem3: 'Alimentación: Cenas (3), Desayunos (3) y Snacks',
+    'Plan de alimentación completo durante la estadía: cenas (3), desayunos (3) y snacks diarios.',
+  expsmsept25IncludeItem3:
+    'Todos los traslados necesarios: aeropuerto-hotel-aeropuerto y a todas las actividades de buceo/curso.',
   expsmsept25IncludeItem4:
-    'Todos los traslados: Aeropuerto-Hotel-Aeropuerto y a actividades',
-  expsmsept25IncludeItem5: 'Cubrimiento fotográfico',
-  expsmsept25NotIncludedTitle: '¿Qué NO incluye?',
-  expsmsept25NotIncludeItem1: 'Tiquetes aéreos hacia y desde Santa Marta',
-  expsmsept25NotIncludeItem2: 'Bebidas alcohólicas y comidas no especificadas',
-  expsmsept25NotIncludeItem3: 'Propinas para guías y tripulación',
-  expsmsept25NotIncludeItem4: 'Otros gastos personales no mencionados',
-  expsmsept25OfferedCoursesTitle: 'Certificación principal',
-  expsmsept25GalleryTitle: 'Momentos de la expedición',
-  expsmsept25CtaTitle: '¿Listo para tu primera inmersión?',
-  expsmsept25CtaButtonText: 'Comienza tu aventura',
+    'Cubrimiento fotográfico de tus inmersiones y momentos clave.',
+  expsmsept25NotIncludedTitle: 'Tu inversión NO incluye',
+  expsmsept25NotIncludeItem1:
+    'Tiquetes aéreos nacionales o internacionales hacia y desde Santa Marta.',
+  expsmsept25NotIncludeItem2:
+    'Bebidas alcohólicas, bebidas no especificadas y comidas adicionales fuera del plan.',
+  expsmsept25NotIncludeItem3:
+    'Propinas para guías, instructores y personal de apoyo.',
+  expsmsept25NotIncludeItem4:
+    'Otros gastos personales no mencionados explícitamente en el plan.',
+  expsmsept25OfferedCoursesTitle: 'Certificación principal de esta experiencia',
+  expsmsept25GalleryTitle: 'Momentos inolvidables de tu experiencia',
+  expsmsept25CtaTitle: '¿Listo para tu primera inmersión y tu certificación?',
+  expsmsept25CtaButtonText: 'Comienza tu aventura con JustDiveCol',
+
+  availableTripsTitle: 'Próximas experiencias y cursos disponibles',
+  noUpcomingTrips:
+    'Las próximas fechas de experiencias y cursos están en camino. ¡Permanece atento a nuestras redes para alistar tus aletas!',
+  courseCtaAvailableTitle: '¿Listo para tu certificación?',
+  courseCtaAvailableButton: 'Ver nuestras políticas de cancelación',
 };

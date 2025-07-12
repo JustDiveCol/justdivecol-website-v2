@@ -79,6 +79,7 @@ export const santaMartaDestination = {
         { labelKey: 'smDetailLabel2', valueKey: 'smDetailValue2' },
         { labelKey: 'smDetailLabel3', valueKey: 'smDetailValue3' },
         { labelKey: 'smDetailLabel4', valueKey: 'smDetailValue4' },
+        { labelKey: 'smDetailLabel5', valueKey: 'smDetailValue5' },
       ],
     },
     uniqueFinds: {

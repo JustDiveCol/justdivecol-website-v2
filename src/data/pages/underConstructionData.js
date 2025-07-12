@@ -1,4 +1,6 @@
 // src/data/pages/underConstructionData.js
+import under_construction_background from '../../assets/images/page-specific/under-construction/under-construction-background.webp';
+
 export const underConstructionData = {
   seo: {
     titleKey: 'underConstructionSeoTitle',
@@ -8,6 +10,5 @@ export const underConstructionData = {
   subtitleKey: 'underConstructionSubtitle',
   ctaTextKey: 'underConstructionCtaText',
   ctaLink: '/', // Link back to the homepage
-  imageUrl:
-    'https://placehold.co/1920x1080/0A264F/FF7A00?text=Page+Under+Construction', // Placeholder image
+  imageUrl: under_construction_background,
 };

@@ -7,9 +7,9 @@ import { staggerContainer, fadeInUp } from '../../../hooks/animations';
 import { EquipmentCardComponent } from '../Card/EquipmentCardComponent';
 
 // Icons
-import { RegulatorIcon } from '../../../assets/icons/RegulatorIcon';
 import { BcdIcon } from '../../../assets/icons/BcdIcon';
 import { ComputerIcon } from '../../../assets/icons/ComputerIcon';
+import { ScubaRegulatorIcon } from '../../../assets/icons/ScubaRegulatorIcon';
 
 /**
  * Renders the "Equipment" section of the Safety page.
@@ -26,7 +26,7 @@ const EquipmentSection = ({ equipmentData }) => {
 
   // Maps icon string identifiers from data to the actual imported icon components.
   const iconMap = {
-    regulator: <RegulatorIcon />,
+    regulator: <ScubaRegulatorIcon />,
     bcd: <BcdIcon />,
     computer: <ComputerIcon />,
   };

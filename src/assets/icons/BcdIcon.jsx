@@ -1,15 +1,15 @@
 // src/components/icons/BcdIcon.jsx
-export const BcdIcon = () => (
+
+export const BcdIcon = (props) => (
   <svg
-    className='h-12 w-12'
-    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+    width='200'
+    height='200'
+    className='h-16 w-16'
     viewBox='0 0 24 24'
-    stroke='currentColor'
-    strokeWidth='1.5'>
+    {...props}>
     <path
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-    />
+      fill='currentColor'
+      d='m4 23l-1.6-1.2L5.25 18l.775-4.45q.075-.6.475-1.063t1.025-.612L17 9l2-4l3-3l1 1l-2.5 2.9l-1.5 4.6l-5 3.5l-5.85 1.85L7 19l-3 4Zm-1-8q-.825 0-1.413-.588T1 13q0-.825.588-1.413T3 11q.825 0 1.413.588T5 13q0 .825-.588 1.413T3 15Zm5.9-4.9q-.6.175-1.137-.138T7.05 9.05q-.175-.6.138-1.15t.912-.7L12.65 6l.775 2.9L8.9 10.1Z'></path>
   </svg>
 );

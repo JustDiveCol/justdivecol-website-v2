@@ -15,4 +15,18 @@ export const footerData = {
 
   // The credits line, e.g., "Designed and built by...".
   creditsKey: 'footerCredits',
+
+  importantLinksTitle: 'footerLinksTitle',
+
+  navLinks: [
+    { nameKey: 'policies', path: '/politicas' },
+    { nameKey: 'termsAndConditions', path: '/proximamente' },
+    { nameKey: 'privacy', path: '/proximamente' },
+    { nameKey: 'faqs', path: '/proximamente' },
+    { nameKey: 'diveSites', path: '/proximamente' },
+    { nameKey: 'gear', path: '/proximamente' },
+    { nameKey: 'photosAndVideos', path: '/proximamente' },
+  ],
+
+  policiesLinkText: 'footerLinkText',
 };

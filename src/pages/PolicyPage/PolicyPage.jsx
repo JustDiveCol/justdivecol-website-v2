@@ -36,6 +36,7 @@ const PolicyPage = () => {
           translationNS='policies'
         />
         <div className='container mx-auto py-16 px-4'>
+          {/* Solo un mapeo de sections aquí */}
           {policyPageData.sections.map((section) => (
             <motion.section
               key={section.id}
@@ -44,9 +45,21 @@ const PolicyPage = () => {
               <h2 className='text-3xl font-sans font-bold text-brand-white mb-4'>
                 {t(section.titleKey, { ns: 'policies' })}
               </h2>
-              <ul className='space-y-3 list-disc list-inside font-serif text-brand-neutral/90'>
-                {section.points.map((pointKey, index) => (
-                  <li key={index}>{t(pointKey, { ns: 'policies' })}</li>
+              <ul className='space-y-3 list-disc list-inside font-serif text-brand-neutral/90 text-justify'>
+                {section.points.map((point, index) => (
+                  <li key={index}>
+                    {t(point.pointKey, { ns: 'policies' })}
+                    {point.subPoints && point.subPoints.length > 0 && (
+                      // Usamos <ol> para los subpuntos con letras 'a, b, c'
+                      <ol className='ml-6 mt-2 space-y-2 list-[lower-alpha] list-inside text-brand-neutral/60'>
+                        {point.subPoints.map((subPointKey, subIndex) => (
+                          <li key={subIndex}>
+                            {t(subPointKey, { ns: 'policies' })}
+                          </li>
+                        ))}
+                      </ol>
+                    )}
+                  </li>
                 ))}
               </ul>
             </motion.section>

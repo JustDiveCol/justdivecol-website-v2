@@ -1,16 +1,14 @@
 // src/components/icons/ShieldIcon.jsx
-export const ShieldIcon = () => (
+export const ShieldIcon = (props) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
-    className='h-10 w-10'
-    fill='none'
+    width='200'
+    height='200'
+    className='h-16 w-16'
     viewBox='0 0 24 24'
-    stroke='currentColor'>
+    {...props}>
     <path
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      strokeWidth={2}
-      d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.917l9 3 9-3a12.02 12.02 0 00-3.382-8.94'
-    />
+      fill='currentColor'
+      d='M12 22q-3.475-.875-5.738-3.988T4 11.1V5l8-3l8 3v6.1q0 3.8-2.263 6.913T12 22Zm0-2.1q2.425-.75 4.05-2.963T17.95 12H12V4.125l-6 2.25v5.175q0 .175.05.45H12v7.9Z'></path>
   </svg>
 );

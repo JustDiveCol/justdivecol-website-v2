@@ -1,54 +1,56 @@
 // src/i18n/locales/es/safety.js
 export default {
   // SEO
-  safetySeoTitle: 'Compromiso con la Seguridad | JustDiveCol',
+  safetySeoTitle:
+    'Compromiso con la seguridad | JustDiveCol - Tu bienestar en cada inmersión',
   safetySeoDesc:
-    'Descubre nuestros rigurosos protocolos, equipamiento de primera y alianzas que garantizan una experiencia de buceo segura con JustDiveCol.',
+    'Descubre cómo nuestros rigurosos protocolos, equipamiento de vanguardia y alianzas estratégicas garantizan una experiencia de buceo y aventura segura e inolvidable con JustDiveCol.',
 
   // Header
-  safetyHeaderTitle: 'Seguridad sin concesiones',
+  safetyHeaderTitle:
+    'Seguridad sin concesiones: tu tranquilidad es nuestra prioridad',
   safetyHeaderSubtitle:
-    'Tu tranquilidad es la base de una aventura inolvidable. En JustDiveCol, la seguridad es el pilar fundamental de cada inmersión.',
+    'En JustDiveCol, entendemos que una aventura verdaderamente inolvidable se construye sobre la base de la confianza. Por eso, la seguridad es el pilar fundamental de cada experiencia que ofrecemos.',
 
   // Protocols
-  safetyProtocolsTitle: 'Nuestro estándar de seguridad',
+  safetyProtocolsTitle: 'Nuestro estándar de seguridad en cada inmersión',
   safetyProtocolsSubtitle:
-    'Seguimos un riguroso proceso en cada una de nuestras operaciones, priorizando el bienestar y la confianza de nuestros buzos.',
-  safetyStep1Name: 'Briefing detallado',
+    'Seguimos un proceso meticuloso y riguroso en cada una de nuestras operaciones, priorizando en todo momento el bienestar, la confianza y la disfrute pleno de nuestros exploradores submarinos.',
+  safetyStep1Name: 'Briefing detallado pre-inmersión',
   safetyStep1Desc:
-    'Antes de cada inmersión, realizamos una sesión informativa completa: revisamos condiciones, explicamos el plan de buceo y recordamos procedimientos de seguridad.',
-  safetyStep2Name: 'Chequeo pre-inmersión',
+    'Antes de cada inmersión o actividad, realizamos una sesión informativa completa y participativa. Revisamos las condiciones del entorno, explicamos detalladamente el plan de buceo y recordamos los procedimientos de seguridad esenciales para asegurar tu comprensión y preparación.',
+  safetyStep2Name: 'Chequeo pre-inmersión (CPTAO/BWRAF)',
   safetyStep2Desc:
-    'Revisamos juntos el equipo paso a paso para que bucees con total confianza.',
-  safetyStep3Name: 'Guiado profesional',
+    'Realizamos juntos el crucial chequeo pre-inmersión, un estándar de seguridad global que garantiza que tu equipo esté perfecto y que bucees con total confianza. Este chequeo sigue las siglas CPTAO o BWRAF',
+  safetyStep3Name: 'Guiado profesional y personalizado',
   safetyStep3Desc:
-    'Nuestros guías certificados lideran grupos pequeños para brindar atención personalizada y garantizar una experiencia segura en todo momento.',
-  safetyStep4Name: 'Monitoreo y debriefing',
+    'Nuestros guías e instructores certificados PADI lideran grupos reducidos. Esto nos permite brindar una atención personalizada, adaptar la inmersión a tu nivel y garantizar una experiencia segura, cómoda y enriquecedora en todo momento.',
+  safetyStep4Name: 'Monitoreo constante y debriefing post-inmersión',
   safetyStep4Desc:
-    'Durante y después de la inmersión, monitoreamos el bienestar de cada participante y finalizamos con un debriefing para compartir aprendizajes.',
+    'Durante y después de cada inmersión, monitoreamos de cerca el bienestar de cada participante. Al finalizar, realizamos un debriefing para compartir observaciones, resolver dudas y consolidar los aprendizajes de la experiencia vivida.',
 
   // Equipment
-  safetyEquipmentTitle: 'Equipamiento de vanguardia',
+  safetyEquipmentTitle: 'Equipamiento de vanguardia para tu protección',
   safetyEquipmentSubtitle:
-    'Confiamos únicamente en marcas líderes en la industria, asegurando la máxima seguridad y comodidad en cada inmersión.',
-  safetyEquip1Name: 'Reguladores',
+    'Confiamos únicamente en equipos de las marcas líderes en la industria del buceo, sometidos a mantenimiento riguroso y revisiones periódicas, asegurando la máxima seguridad y comodidad en cada inmersión.',
+  safetyEquip1Name: 'Reguladores de alto rendimiento',
   safetyEquip1Desc:
-    'Utilizamos reguladores de alto rendimiento que garantizan una respiración suave y segura.',
-  safetyEquip2Name: 'Chalecos compensadores (BCDs)',
+    'Utilizamos reguladores de última generación que garantizan un suministro de aire suave, constante y seguro, fundamental para una respiración cómoda bajo el agua.',
+  safetyEquip2Name: 'Chalecos compensadores (BCDs) ergonómicos',
   safetyEquip2Desc:
-    'Nuestros BCDs son cómodos y ofrecen un control preciso de la flotabilidad.',
-  safetyEquip3Name: 'Computadores de buceo',
+    'Nuestros BCDs son cómodos, de ajuste preciso y ofrecen un control intuitivo y exacto de la flotabilidad, elementos clave para una inmersión placentera y segura.',
+  safetyEquip3Name: 'Computadores de buceo avanzados',
   safetyEquip3Desc:
-    'Cada inmersión es monitoreada con computadores modernos para mantenernos dentro de los límites seguros.',
+    'Cada una de tus inmersiones es monitoreada con computadores de buceo modernos y precisos, que nos permiten mantenernos dentro de los límites de seguridad y optimizar tu perfil de buceo.',
 
   // Certifications
-  safetyCertsTitle: 'Compromiso con buenas prácticas',
+  safetyCertsTitle: 'Compromiso con la excelencia y las mejores prácticas',
   safetyCertsSubtitle:
-    'Seguimos estándares internacionales de seguridad y sostenibilidad, y nos afiliamos a las principales organizaciones del sector.',
-  safetyPartner1Name: 'Estándares internacionales',
+    'En JustDiveCol, no solo cumplimos, sino que excedemos los estándares internacionales de seguridad y sostenibilidad. Estamos orgullosamente afiliados a las principales organizaciones del sector.',
+  safetyPartner1Name: 'Estándares internacionales rigurosos',
   safetyPartner1Desc:
-    'Nuestras operaciones se basan en los protocolos y recomendaciones de entidades reconocidas como PADI y DAN.',
-  safetyPartner2Name: 'Capacitación y actualización',
+    'Todas nuestras operaciones y experiencias se basan en los protocolos y recomendaciones más estrictos de entidades reconocidas globalmente como PADI (Professional Association of Diving Instructors) y DAN (Divers Alert Network).',
+  safetyPartner2Name: 'Capacitación y actualización constante',
   safetyPartner2Desc:
-    'Nuestro equipo participa en cursos de primeros auxilios y actualización en seguridad para garantizar tu bienestar.',
+    'Nuestro equipo de profesionales participa regularmente en cursos de primeros auxilios, rescate y actualización en técnicas avanzadas de seguridad y buceo, garantizando que tu bienestar esté siempre en las manos más capacitadas.',
 };

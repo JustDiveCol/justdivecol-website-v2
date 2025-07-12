@@ -17,13 +17,13 @@ import { fadeInUp } from '../hooks/animations';
 const HeaderComponent = ({ sectionData, translationNS }) => {
   const { t } = useTranslation(translationNS);
 
-  const { titleKey, subtitleKey, imageUrl } = sectionData;
+  const { titleKey, subtitleKey, headerImageUrl } = sectionData;
 
   return (
     <motion.div variants={fadeInUp}>
       <section
         className='relative h-80 bg-cover bg-center text-brand-white flex items-center justify-center text-center'
-        style={{ backgroundImage: `url(${imageUrl})` }}>
+        style={{ backgroundImage: `url(${headerImageUrl})` }}>
         {/* Dark overlay to improve text readability over the background image. */}
         <div className='absolute inset-0 bg-brand-primary-dark/70' />
         <div className='relative z-10 p-4'>

@@ -35,7 +35,7 @@ const DestinationCardComponent = ({ destinationData }) => {
         <h3 className='text-2xl font-bold font-sans text-brand-white'>
           {t(nameKey)}
         </h3>
-        <p className='mt-2 font-serif text-brand-neutral flex-grow'>
+        <p className='mt-2 font-serif text-brand-neutral flex-grow text-justify'>
           {t(card.descriptionKey)}
         </p>
         <div className='mt-4 pt-4 border-t border-brand-primary-light/20'>

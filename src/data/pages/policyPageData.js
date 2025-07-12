@@ -10,37 +10,102 @@ export const policyPageData = {
   header: {
     titleKey: 'policiesHeaderTitle',
     subtitleKey: 'policiesHeaderSubtitle',
-    imageUrl: policy_header_background,
+    headerImageUrl: policy_header_background,
   },
   sections: [
     {
-      id: 'booking-cancellation',
+      id: 'booking-and-payment-policy',
       titleKey: 'policiesSection1Title',
       points: [
-        'policiesSection1Point1',
-        'policiesSection1Point2',
-        'policiesSection1Point3',
-        'policiesSection1Point4',
+        {
+          pointKey: 'policiesSection1Point1',
+        },
+        {
+          pointKey: 'policiesSection1Point2',
+        },
+        {
+          pointKey: 'policiesSection1Point3',
+        },
       ],
     },
     {
-      id: 'safety-regulations',
+      id: 'cancellation-and-refund-policy',
       titleKey: 'policiesSection2Title',
       points: [
-        'policiesSection2Point1',
-        'policiesSection2Point2',
-        'policiesSection2Point3',
+        {
+          pointKey: 'policiesSection2Point1',
+          subPoints: [
+            'policiesSection2Point1a',
+            'policiesSection2Point1b',
+            'policiesSection2Point1c',
+            'policiesSection2Point1d',
+          ],
+        },
+        {
+          pointKey: 'policiesSection2Point2',
+          subPoints: ['policiesSection2Point2a', 'policiesSection2Point2b'],
+        },
+        {
+          pointKey: 'policiesSection2Point3',
+          subPoints: ['policiesSection2Point3a'],
+        },
       ],
     },
     {
-      id: 'equipment-rental',
+      id: 'safety-and-health-regulations-and-guidelines',
       titleKey: 'policiesSection3Title',
       points: [
-        'policiesSection3Point1',
-        'policiesSection3Point2',
-        'policiesSection3Point3',
+        {
+          pointKey: 'policiesSection3Point1',
+        },
+        {
+          pointKey: 'policiesSection3Point2',
+        },
+        {
+          pointKey: 'policiesSection3Point3',
+        },
+        {
+          pointKey: 'policiesSection3Point4',
+        },
+        {
+          pointKey: 'policiesSection3Point5',
+        },
       ],
     },
+    {
+      id: 'equipment-rental-and-use-policy',
+      titleKey: 'policiesSection4Title',
+      points: [
+        {
+          pointKey: 'policiesSection4Point1',
+        },
+        {
+          pointKey: 'policiesSection4Point2',
+        },
+        {
+          pointKey: 'policiesSection4Point3',
+        },
+        {
+          pointKey: 'policiesSection4Point4',
+        },
+      ],
+    },
+    {
+      id: 'responsibility-and-acceptance-of-risks',
+      titleKey: 'policiesSection5Title',
+      points: [
+        {
+          pointKey: 'policiesSection5Point1',
+        },
+        {
+          pointKey: 'policiesSection5Point2',
+        },
+        {
+          pointKey: 'policiesSection5Point3',
+        },
+      ],
+    },
+
     // Add more sections and points as needed
   ],
 };

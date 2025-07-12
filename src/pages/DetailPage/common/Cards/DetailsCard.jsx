@@ -30,7 +30,7 @@ const DetailsCard = ({ detailsData, translationNS }) => {
         {detailsData.items.map((item, index) => (
           <li
             key={item.labelKey || index} // Fallback to index if labelKey is missing.
-            className='flex items-baseline justify-between gap-4'>
+            className='flex justify-between gap-4 items-center'>
             <span className='text-brand-neutral/80'>{t(item.labelKey)}:</span>
             <span className='text-brand-white text-right'>
               {t(item.valueKey)}

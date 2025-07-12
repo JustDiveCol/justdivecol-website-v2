@@ -12,7 +12,7 @@ export const experiencesPageData = {
   header: {
     titleKey: 'expHeaderTitle',
     subtitleKey: 'expHeaderSubtitle',
-    imageUrl: experiences_header_background,
+    headerImageUrl: experiences_header_background,
   },
   // We reuse the shared categories and add page-specific anchor links
   categories: experienceCategories.map((cat) => ({

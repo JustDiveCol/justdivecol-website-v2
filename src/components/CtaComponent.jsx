@@ -9,12 +9,13 @@ import { staggerContainer, fadeInUp } from '../hooks/animations';
 const CTAComponent = ({ sectionData, translationNS }) => {
   const { t } = useTranslation(translationNS);
 
-  const { imageUrl, titleKey, subtitleKey, ctaTextKey, ctaLink } = sectionData;
+  const { headerImageUrl, titleKey, subtitleKey, ctaTextKey, ctaLink } =
+    sectionData;
 
   return (
     <section
       className='relative bg-cover bg-center py-24 px-4 text-brand-white'
-      style={{ backgroundImage: `url(${imageUrl})` }}>
+      style={{ backgroundImage: `url(${headerImageUrl})` }}>
       {/* Adds a dark overlay to ensure text readability over the background image. */}
       <div className='absolute inset-0 bg-brand-primary-dark/80'></div>
 

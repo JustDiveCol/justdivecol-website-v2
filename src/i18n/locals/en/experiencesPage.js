@@ -1,27 +1,27 @@
 // src/i18n/locales/en/experiencesPage.js
 export default {
   // SEO
-  expSeoTitle: 'Diving Experiences | JustDiveCol',
+  expSeoTitle: 'Dive Experiences | JustDiveCol - Courses & Custom Trips',
   expSeoDesc:
-    'Explore our complete catalog of PADI certifications and diving expeditions in the best destinations in Colombia.',
+    "Explore our full catalog of PADI certifications and unforgettable dive trips. From your first dives to personalized adventures in the world's most spectacular destinations, JustDiveCol connects you with the ocean.",
 
   // Header
-  expHeaderTitle: 'An Ocean of Possibilities',
+  expHeaderTitle: 'An Ocean of Possibilities Awaits You',
   expHeaderSubtitle:
-    'From your first breath underwater to expeditions in the most remote corners, every dive with us is a story to be told. Choose your next adventure.',
+    "From your very first breath underwater to explorations in the planet's most remote corners, every dive with JustDiveCol is a story to tell. Choose your next great underwater adventure.",
 
   // Upcoming Trips
-  expTripsTitle: 'Upcoming Adventures Calendar',
+  expTripsTitle: 'Calendar of Upcoming Scheduled Adventures',
   expTripsSubtitle:
-    'These are our next scheduled trips. Secure your spot before they run out!',
+    'These are our upcoming scheduled departures and courses. Secure your spot and get ready to dive into the extraordinary!',
 
   // Full Catalog
-  expCatalogCoursesTitle: 'Your Next Level: Courses & Certifications',
-  expCatalogDestsTitle: 'Memorable Destinations',
+  expCatalogCoursesTitle: 'Your Next Level: PADI Courses and Certifications',
+  expCatalogDestsTitle: 'Discover the Most Memorable Destinations',
 
   // Custom Trip CTA
-  expCtaTitle: "Can't find your ideal adventure?",
+  expCtaTitle: "Can't Find Your Dream Underwater Experience?",
   expCtaSubtitle:
-    "The expedition of your dreams can be a reality. Contact us and let's design a private experience, completely tailored to your expectations.",
-  expCtaButton: 'Design Your Trip',
+    "With JustDiveCol, the perfect adventure can become a reality. Contact us and let's design a private experience together, entirely tailored to your expectations and interests. Your trip, your rules.",
+  expCtaButton: 'Design Your Custom Experience',
 };

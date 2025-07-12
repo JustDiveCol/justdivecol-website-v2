@@ -13,7 +13,7 @@ export const aboutUsPageData = {
   header: {
     titleKey: 'aboutHeaderTitle',
     subtitleKey: 'aboutHeaderSubtitle',
-    imageUrl: about_us_header_background,
+    headerImageUrl: about_us_header_background,
   },
   history: {
     titleKey: 'aboutHistoryTitle',

@@ -7,7 +7,6 @@ import { useTranslation } from 'react-i18next';
 // Data sources and assets
 import { underConstructionData } from '../../data/pages/underConstructionData';
 import SEOComponent from '../../components/ui/SEOComponent';
-import { ConstructionIcon } from '../../assets/icons/ConstructionIcon';
 
 /**
  * Renders a placeholder page for sections of the website that are under development.
@@ -42,7 +41,6 @@ const UnderConstructionPage = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}>
-          <ConstructionIcon />
           <h1 className='mt-6 text-4xl md:text-6xl font-sans font-extrabold uppercase text-brand-white'>
             {t(underConstructionData.titleKey, { ns: 'common' })}
           </h1>

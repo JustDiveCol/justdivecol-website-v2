@@ -1,60 +1,60 @@
 // src/i18n/locales/es/home.js
 export default {
   // SEO Section
-  homeSeoTitle: 'Just Dive Colombia - Cursos y Expediciones de Buceo',
+  homeSeoTitle: 'JustDiveCol - Cursos y Expediciones de Buceo Inolvidables',
   homeSeoDesc:
-    'Sumérgete en una aventura inolvidable. Ofrecemos certificaciones PADI y viajes de buceo personalizados en los mejores destinos. ¡Empieza a explorar hoy!',
+    'Sumérgete en una aventura submarina que trasciende fronteras. Como empresa de turismo especializada en buceo, ofrecemos certificaciones PADI y viajes personalizados a los destinos más asombrosos del mundo. ¡Tu exploración comienza hoy!',
 
   // Hero Section
-  homeHeroTitle: 'Sumérgete en una aventura inolvidable',
+  homeHeroTitle: 'Tu próxima gran aventura comienza bajo el agua',
   homeHeroSubtitle:
-    'Explora las maravillas submarinas de Colombia con la seguridad y la pasión que nos caracteriza.',
+    'Explora las maravillas ocultas de los océanos con la seguridad y la pasión que nos distingue. Te invitamos a descubrir un mundo de belleza inigualable y emociones que perduran.',
   homeHeroCtaText: 'Descubre nuestras experiencias',
 
   // Experiences Section
-  homeExpTitle: 'Experiencias que transforman',
+  homeExpTitle: 'Experiencias que transforman tu visión del mundo',
   homeExpSubtitle:
-    'No importa si estás empezando o si eres un explorador experimentado, tenemos una aventura para ti.',
+    'No importa si estás dando tus primeras burbujas o si ya eres un buzo experimentado; tenemos una aventura a la medida de tu espíritu explorador.',
 
   // Experience Cards (from shared data)
-  expCardCertificacionTitle: 'Tu aventura comienza aquí',
-  expCardCertificacionCategory: 'Cursos y certificaciones',
-  expCardExploracionTitle: 'Destinos que te quitarán el aliento',
-  expCardExploracionCategory: 'Viajes de buceo',
-  expCardPrivadosTitle: 'Diseña la aventura perfecta',
-  expCardPrivadosCategory: 'Experiencias a tu medida',
+  expCardCertificacionTitle: 'Tu viaje al mundo submarino empieza aquí',
+  expCardCertificacionCategory: 'Cursos y certificaciones PADI',
+  expCardExploracionTitle: 'Destinos que te dejarán sin aliento',
+  expCardExploracionCategory: 'Viajes de buceo y exploración',
+  expCardPrivadosTitle: 'Diseña la aventura submarina perfecta para ti',
+  expCardPrivadosCategory: 'Experiencias personalizadas',
 
   // Safety Section
-  homeSafetyTitle: 'Tu única misión: Explorar',
+  homeSafetyTitle: 'Tu única misión: sumergirte y explorar',
   homeSafetySubtitle:
-    'Bucear es una pasión que debe disfrutarse con total tranquilidad...',
-  homeSafetyPoint1Title: 'Guías expertos y certificados',
-  homeSafetyPoint1Desc: 'Nuestro equipo está formado por instructores PADI...',
-  homeSafetyPoint2Title: 'Equipos de primera calidad',
-  homeSafetyPoint2Desc: 'Utilizamos equipos de marcas líderes...',
-  homeSafetyPoint3Title: 'Protocolos internacionales',
-  homeSafetyPoint3Desc: 'Seguimos estrictamente los protocolos de PADI...',
-  homeSafetyCtaText: 'Conoce nuestras políticas',
+    'El buceo es una pasión que debe disfrutarse con total tranquilidad y confianza. Nosotros nos encargamos de cada detalle para tu seguridad.',
+  homeSafetyPoint1Title: 'Guías e instructores expertos y certificados',
+  homeSafetyPoint1Desc:
+    'Nuestro equipo está formado por profesionales PADI altamente cualificados, con años de experiencia liderando inmersiones seguras y memorables en diversos entornos.',
+  homeSafetyPoint2Title: 'Equipos de primera calidad y mantenimiento riguroso',
+  homeSafetyPoint2Desc:
+    'Utilizamos solo equipos de buceo de marcas líderes en la industria, sometidos a un mantenimiento exhaustivo y revisiones periódicas para garantizar tu máxima seguridad y confort.',
+  homeSafetyPoint3Title: 'Protocolos de seguridad internacionales estrictos',
+  homeSafetyPoint3Desc:
+    'Seguimos rigurosamente los estándares y protocolos de seguridad establecidos por PADI y otras organizaciones internacionales, asegurando que cada inmersión sea segura y responsable.',
+  homeSafetyCtaText: 'Conoce nuestros compromisos de seguridad',
 
   // Testimonials Section
-  homeTestimonialsTitle: 'Ecos de las profundidades',
+  homeTestimonialsTitle: 'Voces de nuestras aventuras submarinas',
 
-  homeTestimonial1Quote:
-    'Una experiencia increíble. El equipo de JustDiveCol es profesional, amable y te hacen sentir seguro en todo momento. ¡Los mejores!',
-  homeTestimonial1Name: 'Ana Sofía R.',
-  homeTestimonial1Origin: 'Buceo en San Andrés',
-  homeTestimonial2Quote:
-    'Hice mi certificación Open Water con ellos y no podría estar más feliz. Paciencia, dedicación y mucha pasión por lo que hacen.',
-  homeTestimonial2Name: 'Javier Mendoza',
-  homeTestimonial2Origin: 'Certificación PADI',
-  homeTestimonial3Quote:
-    'Organizaron un viaje privado para mi grupo de amigos y superaron todas las expectativas. ¡Simplemente espectacular!',
-  homeTestimonial3Name: 'Carolina Vélez',
-  homeTestimonial3Origin: 'Viaje Privado a Providencia',
+  homeTestimonial1Quote: '',
+  homeTestimonial1Name: '',
+  homeTestimonial1Origin: '',
+  homeTestimonial2Quote: '',
+  homeTestimonial2Name: '',
+  homeTestimonial2Origin: '',
+  homeTestimonial3Quote: '',
+  homeTestimonial3Name: '',
+  homeTestimonial3Origin: '',
 
   // Final CTA Section
-  homeFinalCtaTitle: '¿Listo para tu próxima aventura?',
+  homeFinalCtaTitle: '¿Listo para tu próxima gran inmersión?',
   homeFinalCtaSubtitle:
-    'Las profundidades te esperan. Contáctanos para planificar tu viaje...',
-  homeFinalCtaText: 'Hablemos',
+    'Las profundidades te esperan para revelarte sus secretos. Contáctanos hoy para empezar a planificar tu inolvidable viaje submarino.',
+  homeFinalCtaText: 'Hablemos de tu aventura',
 };

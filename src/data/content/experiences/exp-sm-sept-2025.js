@@ -29,7 +29,7 @@ export const expSmSept2025 = {
   header: {
     titleKey: 'expsmsept25HeaderTitle',
     subtitleKey: 'expsmsept25HeaderSubtitle',
-    imageUrl: sm_sept_2025_header_background,
+    headerImageUrl: sm_sept_2025_header_background,
   },
   description: {
     titleKey: 'expsmsept25DescTitle',
@@ -91,7 +91,6 @@ export const expSmSept2025 = {
       'expsmsept25IncludeItem2',
       'expsmsept25IncludeItem3',
       'expsmsept25IncludeItem4',
-      'expsmsept25IncludeItem5',
     ],
   },
   whatIsNotIncluded: {

@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 
 // Data and Assets
 import { notFoundPageData } from '../../data/pages/notFoundPageData';
-import { LostDiverIcon } from '../../assets/icons/LostDiverIcon';
 
 /**
  * Renders the 404 "Not Found" error page.
@@ -34,7 +33,6 @@ const NotFoundPage = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, ease: 'easeOut' }}>
-        <LostDiverIcon />
         <h1 className='mt-6 text-4xl md:text-6xl font-sans font-extrabold uppercase text-brand-white'>
           {t(titleKey)}
         </h1>
