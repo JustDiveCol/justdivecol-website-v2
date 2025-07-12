@@ -1,5 +1,6 @@
 {
   "name": "justdivecol-website-v2",
+  "homepage": "https://www.justdivecol.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",
