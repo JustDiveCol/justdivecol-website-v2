@@ -26,6 +26,7 @@ import termsAndConditionsEN from './locals/en/termsAndConditions.js';
 import privacyPolicyEN from './locals/en/privacyPolicy.js';
 import faqsEN from './locals/en/faqs.js';
 import notFoundEN from './locals/en/notFound.js';
+import divesitesEN from './locals/en/divesites.js';
 
 // --- Spanish Imports ---
 import navbarES from './locals/es/navbar.js';
@@ -47,6 +48,7 @@ import termsAndConditionsES from './locals/es/termsAndConditions.js';
 import privacyPolicyES from './locals/es/privacyPolicy.js';
 import faqsES from './locals/es/faqs.js';
 import notFoundES from './locals/es/notFound.js';
+import divesitesES from './locals/es/divesites.js';
 
 const resources = {
   // English resources
@@ -68,6 +70,7 @@ const resources = {
     privacyPolicy: privacyPolicyEN,
     faqs: faqsEN,
     notFound: notFoundEN,
+    divesites: divesitesEN,
   },
   // Spanish resources
   es: {
@@ -88,6 +91,7 @@ const resources = {
     privacyPolicy: privacyPolicyES,
     faqs: faqsES,
     notFound: notFoundES,
+    divesites: divesitesES,
   },
 };
 
@@ -115,6 +119,7 @@ i18n.use(initReactI18next).init({
     'privacyPolicy',
     'faqs',
     'notFound',
+    'divesites',
   ],
 
   // It's useful to have a default, though we often specify it

@@ -44,3 +44,20 @@
     border-color: var(--color-gray-200, currentcolor);
   }
 }
+
+/* Add this to the end of your file or in a relevant section */
+.maplibregl-popup-close-button {
+  font-size: 24px !important; /* Increase font size for a bigger 'X' */
+  width: 32px !important; /* Make the button area wider */
+  height: 32px !important; /* Make the button area taller */
+  line-height: 28px !important; /* Adjust line height to center 'X' vertically */
+  display: flex; /* Use flexbox to center content */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: Adjust position if it moves too much */
+.maplibregl-popup-close-button {
+  right: 8px !important; /* Nudge right for better visual balance */
+  top: 8px !important; /* Nudge down for better visual balance */
+}

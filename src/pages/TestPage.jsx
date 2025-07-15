@@ -1,16 +1,13 @@
 import React from 'react';
-import ImageComponent from '../components/common/Image/ImageComponent';
+import MapComponent from '../components/common/Map/MapComponent';
 
 const TestPage = () => {
   return (
-    <ImageComponent
-      imageData={{
-        backgroundImage: 'https://placehold.co/600x400?text=Hello+World',
-        altText: 'imageCredits.sharkPhoto',
-        variant: 'fullscreen',
-      }}
-      translationNS='home'
-    />
+    <div className='p-8'>
+      <h1 className='text-2xl font-bold mb-4'>Test Map Page (Santa Marta)</h1>
+      {/* Pass 'santa-marta' as the destinationId prop to render only Santa Marta dive sites */}
+      <MapComponent destinationId='santa-marta' />
+    </div>
   );
 };
 

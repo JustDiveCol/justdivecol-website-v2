@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "i18next": "^25.3.2",
+    "maplibre-gl": "^5.6.1",
     "motion": "^12.23.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
