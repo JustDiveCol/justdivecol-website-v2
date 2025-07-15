@@ -22,6 +22,10 @@ import coursesEN from './locals/en/courses.js';
 import destinationsEN from './locals/en/destinations.js';
 import experiencesEN from './locals/en/experiences.js';
 import policiesEN from './locals/en/policies.js';
+import termsAndConditionsEN from './locals/en/termsAndConditions.js';
+import privacyPolicyEN from './locals/en/privacyPolicy.js';
+import faqsEN from './locals/en/faqs.js';
+import notFoundEN from './locals/en/notFound.js';
 
 // --- Spanish Imports ---
 import navbarES from './locals/es/navbar.js';
@@ -39,6 +43,10 @@ import coursesES from './locals/es/courses.js';
 import destinationsES from './locals/es/destinations.js';
 import experiencesES from './locals/es/experiences.js';
 import policiesES from './locals/es/policies.js';
+import termsAndConditionsES from './locals/es/termsAndConditions.js';
+import privacyPolicyES from './locals/es/privacyPolicy.js';
+import faqsES from './locals/es/faqs.js';
+import notFoundES from './locals/es/notFound.js';
 
 const resources = {
   // English resources
@@ -56,6 +64,10 @@ const resources = {
     experiences: experiencesEN,
     common: commonEN,
     policies: policiesEN,
+    termsAndConditions: termsAndConditionsEN,
+    privacyPolicy: privacyPolicyEN,
+    faqs: faqsEN,
+    notFound: notFoundEN,
   },
   // Spanish resources
   es: {
@@ -72,6 +84,10 @@ const resources = {
     experiences: experiencesES,
     common: commonES,
     policies: policiesES,
+    termsAndConditions: termsAndConditionsES,
+    privacyPolicy: privacyPolicyES,
+    faqs: faqsES,
+    notFound: notFoundES,
   },
 };
 
@@ -95,6 +111,10 @@ i18n.use(initReactI18next).init({
     'experiences',
     'common',
     'policies',
+    'termsAndConditions',
+    'privacyPolicy',
+    'faqs',
+    'notFound',
   ],
 
   // It's useful to have a default, though we often specify it

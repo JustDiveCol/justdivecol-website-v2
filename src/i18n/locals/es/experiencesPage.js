@@ -14,6 +14,8 @@ export default {
   expTripsTitle: 'Calendario de próximas aventuras programadas',
   expTripsSubtitle:
     'Estas son nuestras próximas salidas y cursos programados. ¡Asegura tu cupo y prepárate para sumergirte en lo extraordinario!',
+  expHeaderMainLogoAlt: 'Logo JustDiveCol',
+  expHeaderPhotoCredit: 'Creditos: Camilo Beltran @JustDiveCol',
 
   // Full Catalog
   expCatalogCoursesTitle: 'Tu próximo nivel: cursos y certificaciones PADI',
@@ -24,4 +26,6 @@ export default {
   expCtaSubtitle:
     'Con JustDiveCol, la aventura perfecta puede ser una realidad. Contáctanos y diseñemos juntos una experiencia privada, totalmente a la medida de tus expectativas e intereses. Tu viaje, tus reglas.',
   expCtaButton: 'Diseña tu experiencia a medida',
+  expCtaMainLogoAlt: 'Logo JustDiveCol',
+  expCtaPhotoCredit: 'Creditos: Camilo Beltran @JustDiveCol',
 };

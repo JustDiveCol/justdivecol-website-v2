@@ -3,8 +3,10 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+
 import { formatDateRange } from '../../../../utils/formatters';
 import { fadeInUp } from '../../../../hooks/animations';
+import ImageComponent from '../../../../components/common/Image/ImageComponent';
 
 /**
  * Renders a card for a single destination, showing its image, name, description,
@@ -25,11 +27,9 @@ const DestinationCardComponent = ({ destinationData }) => {
     <motion.div
       variants={fadeInUp}
       className='bg-brand-primary-medium rounded-lg overflow-hidden shadow-lg flex flex-col hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 w-full max-w-sm'>
-      <img
-        src={card.imageUrl}
-        alt={t(nameKey)}
-        className='w-full h-56 object-cover'
-        loading='lazy' // Defer image loading to improve initial page performance.
+      <ImageComponent
+        imageData={destinationData.card}
+        translationNS={'destinations'}
       />
       <div className='p-6 flex flex-col flex-grow'>
         <h3 className='text-2xl font-bold font-sans text-brand-white'>

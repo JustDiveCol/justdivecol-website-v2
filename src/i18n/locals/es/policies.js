@@ -1,20 +1,23 @@
 // src/i18n/locales/es/policies.js
 export default {
-  // SEO
+  // ----- SEO -----
   policiesSeoTitle:
     'Políticas y regulaciones | JustDiveCol - Tu guía para una experiencia segura',
   policiesSeoDesc:
     'Consulta las políticas de reserva, cancelación, condiciones de servicio, seguridad y alquiler de equipos de JustDiveCol. Transparencia total para una experiencia de buceo y aventura sin preocupaciones.',
 
-  // Header
+  // ----- Header -----
   policiesHeaderTitle:
     'Nuestras políticas y regulaciones: claridad para tu aventura',
   policiesHeaderSubtitle:
     'En JustDiveCol, la transparencia y la seguridad son tan importantes como la emoción de la inmersión. Conoce nuestras políticas diseñadas para garantizar una experiencia placentera, justa y sin contratiempos para todos nuestros exploradores.',
+  policiesHeaderMainLogoAlt: 'Logo JustDiveCol',
+  // policiesHeaderComplementaryLogoAlt: '',
+  // policiesHeaderTextOverlay: '',
+  policiesHeaderPhotoCredit: 'Créditos: Camilo Beltran @JustDiveCol',
 
-  // Sections
-
-  // Section 1: Booking and Payment Policy
+  // ----- Sections -----
+  // ----- Section 1: Booking and Payment Policy -----
   policiesSection1Title: 'Política de reservas y pagos',
 
   policiesSection1Point1:
@@ -24,7 +27,7 @@ export default {
   policiesSection1Point3:
     'Tu cupo se considera reservado únicamente una vez que el pago inicial ha sido recibido y confirmado por JustDiveCol. En caso de no recibir el pago final dentro del plazo establecido, nos reservamos el derecho de liberar tu cupo y el pago inicial se perderá en su totalidad.',
 
-  // Section 2: Cancellation and Refund Policy
+  // ----- Section 2: Cancellation and Refund Policy -----
   policiesSection2Title: 'Política de cancelaciones y reembolsos',
 
   policiesSection2Point1: 'Cancelación por parte del cliente:',
@@ -48,7 +51,7 @@ export default {
   policiesSection2Point3a:
     'Las cancelaciones debido a condiciones médicas imprevistas (previo a la actividad) que impidan al buzo participar, y que estén debidamente certificadas por un médico, serán evaluadas individualmente. En estos casos, se podrá ofrecer un crédito para una fecha futura, válido por 12 meses, solo si la cancelación se notifica con más de 30 días de antelación. Este crédito será parcial y estará sujeto a la deducción de todos los costos operativos irrecuperables. En cualquier otro caso, no se aplicará reembolso ni crédito.',
 
-  // Sección 3: Normativas y Directrices de Seguridad y Salud
+  // ----- Sección 3: Normativas y Directrices de Seguridad y Salud -----
   policiesSection3Title: 'Normativas y directrices de seguridad y salud',
   policiesSection3Point1:
     'Todos los buzos certificados deben presentar su credencial de certificación PADI o equivalente, y su bitácora de buceo (logbook) actualizada al momento de la llegada o en el primer briefing.',
@@ -64,7 +67,7 @@ export default {
   policiesSection3Point5:
     'Cobertura de seguro: Algunas de nuestras experiencias, especialmente las certificaciones, incluyen un seguro de buceo que cubre específicamente incidencias relacionadas con la actividad de buceo para la duración de la misma. Sin embargo, recomendamos encarecidamente contar con un seguro de viaje adicional que ofrezca una cobertura más amplia para emergencias médicas generales, evacuación y cancelación, ya que JustDiveCol no se hace responsable por gastos derivados de incidentes no cubiertos por la póliza específica de buceo o por el seguro propio del cliente.',
 
-  // Sección 4: Política de Alquiler y Uso de Equipos
+  // ----- Sección 4: Política de Alquiler y Uso de Equipos -----
   policiesSection4Title: 'Política de alquiler y uso de equipos',
   policiesSection4Point1:
     'El equipo de alquiler proporcionado por JustDiveCol debe ser inspeccionado por el buzo usuario antes de cada uso. Cualquier daño preexistente o anomalía debe ser reportado a nuestro staff de inmediato antes de la inmersión.',
@@ -75,7 +78,7 @@ export default {
   policiesSection4Point4:
     'El uso del equipo de buceo debe ser siempre supervisado y de acuerdo con las instrucciones de nuestros instructores y guías certificados.',
 
-  // Sección 5: Responsabilidad y Aceptación de Riesgos
+  // ----- Sección 5: Responsabilidad y Aceptación de Riesgos -----
   policiesSection5Title: 'Responsabilidad y aceptación de riesgos',
   policiesSection5Point1:
     'La participación en actividades de buceo y aventura conlleva ciertos riesgos inherentes. Al unirte a nuestras experiencias, reconoces y aceptas estos riesgos.',

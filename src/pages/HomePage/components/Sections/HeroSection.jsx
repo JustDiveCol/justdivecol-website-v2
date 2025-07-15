@@ -1,38 +1,73 @@
-// src/pages/HomePage/components/Sections/HeroSection.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-// Import data specifically from the home page data file.
 import { homePageData } from '../../../../data/pages/homeData';
 
-/**
- * Renders the main Hero section for the homepage, featuring a full-screen
- * background image, an animated title, subtitle, and a call-to-action button.
- */
 const HeroSection = () => {
   const { t } = useTranslation('home');
 
-  // Destructure the hero-specific data for cleaner access in the JSX.
-  const { imageUrl, titleKey, subtitleKey, ctaTextKey, ctaLink } =
-    homePageData.hero;
+  const {
+    imageUrl,
+    titleKey,
+    subtitleKey,
+    ctaTextKey,
+    ctaLink,
+    mainLogo,
+    mainLogoAlt,
+    complementaryLogo,
+    complementaryLogoAlt,
+    textOverlay,
+    photoCreditKey,
+  } = homePageData.hero;
 
   return (
     <section
-      className='relative min-h-screen flex items-center justify-center text-center text-brand-white bg-cover bg-center bg-no-repeat'
+      role='img'
+      aria-label={`${t(titleKey)} — ${t(subtitleKey)}`}
+      onContextMenu={(e) => e.preventDefault()}
+      className='group relative min-h-screen flex items-center justify-center text-center text-brand-white bg-cover bg-center bg-no-repeat select-none'
       style={{ backgroundImage: `url(${imageUrl})` }}>
-      {/* Dark overlay to ensure text readability over the background image. */}
-      <div className='absolute inset-0 bg-brand-primary-dark/70'></div>
+      {/* Background dark overlay */}
+      <div className='absolute inset-0 bg-brand-primary-dark/70 pointer-events-none'></div>
 
-      {/* Main content container. */}
+      {/* Top-left overlay text */}
+      {textOverlay && (
+        <div className='absolute top-4 left-4 text-white text-lg font-semibold drop-shadow-md opacity-80 uppercase z-20'>
+          {textOverlay}
+        </div>
+      )}
+
+      {/* Top-right complementary logo */}
+      {complementaryLogo && (
+        <div className='absolute top-4 right-4 drop-shadow-md opacity-70 z-20'>
+          <img
+            src={complementaryLogo}
+            alt={t(complementaryLogoAlt)}
+            className='w-12 h-auto'
+          />
+        </div>
+      )}
+
+      {/* Bottom-right main logo */}
+      {mainLogo && (
+        <div className='absolute bottom-4 right-4 drop-shadow-md opacity-70 z-20'>
+          <img
+            src={mainLogo}
+            alt={t(mainLogoAlt)}
+            className='w-24 h-auto'
+          />
+        </div>
+      )}
+
+      {/* Main animated content */}
       <div className='relative z-10 p-4'>
-        {/* Each element has a staggered animation for a smooth entry effect. */}
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className='text-4xl md:text-6xl lg:text-7xl font-sans font-extrabold uppercase tracking-tight'>
+          className='text-4xl md:text-6xl lg:text-7xl font-sans font-extrabold uppercase tracking-tight drop-shadow-xl opacity-90'>
           {t(titleKey)}
         </motion.h1>
 
@@ -40,7 +75,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className='mt-4 max-w-2xl mx-auto text-lg md:text-xl font-serif text-brand-neutral'>
+          className='mt-4 max-w-2xl mx-auto text-lg md:text-xl font-serif text-brand-neutral drop-shadow-md opacity-80'>
           {t(subtitleKey)}
         </motion.p>
 
@@ -56,6 +91,13 @@ const HeroSection = () => {
           </Link>
         </motion.div>
       </div>
+
+      {/* Hover footer credit */}
+      {photoCreditKey && (
+        <div className='absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20'>
+          {t(photoCreditKey)}
+        </div>
+      )}
     </section>
   );
 };

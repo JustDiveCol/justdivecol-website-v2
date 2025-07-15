@@ -10,6 +10,9 @@ import malpelo_gallery_04 from '../../../assets/images/page-specific/destination
 import malpelo_gallery_05 from '../../../assets/images/page-specific/destinations/malpelo/malpelo-gallery-05.webp';
 import malpelo_gallery_06 from '../../../assets/images/page-specific/destinations/malpelo/malpelo-gallery-06.webp';
 
+import logo from '../../../assets/images/logos/logo.png';
+import padi from '../../../assets/images/logos/padi.png';
+
 /**
  * Data structure for the malpelo destination.
  * This object serves as the single source of truth for all content related to this destination.
@@ -20,82 +23,160 @@ export const malpeloDestination = {
   status: 'published', // 'published' or 'draft'.
   nameKey: 'malpName', // Translation key for the destination's name.
 
-  // --- Card Data ---
-  // Used for the destination card on the Experiences page.
-  card: {
-    descriptionKey: 'malpCardDescription',
-    imageUrl: malpelo_card,
-    link: '/destinos/malpelo',
-  },
-
-  // --- Page Content ---
-  // Contains all the data needed to build the destination's detail page.
-  page: {
-    headerImageUrl: malpelo_header_background,
-    destinationInfo: {
-      titleKey: 'malpInfoTitle',
-      paragraphs: ['malpInfoP1', 'malpInfoP2'],
-    },
-    diveSites: {
-      titleKey: 'malpDiveSitesTitle',
-      sites: [
-        {
-          id: 'el-planchon',
-          nameKey: 'malpDiveSite1Name',
-          descriptionKey: 'malpDiveSite1Desc',
-        },
-        {
-          id: 'felipes-place',
-          nameKey: 'malpDiveSite2Name',
-          descriptionKey: 'malpDiveSite2Desc',
-        },
-        {
-          id: 'nicks-place',
-          nameKey: 'malpDiveSite3Name',
-          descriptionKey: 'malpDiveSite3Desc',
-        },
-        {
-          id: 'piedra-tortuga',
-          nameKey: 'malpDiveSite4Name',
-          descriptionKey: 'malpDiveSite4Desc',
-        },
-      ],
-    },
-    gallery: {
-      titleKey: 'malpGalleryTitle',
-      images: [
-        malpelo_gallery_01,
-        malpelo_gallery_02,
-        malpelo_gallery_03,
-        malpelo_gallery_04,
-        malpelo_gallery_05,
-        malpelo_gallery_06,
-      ],
-    },
-    details: {
-      titleKey: 'malpDetailsTitle',
-      items: [
-        { labelKey: 'malpDetailLabel1', valueKey: 'malpDetailValue1' },
-        { labelKey: 'malpDetailLabel2', valueKey: 'malpDetailValue2' },
-        { labelKey: 'malpDetailLabel3', valueKey: 'malpDetailValue3' },
-        { labelKey: 'malpDetailLabel4', valueKey: 'malpDetailValue4' },
-        { labelKey: 'malpDetailLabel5', valueKey: 'malpDetailValue5' },
-      ],
-    },
-    uniqueFinds: {
-      titleKey: 'malpUniqueFindsTitle',
-      items: [
-        'malpUniqueFind1',
-        'malpUniqueFind2',
-        'malpUniqueFind3',
-        'malpUniqueFind4',
-      ],
-    },
-  },
-
   // --- SEO Content ---
   seo: {
     titleKey: 'malpSeoTitle',
     descriptionKey: 'malpSeoDesc',
+  },
+
+  // --- Header Content ---
+  header: {
+    backgroundImage: malpelo_header_background,
+    titleKey: 'malpHeaderTitle',
+    subtitleKey: 'malpHeaderSubtitle',
+    mainLogo: logo,
+    mainLogoAltKey: 'malpHeaderMainLogoAlt',
+    // complementaryLogo: padi,
+    // complementaryLogoAltKey: 'malpHeaderComplementaryLogoAlt',
+    // textOverlayKey: 'malpHeaderTextOverlay',
+    photoCreditKey: 'malpHeaderPhotoCredit',
+  },
+
+  // --- Card Description Content ---
+  description: {
+    titleKey: 'malpDescTitle',
+    paragraphs: ['malpDescP1', 'malpDescP2'],
+  },
+
+  // --- Card Display ---
+  card: {
+    backgroundImage: malpelo_card,
+    mainLogo: logo,
+    mainLogoAltKey: 'malpCardMainLogoAlt',
+    complementaryLogo: padi,
+    complementaryLogoAltKey: 'malpCardComplementaryLogoAlt',
+    textOverlayKey: 'malpCardTextOverlay',
+    photoCreditKey: 'malpCardPhotoCredit',
+    variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+
+    descriptionKey: 'malpCardDescription',
+    link: '/destinos/santa-marta',
+  },
+
+  // --- Main Content ---
+  details: {
+    titleKey: 'malpDetailsTitle',
+    items: [
+      { labelKey: 'malpDetailLabel1', valueKey: 'malpDetailValue1' },
+      { labelKey: 'malpDetailLabel2', valueKey: 'malpDetailValue2' },
+      { labelKey: 'malpDetailLabel3', valueKey: 'malpDetailValue3' },
+      { labelKey: 'malpDetailLabel4', valueKey: 'malpDetailValue4' },
+      { labelKey: 'malpDetailLabel5', valueKey: 'malpDetailValue5' },
+    ],
+  },
+
+  // --- Divesites ---
+  diveSites: {
+    titleKey: 'malpDiveSitesTitle',
+    sites: [
+      {
+        id: 'barco-hundido',
+        nameKey: 'malpDiveSite1Name',
+        descriptionKey: 'malpDiveSite1Desc',
+      },
+      {
+        id: 'natalia',
+        nameKey: 'malpDiveSite2Name',
+        descriptionKey: 'malpDiveSite2Desc',
+      },
+      {
+        id: 'piedra-medio',
+        nameKey: 'malpDiveSite3Name',
+        descriptionKey: 'malpDiveSite3Desc',
+      },
+      {
+        id: 'isla-aguja',
+        nameKey: 'malpDiveSite4Name',
+        descriptionKey: 'malpDiveSite4Desc',
+      },
+    ],
+  },
+
+  // --- Unique Finds ---
+  uniqueFinds: {
+    titleKey: 'malpUniqueFindsTitle',
+    items: [
+      'malpUniqueFind1',
+      'malpUniqueFind2',
+      'malpUniqueFind3',
+      'malpUniqueFind4',
+    ],
+  },
+
+  // --- Gallery ---
+  gallery: {
+    titleKey: 'malpGalleryTitle',
+    images: [
+      {
+        backgroundImage: malpelo_gallery_01,
+        mainLogo: logo,
+        mainLogoAltKey: 'malpGaleryImg1MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'malpGaleryImg1ComplementaryLogoAlt',
+        // textOverlayKey: 'malpGaleryImg1TextOverlay',
+        photoCreditKey: 'malpGaleryImg1PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+      {
+        backgroundImage: malpelo_gallery_02,
+        mainLogo: logo,
+        mainLogoAltKey: 'malpGaleryImg2MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'malpGaleryImg2ComplementaryLogoAlt',
+        // textOverlayKey: 'malpGaleryImg2TextOverlay',
+        photoCreditKey: 'malpGaleryImg2PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+      {
+        backgroundImage: malpelo_gallery_03,
+        mainLogo: logo,
+        mainLogoAltKey: 'malpGaleryImg3MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'malpGaleryImg3ComplementaryLogoAlt',
+        // textOverlayKey: 'malpGaleryImg3TextOverlay',
+        photoCreditKey: 'malpGaleryImg3PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+      {
+        backgroundImage: malpelo_gallery_04,
+        mainLogo: logo,
+        mainLogoAltKey: 'malpGaleryImg4MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'malpGaleryImg4ComplementaryLogoAlt',
+        // textOverlayKey: 'malpGaleryImg4TextOverlay',
+        photoCreditKey: 'malpGaleryImg4PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+      {
+        backgroundImage: malpelo_gallery_05,
+        mainLogo: logo,
+        mainLogoAltKey: 'malpGaleryImg5MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'malpGaleryImg5ComplementaryLogoAlt',
+        // textOverlayKey: 'malpGaleryImg5TextOverlay',
+        photoCreditKey: 'malpGaleryImg5PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+      {
+        backgroundImage: malpelo_gallery_06,
+        mainLogo: logo,
+        mainLogoAltKey: 'malpGaleryImg6MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'malpGaleryImg6ComplementaryLogoAlt',
+        // textOverlayKey: 'malpGaleryImg6TextOverlay',
+        photoCreditKey: 'malpGaleryImg6PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+    ],
   },
 };

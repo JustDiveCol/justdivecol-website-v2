@@ -2,15 +2,23 @@
 
 import policy_header_background from '../../assets/images/page-specific/policy/policy-header-background.webp';
 
+import logo from '../../assets/images/logos/logo.png';
+
 export const policyPageData = {
   seo: {
     titleKey: 'policiesSeoTitle',
     descriptionKey: 'policiesSeoDesc',
   },
   header: {
+    backgroundImage: policy_header_background,
     titleKey: 'policiesHeaderTitle',
     subtitleKey: 'policiesHeaderSubtitle',
-    headerImageUrl: policy_header_background,
+    mainLogo: logo,
+    mainLogoAltKey: 'policiesHeaderMainLogoAlt',
+    // complementaryLogo: '',
+    // complementaryLogoAltKey: 'policiesHeaderComplementaryLogoAlt',
+    // textOverlayKey: 'policiesHeaderTextOverlay',
+    photoCreditKey: 'policiesHeaderPhotoCredit',
   },
   sections: [
     {

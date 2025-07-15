@@ -84,7 +84,7 @@ const DestinationPage = () => {
         description={t(destinationData.seo.descriptionKey, {
           ns: 'destinations',
         })}
-        imageUrl={destinationData.page.headerImageUrl}
+        imageUrl={destinationData.header.backgroundImage}
         url={`/destinos/${destinationData.id}`}
       />
       <motion.div

@@ -9,32 +9,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import App from './App.jsx';
 
-// --- Page Components ---
-// Dynamically import your pages
-// const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
-// const ExperiencesPage = lazy(() =>
-//   import('./pages/ExperiencesPage/ExperiencesPage.jsx')
-// );
-// const AboutUsPage = lazy(() => import('./pages/AboutUsPage/AboutUsPage.jsx'));
-// const SafetyPage = lazy(() => import('./pages/SafetyPage/SafetyPage.jsx'));
-// const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage.jsx'));
-// const PolicyPage = lazy(() => import('./pages/PolicyPage/PolicyPage.jsx'));
-// const UnderConstructionPage = lazy(() =>
-//   import('./pages/UnderConstructionPage/UnderConstructionPage.jsx')
-// );
-// const NotFoundPage = lazy(() =>
-//   import('./pages/NotFoundPage/NotFoundPage.jsx')
-// );
-// const CoursePage = lazy(() =>
-//   import('./pages/DetailPage/CoursePage/CoursePage.jsx')
-// );
-// const ExperiencePage = lazy(() =>
-//   import('./pages/DetailPage/ExperiencePage/ExperiencePage.jsx')
-// );
-// const DestinationPage = lazy(() =>
-//   import('./pages/DetailPage/DestinationPage/DestinationPage.jsx')
-// );
-
 import HomePage from './pages/HomePage/HomePage.jsx';
 import ExperiencesPage from './pages/ExperiencesPage/ExperiencesPage.jsx';
 import AboutUsPage from './pages/AboutUsPage/AboutUsPage.jsx';
@@ -44,8 +18,12 @@ import CoursePage from './pages/DetailPage/CoursePage/CoursePage.jsx';
 import ExperiencePage from './pages/DetailPage/ExperiencePage/ExperiencePage.jsx';
 import DestinationPage from './pages/DetailPage/DestinationPage/DestinationPage.jsx';
 import PolicyPage from './pages/PolicyPage/PolicyPage.jsx';
+import TermsAndConditionsPage from './pages/TermsAndConditionsPage/TermsAndConditionsPage.jsx';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage.jsx';
+import FaqsPage from './pages/FaqsPage/FaqsPage.jsx';
 import UnderConstructionPage from './pages/UnderConstructionPage/UnderConstructionPage.jsx';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
+import TestPage from './pages/TestPage.jsx';
 
 /**
  * The main entry point for the React application.
@@ -73,7 +51,11 @@ const router = createBrowserRouter([
       { path: 'seguridad', element: <SafetyPage /> },
       { path: 'contacto', element: <ContactPage /> },
       { path: 'politicas', element: <PolicyPage /> },
+      { path: 'terminos-y-condiciones', element: <TermsAndConditionsPage /> },
+      { path: 'privacidad', element: <PrivacyPolicyPage /> },
+      { path: 'faqs', element: <FaqsPage /> },
       { path: 'proximamente', element: <UnderConstructionPage /> },
+      { path: 'test', element: <TestPage /> },
 
       // --- Dynamic Detail Pages ---
       // These routes use URL parameters (e.g., :courseId) to render specific content.

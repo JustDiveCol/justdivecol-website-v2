@@ -10,6 +10,8 @@ export default {
   homeHeroSubtitle:
     'Explora las maravillas ocultas de los océanos con la seguridad y la pasión que nos distingue. Te invitamos a descubrir un mundo de belleza inigualable y emociones que perduran.',
   homeHeroCtaText: 'Descubre nuestras experiencias',
+  homeHeroMainLogoAlt: 'Logo JustDiveCol',
+  homeHeroPhotoCreditKey: 'Creditos: Camilo Beltran @JustDiveCol',
 
   // Experiences Section
   homeExpTitle: 'Experiencias que transforman tu visión del mundo',
@@ -19,10 +21,19 @@ export default {
   // Experience Cards (from shared data)
   expCardCertificacionTitle: 'Tu viaje al mundo submarino empieza aquí',
   expCardCertificacionCategory: 'Cursos y certificaciones PADI',
+  expCardCertificacionMainLogoAlt: 'Logo JustDiveCol',
+  expCardCertificacionComplementaryLogoAlt: 'Logo PADI',
+  expCardCertificacionPhotoCredit: 'Creditos: Camilo Beltran @JustDiveCol',
+
   expCardExploracionTitle: 'Destinos que te dejarán sin aliento',
   expCardExploracionCategory: 'Viajes de buceo y exploración',
+  expCardExploracionMainLogoAlt: 'Logo JustDiveCol',
+  expCardExploracionPhotoCredit: 'Creditos: Camilo Beltran @JustDiveCol',
+
   expCardPrivadosTitle: 'Diseña la aventura submarina perfecta para ti',
   expCardPrivadosCategory: 'Experiencias personalizadas',
+  expCardPrivadosMainLogoAlt: 'Logo JustDiveCol',
+  expCardPrivadosPhotoCredit: 'Creditos: @giovannidiveservices',
 
   // Safety Section
   homeSafetyTitle: 'Tu única misión: sumergirte y explorar',
@@ -57,4 +68,6 @@ export default {
   homeFinalCtaSubtitle:
     'Las profundidades te esperan para revelarte sus secretos. Contáctanos hoy para empezar a planificar tu inolvidable viaje submarino.',
   homeFinalCtaText: 'Hablemos de tu aventura',
+  homeFinalCtaMainLogoAlt: 'Logo JustDiveCol',
+  homeFinalCtaPhotoCredit: 'Creditos: Camilo Beltran @JustDiveCol',
 };

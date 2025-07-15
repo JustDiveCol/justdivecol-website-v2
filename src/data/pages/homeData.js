@@ -4,6 +4,9 @@ import { experienceCategories } from '../global/sharedData.js';
 import home_hero_background from '../../assets/images/page-specific/home/home-hero-background.webp';
 import home_cta_background from '../../assets/images/page-specific/home/home-cta-background.webp';
 
+import logo from '../../assets/images/logos/logo.png';
+import padi from '../../assets/images/logos/padi.png';
+
 export const homePageData = {
   // SEO Section
   seo: {
@@ -12,11 +15,14 @@ export const homePageData = {
   },
   // Hero Section
   hero: {
+    imageUrl: home_hero_background,
     titleKey: 'homeHeroTitle',
     subtitleKey: 'homeHeroSubtitle',
     ctaTextKey: 'homeHeroCtaText',
     ctaLink: '/experiencias',
-    imageUrl: home_hero_background,
+    mainLogo: logo,
+    mainLogoAlt: 'homeHeroMainLogoAlt',
+    photoCreditKey: 'homeHeroPhotoCreditKey',
   },
   // Featured Experiences Section
   featuredExperiences: {
@@ -84,10 +90,16 @@ export const homePageData = {
   },
   // Final CTA Section
   finalCta: {
+    backgroundImage: home_cta_background,
     titleKey: 'homeFinalCtaTitle',
     subtitleKey: 'homeFinalCtaSubtitle',
     ctaTextKey: 'homeFinalCtaText',
     ctaLink: '/contacto',
-    headerImageUrl: home_cta_background,
+    mainLogo: logo,
+    mainLogoAltKey: 'homeFinalCtaMainLogoAlt',
+    // complementaryLogo: '',
+    // complementaryLogoAltKey: '',
+    // textOverlayKey: '',
+    photoCreditKey: 'homeFinalCtaPhotoCredit',
   },
 };

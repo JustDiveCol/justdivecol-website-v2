@@ -27,7 +27,9 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className='bg-brand-primary-dark/80 backdrop-blur-md text-brand-white p-4 fixed w-full top-0 z-50 font-sans'>
-      <div className='container mx-auto flex justify-between items-center'>
+      <div
+        onContextMenu={(e) => e.preventDefault()}
+        className='select-none container mx-auto flex justify-between items-center'>
         <NavLink
           to='/'
           className='transition-transform duration-300 hover:scale-105'>

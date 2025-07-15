@@ -20,9 +20,9 @@ export const footerData = {
 
   navLinks: [
     { nameKey: 'policies', path: '/politicas' },
-    { nameKey: 'termsAndConditions', path: '/proximamente' },
-    { nameKey: 'privacy', path: '/proximamente' },
-    { nameKey: 'faqs', path: '/proximamente' },
+    { nameKey: 'termsAndConditions', path: '/terminos-y-condiciones' },
+    { nameKey: 'privacy', path: '/privacidad' },
+    { nameKey: 'faqs', path: '/faqs' },
     { nameKey: 'diveSites', path: '/proximamente' },
     { nameKey: 'gear', path: '/proximamente' },
     { nameKey: 'photosAndVideos', path: '/proximamente' },

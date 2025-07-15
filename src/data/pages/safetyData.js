@@ -4,15 +4,23 @@ import safety_header_background from '../../assets/images/page-specific/safety/s
 import safety_logo_partner_1 from '../../assets/images/page-specific/safety/safety-logo-partner-1.webp';
 import safety_logo_partner_2 from '../../assets/images/page-specific/safety/safety-logo-partner-2.webp';
 
+import logo from '../../assets/images/logos/logo.png';
+
 export const safetyPageData = {
   seo: {
     titleKey: 'safetySeoTitle',
     descriptionKey: 'safetySeoDesc',
   },
   header: {
+    backgroundImage: safety_header_background,
     titleKey: 'safetyHeaderTitle',
     subtitleKey: 'safetyHeaderSubtitle',
-    headerImageUrl: safety_header_background,
+    mainLogo: logo,
+    mainLogoAltKey: 'safetyHeaderMainLogoAlt',
+    // complementaryLogo: '',
+    // complementaryLogoAltKey: 'safetyHeaderComplementaryLogoAlt',
+    // textOverlayKey: 'safetyHeaderTextOverlay',
+    photoCreditKey: 'safetyHeaderPhotoCredit',
   },
   protocols: {
     titleKey: 'safetyProtocolsTitle',

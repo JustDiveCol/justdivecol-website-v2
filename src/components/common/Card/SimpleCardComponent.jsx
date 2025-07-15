@@ -1,26 +1,24 @@
-// src/components/common/Card/SimpleCardComponent.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../hooks/animations';
 
-/**
- * A reusable card component that can act as a page link or a smooth-scrolling anchor.
- *
- * @param {object} props - The component props.
- * @param {object} props.cardData - Object containing the card's data.
- * @param {string} props.cardData.link - The destination path. If it starts with '#', it's treated as an anchor link.
- * @param {string} props.cardData.imageUrl - The URL for the card's background image.
- * @param {string} props.cardData.categoryKey - The translation key for the category text.
- * @param {string} props.cardData.titleKey - The translation key for the main title.
- */
 const SimpleCardComponent = ({ cardData }) => {
   const { t } = useTranslation('home');
 
-  const { imageUrl, link, categoryKey, titleKey } = cardData;
+  const {
+    backgroundImage,
+    titleKey,
+    categoryKey,
+    link,
+    mainLogo,
+    mainLogoAltKey,
+    complementaryLogo,
+    complementaryLogoAltKey,
+    photoCreditKey,
+  } = cardData;
 
-  // Determine if the link is for an in-page anchor or a separate route.
   const isAnchorLink = link.startsWith('#');
 
   const handleScroll = (e) => {
@@ -32,17 +30,49 @@ const SimpleCardComponent = ({ cardData }) => {
     }
   };
 
-  // Memoize the card content to avoid re-creating it on every render.
   const cardContent = React.useMemo(
     () => (
-      <>
+      <div className='group relative h-full w-full'>
+        {/* Background image */}
         <div
           className='absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110'
-          style={{ backgroundImage: `url(${imageUrl})` }}
+          style={{ backgroundImage: `url(${backgroundImage})` }}
         />
-        {/* Gradient overlay to ensure text is readable over the background. */}
-        <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent'></div>
-        <div className='relative h-full flex flex-col justify-end p-6 text-white'>
+
+        {/* Gradient overlay */}
+        <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10' />
+
+        {/* Top-left complementary logo */}
+        {complementaryLogo && (
+          <div className='absolute top-4 left-4 z-20 drop-shadow-md opacity-80'>
+            <img
+              src={complementaryLogo}
+              alt={t(complementaryLogoAltKey)}
+              className='w-10 h-auto'
+            />
+          </div>
+        )}
+
+        {/* Top-right main logo */}
+        {mainLogo && (
+          <div className='absolute top-4 right-4 z-20 drop-shadow-md opacity-80'>
+            <img
+              src={mainLogo}
+              alt={t(mainLogoAltKey)}
+              className='w-16 h-auto'
+            />
+          </div>
+        )}
+
+        {/* Footer credit (hover only) */}
+        {photoCreditKey && (
+          <div className='absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20'>
+            {t(photoCreditKey)}
+          </div>
+        )}
+
+        {/* Content */}
+        <div className='relative z-20 h-full flex flex-col justify-end p-6 text-white'>
           <p className='font-sans text-sm uppercase tracking-widest text-brand-cta-orange font-semibold'>
             {t(categoryKey)}
           </p>
@@ -50,24 +80,32 @@ const SimpleCardComponent = ({ cardData }) => {
             {t(titleKey)}
           </h3>
         </div>
-      </>
+      </div>
     ),
-    [imageUrl, categoryKey, titleKey, t]
+    [
+      backgroundImage,
+      categoryKey,
+      titleKey,
+      mainLogo,
+      mainLogoAltKey,
+      complementaryLogo,
+      complementaryLogoAltKey,
+      photoCreditKey,
+      t,
+    ]
   );
 
   return (
     <motion.div
       variants={fadeInUp}
-      className='relative group h-96 rounded-lg overflow-hidden shadow-2xl w-full'>
+      className='relative h-96 rounded-lg overflow-hidden shadow-2xl w-full'>
       {isAnchorLink ? (
-        // Render a button for anchor links to handle the custom scroll behavior.
         <button
           onClick={handleScroll}
           className='block h-full w-full text-left'>
           {cardContent}
         </button>
       ) : (
-        // Render a React Router Link for standard page navigation.
         <Link
           to={link}
           className='block h-full w-full'>

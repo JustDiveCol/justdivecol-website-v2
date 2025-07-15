@@ -8,6 +8,8 @@ import { formatDateRange } from '../../../../utils/formatters';
 import { CalendarIcon } from '../../../../assets/icons/CalendarIcon';
 import { fadeInUp } from '../../../../hooks/animations';
 
+import AvailabilityBadgeComponent from '../../../../components/common/Component/AvailabilityBadgeComponent';
+
 /**
  * A card component that displays a single upcoming trip in a calendar-like list.
  * Used within the CalendarExperiencesSection.
@@ -23,7 +25,7 @@ import { fadeInUp } from '../../../../hooks/animations';
 const CalendarExperienceCardComponent = ({ tripData }) => {
   // We load both 'common' and 'experiences' namespaces for trip names and generic button texts.
   const { t, i18n } = useTranslation(['common', 'experiences']);
-  const { id, nameKey, details } = tripData;
+  const { id, nameKey, details, availability } = tripData;
 
   return (
     <motion.li
@@ -44,6 +46,10 @@ const CalendarExperienceCardComponent = ({ tripData }) => {
               t
             )}
           </p>
+          <AvailabilityBadgeComponent
+            className='mt-2'
+            status={availability}
+          />
         </div>
       </div>
 

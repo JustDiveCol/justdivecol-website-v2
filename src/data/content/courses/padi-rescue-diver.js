@@ -1,6 +1,9 @@
 // src/data/content/courses/padi-rescue-diver.js
 
 // Import all local images for this course.
+import logo from '../../../assets/images/logos/logo.png';
+import padi from '../../../assets/images/logos/padi.png';
+
 import rd_header_background from '../../../assets/images/page-specific/courses/rescue-diver/rd-header-background.webp';
 import rd_card_image from '../../../assets/images/page-specific/courses/rescue-diver/rd-card-image.webp';
 import rd_gallery_01 from '../../../assets/images/page-specific/courses/rescue-diver/rd-gallery-01.webp';
@@ -24,19 +27,38 @@ export const padiRescueDiverCourse = {
     descriptionKey: 'rdSeoDesc',
   },
 
-  // --- Page Header & Card Display ---
+  // --- Page Header ---
   header: {
+    backgroundImage: rd_header_background,
     titleKey: 'rdHeaderTitle',
     subtitleKey: 'rdHeaderSubtitle',
-    headerImageUrl: rd_header_background, // For the detail page banner.
-    imageUrl: rd_card_image, // For the course card on the experiences page.
+    mainLogo: logo,
+    mainLogoAltKey: 'rdHeaderMainLogoAlt',
+    complementaryLogo: padi,
+    complementaryLogoAltKey: 'rdHeaderComplementaryLogoAlt',
+    // textOverlayKey: 'rdHeaderTextOverlay',
+    photoCreditKey: 'rdHeaderPhotoCredit',
   },
 
-  // --- Main Content ---
+  // --- Card Description Content ---
   description: {
     titleKey: 'rdDescTitle',
     paragraphs: ['rdDescP1', 'rdDescP2'],
   },
+
+  // --- Card Display ---
+  card: {
+    backgroundImage: rd_card_image,
+    mainLogo: logo,
+    mainLogoAltKey: 'rdCardMainLogoAlt',
+    complementaryLogo: padi,
+    complementaryLogoAltKey: 'rdCardComplementaryLogoAlt',
+    textOverlayKey: 'rdCardTextOverlay',
+    photoCreditKey: 'rdCardPhotoCredit',
+    variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+  },
+
+  // --- Main Content ---
   details: {
     titleKey: 'rdDetailsTitle',
     items: [
@@ -44,6 +66,8 @@ export const padiRescueDiverCourse = {
       { labelKey: 'rdDetailLabel2', valueKey: 'rdDetailValue2' },
     ],
   },
+
+  // --- Curriculim Content ---
   curriculum: {
     titleKey: 'rdCurriculumTitle',
     modules: [
@@ -76,7 +100,7 @@ export const padiRescueDiverCourse = {
     notes: ['rdCurriculumNote1'],
   },
 
-  // --- Lists for Checklist Cards ---
+  // --- Requirements ---
   requirements: {
     titleKey: 'rdReqsTitle',
     items: [
@@ -87,6 +111,8 @@ export const padiRescueDiverCourse = {
       'rdReqItem5',
     ],
   },
+
+  // --- Included ---
   whatIsIncluded: {
     titleKey: 'rdIncludedTitle',
     items: [
@@ -101,10 +127,51 @@ export const padiRescueDiverCourse = {
     ],
   },
 
-  // --- Visuals ---
+  // --- Gallery ---
   gallery: {
     titleKey: 'rdGalleryTitle',
-    images: [rd_gallery_01, rd_gallery_02, rd_gallery_03, rd_gallery_04],
+    images: [
+      {
+        backgroundImage: rd_gallery_01,
+        mainLogo: logo,
+        mainLogoAltKey: 'rdGaleryImg1MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'rdGaleryImg1ComplementaryLogoAlt',
+        // textOverlayKey: 'rdGaleryImg1TextOverlay',
+        photoCreditKey: 'rdGaleryImg1PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+      {
+        backgroundImage: rd_gallery_02,
+        mainLogo: logo,
+        mainLogoAltKey: 'rdGaleryImg2MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'rdGaleryImg2ComplementaryLogoAlt',
+        // textOverlayKey: 'rdGaleryImg2TextOverlay',
+        photoCreditKey: 'rdGaleryImg2PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+      {
+        backgroundImage: rd_gallery_03,
+        mainLogo: logo,
+        mainLogoAltKey: 'rdGaleryImg3MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'rdGaleryImg3ComplementaryLogoAlt',
+        // textOverlayKey: 'rdGaleryImg3TextOverlay',
+        photoCreditKey: 'rdGaleryImg3PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+      {
+        backgroundImage: rd_gallery_04,
+        mainLogo: logo,
+        mainLogoAltKey: 'rdGaleryImg4MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'rdGaleryImg4ComplementaryLogoAlt',
+        // textOverlayKey: 'rdGaleryImg4TextOverlay',
+        photoCreditKey: 'rdGaleryImg4PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+    ],
   },
 
   // --- Call to Action ---

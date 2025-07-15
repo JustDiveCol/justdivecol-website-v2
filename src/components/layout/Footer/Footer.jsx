@@ -70,6 +70,7 @@ const Footer = () => {
         <div className='flex flex-col items-center'>
           <Link to='/'>
             <img
+              onContextMenu={(e) => e.preventDefault()}
               src={logo}
               alt='JustDiveCol Logo'
               className='h-10 w-auto'

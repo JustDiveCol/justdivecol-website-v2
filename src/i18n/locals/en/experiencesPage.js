@@ -9,6 +9,8 @@ export default {
   expHeaderTitle: 'An Ocean of Possibilities Awaits You',
   expHeaderSubtitle:
     "From your very first breath underwater to explorations in the planet's most remote corners, every dive with JustDiveCol is a story to tell. Choose your next great underwater adventure.",
+  expHeaderMainLogoAlt: 'Logo JustDiveCol',
+  expHeaderPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
 
   // Upcoming Trips
   expTripsTitle: 'Calendar of Upcoming Scheduled Adventures',
@@ -24,4 +26,6 @@ export default {
   expCtaSubtitle:
     "With JustDiveCol, the perfect adventure can become a reality. Contact us and let's design a private experience together, entirely tailored to your expectations and interests. Your trip, your rules.",
   expCtaButton: 'Design Your Custom Experience',
+  expCtaMainLogoAlt: 'Logo JustDiveCol',
+  expCtaPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
 };

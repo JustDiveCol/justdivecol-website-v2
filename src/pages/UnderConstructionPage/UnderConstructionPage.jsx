@@ -8,6 +8,8 @@ import { useTranslation } from 'react-i18next';
 import { underConstructionData } from '../../data/pages/underConstructionData';
 import SEOComponent from '../../components/ui/SEOComponent';
 
+import ImageComponent from '../../components/common/Image/ImageComponent';
+
 /**
  * Renders a placeholder page for sections of the website that are under development.
  */
@@ -27,13 +29,12 @@ const UnderConstructionPage = () => {
       {/* 'isolate' creates a new stacking context for the z-index to work correctly. */}
       <div className='relative min-h-[calc(100vh-80px)] flex items-center justify-center text-center p-4 isolate overflow-hidden'>
         {/* Background container with an image and a dark overlay. */}
-        <div className='absolute inset-0 -z-10'>
-          <img
-            src={underConstructionData.imageUrl}
-            alt={t(underConstructionData.titleKey, { ns: 'common' })}
-            className='w-full h-full object-cover'
+        <div className='absolute inset-0 -z-10 h-full w-full'>
+          <ImageComponent
+            imageData={underConstructionData.image}
+            translationNS={'common'}
           />
-          <div className='absolute inset-0 bg-brand-primary-dark/85'></div>
+          <div className='absolute inset-0 bg-brand-primary-dark/50'></div>
         </div>
 
         {/* Main content container with an entry animation. */}

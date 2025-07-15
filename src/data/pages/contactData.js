@@ -1,18 +1,25 @@
 // src/data/pages/contact.js
 import contact_header_background from '../../assets/images/page-specific/contact/contact-header-background.webp'; // Placeholder, replace with your image
 
+import logo from '../../assets/images/logos/logo.png';
+
 export const contactPageData = {
   seo: {
     titleKey: 'contactSeoTitle',
     descriptionKey: 'contactSeoDesc',
   },
   header: {
+    backgroundImage: contact_header_background,
     titleKey: 'contactHeaderTitle',
     subtitleKey: 'contactHeaderSubtitle',
-    headerImageUrl: contact_header_background,
-    ctaTextKey: 'contactHeaderCtaButton',
-    ctaLink: '/contacto',
+    mainLogo: logo,
+    mainLogoAltKey: 'contactHeaderMainLogoAlt',
+    // complementaryLogo: '',
+    // complementaryLogoAltKey: '',
+    // textOverlayKey: '',
+    photoCreditKey: 'contactHeaderPhotoCredit',
   },
+
   contactInfo: {
     titleKey: 'contactInfoTitle',
     email: 'info@justdivecol.com', // This data doesn't need translation
@@ -40,5 +47,18 @@ export const contactPageData = {
     descriptionKey: 'contactWhatsAppDesc',
     ctaTextKey: 'contactWhatsAppButton',
     prefilledMessageKey: 'contactWhatsAppMessage',
+  },
+  cta: {
+    backgroundImage: contact_header_background,
+    titleKey: 'contactCtaTitle',
+    subtitleKey: 'contactCtaSubtitle',
+    ctaTextKey: 'contactCtaText',
+    ctaLink: '/contacto',
+    mainLogo: logo,
+    mainLogoAltKey: 'contactCtaMainLogoAlt',
+    // complementaryLogo: padi,
+    // complementaryLogoAltKey: 'contactCtaComplementaryLogoAlt',
+    // textOverlayKey: 'contactCtaTextOverlay',
+    photoCreditKey: 'contactCtaPhotoCredit',
   },
 };

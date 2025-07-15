@@ -5,11 +5,12 @@ import { useTranslation } from 'react-i18next';
 
 // Data sources and animations
 import { policyPageData } from '../../data/pages/policyPageData';
-import { staggerContainer, fadeInUp } from '../../hooks/animations';
+import { staggerContainer } from '../../hooks/animations';
 
 // UI and Section Components
 import SEOComponent from '../../components/ui/SEOComponent';
 import HeaderComponent from '../../components/HeaderComponent';
+import RenderComponent from '../../components/common/Component/RenderComponent';
 
 /**
  * Renders the "Policies & Regulations" page.
@@ -23,7 +24,7 @@ const PolicyPage = () => {
       <SEOComponent
         title={t(policyPageData.seo.titleKey, { ns: 'policies' })}
         description={t(policyPageData.seo.descriptionKey, { ns: 'policies' })}
-        imageUrl={policyPageData.header.imageUrl}
+        imageUrl={policyPageData.header.headerImageUrl}
         url='/politicas'
       />
       <motion.div
@@ -38,31 +39,11 @@ const PolicyPage = () => {
         <div className='container mx-auto py-16 px-4'>
           {/* Solo un mapeo de sections aquí */}
           {policyPageData.sections.map((section) => (
-            <motion.section
+            <RenderComponent
               key={section.id}
-              variants={fadeInUp}
-              className='mb-12'>
-              <h2 className='text-3xl font-sans font-bold text-brand-white mb-4'>
-                {t(section.titleKey, { ns: 'policies' })}
-              </h2>
-              <ul className='space-y-3 list-disc list-inside font-serif text-brand-neutral/90 text-justify'>
-                {section.points.map((point, index) => (
-                  <li key={index}>
-                    {t(point.pointKey, { ns: 'policies' })}
-                    {point.subPoints && point.subPoints.length > 0 && (
-                      // Usamos <ol> para los subpuntos con letras 'a, b, c'
-                      <ol className='ml-6 mt-2 space-y-2 list-[lower-alpha] list-inside text-brand-neutral/60'>
-                        {point.subPoints.map((subPointKey, subIndex) => (
-                          <li key={subIndex}>
-                            {t(subPointKey, { ns: 'policies' })}
-                          </li>
-                        ))}
-                      </ol>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </motion.section>
+              renderData={section}
+              translationNS={'policies'}
+            />
           ))}
         </div>
       </motion.div>

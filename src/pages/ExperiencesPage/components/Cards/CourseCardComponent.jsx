@@ -3,7 +3,9 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+
 import { fadeInUp } from '../../../../hooks/animations';
+import ImageComponent from '../../../../components/common/Image/ImageComponent';
 
 /**
  * Renders a detailed card for a single course, showing its image, title,
@@ -14,7 +16,7 @@ import { fadeInUp } from '../../../../hooks/animations';
  */
 const CourseCardComponent = ({ courseData }) => {
   const { t } = useTranslation(['courses', 'common']);
-  const { id, header, description, details, availability } = courseData;
+  const { id, header, description, card, details, availability } = courseData;
 
   /**
    * Returns Tailwind CSS classes based on the course's availability status.
@@ -36,11 +38,9 @@ const CourseCardComponent = ({ courseData }) => {
     <motion.div
       variants={fadeInUp}
       className='bg-brand-primary-medium rounded-lg overflow-hidden shadow-lg flex flex-col hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 w-full max-w-sm'>
-      <img
-        src={header.imageUrl}
-        alt={t(header.titleKey)}
-        className='w-full h-56 object-cover bg-brand-primary-light'
-        loading='lazy' // Defer loading of images until they are near the viewport.
+      <ImageComponent
+        imageData={card}
+        translationNS={'courses'}
       />
       <div className='p-6 flex flex-col flex-grow'>
         <h3 className='text-2xl font-bold font-sans text-brand-white'>

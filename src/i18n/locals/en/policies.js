@@ -1,20 +1,23 @@
 // src/i18n/locales/en/policies.js
 export default {
-  // SEO
+  // ----- SEO -----
   policiesSeoTitle:
     'Policies & Regulations | JustDiveCol - Your Guide to a Safe Experience',
   policiesSeoDesc:
     "Review JustDiveCol's booking, cancellation, terms of service, safety, and equipment rental policies. Complete transparency for a worry-free diving and adventure experience.",
 
-  // Header
+  // ----- Header -----
   policiesHeaderTitle:
     'Our Policies and Regulations: Clarity for Your Adventure',
   policiesHeaderSubtitle:
     'At JustDiveCol, transparency and safety are as important as the thrill of the dive. Learn about our policies designed to ensure a pleasant, fair, and smooth experience for all our explorers.',
+  policiesHeaderMainLogoAlt: 'Logo JustDiveCol',
+  // policiesHeaderComplementaryLogoAlt: '',
+  // policiesHeaderTextOverlay: '',
+  policiesHeaderPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
 
-  // Sections
-
-  // Section 1: Booking and Payment Policy
+  // ----- Sections -----
+  // ----- Section 1: Booking and Payment Policy -----
   policiesSection1Title: 'Booking and payment policy',
   policiesSection1Point1:
     'To confirm your spot on any of our experiences, an initial payment, which may vary by experience, is required at the time of booking. This payment is used for the purchase and activation of certification materials (when applicable for courses), which are valid for 12 months to complete your course with us or any PADI dive center or professional. This initial payment is non-refundable under any circumstances.',
@@ -23,7 +26,7 @@ export default {
   policiesSection1Point3:
     'Your spot is considered reserved only once the initial payment has been received and confirmed by JustDiveCol. In case of not receiving the final payment within the established period, we reserve the right to release your spot, and the initial payment will be forfeited in full.',
 
-  // Section 2: Cancellation and Refund Policy
+  // ----- Section 2: Cancellation and Refund Policy -----
   policiesSection2Title: 'Cancellation and refund policy',
   policiesSection2Point1: 'Cancellation by client:',
   policiesSection2Point1a:
@@ -46,7 +49,7 @@ export default {
   policiesSection2Point3a:
     'Cancellations due to unforeseen medical conditions (prior to the activity) that prevent the diver from participating, and are duly certified by a doctor, will be evaluated individually. In these cases, a credit for a future date, valid for 12 months, may be offered only if the cancellation is notified more than 30 days in advance. This credit will be partial and subject to the deduction of all irrecoverable operational costs. In any other case, no refund or credit will apply.',
 
-  // Sección 3: Normativas y Directrices de Seguridad y Salud
+  // ----- Sección 3: Normativas y Directrices de Seguridad y Salud -----
   policiesSection3Title: 'Safety and health regulations and guidelines',
   policiesSection3Point1:
     'All certified divers must present their current PADI or equivalent certification card and updated dive logbook upon arrival or at the first briefing.',

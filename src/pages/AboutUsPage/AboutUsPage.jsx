@@ -55,7 +55,7 @@ export const AboutUsPage = () => {
 
         {/* The final CTA reuses data from the contact page for consistency. */}
         <CtaComponent
-          sectionData={contactPageData.header}
+          sectionData={contactPageData.cta}
           translationNS='contact'
         />
       </motion.div>

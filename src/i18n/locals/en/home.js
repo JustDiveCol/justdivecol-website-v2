@@ -10,6 +10,8 @@ export default {
   homeHeroSubtitle:
     'Explore the hidden wonders of the oceans with the safety and passion that sets us apart. We invite you to discover a world of unparalleled beauty and lasting emotions.',
   homeHeroCtaText: 'Discover Our Experiences',
+  homeHeroMainLogoAlt: 'Logo JustDiveCol',
+  homeHeroPhotoCreditKey: 'Credits: Camilo Beltran @JustDiveCol',
 
   // Experiences Section
   homeExpTitle: 'Experiences That Transform Your View of the World',
@@ -20,10 +22,19 @@ export default {
   expCardCertificacionTitle:
     'Your Journey into the Underwater World Starts Here',
   expCardCertificacionCategory: 'PADI Courses and Certifications',
+  expCardCertificacionMainLogoAlt: 'Logo JustDiveCol',
+  expCardCertificacionComplementaryLogoAlt: 'Logo PADI',
+  expCardCertificacionPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
+
   expCardExploracionTitle: 'Destinations That Will Take Your Breath Away',
   expCardExploracionCategory: 'Dive Trips and Exploration',
+  expCardExploracionMainLogoAlt: 'Logo JustDiveCol',
+  expCardExploracionPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
+
   expCardPrivadosTitle: 'Design the Perfect Underwater Adventure for You',
   expCardPrivadosCategory: 'Customized Experiences',
+  expCardPrivadosMainLogoAlt: 'Logo JustDiveCol',
+  expCardPrivadosPhotoCredit: 'Credits: @giovannidiveservices',
 
   // Safety Section
   homeSafetyTitle: 'Your Only Mission: Dive and Explore',
@@ -58,4 +69,6 @@ export default {
   homeFinalCtaSubtitle:
     'The depths await to reveal their secrets. Contact us today to start planning your unforgettable underwater journey.',
   homeFinalCtaText: "Let's Talk About Your Adventure",
+  homeFinalCtaMainLogoAlt: 'Logo JustDiveCol',
+  homeFinalCtaPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
 };

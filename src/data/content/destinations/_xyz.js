@@ -14,7 +14,7 @@
  * Data structure for the _dummy destination.
  * This object serves as the single source of truth for all content related to this destination.
  */
-export const _dummyDestination = {
+export const _xyzDestination = {
   // --- Metadata ---
   id: '_dummy', // Unique identifier for the destination.
   status: 'published', // 'published' or 'draft'.

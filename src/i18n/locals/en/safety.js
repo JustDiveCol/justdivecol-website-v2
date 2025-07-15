@@ -11,6 +11,8 @@ export default {
     'Uncompromising Safety: Your Peace of Mind is Our Priority',
   safetyHeaderSubtitle:
     "At JustDiveCol, we understand that a truly unforgettable adventure is built on a foundation of trust. That's why safety is the fundamental pillar of every experience we offer.",
+  safetyHeaderMainLogoAlt: 'Logo JustDiveCol',
+  safetyHeaderPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
 
   // Protocols
   safetyProtocolsTitle: 'Our Safety Standard on Every Dive',

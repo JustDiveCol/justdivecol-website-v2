@@ -30,7 +30,6 @@ const HomePage = () => {
         imageUrl={homePageData.hero.imageUrl}
         url='/'
       />
-
       <motion.div
         variants={staggerContainer}
         initial='initial'

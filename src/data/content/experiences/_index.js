@@ -1,6 +1,6 @@
 // src/data/content/experiences/_index.js
 import { coursesById } from '../courses/_index.js';
-import { expSmSept2025 } from './exp-sm-sept-2025.js';
+import { experienciaSantaMartaSeptiembre2025 } from './experiencia-santa-marta-septiembre-2025.js';
 // --- As you create new trip files, import them here. ---
 // import { expMalpelo2026 } from './exp-malpelo-2026.js';
 
@@ -10,7 +10,7 @@ import { expSmSept2025 } from './exp-sm-sept-2025.js';
  * To add a new experience, import it above and add it to this object.
  */
 export const experiencesById = {
-  'experiencia-santa-marta-sept-2025': expSmSept2025,
+  'experiencia-santa-marta-sept-2025': experienciaSantaMartaSeptiembre2025,
   // 'experiencia-malpelo-2026': expMalpelo2026,
 };
 

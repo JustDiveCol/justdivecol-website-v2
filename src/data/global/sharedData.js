@@ -4,24 +4,42 @@ import experience_category_courses from '../../assets/images/page-specific/exper
 import experience_category_experiences from '../../assets/images/page-specific/experiences/experience-category-experiences.webp';
 import experience_category_private from '../../assets/images/page-specific/experiences/experience-category-private.webp';
 
+import logo from '../../assets/images/logos/logo.png';
+import padi from '../../assets/images/logos/padi.png';
+
 // This data is shared between the Home page and the Experiences page
 export const experienceCategories = [
   {
     id: 'certificacion',
+    backgroundImage: experience_category_courses,
     titleKey: 'expCardCertificacionTitle',
     categoryKey: 'expCardCertificacionCategory',
-    imageUrl: experience_category_courses,
+    mainLogo: logo,
+    mainLogoAltKey: 'expCardCertificacionMainLogoAlt',
+    complementaryLogo: padi,
+    complementaryLogoAltKey: 'expCardCertificacionComplementaryLogoAlt',
+    photoCreditKey: 'expCardCertificacionPhotoCredit',
   },
   {
     id: 'exploracion',
-    titleKey: 'expCardExploracionTitle',
-    categoryKey: 'expCardExploracionCategory',
-    imageUrl: experience_category_experiences,
+    backgroundImage: experience_category_experiences,
+    titleKey: 'expCardCertificacionTitle',
+    categoryKey: 'expCardCertificacionCategory',
+    mainLogo: logo,
+    mainLogoAltKey: 'expCardCertificacionMainLogoAlt',
+    complementaryLogo: padi,
+    complementaryLogoAltKey: 'expCardCertificacionComplementaryLogoAlt',
+    photoCreditKey: 'expCardCertificacionPhotoCredit',
   },
   {
     id: 'privados',
-    titleKey: 'expCardPrivadosTitle',
-    categoryKey: 'expCardPrivadosCategory',
-    imageUrl: experience_category_private,
+    backgroundImage: experience_category_private,
+    titleKey: 'expCardCertificacionTitle',
+    categoryKey: 'expCardCertificacionCategory',
+    mainLogo: logo,
+    mainLogoAltKey: 'expCardCertificacionMainLogoAlt',
+    complementaryLogo: padi,
+    complementaryLogoAltKey: 'expCardCertificacionComplementaryLogoAlt',
+    photoCreditKey: 'expCardCertificacionPhotoCredit',
   },
 ];

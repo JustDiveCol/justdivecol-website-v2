@@ -7,25 +7,26 @@ import { useTranslation } from 'react-i18next';
 // Data and Assets
 import { notFoundPageData } from '../../data/pages/notFoundPageData';
 
+import ImageComponent from '../../components/common/Image/ImageComponent';
+
 /**
  * Renders the 404 "Not Found" error page.
  * This page is displayed when a user navigates to a non-existent route.
  */
 const NotFoundPage = () => {
   const { t } = useTranslation('common');
-  const { imageUrl, titleKey, subtitleKey, ctaTextKey } = notFoundPageData;
+  const { titleKey, subtitleKey, ctaTextKey } = notFoundPageData;
 
   return (
     // The 'isolate' class creates a new stacking context for the z-index to work correctly.
     <div className='relative min-h-[calc(100vh-80px)] flex items-center justify-center text-center p-4 isolate overflow-hidden'>
       {/* Background container with an image and a dark overlay. */}
-      <div className='absolute inset-0 -z-10'>
-        <img
-          src={imageUrl}
-          alt='A deep, dark underwater scene.'
-          className='w-full h-full object-cover'
+      <div className='absolute inset-0 -z-10 h-full w-full'>
+        <ImageComponent
+          imageData={notFoundPageData.image}
+          translationNS={'common'}
         />
-        <div className='absolute inset-0 bg-brand-primary-dark/80' />
+        <div className='absolute inset-0 bg-brand-primary-dark/50'></div>
       </div>
 
       {/* Main content container with an entry animation. */}

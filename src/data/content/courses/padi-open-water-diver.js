@@ -1,6 +1,9 @@
 // src/data/content/courses/padi-open-water-diver.js
 
 // Import all local images for this course.
+import logo from '../../../assets/images/logos/logo.png';
+import padi from '../../../assets/images/logos/padi.png';
+
 import owd_header_background from '../../../assets/images/page-specific/courses/open-water/owd-header-background.webp';
 import owd_card_image from '../../../assets/images/page-specific/courses/open-water/owd-card-image.webp';
 import owd_gallery_01 from '../../../assets/images/page-specific/courses/open-water/owd-gallery-01.webp';
@@ -24,19 +27,38 @@ export const padiOpenWaterDiverCourse = {
     descriptionKey: 'owdSeoDesc',
   },
 
-  // --- Page Header & Card Display ---
+  // --- Header Content ---
   header: {
+    backgroundImage: owd_header_background,
     titleKey: 'owdHeaderTitle',
     subtitleKey: 'owdHeaderSubtitle',
-    headerImageUrl: owd_header_background, // For the detail page banner.
-    imageUrl: owd_card_image, // For the course card on the experiences page.
+    mainLogo: logo,
+    mainLogoAltKey: 'owdHeaderMainLogoAlt',
+    complementaryLogo: padi,
+    complementaryLogoAltKey: 'owdHeaderComplementaryLogoAlt',
+    // textOverlayKey: 'owdHeaderTextOverlay',
+    photoCreditKey: 'owdHeaderPhotoCredit',
   },
 
-  // --- Main Content ---
+  // --- Card Description Content ---
   description: {
     titleKey: 'owdDescTitle',
     paragraphs: ['owdDescP1', 'owdDescP2'],
   },
+
+  // --- Card Display ---
+  card: {
+    backgroundImage: owd_card_image,
+    mainLogo: logo,
+    mainLogoAltKey: 'owdCardMainLogoAlt',
+    complementaryLogo: padi,
+    complementaryLogoAltKey: 'owdCardComplementaryLogoAlt',
+    textOverlayKey: 'owdCardTextOverlay',
+    photoCreditKey: 'owdCardPhotoCredit',
+    variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+  },
+
+  // --- Main Content ---
   details: {
     titleKey: 'owdDetailsTitle',
     items: [
@@ -44,6 +66,8 @@ export const padiOpenWaterDiverCourse = {
       { labelKey: 'owdDetailLabel2', valueKey: 'owdDetailValue2' },
     ],
   },
+
+  // --- Curriculim Content ---
   curriculum: {
     titleKey: 'owdCurriculumTitle',
     modules: [
@@ -71,11 +95,13 @@ export const padiOpenWaterDiverCourse = {
     notes: ['owdCurriculumNote1'],
   },
 
-  // --- Lists for Checklist Cards ---
+  // --- Requirements ---
   requirements: {
     titleKey: 'owdReqsTitle',
     items: ['owdReqItem1', 'owdReqItem2', 'owdReqItem3', 'owdReqItem4'],
   },
+
+  // --- Included ---
   whatIsIncluded: {
     titleKey: 'owdIncludedTitle',
     items: [
@@ -90,10 +116,51 @@ export const padiOpenWaterDiverCourse = {
     ],
   },
 
-  // --- Visuals ---
+  // --- Gallery ---
   gallery: {
     titleKey: 'owdGalleryTitle',
-    images: [owd_gallery_01, owd_gallery_02, owd_gallery_03, owd_gallery_04],
+    images: [
+      {
+        backgroundImage: owd_gallery_01,
+        mainLogo: logo,
+        mainLogoAltKey: 'owdGaleryImg1MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'owdGaleryImg1ComplementaryLogoAlt',
+        // textOverlayKey: 'owdGaleryImg1TextOverlay',
+        photoCreditKey: 'owdGaleryImg1PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+      {
+        backgroundImage: owd_gallery_02,
+        mainLogo: logo,
+        mainLogoAltKey: 'owdGaleryImg2MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'owdGaleryImg2ComplementaryLogoAlt',
+        // textOverlayKey: 'owdGaleryImg2TextOverlay',
+        photoCreditKey: 'owdGaleryImg2PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+      {
+        backgroundImage: owd_gallery_03,
+        mainLogo: logo,
+        mainLogoAltKey: 'owdGaleryImg3MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'owdGaleryImg3ComplementaryLogoAlt',
+        // textOverlayKey: 'owdGaleryImg3TextOverlay',
+        photoCreditKey: 'owdGaleryImg3PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+      {
+        backgroundImage: owd_gallery_04,
+        mainLogo: logo,
+        mainLogoAltKey: 'owdGaleryImg4MainLogoAlt',
+        // complementaryLogo: padi,
+        // complementaryLogoAlt: 'owdGaleryImg4ComplementaryLogoAlt',
+        // textOverlayKey: 'owdGaleryImg4TextOverlay',
+        photoCreditKey: 'owdGaleryImg4PhotoCredit',
+        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      },
+    ],
   },
 
   // --- Call to Action ---

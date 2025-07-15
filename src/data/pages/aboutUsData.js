@@ -5,21 +5,42 @@ import team_avatar_camilo_beltran from '../../assets/images/page-specific/about-
 import team_avatar_alejandra_vargas from '../../assets/images/page-specific/about-us/team-avatar-alejandra-vargas.webp';
 import team_avatar_pablo_orjuela from '../../assets/images/page-specific/about-us/team-avatar-pablo-orjuela.webp';
 
+import logo from '../../assets/images/logos/logo.png';
+import padi from '../../assets/images/logos/padi.png';
+
 export const aboutUsPageData = {
   seo: {
     titleKey: 'aboutSeoTitle',
     descriptionKey: 'aboutSeoDesc',
   },
+
   header: {
+    backgroundImage: about_us_header_background,
     titleKey: 'aboutHeaderTitle',
     subtitleKey: 'aboutHeaderSubtitle',
-    headerImageUrl: about_us_header_background,
+    mainLogo: logo,
+    mainLogoAltKey: 'aboutHeaderMainLogoAlt',
+    // complementaryLogo: padi,
+    // complementaryLogoAltKey: 'aboutHeaderComplementaryLogoAlt',
+    // textOverlayKey: 'aboutHeaderTextOverlay',
+    photoCreditKey: 'aboutHeaderPhotoCredit',
   },
+
   history: {
     titleKey: 'aboutHistoryTitle',
     paragraphs: ['aboutHistoryP1', 'aboutHistoryP2', 'aboutHistoryP3'],
-    imageUrl: 'https://placehold.co/400x400?text=historyImage',
+    image: {
+      backgroundImage: '',
+      mainLogo: logo,
+      mainLogoAltKey: 'aboutHistoryImageMainLogoAlt',
+      complementaryLogo: padi,
+      complementaryLogoAlt: 'aboutHistoryImageComplementaryLogoAlt',
+      textOverlayKey: 'aboutHistoryImageTextOverlay',
+      photoCreditKey: 'aboutHistoryImagePhotoCredit',
+      variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+    },
   },
+
   team: {
     titleKey: 'aboutTeamTitle',
     subtitleKey: 'aboutTeamSubtitle',
@@ -62,6 +83,7 @@ export const aboutUsPageData = {
       },
     ],
   },
+
   commitment: {
     titleKey: 'aboutCommitmentTitle',
     subtitleKey: 'aboutCommitmentSubtitle',

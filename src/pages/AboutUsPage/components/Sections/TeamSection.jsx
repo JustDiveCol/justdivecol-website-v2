@@ -18,8 +18,9 @@ const TeamSection = ({ teamData }) => {
   const { t } = useTranslation('aboutUs');
   return (
     <motion.section
+      onContextMenu={(e) => e.preventDefault()}
       variants={staggerContainer}
-      className='py-20 px-4 bg-brand-primary-medium'>
+      className='select-none py-20 px-4 bg-brand-primary-medium'>
       <div className='container mx-auto text-center'>
         <motion.h2
           variants={fadeInUp}

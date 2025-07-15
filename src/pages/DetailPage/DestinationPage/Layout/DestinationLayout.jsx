@@ -35,15 +35,6 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
     'experiencesPage',
   ]);
 
-  // A guard clause to prevent rendering if the essential page data is missing.
-  if (!destinationData || !destinationData.page) {
-    return (
-      <div className='flex items-center justify-center min-h-screen text-red-500 text-2xl'>
-        Destination data incomplete.
-      </div>
-    );
-  }
-
   // Construct a pre-filled WhatsApp URL for destination-specific inquiries.
   const prefilledText = t('contactWhatsAppMessage', {
     ns: 'contact',
@@ -62,13 +53,7 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
       exit='hidden'
       className='bg-brand-primary-dark text-brand-neutral'>
       <HeaderComponent
-        sectionData={{
-          // Note: Using destinationInfo.titleKey for both title and subtitle
-          // might be intentional or a placeholder. Review if a separate subtitleKey is needed.
-          titleKey: destinationData.nameKey,
-          subtitleKey: destinationData.card.descriptionKey,
-          headerImageUrl: destinationData.page.headerImageUrl,
-        }}
+        sectionData={destinationData.header}
         translationNS='destinations'
       />
 
@@ -77,17 +62,17 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
         {/* Main content column (left) with a sticky position on large screens. */}
         <main className='lg:col-span-2 space-y-16 lg:sticky top-24 h-fit'>
           <DescriptionSection
-            descriptionData={destinationData.page.destinationInfo}
+            descriptionData={destinationData.description}
             translationNS='destinations'
           />
 
           <DiveSitesSection
-            diveSiteData={destinationData.page.diveSites}
+            diveSiteData={destinationData.diveSites}
             translationNS={'destinations'}
           />
 
           <GallerySection
-            galleryData={destinationData.page.gallery}
+            galleryData={destinationData.gallery}
             translationNS='destinations'
           />
         </main>
@@ -95,14 +80,14 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
         {/* Sidebar column (right) with a sticky position on large screens. */}
         <aside className='lg:col-span-1 space-y-8 lg:sticky top-24 h-fit'>
           <DetailsCard
-            detailsData={destinationData.page.details}
+            detailsData={destinationData.details}
             translationNS='destinations'
           />
 
           <ChecklistCard
             checklistData={{
-              titleKey: destinationData.page.uniqueFinds.titleKey,
-              items: destinationData.page.uniqueFinds.items,
+              titleKey: destinationData.uniqueFinds.titleKey,
+              items: destinationData.uniqueFinds.items,
             }}
             translationNS='destinations'
           />

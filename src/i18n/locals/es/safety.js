@@ -11,6 +11,8 @@ export default {
     'Seguridad sin concesiones: tu tranquilidad es nuestra prioridad',
   safetyHeaderSubtitle:
     'En JustDiveCol, entendemos que una aventura verdaderamente inolvidable se construye sobre la base de la confianza. Por eso, la seguridad es el pilar fundamental de cada experiencia que ofrecemos.',
+  safetyHeaderMainLogoAlt: 'Logo JustDiveCol',
+  safetyHeaderPhotoCredit: 'Créditos: Camilo Beltran @JustDiveCol',
 
   // Protocols
   safetyProtocolsTitle: 'Nuestro estándar de seguridad en cada inmersión',

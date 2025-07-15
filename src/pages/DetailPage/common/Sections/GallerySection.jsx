@@ -2,6 +2,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
+import ImageComponent from '../../../../components/common/Image/ImageComponent';
+
 /**
  * Renders a section with a title and a grid of images.
  *
@@ -25,14 +27,11 @@ const GallerySection = ({ galleryData, translationNS }) => {
         {t(galleryData.titleKey)}
       </h2>
       <div className='grid grid-cols-2 gap-4'>
-        {galleryData.images.map((imgUrl, i) => (
-          <img
+        {galleryData.images.map((image, i) => (
+          <ImageComponent
             key={i}
-            src={imgUrl}
-            // Dynamic alt text improves accessibility and SEO.
-            alt={`${t(galleryData.titleKey)} photo ${i + 1}`}
-            className='rounded-lg shadow-lg'
-            loading='lazy' // Prevents images from loading until they are close to the viewport.
+            imageData={image}
+            translationNS={translationNS}
           />
         ))}
       </div>
