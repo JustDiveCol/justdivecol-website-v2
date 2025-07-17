@@ -28,10 +28,10 @@ const CtaCard = ({ ctaData, translationNS }) => {
 
   const CtaContent = (
     <>
-      <h3 className='text-2xl font-sans font-bold text-brand-white'>
+      <h3 className='text-xl font-bold text-brand-white mb-4'>
         {t(ctaData.titleKey)}
       </h3>
-      <span className='mt-4 inline-block w-full bg-brand-cta-orange text-brand-white font-sans font-bold uppercase py-3 rounded-md shadow-lg transition-all duration-300 ease-in-out hover:bg-opacity-90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-cta-yellow'>
+      <span className='mt-4 inline-block w-full bg-brand-cta-orange text-brand-white font-bold uppercase py-3 rounded-md shadow-lg transition-all duration-300 ease-in-out hover:bg-opacity-90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-cta-yellow'>
         {t(ctaData.buttonTextKey)}
       </span>
     </>

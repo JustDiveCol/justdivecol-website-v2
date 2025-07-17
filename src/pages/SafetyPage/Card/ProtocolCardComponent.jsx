@@ -25,18 +25,16 @@ const ProtocolCardComponent = ({ stepData, index }) => {
       variants={fadeInUp}
       className='flex items-start space-x-6 bg-brand-primary-medium p-6 rounded-lg'>
       {/* The step number is derived from the item's index in the array. */}
-      <div className='flex-shrink-0 text-3xl font-sans font-bold text-brand-cta-green'>
+      <div className='flex-shrink-0 text-3xl  font-bold text-brand-cta-green'>
         {index + 1}.
       </div>
 
       {/* Step Content */}
       <div>
-        <h3 className='text-2xl font-sans font-semibold text-brand-white'>
+        <h3 className='text-2xl  font-semibold text-brand-white'>
           {t(nameKey)}
         </h3>
-        <p className='mt-1 font-serif text-brand-neutral/90'>
-          {t(descriptionKey)}
-        </p>
+        <p className='mt-1  text-brand-neutral/90'>{t(descriptionKey)}</p>
       </div>
     </motion.div>
   );

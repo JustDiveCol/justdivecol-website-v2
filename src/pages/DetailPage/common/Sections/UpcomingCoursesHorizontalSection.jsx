@@ -31,11 +31,11 @@ const UpcomingCoursesHorizontalSection = ({
     <div
       id='available-courses-section-horizontal'
       className='bg-brand-primary-medium p-6 rounded-lg shadow-lg scroll-mt-24'>
-      <h3 className='text-2xl font-sans font-bold text-brand-white mb-4'>
+      <h3 className='text-2xl font-bold text-brand-white mb-4'>
         {t(titleKey, { ns: translationNS })}
       </h3>
       {availableCourses.length > 0 ? (
-        <div className='grid grid-cols-1 gap-4'>
+        <div className='flex flex-wrap gap-4'>
           {availableCourses.map((course) => (
             <CoursesCard
               key={course.id}
@@ -47,7 +47,7 @@ const UpcomingCoursesHorizontalSection = ({
         </div>
       ) : (
         <div>
-          <p className='font-serif text-sm text-brand-neutral/80'>
+          <p className=' text-sm text-brand-neutral/80'>
             {/* The fallback message is sourced from the 'common' namespace. */}
             {t(noTripsMessageKey, { ns: 'common' })}
           </p>

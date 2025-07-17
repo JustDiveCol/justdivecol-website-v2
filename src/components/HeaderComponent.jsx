@@ -35,10 +35,10 @@ const HeaderComponent = ({ sectionData, translationNS }) => {
 
           {/* Title & subtitle */}
           <div className='relative z-10 p-4'>
-            <h1 className='text-4xl md:text-6xl font-sans font-extrabold uppercase drop-shadow-xl opacity-90'>
+            <h1 className='text-4xl md:text-6xl font-extrabold uppercase drop-shadow-xl opacity-90'>
               {title}
             </h1>
-            <p className='mt-2 max-w-2xl mx-auto font-serif text-lg text-brand-neutral drop-shadow-md opacity-80'>
+            <p className='mt-2 max-w-2xl mx-auto  text-lg text-brand-neutral drop-shadow-md opacity-80'>
               {subtitle}
             </p>
           </div>

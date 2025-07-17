@@ -7,9 +7,11 @@ import { staggerContainer, fadeInUp } from '../../../hooks/animations';
 import { EquipmentCardComponent } from '../Card/EquipmentCardComponent';
 
 // Icons
-import { BcdIcon } from '../../../assets/icons/BcdIcon';
-import { ComputerIcon } from '../../../assets/icons/ComputerIcon';
-import { ScubaRegulatorIcon } from '../../../assets/icons/ScubaRegulatorIcon';
+import {
+  DiverIcon,
+  ScubaTanksIcon,
+  ComputerIcon,
+} from '../../../assets/icons/DiverIcons';
 
 /**
  * Renders the "Equipment" section of the Safety page.
@@ -26,9 +28,9 @@ const EquipmentSection = ({ equipmentData }) => {
 
   // Maps icon string identifiers from data to the actual imported icon components.
   const iconMap = {
-    regulator: <ScubaRegulatorIcon />,
-    bcd: <BcdIcon />,
-    computer: <ComputerIcon />,
+    regulator: <ScubaTanksIcon className='h-16 w-16' />,
+    bcd: <DiverIcon className='h-16 w-16' />,
+    computer: <ComputerIcon className='h-16 w-16' />,
   };
 
   return (
@@ -38,12 +40,12 @@ const EquipmentSection = ({ equipmentData }) => {
       <div className='container mx-auto text-center'>
         <motion.h2
           variants={fadeInUp}
-          className='text-4xl md:text-5xl font-sans font-bold text-brand-white uppercase'>
+          className='text-4xl md:text-5xl  font-bold text-brand-white uppercase'>
           {t(equipmentData.titleKey)}
         </motion.h2>
         <motion.p
           variants={fadeInUp}
-          className='mt-4 max-w-3xl mx-auto font-serif text-lg text-brand-neutral'>
+          className='mt-4 max-w-3xl mx-auto  text-lg text-brand-neutral'>
           {t(equipmentData.subtitleKey)}
         </motion.p>
         <motion.div

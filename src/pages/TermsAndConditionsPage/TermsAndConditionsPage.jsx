@@ -17,8 +17,9 @@ const TermsAndConditionsPage = () => {
       <SEOComponent
         title={t(termsAndConditionData.seo.titleKey)}
         description={t(termsAndConditionData.seo.descriptionKey)}
-        imageUrl={termsAndConditionData.header.headerImageUrl}
-        url='/terminos-y-condiciones'
+        keywords={t(termsAndConditionData.seo.keywords)}
+        imageUrl={termsAndConditionData.seo.imageUrl}
+        url={termsAndConditionData.seo.url}
       />
       <motion.div
         variants={staggerContainer}

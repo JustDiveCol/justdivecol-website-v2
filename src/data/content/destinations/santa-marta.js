@@ -27,6 +27,9 @@ export const santaMartaDestination = {
   seo: {
     titleKey: 'smSeoTitle',
     descriptionKey: 'smSeoDesc',
+    keywords: 'smSeoKeywords',
+    imageUrl: santa_marta_header_background,
+    url: '/destinos/',
   },
 
   // --- Header Content ---
@@ -53,8 +56,8 @@ export const santaMartaDestination = {
     backgroundImage: santa_marta_card,
     mainLogo: logo,
     mainLogoAltKey: 'smCardMainLogoAlt',
-    complementaryLogo: padi,
-    complementaryLogoAltKey: 'smCardComplementaryLogoAlt',
+    // complementaryLogo: padi,
+    // complementaryLogoAltKey: 'smCardComplementaryLogoAlt',
     textOverlayKey: 'smCardTextOverlay',
     photoCreditKey: 'smCardPhotoCredit',
     variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

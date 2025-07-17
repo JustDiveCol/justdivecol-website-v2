@@ -38,10 +38,10 @@ const ImageComponent = ({ className, imageData, translationNS }) => {
     : `select-none relative w-full h-full ${className}`;
 
   return (
-    <div className={`group ${wrapperClass}`}>
+    <div className={`group`}>
       <div
         onContextMenu={(e) => e.preventDefault()}
-        className={`relative w-full h-full bg-cover bg-center`}
+        className={`relative w-full h-full bg-cover bg-center ${wrapperClass}`}
         style={{ backgroundImage: `url(${backgroundImage})` }}>
         {/* Top-left text overlay */}
         {textOverlayKey && (

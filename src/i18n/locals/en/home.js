@@ -1,74 +1,79 @@
 // src/i18n/locales/en/home.js
 export default {
   // SEO Section
-  homeSeoTitle: 'JustDiveCol - Unforgettable Dive Courses and Experiences',
+  homeSeoTitle: 'JustDiveCol - Unforgettable Dive Courses & Experiences',
   homeSeoDesc:
-    "Dive into an underwater adventure that transcends borders. As a tourism company specializing in diving, we offer PADI certifications and personalized trips to the world's most astonishing destinations. Your exploration starts today!",
+    'Dive into an underwater adventure that transcends borders. As a tourism company specializing in diving, we offer world-class PADI certifications and personalized trips to the most amazing destinations globally. Your exploration of the big blue starts today with JustDiveCol!',
+  homeSeoKeywords:
+    'diving, dive courses, PADI certifications, dive trips, underwater adventure, JustDiveCol, ocean exploration, safe diving, Colombia diving, personalized diving, open water, advanced open water, rescue diver, marine life',
 
   // Hero Section
   homeHeroTitle: 'Your Next Great Adventure Begins Underwater',
   homeHeroSubtitle:
-    'Explore the hidden wonders of the oceans with the safety and passion that sets us apart. We invite you to discover a world of unparalleled beauty and lasting emotions.',
+    'Explore the hidden wonders of the oceans with the safety and passion that distinguish us. We invite you to discover a world of unparalleled beauty, fascinating life, and emotions that linger long after the dive.',
   homeHeroCtaText: 'Discover Our Experiences',
-  homeHeroMainLogoAlt: 'Logo JustDiveCol',
-  homeHeroPhotoCreditKey: 'Credits: Camilo Beltran @JustDiveCol',
+  homeHeroMainLogoAlt: 'JustDiveCol Main Logo',
+  homeHeroPhotoCreditKey: 'Photo Credits: Camilo Beltran @JustDiveCol',
 
   // Experiences Section
-  homeExpTitle: 'Experiences That Transform Your View of the World',
+  homeExpTitle: 'Experiences That Transform Your Worldview',
   homeExpSubtitle:
-    "Whether you're just blowing your first bubbles or you're an experienced diver, we have an adventure tailored to your explorer spirit.",
+    "No matter if you're taking your first breaths underwater or if you're already an experienced diver; at JustDiveCol, we have an underwater adventure tailored to your adventurous spirit and boldest dreams.",
 
   // Experience Cards (from shared data)
-  expCardCertificacionTitle:
-    'Your Journey into the Underwater World Starts Here',
-  expCardCertificacionCategory: 'PADI Courses and Certifications',
-  expCardCertificacionMainLogoAlt: 'Logo JustDiveCol',
-  expCardCertificacionComplementaryLogoAlt: 'Logo PADI',
-  expCardCertificacionPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
+  expCardCertificacionTitle: 'Your Journey to the Underwater World Starts Here',
+  expCardCertificacionCategory: 'PADI Courses & Certifications',
+  expCardCertificacionMainLogoAlt: 'JustDiveCol Main Logo',
+  expCardCertificacionComplementaryLogoAlt: 'PADI Logo',
+  expCardCertificacionPhotoCredit: 'Photo Credits: Camilo Beltran @JustDiveCol',
 
   expCardExploracionTitle: 'Destinations That Will Take Your Breath Away',
-  expCardExploracionCategory: 'Dive Trips and Exploration',
-  expCardExploracionMainLogoAlt: 'Logo JustDiveCol',
-  expCardExploracionPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
+  expCardExploracionCategory: 'Dive Trips & Exploration',
+  expCardExploracionMainLogoAlt: 'JustDiveCol Main Logo',
+  expCardExploracionPhotoCredit: 'Photo Credits: Camilo Beltran @JustDiveCol',
 
   expCardPrivadosTitle: 'Design the Perfect Underwater Adventure for You',
-  expCardPrivadosCategory: 'Customized Experiences',
-  expCardPrivadosMainLogoAlt: 'Logo JustDiveCol',
-  expCardPrivadosPhotoCredit: 'Credits: @giovannidiveservices',
+  expCardPrivadosCategory: 'Personalized Experiences',
+  expCardPrivadosMainLogoAlt: 'JustDiveCol Main Logo',
+  expCardPrivadosPhotoCredit: 'Photo Credits: @giovannidiveservices',
 
   // Safety Section
-  homeSafetyTitle: 'Your Only Mission: Dive and Explore',
+  homeSafetyTitle: 'Your Only Mission: Dive and Explore with Peace of Mind',
   homeSafetySubtitle:
-    'Diving is a passion that should be enjoyed with complete peace of mind and confidence. We take care of every detail for your safety.',
-  homeSafetyPoint1Title: 'Expert and Certified Guides and Instructors',
+    "Diving is a passion that should be enjoyed with complete tranquility and confidence. We take care of every detail for your safety, allowing you to focus solely on the ocean's magic.",
+  homeSafetyPoint1Title: 'Expert & PADI Certified Guides and Instructors',
   homeSafetyPoint1Desc:
-    'Our team consists of highly qualified PADI professionals with years of experience leading safe and memorable dives in diverse environments.',
-  homeSafetyPoint2Title: 'Top-Quality Equipment and Rigorous Maintenance',
+    'Our team consists of highly qualified PADI professionals, with years of experience leading safe and memorable dives in diverse underwater environments. Your safety is in expert hands.',
+  homeSafetyPoint2Title: 'Top-Quality Equipment & Rigorous Maintenance',
   homeSafetyPoint2Desc:
-    'We use only diving equipment from leading brands in the industry, subjected to exhaustive maintenance and periodic reviews to ensure your maximum safety and comfort.',
+    'We only use diving equipment from leading industry brands, subjected to exhaustive maintenance and regular inspections with Swiss watch standards, to ensure your maximum safety and comfort on every dive.',
   homeSafetyPoint3Title: 'Strict International Safety Protocols',
   homeSafetyPoint3Desc:
-    'We rigorously follow the safety standards and protocols established by PADI and other international organizations, ensuring every dive is safe and responsible.',
+    'We rigorously follow the strictest safety standards and protocols established by PADI and other international organizations, ensuring that every dive you undertake with us is safe, responsible, and mindful of your well-being at all times.',
   homeSafetyCtaText: 'Learn About Our Safety Commitments',
 
   // Testimonials Section
-  homeTestimonialsTitle: 'Voices From Our Underwater Adventures',
+  homeTestimonialsTitle: 'Voices from Our Unforgettable Underwater Adventures',
 
-  homeTestimonial1Quote: '',
-  homeTestimonial1Name: '',
-  homeTestimonial1Origin: '',
-  homeTestimonial2Quote: '',
-  homeTestimonial2Name: '',
-  homeTestimonial2Origin: '',
-  homeTestimonial3Quote: '',
-  homeTestimonial3Name: '',
-  homeTestimonial3Origin: '',
+  homeTestimonial1Quote:
+    'The diving experience exceeded all my expectations. The JustDiveCol team is incredibly professional and passionate. I felt safe and free on every dive. An adventure that will change your life!',
+  homeTestimonial1Name: 'María Fernanda R.',
+  homeTestimonial1Origin: 'Bogotá, Colombia',
+  homeTestimonial2Quote:
+    "I always dreamed of diving, and JustDiveCol made that dream come true in the most spectacular way. The organization, equipment quality, and the instructor's warmth made everything perfect. I'm now a certified and happy diver!",
+  homeTestimonial2Name: 'Carlos S.',
+  homeTestimonial2Origin: 'Mexico City, Mexico',
+  homeTestimonial3Quote:
+    'Every trip with JustDiveCol is a new story. They have managed to combine extreme adventure with a genuine commitment to conservation. The personalized attention and chosen destinations are unparalleled. Highly recommended for any diver!',
+  homeTestimonial3Name: 'Andrea M.',
+  homeTestimonial3Origin: 'Madrid, Spain',
 
   // Final CTA Section
-  homeFinalCtaTitle: 'Ready for Your Next Great Dive?',
+  homeFinalCtaTitle:
+    'Ready for Your Next Great Dive and to Explore Limitlessly?',
   homeFinalCtaSubtitle:
-    'The depths await to reveal their secrets. Contact us today to start planning your unforgettable underwater journey.',
+    "The world's depths await to reveal their most astonishing secrets. Contact us today to start planning your unforgettable underwater journey. Your adventure begins with a conversation!",
   homeFinalCtaText: "Let's Talk About Your Adventure",
-  homeFinalCtaMainLogoAlt: 'Logo JustDiveCol',
-  homeFinalCtaPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
+  homeFinalCtaMainLogoAlt: 'JustDiveCol Main Logo',
+  homeFinalCtaPhotoCredit: 'Photo Credits: Camilo Beltran @JustDiveCol',
 };

@@ -32,14 +32,12 @@ const DestinationCardComponent = ({ destinationData }) => {
         translationNS={'destinations'}
       />
       <div className='p-6 flex flex-col flex-grow'>
-        <h3 className='text-2xl font-bold font-sans text-brand-white'>
-          {t(nameKey)}
-        </h3>
-        <p className='mt-2 font-serif text-brand-neutral flex-grow text-justify'>
+        <h3 className='text-2xl font-bold text-brand-white'>{t(nameKey)}</h3>
+        <p className='mt-2  text-brand-neutral flex-grow text-justify'>
           {t(card.descriptionKey)}
         </p>
         <div className='mt-4 pt-4 border-t border-brand-primary-light/20'>
-          <h4 className='font-sans font-semibold text-brand-white mb-2'>
+          <h4 className='font-semibold text-brand-white mb-2'>
             {t('common:upcomingDates')}
           </h4>
           {upcomingTrips.length > 0 ? (
@@ -49,7 +47,7 @@ const DestinationCardComponent = ({ destinationData }) => {
                   <Link
                     to={`/experiencias/${trip.id}`}
                     className='block bg-brand-primary-dark p-3 rounded-md hover:bg-brand-primary-light transition-colors text-left'>
-                    <span className='font-serif text-brand-neutral'>
+                    <span className=' text-brand-neutral'>
                       {formatDateRange(
                         trip.details.startDate,
                         trip.details.endDate,
@@ -66,7 +64,7 @@ const DestinationCardComponent = ({ destinationData }) => {
             </ul>
           ) : (
             // Fallback message if there are no scheduled trips.
-            <p className='font-serif text-sm text-brand-neutral/70'>
+            <p className=' text-sm text-brand-neutral/70'>
               {t('common:noScheduledDates')}
             </p>
           )}

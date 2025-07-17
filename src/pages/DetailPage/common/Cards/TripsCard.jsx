@@ -28,10 +28,10 @@ const TripsCard = ({ tripData, translationNS, lang, t }) => {
       key={tripData.id}
       to={`/experiencias/${tripData.id}`} // Links to the specific experience page.
       className='block bg-brand-primary-dark p-4 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300'>
-      <h4 className='font-sans font-bold text-brand-white'>
+      <h3 className='text-xl font-bold text-brand-white mb-4'>
         {t(tripData.nameKey, { ns: translationNS })}
-      </h4>
-      <p className='mt-1 font-serif text-sm text-brand-neutral/80'>
+      </h3>
+      <p className='mt-1  text-sm text-brand-neutral/80'>
         {formatDateRange(
           tripData.details.startDate,
           tripData.details.endDate,
@@ -39,7 +39,7 @@ const TripsCard = ({ tripData, translationNS, lang, t }) => {
           t // Pass translation function to the formatter for fallback text.
         )}
       </p>
-      <span className='mt-4 inline-block font-sans text-sm font-semibold text-brand-cta-orange'>
+      <span className='mt-4 inline-block text-sm font-semibold text-brand-cta-orange'>
         {/* Fetches the "View trip details" text from the common namespace. */}
         {t('common:viewTripDetails')} &rarr;
       </span>

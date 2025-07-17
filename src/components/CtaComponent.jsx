@@ -77,13 +77,13 @@ const CtaComponent = ({ sectionData, translationNS }) => {
         className='relative container mx-auto text-center z-10'>
         <motion.h2
           variants={fadeInUp}
-          className='text-4xl md:text-5xl font-sans font-extrabold uppercase'>
+          className='text-4xl md:text-5xl font-extrabold uppercase'>
           {t(titleKey)}
         </motion.h2>
 
         <motion.p
           variants={fadeInUp}
-          className='mt-4 max-w-2xl mx-auto font-serif text-lg text-brand-neutral'>
+          className='mt-4 max-w-2xl mx-auto  text-lg text-brand-neutral'>
           {t(subtitleKey)}
         </motion.p>
 
@@ -92,7 +92,7 @@ const CtaComponent = ({ sectionData, translationNS }) => {
           className='mt-10'>
           <Link
             to={ctaLink}
-            className='inline-block bg-brand-cta-orange text-brand-white font-sans font-bold uppercase text-lg px-10 py-4 rounded-md shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-brand-cta-yellow/50'>
+            className='inline-block bg-brand-cta-orange text-brand-white font-bold uppercase text-lg px-10 py-4 rounded-md shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-brand-cta-yellow/50'>
             {t(ctaTextKey)}
           </Link>
         </motion.div>

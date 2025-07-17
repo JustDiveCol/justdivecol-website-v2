@@ -3,6 +3,8 @@ export default {
   home: 'Home',
   experiences: 'Experiences',
   about: 'About Us',
-  security: 'Security',
+  security: 'Safety',
   contact: 'Contact',
+  gear: 'Dive Kit',
+  divesites: 'Dive Sites',
 };

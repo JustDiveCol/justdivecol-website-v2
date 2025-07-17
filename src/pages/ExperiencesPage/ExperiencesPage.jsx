@@ -30,8 +30,9 @@ const ExperiencesPage = () => {
       <SEOComponent
         title={t(seo.titleKey)}
         description={t(seo.descriptionKey)}
-        imageUrl={header.imageUrl}
-        url='/experiencias'
+        keywords={t(seo.keywords)}
+        imageUrl={seo.imageUrl}
+        url={seo.url}
       />
 
       <motion.div

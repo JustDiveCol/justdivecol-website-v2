@@ -8,6 +8,9 @@ export const policyPageData = {
   seo: {
     titleKey: 'policiesSeoTitle',
     descriptionKey: 'policiesSeoDesc',
+    keywords: 'policiesSeoKeywords',
+    imageUrl: policy_header_background,
+    url: '/politicas',
   },
   header: {
     backgroundImage: policy_header_background,

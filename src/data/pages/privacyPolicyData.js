@@ -8,6 +8,9 @@ export const privacyPolicyData = {
   seo: {
     titleKey: 'ppSeoTitle',
     descriptionKey: 'ppSeoDesc',
+    keywords: 'ppSeoKeywords',
+    imageUrl: privacy_header_background,
+    url: '/privacidad',
   },
   header: {
     backgroundImage: privacy_header_background,

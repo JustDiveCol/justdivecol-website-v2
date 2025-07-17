@@ -27,10 +27,10 @@ const ProtocolsSection = ({ protocolsData }) => {
         <motion.div
           variants={fadeInUp}
           className='text-center mb-12'>
-          <h2 className='text-4xl md:text-5xl font-sans font-bold text-brand-white uppercase'>
+          <h2 className='text-4xl md:text-5xl  font-bold text-brand-white uppercase'>
             {t(protocolsData.titleKey)}
           </h2>
-          <p className='mt-4 max-w-3xl mx-auto font-serif text-lg text-brand-neutral'>
+          <p className='mt-4 max-w-3xl mx-auto  text-lg text-brand-neutral'>
             {t(protocolsData.subtitleKey)}
           </p>
         </motion.div>

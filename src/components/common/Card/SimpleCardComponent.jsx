@@ -73,12 +73,10 @@ const SimpleCardComponent = ({ cardData }) => {
 
         {/* Content */}
         <div className='relative z-20 h-full flex flex-col justify-end p-6 text-white'>
-          <p className='font-sans text-sm uppercase tracking-widest text-brand-cta-orange font-semibold'>
+          <h3 className='text-xl uppercase tracking-widest text-brand-cta-orange font-bold'>
             {t(categoryKey)}
-          </p>
-          <h3 className='mt-2 text-2xl md:text-3xl font-sans font-bold'>
-            {t(titleKey)}
           </h3>
+          <p className='mt-2 text-lg md:text-lg'>{t(titleKey)}</p>
         </div>
       </div>
     ),

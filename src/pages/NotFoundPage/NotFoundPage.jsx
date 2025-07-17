@@ -14,7 +14,7 @@ import ImageComponent from '../../components/common/Image/ImageComponent';
  * This page is displayed when a user navigates to a non-existent route.
  */
 const NotFoundPage = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('notFound');
   const { titleKey, subtitleKey, ctaTextKey } = notFoundPageData;
 
   return (
@@ -34,16 +34,16 @@ const NotFoundPage = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, ease: 'easeOut' }}>
-        <h1 className='mt-6 text-4xl md:text-6xl font-sans font-extrabold uppercase text-brand-white'>
+        <h1 className='mt-6 text-4xl md:text-6xl  font-extrabold uppercase text-brand-white'>
           {t(titleKey)}
         </h1>
-        <p className='mt-4 max-w-lg mx-auto font-serif text-lg text-brand-neutral'>
+        <p className='mt-4 max-w-lg mx-auto  text-lg text-brand-neutral'>
           {t(subtitleKey)}
         </p>
         <div className='mt-10'>
           <Link
             to='/'
-            className='inline-block bg-brand-cta-orange text-brand-white font-sans font-bold uppercase text-lg px-8 py-4 rounded-md shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-brand-cta-yellow/50'>
+            className='inline-block bg-brand-cta-orange text-brand-white  font-bold uppercase text-lg px-8 py-4 rounded-md shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-brand-cta-yellow/50'>
             {t(ctaTextKey)}
           </Link>
         </div>

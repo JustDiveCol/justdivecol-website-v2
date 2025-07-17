@@ -86,7 +86,7 @@ const CourseLayout = ({ courseData, availableTrips }) => {
           <UpcomingTripsHorizontalSection
             availableTrips={availableTrips}
             titleKey='availableTripsTitle'
-            noTripsMessageKey='noUpcomingTrips'
+            noUpcomingTrips='noUpcomingTrips'
             translationNS='courses'
           />
 

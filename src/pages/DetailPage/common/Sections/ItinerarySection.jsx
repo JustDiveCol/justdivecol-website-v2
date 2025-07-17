@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { InfoIcon } from '../../../../assets/icons/InfoIcon';
+import { InfoIcon } from '../../../../assets/icons/NavbarIcons';
 
 /**
  * Renders a vertical timeline for a day-by-day itinerary.
@@ -23,17 +23,17 @@ const ItinerarySection = ({ itineraryData, translationNS }) => {
 
   return (
     <section>
-      <h2 className='text-3xl font-sans font-bold text-brand-white mb-6'>
+      <h2 className='text-3xl font-bold text-brand-white mb-6'>
         {t(itineraryData.titleKey)}
       </h2>
       <div className='border-l-2 border-brand-cta-green/50 pl-6 space-y-8'>
         {itineraryData.days.map((day) => (
           <div key={day.day}>
-            <h3 className='text-xl font-sans font-semibold text-brand-cta-green'>
+            <h3 className='text-xl font-semibold text-brand-cta-green'>
               {/* The word "Day" is translated from the 'common' namespace. */}
               {t('common:day')} {day.day}: {t(day.titleKey)}
             </h3>
-            <p className='mt-1 font-serif text-brand-neutral/90 text-justify'>
+            <p className='mt-1 text-brand-neutral/90 text-justify'>
               {t(day.descriptionKey)}
             </p>
           </div>
@@ -47,8 +47,8 @@ const ItinerarySection = ({ itineraryData, translationNS }) => {
             <div
               key={index}
               className='flex items-start p-4 bg-brand-primary-light/30 rounded-lg text-brand-neutral/80'>
-              <InfoIcon />
-              <p className='ml-2 font-serif text-sm text-justify'>
+              <InfoIcon className='w-5 h-5 mr-2 flex-shrink-0 mt-0.5 text-brand-neutral/80' />
+              <p className='ml-2 text-sm text-justify'>
                 {/* Use the dynamically passed translationNS for the note. */}
                 {t(noteKey, { ns: translationNS })}
               </p>

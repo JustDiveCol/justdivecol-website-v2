@@ -7,6 +7,9 @@ export const contactPageData = {
   seo: {
     titleKey: 'contactSeoTitle',
     descriptionKey: 'contactSeoDesc',
+    keywords: 'contactSeoKeywords',
+    imageUrl: contact_header_background,
+    url: '/contacto',
   },
   header: {
     backgroundImage: contact_header_background,

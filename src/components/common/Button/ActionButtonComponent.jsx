@@ -50,9 +50,7 @@ const ActionButtonComponent = ({
             marginLeft: isHovered ? '0.75rem' : 0,
           }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}>
-          <span className='font-sans font-bold text-sm whitespace-nowrap'>
-            {text}
-          </span>
+          <span className='font-bold text-sm whitespace-nowrap'>{text}</span>
         </motion.div>
       </Component>
     </motion.div>

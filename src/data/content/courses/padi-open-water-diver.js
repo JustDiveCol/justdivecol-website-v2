@@ -25,6 +25,9 @@ export const padiOpenWaterDiverCourse = {
   seo: {
     titleKey: 'owdSeoTitle',
     descriptionKey: 'owdSeoDesc',
+    keywords: 'owdSeoKeywords',
+    imageUrl: owd_header_background,
+    url: '/cursos/',
   },
 
   // --- Header Content ---

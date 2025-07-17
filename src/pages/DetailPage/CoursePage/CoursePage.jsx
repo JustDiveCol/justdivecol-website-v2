@@ -61,10 +61,11 @@ const CoursePage = () => {
   return (
     <>
       <SEOComponent
-        title={t(courseData.seo.titleKey)}
-        description={t(courseData.seo.descriptionKey)}
-        imageUrl={courseData.header.bannerImageUrl}
-        url={`/cursos/${courseData.id}`}
+        title={t(courseData.seo.titleKey, { ns: 'courses' })}
+        description={t(courseData.seo.descriptionKey, { ns: 'courses' })}
+        keywords={t(courseData.seo.keywords, { ns: 'courses' })}
+        imageUrl={courseData.seo.imageUrl}
+        url={`${courseData.seo.url}${courseData.id}`}
       />
       <motion.div
         variants={staggerContainer}

@@ -5,12 +5,15 @@ import experiences_header_background from '../../assets/images/page-specific/exp
 import experiences_cta_background from '../../assets/images/page-specific/experiences/experiences-cta-background.webp';
 
 import logo from '../../assets/images/logos/logo.png';
-import padi from '../../assets/images/logos/padi.png';
+// import padi from '../../assets/images/logos/padi.png';
 
 export const experiencesPageData = {
   seo: {
     titleKey: 'expSeoTitle',
     descriptionKey: 'expSeoDesc',
+    keywords: 'expSeoKeywords',
+    imageUrl: experiences_header_background,
+    url: '/experiencias',
   },
   header: {
     backgroundImage: experiences_header_background,

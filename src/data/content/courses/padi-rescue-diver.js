@@ -25,6 +25,9 @@ export const padiRescueDiverCourse = {
   seo: {
     titleKey: 'rdSeoTitle',
     descriptionKey: 'rdSeoDesc',
+    keywords: 'rdSeoKeywords',
+    imageUrl: rd_header_background,
+    url: '/cursos/',
   },
 
   // --- Page Header ---

@@ -3,9 +3,9 @@
 /* Import core Tailwind CSS */
 @import 'tailwindcss';
 
-/* -------------------------------
-   🎨 Design Tokens: Custom Theme
---------------------------------- */
+/* ==========================================================================
+   🎨 1. DESIGN TOKENS & THEME
+   ========================================================================== */
 @theme {
   /* --- Brand Colors --- */
   --color-brand-primary-dark: #0a264f;
@@ -27,10 +27,11 @@
   --shadow-text: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* -------------------------------
-   🔧 Base Styles Overrides
---------------------------------- */
+/* ==========================================================================
+   🔧 2. BASE LAYER OVERRIDES
+   ========================================================================== */
 @layer base {
+  /* Ensures consistent default border colors. */
   *,
   ::after,
   ::before,
@@ -38,45 +39,47 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
+
+  /* --- Global Font Rules --- */
+  /* Apply sans-serif font to all heading elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans);
+  }
+
+  /* Apply serif font to paragraph and other text elements */
+  p,
+  span,
+  small,
+  li,
+  a {
+    font-family: var(--font-serif);
+  }
 }
 
-/* -------------------------------
-   ❌ Popup Close Button Custom
---------------------------------- */
-.maplibregl-popup-close-button {
-  font-size: 24px !important;
-  width: 32px !important;
-  height: 32px !important;
-  line-height: 28px !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: 8px !important;
-  top: 8px !important;
-}
+/* ==========================================================================
+   🗺️ 3. MAPLIBRE GL POPUP STYLES
+   ========================================================================== */
 
 /* -------------------------------
-   📍 Popup General Settings
+   Global Popup Container Resets
 --------------------------------- */
+/* Resets the default Maplibre popup container to have no padding and a max-width. */
 .maplibregl-popup {
   padding: 0 !important;
   max-width: 600px !important;
+  z-index: 50; /* Set a base z-index for all popups */
 }
 
 /* -------------------------------
-   💬 Popup Styles
+   Global Popup Content Resets
 --------------------------------- */
-
-/* Principal Popup (onClick) */
-.maplibregl-popup-content.popup-main {
-  background-color: transparent !important;
-  padding: 0 !important;
-  border-radius: 0.75rem;
-  overflow: visible;
-  max-width: 600px !important;
-}
-
-/* Hover Popup (default) */
+/* Resets the default content box of all popups to be transparent with no shadow or border.
+   Specific popup types will add their own styling back. */
 .maplibregl-popup-content {
   background: transparent !important;
   padding: 0 !important;
@@ -85,34 +88,42 @@
   border: none !important;
 }
 
-.maplibregl-popup-content.unstyled-popup {
-  background: transparent !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
+/* -------------------------------
+   Custom Popup Types
+--------------------------------- */
+
+/**
+ * .popup-main
+ * The main popup used for the DiveSiteModal (onClick).
+ * It has a transparent background to allow the inner modal to control its own styling.
+ */
+.maplibregl-popup-content.popup-main {
+  border-radius: 0.75rem; /* 12px */
+  overflow: visible;
 }
 
-.maplibregl-popup-content.popup-fullscreen {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow-y: auto;
-  background-color: white;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 1rem;
-  z-index: 9999;
-}
-
+/**
+ * .unstyled-popup
+ * A generic, unstyled popup used for simple hover effects.
+ * This ensures the custom content (like a simple text label) is the only thing visible.
+ */
 .maplibregl-popup.unstyled-popup {
-  z-index: 9999 !important;
+  /* Higher z-index to appear above markers */
+  z-index: 99 !important;
 }
 
-/* Optional: Wider on larger screens */
-@media (min-width: 640px) {
-  .maplibregl-popup-content.popup-main {
-    max-width: 600px !important;
-  }
+/* -------------------------------
+   Popup Close Button
+--------------------------------- */
+/* Overrides the default close button for a larger, more accessible target. */
+.maplibregl-popup-close-button {
+  font-size: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  right: 8px !important;
+  top: 8px !important;
 }

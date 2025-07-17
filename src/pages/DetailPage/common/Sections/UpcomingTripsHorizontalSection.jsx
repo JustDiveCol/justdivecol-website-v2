@@ -17,7 +17,7 @@ import TripsCard from '../Cards/TripsCard';
 const UpcomingTripsHorizontalSection = ({
   availableTrips,
   titleKey,
-  noTripsMessageKey,
+  noUpcomingTrips,
   translationNS,
 }) => {
   // Loads multiple namespaces for section titles, trip data, and common terms.
@@ -32,7 +32,7 @@ const UpcomingTripsHorizontalSection = ({
     <div
       id='available-trips-section-horizontal'
       className='bg-brand-primary-medium p-6 rounded-lg shadow-lg scroll-mt-24'>
-      <h3 className='text-2xl font-sans font-bold text-brand-white mb-4'>
+      <h3 className='text-2xl font-bold text-brand-white mb-4'>
         {t(titleKey, { ns: translationNS })}
       </h3>
       {availableTrips.length > 0 ? (
@@ -49,8 +49,8 @@ const UpcomingTripsHorizontalSection = ({
         </div>
       ) : (
         <div>
-          <p className='font-serif text-sm text-brand-neutral/80'>
-            {t(noTripsMessageKey, { ns: 'common' })}
+          <p className='text-sm text-brand-neutral/80'>
+            {t(noUpcomingTrips, { ns: 'courses' })}
           </p>
         </div>
       )}

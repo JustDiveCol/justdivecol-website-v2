@@ -10,6 +10,9 @@ export const safetyPageData = {
   seo: {
     titleKey: 'safetySeoTitle',
     descriptionKey: 'safetySeoDesc',
+    keywords: 'safetySeoKeywords',
+    imageUrl: safety_header_background,
+    url: '/seguridad',
   },
   header: {
     backgroundImage: safety_header_background,

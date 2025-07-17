@@ -27,6 +27,9 @@ export const islaFuerteDestination = {
   seo: {
     titleKey: 'ifSeoTitle',
     descriptionKey: 'ifSeoDesc',
+    keywords: 'ifSeoKeywords',
+    imageUrl: isla_fuerte_header_background,
+    url: '/destinos/',
   },
 
   // --- Header Content ---
@@ -53,8 +56,8 @@ export const islaFuerteDestination = {
     backgroundImage: isla_fuerte_card,
     mainLogo: logo,
     mainLogoAltKey: 'ifCardMainLogoAlt',
-    complementaryLogo: padi,
-    complementaryLogoAltKey: 'ifCardComplementaryLogoAlt',
+    // complementaryLogo: padi,
+    // complementaryLogoAltKey: 'ifCardComplementaryLogoAlt',
     textOverlayKey: 'ifCardTextOverlay',
     photoCreditKey: 'ifCardPhotoCredit',
     variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

@@ -23,7 +23,7 @@ const GallerySection = ({ galleryData, translationNS }) => {
 
   return (
     <section>
-      <h2 className='text-3xl font-sans font-bold text-brand-white mb-6'>
+      <h2 className='text-3xl font-bold text-brand-white mb-6'>
         {t(galleryData.titleKey)}
       </h2>
       <div className='grid grid-cols-2 gap-4'>
@@ -32,6 +32,7 @@ const GallerySection = ({ galleryData, translationNS }) => {
             key={i}
             imageData={image}
             translationNS={translationNS}
+            className={'rounded-2xl'}
           />
         ))}
       </div>

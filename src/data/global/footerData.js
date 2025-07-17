@@ -23,9 +23,8 @@ export const footerData = {
     { nameKey: 'termsAndConditions', path: '/terminos-y-condiciones' },
     { nameKey: 'privacy', path: '/privacidad' },
     { nameKey: 'faqs', path: '/faqs' },
-    { nameKey: 'diveSites', path: '/proximamente' },
+    { nameKey: 'diveSites', path: '/mapa' },
     { nameKey: 'gear', path: '/proximamente' },
-    { nameKey: 'photosAndVideos', path: '/proximamente' },
   ],
 
   policiesLinkText: 'footerLinkText',

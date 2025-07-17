@@ -4,8 +4,8 @@ import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 import { fadeInUp } from '../../../../hooks/animations';
-import { QuoteIcon } from '../../../../assets/icons/QuoteIcon';
-import { StarRating } from '../../../../assets/icons/StarRating';
+
+import { QuoteIcon, StarRating } from '../../../../assets/icons/NavbarIcons';
 
 /**
  * Renders a card displaying a customer testimonial.
@@ -28,10 +28,10 @@ const TestimonialCardComponent = ({ cardData }) => {
       variants={fadeInUp}
       className='bg-gradient-to-br from-brand-primary-medium/50 to-brand-primary-dark p-8 rounded-lg shadow-2xl flex flex-col border border-brand-primary-light/10'>
       <div className='flex-shrink-0'>
-        <QuoteIcon />
+        <QuoteIcon className='h-10 w-10 text-brand-cta-green/50' />
       </div>
 
-      <p className='mt-6 text-left font-serif text-brand-neutral/90 flex-grow text-lg'>
+      <p className='mt-6 text-left  text-brand-neutral/90 flex-grow text-lg'>
         "{t(quoteKey)}"
       </p>
 
@@ -44,12 +44,8 @@ const TestimonialCardComponent = ({ cardData }) => {
         />
         <div className='text-left'>
           <StarRating rating={rating} />
-          <h4 className='mt-1 font-sans font-bold text-brand-white'>
-            {t(nameKey)}
-          </h4>
-          <p className='font-serif text-sm text-brand-neutral/80'>
-            {t(originKey)}
-          </p>
+          <h4 className='mt-1 font-bold text-brand-white'>{t(nameKey)}</h4>
+          <p className=' text-sm text-brand-neutral/80'>{t(originKey)}</p>
         </div>
       </div>
     </motion.div>

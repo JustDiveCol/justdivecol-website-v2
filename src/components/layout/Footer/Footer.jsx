@@ -9,13 +9,16 @@ import { contactPageData } from '../../../data/pages/contactData.js';
 
 // Asset Imports
 import logo from '../../../assets/images/logos/logo.png';
-import { InstagramIcon } from '../../../assets/icons/InstagramIcon.jsx';
-import { TikTokIcon } from '../../../assets/icons/TikTokIcon.jsx';
-import { YouTubeIcon } from '../../../assets/icons/YouTubeIcon.jsx';
-import { MailIcon } from '../../../assets/icons/MailIcon.jsx';
-import { WhatsAppIcon } from '../../../assets/icons/WhatsAppIcon.jsx';
-import { ArrowUpIcon } from '../../../assets/icons/ArrowUpIcon.jsx';
-import { ScubaMaskIcon } from '../../../assets/icons/ScubaMaskIcon.jsx';
+
+import {
+  WhatsappIcon,
+  MailIcon,
+  InstagramIcon,
+  TikTokIcon,
+  YouTubeIcon,
+} from '../../../assets/icons/SocialIcons.jsx';
+import { ChevronUpIcon } from '../../../assets/icons/ChevronIcons.jsx';
+import { ScubaMaskIcon } from '../../../assets/icons/DiverIcons.jsx';
 
 /**
  * The main footer component for the website.
@@ -50,9 +53,9 @@ const Footer = () => {
 
   // Maps social media icon keys from data to their respective components.
   const socialIcons = {
-    instagram: <InstagramIcon />,
-    tiktok: <TikTokIcon />,
-    youtube: <YouTubeIcon />,
+    instagram: <InstagramIcon className='w-6 h-6' />,
+    tiktok: <TikTokIcon className='w-6 h-6' />,
+    youtube: <YouTubeIcon className='w-6 h-6' />,
   };
 
   // Build the WhatsApp URL with a pre-filled message from translation files.
@@ -65,7 +68,7 @@ const Footer = () => {
   )}?text=${encodeURIComponent(prefilledText)}`;
 
   return (
-    <footer className='bg-gradient-to-t from-brand-primary-dark to-brand-primary-medium text-brand-neutral/80 font-serif relative'>
+    <footer className='bg-gradient-to-t from-brand-primary-dark to-brand-primary-medium text-brand-neutral/80  relative'>
       <div className='container mx-auto px-8 py-16 text-center'>
         <div className='flex flex-col items-center'>
           <Link to='/'>
@@ -77,7 +80,7 @@ const Footer = () => {
             />
           </Link>
           <p className='mt-4 text-lg max-w-xl'>{t(footerData.sloganKey)}</p>
-          <p className='mt-2 text-sm max-w-xl font-sans font-semibold text-brand-white'>
+          <p className='mt-2 text-sm max-w-xl font-semibold text-brand-white'>
             {t(footerData.closingMessageKey)}
           </p>
 
@@ -87,14 +90,14 @@ const Footer = () => {
               target='_blank'
               rel='noopener noreferrer'
               title='WhatsApp'
-              className='text-brand-neutral/70 hover:text-brand-white transition-colors'>
-              <WhatsAppIcon />
+              className='text-brand-neutral/70 hover:text-brand-cta-orange transition-all duration-300 hover:scale-110 inline-block'>
+              <WhatsappIcon className='w-6 h-6' />
             </a>
             <a
               href={`mailto:${contactPageData.contactInfo.email}`}
               title='Email'
-              className='text-brand-neutral/70 hover:text-brand-white transition-colors'>
-              <MailIcon />
+              className='text-brand-neutral/70 hover:text-brand-cta-orange transition-all duration-300 hover:scale-110 inline-block'>
+              <MailIcon className='w-6 h-6' />
             </a>
             {contactPageData.contactInfo.socials.map((social) => (
               <a
@@ -103,7 +106,7 @@ const Footer = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 title={social.name}
-                className='text-brand-neutral/70 hover:text-brand-white transition-colors'>
+                className='text-brand-neutral/70 hover:text-brand-cta-orange transition-all duration-300 hover:scale-110 inline-block'>
                 {socialIcons[social.icon]}
               </a>
             ))}
@@ -114,7 +117,7 @@ const Footer = () => {
         <div className='flex items-center justify-center my-10'>
           <div className='flex-grow border-t border-brand-primary-light/20'></div>
           <div className='px-4'>
-            <ScubaMaskIcon />
+            <ScubaMaskIcon className='h-8 w-8 text-brand-cta-orange' />
           </div>
           <div className='flex-grow border-t border-brand-primary-light/20'></div>
         </div>
@@ -150,9 +153,9 @@ const Footer = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className='fixed bottom-8 right-8 bg-brand-cta-orange text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition-opacity'
+          className='fixed bottom-8 right-8 bg-brand-cta-orange text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition-opacity cursor-pointer'
           aria-label='Scroll to top'>
-          <ArrowUpIcon />
+          <ChevronUpIcon />
         </button>
       )}
     </footer>

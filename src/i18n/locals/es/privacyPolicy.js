@@ -1,79 +1,83 @@
 // src/i18n/locales/es/privacyPolicy.js
 export default {
   // ----- SEO -----
-  ppSeoTitle: 'Política de privacidad | JustDiveCol - Tu información segura',
+  ppSeoTitle:
+    'Política de privacidad | JustDiveCol - Tu información segura y protegida',
   ppSeoDesc:
-    'Conoce la política de privacidad de JustDiveCol. Te explicamos cómo protegemos tus datos personales, su uso y tus derechos al interactuar con nuestra plataforma y servicios.',
+    'Conoce la política de privacidad de JustDiveCol. Te explicamos de forma clara y detallada cómo recopilamos, usamos, protegemos y gestionamos tus datos personales, así como tus derechos al interactuar con nuestra plataforma y servicios. Tu confianza y la seguridad de tu información son nuestras prioridades fundamentales bajo el agua y fuera de ella.',
+  ppSeoKeywords:
+    'política de privacidad, privacidad de datos, protección de datos, JustDiveCol, información personal, uso de datos, seguridad de datos, derechos de privacidad, buceo seguro, gestión de datos, cookies, consentimiento',
 
   // ----- Header -----
-  ppHeaderTitle: 'Nuestra política de privacidad',
+  ppHeaderTitle:
+    'Nuestra política de privacidad: tu confianza es nuestro tesoro más valioso',
   ppHeaderSubtitle:
-    'En JustDiveCol, valoramos tu confianza. Esta política explica cómo recopilamos, usamos, protegemos y, en ciertas circunstancias, compartimos tu información personal.',
-  ppHeaderMainLogoAlt: 'Logo JustDiveCol',
+    'En JustDiveCol, valoramos profundamente tu confianza y nos comprometemos a proteger tu privacidad. Esta política explica de manera transparente y detallada cómo recopilamos, utilizamos, protegemos y, en circunstancias específicas, compartimos tu información personal. Queremos que te sientas tan seguro con tus datos al interactuar con nosotros, como te sentirías buceando bajo nuestra supervisión experta. Tu tranquilidad es esencial para nosotros.',
+  ppHeaderMainLogoAlt: 'Logo principal de JustDiveCol',
   // ppHeaderComplementaryLogoAlt: '',
   // ppHeaderTextOverlay: '',
-  ppHeaderPhotoCredit: 'Créditos: Camilo Beltran @JustDiveCol',
+  ppHeaderPhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
   // ----- Sections -----
   // Sección 1: Información que Recopilamos
   ppSection1Title: '1. Información que recopilamos',
   ppSection1Point1:
-    'Información que nos proporcionas directamente: Incluye datos como tu nombre, dirección de correo electrónico, número de teléfono, información de contacto de emergencia, detalles de pago, historial de certificaciones de buceo, preferencias de viaje, y cualquier otra información que nos brindes al registrarte, reservar una experiencia, contactarnos o participar en encuestas.',
+    'Información que nos proporcionas directamente: Recopilamos datos personales que nos brindas de forma voluntaria al interactuar con nuestros servicios. Esto incluye, pero no se limita a, tu nombre completo, dirección de correo electrónico, número de teléfono, información de contacto de emergencia, detalles de pago (que son procesados de forma segura por terceros), historial de certificaciones de buceo, preferencias de viaje, y cualquier otra información que nos proporciones al registrarte en nuestro sitio web, reservar una experiencia o curso, contactarnos directamente o participar en encuestas y promociones.',
   ppSection1Point2:
-    'Información recopilada automáticamente: Al visitar nuestro sitio web, podemos recopilar automáticamente información sobre tu dispositivo y uso, como tu dirección IP, tipo de navegador, sistema operativo, páginas visitadas, tiempo de permanencia y datos de clic. Esto nos ayuda a mejorar la funcionalidad de nuestro sitio.',
+    'Información recopilada automáticamente: Al visitar e interactuar con nuestro sitio web, podemos recopilar automáticamente cierta información sobre tu dispositivo y tu comportamiento de uso. Esto puede incluir tu dirección IP, tipo de navegador, sistema operativo, páginas visitadas, la duración de tu visita, los enlaces en los que haces clic, y otros datos de uso. Esta información nos ayuda a entender cómo interactúas con nuestra plataforma para mejorar su funcionalidad, la experiencia del usuario y la relevancia de nuestros contenidos.',
   ppSection1Point3:
-    'Información de terceros: En ocasiones, podemos recibir información sobre ti de socios (como plataformas de reservas) o de otras fuentes públicas, siempre que estas se adhieran a las leyes de protección de datos.',
+    'Información de terceros: En ciertas ocasiones y de acuerdo con las leyes aplicables, podemos recibir información sobre ti de socios confiables (como plataformas de reservas o proveedores de servicios de terceros con los que colaboramos) o de otras fuentes públicas. Siempre nos aseguramos de que estas fuentes se adhieran a las leyes y regulaciones de protección de datos pertinentes antes de integrar dicha información.',
 
   // Sección 2: Cómo Utilizamos tu Información
   ppSection2Title: '2. Cómo utilizamos tu información',
   ppSection2Point1:
-    'Para proveer y gestionar nuestros servicios: Usamos tu información para procesar tus reservas, organizar tus experiencias de buceo, gestionar pagos, enviarte confirmaciones, recordatorios y comunicarnos contigo sobre tu viaje.',
+    'Para proveer y gestionar nuestros servicios: La principal razón por la que recopilamos tu información es para poder ofrecerte y gestionar los servicios que nos solicitas. Esto incluye procesar tus reservas y pagos, organizar tus experiencias y cursos de buceo, gestionar tu alojamiento y traslados (si son parte del paquete contratado), enviarte confirmaciones de reserva, recordatorios importantes, actualizaciones sobre tu viaje y cualquier otra comunicación esencial relacionada con tu actividad con JustDiveCol.',
   ppSection2Point2:
-    'Para mejorar tu experiencia: La información nos permite personalizar tu experiencia en el sitio web, ofrecerte contenido y ofertas relevantes, y entender cómo interactúas con JustDiveCol para mejorar nuestros servicios y ofertas futuras.',
+    'Para mejorar tu experiencia: Utilizamos la información recopilada para entender mejor tus preferencias y necesidades. Esto nos permite personalizar tu experiencia en nuestro sitio web, ofrecerte contenido y ofertas que sean más relevantes para tus intereses, y analizar cómo interactúas con JustDiveCol para identificar áreas de mejora y desarrollar nuevas y emocionantes experiencias y servicios futuros.',
   ppSection2Point3:
-    'Para comunicación y marketing: Podemos enviarte correos electrónicos sobre nuevas experiencias, promociones, boletines informativos u otra información que creemos que podría interesarte, siempre con la opción de cancelar la suscripción. No compartimos tus datos para marketing de terceros.',
+    'Para comunicación y marketing: Con tu consentimiento previo o cuando la ley lo permita, podemos enviarte correos electrónicos informativos sobre nuestras nuevas experiencias, cursos de buceo, promociones especiales, boletines informativos o cualquier otra información que creamos que podría ser de tu interés. Siempre tendrás la opción de cancelar la suscripción a estas comunicaciones en cualquier momento. Queremos dejar claro que no compartimos tus datos personales con terceros para sus propios fines de marketing.',
   ppSection2Point4:
-    'Para seguridad y cumplimiento legal: Utilizamos tu información para garantizar la seguridad de nuestras operaciones, prevenir fraudes y cumplir con las leyes, regulaciones y solicitudes legales aplicables (ej., requisitos de certificación PADI, seguros).',
+    'Para seguridad y cumplimiento legal: Tu información es fundamental para garantizar la seguridad de todas nuestras operaciones, proteger a nuestros clientes y personal, y prevenir actividades fraudulentas o no autorizadas. Además, la utilizamos para cumplir con las leyes, regulaciones, ordenanzas y solicitudes legales aplicables, incluyendo, por ejemplo, los requisitos de registro y certificación de PADI, o la gestión de pólizas de seguro.',
 
   // Sección 3: Cómo Compartimos tu Información
   ppSection3Title: '3. Cómo compartimos tu información',
   ppSection3Point1:
-    'Con proveedores de servicios: Compartimos tu información con terceros que nos ayudan a operar nuestro negocio (ej., procesadores de pago, operadores de buceo locales, hoteles, aerolíneas si aplica a un paquete, proveedores de servicios de TI). Estos terceros están obligados contractualmente a proteger tu información.',
+    'Con proveedores de servicios: Para poder operar nuestro negocio y ofrecerte la mejor experiencia, compartimos tu información personal con terceros de confianza que nos brindan servicios esenciales. Esto puede incluir procesadores de pago, operadores de buceo locales en los destinos que visitas, hoteles, aerolíneas (si tu paquete de viaje incluye vuelos), proveedores de servicios de TI, entre otros. Estos terceros están obligados contractualmente a proteger tu información y a utilizarla únicamente para los fines específicos para los que fue compartida, y de acuerdo con esta política de privacidad.',
   ppSection3Point2:
-    'Por cumplimiento legal y seguridad: Podemos divulgar tu información si la ley lo exige o si creemos de buena fe que dicha acción es necesaria para cumplir con un proceso legal, proteger los derechos o la propiedad de JustDiveCol, o asegurar la seguridad de nuestros clientes o el público.',
+    'Por cumplimiento legal y seguridad: Podemos divulgar tu información personal si la ley nos lo exige, por ejemplo, en respuesta a una citación judicial o un proceso legal similar. También podemos compartir tu información si creemos de buena fe que dicha acción es necesaria para cumplir con una obligación legal, proteger los derechos o la propiedad de JustDiveCol, investigar posibles infracciones de nuestras políticas, o asegurar la seguridad de nuestros clientes o el público en general. Esto incluye compartir información con autoridades relevantes en caso de emergencias o situaciones de seguridad.',
   ppSection3Point3:
-    'En transferencias de negocio: En caso de fusión, adquisición o venta de activos, tu información personal podría ser transferida al nuevo propietario como parte de la transacción, quien deberá adherirse a esta política de privacidad.',
+    'En transferencias de negocio: En el improbable caso de que JustDiveCol participe en una fusión, adquisición, venta de activos o cualquier otra transacción similar que implique un cambio de propiedad, tu información personal podría ser transferida al nuevo propietario como parte de dicha transacción. En tal caso, el nuevo propietario estará obligado a adherirse a las prácticas de privacidad descritas en esta política, o a notificarte de cualquier cambio significativo.',
 
   // Sección 4: Tus Derechos y Opciones
   ppSection4Title: '4. Tus derechos y opciones',
   ppSection4Point1:
-    'Tienes derecho a acceder, corregir o actualizar tu información personal en cualquier momento. Si deseas hacerlo, por favor contáctanos directamente.',
+    'Derecho de acceso y corrección: Tienes el derecho de acceder a tu información personal que tenemos, y de solicitar que se corrija o actualice si encuentras que es inexacta o incompleta. Si deseas ejercer este derecho, por favor contáctanos directamente a través de los canales proporcionados en la Sección 8.',
   ppSection4Point2:
-    'Puedes optar por no recibir comunicaciones de marketing de JustDiveCol siguiendo las instrucciones para cancelar la suscripción incluidas en nuestros correos electrónicos. Ten en cuenta que esto no afectará las comunicaciones relacionadas con tus reservas activas.',
+    'Derecho a no recibir comunicaciones de marketing: Puedes optar por no recibir comunicaciones de marketing de JustDiveCol en cualquier momento. Puedes hacerlo siguiendo las instrucciones para cancelar la suscripción que se incluyen en la parte inferior de todos nuestros correos electrónicos de marketing. Es importante tener en cuenta que, aunque te des de baja del marketing, esto no afectará las comunicaciones esenciales relacionadas con tus reservas activas o servicios contratados (ej. confirmaciones de pago, itinerarios de viaje, actualizaciones de seguridad).',
   ppSection4Point3:
-    'Tienes derecho a solicitar la eliminación de tus datos personales, sujeto a nuestras obligaciones legales y contractuales de retención de datos.',
+    'Derecho a la eliminación de datos: Tienes derecho a solicitar la eliminación de tus datos personales. Sin embargo, este derecho está sujeto a nuestras obligaciones legales y contractuales de retención de datos. Por ejemplo, estamos obligados a mantener ciertos registros de buceo y transacciones por razones de seguridad, auditoría y cumplimiento regulatorio.',
 
   // Sección 5: Seguridad de Datos
   ppSection5Title: '5. Seguridad de datos',
   ppSection5Point1:
-    'Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger tu información personal contra el acceso no autorizado, el uso indebido, la divulgación, la alteración o la destrucción.',
+    'En JustDiveCol, implementamos rigurosas medidas de seguridad técnicas, administrativas y físicas para proteger tu información personal contra el acceso no autorizado, el uso indebido, la divulgación, la alteración o la destrucción. Esto incluye el uso de cifrado, firewalls, controles de acceso y procedimientos de seguridad robustos en nuestros sistemas y operaciones.',
   ppSection5Point2:
-    'Aunque nos esforzamos por proteger tus datos, ninguna transmisión por internet o sistema de almacenamiento es 100% segura. Por lo tanto, no podemos garantizar la seguridad absoluta de tu información. La seguridad de tu información también depende de ti; protege tus contraseñas y no las compartas.',
+    'A pesar de nuestros exhaustivos esfuerzos por proteger tus datos, es fundamental recordar que ninguna transmisión de datos por internet o sistema de almacenamiento electrónico es 100% segura. Por lo tanto, aunque nos esforzamos al máximo, no podemos garantizar la seguridad absoluta de tu información. La seguridad de tu información también depende en gran medida de ti; por favor, protege tus contraseñas, no las compartas con terceros y ten precaución al compartir información personal en línea. Tu colaboración es una parte crucial de nuestra estrategia de seguridad.',
 
   // Sección 6: Retención de Datos
   ppSection6Title: '6. Retención de datos',
   ppSection6Point1:
-    'Retenemos tu información personal durante el tiempo que sea necesario para cumplir con los fines para los que fue recopilada, incluyendo la prestación de servicios, el cumplimiento de nuestras obligaciones legales (ej., registros de buceo) y la resolución de disputas.',
+    'Retenemos tu información personal durante el tiempo que sea estrictamente necesario para cumplir con los fines para los que fue recopilada, incluyendo la prestación continua de nuestros servicios, el cumplimiento de nuestras obligaciones legales y regulatorias (como el mantenimiento de registros de buceo requeridos por las agencias de certificación), la resolución de disputas y la aplicación de nuestros acuerdos. Una vez que tu información ya no sea necesaria para estos fines, la eliminaremos de forma segura o la anonimizaremos de acuerdo con las normativas vigentes.',
 
   // Sección 7: Cambios en esta Política de Privacidad
   ppSection7Title: '7. Cambios en esta política de privacidad',
   ppSection7Point1:
-    'JustDiveCol puede actualizar esta política de privacidad periódicamente para reflejar cambios en nuestras prácticas de datos o requisitos legales. Publicaremos cualquier cambio en esta página, y si los cambios son significativos, te notificaremos por correo electrónico u otros medios claros.',
+    'JustDiveCol se reserva el derecho de actualizar o modificar esta política de privacidad periódicamente para reflejar cambios en nuestras prácticas de datos, nuestras operaciones comerciales o los requisitos legales aplicables. Publicaremos cualquier cambio significativo en esta página web, y si los cambios son de una naturaleza sustancial, te notificaremos por correo electrónico o a través de otros medios claros y visibles en nuestra plataforma.',
   ppSection7Point2:
-    'Te recomendamos revisar esta política regularmente para estar informado sobre cómo protegemos tu información.',
+    'Te recomendamos encarecidamente revisar esta política de privacidad de forma regular para estar siempre informado sobre cómo protegemos tu información y cómo la utilizamos. La fecha de la última actualización se indicará claramente al inicio de la política.',
 
   // Sección 8: Contacto
   ppSection8Title: '8. Contacto',
   ppSection8Point1:
-    'Si tienes preguntas o inquietudes sobre esta política de privacidad o nuestras prácticas de datos, por favor contáctanos a través de nuestro formulario en la sección de contacto de nuestro sitio web o directamente a info@justdivecol.com',
+    'Si tienes alguna pregunta, inquietud o comentario sobre esta política de privacidad, nuestras prácticas de datos, o si deseas ejercer cualquiera de tus derechos relacionados con tu información personal, por favor no dudes en contactarnos. Puedes hacerlo a través de nuestro formulario de contacto en la sección correspondiente de nuestro sitio web o enviando un correo electrónico directamente a info@justdivecol.com. Estamos listos para escucharte y resolver cualquier duda con la mayor transparencia.',
 };

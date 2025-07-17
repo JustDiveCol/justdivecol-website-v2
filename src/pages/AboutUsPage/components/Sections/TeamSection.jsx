@@ -24,12 +24,12 @@ const TeamSection = ({ teamData }) => {
       <div className='container mx-auto text-center'>
         <motion.h2
           variants={fadeInUp}
-          className='text-4xl md:text-5xl font-sans font-bold text-brand-white uppercase'>
+          className='text-4xl md:text-5xl font-bold text-brand-white uppercase'>
           {t(teamData.titleKey)}
         </motion.h2>
         <motion.p
           variants={fadeInUp}
-          className='mt-4 max-w-3xl mx-auto font-serif text-lg text-brand-neutral'>
+          className='mt-4 max-w-3xl mx-auto  text-lg text-brand-neutral'>
           {t(teamData.subtitleKey)}
         </motion.p>
         <motion.div

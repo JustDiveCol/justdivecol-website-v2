@@ -5,16 +5,18 @@ import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../../hooks/animations';
 
 // Import the icons required for this component.
-import { GuidesIcon } from '../../../../assets/icons/GuidesIcon';
-import { EquipmentIcon } from '../../../../assets/icons/EquipmentIcon';
-import { ProtocolsIcon } from '../../../../assets/icons/ProtocolsIcon';
+import {
+  CertifiedIcon,
+  HelmetDivingIcon,
+  ChecklistIcon,
+} from '../../../../assets/icons/DiverIcons';
 
 // Maps string identifiers from the data file to the actual imported icon components.
 // This allows the data layer to remain simple (e.g., "id: 'guias'").
 const iconMap = {
-  guias: <GuidesIcon />,
-  equipos: <EquipmentIcon />,
-  protocolos: <ProtocolsIcon />,
+  guias: <CertifiedIcon className='h-16 w-16' />,
+  equipos: <HelmetDivingIcon className='h-16 w-16' />,
+  protocolos: <ChecklistIcon className='h-16 w-16' />,
 };
 
 /**
@@ -35,12 +37,8 @@ const SafetyCardComponent = ({ item, translationNS }) => {
       variants={fadeInUp}
       className='flex flex-col items-center'>
       <div className='text-brand-cta-green'>{iconMap[item.id]}</div>
-      <h3 className='mt-4 text-2xl font-sans font-semibold'>
-        {t(item.titleKey)}
-      </h3>
-      <p className='mt-2 font-serif text-brand-neutral'>
-        {t(item.descriptionKey)}
-      </p>
+      <h3 className='mt-4 text-2xl font-semibold'>{t(item.titleKey)}</h3>
+      <p className='mt-2 text-brand-neutral'>{t(item.descriptionKey)}</p>
     </motion.div>
   );
 };

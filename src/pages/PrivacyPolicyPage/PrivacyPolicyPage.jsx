@@ -17,8 +17,9 @@ const PrivacyPolicyPage = () => {
       <SEOComponent
         title={t(privacyPolicyData.seo.titleKey)}
         description={t(privacyPolicyData.seo.descriptionKey)}
-        imageUrl={privacyPolicyData.header.headerImageUrl}
-        url='/privacidad'
+        keywords={t(privacyPolicyData.seo.keywords)}
+        imageUrl={privacyPolicyData.seo.imageUrl}
+        url={privacyPolicyData.seo.url}
       />
       <motion.div
         variants={staggerContainer}

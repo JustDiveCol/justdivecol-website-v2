@@ -30,7 +30,7 @@ const UpcomingTripsVerticalSection = ({
     <div
       id='available-trips-section-vertical'
       className='bg-brand-primary-medium p-6 rounded-lg shadow-lg scroll-mt-24'>
-      <h3 className='text-2xl font-sans font-bold text-brand-white mb-4'>
+      <h3 className='text-2xl font-bold text-brand-white mb-4'>
         {t(titleKey, { ns: translationNS })}
       </h3>
       {availableTrips.length > 0 ? (
@@ -47,7 +47,7 @@ const UpcomingTripsVerticalSection = ({
         </div>
       ) : (
         <div>
-          <p className='font-serif text-sm text-brand-neutral/80'>
+          <p className=' text-sm text-brand-neutral/80'>
             {t(noTripsMessageKey, { ns: 'common' })}
           </p>
         </div>

@@ -26,12 +26,12 @@ const SafetySection = () => {
         {/* Section title and subtitle */}
         <motion.h2
           variants={fadeInUp}
-          className='text-4xl md:text-5xl font-sans font-bold uppercase'>
+          className='text-4xl md:text-5xl  font-bold uppercase'>
           {t(data.titleKey)}
         </motion.h2>
         <motion.p
           variants={fadeInUp}
-          className='mt-4 max-w-3xl mx-auto font-serif text-lg text-brand-neutral'>
+          className='mt-4 max-w-3xl mx-auto  text-lg text-brand-neutral'>
           {t(data.subtitleKey)}
         </motion.p>
 
@@ -55,7 +55,7 @@ const SafetySection = () => {
         <motion.div variants={fadeInUp}>
           <Link
             to={data.ctaLink}
-            className='inline-block mt-16 bg-brand-cta-orange text-brand-white font-sans font-bold uppercase text-lg px-8 py-4 rounded-md shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-brand-cta-yellow'>
+            className='inline-block mt-16 bg-brand-cta-orange text-brand-white  font-bold uppercase text-lg px-8 py-4 rounded-md shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-brand-cta-yellow'>
             {t(data.ctaTextKey)}
           </Link>
         </motion.div>

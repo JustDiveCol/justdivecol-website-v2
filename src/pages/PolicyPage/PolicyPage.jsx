@@ -24,8 +24,9 @@ const PolicyPage = () => {
       <SEOComponent
         title={t(policyPageData.seo.titleKey, { ns: 'policies' })}
         description={t(policyPageData.seo.descriptionKey, { ns: 'policies' })}
-        imageUrl={policyPageData.header.headerImageUrl}
-        url='/politicas'
+        keywords={t(policyPageData.seo.keywords)}
+        imageUrl={policyPageData.seo.imageUrl}
+        url={policyPageData.seo.url}
       />
       <motion.div
         variants={staggerContainer}

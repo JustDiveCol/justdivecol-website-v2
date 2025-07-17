@@ -8,8 +8,10 @@ import { staggerContainer, fadeInUp } from '../../../hooks/animations';
 import CertificationCardComponent from '../Card/CertificationCardComponent';
 
 // Icons
-import { ArrowLeftIcon } from '../../../assets/icons/ArrowLeftIcon';
-import { ArrowRightIcon } from '../../../assets/icons/ArrowRightIcon';
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+} from '../../../assets/icons/ChevronIcons';
 
 /**
  * Renders the "Certifications & Partners" section as a paginated carousel.
@@ -55,10 +57,10 @@ const CertificationsSection = ({ certificationsData }) => {
         <motion.div
           variants={fadeInUp}
           className='text-center mb-12'>
-          <h2 className='text-4xl md:text-5xl font-sans font-bold text-brand-white uppercase'>
+          <h2 className='text-4xl md:text-5xl  font-bold text-brand-white uppercase'>
             {t(certificationsData.titleKey)}
           </h2>
-          <p className='mt-4 max-w-3xl mx-auto font-serif text-lg text-brand-neutral'>
+          <p className='mt-4 max-w-3xl mx-auto  text-lg text-brand-neutral'>
             {t(certificationsData.subtitleKey)}
           </p>
         </motion.div>
@@ -84,13 +86,13 @@ const CertificationsSection = ({ certificationsData }) => {
         </div>
 
         {/* Carousel navigation controls are only rendered if there is more than one page. */}
-        {totalPages > 1 && (
+        {totalPages > 0 && (
           <div className='flex items-center justify-center mt-8 space-x-4'>
             <button
               onClick={handlePrev}
-              className='p-2 rounded-full bg-brand-primary-medium hover:bg-brand-cta-orange transition-colors text-white'
+              className='p-2 rounded-full bg-brand-primary-medium hover:bg-brand-cta-orange transition-colors text-white cursor-pointer'
               aria-label={t('common:ariaPrevious')}>
-              <ArrowLeftIcon />
+              <ChevronLeftIcon />
             </button>
             <div className='flex space-x-2'>
               {[...Array(totalPages)].map((_, i) => (
@@ -108,9 +110,9 @@ const CertificationsSection = ({ certificationsData }) => {
             </div>
             <button
               onClick={handleNext}
-              className='p-2 rounded-full bg-brand-primary-medium hover:bg-brand-cta-orange transition-colors text-white'
+              className='p-2 rounded-full bg-brand-primary-medium hover:bg-brand-cta-orange transition-colors text-white cursor-pointer'
               aria-label={t('common:ariaNext')}>
-              <ArrowRightIcon />
+              <ChevronRightIcon />
             </button>
           </div>
         )}

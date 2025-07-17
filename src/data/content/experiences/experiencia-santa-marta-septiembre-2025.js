@@ -26,6 +26,9 @@ export const experienciaSantaMartaSeptiembre2025 = {
   seo: {
     titleKey: 'expsmsept25SeoTitle',
     descriptionKey: 'expsmsept25SeoDesc',
+    keywords: 'expsmsept25SeoKeywords',
+    imageUrl: sm_sept_2025_header_background,
+    url: '/experiencias/',
   },
 
   // --- Availability ---
@@ -73,6 +76,29 @@ export const experienciaSantaMartaSeptiembre2025 = {
         valueKey: 'expsmsept25DetailValue4',
       },
     ],
+  },
+
+  // --- Payment Plan ---
+  paymentPlan: {
+    titleKey: 'paymentPlanTitle',
+    modules: [
+      {
+        id: 'payment1',
+        nameKey: 'paymentPlanStep1Name',
+        descriptionKey: 'paymentPlanStep1Desc',
+      },
+      {
+        id: 'payment2',
+        nameKey: 'paymentPlanStep2Name',
+        descriptionKey: 'paymentPlanStep2Desc',
+      },
+      {
+        id: 'payment3',
+        nameKey: 'paymentPlanStep3Name',
+        descriptionKey: 'paymentPlanStep3Desc',
+      },
+    ],
+    notes: ['paymentPlanNote1'],
   },
 
   // --- Itinerary Content ---

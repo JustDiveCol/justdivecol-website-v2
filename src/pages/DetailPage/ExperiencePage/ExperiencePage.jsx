@@ -68,8 +68,9 @@ const ExperiencePage = () => {
         description={t(experienceData.seo.descriptionKey, {
           ns: 'experiences',
         })}
-        imageUrl={experienceData.header.bannerImageUrl}
-        url={`/experiencias/${experienceData.id}`}
+        keywords={t(experienceData.seo.keywords, { ns: 'experiences' })}
+        imageUrl={experienceData.seo.imageUrl}
+        url={`${experienceData.seo.url}${experienceData.id}`}
       />
       <motion.div
         variants={staggerContainer}

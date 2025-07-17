@@ -27,8 +27,9 @@ const HomePage = () => {
       <SEOComponent
         title={t(homePageData.seo.titleKey)}
         description={t(homePageData.seo.descriptionKey)}
-        imageUrl={homePageData.hero.imageUrl}
-        url='/'
+        keywords={t(homePageData.seo.keywords)}
+        imageUrl={homePageData.seo.imageUrl}
+        url={homePageData.seo.url}
       />
       <motion.div
         variants={staggerContainer}

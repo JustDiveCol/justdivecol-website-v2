@@ -2,15 +2,16 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { BankIcon } from '../../../../assets/icons/BankIcon';
-import { LinkIcon } from '../../../../assets/icons/LinkIcon';
-// import { CreditCardIcon } from '../../../../assets/icons/CreditCardIcon'; // Example for a new icon
+import {
+  PaymentLinkIcon,
+  BankTransferIcon,
+} from '../../../../assets/icons/PaymentIcons';
 
 // Maps icon string identifiers from data to the actual imported icon components.
 // To add a new icon, import it above and add a new entry to this object.
 const paymentIcons = {
-  link: <LinkIcon />,
-  bank: <BankIcon />,
+  link: <PaymentLinkIcon className='h-6 w-6' />,
+  bank: <BankTransferIcon className='h-6 w-6' />,
   // creditCard: <CreditCardIcon />,
 };
 
@@ -41,7 +42,7 @@ const PaymentCard = ({ paymentData, translationNS }) => {
 
   return (
     <div className='bg-brand-primary-medium p-6 rounded-lg shadow-lg'>
-      <h3 className='text-xl font-sans font-bold text-brand-white mb-4'>
+      <h3 className='text-xl font-bold text-brand-white mb-4'>
         {t(paymentData.titleKey)}
       </h3>
       <ul className='space-y-4'>
@@ -54,10 +55,10 @@ const PaymentCard = ({ paymentData, translationNS }) => {
               {paymentIcons[method.icon]}
             </div>
             <div className='ml-3'>
-              <h4 className='font-sans font-semibold text-brand-white'>
+              <h4 className='font-semibold text-brand-white'>
                 {t(method.nameKey)}
               </h4>
-              <p className='font-serif text-sm text-brand-neutral/80 text-justify'>
+              <p className=' text-sm text-brand-neutral/80 text-justify'>
                 {t(method.descriptionKey)}
               </p>
             </div>

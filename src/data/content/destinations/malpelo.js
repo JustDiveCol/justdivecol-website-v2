@@ -27,6 +27,9 @@ export const malpeloDestination = {
   seo: {
     titleKey: 'malpSeoTitle',
     descriptionKey: 'malpSeoDesc',
+    keywords: 'malpSeoKeywords',
+    imageUrl: malpelo_header_background,
+    url: '/destinos/',
   },
 
   // --- Header Content ---
@@ -53,8 +56,8 @@ export const malpeloDestination = {
     backgroundImage: malpelo_card,
     mainLogo: logo,
     mainLogoAltKey: 'malpCardMainLogoAlt',
-    complementaryLogo: padi,
-    complementaryLogoAltKey: 'malpCardComplementaryLogoAlt',
+    // complementaryLogo: padi,
+    // complementaryLogoAltKey: 'malpCardComplementaryLogoAlt',
     textOverlayKey: 'malpCardTextOverlay',
     photoCreditKey: 'malpCardPhotoCredit',
     variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

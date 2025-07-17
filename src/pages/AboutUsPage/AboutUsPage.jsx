@@ -33,8 +33,9 @@ export const AboutUsPage = () => {
       <SEOComponent
         title={t(seo.titleKey)}
         description={t(seo.descriptionKey)}
-        imageUrl={header.imageUrl} // Pass imageUrl for social media cards
-        url='/nosotros' // Pass the page's relative URL
+        keywords={t(seo.keywords)}
+        imageUrl={seo.imageUrl}
+        url={seo.url}
       />
 
       <motion.div // Typo corrected from <motion.di>

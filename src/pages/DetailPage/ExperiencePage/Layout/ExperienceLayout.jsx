@@ -20,7 +20,8 @@ import CtaCard from '../../common/Cards/CtaCard';
 import UpcomingTripsHorizontalSection from '../../common/Sections/UpcomingTripsHorizontalSection';
 import UpcomingCoursesHorizontalSection from '../../common/Sections/UpcomingCoursesHorizontalSection';
 import ItinerarySection from '../../common/Sections/ItinerarySection';
-import MapComponent from '../../../../components/common/Map/MapComponent';
+import MapComponent from '../../../MapPage/components/MapComponent';
+import CurriculumCard from '../../common/Cards/CurriculumCard';
 
 /**
  * The main layout component for the experience detail page.
@@ -92,7 +93,6 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
             <UpcomingTripsHorizontalSection
               availableTrips={otherTripsToThisDestination}
               titleKey='expOtherTripsTitle'
-              noTripsMessageKey='noUpcomingTrips'
               translationNS='experiences'
             />
           )}
@@ -101,7 +101,6 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
             <UpcomingCoursesHorizontalSection
               availableCourses={offeredCoursesData}
               titleKey={experienceData.offeredCourses.titleKey}
-              noTripsMessageKey='noUpcomingTrips'
               translationNS='experiences'
             />
           )}
@@ -118,14 +117,6 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
               translationNS='experiences'
             />
           )}
-          <section className='relative bg-brand-primary-medium p-6 rounded-lg shadow-lg overflow-visible z-0'>
-            <h3 className='text-2xl font-sans font-bold text-brand-white mb-4'>
-              {t('common:mapLabel') ||
-                'El Mundo Submarino: Puntos de Inmersión'}
-            </h3>
-            <MapComponent destinationId={experienceData.destinationId} />
-          </section>
-
           <GallerySection
             galleryData={experienceData.gallery}
             translationNS='experiences'
@@ -138,6 +129,11 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
             detailsData={experienceData.details}
             translationNS='experiences'
           />
+          <CurriculumCard
+            detailsData={experienceData.paymentPlan}
+            translationNS='experiences'
+          />
+
           <PaymentCard
             paymentData={paymentMethodsData}
             translationNS='payment'
@@ -174,6 +170,28 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
           />
         </aside>
       </div>
+      {/* --- SECCIÓN DEL MAPA --- */}
+      {/* El fondo de la sección se extiende a todo lo ancho, creando el efecto de banner. */}
+      <section className='w-full bg-brand-primary-medium py-12 md:py-16 mt-16'>
+        {/* Contenedor interno para centrar el contenido. */}
+        <div className='container mx-auto px-4 md:px-8'>
+          {/* Título de la sección. */}
+          <h3 className='text-3xl font-bold text-brand-white mb-4'>
+            {t('common:mapLabel', 'El Mundo Submarino: Puntos de Inmersión')}
+          </h3>
+
+          {/* --- La "Tarjeta" Flotante del Mapa --- */}
+          {/* Este es el div clave. Le damos un color de fondo ligeramente diferente,
+        padding, esquinas redondeadas y una sombra para que "flote". */}
+          <div className='bg-brand-primary-dark p-4 sm:p-6 rounded-2xl shadow-2xl'>
+            {/* Envolvemos el mapa en otro div con bordes redondeados y overflow-hidden
+          para asegurar que el mapa (que es un canvas) no se salga de los bordes. */}
+            <div className='rounded-lg overflow-hidden'>
+              <MapComponent destinationId={experienceData.destinationId} />
+            </div>
+          </div>
+        </div>
+      </section>
     </motion.div>
   );
 };

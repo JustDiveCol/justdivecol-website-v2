@@ -10,8 +10,11 @@ import padi from '../../assets/images/logos/padi.png';
 export const homePageData = {
   // SEO Section
   seo: {
-    titleKey: 'homeSeoTitle', // from home.js translation file
-    descriptionKey: 'homeSeoDesc', // from home.js translation file
+    titleKey: 'homeSeoTitle',
+    descriptionKey: 'homeSeoDesc',
+    keywords: 'homeSeoKeywords',
+    imageUrl: home_hero_background,
+    url: '/',
   },
   // Hero Section
   hero: {
@@ -60,7 +63,7 @@ export const homePageData = {
   },
   // Testimonials Section
   testimonials: {
-    titleKey: 'homeTestimonialsTitle',
+    // titleKey: 'homeTestimonialsTitle',
     // items: [
     //   {
     //     id: 1,

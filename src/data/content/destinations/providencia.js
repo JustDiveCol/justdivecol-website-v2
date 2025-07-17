@@ -27,6 +27,9 @@ export const providenciaDestination = {
   seo: {
     titleKey: 'provSeoTitle',
     descriptionKey: 'provSeoDesc',
+    keywords: 'provSeoKeywords',
+    imageUrl: providencia_header_background,
+    url: '/destinos/',
   },
 
   // --- Header Content ---
@@ -53,8 +56,8 @@ export const providenciaDestination = {
     backgroundImage: providencia_card,
     mainLogo: logo,
     mainLogoAltKey: 'provCardMainLogoAlt',
-    complementaryLogo: padi,
-    complementaryLogoAltKey: 'provCardComplementaryLogoAlt',
+    // complementaryLogo: padi,
+    // complementaryLogoAltKey: 'provCardComplementaryLogoAlt',
     textOverlayKey: 'provCardTextOverlay',
     photoCreditKey: 'provCardPhotoCredit',
     variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

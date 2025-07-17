@@ -17,8 +17,9 @@ const FaqsPage = () => {
       <SEOComponent
         title={t(faqsData.seo.titleKey)}
         description={t(faqsData.seo.descriptionKey)}
-        imageUrl={faqsData.header.headerImageUrl}
-        url='/faqs'
+        keywords={t(faqsData.seo.keywords)}
+        imageUrl={faqsData.seo.imageUrl}
+        url={faqsData.seo.url}
       />
       <motion.div
         variants={staggerContainer}

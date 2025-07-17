@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { formatDateRange } from '../../../../utils/formatters';
-import { CalendarIcon } from '../../../../assets/icons/CalendarIcon';
+import { CalendarIcon } from '../../../../assets/icons/SocialIcons';
 import { fadeInUp } from '../../../../hooks/animations';
 
 import AvailabilityBadgeComponent from '../../../../components/common/Component/AvailabilityBadgeComponent';
@@ -35,10 +35,10 @@ const CalendarExperienceCardComponent = ({ tripData }) => {
       <div className='flex items-center mb-4 sm:mb-0 text-left w-full sm:w-auto text-brand-white'>
         <CalendarIcon />
         <div className='ml-4'>
-          <h3 className='text-xl font-sans font-semibold text-brand-white'>
+          <h3 className='text-xl font-semibold text-brand-white'>
             {t(nameKey, { ns: 'experiences' })}
           </h3>
-          <p className='text-md font-serif text-brand-neutral/80'>
+          <p className='text-md  text-brand-neutral/80'>
             {formatDateRange(
               details.startDate,
               details.endDate,
@@ -57,7 +57,7 @@ const CalendarExperienceCardComponent = ({ tripData }) => {
       <div className='flex items-center space-x-4 w-full sm:w-auto justify-end'>
         <Link
           to={`/experiencias/${id}`}
-          className='bg-brand-cta-orange text-white font-sans font-bold text-sm uppercase py-2 px-5 rounded-md hover:bg-opacity-90 transition-colors duration-300'>
+          className='bg-brand-cta-orange text-white font-bold text-sm uppercase py-2 px-5 rounded-md hover:bg-opacity-90 transition-colors duration-300'>
           {t('viewDetails', { ns: 'common' })}
         </Link>
       </div>

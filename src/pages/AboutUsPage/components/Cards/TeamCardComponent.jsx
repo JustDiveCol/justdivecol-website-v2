@@ -3,7 +3,8 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../../hooks/animations';
-import { StarIcon } from '../../../../assets/icons/StarIcon';
+
+import { StarIcon } from '../../../../assets/icons/NavbarIcons';
 
 /**
  * Displays a card with information about a team member.
@@ -29,13 +30,13 @@ const TeamCardComponent = ({ memberData }) => {
         className='w-32 h-32 rounded-full mx-auto object-cover border-4 border-brand-cta-green'
         loading='lazy'
       />
-      <h3 className='mt-4 text-2xl font-sans font-bold text-brand-white'>
+      <h3 className='mt-4 text-2xl font-bold text-brand-white'>
         {t(memberData.nameKey)}
       </h3>
-      <p className='text-md font-sans font-semibold text-brand-cta-orange uppercase tracking-wider'>
+      <p className='text-md font-semibold text-brand-cta-orange uppercase tracking-wider'>
         {t(memberData.roleKey)}
       </p>
-      <p className='mt-4 font-serif text-brand-neutral/80 flex-grow text-justify'>
+      <p className='mt-4  text-brand-neutral/80 flex-grow text-justify'>
         {t(memberData.bioKey)}
       </p>
 
@@ -47,7 +48,7 @@ const TeamCardComponent = ({ memberData }) => {
               <li
                 key={factKey}
                 className='flex items-start text-sm'>
-                <StarIcon />
+                <StarIcon className='h-4 w-4 mr-2 flex-shrink-0 text-brand-cta-yellow' />
                 <span className='text-brand-neutral/90 ml-2'>{t(factKey)}</span>
               </li>
             ))}

@@ -30,10 +30,8 @@ const CertificationCardComponent = ({ partnerData }) => {
         />
       </div>
       <div className='mt-4 flex flex-col flex-grow'>
-        <h3 className='text-2xl font-sans font-bold text-brand-white'>
-          {t(nameKey)}
-        </h3>
-        <p className='mt-2 font-serif text-brand-neutral/80 flex-grow'>
+        <h3 className='text-2xl  font-bold text-brand-white'>{t(nameKey)}</h3>
+        <p className='mt-2  text-brand-neutral/80 flex-grow'>
           {t(descriptionKey)}
         </p>
       </div>

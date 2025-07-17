@@ -1,4 +1,3 @@
-// src/components/ui/SEOComponent.jsx
 import React, { useEffect } from 'react';
 
 /**
@@ -8,10 +7,11 @@ import React, { useEffect } from 'react';
  * @param {object} props - The component props.
  * @param {string} props.title - The title of the page.
  * @param {string} props.description - The meta description for the page.
+ * @param {string} [props.keywords] - A comma-separated string of keywords for the page.
  * @param {string} [props.imageUrl] - The absolute URL for the social sharing image.
  * @param {string} [props.url] - The relative path of the page (e.g., '/about-us').
  */
-const SEOComponent = ({ title, description, imageUrl, url }) => {
+const SEOComponent = ({ title, description, keywords, imageUrl, url }) => {
   useEffect(() => {
     const fullTitle = `${title} | JustDiveCol`;
     document.title = fullTitle;
@@ -28,7 +28,6 @@ const SEOComponent = ({ title, description, imageUrl, url }) => {
       );
       if (!element) {
         element = document.createElement('meta');
-        // Use 'property' for Open Graph (og) and Twitter tags, 'name' for standard tags.
         if (name.startsWith('og:') || name.startsWith('twitter:')) {
           element.setAttribute('property', name);
         } else {
@@ -39,7 +38,9 @@ const SEOComponent = ({ title, description, imageUrl, url }) => {
       element.setAttribute('content', content);
     };
 
+    // --- Standard Meta Tags ---
     if (description) updateMeta('description', description);
+    if (keywords) updateMeta('keywords', keywords);
 
     // --- Open Graph Tags (for Facebook, WhatsApp, etc.) ---
     if (url) updateMeta('og:url', `https://www.justdivecol.com${url}`);
@@ -54,7 +55,9 @@ const SEOComponent = ({ title, description, imageUrl, url }) => {
     updateMeta('twitter:title', fullTitle);
     if (description) updateMeta('twitter:description', description);
     if (imageUrl) updateMeta('twitter:image', imageUrl);
-  }, [title, description, imageUrl, url]);
+
+    // Se añade 'keywords' al array de dependencias
+  }, [title, description, keywords, imageUrl, url]);
 
   return null;
 };

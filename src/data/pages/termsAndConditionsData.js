@@ -8,6 +8,9 @@ export const termsAndConditionData = {
   seo: {
     titleKey: 'tcaSeoTitle',
     descriptionKey: 'tcaSeoDesc',
+    keywords: 'tcaSeoKeywords',
+    imageUrl: tyc_header_background,
+    url: '/terminos-y-condiciones',
   },
   header: {
     backgroundImage: tyc_header_background,

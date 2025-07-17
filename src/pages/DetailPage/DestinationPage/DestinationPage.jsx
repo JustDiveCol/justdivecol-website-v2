@@ -84,8 +84,9 @@ const DestinationPage = () => {
         description={t(destinationData.seo.descriptionKey, {
           ns: 'destinations',
         })}
-        imageUrl={destinationData.header.backgroundImage}
-        url={`/destinos/${destinationData.id}`}
+        keywords={t(destinationData.seo.keywords)}
+        imageUrl={destinationData.seo.imageUrl}
+        url={`${destinationData.seo.url}${destinationData.id}`}
       />
       <motion.div
         variants={staggerContainer}

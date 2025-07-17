@@ -7,6 +7,9 @@ export const faqsData = {
   seo: {
     titleKey: 'faqsSeoTitle',
     descriptionKey: 'faqsSeoDesc',
+    keywords: 'faqsSeoKeywords',
+    imageUrl: faqs_header_background,
+    url: '/faqs',
   },
   header: {
     backgroundImage: faqs_header_background,
@@ -143,14 +146,6 @@ export const faqsData = {
         {
           pointKey: 'faqsCat5Q5Title',
           subPoints: ['faqsCat5Q5Point1'],
-        },
-        {
-          pointKey: 'faqsCat5Q6Title',
-          subPoints: ['faqsCat5Q6Point1'],
-        },
-        {
-          pointKey: 'faqsCat5Q7Title',
-          subPoints: ['faqsCat5Q7Point1'],
         },
       ],
     },

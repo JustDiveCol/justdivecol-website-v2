@@ -5,4 +5,6 @@ export default {
   about: 'Nosotros',
   security: 'Seguridad',
   contact: 'Contacto',
+  gear: 'Kit de buceo',
+  divesites: 'Sitios de buceo',
 };

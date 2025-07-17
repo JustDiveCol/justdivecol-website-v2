@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { staggerContainer } from '../../../../hooks/animations';
 import { contactPageData } from '../../../../data/pages/contactData';
 import { experiencesPageData } from '../../../../data/pages/experiencesData';
+import MapComponent from '../../../MapPage/components/MapComponent';
 
 // Reusable section and card components
 import HeaderComponent from '../../../../components/HeaderComponent';
@@ -71,6 +72,15 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
             translationNS={'destinations'}
           />
 
+          {/* Map */}
+          <section className='relative bg-brand-primary-medium p-6 rounded-lg shadow-lg overflow-visible z-0'>
+            <h3 className='text-2xl font-bold text-brand-white mb-4'>
+              {t('common:destinationMapLabel') ||
+                'Explora en el mapa: todos los puntos de inmersión disponibles'}
+            </h3>
+            <MapComponent destinationId={destinationData.id} />
+          </section>
+
           <GallerySection
             galleryData={destinationData.gallery}
             translationNS='destinations'
@@ -95,7 +105,7 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
           <UpcomingTripsVerticalSection
             availableTrips={upcomingTrips}
             titleKey='destinationUpcomingTripsTitle'
-            noTripsMessageKey='noUpcomingTrips'
+            noTripsMessageKey='noScheduledDates'
             translationNS='destinations'
           />
 

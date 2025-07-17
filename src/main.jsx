@@ -18,6 +18,7 @@ import CoursePage from './pages/DetailPage/CoursePage/CoursePage.jsx';
 import ExperiencePage from './pages/DetailPage/ExperiencePage/ExperiencePage.jsx';
 import DestinationPage from './pages/DetailPage/DestinationPage/DestinationPage.jsx';
 import PolicyPage from './pages/PolicyPage/PolicyPage.jsx';
+import MapPage from './pages/MapPage/MapPage.jsx';
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage/TermsAndConditionsPage.jsx';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage.jsx';
 import FaqsPage from './pages/FaqsPage/FaqsPage.jsx';
@@ -51,6 +52,7 @@ const router = createBrowserRouter([
       { path: 'seguridad', element: <SafetyPage /> },
       { path: 'contacto', element: <ContactPage /> },
       { path: 'politicas', element: <PolicyPage /> },
+      { path: 'mapa', element: <MapPage /> },
       { path: 'terminos-y-condiciones', element: <TermsAndConditionsPage /> },
       { path: 'privacidad', element: <PrivacyPolicyPage /> },
       { path: 'faqs', element: <FaqsPage /> },

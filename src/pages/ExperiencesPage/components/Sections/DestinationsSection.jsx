@@ -24,7 +24,7 @@ const DestinationsSection = () => {
       id={sectionId}
       className='py-20 px-4 border-t-2 border-brand-primary-light/20 scroll-mt-20'>
       <div className='container mx-auto'>
-        <h2 className='text-3xl md:text-4xl font-sans font-bold text-brand-white text-center mb-12 uppercase'>
+        <h2 className='text-3xl md:text-4xl font-bold text-brand-white text-center mb-12 uppercase'>
           {t(titleKey)}
         </h2>
         <motion.div

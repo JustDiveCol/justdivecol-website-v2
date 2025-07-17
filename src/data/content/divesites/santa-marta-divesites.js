@@ -18,7 +18,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19631, 11.31663],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~18m (60 feet)',
+      maxDepth: '18 m / 60 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -53,7 +53,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.22322, 11.25151],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~40m (~130 feet)',
+      maxDepth: '40 m / 130 ft',
       levelRequiredId: 'advanced-open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'hard', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['wreck'], // Using IDs from DIVE_TYPES
@@ -88,7 +88,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.238819, 11.21381],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~30m (~100 feet)',
+      maxDepth: '30 m / 100 ft',
       levelRequiredId: 'advanced-open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['wreck'], // Using IDs from DIVE_TYPES
@@ -124,7 +124,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.20035, 11.32104],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~40m (~130 feet)',
+      maxDepth: '40 m / 130 ft',
       levelRequiredId: 'advanced-open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -168,7 +168,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.235234, 11.212113],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~18m (~60 feet)',
+      maxDepth: '18 m / 60 ft',
       levelRequiredId: 'none', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -205,7 +205,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.20035, 11.32104],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~40m (~130 feet)',
+      maxDepth: '40 m / 130 ft',
       levelRequiredId: 'none', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -250,7 +250,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19468, 11.30207],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~30m (~100 feet)',
+      maxDepth: '30 m / 100 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['wall'], // Using IDs from DIVE_TYPES
@@ -288,7 +288,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19128, 11.3159],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~40m (~130 feet)',
+      maxDepth: '40 m / 130 ft',
       levelRequiredId: 'advanced-open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'hard', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['pinnacle'], // Using IDs from DIVE_TYPES
@@ -332,7 +332,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.22273, 11.25143],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~30m (~100 feet)',
+      maxDepth: '30 m / 100 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['drift'], // Using IDs from DIVE_TYPES
@@ -373,7 +373,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.20528, 11.27109],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~12m (~40 feet)',
+      maxDepth: '12 m / 40 ft',
       levelRequiredId: 'none', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -415,7 +415,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19078, 11.31103],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~20m (~65 feet)',
+      maxDepth: '20 m / 65 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -451,7 +451,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.23471, 11.21601],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~12m (~40 feet)',
+      maxDepth: '12 m / 40 ft',
       levelRequiredId: 'none', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -486,7 +486,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.2, 11.261171],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~18m (~60 feet)',
+      maxDepth: '18 m / 60 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -523,7 +523,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.1917, 11.29571],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~18m (~60 feet)',
+      maxDepth: '18 m / 60 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -565,7 +565,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19479, 11.32248],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~15m (~50 feet)',
+      maxDepth: '15 m / 50 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -606,7 +606,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19446, 11.29695],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~25m (~80 feet)',
+      maxDepth: '25 m / 80 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -645,7 +645,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19256, 11.30703],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~25m (~80 feet)',
+      maxDepth: '25 m / 80 ft',
       levelRequiredId: 'advanced-open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['wall'], // Using IDs from DIVE_TYPES
@@ -685,7 +685,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.1905, 11.31878],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~25m (~80 feet)',
+      maxDepth: '25 m / 80 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['wall'], // Using IDs from DIVE_TYPES
@@ -723,7 +723,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19552, 11.285358],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~20m (~65 feet)',
+      maxDepth: '20 m / 65 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -761,7 +761,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.221257, 11.251176],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~35m (~115 feet)',
+      maxDepth: '35 m / 115 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['wreck'], // Using IDs from DIVE_TYPES
@@ -827,7 +827,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.203385, 11.270821],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~20m (~65 feet)',
+      maxDepth: '20 m / 65 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -866,7 +866,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.20299, 11.31734],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~75m (~245 feet)',
+      maxDepth: '75 m / 245 ft',
       levelRequiredId: 'advanced-open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'hard', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['pinnacle'], // Using IDs from DIVE_TYPES
@@ -911,7 +911,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.23959, 11.20806],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~25m (~80 feet)',
+      maxDepth: '25 m / 80 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -953,7 +953,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.23193, 11.24918],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~30m (~100 feet)',
+      maxDepth: '30 m / 100 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -998,7 +998,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19279, 11.29691],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~30m (~100 feet)',
+      maxDepth: '30 m / 100 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['drift'], // Using IDs from DIVE_TYPES
@@ -1044,7 +1044,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.20007, 11.32509],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~30m (~100 feet)',
+      maxDepth: '30 m / 100 ft',
       levelRequiredId: 'advanced-open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'expert', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['pinnacle'], // Using IDs from DIVE_TYPES
@@ -1092,7 +1092,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.1956, 11.28902],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~15m (~50 feet)',
+      maxDepth: '15 m / 50 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -1134,7 +1134,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.20135, 11.31801],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~40m (~130 feet)',
+      maxDepth: '40 m / 130 ft',
       levelRequiredId: 'advanced-open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['drift'], // Using IDs from DIVE_TYPES
@@ -1184,7 +1184,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.197457, 11.26182],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~18m (~60 feet)',
+      maxDepth: '18 m / 60 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -1227,7 +1227,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19941, 11.31844],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~30m (~100 feet)',
+      maxDepth: '30 m / 100 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['pinnacle'], // Using IDs from DIVE_TYPES
@@ -1275,7 +1275,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.2369, 11.20972],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~25m (~80 feet)',
+      maxDepth: '25 m / 80 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -1314,7 +1314,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.24067, 11.21908],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~15m (~50 feet)',
+      maxDepth: '15 m / 50 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'easy', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -1356,7 +1356,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19361, 11.29087],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~20m (~65 feet)',
+      maxDepth: '20 m / 65 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -1403,7 +1403,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.206387, 11.272809],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~18m (~60 feet)',
+      maxDepth: '18 m / 60 ft',
       levelRequiredId: 'open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -1449,7 +1449,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19327, 11.31067],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~35m (~115 feet)',
+      maxDepth: '35 m / 115 ft',
       levelRequiredId: 'advanced-open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['reef'], // Using IDs from DIVE_TYPES
@@ -1495,7 +1495,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.19248, 11.30899],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~14m (~45 feet)',
+      maxDepth: '14 m / 45 ft',
       levelRequiredId: 'advanced-open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'hard', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['drift'], // Using IDs from DIVE_TYPES
@@ -1534,7 +1534,7 @@ export const santaMartaDivesites = {
       destinationId: 'santa-marta',
       coordinates: [-74.238627, 11.205035],
       countryKey: 'colombiaCountryKey', // This can stay as a direct translation key if countries are not globally categorized
-      maxDepth: '~32m (~105 feet)',
+      maxDepth: '32 m / 105 ft',
       levelRequiredId: 'advanced-open-water-diver', // Using ID from DIVE_LEVELS
       difficultyId: 'medium', // Using ID from DIVE_DIFFICULTIES
       typeIds: ['wreck'], // Using IDs from DIVE_TYPES

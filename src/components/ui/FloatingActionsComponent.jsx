@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 import { contactPageData } from '../../data/pages/contactData.js';
 
 import ActionButtonComponent from '../common/Button/ActionButtonComponent.jsx';
-import { CalendarIcon } from '../../assets/icons/CalendarIcon.jsx';
-import { WhatsAppIcon } from '../../assets/icons/WhatsAppIcon.jsx';
+
+import { CalendarIcon, WhatsappIcon } from '../../assets/icons/SocialIcons.jsx';
 
 /**
  * Renders a set of floating action buttons on the right side of the screen.
@@ -50,12 +50,12 @@ const FloatingActionsComponent = () => {
       className='fixed top-1/2 -translate-y-1/2 right-0 flex flex-col space-y-2 z-50'>
       <ActionButtonComponent
         text={t('viewCalendar', { ns: 'common' })}
-        icon={<CalendarIcon />}
+        icon={<CalendarIcon className='w-6 h-6' />}
         onClick={handleNavigateAndScroll}
       />
       <ActionButtonComponent
         text={t('chatOnWhatsApp', { ns: 'common' })}
-        icon={<WhatsAppIcon />}
+        icon={<WhatsappIcon className='w-6 h-6' />}
         isLink={true}
         href={whatsappUrl}
       />

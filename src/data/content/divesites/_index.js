@@ -29,8 +29,8 @@ export const getDivesitesByDestination = (destinationId) => {
 
 const DEFAULT_MAP_CONFIG = {
   center: [-74.297333, 4.570868], // Aproximado al centro del país
-  zoom: 4,
-  minZoom: 4,
+  zoom: 1,
+  minZoom: 1,
   maxZoom: 16,
 };
 

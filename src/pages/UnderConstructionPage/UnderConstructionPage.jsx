@@ -14,12 +14,12 @@ import ImageComponent from '../../components/common/Image/ImageComponent';
  * Renders a placeholder page for sections of the website that are under development.
  */
 const UnderConstructionPage = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('underConstruction');
 
   return (
     <>
       <SEOComponent
-        title={t(underConstructionData.seo.titleKey, { ns: 'common' })}
+        title={t(underConstructionData.seo.titleKey)}
         description={t(underConstructionData.seo.descriptionKey, {
           ns: 'common',
         })}
@@ -42,18 +42,18 @@ const UnderConstructionPage = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}>
-          <h1 className='mt-6 text-4xl md:text-6xl font-sans font-extrabold uppercase text-brand-white'>
-            {t(underConstructionData.titleKey, { ns: 'common' })}
+          <h1 className='mt-6 text-4xl md:text-6xl  font-extrabold uppercase text-brand-white'>
+            {t(underConstructionData.titleKey)}
           </h1>
-          <p className='mt-4 max-w-lg mx-auto font-serif text-lg text-brand-neutral'>
-            {t(underConstructionData.subtitleKey, { ns: 'common' })}
+          <p className='mt-4 max-w-lg mx-auto  text-lg text-brand-neutral'>
+            {t(underConstructionData.subtitleKey)}
           </p>
           <div className='mt-10'>
             {/* The button redirects the user back to the homepage. */}
             <Link
               to={underConstructionData.ctaLink}
-              className='inline-block bg-brand-cta-orange text-brand-white font-sans font-bold uppercase text-lg px-8 py-4 rounded-md shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-brand-cta-yellow/50'>
-              {t(underConstructionData.ctaTextKey, { ns: 'common' })}
+              className='inline-block bg-brand-cta-orange text-brand-white  font-bold uppercase text-lg px-8 py-4 rounded-md shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-brand-cta-yellow/50'>
+              {t(underConstructionData.ctaTextKey)}
             </Link>
           </div>
         </motion.div>

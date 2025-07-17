@@ -1,11 +1,13 @@
 // src/pages/ContactPage/components/ContactInfoSection.jsx
 import { useTranslation } from 'react-i18next';
 
-import { MailIcon } from '../../../../assets/icons/MailIcon';
-import { PhoneIcon } from '../../../../assets/icons/PhoneIcon';
-import { InstagramIcon } from '../../../../assets/icons/InstagramIcon';
-import { TikTokIcon } from '../../../../assets/icons/TikTokIcon';
-import { YouTubeIcon } from '../../../../assets/icons/YouTubeIcon';
+import {
+  WhatsappIcon,
+  MailIcon,
+  InstagramIcon,
+  TikTokIcon,
+  YouTubeIcon,
+} from '../../../../assets/icons/SocialIcons.jsx';
 
 /**
  * Renders the contact information section, including email, phone, and social media links.
@@ -23,21 +25,20 @@ const ContactInfoSection = ({ contactInfoData }) => {
   // Maps icon names from the data file to their corresponding imported components.
   // This allows for dynamically rendering the correct icon for each social media link.
   const socialIcons = {
-    instagram: <InstagramIcon />,
-    tiktok: <TikTokIcon />,
-    youtube: <YouTubeIcon />,
+    instagram: <InstagramIcon className='h-6 w-6 mr-3' />,
+    tiktok: <TikTokIcon className='h-6 w-6 mr-3' />,
+    youtube: <YouTubeIcon className='h-6 w-6 mr-3' />,
   };
 
   return (
     <div className='text-brand-white'>
-      <h2 className='text-3xl font-sans font-bold mb-6'>
-        {t(contactInfoData.titleKey)}
-      </h2>
-      <div className='space-y-4 font-serif text-lg'>
+      <h2 className='text-3xl font-bold mb-6'>{t(contactInfoData.titleKey)}</h2>
+      <div className='space-y-4  text-lg'>
         <a
           href={`mailto:${contactInfoData.email}`}
-          className='flex items-center hover:text-brand-cta-orange transition-colors'>
-          <MailIcon className='h-6 w-6 mr-3 text-brand-cta-green' />
+          className='flex items-center text-brand-neutral/70n hover:text-brand-cta-orange transition-colors'>
+          <MailIcon className='h-6 w-6 mr-3 text-brand-cta-orange' />
+
           <span>{contactInfoData.email}</span>
         </a>
         <a
@@ -45,16 +46,14 @@ const ContactInfoSection = ({ contactInfoData }) => {
           target='_blank'
           rel='noopener noreferrer'
           className='flex items-center hover:text-brand-cta-orange transition-colors'>
-          <PhoneIcon />
+          <WhatsappIcon className='h-6 w-6 mr-3 text-brand-cta-orange' />
           {/* Note: The "(WhatsApp)" text is hardcoded here for simplicity,
               but could be moved to a translation file if needed. */}
           <span>{contactInfoData.phone} (WhatsApp)</span>
         </a>
       </div>
       <div className='mt-10'>
-        <h3 className='text-xl font-sans font-semibold mb-4'>
-          {t('contactFollowUs')}
-        </h3>
+        <h3 className='text-xl font-semibold mb-4'>{t('contactFollowUs')}</h3>
         <div className='flex items-center space-x-6'>
           {contactInfoData.socials.map((social) => (
             <a
@@ -63,7 +62,7 @@ const ContactInfoSection = ({ contactInfoData }) => {
               target='_blank'
               rel='noopener noreferrer'
               title={social.name}
-              className='text-brand-neutral hover:text-brand-cta-orange transition-colors'>
+              className='text-brand-neutral/70 hover:text-brand-cta-orange transition-all duration-300 hover:scale-110 inline-block'>
               {socialIcons[social.icon]}
             </a>
           ))}

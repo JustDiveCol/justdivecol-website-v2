@@ -25,7 +25,7 @@ const TestimonialsSection = () => {
         className='container mx-auto text-center'>
         <motion.h2
           variants={fadeInUp}
-          className='text-4xl md:text-5xl font-sans font-bold text-brand-white uppercase'>
+          className='text-4xl md:text-5xl  font-bold text-brand-white uppercase'>
           {t(titleKey)}
         </motion.h2>
 

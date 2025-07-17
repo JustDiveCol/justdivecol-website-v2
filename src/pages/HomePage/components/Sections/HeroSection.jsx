@@ -67,7 +67,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className='text-4xl md:text-6xl lg:text-7xl font-sans font-extrabold uppercase tracking-tight drop-shadow-xl opacity-90'>
+          className='text-4xl md:text-6xl lg:text-7xl  font-extrabold uppercase tracking-tight drop-shadow-xl opacity-90'>
           {t(titleKey)}
         </motion.h1>
 
@@ -75,7 +75,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className='mt-4 max-w-2xl mx-auto text-lg md:text-xl font-serif text-brand-neutral drop-shadow-md opacity-80'>
+          className='mt-4 max-w-2xl mx-auto text-lg md:text-xl  text-brand-neutral drop-shadow-md opacity-80'>
           {t(subtitleKey)}
         </motion.p>
 
@@ -86,7 +86,7 @@ const HeroSection = () => {
           className='mt-8'>
           <Link
             to={ctaLink}
-            className='inline-block bg-brand-cta-orange text-brand-white font-sans font-bold uppercase text-lg px-8 py-4 rounded-md shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-brand-cta-yellow'>
+            className='inline-block bg-brand-cta-orange text-brand-white  font-bold uppercase text-lg px-8 py-4 rounded-md shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-brand-cta-yellow'>
             {t(ctaTextKey)}
           </Link>
         </motion.div>

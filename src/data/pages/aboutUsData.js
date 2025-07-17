@@ -1,6 +1,8 @@
 // src/data/pages/aboutUsData.js
 
 import about_us_header_background from '../../assets/images/page-specific/about-us/about-us-header-background.webp';
+import about_us_history_image from '../../assets/images/page-specific/about-us/about-us-history-image.webp';
+
 import team_avatar_camilo_beltran from '../../assets/images/page-specific/about-us/team-avatar-camilo-beltran.webp';
 import team_avatar_alejandra_vargas from '../../assets/images/page-specific/about-us/team-avatar-alejandra-vargas.webp';
 import team_avatar_pablo_orjuela from '../../assets/images/page-specific/about-us/team-avatar-pablo-orjuela.webp';
@@ -12,6 +14,9 @@ export const aboutUsPageData = {
   seo: {
     titleKey: 'aboutSeoTitle',
     descriptionKey: 'aboutSeoDesc',
+    keywords: 'aboutSeoKeywords',
+    imageUrl: about_us_header_background,
+    url: '/nosotros',
   },
 
   header: {
@@ -30,14 +35,14 @@ export const aboutUsPageData = {
     titleKey: 'aboutHistoryTitle',
     paragraphs: ['aboutHistoryP1', 'aboutHistoryP2', 'aboutHistoryP3'],
     image: {
-      backgroundImage: '',
+      backgroundImage: about_us_history_image,
       mainLogo: logo,
       mainLogoAltKey: 'aboutHistoryImageMainLogoAlt',
-      complementaryLogo: padi,
-      complementaryLogoAltKey: 'aboutHistoryImageComplementaryLogoAlt',
-      textOverlayKey: 'aboutHistoryImageTextOverlay',
+      // complementaryLogo: padi,
+      // complementaryLogoAltKey: 'aboutHistoryImageComplementaryLogoAlt',
+      // textOverlayKey: 'aboutHistoryImageTextOverlay',
       photoCreditKey: 'aboutHistoryImagePhotoCredit',
-      variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+      variant: 'vertical', // fullscreen, header, horizontal, vertical, square
     },
   },
 

@@ -1,41 +1,43 @@
 // src/i18n/locales/en/contact.js
 export default {
   // ----- SEO -----
-  contactSeoTitle: 'Contact | JustDiveCol - Plan Your Underwater Adventure',
+  contactSeoTitle: 'Contact Us | JustDiveCol - Plan Your Underwater Adventure',
   contactSeoDesc:
     'Ready for your next dive? Contact us to plan your dream trip, get all your questions answered, or simply share your passion for the underwater world with JustDiveCol.',
+  contactSeoKeywords:
+    'contact, JustDiveCol, underwater adventure, plan dive trip, diving questions, ocean passion, WhatsApp diving, JustDiveCol communication, dive customer service',
 
   // ----- Header -----
   contactHeaderTitle: "Let's Talk About Your Next Great Adventure",
   contactHeaderSubtitle:
-    "We're here to answer your every question, help you plan your dream trip, or simply share our passion for the ocean and its mysteries. We look forward to hearing from you!",
-  contactHeaderMainLogoAlt: 'JustDiveCol Logo',
+    'We are here to answer all your questions, help you plan your dream trip, or simply share our deep passion for the ocean and its mysteries. Your adventure begins with a conversation!',
+  contactHeaderMainLogoAlt: 'JustDiveCol Main Logo',
   // complementaryLogoAltKey: '',
-  contactHeaderPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
+  contactHeaderPhotoCredit: 'Photo Credits: Camilo Beltran @JustDiveCol',
 
   // ----- Contact Info -----
   contactInfoTitle: 'Our Communication Channels',
 
   // ----- WhatsApp Action -----
-  contactWhatsAppTitle: 'Send Us a Direct Message via WhatsApp',
+  contactWhatsAppTitle: 'Send Us a Direct Message on WhatsApp',
   contactWhatsAppDesc:
-    "Have a quick question, need personalized advice, or prefer a more direct conversation? Click the button below to start an instant chat with our team on WhatsApp. We're ready to help you.",
-  contactWhatsAppButton: 'Chat with JustDiveCol',
+    "Have a quick question, need personalized advice, or prefer a direct conversation? Click the button below to instantly start a chat with our team on WhatsApp. We're ready to help you plan your perfect dive!",
+  contactWhatsAppButton: 'Chat Now with JustDiveCol',
   contactWhatsAppMessage:
-    'Hello, JustDiveCol team. I would like to receive more information about...',
+    'Hello, JustDiveCol team. I would like more information about...',
 
   courseInquiryMessage:
-    'Hello, JustDiveCol team. I would like to receive more information about the "{{courseName}}" course.',
+    'Hello, JustDiveCol team. I would like more information about the "{{courseName}}" course.',
 
   contactFollowUs: 'Follow Us on Social Media',
 
   // ----- CTA -----
-  contactCtaTitle: "Ready for the Big Plunge? We're Waiting for You!",
+  contactCtaTitle: "Ready for the Big Leap? We're Waiting for You!",
   contactCtaSubtitle:
-    "The depths of the world await. Tell us your underwater dream, and we'll make it a reality. Your next adventure begins with a conversation!",
+    "The wonders of the deep await you. Tell us your underwater dream, and we'll make it a reality. Your next unforgettable adventure starts with a simple conversation!",
   contactCtaText: 'Start Your Adventure Today',
-  contactCtaMainLogoAlt: 'JustDiveCol Logo',
+  contactCtaMainLogoAlt: 'JustDiveCol Main Logo',
   // contactCtaComplementaryLogoAlt: '',
   // contactCtaTextOverlay: '',
-  contactCtaPhotoCredit: 'Credits: XYZ', // Assuming a new image credit is needed for the CTA background
+  contactCtaPhotoCredit: 'Photo Credits: XYZ',
 };

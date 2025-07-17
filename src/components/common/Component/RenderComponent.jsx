@@ -11,10 +11,10 @@ const RenderComponent = ({ renderData, translationNS }) => {
     <motion.section
       variants={fadeInUp}
       className='mb-12'>
-      <h2 className='text-3xl font-sans font-bold text-brand-white mb-4'>
+      <h2 className='text-3xl font-bold text-brand-white mb-4'>
         {t(renderData.titleKey)}
       </h2>
-      <ul className='space-y-3 list-disc list-inside font-serif text-brand-neutral/90 text-justify'>
+      <ul className='space-y-3 list-disc list-inside  text-brand-neutral/90 text-justify'>
         {renderData.points.map((point, index) => (
           <li key={index}>
             {t(point.pointKey)}

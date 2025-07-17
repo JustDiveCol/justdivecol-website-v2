@@ -23,16 +23,18 @@ const DetailsCard = ({ detailsData, translationNS }) => {
 
   return (
     <div className='bg-brand-primary-medium p-6 rounded-lg shadow-lg'>
-      <h3 className='text-2xl font-sans font-bold text-brand-white mb-4'>
+      <h3 className='text-2xl font-bold text-brand-white mb-4'>
         {t(detailsData.titleKey)}
       </h3>
-      <ul className='space-y-3 font-serif'>
+      <ul className='space-y-3 '>
         {detailsData.items.map((item, index) => (
           <li
-            key={item.labelKey || index} // Fallback to index if labelKey is missing.
-            className='flex justify-between gap-4 items-center'>
-            <span className='text-brand-neutral/80'>{t(item.labelKey)}:</span>
-            <span className='text-brand-white text-right'>
+            key={item.labelKey || index}
+            className='grid grid-cols-3 gap-4 items-center'>
+            <span className='col-span-1 text-brand-neutral/80'>
+              {t(item.labelKey)}:
+            </span>
+            <span className='col-span-2 text-brand-white text-right font-semibold'>
               {t(item.valueKey)}
             </span>
           </li>

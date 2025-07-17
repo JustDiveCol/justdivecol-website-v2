@@ -42,8 +42,9 @@ const ContactPage = () => {
       <SEOComponent
         title={t(seo.titleKey)}
         description={t(seo.descriptionKey)}
-        imageUrl={header.imageUrl}
-        url='/contacto'
+        keywords={t(seo.keywords)}
+        imageUrl={seo.imageUrl}
+        url={seo.url}
       />
 
       <HeaderComponent

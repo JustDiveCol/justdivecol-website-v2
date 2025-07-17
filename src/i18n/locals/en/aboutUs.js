@@ -1,87 +1,90 @@
 // src/i18n/locales/en/aboutUs.js
 export default {
   // ----- SEO -----
-  aboutSeoTitle: 'About Us | JustDiveCol - Explore with Passion & Safety',
+  aboutSeoTitle:
+    'About Us | JustDiveCol - Your Gateway to the Ocean with Passion and Safety',
   aboutSeoDesc:
-    'Discover our story, meet our passionate team, and learn about our unwavering commitment to underwater exploration, safety, and ocean conservation. Your trusted dive adventure partner.',
+    'Discover our story, meet a team united by underwater adventure, and learn about our unwavering commitment to safety and marine conservation. Embark on your next dive with confidence.',
+  aboutSeoKeywords:
+    'JustDiveCol, about us, JustDiveCol history, dive team, safe diving, marine conservation, underwater adventure, dive operator, diving community, ocean passion, marine sustainability, Colombia dive trips',
 
   // ----- Header -----
-  aboutHeaderTitle: 'More Than a Dive Operator, We Are a Community',
+  aboutHeaderTitle:
+    "More Than an Operator: We're a Community that Breathes the Ocean",
   aboutHeaderSubtitle:
-    "We are a group of passionate explorers, dedicated to discovering, sharing, and protecting the ocean's hidden wonders worldwide. With JustDiveCol, every trip is an unforgettable adventure.",
-  aboutHeaderMainLogoAlt: 'JustDiveCol Logo',
-  aboutHeaderComplementaryLogoAlt: '',
-  aboutHeaderTextOverlay: '',
-  aboutHeaderPhotoCredit: 'Credits: Camilo Beltran @JustDiveCol',
+    'At JustDiveCol, we are explorers at heart. We share, protect, and celebrate every underwater corner to ensure your dive is truly unforgettable.',
+  aboutHeaderMainLogoAlt: 'JustDiveCol Main Logo',
+  aboutHeaderComplementaryLogoAlt: 'JustDiveCol Complementary Logo',
+  aboutHeaderTextOverlay: 'Exploring the Deep Blue',
+  aboutHeaderPhotoCredit: 'Photo Credits: Camilo Beltrán @JustDiveCol',
 
   // ----- History -----
-  aboutHistoryTitle: 'Our Story: The Origin of a Deep Passion',
+  aboutHistoryTitle: 'Our Story: Passion That Emerged From the Blue',
 
   aboutHistoryP1:
-    'JustDiveCol was born from a shared dream among friends, united by an immense love for the sea and an incessant search for adventure. What began as simple recreational dives soon evolved into an uncontainable desire to share these transformative experiences and forge a vibrant community of divers.',
+    'JustDiveCol was born from the deep connection between friends united by an unconditional love for the sea. What began as recreational dives soon evolved into a shared vision: to reveal the wonder and limitless freedom that only the ocean can offer.',
   aboutHistoryP2:
-    'From our very first bubble underwater, we knew our mission was to transmit that unique emotion to more people. Always with safety as a fundamental pillar, continuous learning as our compass, and a deep respect for the vast and delicate oceanic ecosystem.',
+    'From the first bubble we exhaled underwater, we knew that safety would be the fundamental pillar of every adventure we undertook. With a constant commitment to learning and absolute respect for the marine ecosystem, we have forged experiences that connect heart and mind with this extraordinary aquatic world.',
   aboutHistoryP3:
-    'Today, that dream is a beautiful reality. JustDiveCol is a constantly growing family, extending the magic of diving to all who yearn for new adventures, astonishing discoveries, and unforgettable moments in the blue depths.',
+    'Today, JustDiveCol is a growing global family. We invite you to join us to discover new horizons, experience amazing underwater encounters, and cherish unforgettable memories beneath the waves.',
 
-  aboutHistoryImageMainLogoAlt: 'JustDiveCol Logo',
+  aboutHistoryImageMainLogoAlt: 'JustDiveCol Main Logo',
   // aboutHistoryImageComplementaryLogoAlt: '',
   // aboutHistoryImageTextOverlay: '',
-  aboutHistoryImagePhotoCredit: 'Credits: XYZ',
+  aboutHistoryImagePhotoCredit: 'Photo Credits: Camilo Beltrán @JustDiveCol',
 
   // ----- Team -----
-  aboutTeamTitle: 'The Protagonists of Your Underwater Adventure',
+  aboutTeamTitle: 'The Architects of Your Unforgettable Dives',
   aboutTeamSubtitle:
-    'Passionate, experienced, and absolutely committed to your safety, learning, and fun. This is the team that will make every dive an unforgettable experience.',
+    'Meet our team: a passionate, expert group fully committed to your learning, safety, and enjoyment on every underwater expedition.',
 
   // ----- Camilo -----
   aboutTeamMember1Name: 'Camilo Beltrán',
-  aboutTeamMember1Role: 'Navigator of Underwater Dreams and Founder',
+  aboutTeamMember1Role: 'Founder and Navigator of Underwater Dreams',
   aboutTeamMember1Bio:
-    'For Camilo, the vast blue of the ocean is a sanctuary, a place of profound peace and inspiration. This transformative connection with the sea led him to found JustDiveCol. His mission is to infect every person with that immense love for the ocean, offering underwater experiences that are synonymous with safety, thrilling adventure, and unforgettable moments. He proves that profound tranquility and adrenaline can harmoniously coexist underwater, blending passion and professionalism into every dive.',
+    "For Camilo, the ocean is not just a destination; it's a sanctuary of peace and excitement. His deep passion led him to found JustDiveCol, with the purpose of sharing this love through safe and adventurous experiences. He is living proof that deep calm and adrenaline can coexist in perfect harmony underwater.",
   aboutTeamMember1Fact1:
-    'A systems engineer on the surface, but underwater, his best "reset" is a deep dive that disconnects him from everything.',
+    'Systems engineer by day; at night, his perfect reset is to dive into the deep sea.',
   aboutTeamMember1Fact2:
-    'His most thrilling moment: an unforgettable face-to-face encounter with a bull shark, an experience that reaffirmed his respect for marine life.',
+    'His most impactful encounter was face-to-face with a bull shark, an experience that reaffirmed his immense respect for marine life.',
   aboutTeamMember1Fact3:
-    'He consults his dive logbook more often than his work meeting calendar, a true reflection of where his passion truly lies.',
+    'He checks his dive log more frequently than his meeting schedule, a clear reflection of where his true passion lies.',
 
   // ----- Alejandra -----
   aboutTeamMember2Name: 'Alejandra Vargas',
-  aboutTeamMember2Role: 'Helmswoman of Fresh Ideas and New Directions',
+  aboutTeamMember2Role: 'Helmswoman of New Ideas and Unforgettable Routes',
   aboutTeamMember2Bio:
-    "For Alejandra, diving is like flying in slow motion over a hidden world. It's floating among corals, letting the currents carry you, and discovering landscapes that seem otherworldly. Being underwater means entering a state of deep calm, where time stands still, silence embraces, and every dive becomes a form of meditation and discovery. Her greatest purpose: to accompany others in valuing the immensity of the ocean that few have the privilege to know.",
+    'For Alejandra, diving is like slowly flying through a hidden universe. She delights in floating among vibrant corals, gently drifting with currents, and discovering otherworldly landscapes. Her mission is to guide you to appreciate every nuance of this vast and amazing ocean.',
   aboutTeamMember2Fact1:
-    "Her first dive was at age 12, and since then she hasn't stopped loving the sea, or finding trash in it.",
+    'Her first dive was at 12 years old, and since then, she has been a tireless fighter for ocean clean-ups.',
   aboutTeamMember2Fact2:
-    'She dreams of seeing a blue whale; so far, she has only seen humpbacks.',
+    'Although her big dream is to swim alongside a blue whale, for now, encounters with humpback whales take her breath away.',
   aboutTeamMember2Fact3:
-    'She always braids her hair before diving, because detangling curly hair after a dive can be harder than maintaining buoyancy.',
+    'She always braids her hair before diving: untangling her curly hair after several dives is a real challenge.',
 
   // ----- Pablo -----
   aboutTeamMember3Name: 'Pablo Orjuela',
-  aboutTeamMember3Role: 'Adventurer, Photographer, and Digital Strategist',
+  aboutTeamMember3Role: 'Adventurer, Photographer & Visual Storyteller',
   aboutTeamMember3Bio:
-    "Although he is just taking his first steps into diving, Pablo's passion for photography, marine life, and adventure was the missing piece for JustDiveCol. His ability to tell stories through images and videos is fundamental to expressing the love we feel for the ocean and the excitement we share with each dive. Pablo is our brand's eye on the surface, capturing the magic and inspiring many to discover this fascinating universe.",
+    'Although he is the newest member to the world of diving, Pablo brings his exceptional artistic eye to capture underwater magic. His stunning images and videos tell captivating stories that will inspire you to discover the ocean with all your senses.',
   aboutTeamMember3Fact1:
-    'His biggest dream is to dive with a Great White Shark.',
+    'His biggest underwater dream: to dive alongside a great white shark.',
   aboutTeamMember3Fact2:
-    'His very first camera was acquired specifically to capture underwater moments, even before he started diving.',
+    'He bought his first camera to photograph the sea long before his first dive.',
   aboutTeamMember3Fact3:
-    'On his last terrestrial journey, he challenged his limits by walking 850 kilometers.',
+    'On his last terrestrial adventure, he walked approximately 850 km / 528 miles to challenge his own limits.',
 
   // ------ Commitment ------
   aboutCommitmentTitle: 'Our Unwavering Commitment to the Ocean',
   aboutCommitmentSubtitle:
-    'We firmly believe that exploring the ocean carries the great responsibility of protecting and preserving it for future generations.',
-  aboutCommitmentPoint1Title: 'Marine Sustainability and Conservation',
+    'We firmly believe that every dive is also a promise: to protect and preserve this invaluable blue treasure for future generations.',
+  aboutCommitmentPoint1Title: 'Sustainability and Marine Conservation',
   aboutCommitmentPoint1Desc:
-    'At JustDiveCol, we actively promote low-impact diving practices, respecting marine life and supporting global initiatives to protect our oceans. Every dive is an opportunity to learn, care for, and contribute to leaving the sea better than we found it.',
+    'We actively promote low-impact diving practices, collaborate with global conservation projects, and gain valuable insights from every dive to ensure the health of our oceans.',
   aboutCommitmentPoint2Title: 'Uncompromising Safety',
   aboutCommitmentPoint2Desc:
-    'Your well-being is our highest priority. Therefore, we follow the highest international safety standards in every diving experience. We constantly train and maintain our equipment in optimal conditions to guarantee you enjoy with complete confidence and peace of mind.',
-  aboutCommitmentPoint3Title:
-    'Support for Local Communities and Responsible Tourism',
+    'Your well-being is our top priority. We maintain strict international safety protocols and use the highest quality diving equipment so you can enjoy every dive with complete confidence and peace of mind.',
+  aboutCommitmentPoint3Title: 'Local Support and Responsible Tourism',
   aboutCommitmentPoint3Desc:
-    'At JustDiveCol, we work hand in hand with local operators and communities in each destination, creating alliances that promote responsible tourism and generate economic and social well-being. We believe that diving is more valuable when it also contributes positively to the people and places we have the privilege to visit.',
+    'We work hand-in-hand with local communities and operators to foster a tourism model that drives sustainable social and economic development in every destination we visit.',
 };

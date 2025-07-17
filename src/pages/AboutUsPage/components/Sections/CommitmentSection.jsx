@@ -7,9 +7,11 @@ import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
 import CommitmentCardComponent from '../Cards/CommitmentCardComponent';
 
 // Import the icons needed for this section
-import { LeafIcon } from '../../../../assets/icons/LeafIcon';
-import { ShieldIcon } from '../../../../assets/icons/ShieldIcon';
-import { HeartIcon } from '../../../../assets/icons/HeartIcon';
+import {
+  SustainabilityIcon,
+  SecurityIcon,
+  HandshakeIcon,
+} from '../../../../assets/icons/NavbarIcons';
 
 /**
  * Renders the "Our Commitment" section, displaying key brand values.
@@ -28,9 +30,9 @@ const CommitmentSection = ({ commitmentData }) => {
   // This allows the data to remain simple (e.g., "icon: 'leaf'") while the component
   // handles the mapping to the correct visual element.
   const iconMap = {
-    leaf: <LeafIcon />,
-    shield: <ShieldIcon />,
-    heart: <HeartIcon />,
+    leaf: <SustainabilityIcon className='h-16 w-16' />,
+    shield: <SecurityIcon className='h-16 w-16' />,
+    heart: <HandshakeIcon className='h-16 w-16' />,
   };
 
   return (
@@ -44,12 +46,12 @@ const CommitmentSection = ({ commitmentData }) => {
         {/* Section Title and Subtitle */}
         <motion.h2
           variants={fadeInUp}
-          className='text-4xl md:text-5xl font-sans font-bold text-brand-white uppercase'>
+          className='text-4xl md:text-5xl font-bold text-brand-white uppercase'>
           {t(commitmentData.titleKey)}
         </motion.h2>
         <motion.p
           variants={fadeInUp}
-          className='mt-4 max-w-3xl mx-auto font-serif text-lg text-brand-neutral'>
+          className='mt-4 max-w-3xl mx-auto  text-lg text-brand-neutral'>
           {t(commitmentData.subtitleKey)}
         </motion.p>
 
