@@ -22,7 +22,7 @@ const HeaderComponent = ({ sectionData, translationNS }) => {
 
   return (
     <motion.div variants={fadeInUp}>
-      <div className='group relative h-80 overflow-hidden'>
+      <div className='group relative h-80'>
         {/* Background with image + overlay */}
         <div
           role='img'

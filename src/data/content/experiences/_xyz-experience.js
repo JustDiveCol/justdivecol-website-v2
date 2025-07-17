@@ -137,7 +137,7 @@ export const _xyzExperience = {
         mainLogo: logo,
         mainLogoAltKey: 'xyzGaleryImg1MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'xyzGaleryImg1ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'xyzGaleryImg1ComplementaryLogoAlt',
         // textOverlayKey: 'xyzGaleryImg1TextOverlay',
         photoCreditKey: 'xyzGaleryImg1PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -147,7 +147,7 @@ export const _xyzExperience = {
         mainLogo: logo,
         mainLogoAltKey: 'xyzGaleryImg2MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'xyzGaleryImg2ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'xyzGaleryImg2ComplementaryLogoAlt',
         // textOverlayKey: 'xyzGaleryImg2TextOverlay',
         photoCreditKey: 'xyzGaleryImg2PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -157,7 +157,7 @@ export const _xyzExperience = {
         mainLogo: logo,
         mainLogoAltKey: 'xyzGaleryImg3MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'xyzGaleryImg3ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'xyzGaleryImg3ComplementaryLogoAlt',
         // textOverlayKey: 'xyzGaleryImg3TextOverlay',
         photoCreditKey: 'xyzGaleryImg3PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -167,7 +167,7 @@ export const _xyzExperience = {
         mainLogo: logo,
         mainLogoAltKey: 'xyzGaleryImg4MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'xyzGaleryImg4ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'xyzGaleryImg4ComplementaryLogoAlt',
         // textOverlayKey: 'xyzGaleryImg4TextOverlay',
         photoCreditKey: 'xyzGaleryImg4PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -197,7 +197,7 @@ export const i18n = {
   xyzHeaderSubtitle:
     'Obtén tu certificación PADI Open Water en las mágicas aguas de Santa Marta con una experiencia inolvidable.',
   xyzHeaderMainLogoAlt: 'Logo JustDiveCol',
-  xyzHeaderComplementaryLogoAlt: 'Logo PADI',
+  xyzHeadercomplementaryLogoAltKey 'Logo PADI',
   // xyzHeaderTextOverlay: '',
   xyzHeaderPhotoCredit: 'Créditos: Camilo Beltran @JustDiveCol',
 
@@ -278,22 +278,22 @@ export const i18n = {
   xyzGalleryTitle: 'Momentos inolvidables de tu experiencia',
 
   xyzGaleryImg1MainLogoAlt: 'Logo JustDiveCol',
-  // xyzGaleryImg1ComplementaryLogoAlt: '',
+  // xyzGaleryImg1complementaryLogoAltKey '',
   // xyzGaleryImg1TextOverlay: '',
   xyzGaleryImg1PhotoCredit: 'Créditos: XYZ',
 
   xyzGaleryImg2MainLogoAlt: 'Logo JustDiveCol',
-  // xyzGaleryImg2ComplementaryLogoAlt: '',
+  // xyzGaleryImg2complementaryLogoAltKey '',
   // xyzGaleryImg2TextOverlay: '',
   xyzGaleryImg2PhotoCredit: 'Créditos: Camilo Beltran @JustDiveCol',
 
   xyzGaleryImg3MainLogoAlt: 'Logo JustDiveCol',
-  // xyzGaleryImg3ComplementaryLogoAlt: '',
+  // xyzGaleryImg3complementaryLogoAltKey '',
   // xyzGaleryImg3TextOverlay: '',
   xyzGaleryImg3PhotoCredit: 'Créditos: Camilo Beltran @JustDiveCol',
 
   xyzGaleryImg4MainLogoAlt: 'Logo JustDiveCol',
-  // xyzGaleryImg4ComplementaryLogoAlt: '',
+  // xyzGaleryImg4complementaryLogoAltKey '',
   // xyzGaleryImg4TextOverlay: '',
   xyzGaleryImg4PhotoCredit: 'Créditos: Camilo Beltran @JustDiveCol',
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import MapComponent from '../components/common/Map/MapComponent';
+import SimpleMapComponent from '../components/common/Map/SimpleMapComponent';
+import MapLayout from '../components/common/Map/MapLayout';
 
 const TestPage = () => {
   return (

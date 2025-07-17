@@ -140,7 +140,7 @@ export const experienciaSantaMartaSeptiembre2025 = {
         mainLogo: logo,
         mainLogoAltKey: 'expsmsept25GaleryImg1MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'expsmsept25GaleryImg1ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'expsmsept25GaleryImg1ComplementaryLogoAlt',
         // textOverlayKey: 'expsmsept25GaleryImg1TextOverlay',
         photoCreditKey: 'expsmsept25GaleryImg1PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -150,7 +150,7 @@ export const experienciaSantaMartaSeptiembre2025 = {
         mainLogo: logo,
         mainLogoAltKey: 'expsmsept25GaleryImg2MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'expsmsept25GaleryImg2ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'expsmsept25GaleryImg2ComplementaryLogoAlt',
         // textOverlayKey: 'expsmsept25GaleryImg2TextOverlay',
         photoCreditKey: 'expsmsept25GaleryImg2PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -160,7 +160,7 @@ export const experienciaSantaMartaSeptiembre2025 = {
         mainLogo: logo,
         mainLogoAltKey: 'expsmsept25GaleryImg3MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'expsmsept25GaleryImg3ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'expsmsept25GaleryImg3ComplementaryLogoAlt',
         // textOverlayKey: 'expsmsept25GaleryImg3TextOverlay',
         photoCreditKey: 'expsmsept25GaleryImg3PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -170,7 +170,7 @@ export const experienciaSantaMartaSeptiembre2025 = {
         mainLogo: logo,
         mainLogoAltKey: 'expsmsept25GaleryImg4MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'expsmsept25GaleryImg4ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'expsmsept25GaleryImg4ComplementaryLogoAlt',
         // textOverlayKey: 'expsmsept25GaleryImg4TextOverlay',
         photoCreditKey: 'expsmsept25GaleryImg4PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

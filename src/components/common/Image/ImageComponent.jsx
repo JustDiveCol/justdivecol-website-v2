@@ -26,7 +26,7 @@ const ImageComponent = ({ className, imageData, translationNS }) => {
     mainLogo,
     mainLogoAltKey,
     complementaryLogo,
-    complementaryLogoAlt,
+    complementaryLogoAltKey,
     textOverlayKey,
     photoCreditKey,
     variant,
@@ -59,7 +59,7 @@ const ImageComponent = ({ className, imageData, translationNS }) => {
             className='select-none absolute top-4 right-4 drop-shadow-md opacity-70 w-12 h-auto'>
             <img
               src={complementaryLogo}
-              alt={t(complementaryLogoAlt)}
+              alt={t(complementaryLogoAltKey)}
               className='w-12 h-auto'
             />
           </div>

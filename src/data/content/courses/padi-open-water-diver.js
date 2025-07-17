@@ -125,7 +125,7 @@ export const padiOpenWaterDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'owdGaleryImg1MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'owdGaleryImg1ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'owdGaleryImg1ComplementaryLogoAlt',
         // textOverlayKey: 'owdGaleryImg1TextOverlay',
         photoCreditKey: 'owdGaleryImg1PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -135,7 +135,7 @@ export const padiOpenWaterDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'owdGaleryImg2MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'owdGaleryImg2ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'owdGaleryImg2ComplementaryLogoAlt',
         // textOverlayKey: 'owdGaleryImg2TextOverlay',
         photoCreditKey: 'owdGaleryImg2PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -145,7 +145,7 @@ export const padiOpenWaterDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'owdGaleryImg3MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'owdGaleryImg3ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'owdGaleryImg3ComplementaryLogoAlt',
         // textOverlayKey: 'owdGaleryImg3TextOverlay',
         photoCreditKey: 'owdGaleryImg3PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -155,7 +155,7 @@ export const padiOpenWaterDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'owdGaleryImg4MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'owdGaleryImg4ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'owdGaleryImg4ComplementaryLogoAlt',
         // textOverlayKey: 'owdGaleryImg4TextOverlay',
         photoCreditKey: 'owdGaleryImg4PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

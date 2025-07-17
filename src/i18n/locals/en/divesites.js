@@ -25,7 +25,7 @@ export default {
   tagsLabel: 'Tags',
 
   // --- Translations for DIVE_LEVELS (from diveSiteOptions.js) ---
-  dsdLevelKey: 'DSD or Discover Scuba Diving',
+  noneLevelKey: 'None',
   openWaterDiverLevelKey: 'Open Water Diver',
   advancedOpenWaterDiverLevelKey: 'Advanced Open Water Diver',
   technicalDiverLevelKey: 'Technical Diver',

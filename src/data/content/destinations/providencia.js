@@ -122,7 +122,7 @@ export const providenciaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'provGaleryImg1MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'provGaleryImg1ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'provGaleryImg1ComplementaryLogoAlt',
         // textOverlayKey: 'provGaleryImg1TextOverlay',
         photoCreditKey: 'provGaleryImg1PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -132,7 +132,7 @@ export const providenciaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'provGaleryImg2MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'provGaleryImg2ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'provGaleryImg2ComplementaryLogoAlt',
         // textOverlayKey: 'provGaleryImg2TextOverlay',
         photoCreditKey: 'provGaleryImg2PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -142,7 +142,7 @@ export const providenciaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'provGaleryImg3MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'provGaleryImg3ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'provGaleryImg3ComplementaryLogoAlt',
         // textOverlayKey: 'provGaleryImg3TextOverlay',
         photoCreditKey: 'provGaleryImg3PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -152,7 +152,7 @@ export const providenciaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'provGaleryImg4MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'provGaleryImg4ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'provGaleryImg4ComplementaryLogoAlt',
         // textOverlayKey: 'provGaleryImg4TextOverlay',
         photoCreditKey: 'provGaleryImg4PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -162,7 +162,7 @@ export const providenciaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'provGaleryImg5MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'provGaleryImg5ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'provGaleryImg5ComplementaryLogoAlt',
         // textOverlayKey: 'provGaleryImg5TextOverlay',
         photoCreditKey: 'provGaleryImg5PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -172,7 +172,7 @@ export const providenciaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'provGaleryImg6MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'provGaleryImg6ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'provGaleryImg6ComplementaryLogoAlt',
         // textOverlayKey: 'provGaleryImg6TextOverlay',
         photoCreditKey: 'provGaleryImg6PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

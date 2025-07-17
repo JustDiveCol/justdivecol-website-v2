@@ -117,7 +117,7 @@ export const santaMartaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'smGaleryImg1MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'smGaleryImg1ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'smGaleryImg1ComplementaryLogoAlt',
         // textOverlayKey: 'smGaleryImg1TextOverlay',
         photoCreditKey: 'smGaleryImg1PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -127,7 +127,7 @@ export const santaMartaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'smGaleryImg2MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'smGaleryImg2ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'smGaleryImg2ComplementaryLogoAlt',
         // textOverlayKey: 'smGaleryImg2TextOverlay',
         photoCreditKey: 'smGaleryImg2PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -137,7 +137,7 @@ export const santaMartaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'smGaleryImg3MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'smGaleryImg3ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'smGaleryImg3ComplementaryLogoAlt',
         // textOverlayKey: 'smGaleryImg3TextOverlay',
         photoCreditKey: 'smGaleryImg3PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -147,7 +147,7 @@ export const santaMartaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'smGaleryImg4MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'smGaleryImg4ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'smGaleryImg4ComplementaryLogoAlt',
         // textOverlayKey: 'smGaleryImg4TextOverlay',
         photoCreditKey: 'smGaleryImg4PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -157,7 +157,7 @@ export const santaMartaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'smGaleryImg5MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'smGaleryImg5ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'smGaleryImg5ComplementaryLogoAlt',
         // textOverlayKey: 'smGaleryImg5TextOverlay',
         photoCreditKey: 'smGaleryImg5PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -167,7 +167,7 @@ export const santaMartaDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'smGaleryImg6MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'smGaleryImg6ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'smGaleryImg6ComplementaryLogoAlt',
         // textOverlayKey: 'smGaleryImg6TextOverlay',
         photoCreditKey: 'smGaleryImg6PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

@@ -117,7 +117,7 @@ export const islaFuerteDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'ifGaleryImg1MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'ifGaleryImg1ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'ifGaleryImg1ComplementaryLogoAlt',
         // textOverlayKey: 'ifGaleryImg1TextOverlay',
         photoCreditKey: 'ifGaleryImg1PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -127,7 +127,7 @@ export const islaFuerteDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'ifGaleryImg2MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'ifGaleryImg2ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'ifGaleryImg2ComplementaryLogoAlt',
         // textOverlayKey: 'ifGaleryImg2TextOverlay',
         photoCreditKey: 'ifGaleryImg2PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -137,7 +137,7 @@ export const islaFuerteDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'ifGaleryImg3MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'ifGaleryImg3ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'ifGaleryImg3ComplementaryLogoAlt',
         // textOverlayKey: 'ifGaleryImg3TextOverlay',
         photoCreditKey: 'ifGaleryImg3PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -147,7 +147,7 @@ export const islaFuerteDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'ifGaleryImg4MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'ifGaleryImg4ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'ifGaleryImg4ComplementaryLogoAlt',
         // textOverlayKey: 'ifGaleryImg4TextOverlay',
         photoCreditKey: 'ifGaleryImg4PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -157,7 +157,7 @@ export const islaFuerteDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'ifGaleryImg5MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'ifGaleryImg5ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'ifGaleryImg5ComplementaryLogoAlt',
         // textOverlayKey: 'ifGaleryImg5TextOverlay',
         photoCreditKey: 'ifGaleryImg5PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -167,7 +167,7 @@ export const islaFuerteDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'ifGaleryImg6MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'ifGaleryImg6ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'ifGaleryImg6ComplementaryLogoAlt',
         // textOverlayKey: 'ifGaleryImg6TextOverlay',
         photoCreditKey: 'ifGaleryImg6PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

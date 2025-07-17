@@ -1,12 +1,11 @@
 /* src/styles/index.css */
 
-/* Import the core Tailwind CSS directives. */
+/* Import core Tailwind CSS */
 @import 'tailwindcss';
 
-/*
- * Define custom design tokens that extend or override Tailwind's default theme.
- * These variables can be used throughout the project in your utility classes (e.g., bg-brand-primary-dark).
- */
+/* -------------------------------
+   🎨 Design Tokens: Custom Theme
+--------------------------------- */
 @theme {
   /* --- Brand Colors --- */
   --color-brand-primary-dark: #0a264f;
@@ -15,27 +14,23 @@
   --color-brand-neutral: #e0e0e0;
   --color-brand-white: #ffffff;
 
-  /* --- Call-to-Action (CTA) Colors --- */
+  /* --- CTA Colors --- */
   --color-brand-cta-orange: #ff7a00;
   --color-brand-cta-green: #40d798;
   --color-brand-cta-yellow: #f7d794;
 
-  /* --- Brand Fonts --- */
+  /* --- Fonts --- */
   --font-sans: Montserrat, sans-serif;
   --font-serif: Lora, serif;
 
+  /* --- Shadows --- */
   --shadow-text: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/*
- * Define base styles for foundational elements.
- * This layer is for setting default styles or overriding browser defaults.
- */
+/* -------------------------------
+   🔧 Base Styles Overrides
+--------------------------------- */
 @layer base {
-  /*
-   * Sets a default border color for all elements.
-   * This ensures consistency and can be easily overridden by utility classes like 'border-red-500'.
-   */
   *,
   ::after,
   ::before,
@@ -45,19 +40,79 @@
   }
 }
 
-/* Add this to the end of your file or in a relevant section */
+/* -------------------------------
+   ❌ Popup Close Button Custom
+--------------------------------- */
 .maplibregl-popup-close-button {
-  font-size: 24px !important; /* Increase font size for a bigger 'X' */
-  width: 32px !important; /* Make the button area wider */
-  height: 32px !important; /* Make the button area taller */
-  line-height: 28px !important; /* Adjust line height to center 'X' vertically */
-  display: flex; /* Use flexbox to center content */
+  font-size: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 28px !important;
+  display: flex;
   align-items: center;
   justify-content: center;
+  right: 8px !important;
+  top: 8px !important;
 }
 
-/* Optional: Adjust position if it moves too much */
-.maplibregl-popup-close-button {
-  right: 8px !important; /* Nudge right for better visual balance */
-  top: 8px !important; /* Nudge down for better visual balance */
+/* -------------------------------
+   📍 Popup General Settings
+--------------------------------- */
+.maplibregl-popup {
+  padding: 0 !important;
+  max-width: 600px !important;
+}
+
+/* -------------------------------
+   💬 Popup Styles
+--------------------------------- */
+
+/* Principal Popup (onClick) */
+.maplibregl-popup-content.popup-main {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0.75rem;
+  overflow: visible;
+  max-width: 600px !important;
+}
+
+/* Hover Popup (default) */
+.maplibregl-popup-content {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+.maplibregl-popup-content.unstyled-popup {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.maplibregl-popup-content.popup-fullscreen {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.maplibregl-popup.unstyled-popup {
+  z-index: 9999 !important;
+}
+
+/* Optional: Wider on larger screens */
+@media (min-width: 640px) {
+  .maplibregl-popup-content.popup-main {
+    max-width: 600px !important;
+  }
 }

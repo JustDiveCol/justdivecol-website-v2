@@ -34,7 +34,7 @@ export const aboutUsPageData = {
       mainLogo: logo,
       mainLogoAltKey: 'aboutHistoryImageMainLogoAlt',
       complementaryLogo: padi,
-      complementaryLogoAlt: 'aboutHistoryImageComplementaryLogoAlt',
+      complementaryLogoAltKey: 'aboutHistoryImageComplementaryLogoAlt',
       textOverlayKey: 'aboutHistoryImageTextOverlay',
       photoCreditKey: 'aboutHistoryImagePhotoCredit',
       variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

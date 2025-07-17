@@ -122,7 +122,7 @@ export const malpeloDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'malpGaleryImg1MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'malpGaleryImg1ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'malpGaleryImg1ComplementaryLogoAlt',
         // textOverlayKey: 'malpGaleryImg1TextOverlay',
         photoCreditKey: 'malpGaleryImg1PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -132,7 +132,7 @@ export const malpeloDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'malpGaleryImg2MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'malpGaleryImg2ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'malpGaleryImg2ComplementaryLogoAlt',
         // textOverlayKey: 'malpGaleryImg2TextOverlay',
         photoCreditKey: 'malpGaleryImg2PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -142,7 +142,7 @@ export const malpeloDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'malpGaleryImg3MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'malpGaleryImg3ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'malpGaleryImg3ComplementaryLogoAlt',
         // textOverlayKey: 'malpGaleryImg3TextOverlay',
         photoCreditKey: 'malpGaleryImg3PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -152,7 +152,7 @@ export const malpeloDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'malpGaleryImg4MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'malpGaleryImg4ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'malpGaleryImg4ComplementaryLogoAlt',
         // textOverlayKey: 'malpGaleryImg4TextOverlay',
         photoCreditKey: 'malpGaleryImg4PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -162,7 +162,7 @@ export const malpeloDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'malpGaleryImg5MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'malpGaleryImg5ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'malpGaleryImg5ComplementaryLogoAlt',
         // textOverlayKey: 'malpGaleryImg5TextOverlay',
         photoCreditKey: 'malpGaleryImg5PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -172,7 +172,7 @@ export const malpeloDestination = {
         mainLogo: logo,
         mainLogoAltKey: 'malpGaleryImg6MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'malpGaleryImg6ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'malpGaleryImg6ComplementaryLogoAlt',
         // textOverlayKey: 'malpGaleryImg6TextOverlay',
         photoCreditKey: 'malpGaleryImg6PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

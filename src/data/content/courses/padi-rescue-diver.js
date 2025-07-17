@@ -136,7 +136,7 @@ export const padiRescueDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'rdGaleryImg1MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'rdGaleryImg1ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'rdGaleryImg1ComplementaryLogoAlt',
         // textOverlayKey: 'rdGaleryImg1TextOverlay',
         photoCreditKey: 'rdGaleryImg1PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -146,7 +146,7 @@ export const padiRescueDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'rdGaleryImg2MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'rdGaleryImg2ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'rdGaleryImg2ComplementaryLogoAlt',
         // textOverlayKey: 'rdGaleryImg2TextOverlay',
         photoCreditKey: 'rdGaleryImg2PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -156,7 +156,7 @@ export const padiRescueDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'rdGaleryImg3MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'rdGaleryImg3ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'rdGaleryImg3ComplementaryLogoAlt',
         // textOverlayKey: 'rdGaleryImg3TextOverlay',
         photoCreditKey: 'rdGaleryImg3PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -166,7 +166,7 @@ export const padiRescueDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'rdGaleryImg4MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'rdGaleryImg4ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'rdGaleryImg4ComplementaryLogoAlt',
         // textOverlayKey: 'rdGaleryImg4TextOverlay',
         photoCreditKey: 'rdGaleryImg4PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

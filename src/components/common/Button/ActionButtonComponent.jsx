@@ -49,8 +49,7 @@ const ActionButtonComponent = ({
             opacity: isHovered ? 1 : 0,
             marginLeft: isHovered ? '0.75rem' : 0,
           }}
-          transition={{ duration: 0.3, ease: 'easeInOut' }}
-          className='overflow-hidden'>
+          transition={{ duration: 0.3, ease: 'easeInOut' }}>
           <span className='font-sans font-bold text-sm whitespace-nowrap'>
             {text}
           </span>

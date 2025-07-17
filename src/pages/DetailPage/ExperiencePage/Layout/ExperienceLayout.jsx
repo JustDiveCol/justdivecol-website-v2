@@ -20,7 +20,7 @@ import CtaCard from '../../common/Cards/CtaCard';
 import UpcomingTripsHorizontalSection from '../../common/Sections/UpcomingTripsHorizontalSection';
 import UpcomingCoursesHorizontalSection from '../../common/Sections/UpcomingCoursesHorizontalSection';
 import ItinerarySection from '../../common/Sections/ItinerarySection';
-import { InfoIcon } from '../../../../assets/icons/InfoIcon';
+import MapComponent from '../../../../components/common/Map/MapComponent';
 
 /**
  * The main layout component for the experience detail page.
@@ -96,19 +96,7 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
               translationNS='experiences'
             />
           )}
-
-          <DescriptionSection
-            descriptionData={experienceData.description}
-            translationNS='experiences'
-          />
-
-          {experienceData.itinerary && (
-            <ItinerarySection
-              itineraryData={experienceData.itinerary}
-              translationNS='experiences'
-            />
-          )}
-
+          {/* Courses offered */}
           {offeredCoursesData && offeredCoursesData.length > 0 && (
             <UpcomingCoursesHorizontalSection
               availableCourses={offeredCoursesData}
@@ -117,6 +105,26 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
               translationNS='experiences'
             />
           )}
+          {/* Description */}
+          <DescriptionSection
+            descriptionData={experienceData.description}
+            translationNS='experiences'
+          />
+
+          {/* Itinerary */}
+          {experienceData.itinerary && (
+            <ItinerarySection
+              itineraryData={experienceData.itinerary}
+              translationNS='experiences'
+            />
+          )}
+          <section className='relative bg-brand-primary-medium p-6 rounded-lg shadow-lg overflow-visible z-0'>
+            <h3 className='text-2xl font-sans font-bold text-brand-white mb-4'>
+              {t('common:mapLabel') ||
+                'El Mundo Submarino: Puntos de Inmersión'}
+            </h3>
+            <MapComponent destinationId={experienceData.destinationId} />
+          </section>
 
           <GallerySection
             galleryData={experienceData.gallery}

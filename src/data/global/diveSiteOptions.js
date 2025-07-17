@@ -5,7 +5,7 @@
  * The 'id' is used in dive site data, and 'translationKey' is used for i18n.
  */
 export const DIVE_LEVELS = [
-  { id: 'dsd', translationKey: 'dsdLevelKey' },
+  { id: 'none', translationKey: 'noneLevelKey' },
   { id: 'open-water-diver', translationKey: 'openWaterDiverLevelKey' },
   {
     id: 'advanced-open-water-diver',
@@ -142,16 +142,25 @@ export const DIVE_TAG_CATEGORIES = [
 // Helper functions to easily retrieve options by ID
 export const getDiveLevelById = (id) =>
   DIVE_LEVELS.find((level) => level.id === id);
+
 export const getDifficultyById = (id) =>
   DIVE_DIFFICULTIES.find((diff) => diff.id === id);
+
 export const getDiveTypeById = (id) =>
   DIVE_TYPES.find((type) => type.id === id);
+
 export const getDiveConditionById = (id) =>
   DIVE_CONDITIONS.find((condition) => condition.id === id);
+
 export const getDiveTagById = (id) => {
   for (const category of DIVE_TAG_CATEGORIES) {
     const tag = category.tags.find((tagItem) => tagItem.id === id);
-    if (tag) return tag;
+    if (tag) {
+      return {
+        ...tag,
+        categoryId: category.id,
+      };
+    }
   }
   return null;
 };

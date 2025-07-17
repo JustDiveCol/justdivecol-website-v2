@@ -119,7 +119,7 @@ export const padiAdvancedOpenWaterDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'aowdGaleryImg1MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'aowdGaleryImg1ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'aowdGaleryImg1ComplementaryLogoAlt',
         // textOverlayKey: 'aowdGaleryImg1TextOverlay',
         photoCreditKey: 'aowdGaleryImg1PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -129,7 +129,7 @@ export const padiAdvancedOpenWaterDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'aowdGaleryImg2MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'aowdGaleryImg2ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'aowdGaleryImg2ComplementaryLogoAlt',
         // textOverlayKey: 'aowdGaleryImg2TextOverlay',
         photoCreditKey: 'aowdGaleryImg2PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -139,7 +139,7 @@ export const padiAdvancedOpenWaterDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'aowdGaleryImg3MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'aowdGaleryImg3ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'aowdGaleryImg3ComplementaryLogoAlt',
         // textOverlayKey: 'aowdGaleryImg3TextOverlay',
         photoCreditKey: 'aowdGaleryImg3PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
@@ -149,7 +149,7 @@ export const padiAdvancedOpenWaterDiverCourse = {
         mainLogo: logo,
         mainLogoAltKey: 'aowdGaleryImg4MainLogoAlt',
         // complementaryLogo: padi,
-        // complementaryLogoAlt: 'aowdGaleryImg4ComplementaryLogoAlt',
+        // complementaryLogoAltKey 'aowdGaleryImg4ComplementaryLogoAlt',
         // textOverlayKey: 'aowdGaleryImg4TextOverlay',
         photoCreditKey: 'aowdGaleryImg4PhotoCredit',
         variant: 'horizontal', // fullscreen, header, horizontal, vertical, square

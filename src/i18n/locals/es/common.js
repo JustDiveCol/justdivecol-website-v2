@@ -37,4 +37,11 @@ export default {
 
   loading: 'Cargando',
   day: 'Día',
+
+  // Map
+  allLabel: 'Todos',
+  clearFiltersLabel: 'Quitar todos los filtros',
+  searchPlaceholder: 'Buscar por nombre...',
+  viewMoreLabel: 'Ver más detalles...',
+  mapLabel: 'El Mundo Submarino: Puntos de Inmersión',
 };
