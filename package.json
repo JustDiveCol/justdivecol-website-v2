@@ -2,7 +2,7 @@
   "name": "justdivecol-website-v2",
   "homepage": "https://www.justdivecol.com",
   "private": true,
-  "version": "2.1.0",
+  "version": "2.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,9 +13,7 @@
     "predeploy": "npm run build && cp dist/index.html dist/404.html",
     "deploy": "gh-pages -d dist",
     "clean": "rm -rf dist",
-    "version:major": "node scripts/version-bumper.js major",
-    "version:minor": "node scripts/version-bumper.js minor",
-    "version:patch": "node scripts/version-bumper.js patch"
+    "release": "node scripts/interactive-release.cjs"
   },
   "dependencies": {
     "i18next": "^25.3.2",
