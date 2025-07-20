@@ -45,7 +45,7 @@ const PaymentCard = ({ paymentData, translationNS }) => {
       <h3 className='text-xl font-bold text-brand-white mb-4'>
         {t(paymentData.titleKey)}
       </h3>
-      <ul className='space-y-4'>
+      <ul className='space-y-4 pt-4 border-t border-brand-primary-light/40'>
         {paymentData.methods.map((method) => (
           <li
             key={method.id}

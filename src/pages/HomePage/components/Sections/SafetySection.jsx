@@ -3,9 +3,12 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+
 import { homePageData } from '../../../../data/pages/homeData';
 import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
+
 import SafetyCardComponent from '../Cards/SafetyCardComponent';
+import ButtonComponent from '../../../../components/common/Button/ButtonComponent';
 
 /**
  * Renders the "Safety" section for the homepage.
@@ -52,13 +55,14 @@ const SafetySection = () => {
         </motion.div>
 
         {/* Call-to-action button linking to the main Safety page. */}
-        <motion.div variants={fadeInUp}>
-          <Link
-            to={data.ctaLink}
-            className='inline-block mt-16 bg-brand-cta-orange text-brand-white  font-bold uppercase text-lg px-8 py-4 rounded-md shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-brand-cta-yellow'>
-            {t(data.ctaTextKey)}
-          </Link>
-        </motion.div>
+        <ButtonComponent
+          action={data.ctaAction}
+          textKey={data.ctaTextKey}
+          translationNS='home'
+          className='text-lg px-8 py-4'
+          containerClassName='mt-16'
+          motionVariants={fadeInUp}
+        />
       </motion.div>
     </section>
   );

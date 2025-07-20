@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 
 // Animation variants and data
 import { staggerContainer } from '../../../../hooks/animations';
-import { contactPageData } from '../../../../data/pages/contactData';
 import { experiencesPageData } from '../../../../data/pages/experiencesData';
 import MapComponent from '../../../MapPage/components/MapComponent';
 
@@ -15,7 +14,7 @@ import DescriptionSection from '../../common/Sections/DescriptionSection';
 import GallerySection from '../../common/Sections/GallerySection';
 import DetailsCard from '../../common/Cards/DetailsCard';
 import ChecklistCard from '../../common/Cards/ChecklistCard';
-import UpcomingTripsVerticalSection from '../../common/Sections/UpcomingTripsVerticalSection';
+import UpcomingTripSection from '../../common/Sections/UpcomingTripSection';
 import CtaCard from '../../common/Cards/CtaCard';
 import DiveSitesSection from '../../common/Sections/DiveSitesSection';
 
@@ -29,22 +28,7 @@ import DiveSitesSection from '../../common/Sections/DiveSitesSection';
  */
 const DestinationLayout = ({ destinationData, upcomingTrips }) => {
   // Loads multiple i18next namespaces required for this layout.
-  const { t } = useTranslation([
-    'destinations',
-    'common',
-    'contact',
-    'experiencesPage',
-  ]);
-
-  // Construct a pre-filled WhatsApp URL for destination-specific inquiries.
-  const prefilledText = t('contactWhatsAppMessage', {
-    ns: 'contact',
-    destinationName: t(destinationData.nameKey, { ns: 'destinations' }),
-  });
-  const whatsappUrl = `https://wa.me/${contactPageData.contactInfo.phone.replace(
-    /\s/g,
-    ''
-  )}?text=${encodeURIComponent(prefilledText)}`;
+  const { t } = useTranslation(['destinations', 'map']);
 
   return (
     <motion.div
@@ -58,42 +42,35 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
         translationNS='destinations'
       />
 
-      {/* Main two-column layout for the page content. */}
       <div className='container mx-auto p-4 md:p-8 grid lg:grid-cols-3 gap-8'>
-        {/* Main content column (left) with a sticky position on large screens. */}
+        {/* ... (main content column remains the same) ... */}
         <main className='lg:col-span-2 space-y-16 lg:sticky top-24 h-fit'>
           <DescriptionSection
             descriptionData={destinationData.description}
             translationNS='destinations'
           />
-
           <DiveSitesSection
             diveSiteData={destinationData.diveSites}
             translationNS={'destinations'}
           />
-
-          {/* Map */}
           <section className='relative bg-brand-primary-medium p-6 rounded-lg shadow-lg overflow-visible z-0'>
             <h3 className='text-2xl font-bold text-brand-white mb-4'>
-              {t('common:destinationMapLabel') ||
-                'Explora en el mapa: todos los puntos de inmersión disponibles'}
+              {t('map:mapHeaderSubtitle')}
             </h3>
             <MapComponent destinationId={destinationData.id} />
           </section>
-
           <GallerySection
             galleryData={destinationData.gallery}
             translationNS='destinations'
           />
         </main>
 
-        {/* Sidebar column (right) with a sticky position on large screens. */}
+        {/* --- Sidebar column --- */}
         <aside className='lg:col-span-1 space-y-8 lg:sticky top-24 h-fit'>
           <DetailsCard
             detailsData={destinationData.details}
             translationNS='destinations'
           />
-
           <ChecklistCard
             checklistData={{
               titleKey: destinationData.uniqueFinds.titleKey,
@@ -101,23 +78,27 @@ const DestinationLayout = ({ destinationData, upcomingTrips }) => {
             }}
             translationNS='destinations'
           />
-
-          <UpcomingTripsVerticalSection
+          <UpcomingTripSection
             availableTrips={upcomingTrips}
-            titleKey='destinationUpcomingTripsTitle'
-            noTripsMessageKey='noScheduledDates'
+            titleKey='availableTripsTitle'
             translationNS='destinations'
-          />
-
-          {/* This CTA reuses keys from experiencesPageData for a consistent message about custom trips. */}
-          <CtaCard
-            ctaData={{
-              titleKey: experiencesPageData.customTripCta.titleKey,
-              buttonTextKey: experiencesPageData.customTripCta.ctaTextKey,
-              link: whatsappUrl,
-              isExternal: true,
+            fallbackContent={{
+              messageKey: 'noUpcomingTripsMessage',
+              // --- AÑADE ESTE BLOQUE ---
+              // Pasa los valores dinámicos para el mensaje de fallback
+              messageValues: {
+                destinationName: t(destinationData.nameKey),
+              },
+              // --- FIN DEL CAMBIO ---
+              buttonTextKey: 'noUpcomingTripsCtaButton',
+              buttonAction: {
+                type: 'whatsapp',
+                whatsAppMessageKey: 'noUpcomingTripsWhatsAppMessage',
+                whatsAppMessageValues: {
+                  destinationName: t(destinationData.nameKey),
+                },
+              },
             }}
-            translationNS='experiencesPage'
           />
         </aside>
       </div>

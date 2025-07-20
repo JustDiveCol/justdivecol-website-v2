@@ -1,6 +1,8 @@
 // src/pages/ContactPage/components/WhatsAppCtaSection.jsx
 import { useTranslation } from 'react-i18next';
 
+import ButtonComponent from '../../../../components/common/Button/ButtonComponent';
+
 /**
  * Renders a call-to-action section that prompts the user to start a WhatsApp chat.
  *
@@ -11,7 +13,7 @@ import { useTranslation } from 'react-i18next';
  * @param {string} props.whatsAppActionData.ctaTextKey - The translation key for the button text.
  * @param {string} props.whatsappUrl - The fully constructed WhatsApp URL with a pre-filled message.
  */
-const WhatsAppCtaSection = ({ whatsAppActionData, whatsappUrl }) => {
+const WhatsAppCtaSection = ({ whatsAppActionData }) => {
   const { t } = useTranslation('contact');
   return (
     <div className='bg-brand-primary-medium p-8 rounded-lg text-center'>
@@ -21,13 +23,12 @@ const WhatsAppCtaSection = ({ whatsAppActionData, whatsappUrl }) => {
       <p className=' text-brand-neutral mb-6'>
         {t(whatsAppActionData.descriptionKey)}
       </p>
-      <a
-        href={whatsappUrl}
-        target='_blank'
-        rel='noopener noreferrer'
-        className='inline-block bg-brand-cta-orange text-brand-white font-bold uppercase text-lg px-10 py-4 rounded-md shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-brand-cta-yellow/50'>
-        {t(whatsAppActionData.ctaTextKey)}
-      </a>
+      <ButtonComponent
+        // The 'action' prop receives the entire object we just created
+        action={whatsAppActionData.ctaAction}
+        textKey={whatsAppActionData.ctaTextKey}
+        translationNS='contact'
+      />
     </div>
   );
 };

@@ -2,11 +2,32 @@
 export default {
   // ===== Common =====
   availableTripsTitle: 'Upcoming Adventures and Courses Available',
+
   noUpcomingTrips:
     "Attention Adventurer! Course and experience dates are on their way. Soon you'll be able to prepare your fins for new and exciting experiences!",
+  noUpcomingTripsCtaButton: 'Hablemos de tu interés',
+  noUpcomingTripsWhatsAppMessage:
+    "Hello! I'm interested in the {{courseName}} course and would like to know when upcoming dates are available.",
   courseCtaAvailableTitle:
     'Ready to Get Your Certification and Explore the Underwater World?',
+
   courseCtaAvailableButton: 'View Our Cancellation Policies',
+
+  // ----- Available Course -----
+  courseAvailableTitle: 'Your path to PADI certification starts here!',
+  courseAvailableSubtitle:
+    'Explore our upcoming dive courses. Choose your level and dive into learning with the best instructors!',
+  courseAvailableCtaText: 'View upcoming courses',
+  courseAvailableCtaMessage:
+    "Hello, JustDiveCol team. I'm interested in getting a diving certification. Could you provide more information about the available courses?",
+
+  // ----- No Upcoming Curse -----
+  courseNoUpcomingTitle: 'Get your fins ready! New courses are coming.',
+  courseNoUpcomingSubtitle:
+    "We are currently updating our PADI course calendar. If you have a specific level or date in mind, contact us and we'll plan it just for you!",
+  courseNoUpcomingCtaText: 'Inquire about a personalized course',
+  courseNoUpcomingCtaMessage:
+    "Hello, JustDiveCol team. I don't see any scheduled courses right now. I'd like to know when new dates will be available or if I can arrange a private course. Could you assist me?",
 
   // ===== Open Water =====
   // --- SEO Content ---
@@ -41,6 +62,8 @@ export default {
 
   // --- Main Content ---
   owdDetailsTitle: 'Your Certification Adventure in Detail',
+  owdDetailDurationValue: '3 to 4 days (flexible)',
+
   owdDetailLabel1: 'Estimated Duration',
   owdDetailValue1: '3 to 4 days (flexible)',
   owdDetailLabel2: 'Maximum Depth',
@@ -147,6 +170,7 @@ export default {
 
   // --- Main Content ---
   aowdDetailsTitle: 'Your Advanced Adventure in Detail',
+  aowdDetailDurationValue: '2 to 3 days (flexible)',
 
   aowdDetailLabel1: 'Estimated Duration',
   aowdDetailValue1: '2 to 3 days (flexible)',
@@ -266,6 +290,7 @@ export default {
 
   // --- Main Content ---
   rdDetailsTitle: 'Your Rescue Training in Detail',
+  rdDetailDurationValue: '2 to 3 days (flexible)',
 
   rdDetailLabel1: 'Estimated Duration',
   rdDetailValue1: '2 to 3 days (flexible)',

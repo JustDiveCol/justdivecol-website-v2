@@ -208,6 +208,9 @@ export const experienciaSantaMartaSeptiembre2025 = {
   cta: {
     titleKey: 'expsmsept25CtaTitle',
     buttonTextKey: 'expsmsept25CtaButtonText',
-    link: '/contacto',
+    ctaAction: {
+      type: 'whatsapp',
+      whatsAppMessageKey: 'expsmsept25CtaWhatsAppMessage',
+    },
   },
 };

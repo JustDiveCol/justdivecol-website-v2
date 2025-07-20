@@ -39,7 +39,7 @@ const TripsCard = ({ tripData, translationNS, lang, t }) => {
           t // Pass translation function to the formatter for fallback text.
         )}
       </p>
-      <span className='mt-4 inline-block text-sm font-semibold text-brand-cta-orange'>
+      <span className='mt-4 inline-block text-sm font-semibold text-brand-cta-orange '>
         {/* Fetches the "View trip details" text from the common namespace. */}
         {t('common:viewTripDetails')} &rarr;
       </span>

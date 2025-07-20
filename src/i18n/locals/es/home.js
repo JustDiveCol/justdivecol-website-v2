@@ -22,21 +22,21 @@ export default {
     'No importa si estás dando tus primeras burbujas como principiante o si ya eres un buzo experimentado; en JustDiveCol tenemos una aventura submarina a la medida de tu espíritu explorador y tus sueños más audaces.',
 
   // Experience Cards (from shared data)
-  expCardCertificacionTitle: 'Tu viaje al mundo submarino empieza Aquí',
-  expCardCertificacionCategory: 'Cursos y certificaciones PADI',
+  expCardCertificacionTitle: 'Certificaciones PADI',
+  expCardCertificacionCategory: 'Tu viaje al mundo submarino empieza Aquí',
   expCardCertificacionMainLogoAlt: 'Logo principal de JustDiveCol',
   expCardCertificacionComplementaryLogoAlt: 'Logo PADI',
   expCardCertificacionPhotoCredit:
     'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
-  expCardExploracionTitle: 'Destinos que te dejarán sin aliento',
-  expCardExploracionCategory: 'Viajes de buceo y exploración',
+  expCardExploracionTitle: 'Viajes de buceo y exploración',
+  expCardExploracionCategory: 'Destinos que te dejarán sin aliento',
   expCardExploracionMainLogoAlt: 'Logo principal de JustDiveCol',
   expCardExploracionPhotoCredit:
     'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
-  expCardPrivadosTitle: 'Diseña la aventura submarina perfecta para ti',
-  expCardPrivadosCategory: 'Experiencias personalizadas',
+  expCardPrivadosTitle: 'Experiencias personalizadas',
+  expCardPrivadosCategory: 'Diseña la aventura submarina perfecta para ti',
   expCardPrivadosMainLogoAlt: 'Logo principal de JustDiveCol',
   expCardPrivadosPhotoCredit: 'Créditos de la foto: @giovannidiveservices',
 
@@ -73,10 +73,12 @@ export default {
 
   // Final CTA Section
   homeFinalCtaTitle:
-    '¿Listo para tu próxima gran inmersión y para explorar sin Límites?',
+    '¿Listo para tu próxima gran inmersión y para explorar sin límites?', // "Límites" con minúscula
   homeFinalCtaSubtitle:
     'Las profundidades del mundo te esperan para revelarte sus secretos más asombrosos. Contáctanos hoy mismo para empezar a planificar tu inolvidable viaje submarino. ¡Tu aventura comienza con una conversación!',
-  homeFinalCtaText: 'Hablemos de tu aventura',
+  homeFinalCtaText: 'Hablemos de tu experiencia',
   homeFinalCtaMainLogoAlt: 'Logo principal de JustDiveCol',
   homeFinalCtaPhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
+  homeFinalCtaWhatsAppMessage:
+    'Hola, equipo de JustDiveCol. ¡Estoy listo/a para mi próxima gran inmersión! Me gustaría hablar sobre cómo puedo empezar a planificar mi aventura submarina. ¿Podrían asesorarme?',
 };

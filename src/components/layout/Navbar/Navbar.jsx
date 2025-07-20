@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 
 import { navLinks } from '../../../data/global/navbarData';
 import LanguageSwitcherComponent from '../../ui/LanguageSwitcherComponent';
@@ -32,26 +32,20 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      // Solo se ejecuta en 'md' y superior
       if (!navContainerRef.current || window.innerWidth < 768) {
         setVisibleLinks(navLinks);
         setHiddenLinks([]);
         return;
       }
-
       const containerWidth = navContainerRef.current.offsetWidth;
       const logoWidth = logoRef.current?.offsetWidth || 0;
       const langWidth = langRef.current?.offsetWidth || 0;
-      const moreButtonWidth = 80; // Ancho estimado para el botón "Más"
-      const gap = 24; // El 'space-x-6'
-
-      // Espacio disponible para los enlaces
+      const moreButtonWidth = 80;
+      const gap = 24;
       const availableSpace = containerWidth - logoWidth - langWidth - gap * 2;
-
       let currentWidth = 0;
       const newVisible = [];
       const newHidden = [];
-
       navLinks.forEach((link) => {
         const linkWidth = linkRefs.current[link.nameKey]?.offsetWidth || 0;
         if (currentWidth + linkWidth + gap < availableSpace) {
@@ -61,8 +55,6 @@ const Navbar = () => {
           newHidden.push(link);
         }
       });
-
-      // Si se necesitan ocultar enlaces, hacemos espacio para el botón "Más"
       if (newHidden.length > 0) {
         let spaceForMore = availableSpace - moreButtonWidth;
         let widthWithMore = 0;
@@ -80,19 +72,13 @@ const Navbar = () => {
       } else {
         setVisibleLinks(newVisible);
       }
-
       setHiddenLinks(newHidden);
     };
-
-    // Usamos ResizeObserver para un rendimiento óptimo
     const observer = new ResizeObserver(handleResize);
     if (navContainerRef.current) {
       observer.observe(navContainerRef.current);
     }
-
-    // Un pequeño delay para asegurar que todas las fuentes y elementos se hayan cargado
     const timeoutId = setTimeout(handleResize, 100);
-
     return () => {
       observer.disconnect();
       clearTimeout(timeoutId);
@@ -110,6 +96,19 @@ const Navbar = () => {
     setIsMenuOpen(false);
     setIsMoreMenuOpen(false);
   }, [location]);
+
+  const isLinkActive = (path) => {
+    // Caso especial para "Home"
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    // Caso especial para "Gear": activo si la ruta empieza con /gear
+    if (path === '/gear/home') {
+      return location.pathname.startsWith('/gear');
+    }
+    // Para todos los demás, usa la lógica normal
+    return location.pathname.startsWith(path);
+  };
 
   return (
     <motion.nav
@@ -136,22 +135,28 @@ const Navbar = () => {
           ref={navContainerRef}
           className='hidden md:flex flex-grow justify-end space-x-6 items-center'>
           {/* Renderiza los enlaces visibles */}
-          {visibleLinks.map((link) => (
-            <NavLink
-              key={link.nameKey}
-              ref={(el) => (linkRefs.current[link.nameKey] = el)}
-              to={link.path}
-              className={({ isActive }) =>
-                `relative group text-sm font-semibold uppercase tracking-wider whitespace-nowrap ${
+          {visibleLinks.map((link) => {
+            const isActive = isLinkActive(link.path);
+            return (
+              <NavLink
+                key={link.nameKey}
+                ref={(el) => (linkRefs.current[link.nameKey] = el)}
+                to={link.path}
+                className={`relative group text-sm font-semibold uppercase tracking-wider whitespace-nowrap ${
                   isActive
                     ? 'text-brand-cta-orange'
-                    : 'hover:text-brand-cta-orange/80 transition-colors'
-                }`
-              }>
-              {t(link.nameKey)}
-              <span className='absolute bottom-[-2px] left-0 w-full h-0.5 bg-brand-cta-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center'></span>
-            </NavLink>
-          ))}
+                    : 'text-white hover:text-brand-cta-orange/80 transition-colors'
+                }`}>
+                {t(link.nameKey)}
+                <span
+                  className={`absolute bottom-[-2px] left-0 w-full h-0.5 bg-brand-cta-orange transition-transform duration-300 origin-center ${
+                    isActive
+                      ? 'scale-x-100'
+                      : 'scale-x-0 group-hover:scale-x-100'
+                  }`}></span>
+              </NavLink>
+            );
+          })}
 
           {/* Renderiza el menú "Más" si hay enlaces ocultos */}
           {hiddenLinks.length > 0 && (
@@ -176,20 +181,21 @@ const Navbar = () => {
                     exit={{ opacity: 0, y: 10 }}
                     className='absolute top-full right-0 mt-2 w-48 bg-brand-primary-dark/95 backdrop-blur-sm rounded-md shadow-lg ring-1 ring-white/10'>
                     <div className='py-1'>
-                      {hiddenLinks.map((link) => (
-                        <NavLink
-                          key={link.nameKey}
-                          to={link.path}
-                          className={({ isActive }) =>
-                            `block px-4 py-2 text-sm font-semibold uppercase ${
+                      {hiddenLinks.map((link) => {
+                        const isActive = isLinkActive(link.path); // <-- Lógica aplicada aquí
+                        return (
+                          <NavLink
+                            key={link.nameKey}
+                            to={link.path}
+                            className={`block px-4 py-2 text-sm font-semibold uppercase ${
                               isActive
                                 ? 'text-brand-cta-orange'
                                 : 'text-white hover:bg-brand-primary-light'
-                            }`
-                          }>
-                          {t(link.nameKey)}
-                        </NavLink>
-                      ))}
+                            }`}>
+                            {t(link.nameKey)}
+                          </NavLink>
+                        );
+                      })}
                     </div>
                   </motion.div>
                 )}
@@ -223,19 +229,20 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             className='md:hidden mt-4'>
             <div className='flex flex-col space-y-4 items-center'>
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.nameKey}
-                  to={link.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `text-center py-2 hover:bg-brand-primary-medium rounded-md text-sm font-semibold uppercase tracking-wider w-full ${
+              {navLinks.map((link) => {
+                const isActive = isLinkActive(link.path);
+                return (
+                  <NavLink
+                    key={link.nameKey}
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`text-center py-2 text-white hover:bg-brand-primary-medium rounded-md text-sm font-semibold uppercase tracking-wider w-full ${
                       isActive ? 'text-brand-cta-orange' : ''
-                    }`
-                  }>
-                  {t(link.nameKey)}
-                </NavLink>
-              ))}
+                    }`}>
+                    {t(link.nameKey)}
+                  </NavLink>
+                );
+              })}
             </div>
           </motion.div>
         )}

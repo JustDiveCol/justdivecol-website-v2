@@ -14,10 +14,23 @@ export default {
   expHeaderMainLogoAlt: 'Logo principal de JustDiveCol',
   expHeaderPhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
-  // Upcoming Trips
-  expTripsTitle: 'Calendario de próximas aventuras programadas',
-  expTripsSubtitle:
-    'Estas son nuestras próximas salidas y cursos programados. ¡Asegura tu cupo hoy mismo y prepárate para sumergirte en lo extraordinario! No dejes que la aventura te espere.',
+  // ----- Available Information -----
+  expAvailableTitle: 'Próximos viajes',
+  expAvailableSubtitle:
+    'Explora nuestro calendario de emocionantes experiencias y cursos programados. ¡Tu gran inmersión te espera!',
+  expAvailableCtaText: 'Ver todas las experiencias',
+  expAvailableCtaMessage:
+    'Hola, equipo de JustDiveCol. Me gustaría conocer más sobre las experiencias de buceo que tienen disponibles en su calendario. ¿Podrían darme más detalles?',
+
+  expPastTripsTitle: 'Nuestros recuerdos bajo el mar: experiencias pasadas',
+
+  // ----- NoUpcoming Information -----
+  expNoUpcomingTripsTitle: '¡Nuevas experiencias están cocinándose en el azul!',
+  expNoUpcomingTripsSubtitle:
+    'Actualmente, estamos planeando emocionantes experiencias y cursos que pronto verán la luz. ¿Buscas algo específico? ¡Cuéntanos tu sueño submarino y diseñemos juntos tu aventura a medida!',
+  expNoUpcomingTripsCtaText: 'Diseñar mi experiencia a medida',
+  expNoUpcomingTripsCtaMessage:
+    'Hola, equipo de JustDiveCol. No encuentro experiencias disponibles en el calendario. Me gustaría saber más sobre futuras ofertas o diseñar una aventura personalizada. ¿Podrían asesorarme?',
 
   // Full Catalog
   expCatalogCoursesTitle: 'Tu próximo nivel: cursos y certificaciones PADI',
@@ -29,6 +42,8 @@ export default {
   expCtaSubtitle:
     'Con JustDiveCol, la aventura perfecta puede ser una realidad diseñada exclusivamente para ti. Contáctanos y trabajemos juntos para crear una experiencia privada, totalmente a la medida de tus expectativas, intereses y el espíritu de exploración que te mueve. ¡Tu viaje, tus reglas, tu océano!',
   expCtaButton: 'Diseña tu experiencia a medida',
+  expCtaWhatsAppMessage:
+    'Hola, JustDiveCol. ¡Me gustaría diseñar una experiencia de buceo a medida! Tengo una idea en mente y quiero explorarla con ustedes. ¿Podrían ayudarme?',
   expCtaMainLogoAlt: 'Logo principal de JustDiveCol',
   expCtaPhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 };

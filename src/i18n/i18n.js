@@ -9,6 +9,7 @@ import navbarEN from './locals/en/navbar.js';
 import footerEN from './locals/en/footer.js';
 import paymentEN from './locals/en/payment.js';
 import commonEN from './locals/en/common.js';
+import gearNavbarEN from './locals/en/gearNavbar.js';
 
 // Page-specific Namespaces
 import homeEN from './locals/en/home.js';
@@ -28,12 +29,19 @@ import faqsEN from './locals/en/faqs.js';
 import notFoundEN from './locals/en/notFound.js';
 import underConstructionEN from './locals/en/underConstruction.js';
 import divesitesEN from './locals/en/divesites.js';
+import mapEN from './locals/en/map.js';
+
+import gearHomePageEN from './locals/en/gearHomePage.js';
+import gearStorePageEN from './locals/en/gearStorePage.js';
+import gearGuidePageEN from './locals/en/gearGuidePage.js';
+import gearFaqsPageEN from './locals/en/gearFaqsPage.js';
 
 // --- Spanish Imports ---
 import navbarES from './locals/es/navbar.js';
 import footerES from './locals/es/footer.js';
 import paymentES from './locals/es/payment.js';
 import commonES from './locals/es/common.js';
+import gearNavbarES from './locals/es/gearNavbar.js';
 
 import homeES from './locals/es/home.js';
 import experiencesPageES from './locals/es/experiencesPage.js';
@@ -51,11 +59,18 @@ import faqsES from './locals/es/faqs.js';
 import notFoundES from './locals/es/notFound.js';
 import underConstructionES from './locals/es/underConstruction.js';
 import divesitesES from './locals/es/divesites.js';
+import mapES from './locals/es/map.js';
+
+import gearHomePageES from './locals/es/gearHomePage.js';
+import gearStorePageES from './locals/es/gearStorePage.js';
+import gearGuidePageES from './locals/es/gearGuidePage.js';
+import gearFaqsPageES from './locals/es/gearFaqsPage.js';
 
 const resources = {
   // English resources
   en: {
     navbar: navbarEN,
+    gearNavbar: gearNavbarEN,
     footer: footerEN,
     payment: paymentEN,
     home: homeEN,
@@ -74,10 +89,16 @@ const resources = {
     notFound: notFoundEN,
     underConstruction: underConstructionEN,
     divesites: divesitesEN,
+    map: mapEN,
+    gearHomePage: gearHomePageEN,
+    gearStorePage: gearStorePageEN,
+    gearGuidePage: gearGuidePageEN,
+    gearFaqsPage: gearFaqsPageEN,
   },
   // Spanish resources
   es: {
     navbar: navbarES,
+    gearNavbar: gearNavbarES,
     footer: footerES,
     payment: paymentES,
     home: homeES,
@@ -96,6 +117,11 @@ const resources = {
     notFound: notFoundES,
     underConstruction: underConstructionES,
     divesites: divesitesES,
+    map: mapES,
+    gearHomePage: gearHomePageES,
+    gearStorePage: gearStorePageES,
+    gearGuidePage: gearGuidePageES,
+    gearFaqsPage: gearFaqsPageES,
   },
 };
 
@@ -107,6 +133,7 @@ i18n.use(initReactI18next).init({
   // Array with all the namespaces you have created
   ns: [
     'navbar',
+    'gearNavbar',
     'footer',
     'payment',
     'home',
@@ -125,10 +152,15 @@ i18n.use(initReactI18next).init({
     'notFound',
     'underConstruction',
     'divesites',
+    'map',
+    'gearHomePage',
+    'gearStorePage',
+    'gearGuidePage',
+    'gearFaqsPage',
   ],
 
   // It's useful to have a default, though we often specify it
-  defaultNS: 'home',
+  defaultNS: 'common',
 
   interpolation: {
     escapeValue: false, // React already protects from XSS

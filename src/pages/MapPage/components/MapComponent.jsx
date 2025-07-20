@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
 import maplibregl, { LngLatBounds } from 'maplibre-gl';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { createRoot } from 'react-dom/client';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { useTranslation } from 'react-i18next';
@@ -25,6 +25,7 @@ import {
 
 // ========== Icons ==========
 import { DiverIcon } from '../../../assets/icons/DiverIcons';
+import { InfoIcon } from '../../../assets/icons/NavbarIcons';
 import {
   ReefIcon,
   WreckIcon,
@@ -120,7 +121,7 @@ const MapComponent = ({ destinationId }) => {
     })
   );
   const isInitialMount = useRef(true);
-  const { t } = useTranslation(['divesites', 'common', 'destinations']);
+  const { t } = useTranslation(['divesites', 'map', 'destinations']);
 
   const [mapHeight, setMapHeight] = useState('500px');
   const [activeType, setActiveType] = useState('all');
@@ -160,7 +161,7 @@ const MapComponent = ({ destinationId }) => {
     const filteredTypes = DIVE_TYPES.filter((type) =>
       presentTypeIds.has(type.id)
     );
-    return [{ id: 'all', translationKey: 'common:allLabel' }, ...filteredTypes];
+    return [{ id: 'all', translationKey: 'map:allLabel' }, ...filteredTypes];
   }, [baseSites, activeDifficulty, activeDestination]);
 
   const difficultyFilterOptions = useMemo(() => {
@@ -177,7 +178,7 @@ const MapComponent = ({ destinationId }) => {
       presentDifficultyIds.has(diff.id)
     );
     return [
-      { id: 'all', translationKey: 'common:allLabel' },
+      { id: 'all', translationKey: 'map:allLabel' },
       ...filteredDifficulties,
     ];
   }, [baseSites, activeType, activeDestination]);
@@ -201,7 +202,7 @@ const MapComponent = ({ destinationId }) => {
       })
       .filter(Boolean);
     if (uniqueDestinationIds.size > 1) {
-      return [{ id: 'all', translationKey: 'common:allLabel' }, ...options];
+      return [{ id: 'all', translationKey: 'map:allLabel' }, ...options];
     }
     return options;
   }, [baseSites, activeType, activeDifficulty, destinationId]);
@@ -400,7 +401,7 @@ const MapComponent = ({ destinationId }) => {
   }, [selectedSiteId]);
 
   return (
-    <div className='p-4'>
+    <div className='p-2'>
       <DiveFiltersComponent
         t={t}
         activeType={activeType}
@@ -438,6 +439,21 @@ const MapComponent = ({ destinationId }) => {
           t={t}
         />
       )}
+      <div
+        className='bg-brand-cta-yellow/20 border border-brand-cta-yellow/30 text-brand-cta-yellow px-4 py-3 rounded-lg relative mt-4 text-sm'
+        role='alert'>
+        <div className='flex items-center'>
+          <InfoIcon className='w-5 h-5 mr-3' />
+          <div>
+            <strong className='font-bold'>
+              {t('mapDisclaimerTitle', { ns: 'map' })}
+            </strong>
+            <span className='block sm:inline'>
+              {t('mapDisclaimerText', { ns: 'map' })}
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

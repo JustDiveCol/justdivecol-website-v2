@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+import ButtonComponent from './common/Button/ButtonComponent';
 import { staggerContainer, fadeInUp } from '../hooks/animations';
 
 const CtaComponent = ({ sectionData, translationNS }) => {
@@ -13,7 +14,7 @@ const CtaComponent = ({ sectionData, translationNS }) => {
     titleKey,
     subtitleKey,
     ctaTextKey,
-    ctaLink,
+    ctaAction,
     mainLogo,
     mainLogoAltKey,
     complementaryLogo,
@@ -32,14 +33,12 @@ const CtaComponent = ({ sectionData, translationNS }) => {
       {/* Dark overlay for contrast */}
       <div className='absolute inset-0 bg-brand-primary-dark/80 pointer-events-none' />
 
-      {/* Top-left overlay text */}
+      {/* Overlays y logos no cambian */}
       {textOverlayKey && (
         <div className='absolute top-4 left-4 text-white text-lg font-semibold drop-shadow-md opacity-80 uppercase z-20'>
-          {textOverlayKey}
+          {t(textOverlayKey)}
         </div>
       )}
-
-      {/* Top-right complementary logo */}
       {complementaryLogo && (
         <div className='absolute top-4 right-4 drop-shadow-md opacity-70 z-20'>
           <img
@@ -49,8 +48,6 @@ const CtaComponent = ({ sectionData, translationNS }) => {
           />
         </div>
       )}
-
-      {/* Bottom-right main logo */}
       {mainLogo && (
         <div className='absolute bottom-4 right-4 drop-shadow-md opacity-70 z-20'>
           <img
@@ -60,8 +57,6 @@ const CtaComponent = ({ sectionData, translationNS }) => {
           />
         </div>
       )}
-
-      {/* Hoverable footer credit */}
       {photoCreditKey && (
         <div className='absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20'>
           {t(photoCreditKey)}
@@ -83,19 +78,16 @@ const CtaComponent = ({ sectionData, translationNS }) => {
 
         <motion.p
           variants={fadeInUp}
-          className='mt-4 max-w-2xl mx-auto  text-lg text-brand-neutral'>
+          className='mt-4 max-w-2xl mx-auto text-lg text-brand-neutral'>
           {t(subtitleKey)}
         </motion.p>
 
-        <motion.div
-          variants={fadeInUp}
-          className='mt-10'>
-          <Link
-            to={ctaLink}
-            className='inline-block bg-brand-cta-orange text-brand-white font-bold uppercase text-lg px-10 py-4 rounded-md shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-brand-cta-yellow/50'>
-            {t(ctaTextKey)}
-          </Link>
-        </motion.div>
+        <ButtonComponent
+          action={ctaAction}
+          textKey={ctaTextKey}
+          translationNS={translationNS}
+          className='mt-8'
+        />
       </motion.div>
     </section>
   );

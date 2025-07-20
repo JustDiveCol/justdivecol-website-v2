@@ -2,11 +2,28 @@
 export default {
   // ===== Common =====
   availableTripsTitle: 'Próximas aventuras y cursos disponibles',
-  noUpcomingTrips:
+
+  noUpcomingTripsMessage:
     '¡Atención, explorador! Las fechas de nuestros próximos cursos y emocionantes experiencias están en camino. ¡Pronto podrás preparar tus aletas para nuevas y fascinantes vivencias!',
-  courseCtaAvailableTitle:
-    '¿Listo para obtener tu certificación y explorar el mundo submarino?',
-  courseCtaAvailableButton: 'Ver nuestras políticas de cancelación',
+  noUpcomingTripsWhatsAppMessage:
+    '¡Hola! Estoy interesado en el curso de {{courseName}} y me gustaría saber cuándo hay próximas fechas disponibles.',
+  noUpcomingTripsCtaButton: 'Hablemos de tu interés',
+
+  // ----- Available Course -----
+  courseAvailableTitle: '¡Tu camino a la certificación PADI comienza aquí!',
+  courseAvailableSubtitle:
+    'Explora nuestros próximos cursos de buceo. ¡Elige tu nivel y sumérgete en el aprendizaje con los mejores instructores!',
+  courseAvailableCtaText: 'Ver próximos cursos',
+  courseAvailableCtaMessage:
+    'Hola, equipo de JustDiveCol. Me interesa obtener una certificación de buceo. ¿Podrían darme más información sobre los cursos disponibles?',
+
+  // ----- No Upcoming Curse -----
+  courseNoUpcomingTitle: '¡Prepara tus aletas! Nuevos cursos en camino.',
+  courseNoUpcomingSubtitle:
+    'Actualmente, estamos actualizando nuestro calendario de cursos PADI. Si tienes un nivel o fecha en mente, ¡contáctanos y lo planificamos a tu medida!',
+  courseNoUpcomingCtaText: 'Consultar por un curso personalizado',
+  courseNoUpcomingCtaMessage:
+    'Hola, equipo de JustDiveCol. No veo cursos programados en este momento. Me gustaría saber cuándo tendrán nuevas fechas o si puedo coordinar un curso privado. ¿Podrían ayudarme?',
 
   // ===== Open Water =====
   // --- SEO Content ---
@@ -41,6 +58,8 @@ export default {
 
   // --- Main Content ---
   owdDetailsTitle: 'Tu aventura de certificación en detalle',
+  owdDetailDurationValue: '3 a 4 días (flexible)',
+
   owdDetailLabel1: 'Duración estimada',
   owdDetailValue1: '3 a 4 días (flexible)',
   owdDetailLabel2: 'Profundidad máxima',
@@ -148,6 +167,7 @@ export default {
 
   // --- Main Content ---
   aowdDetailsTitle: 'Tu aventura avanzada en detalle',
+  aowdDetailDurationValue: '2 a 3 días (flexible)',
 
   aowdDetailLabel1: 'Duración estimada',
   aowdDetailValue1: '2 a 3 días (flexible)',
@@ -265,6 +285,7 @@ export default {
 
   // --- Main Content ---
   rdDetailsTitle: 'Tu entrenamiento de rescate en detalle',
+  rdDetailDurationValue: '2 a 3 días (flexible)',
 
   rdDetailLabel1: 'Duración estimada',
   rdDetailValue1: '2 a 3 días (flexible)',

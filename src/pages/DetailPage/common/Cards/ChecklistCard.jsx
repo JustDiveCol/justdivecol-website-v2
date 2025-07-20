@@ -46,7 +46,7 @@ const ChecklistCard = ({ checklistData, translationNS, type }) => {
       <h3 className='text-xl font-bold text-brand-white mb-4'>
         {t(checklistData.titleKey)}
       </h3>
-      <ul className='space-y-3'>
+      <ul className='space-y-3 pt-4 border-t border-brand-primary-light/40'>
         {checklistData.items.map((itemKey, index) => (
           <li
             key={itemKey || index}

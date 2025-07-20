@@ -34,3 +34,73 @@ export const fadeInUp = {
     },
   },
 };
+
+/** FAQ list container: tighter, quicker cascade */
+export const faqStagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+/** FAQ item: small slide‑up + fade */
+export const faqFadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: 'easeOut',
+    },
+  },
+};
+
+/** Chevron open/close rotation for any toggle icon */
+export const chevronToggle = {
+  closed: {
+    rotate: 0,
+    transition: { duration: 0.2, ease: 'easeInOut' },
+  },
+  open: {
+    rotate: 180,
+    transition: { duration: 0.2, ease: 'easeInOut' },
+  },
+};
+
+/** NEW: Variant for section-level fade-in-up animations */
+export const sectionFadeInUp = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+    },
+  },
+};
+
+export const viewVariants = {
+  initial: { opacity: 0, scale: 0.95, y: 20 },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: 'easeOut' },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.95,
+    y: -20,
+    transition: { duration: 0.3, ease: 'easeIn' },
+  },
+};

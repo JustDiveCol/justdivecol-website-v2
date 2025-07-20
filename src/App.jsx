@@ -13,14 +13,11 @@ import FloatingActionsComponent from './components/ui/FloatingActionsComponent';
 
 export const App = () => {
   const location = useLocation();
-
   return (
     <div className='flex flex-col min-h-screen bg-brand-primary-dark'>
       <Navbar />
-
       {/* Handles scroll-to-top behavior on route changes. */}
       <RouteScrollManagerComponent />
-
       {/* Enables page transition animations. */}
       <AnimatePresence mode='wait'>
         <main
@@ -29,7 +26,6 @@ export const App = () => {
           <Outlet />
         </main>
       </AnimatePresence>
-
       <Footer />
       <FloatingActionsComponent />
     </div>

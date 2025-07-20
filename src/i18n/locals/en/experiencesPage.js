@@ -14,6 +14,22 @@ export default {
   expHeaderMainLogoAlt: 'JustDiveCol Main Logo',
   expHeaderPhotoCredit: 'Photo Credits: Camilo Beltran @JustDiveCol',
 
+  // ----- Available Information -----
+  expAvailableTitle: 'Discover your next underwater adventure',
+  expAvailableSubtitle:
+    'Explore our calendar of exciting experiences and scheduled courses. Your great dive awaits!',
+  expAvailableCtaText: 'View all experiences',
+  expAvailableCtaMessage:
+    "Hello, JustDiveCol team. I'd like to know more about the diving experiences you have available on your calendar. Could you provide more details?",
+
+  // ----- NoUpcoming Information -----
+  expNoUpcomingTripsTitle: 'New experiences are brewing in the blue!',
+  expNoUpcomingTripsSubtitle:
+    "We're currently planning exciting experiences and courses that will soon be revealed. Looking for something specific? Tell us your underwater dream, and let's design your custom adventure together!",
+  expNoUpcomingTripsCtaText: 'Design my custom experience',
+  expNoUpcomingTripsCtaMessage:
+    "Hello, JustDiveCol team. I can't find any available experiences on the calendar. I'd like to know more about future offerings or design a personalized adventure. Could you advise me?",
+
   // Upcoming Trips
   expTripsTitle: 'Calendar of Upcoming Scheduled Adventures',
   expTripsSubtitle:
@@ -28,7 +44,9 @@ export default {
     "Can't find the underwater experience of your dreams among our offerings?",
   expCtaSubtitle:
     "With JustDiveCol, the perfect adventure can become a reality designed exclusively for you. Contact us, and let's work together to create a private experience, completely tailored to your expectations, interests, and the spirit of exploration that drives you. Your trip, your rules, your ocean!",
-  expCtaButton: 'Design Your Custom Experience',
+  expCtaButton: 'Design my custom experience',
+  expCtaWhatsAppMessage:
+    "Hello, JustDiveCol. I'd like to design a custom dive experience! I have an idea in mind and want to explore it with you. Could you help me?",
   expCtaMainLogoAlt: 'JustDiveCol Main Logo',
   expCtaPhotoCredit: 'Photo Credits: Camilo Beltran @JustDiveCol',
 };

@@ -1,11 +1,15 @@
 // src/data/content/divesites/_index.js
 import { santaMartaDivesites } from './santa-marta-divesites.js';
 import { providenciaDivesites } from './providencia-divesites.js';
+import { malpeloDivesites } from './malpelo-divesites.js';
+import { islaFuerteDivesites } from './isla-fuerte-divesites.js';
 
 // Si tienes más destinos después, puedes agregarlos aquí
 const destinationConfigs = {
   'santa-marta': santaMartaDivesites,
   providencia: providenciaDivesites,
+  malpelo: malpeloDivesites,
+  'isla-fuerte': islaFuerteDivesites,
 };
 
 const allDivesitesArray = Object.values(destinationConfigs).flatMap(

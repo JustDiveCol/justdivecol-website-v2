@@ -26,7 +26,7 @@ import { ScubaMaskIcon } from '../../../assets/icons/DiverIcons.jsx';
  */
 const Footer = () => {
   // Load multiple i18next namespaces for footer-specific and contact data.
-  const { t } = useTranslation(['footer', 'contact']);
+  const { t } = useTranslation(['footer', 'contact', 'navbar']);
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -126,7 +126,7 @@ const Footer = () => {
           {' '}
           {/* Centra el contenido y añade un margen inferior */}
           <h3 className='text-xl font-bold text-brand-white mb-4'>
-            {t(footerData.importantLinksTitle)}
+            {t(footerData.importantLinksTitle, { ns: 'navbar' })}
           </h3>{' '}
           {/* Asume una clave de traducción para el título */}
           {footerData.navLinks.map((link) => (
@@ -134,7 +134,7 @@ const Footer = () => {
               key={link.nameKey}
               to={link.path}
               className='text-brand-neutral/80 hover:text-brand-cta-orange transition-colors text-sm p-2'>
-              {t(link.nameKey)}
+              {t(link.nameKey, { ns: 'navbar' })}
             </Link>
           ))}
         </div>

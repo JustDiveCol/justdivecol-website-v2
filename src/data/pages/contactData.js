@@ -49,14 +49,21 @@ export const contactPageData = {
     titleKey: 'contactWhatsAppTitle',
     descriptionKey: 'contactWhatsAppDesc',
     ctaTextKey: 'contactWhatsAppButton',
-    prefilledMessageKey: 'contactWhatsAppMessage',
+    ctaAction: {
+      type: 'whatsapp',
+      whatsAppMessageKey: 'contactWhatsAppMessage',
+      whatsAppMessageNS: 'contact',
+    },
   },
   cta: {
     backgroundImage: contact_header_background,
     titleKey: 'contactCtaTitle',
     subtitleKey: 'contactCtaSubtitle',
     ctaTextKey: 'contactCtaText',
-    ctaLink: '/contacto',
+    ctaAction: {
+      type: 'internal',
+      path: '/experiencias',
+    },
     mainLogo: logo,
     mainLogoAltKey: 'contactCtaMainLogoAlt',
     // complementaryLogo: padi,

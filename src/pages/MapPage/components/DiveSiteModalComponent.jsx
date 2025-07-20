@@ -108,7 +108,7 @@ const DiveSiteModalComponent = ({ site, onClose, t }) => {
                     <button
                       onClick={() => setShowFullDescription(true)}
                       className='ml-1 underline text-brand-cta-orange hover:text-brand-primary-dark transition text-sm'>
-                      {t('common:viewMoreLabel') || 'Ver más'}
+                      {t('map:viewMoreLabel')}
                     </button>
                   )}
                 </p>

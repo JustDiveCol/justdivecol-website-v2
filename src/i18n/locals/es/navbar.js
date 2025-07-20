@@ -5,6 +5,12 @@ export default {
   about: 'Nosotros',
   security: 'Seguridad',
   contact: 'Contacto',
-  gear: 'Kit de buceo',
-  divesites: 'Sitios de buceo',
+  gear: 'Tienda',
+  divesites: 'Puntos de buceo',
+  policies: 'Nuestras políticas',
+  termsAndConditions: 'Términos y condiciones',
+  privacy: 'Política de privacidad',
+  faqs: 'Preguntas frecuentes (FAQs)',
+
+  footerLinksTitle: 'Explora y conoce',
 };

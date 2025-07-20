@@ -23,7 +23,7 @@ import CtaComponent from '../../components/CtaComponent';
  */
 const ExperiencesPage = () => {
   const { t } = useTranslation('experiencesPage');
-  const { seo, header, customTripCta } = experiencesPageData;
+  const { seo, customTripCta } = experiencesPageData;
 
   return (
     <div>
@@ -40,12 +40,12 @@ const ExperiencesPage = () => {
         initial='initial'
         animate='animate'
         exit='exit'>
-        <HeaderComponent
+        {/* <HeaderComponent
           sectionData={header}
           translationNS='experiencesPage'
-        />
-        <ExperiencesSection />
+        /> */}
         <CalendarExperiencesSection />
+        <ExperiencesSection />
         <CoursesSection />
         <DestinationsSection />
         <CtaComponent

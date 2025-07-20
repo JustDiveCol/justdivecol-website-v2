@@ -1,9 +1,22 @@
+// src/components/HeaderComponent.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../hooks/animations';
 
-const HeaderComponent = ({ sectionData, translationNS }) => {
+/**
+ * Reusable Header component with background image, title, subtitle, and optional logos/credits.
+ *
+ * @param {object} props - The component properties.
+ * @param {object} props.sectionData - Data for the header section (backgroundImage, titleKey, etc.).
+ * @param {string} props.translationNS - The i18n translation namespace to use.
+ * @param {string} [props.heightClass='h-80'] - OPTIONAL: Tailwind class to override the default height (e.g., 'h-64').
+ */
+const HeaderComponent = ({
+  sectionData,
+  translationNS,
+  heightClass = 'h-80',
+}) => {
   const { t } = useTranslation(translationNS);
   const {
     backgroundImage,
@@ -22,7 +35,9 @@ const HeaderComponent = ({ sectionData, translationNS }) => {
 
   return (
     <motion.div variants={fadeInUp}>
-      <div className='group relative h-80'>
+      <div className={`group relative ${heightClass}`}>
+        {' '}
+        {/* CHANGED: h-80 replaced by ${heightClass} */}
         {/* Background with image + overlay */}
         <div
           role='img'
@@ -30,7 +45,6 @@ const HeaderComponent = ({ sectionData, translationNS }) => {
           onContextMenu={(e) => e.preventDefault()}
           className='relative w-full h-full bg-cover bg-center select-none flex items-center justify-center text-center text-brand-white'
           style={{ backgroundImage: `url(${backgroundImage})` }}>
-          {/* Dark overlay */}
           <div className='absolute inset-0 bg-brand-primary-dark/70 z-0' />
 
           {/* Title & subtitle */}
@@ -70,7 +84,6 @@ const HeaderComponent = ({ sectionData, translationNS }) => {
             </div>
           )}
         </div>
-
         {/* Hover-revealed footer credit */}
         {photoCreditKey && (
           <div className='absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20'>

@@ -56,7 +56,11 @@
   span,
   small,
   li,
-  a {
+  a,
+  button,
+  input,
+  select,
+  textarea {
     font-family: var(--font-serif);
   }
 }
@@ -126,4 +130,17 @@
   justify-content: center !important;
   right: 8px !important;
   top: 8px !important;
+}
+
+.transition-max {
+  overflow: hidden;
+  max-height: 0;
+  transition-property: max-height, opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+}
+
+.transition-max.open {
+  /* must exceed your tallest answer */
+  max-height: 500px;
 }

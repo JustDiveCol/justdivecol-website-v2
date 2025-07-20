@@ -7,13 +7,4 @@ export default {
   footerCopyright: 'JustDiveCol. All rights reserved.',
   footerCredits:
     'Designed and built with passion for underwater explorers, powered by React + Vite, TailwindCSS, and Motion.',
-
-  footerLinksTitle: 'Explore & Learn',
-
-  policies: 'Our Policies',
-  termsAndConditions: 'Terms and Conditions',
-  privacy: 'Privacy Policy',
-  faqs: 'FAQs',
-  diveSites: 'Dive Sites',
-  gear: 'Recommended Gear',
 };

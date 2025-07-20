@@ -26,7 +26,7 @@ const DiveFilters = ({
         {destinationOptions.length > 0 && (
           <div className='w-full'>
             <span className='block text-xl font-semibold text-brand-neutral mb-2'>
-              {t('divesites:destinationLabel', 'Destino')}
+              {t('divesites:destinationLabel')}
             </span>
             <div className='flex flex-wrap gap-2'>
               {destinationOptions.map((dest) => (
@@ -108,7 +108,7 @@ const DiveFilters = ({
             <button
               onClick={clearFilters}
               className='cursor-pointer px-4 py-1.5 h-fit text-xs font-semibold rounded-full border border-brand-neutral text-brand-neutral hover:bg-brand-cta-orange hover:text-brand-primary-dark transition shadow-sm'>
-              {t('common:clearFiltersLabel')}
+              {t('map:clearFiltersLabel')}
             </button>
           </div>
         </div>
@@ -124,9 +124,7 @@ const DiveFilters = ({
             type='text'
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder={
-              t('common:searchPlaceholder') || 'Buscar por nombre...'
-            }
+            placeholder={t('map:searchPlaceholder')}
             className='w-full pl-10 pr-8 py-2 border rounded-md text-sm text-brand-neutral placeholder:text-brand-neutral/60 focus:outline-none focus:ring-2 focus:ring-brand-cta-orange'
           />
           {searchQuery && (
@@ -134,7 +132,7 @@ const DiveFilters = ({
               type='button'
               onClick={() => setSearchQuery('')}
               className='absolute inset-y-0 right-0 pr-3 flex items-center text-brand-neutral/60 hover:text-brand-cta-orange transition cursor-pointer'
-              aria-label='Limpiar búsqueda'>
+              aria-label={t('map:clearFiltersLabel')}>
               ✕
             </button>
           )}

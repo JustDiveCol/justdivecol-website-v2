@@ -21,19 +21,20 @@ export default {
     "No matter if you're taking your first breaths underwater or if you're already an experienced diver; at JustDiveCol, we have an underwater adventure tailored to your adventurous spirit and boldest dreams.",
 
   // Experience Cards (from shared data)
-  expCardCertificacionTitle: 'Your Journey to the Underwater World Starts Here',
-  expCardCertificacionCategory: 'PADI Courses & Certifications',
+  expCardCertificacionTitle: 'PADI Certifications',
+  expCardCertificacionCategory:
+    'Your Journey to the Underwater World Starts Here',
   expCardCertificacionMainLogoAlt: 'JustDiveCol Main Logo',
   expCardCertificacionComplementaryLogoAlt: 'PADI Logo',
   expCardCertificacionPhotoCredit: 'Photo Credits: Camilo Beltran @JustDiveCol',
 
-  expCardExploracionTitle: 'Destinations That Will Take Your Breath Away',
-  expCardExploracionCategory: 'Dive Trips & Exploration',
+  expCardExploracionTitle: 'Dive Trips & Exploration',
+  expCardExploracionCategory: 'Destinations That Will Take Your Breath Away',
   expCardExploracionMainLogoAlt: 'JustDiveCol Main Logo',
   expCardExploracionPhotoCredit: 'Photo Credits: Camilo Beltran @JustDiveCol',
 
-  expCardPrivadosTitle: 'Design the Perfect Underwater Adventure for You',
-  expCardPrivadosCategory: 'Personalized Experiences',
+  expCardPrivadosTitle: 'Personalized Experiences',
+  expCardPrivadosCategory: 'Design the Perfect Underwater Adventure for You',
   expCardPrivadosMainLogoAlt: 'JustDiveCol Main Logo',
   expCardPrivadosPhotoCredit: 'Photo Credits: @giovannidiveservices',
 
@@ -70,10 +71,12 @@ export default {
 
   // Final CTA Section
   homeFinalCtaTitle:
-    'Ready for Your Next Great Dive and to Explore Limitlessly?',
+    'Ready for your next great dive and to explore limitlessly?',
   homeFinalCtaSubtitle:
     "The world's depths await to reveal their most astonishing secrets. Contact us today to start planning your unforgettable underwater journey. Your adventure begins with a conversation!",
-  homeFinalCtaText: "Let's Talk About Your Adventure",
+  homeFinalCtaText: "Let's talk about your experience",
   homeFinalCtaMainLogoAlt: 'JustDiveCol Main Logo',
   homeFinalCtaPhotoCredit: 'Photo Credits: Camilo Beltran @JustDiveCol',
+  homeFinalCtaWhatsAppMessage:
+    "Hello, JustDiveCol team. I'm ready for my next great dive! I'd like to discuss how I can start planning my underwater adventure. Could you please advise me?",
 };

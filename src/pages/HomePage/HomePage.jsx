@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
+
 import { homePageData } from '../../data/pages/homeData.js';
 
 // Animation variants

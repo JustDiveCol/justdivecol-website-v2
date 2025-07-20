@@ -64,6 +64,7 @@ export const padiRescueDiverCourse = {
   // --- Main Content ---
   details: {
     titleKey: 'rdDetailsTitle',
+    durationKey: 'rdDetailDurationValue',
     items: [
       { labelKey: 'rdDetailLabel1', valueKey: 'rdDetailValue1' },
       { labelKey: 'rdDetailLabel2', valueKey: 'rdDetailValue2' },

@@ -544,4 +544,12 @@ export default {
 
   // Other common translations that might be used across content types
   colombiaCountryKey: 'Colombia', // If used directly in dive site data
+
+  showingSitesCountFull: 'Showing {{filtered}} of {{total}} dive sites', // Text for displaying filtered results count
+
+  noMatchingSites: 'No matching dive sites found for the filters.', // Message when no dive sites match filters
+
+  destinationLabel: 'Destination', // Label for a filter or display related to destination
+
+  noOptionsAvailable: 'No options available', // Message when there are no available options
 };

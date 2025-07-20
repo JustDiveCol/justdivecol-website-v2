@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { homePageData } from '../../../../data/pages/homeData';
+
+import { ChevronDownIcon } from '../../../../assets/icons/NavbarIcons';
+
+import ButtonComponent from '../../../../components/common/Button/ButtonComponent';
 
 const HeroSection = () => {
   const { t } = useTranslation('home');
@@ -13,7 +16,7 @@ const HeroSection = () => {
     titleKey,
     subtitleKey,
     ctaTextKey,
-    ctaLink,
+    ctaAction,
     mainLogo,
     mainLogoAlt,
     complementaryLogo,
@@ -28,7 +31,10 @@ const HeroSection = () => {
       aria-label={`${t(titleKey)} — ${t(subtitleKey)}`}
       onContextMenu={(e) => e.preventDefault()}
       className='group relative min-h-screen flex items-center justify-center text-center text-brand-white bg-cover bg-center bg-no-repeat select-none'
-      style={{ backgroundImage: `url(${imageUrl})` }}>
+      style={{
+        backgroundImage: `url(${imageUrl})`,
+        minHeight: 'calc(100vh - 5rem)',
+      }}>
       {/* Background dark overlay */}
       <div className='absolute inset-0 bg-brand-primary-dark/70 pointer-events-none'></div>
 
@@ -79,18 +85,32 @@ const HeroSection = () => {
           {t(subtitleKey)}
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className='mt-8'>
-          <Link
-            to={ctaLink}
-            className='inline-block bg-brand-cta-orange text-brand-white  font-bold uppercase text-lg px-8 py-4 rounded-md shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-brand-cta-yellow'>
-            {t(ctaTextKey)}
-          </Link>
-        </motion.div>
+        <ButtonComponent
+          action={ctaAction}
+          textKey={ctaTextKey}
+          translationNS='home'
+          motionInitial={{ opacity: 0, y: 50 }}
+          motionAnimate={{ opacity: 1, y: 0 }}
+          motionTransition={{ duration: 0.8, delay: 0.6 }}
+          containerClassName='mt-8'
+        />
       </div>
+
+      {/* Scroll inducement icon */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          repeat: Infinity,
+          repeatType: 'reverse',
+          duration: 1.5,
+          delay: 1,
+        }}
+        className='absolute bottom-8 z-10 left-1/2 -translate-x-1/2'>
+        {' '}
+        {/* Changed left-0 right-0 mx-auto to left-1/2 -translate-x-1/2 */}
+        <ChevronDownIcon className='w-10 h-10 text-brand-cta-orange animate-bounce' />
+      </motion.div>
 
       {/* Hover footer credit */}
       {photoCreditKey && (

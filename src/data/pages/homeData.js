@@ -5,7 +5,7 @@ import home_hero_background from '../../assets/images/page-specific/home/home-he
 import home_cta_background from '../../assets/images/page-specific/home/home-cta-background.webp';
 
 import logo from '../../assets/images/logos/logo.png';
-import padi from '../../assets/images/logos/padi.png';
+// import padi from '../../assets/images/logos/padi.png';
 
 export const homePageData = {
   // SEO Section
@@ -22,7 +22,10 @@ export const homePageData = {
     titleKey: 'homeHeroTitle',
     subtitleKey: 'homeHeroSubtitle',
     ctaTextKey: 'homeHeroCtaText',
-    ctaLink: '/experiencias',
+    ctaAction: {
+      type: 'internal',
+      path: '/experiencias',
+    },
     mainLogo: logo,
     mainLogoAlt: 'homeHeroMainLogoAlt',
     photoCreditKey: 'homeHeroPhotoCreditKey',
@@ -59,7 +62,10 @@ export const homePageData = {
       },
     ],
     ctaTextKey: 'homeSafetyCtaText',
-    ctaLink: '/seguridad',
+    ctaAction: {
+      type: 'internal',
+      path: '/seguridad',
+    },
   },
   // Testimonials Section
   testimonials: {
@@ -97,6 +103,11 @@ export const homePageData = {
     titleKey: 'homeFinalCtaTitle',
     subtitleKey: 'homeFinalCtaSubtitle',
     ctaTextKey: 'homeFinalCtaText',
+    ctaAction: {
+      type: 'whatsapp',
+      path: '',
+      whatsAppMessageKey: 'homeFinalCtaWhatsAppMessage',
+    },
     ctaLink: '/contacto',
     mainLogo: logo,
     mainLogoAltKey: 'homeFinalCtaMainLogoAlt',

@@ -22,133 +22,158 @@ export const faqsData = {
     // textOverlayKey: 'faqsHeaderTextOverlay',
     photoCreditKey: 'faqsHeaderPhotoCredit',
   },
-  sections: [
+  faqs: [
     {
-      id: 'courses-certifications',
-      titleKey: 'faqsCat1Title',
-      points: [
+      id: 'certificationsFaqsSection',
+      sectionTitleKey: 'certificationsFaqsTitle',
+      faqs: [
         {
-          pointKey: 'faqsCat1Q1Title',
-          subPoints: ['faqsCat1Q1Point1'],
+          id: 'firstCertification',
+          questionKey: 'faqFirstCertificationQuestion',
+          answerKey: 'faqFirstCertificationAnswer',
         },
         {
-          pointKey: 'faqsCat1Q2Title',
-          subPoints: ['faqsCat1Q2Point1'],
+          id: 'whatIsIncludedCertification',
+          questionKey: 'faqWhatIsIncludedCertificationQuestion',
+          answerKey: 'faqWhatIsIncludedCertificationAnswer',
         },
         {
-          pointKey: 'faqsCat1Q3Title',
-          subPoints: ['faqsCat1Q3Point1'],
+          id: 'swimmingRequirement',
+          questionKey: 'faqSwimmingRequirementQuestion',
+          answerKey: 'faqSwimmingRequirementAnswer',
         },
         {
-          pointKey: 'faqsCat1Q4Title',
-          subPoints: ['faqsCat1Q4Point1'],
+          id: 'minimunAge',
+          questionKey: 'faqMinimunAgeQuestion',
+          answerKey: 'faqMinimunAgeAnswer',
         },
         {
-          pointKey: 'faqsCat1Q5Title',
-          subPoints: ['faqsCat1Q5Point1'],
+          id: 'medicalRequirement',
+          questionKey: 'faqMedicalRequirementQuestion',
+          answerKey: 'faqMedicalRequirementAnswer',
         },
         {
-          pointKey: 'faqsCat1Q6Title',
-          subPoints: ['faqsCat1Q6Point1'],
+          id: 'airCompensation',
+          questionKey: 'faqAirCompensationQuestion',
+          answerKey: 'faqAirCompensationAnswer',
         },
         {
-          pointKey: 'faqsCat1Q7Title',
-          subPoints: ['faqsCat1Q7Point1'],
+          id: 'respirationIssue',
+          questionKey: 'faqRespirationIssueQuestion',
+          answerKey: 'faqRespirationIssueAnswer',
         },
       ],
     },
     {
-      id: 'dive-trips-experiences',
-      titleKey: 'faqsCat2Title',
-      points: [
+      id: 'tripsAndExpiriences',
+      sectionTitleKey: 'tripsAndExpiriencesFaqsTitle',
+      faqs: [
         {
-          pointKey: 'faqsCat2Q1Title',
-          subPoints: ['faqsCat2Q1Point1'],
+          id: 'experienceType',
+          questionKey: 'faqExperienceTypeQuestion',
+          answerKey: 'faqExperienceTypeAnswer',
         },
         {
-          pointKey: 'faqsCat2Q2Title',
-          subPoints: ['faqsCat2Q2Point1'],
+          id: 'experienceLevel',
+          questionKey: 'faqExperienceLevelQuestion',
+          answerKey: 'faqExperienceLevelAnswer',
         },
         {
-          pointKey: 'faqsCat2Q3Title',
-          subPoints: ['faqsCat2Q3Point1'],
+          id: 'experienceAlone',
+          questionKey: 'faqExperienceAloneQuestion',
+          answerKey: 'faqExperienceAloneAnswer',
         },
         {
-          pointKey: 'faqsCat2Q4Title',
-          subPoints: ['faqsCat2Q4Point1'],
+          id: 'experiencePacking',
+          questionKey: 'faqExperiencePackingQuestion',
+          answerKey: 'faqExperiencePackingAnswer',
         },
         {
-          pointKey: 'faqsCat2Q5Title',
-          subPoints: ['faqsCat2Q5Point1'],
-        },
-      ],
-    },
-    {
-      id: 'bookings-payments',
-      titleKey: 'faqsCat3Title',
-      points: [
-        {
-          pointKey: 'faqsCat3Q1Title',
-          subPoints: ['faqsCat3Q1Point1'],
-        },
-        {
-          pointKey: 'faqsCat3Q2Title',
-          subPoints: ['faqsCat3Q2Point1'],
-        },
-        {
-          pointKey: 'faqsCat3Q3Title',
-          subPoints: ['faqsCat3Q3Point1'],
+          id: 'experienceCustom',
+          questionKey: 'faqExperienceCustomQuestion',
+          answerKey: 'faqExperienceCustomAnswer',
         },
       ],
     },
     {
-      id: 'safety-health',
-      titleKey: 'faqsCat4Title',
-      points: [
+      id: 'bookingAndPayment',
+      sectionTitleKey: 'bookingAndPaymentFaqsTitle',
+      faqs: [
         {
-          pointKey: 'faqsCat4Q1Title',
-          subPoints: ['faqsCat4Q1Point1'],
+          id: 'bookingAndPaymentHowToReserve',
+          questionKey: 'faqBookingAndPaymentHowToReserveQuestion',
+          answerKey: 'faqBookingAndPaymentHowToReserveAnswer',
         },
         {
-          pointKey: 'faqsCat4Q2Title',
-          subPoints: ['faqsCat4Q2Point1'],
+          id: 'bookingAndPaymentMethods',
+          questionKey: 'faqBookingAndPaymentMethodsQuestion',
+          answerKey: 'faqBookingAndPaymentMethodsAnswer',
         },
         {
-          pointKey: 'faqsCat4Q3Title',
-          subPoints: ['faqsCat4Q3Point1'],
-        },
-        {
-          pointKey: 'faqsCat4Q4Title',
-          subPoints: ['faqsCat4Q4Point1'],
+          id: 'bookingAndPaymentPolicies',
+          questionKey: 'faqBookingAndPaymentPoliciesQuestion',
+          answerKey: 'faqBookingAndPaymentPoliciesAnswer',
         },
       ],
     },
     {
-      id: 'general-information',
-      titleKey: 'faqsCat5Title',
-      points: [
+      id: 'safetyAndHealth',
+      sectionTitleKey: 'safetyAndHealthFaqsTitle',
+      faqs: [
         {
-          pointKey: 'faqsCat5Q1Title',
-          subPoints: ['faqsCat5Q1Point1'],
+          id: 'safetyAndHealthMeasures',
+          questionKey: 'faqSafetyAndHealthMeasuresQuestion',
+          answerKey: 'faqSafetyAndHealthMeasuresAnswer',
         },
         {
-          pointKey: 'faqsCat5Q2Title',
-          subPoints: ['faqsCat5Q2Point1'],
+          id: 'safetyAndHealthInsurance',
+          questionKey: 'faqSafetyAndHealthInsuranceQuestion',
+          answerKey: 'faqSafetyAndHealthInsuranceAnswer',
         },
         {
-          pointKey: 'faqsCat5Q3Title',
-          subPoints: ['faqsCat5Q3Point1'],
+          id: 'safetyAndHealthEmergency',
+          questionKey: 'faqSafetyAndHealthEmergencyQuestion',
+          answerKey: 'faqSafetyAndHealthEmergencyAnswer',
         },
         {
-          pointKey: 'faqsCat5Q4Title',
-          subPoints: ['faqsCat5Q4Point1'],
-        },
-        {
-          pointKey: 'faqsCat5Q5Title',
-          subPoints: ['faqsCat5Q5Point1'],
+          id: 'safetyAndHealthLiability',
+          questionKey: 'faqSafetyAndHealthLiabilityQuestion',
+          answerKey: 'faqSafetyAndHealthLiabilityAnswer',
         },
       ],
     },
-    // Add more sections and points as needed
+    {
+      id: 'generalInformation',
+      sectionTitleKey: 'generalInformationFaqsTitle',
+      faqs: [
+        {
+          id: 'generalInformationDiveCenter',
+          questionKey: 'faqGeneralInformationDiveCenterQuestion',
+          answerKey: 'faqGeneralInformationDiveCenterAnswer',
+        },
+        {
+          id: 'generalInformationCustomExperience',
+          questionKey: 'faqGeneralInformationCustomExperienceQuestion',
+          answerKey: 'faqGeneralInformationCustomExperienceAnswer',
+        },
+        {
+          id: 'generalInformationInformation',
+          questionKey: 'faqGeneralInformationInformationQuestion',
+          answerKey: 'faqGeneralInformationInformationAnswer',
+        },
+        {
+          id: 'generalInformationEnvironment',
+          questionKey: 'faqGeneralInformationEnvironmentQuestion',
+          answerKey: 'faqGeneralInformationEnvironmentAnswer',
+        },
+        {
+          id: 'generalInformationContact',
+          questionKey: 'faqGeneralInformationContactQuestion',
+          answerKey: 'faqGeneralInformationContactAnswer',
+        },
+      ],
+    },
   ],
+
+  // Add more sections and points as needed
 };

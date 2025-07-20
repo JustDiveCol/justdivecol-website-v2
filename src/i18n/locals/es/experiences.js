@@ -1,16 +1,6 @@
 // src/i18n/locales/es/experiences.js
 export default {
   // ===== Common =====
-  day: 'Día',
-
-  expTitle: 'Nuestras experiencias submarinas',
-  expSubtitle:
-    'Desde tu primera respiración bajo el agua hasta convertirte en un explorador avanzado, JustDiveCol tiene una aventura diseñada especialmente para ti. ¡Sumérgete y vive la pasión por el océano!',
-
-  availableTripsTitle: 'Próximas experiencias y cursos disponibles',
-  courseCtaAvailableTitle:
-    '¿Listo para dar el gran salto y obtener tu certificación?',
-  courseCtaAvailableButton: 'Ver nuestras políticas de cancelación',
 
   // ===== Experience Santa Marta Sept 2025 =====
   expsmsept25Name: 'Experiencia de certificación Open Water: Santa Marta',
@@ -161,4 +151,6 @@ export default {
   expsmsept25CtaTitle:
     '¿Listo para tu primera inmersión y obtener tu certificación PADI?',
   expsmsept25CtaButtonText: 'Comienza tu aventura de buceo con JustDiveCol hoy',
+  expsmsept25CtaWhatsAppMessage:
+    'Hola, JustDiveCol. ¡Me interesa su experiencia "Open Water: Santa Marta"! ¿Podrían darme más información para iniciar mi certificación PADI?',
 };

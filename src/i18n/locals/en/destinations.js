@@ -4,6 +4,24 @@ export default {
   destinationUpcomingTripsTitle:
     'Upcoming Trips and Adventures to This Destination',
 
+  exploreDestination: 'Explore this destination',
+
+  // ----- Available Destination -----
+  destinationAvailableTitle: 'Upcoming expeditions to this underwater paradise',
+  destinationAvailableSubtitle:
+    "Don't miss the chance to dive into the wonders of this destination. Book your spot on our next departures!",
+  destinationAvailableCtaText: 'View dates and book',
+  destinationAvailableCtaMessage:
+    "Hello, JustDiveCol team. I'd like more information about the upcoming diving expeditions to [Destination Name]. I'm ready to explore!",
+
+  // ----- No Upcoming Destination -----
+  destinationNoUpcomingTitle: 'Explore this destination on your terms!',
+  destinationNoUpcomingSubtitle:
+    "We currently don't have scheduled trips for [Destination Name], but we can design a personalized experience that fulfills all your wishes. Tell us your vision!",
+  destinationNoUpcomingCtaText: 'Plan my trip to [Destination Name]',
+  destinationNoUpcomingCtaMessage:
+    "Hello, JustDiveCol team. I'm interested in a dive trip to [Destination Name] but don't see any scheduled dates. Could we explore personalized options?",
+
   // =============== Santa Marta ===============
   smName: 'Santa Marta',
 

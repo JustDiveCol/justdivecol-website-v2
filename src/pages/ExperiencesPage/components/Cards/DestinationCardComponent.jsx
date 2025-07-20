@@ -73,7 +73,7 @@ const DestinationCardComponent = ({ destinationData }) => {
       <Link
         to={`/destinos/${id}`}
         className='block bg-brand-cta-orange text-center text-brand-white font-bold uppercase p-3 hover:bg-opacity-90 transition-colors mt-auto'>
-        {t('common:exploreDestination')}
+        {t('exploreDestination')}
       </Link>
     </motion.div>
   );

@@ -33,7 +33,7 @@ const CurriculumCard = ({ detailsData, translationNS }) => {
         {t(detailsData.titleKey)}
       </h3>
 
-      <div className='space-y-6'>
+      <div className='space-y-6 pt-4 border-t border-brand-primary-light/40'>
         {detailsData.modules.map((module) => (
           <div key={module.id}>
             <h4 className='font-semibold text-brand-cta-green'>

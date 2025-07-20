@@ -86,7 +86,7 @@ const CertificationsSection = ({ certificationsData }) => {
         </div>
 
         {/* Carousel navigation controls are only rendered if there is more than one page. */}
-        {totalPages > 0 && (
+        {totalPages > 1 && (
           <div className='flex items-center justify-center mt-8 space-x-4'>
             <button
               onClick={handlePrev}

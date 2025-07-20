@@ -26,14 +26,23 @@ export const experiencesPageData = {
     // textOverlayKey: '',
     photoCreditKey: 'expHeaderPhotoCredit',
   },
-  // We reuse the shared categories and add page-specific anchor links
   categories: experienceCategories.map((cat) => ({
     ...cat,
     link: `#${cat.id}`,
   })),
   upcomingTrips: {
-    titleKey: 'expTripsTitle',
-    subtitleKey: 'expTripsSubtitle',
+    titleKey: 'expAvailableTitle',
+    subtitleKey: 'expAvailableSubtitle',
+    pastTitleKey: 'expPastTripsTitle',
+  },
+  noUpcomingTrips: {
+    titleKey: 'expNoUpcomingTripsTitle',
+    subtitleKey: 'expNoUpcomingTripsSubtitle',
+    ctaTextKey: 'expNoUpcomingTripsCtaText',
+    ctaAction: {
+      type: 'whatsapp',
+      whatsAppMessageKey: 'expNoUpcomingTripsCtaMessage',
+    },
   },
   fullCatalog: {
     courses: {
@@ -50,7 +59,11 @@ export const experiencesPageData = {
     titleKey: 'expCtaTitle',
     subtitleKey: 'expCtaSubtitle',
     ctaTextKey: 'expCtaButton',
-    ctaLink: '/contacto',
+    ctaAction: {
+      type: 'whatsapp',
+      path: '',
+      whatsAppMessageKey: 'expCtaWhatsAppMessage',
+    },
     mainLogo: logo,
     mainLogoAltKey: 'expCtaMainLogoAlt',
     // complementaryLogo: '',

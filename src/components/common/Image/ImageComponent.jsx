@@ -1,18 +1,14 @@
 // src/components/common/Image/ImageComponent.jsx
-
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const variantStyles = {
-  fullscreen: 'h-full', // 'h-screen' puede ser muy grande, 'h-full' es más flexible.
+  fullscreen: 'h-full',
   header: 'h-[600px]',
   horizontal: 'aspect-[4/3]',
   vertical: 'aspect-[3/4]',
   square: 'aspect-square',
 };
-
-const isAspectVariant = (variant) =>
-  variant === 'horizontal' || variant === 'vertical' || variant === 'square';
 
 const ImageComponent = ({ className = '', imageData, translationNS }) => {
   const { t } = useTranslation(translationNS);
@@ -32,7 +28,6 @@ const ImageComponent = ({ className = '', imageData, translationNS }) => {
     variant,
   } = imageData;
 
-  // Se determina la clase principal del contenedor
   const variantClass = variantStyles[variant] || 'h-full';
   const wrapperClass = `group relative w-full bg-cover bg-center select-none ${variantClass} ${className}`;
 
@@ -41,44 +36,44 @@ const ImageComponent = ({ className = '', imageData, translationNS }) => {
       onContextMenu={(e) => e.preventDefault()}
       className={wrapperClass}
       style={{ backgroundImage: `url(${backgroundImage})` }}>
-      {/* Top-left text overlay */}
+      {/* Top-left text overlay: Adjusted text size for responsiveness */}
       {textOverlayKey && (
         <div
           onContextMenu={(e) => e.preventDefault()}
-          className='select-none absolute top-4 left-4 text-brand-neutral text-2xl font-bold drop-shadow-md opacity-80 uppercase'>
+          className='select-none absolute top-2 left-2 text-brand-neutral text-sm sm:text-base md:text-lg lg:text-2xl font-bold drop-shadow-md opacity-80 uppercase z-20'>
           {t(textOverlayKey)}
         </div>
       )}
 
-      {/* Top-right complementary logo */}
+      {/* Top-right complementary logo: Adjusted width for responsiveness */}
       {complementaryLogo && (
         <div
           onContextMenu={(e) => e.preventDefault()}
-          className='select-none absolute top-4 right-4 drop-shadow-md opacity-70 w-12 h-auto'>
+          className='select-none absolute top-2 right-2 drop-shadow-md opacity-70 z-20 w-8 h-auto sm:w-10 md:w-12'>
           <img
             src={complementaryLogo}
             alt={t(complementaryLogoAltKey)}
-            className='w-12 h-auto'
+            className='w-full h-auto'
           />
         </div>
       )}
 
-      {/* Bottom-right main logo */}
+      {/* Bottom-right main logo: Adjusted width for responsiveness */}
       {mainLogo && (
         <div
           onContextMenu={(e) => e.preventDefault()}
-          className='select-none absolute bottom-4 right-4 drop-shadow-md opacity-70 w-24 h-auto'>
+          className='select-none absolute bottom-2 right-2 drop-shadow-md opacity-70 z-20 w-16 h-auto sm:w-20 md:w-24'>
           <img
             src={mainLogo}
             alt={t(mainLogoAltKey)}
-            className='w-24 h-auto'
+            className='w-full h-auto'
           />
         </div>
       )}
 
-      {/* Footer alt text on hover */}
+      {/* Footer alt text on hover: Adjusted padding and text size */}
       {photoCreditKey && (
-        <div className='absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20'>
+        <div className='absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20'>
           {t(photoCreditKey)}
         </div>
       )}

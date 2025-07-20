@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../hooks/animations';
 
-const SimpleCardComponent = ({ cardData }) => {
-  const { t } = useTranslation('home');
+const SimpleCardComponent = ({ cardData, translationNS }) => {
+  const { t } = useTranslation(translationNS);
 
   const {
     backgroundImage,
@@ -74,9 +74,9 @@ const SimpleCardComponent = ({ cardData }) => {
         {/* Content */}
         <div className='relative z-20 h-full flex flex-col justify-end p-6 text-white'>
           <h3 className='text-xl uppercase tracking-widest text-brand-cta-orange font-bold'>
-            {t(categoryKey)}
+            {t(titleKey)}
           </h3>
-          <p className='mt-2 text-lg md:text-lg'>{t(titleKey)}</p>
+          <p className='mt-2 text-lg md:text-lg'>{t(categoryKey)}</p>
         </div>
       </div>
     ),

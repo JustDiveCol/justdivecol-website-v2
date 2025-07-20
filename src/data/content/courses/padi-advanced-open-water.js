@@ -64,6 +64,7 @@ export const padiAdvancedOpenWaterDiverCourse = {
   // --- Main Content ---
   details: {
     titleKey: 'aowdDetailsTitle',
+    durationKey: 'aowdDetailDurationValue',
     items: [
       { labelKey: 'aowdDetailLabel1', valueKey: 'aowdDetailValue1' },
       { labelKey: 'aowdDetailLabel2', valueKey: 'aowdDetailValue2' },

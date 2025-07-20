@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 
 import MapComponent from './components/MapComponent';
 import SEOComponent from '../../components/ui/SEOComponent';
+import HeaderComponent from '../../components/HeaderComponent';
 
 import { mapData } from '../../data/pages/mapData';
 import { staggerContainer, fadeInUp } from '../../hooks/animations';
@@ -13,7 +14,7 @@ import { staggerContainer, fadeInUp } from '../../hooks/animations';
  * This page provides a full view of all dive sites and allows users to filter and explore.
  */
 const MapPage = () => {
-  const { t } = useTranslation(['common']);
+  const { t } = useTranslation(['map']);
 
   return (
     <>
@@ -31,22 +32,17 @@ const MapPage = () => {
         variants={staggerContainer}
         initial='initial'
         animate='animate'>
-        <motion.header
-          variants={fadeInUp}
-          className='container mx-auto pt-5 pb-4'>
-          <h1 className='text-3xl lg:text-4xl font-bold text-brand-white text-center mb-4'>
-            {t(mapData.titleKey)}
-          </h1>
-          <p className='mx-auto text-lg text-brand-neutral/80 text-justify'>
-            {t(mapData.descriptionKey)}
-          </p>
-        </motion.header>
+        <HeaderComponent
+          sectionData={mapData.header}
+          translationNS='map'
+          heightClass='h-64'
+        />
 
         <motion.main
           variants={fadeInUp}
           initial='initial'
           animate='animate'
-          className='flex-grow w-full px-6 md:px-12'>
+          className='flex-grow w-full px-6 md:px-12 py-4'>
           <div className='bg-brand-primary-medium rounded-2xl'>
             <MapComponent />
           </div>

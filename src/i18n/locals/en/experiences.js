@@ -7,11 +7,6 @@ export default {
   expSubtitle:
     'From your very first breath underwater to becoming an advanced explorer, JustDiveCol has an adventure specially designed for you. Dive in and live the passion for the ocean!',
 
-  availableTripsTitle: 'Upcoming Experiences and Courses Available',
-  courseCtaAvailableTitle:
-    'Ready to take the plunge and get your certification?',
-  courseCtaAvailableButton: 'View Our Cancellation Policies',
-
   // ===== Experience Santa Marta Sept 2025 =====
   expsmsept25Name: 'Open Water Certification Experience: Santa Marta',
   // --- SEO Content ---
@@ -159,4 +154,6 @@ export default {
     'Ready for your first dive and to get your PADI certification?',
   expsmsept25CtaButtonText:
     'Start Your Diving Adventure with JustDiveCol Today',
+  expsmsept25CtaWhatsAppMessage:
+    'Hello, JustDiveCol. I\'m interested in your "Open Water: Santa Marta" experience! Could you provide more information to start my PADI certification?',
 };

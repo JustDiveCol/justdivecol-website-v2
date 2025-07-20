@@ -7,7 +7,7 @@ import { staggerContainer } from '../../hooks/animations';
 
 import SEOComponent from '../../components/ui/SEOComponent';
 import HeaderComponent from '../../components/HeaderComponent';
-import FaqsComponent from './FaqsComponent';
+import FaqsContentSection from '../../sections/FaqsContentSection';
 
 const FaqsPage = () => {
   const { t } = useTranslation('privacyPolicy');
@@ -30,15 +30,11 @@ const FaqsPage = () => {
           sectionData={faqsData.header}
           translationNS='faqs'
         />
-        <div className='container mx-auto py-16 px-4'>
-          {/* Solo un mapeo de sections aquí */}
-          {faqsData.sections.map((section) => (
-            <FaqsComponent
-              key={section.id}
-              renderData={section}
-              translationNS={'faqs'}
-            />
-          ))}
+        <div className='container mx-auto py-8 px-4'>
+          <FaqsContentSection
+            faqsData={faqsData}
+            translationNS='faqs'
+          />
         </div>
       </motion.div>
     </>

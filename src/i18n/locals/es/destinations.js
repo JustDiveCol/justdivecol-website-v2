@@ -1,7 +1,31 @@
 // src/i18n/locales/es/destinations.js
 export default {
   // =============== Common ===============
-  destinationUpcomingTripsTitle: 'Próximos viajes y aventuras a este destino',
+  availableTripsTitle: 'Próximos viajes y aventuras a este destino',
+
+  noUpcomingTripsMessage: '¡Explora este destino a tu medida!',
+  noUpcomingTripsSubtitle:
+    'Actualmente, no tenemos viajes programados para {{destinationName}}. Sin embargo, podemos diseñar una experiencia personalizada que cumpla todos tus deseos. ¡Cuéntanos tu visión!',
+  noUpcomingTripsCtaButton: 'Planificar mi viaje a este destino',
+  noUpcomingTripsWhatsAppMessage:
+    'Hola, JustDiveCol. Estoy interesado en un viaje de buceo a {{destinationName}} pero no veo fechas programadas. ¿Podríamos explorar opciones personalizadas para este destino?',
+  exploreDestination: 'Explorar este destino',
+
+  // ----- Available Destination -----
+  destinationAvailableTitle: 'Próximas expediciones a este paraíso submarino',
+  destinationAvailableSubtitle:
+    'No te pierdas la oportunidad de sumergirte en las maravillas de este destino. ¡Reserva tu lugar en nuestras próximas salidas!',
+  destinationAvailableCtaText: 'Ver fechas y reservar',
+  destinationAvailableCtaMessage:
+    'Hola, equipo de JustDiveCol. Me gustaría más información sobre las próximas expediciones de buceo a [Nombre del Destino]. ¡Estoy listo/a para explorar!',
+
+  // ----- No Upcoming Destination -----
+  destinationNoUpcomingTitle: '¡Explora este destino a tu medida!',
+  destinationNoUpcomingSubtitle:
+    'Actualmente no tenemos viajes programados para [Nombre del Destino], pero podemos diseñar una experiencia personalizada que cumpla todos tus deseos. ¡Cuéntanos tu visión!',
+  destinationNoUpcomingCtaText: 'Planificar mi viaje a [Nombre del Destino]',
+  destinationNoUpcomingCtaMessage:
+    'Hola, equipo de JustDiveCol. Estoy interesado/a en un viaje de buceo a [Nombre del Destino] pero no veo fechas programadas. ¿Podríamos explorar opciones personalizadas?',
 
   // =============== Santa Marta ===============
   smName: 'Santa Marta',

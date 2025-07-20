@@ -1,13 +1,13 @@
 // src/pages/DetailPage/ExperiencePage/Layout/ExperienceLayout.jsx
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 // Animation variants and data
 import { staggerContainer } from '../../../../hooks/animations';
 import { paymentMethodsData } from '../../../../data/global/paymentMethodsData';
-import { contactPageData } from '../../../../data/pages/contactData';
 import { publishedExperiences } from '../../../../data/content/experiences/_index';
+import { formatDateRange } from '../../../../utils/formatters';
 
 // Reusable section and card components
 import HeaderComponent from '../../../../components/HeaderComponent';
@@ -17,8 +17,8 @@ import DetailsCard from '../../common/Cards/DetailsCard';
 import PaymentCard from '../../common/Cards/PaymentCard';
 import ChecklistCard from '../../common/Cards/ChecklistCard';
 import CtaCard from '../../common/Cards/CtaCard';
-import UpcomingTripsHorizontalSection from '../../common/Sections/UpcomingTripsHorizontalSection';
-import UpcomingCoursesHorizontalSection from '../../common/Sections/UpcomingCoursesHorizontalSection';
+import UpcomingTripSection from '../../common/Sections/UpcomingTripSection';
+import UpcomingCoursesSection from '../../common/Sections/UpcomingCoursesSection';
 import ItinerarySection from '../../common/Sections/ItinerarySection';
 import MapComponent from '../../../MapPage/components/MapComponent';
 import CurriculumCard from '../../common/Cards/CurriculumCard';
@@ -32,7 +32,7 @@ import CurriculumCard from '../../common/Cards/CurriculumCard';
  * @param {object[]} props.offeredCoursesData - An array of course data objects offered with this trip.
  */
 const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
-  const { t } = useTranslation([
+  const { t, i18n } = useTranslation([
     'experiences',
     'common',
     'payment',
@@ -41,7 +41,32 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
     'destinations',
   ]);
 
-  // A guard clause to prevent rendering if the essential page data is missing.
+  const { dateRangeText, durationText } = useMemo(() => {
+    if (!experienceData?.details) {
+      return {};
+    }
+
+    const { startDate, endDate } = experienceData.details;
+    if (!startDate || !endDate) {
+      return {};
+    }
+
+    // Use your existing helper for the date range
+    const dateRange = formatDateRange(startDate, endDate, i18n.language, t);
+
+    // Calculate the duration
+    const start = new Date(`${startDate}T00:00:00`);
+    const end = new Date(`${endDate}T00:00:00`);
+    const timeDiff = end.getTime() - start.getTime();
+    const dayDiff = Math.round(timeDiff / (1000 * 3600 * 24));
+
+    const days = dayDiff + 1;
+    const nights = days - 1;
+    const duration = t('durationFormat', { ns: 'common', days, nights });
+
+    return { dateRangeText: dateRange, durationText: duration };
+  }, [experienceData, t, i18n.language]);
+
   if (!experienceData) {
     return (
       <div className='flex items-center justify-center min-h-screen text-red-500 text-2xl'>
@@ -50,22 +75,8 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
     );
   }
 
-  // --- Logic and Data Preparation ---
-
-  // For simplicity, we only show the "What's Included" for the first offered course.
   const primaryCourseData = offeredCoursesData?.[0] || null;
 
-  // Construct a pre-filled WhatsApp URL for experience-specific inquiries.
-  const prefilledText = t('contactWhatsAppMessage', {
-    ns: 'contact',
-    experienceName: t(experienceData.nameKey, { ns: 'experiences' }),
-  });
-  const whatsappUrl = `https://wa.me/${contactPageData.contactInfo.phone.replace(
-    /\s/g,
-    ''
-  )}?text=${encodeURIComponent(prefilledText)}`;
-
-  // Find other upcoming trips to the same destination to show as alternatives.
   const otherTripsToThisDestination = experienceData.destinationId
     ? publishedExperiences.filter(
         (trip) =>
@@ -90,7 +101,7 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
         {/* --- Main Content Column (Left) --- */}
         <main className='lg:col-span-2 space-y-16 lg:sticky top-24 h-fit'>
           {otherTripsToThisDestination.length > 0 && (
-            <UpcomingTripsHorizontalSection
+            <UpcomingTripSection
               availableTrips={otherTripsToThisDestination}
               titleKey='expOtherTripsTitle'
               translationNS='experiences'
@@ -98,7 +109,7 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
           )}
           {/* Courses offered */}
           {offeredCoursesData && offeredCoursesData.length > 0 && (
-            <UpcomingCoursesHorizontalSection
+            <UpcomingCoursesSection
               availableCourses={offeredCoursesData}
               titleKey={experienceData.offeredCourses.titleKey}
               translationNS='experiences'
@@ -125,26 +136,33 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
 
         {/* --- Sidebar Column (Right) --- */}
         <aside className='lg:col-span-1 space-y-8 lg:sticky top-24 h-fit'>
+          {/* Details */}
           <DetailsCard
             detailsData={experienceData.details}
+            dateRange={dateRangeText}
+            duration={durationText}
             translationNS='experiences'
           />
+          {/* Payment Plan */}
           <CurriculumCard
             detailsData={experienceData.paymentPlan}
             translationNS='experiences'
           />
 
+          {/* Payment Options */}
           <PaymentCard
             paymentData={paymentMethodsData}
             translationNS='payment'
           />
+
+          {/* Included Experience */}
           <ChecklistCard
             checklistData={experienceData.whatIsIncluded}
             translationNS='experiences'
             type='included'
           />
 
-          {/* If a course is offered, show what's included with that course as well. */}
+          {/* Included Course */}
           {primaryCourseData && (
             <ChecklistCard
               checklistData={primaryCourseData.whatIsIncluded}
@@ -153,39 +171,33 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
             />
           )}
 
+          {/* Not Included */}
           <ChecklistCard
             checklistData={experienceData.whatIsNotIncluded}
             translationNS='experiences'
             type='excluded'
           />
 
+          {/* CTA */}
           <CtaCard
             ctaData={{
               titleKey: experienceData.cta.titleKey,
               buttonTextKey: experienceData.cta.buttonTextKey,
-              link: whatsappUrl,
-              isExternal: true,
+              ctaAction: experienceData.cta.ctaAction,
             }}
             translationNS='experiences'
           />
         </aside>
       </div>
-      {/* --- SECCIÓN DEL MAPA --- */}
-      {/* El fondo de la sección se extiende a todo lo ancho, creando el efecto de banner. */}
+
+      {/* Map */}
       <section className='w-full bg-brand-primary-medium py-12 md:py-16 mt-16'>
-        {/* Contenedor interno para centrar el contenido. */}
         <div className='container mx-auto px-4 md:px-8'>
-          {/* Título de la sección. */}
           <h3 className='text-3xl font-bold text-brand-white mb-4'>
-            {t('common:mapLabel', 'El Mundo Submarino: Puntos de Inmersión')}
+            {t('map:mapLabel')}
           </h3>
 
-          {/* --- La "Tarjeta" Flotante del Mapa --- */}
-          {/* Este es el div clave. Le damos un color de fondo ligeramente diferente,
-        padding, esquinas redondeadas y una sombra para que "flote". */}
           <div className='bg-brand-primary-dark p-4 sm:p-6 rounded-2xl shadow-2xl'>
-            {/* Envolvemos el mapa en otro div con bordes redondeados y overflow-hidden
-          para asegurar que el mapa (que es un canvas) no se salga de los bordes. */}
             <div className='rounded-lg overflow-hidden'>
               <MapComponent destinationId={experienceData.destinationId} />
             </div>

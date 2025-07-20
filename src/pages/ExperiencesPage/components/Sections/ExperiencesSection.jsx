@@ -30,6 +30,7 @@ const ExperiencesSection = () => {
             <SimpleCardComponent
               key={card.id}
               cardData={card}
+              translationNS={'home'}
             />
           ))}
         </motion.div>

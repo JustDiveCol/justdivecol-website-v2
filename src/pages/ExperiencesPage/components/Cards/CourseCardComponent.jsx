@@ -29,11 +29,6 @@ const CourseCardComponent = ({ courseData }) => {
       : 'bg-brand-cta-yellow text-brand-primary-dark';
   };
 
-  // Find the course duration from the details array by its specific translation key.
-  const duration = details.items.find(
-    (item) => item.labelKey === 'owdDetailLabel1'
-  )?.valueKey;
-
   return (
     <motion.div
       variants={fadeInUp}
@@ -52,15 +47,15 @@ const CourseCardComponent = ({ courseData }) => {
         </p>
         <div className='mt-6 pt-4 border-t border-brand-primary-light/20 flex justify-between items-center'>
           <span
-            className={`font-bold text-sm px-3 py-1 rounded-full ${getStatusStyles(
+            className={`font-bold text-center text-sm px-3 py-1 rounded-full ${getStatusStyles(
               availability
             )}`}>
             {t(`common:${availability}`)}
           </span>
           {/* Conditionally render the duration if it was found in the data. */}
-          {duration && (
-            <span className=' text-sm text-brand-neutral bg-brand-primary-light px-3 py-1 rounded-full'>
-              {t(duration, { ns: 'courses' })}
+          {details?.durationKey && (
+            <span className='text-sm text-center text-brand-neutral bg-brand-primary-light px-3 py-1 rounded-full'>
+              {t(details.durationKey, { ns: 'courses' })}
             </span>
           )}
         </div>
