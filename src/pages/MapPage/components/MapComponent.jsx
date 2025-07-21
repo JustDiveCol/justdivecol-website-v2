@@ -18,10 +18,7 @@ import {
   allDivesites,
 } from '../../../data/content/divesites/_index';
 
-import {
-  DIVE_TYPES,
-  DIVE_DIFFICULTIES,
-} from '../../../data/global/diveSiteOptions';
+import { DIVE_TYPES, DIVE_DIFFICULTIES } from '../../../data/global/diveSiteOptions';
 
 // ========== Icons ==========
 import { DiverIcon } from '../../../assets/icons/DiverIcons';
@@ -87,21 +84,19 @@ const MotionMarker = ({ IconComponent, isSelected }) => (
       justifyContent: 'center',
       border: '2px solid var(--color-brand-primary-dark)',
       borderRadius: '9999px',
-      backgroundColor: isSelected
-        ? 'var(--color-brand-cta-orange)'
-        : 'var(--color-brand-white)',
+      backgroundColor: isSelected ? 'var(--color-brand-cta-orange)' : 'var(--color-brand-white)',
       width: '100%',
       height: '100%',
       pointerEvents: 'auto',
       transition: 'background-color 0.3s ease',
-    }}>
+    }}
+  >
     <motion.div
       whileHover={{ scale: 1.6 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 10 }}>
+      transition={{ type: 'spring', stiffness: 300, damping: 10 }}
+    >
       <IconComponent
-        className={
-          isSelected ? 'text-white w-4 h-4' : 'text-brand-primary-dark w-4 h-4'
-        }
+        className={isSelected ? 'text-white w-4 h-4' : 'text-brand-primary-dark w-4 h-4'}
       />
     </motion.div>
   </motion.div>
@@ -141,26 +136,19 @@ const MapComponent = ({ destinationId }) => {
   } = getMapConfigByDestination(destinationId);
 
   const baseSites = useMemo(
-    () =>
-      destinationId ? getDivesitesByDestination(destinationId) : allDivesites,
+    () => (destinationId ? getDivesitesByDestination(destinationId) : allDivesites),
     [destinationId]
   );
 
   const typeFilterOptions = useMemo(() => {
     const relevantSites = baseSites.filter(
       (site) =>
-        (activeDifficulty === 'all' ||
-          site.difficultyId === activeDifficulty) &&
-        (activeDestination === 'all' ||
-          site.destinationId === activeDestination)
+        (activeDifficulty === 'all' || site.difficultyId === activeDifficulty) &&
+        (activeDestination === 'all' || site.destinationId === activeDestination)
     );
     const presentTypeIds = new Set();
-    relevantSites.forEach((site) =>
-      site.typeIds?.forEach((id) => presentTypeIds.add(id))
-    );
-    const filteredTypes = DIVE_TYPES.filter((type) =>
-      presentTypeIds.has(type.id)
-    );
+    relevantSites.forEach((site) => site.typeIds?.forEach((id) => presentTypeIds.add(id)));
+    const filteredTypes = DIVE_TYPES.filter((type) => presentTypeIds.has(type.id));
     return [{ id: 'all', translationKey: 'map:allLabel' }, ...filteredTypes];
   }, [baseSites, activeDifficulty, activeDestination]);
 
@@ -168,19 +156,13 @@ const MapComponent = ({ destinationId }) => {
     const relevantSites = baseSites.filter(
       (site) =>
         (activeType === 'all' || site.typeIds.includes(activeType)) &&
-        (activeDestination === 'all' ||
-          site.destinationId === activeDestination)
+        (activeDestination === 'all' || site.destinationId === activeDestination)
     );
-    const presentDifficultyIds = new Set(
-      relevantSites.map((s) => s.difficultyId)
-    );
+    const presentDifficultyIds = new Set(relevantSites.map((s) => s.difficultyId));
     const filteredDifficulties = DIVE_DIFFICULTIES.filter((diff) =>
       presentDifficultyIds.has(diff.id)
     );
-    return [
-      { id: 'all', translationKey: 'map:allLabel' },
-      ...filteredDifficulties,
-    ];
+    return [{ id: 'all', translationKey: 'map:allLabel' }, ...filteredDifficulties];
   }, [baseSites, activeType, activeDestination]);
 
   const destinationOptions = useMemo(() => {
@@ -190,9 +172,7 @@ const MapComponent = ({ destinationId }) => {
         (activeType === 'all' || site.typeIds.includes(activeType)) &&
         (activeDifficulty === 'all' || site.difficultyId === activeDifficulty)
     );
-    const uniqueDestinationIds = new Set(
-      relevantSites.map((s) => s.destinationId)
-    );
+    const uniqueDestinationIds = new Set(relevantSites.map((s) => s.destinationId));
     if (uniqueDestinationIds.size === 0) return [];
     const options = Array.from(uniqueDestinationIds)
       .map((id) => {
@@ -229,10 +209,7 @@ const MapComponent = ({ destinationId }) => {
       if (!site) return;
       const IconComponent = getIconComponent(site.typeIds?.[0]);
       root.render(
-        <MotionMarker
-          IconComponent={IconComponent}
-          isSelected={id === selectedSiteId}
-        />
+        <MotionMarker IconComponent={IconComponent} isSelected={id === selectedSiteId} />
       );
     });
   }, [selectedSiteId, baseSites]);
@@ -241,11 +218,29 @@ const MapComponent = ({ destinationId }) => {
     if (!map.current) {
       map.current = new maplibregl.Map({
         container: mapContainer.current,
-        style: 'https://tiles.stadiamaps.com/styles/outdoors.json',
+        style: {
+          version: 8,
+          sources: {
+            osm: {
+              type: 'raster',
+              tiles: ['https://a.tile.opentopomap.org/{z}/{x}/{y}.png'],
+              tileSize: 256,
+              attribution:
+                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            },
+          },
+          layers: [
+            {
+              id: 'osm',
+              type: 'raster',
+              source: 'osm',
+            },
+          ],
+        },
         center: initialCenter,
         zoom: initialZoom,
-        minZoom: minZoom,
-        maxZoom: maxZoom,
+        minZoom,
+        maxZoom,
       });
       map.current.addControl(new maplibregl.NavigationControl(), 'top-right');
     } else {
@@ -279,17 +274,13 @@ const MapComponent = ({ destinationId }) => {
 
     const matchingSites = baseSites
       .filter((site) => {
-        const typeMatch =
-          activeType === 'all' || site.typeIds.includes(activeType);
+        const typeMatch = activeType === 'all' || site.typeIds.includes(activeType);
         const difficultyMatch =
           activeDifficulty === 'all' || site.difficultyId === activeDifficulty;
         const destinationMatch =
-          activeDestination === 'all' ||
-          site.destinationId === activeDestination;
+          activeDestination === 'all' || site.destinationId === activeDestination;
         const translatedName = t(site.nameKey);
-        const nameMatch = translatedName
-          ?.toLowerCase()
-          .includes(searchQuery.toLowerCase());
+        const nameMatch = translatedName?.toLowerCase().includes(searchQuery.toLowerCase());
         return typeMatch && difficultyMatch && destinationMatch && nameMatch;
       })
       .map((site) => ({ ...site, translatedName: t(site.nameKey) }));
@@ -309,10 +300,7 @@ const MapComponent = ({ destinationId }) => {
       const root = createRoot(el);
 
       root.render(
-        <MotionMarker
-          IconComponent={IconComponent}
-          isSelected={selectedSiteId === site.id}
-        />
+        <MotionMarker IconComponent={IconComponent} isSelected={selectedSiteId === site.id} />
       );
 
       const marker = new maplibregl.Marker({ element: el })
@@ -327,8 +315,7 @@ const MapComponent = ({ destinationId }) => {
         popupContent.innerText = site.translatedName;
         popupContent.style.padding = '6px 12px';
         popupContent.style.backgroundColor = 'white';
-        popupContent.className =
-          'text-brand-primary-dark font-semibold text-sm';
+        popupContent.className = 'text-brand-primary-dark font-semibold text-sm';
         popupContent.style.borderRadius = '8px';
         popupContent.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
 
@@ -401,7 +388,7 @@ const MapComponent = ({ destinationId }) => {
   }, [selectedSiteId]);
 
   return (
-    <div className='p-2'>
+    <div className="p-2">
       <DiveFiltersComponent
         t={t}
         activeType={activeType}
@@ -428,7 +415,7 @@ const MapComponent = ({ destinationId }) => {
       <div
         ref={mapContainer}
         style={{ height: mapHeight }}
-        className='w-full rounded-lg shadow-md'
+        className="w-full rounded-lg shadow-md"
       />
       {activeSite && (
         <DiveSiteModalComponent
@@ -440,17 +427,14 @@ const MapComponent = ({ destinationId }) => {
         />
       )}
       <div
-        className='bg-brand-cta-yellow/20 border border-brand-cta-yellow/30 text-brand-cta-yellow px-4 py-3 rounded-lg relative mt-4 text-sm'
-        role='alert'>
-        <div className='flex items-center'>
-          <InfoIcon className='w-5 h-5 mr-3' />
+        className="bg-brand-cta-yellow/20 border border-brand-cta-yellow/30 text-brand-cta-yellow px-4 py-3 rounded-lg relative mt-4 text-sm"
+        role="alert"
+      >
+        <div className="flex items-center">
+          <InfoIcon className="w-5 h-5 mr-3" />
           <div>
-            <strong className='font-bold'>
-              {t('mapDisclaimerTitle', { ns: 'map' })}
-            </strong>
-            <span className='block sm:inline'>
-              {t('mapDisclaimerText', { ns: 'map' })}
-            </span>
+            <strong className="font-bold">{t('mapDisclaimerTitle', { ns: 'map' })}</strong>
+            <span className="block sm:inline">{t('mapDisclaimerText', { ns: 'map' })}</span>
           </div>
         </div>
       </div>

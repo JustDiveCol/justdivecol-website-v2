@@ -28,22 +28,16 @@ const MapPage = () => {
       />
 
       {/* Main container with animations and styling */}
-      <motion.div
-        variants={staggerContainer}
-        initial='initial'
-        animate='animate'>
-        <HeaderComponent
-          sectionData={mapData.header}
-          translationNS='map'
-          heightClass='h-64'
-        />
+      <motion.div variants={staggerContainer} initial="initial" animate="animate">
+        <HeaderComponent sectionData={mapData.header} translationNS="map" heightClass="h-64" />
 
         <motion.main
           variants={fadeInUp}
-          initial='initial'
-          animate='animate'
-          className='flex-grow w-full px-6 md:px-12 py-4'>
-          <div className='bg-brand-primary-medium rounded-2xl'>
+          initial="initial"
+          animate="animate"
+          className="flex-grow w-full px-6 md:px-12 py-4"
+        >
+          <div className="bg-brand-primary-medium rounded-2xl">
             <MapComponent />
           </div>
         </motion.main>
