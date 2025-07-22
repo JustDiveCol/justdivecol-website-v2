@@ -69,7 +69,7 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
 
   if (!experienceData) {
     return (
-      <div className='flex items-center justify-center min-h-screen text-red-500 text-2xl'>
+      <div className="flex items-center justify-center min-h-screen text-red-500 text-2xl">
         Experience data incomplete.
       </div>
     );
@@ -87,96 +87,81 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
     : [];
 
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial='hidden'
-      animate='show'
-      exit='hidden'>
-      <HeaderComponent
-        sectionData={experienceData.header}
-        translationNS='experiences'
-      />
+    <motion.div variants={staggerContainer} initial="hidden" animate="show" exit="hidden">
+      <HeaderComponent sectionData={experienceData.header} translationNS="experiences" />
 
-      <div className='container mx-auto p-4 md:p-8 grid lg:grid-cols-3 gap-8 items-start'>
+      <div className="container mx-auto p-4 md:p-8 grid lg:grid-cols-3 gap-8 items-start">
         {/* --- Main Content Column (Left) --- */}
-        <main className='lg:col-span-2 space-y-16 lg:sticky top-24 h-fit'>
-          {otherTripsToThisDestination.length > 0 && (
-            <UpcomingTripSection
-              availableTrips={otherTripsToThisDestination}
-              titleKey='expOtherTripsTitle'
-              translationNS='experiences'
-            />
-          )}
+        <main className="lg:col-span-2 space-y-16 lg:sticky top-24 h-fit">
           {/* Courses offered */}
           {offeredCoursesData && offeredCoursesData.length > 0 && (
             <UpcomingCoursesSection
               availableCourses={offeredCoursesData}
               titleKey={experienceData.offeredCourses.titleKey}
-              translationNS='experiences'
+              translationNS="experiences"
             />
           )}
           {/* Description */}
           <DescriptionSection
             descriptionData={experienceData.description}
-            translationNS='experiences'
+            translationNS="experiences"
           />
 
           {/* Itinerary */}
           {experienceData.itinerary && (
             <ItinerarySection
               itineraryData={experienceData.itinerary}
-              translationNS='experiences'
+              translationNS="experiences"
             />
           )}
-          <GallerySection
-            galleryData={experienceData.gallery}
-            translationNS='experiences'
-          />
+          <GallerySection galleryData={experienceData.gallery} translationNS="experiences" />
         </main>
 
         {/* --- Sidebar Column (Right) --- */}
-        <aside className='lg:col-span-1 space-y-8 lg:sticky top-24 h-fit'>
+        <aside className="lg:col-span-1 space-y-8 lg:sticky top-24 h-fit">
           {/* Details */}
           <DetailsCard
             detailsData={experienceData.details}
             dateRange={dateRangeText}
             duration={durationText}
-            translationNS='experiences'
+            translationNS="experiences"
           />
           {/* Payment Plan */}
-          <CurriculumCard
-            detailsData={experienceData.paymentPlan}
-            translationNS='experiences'
-          />
+          <CurriculumCard detailsData={experienceData.paymentPlan} translationNS="experiences" />
 
           {/* Payment Options */}
-          <PaymentCard
-            paymentData={paymentMethodsData}
-            translationNS='payment'
-          />
+          <PaymentCard paymentData={paymentMethodsData} translationNS="payment" />
 
           {/* Included Experience */}
           <ChecklistCard
             checklistData={experienceData.whatIsIncluded}
-            translationNS='experiences'
-            type='included'
+            translationNS="experiences"
+            type="included"
           />
 
           {/* Included Course */}
           {primaryCourseData && (
             <ChecklistCard
               checklistData={primaryCourseData.whatIsIncluded}
-              translationNS='courses'
-              type='included'
+              translationNS="courses"
+              type="included"
             />
           )}
 
           {/* Not Included */}
           <ChecklistCard
             checklistData={experienceData.whatIsNotIncluded}
-            translationNS='experiences'
-            type='excluded'
+            translationNS="experiences"
+            type="excluded"
           />
+
+          {otherTripsToThisDestination.length > 0 && (
+            <UpcomingTripSection
+              availableTrips={otherTripsToThisDestination}
+              titleKey="expOtherTripsTitle"
+              translationNS="experiences"
+            />
+          )}
 
           {/* CTA */}
           <CtaCard
@@ -185,20 +170,18 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
               buttonTextKey: experienceData.cta.buttonTextKey,
               ctaAction: experienceData.cta.ctaAction,
             }}
-            translationNS='experiences'
+            translationNS="experiences"
           />
         </aside>
       </div>
 
       {/* Map */}
-      <section className='w-full bg-brand-primary-medium py-12 md:py-16 mt-16'>
-        <div className='container mx-auto px-4 md:px-8'>
-          <h3 className='text-3xl font-bold text-brand-white mb-4'>
-            {t('map:mapLabel')}
-          </h3>
+      <section className="w-full bg-brand-primary-medium py-12 md:py-16 mt-16">
+        <div className="container mx-auto px-4 md:px-8">
+          <h3 className="text-3xl font-bold text-brand-white mb-4">{t('map:mapLabel')}</h3>
 
-          <div className='bg-brand-primary-dark p-4 sm:p-6 rounded-2xl shadow-2xl'>
-            <div className='rounded-lg overflow-hidden'>
+          <div className="bg-brand-primary-dark p-4 sm:p-6 rounded-2xl shadow-2xl">
+            <div className="rounded-lg overflow-hidden">
               <MapComponent destinationId={experienceData.destinationId} />
             </div>
           </div>

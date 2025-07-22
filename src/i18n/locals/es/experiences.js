@@ -1,9 +1,12 @@
 // src/i18n/locales/es/experiences.js
 export default {
   // ===== Common =====
+  expOtherTripsTitle: 'Otras experiencias disponibles',
 
   // ===== Experience Santa Marta Sept 2025 =====
-  expsmsept25Name: 'Experiencia de certificación Open Water: Santa Marta',
+  expsmsept25Name: 'CREYENTES / Experiencia de certificación Open Water: Santa Marta',
+  expsmoct25Name: 'Experiencia de certificación Open Water: Santa Marta',
+  expsmnov25Name: 'Experiencia de certificación Open Water: Santa Marta',
   // --- SEO Content ---
   expsmsept25SeoTitle:
     'Certificación PADI Open Water en Santa Marta | Viaje de buceo inolvidable con JustDiveCol',
@@ -11,15 +14,13 @@ export default {
     'Obtén tu licencia de buceo PADI Open Water en un viaje inolvidable a Santa Marta con JustDiveCol. Aprende los fundamentos en las aguas cristalinas del Caribe colombiano y comienza tu emocionante exploración submarina con confianza y seguridad. ¡Tu aventura te espera!',
 
   // --- Page Header ---
-  expsmsept25HeaderTitle:
-    'Tu aventura submarina comienza aquí: ¡Certifícate en Santa Marta!',
+  expsmsept25HeaderTitle: 'Tu aventura submarina comienza aquí: ¡Certifícate en Santa Marta!',
   expsmsept25HeaderSubtitle:
     'Obtén tu certificación PADI Open Water en las mágicas aguas de Santa Marta. Una experiencia inolvidable que te abrirá las puertas al fascinante 70% del planeta.',
   expsmsept25HeaderMainLogoAlt: 'Logo principal de JustDiveCol',
   expsmsept25HeaderComplementaryLogoAlt: 'Logo PADI',
   // expsmsept25HeaderTextOverlay: '',
-  expsmsept25HeaderPhotoCredit:
-    'Créditos de la foto: Camilo Beltran @JustDiveCol',
+  expsmsept25HeaderPhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
   // --- Card Description Content ---
   expsmsept25DescTitle: 'Donde nace un nuevo explorador del mundo azul',
@@ -30,22 +31,23 @@ export default {
     'Más que un simple curso, este viaje es el inicio de una profunda pasión por el buceo, una que te impulsará a explorar el 70% del planeta con una nueva perspectiva. Prepárate para transformar tu percepción del mundo, descubriendo un universo rebosante de vida, color y misterio bajo la superficie. Con la seguridad y el acompañamiento experto de JustDiveCol, cada inmersión será un paso más hacia convertirte en un explorador responsable y apasionado del gran azul.',
 
   // --- Main Content ---
-  expsmsept25DetailsTitle:
-    'Detalles esenciales de tu experiencia de certificación',
+  expsmsept25DetailsTitle: 'Detalles esenciales de tu experiencia de certificación',
 
   expsmsept25DetailLabel1: 'Precio total de la experiencia',
   expsmsept25DetailValue1: 'COP 3.500.000',
+
+  expsmoct25DetailValue1: 'COP4.000.000',
+
+  expsmnov25DetailValue1: 'COP 4.000.000',
 
   expsmsept25DetailLabel2: 'Inmersiones incluidas',
   expsmsept25DetailValue2: '5 en Aguas Confinadas + 4 en Aguas Abiertas',
 
   expsmsept25DetailLabel3: 'Nivel mínimo requerido',
-  expsmsept25DetailValue3:
-    'Ninguno (¡Solo necesitas ganas de explorar y un espíritu aventurero!)',
+  expsmsept25DetailValue3: 'Ninguno (¡Solo necesitas ganas de explorar y un espíritu aventurero!)',
 
   expsmsept25DetailLabel4: 'Edad mínima',
-  expsmsept25DetailValue4:
-    '10 años (se aplican condiciones especiales para menores)',
+  expsmsept25DetailValue4: '10 años (se aplican condiciones especiales para menores)',
 
   // --- Payment Plan ---
   paymentPlanTitle: 'Tu Plan de Pagos',
@@ -57,33 +59,27 @@ export default {
   paymentPlanStep2Desc: 'Cubre el siguiente abono para tu experiencia.',
 
   paymentPlanStep3Name: '25% (Fecha Límite: 19 de septiembre de 2025)',
-  paymentPlanStep3Desc:
-    'Liquida el saldo restante para completar tu reserva. ¡Aventura lista!',
+  paymentPlanStep3Desc: 'Liquida el saldo restante para completar tu reserva. ¡Aventura lista!',
 
   paymentPlanNote1:
     'Si tu reserva se realiza después de la fecha límite de un pago, el monto adeudado incluirá las cuotas previas. Por favor, contáctanos para el cálculo exacto y asistencia personalizada.',
 
   // --- Itinerary Content ---
-  expsmsept25ItineraryTitle:
-    'Tu camino paso a paso para convertirte en buzo certificado',
+  expsmsept25ItineraryTitle: 'Tu camino paso a paso para convertirte en buzo certificado',
 
-  expsmsept25ItineraryDay1Title:
-    'Día 1: Llegada y fundamentos en aguas confinadas',
+  expsmsept25ItineraryDay1Title: 'Día 1: Llegada y fundamentos en aguas confinadas',
   expsmsept25ItineraryDay1Desc:
     'Arribo a Santa Marta, tu puerta al encanto del Caribe. Tras un reponedor almuerzo, daremos inicio a tu emocionante aventura con la primera sesión de desarrollo de habilidades en un entorno controlado. Aquí te familiarizarás cómodamente con el equipo de buceo y los principios básicos que te permitirán respirar bajo el agua con confianza.',
 
-  expsmsept25ItineraryDay2Title:
-    'Día 2: ¡Al mar! Tus primeras inmersiones en aguas abiertas',
+  expsmsept25ItineraryDay2Title: 'Día 2: ¡Al mar! Tus primeras inmersiones en aguas abiertas',
   expsmsept25ItineraryDay2Desc:
     'Este es el momento que has estado esperando con ansias. Nos prepararemos para realizar tus dos primeras e inolvidables inmersiones en las espectaculares aguas abiertas de Santa Marta y sus vibrantes arrecifes. Descubre la majestuosa vida marina en su hábitat natural. Tendrás la tarde libre para relajarte, asimilar tus nuevas experiencias y soñar con futuras exploraciones.',
 
-  expsmsept25ItineraryDay3Title:
-    'Día 3: Completando tu certificación y celebración',
+  expsmsept25ItineraryDay3Title: 'Día 3: Completando tu certificación y celebración',
   expsmsept25ItineraryDay3Desc:
     'Realizaremos las dos últimas inmersiones necesarias para completar tu certificación PADI Open Water Diver, consolidando tus habilidades y tu confianza bajo el agua. Por la noche, celebraremos tu extraordinario logro con una ceremonia de graduación en un ambiente festivo y memorable, lleno de alegría y nuevas amistades.',
 
-  expsmsept25ItineraryDay4Title:
-    'Día 4: Despedida de un nuevo explorador submarino',
+  expsmsept25ItineraryDay4Title: 'Día 4: Despedida de un nuevo explorador submarino',
   expsmsept25ItineraryDay4Desc:
     'Disfruta de un último y delicioso desayuno como un orgulloso buzo PADI Open Water Diver certificado, rememorando los increíbles momentos vividos. Después, realizarás el check-out del hotel, llevando contigo no solo una prestigiosa certificación, sino una pasión de por vida por el océano y sus misterios, y el inicio de un sinfín de futuras aventuras.',
 
@@ -93,8 +89,7 @@ export default {
     'Para experiencias con menores de edad, es indispensable presentar una autorización notariada del acudiente legal o de ambos padres, según la normativa vigente, para asegurar la protección y el bienestar de los jóvenes exploradores.',
 
   // --- Included ---
-  expsmsept25IncludedTitle:
-    '¿Qué incluye tu experiencia de certificación Open Water?',
+  expsmsept25IncludedTitle: '¿Qué incluye tu experiencia de certificación Open Water?',
 
   expsmsept25IncludeItem1:
     'Alojamiento por 3 noches y 4 días en hotel seleccionado (habitaciones dobles/triples de confort).',
@@ -118,8 +113,7 @@ export default {
     'Otros gastos personales no mencionados explícitamente en el plan de experiencia.',
 
   // --- Offered Courses ---
-  expsmsept25OfferedCoursesTitle:
-    'Certificaciones disponibles en esta experiencia',
+  expsmsept25OfferedCoursesTitle: 'Certificaciones disponibles en esta experiencia',
 
   // Gallery
   expsmsept25GalleryTitle: 'Momentos inolvidables de tu experiencia submarina',
@@ -132,24 +126,20 @@ export default {
   expsmsept25GaleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
   // expsmsept25GaleryImg2ComplementaryLogoAlt: '',
   // expsmsept25GaleryImg2TextOverlay: '',
-  expsmsept25GaleryImg2PhotoCredit:
-    'Créditos de la foto: Camilo Beltran @JustDiveCol',
+  expsmsept25GaleryImg2PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
   expsmsept25GaleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
   // expsmsept25GaleryImg3ComplementaryLogoAlt: '',
   // expsmsept25GaleryImg3TextOverlay: '',
-  expsmsept25GaleryImg3PhotoCredit:
-    'Créditos de la foto: Camilo Beltran @JustDiveCol',
+  expsmsept25GaleryImg3PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
   expsmsept25GaleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
   // expsmsept25GaleryImg4ComplementaryLogoAlt: '',
   // expsmsept25GaleryImg4TextOverlay: '',
-  expsmsept25GaleryImg4PhotoCredit:
-    'Créditos de la foto: Camilo Beltran @JustDiveCol',
+  expsmsept25GaleryImg4PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
   // --- CTA ---
-  expsmsept25CtaTitle:
-    '¿Listo para tu primera inmersión y obtener tu certificación PADI?',
+  expsmsept25CtaTitle: '¿Listo para tu primera inmersión y obtener tu certificación PADI?',
   expsmsept25CtaButtonText: 'Comienza tu aventura de buceo con JustDiveCol hoy',
   expsmsept25CtaWhatsAppMessage:
     'Hola, JustDiveCol. ¡Me interesa su experiencia "Open Water: Santa Marta"! ¿Podrían darme más información para iniciar mi certificación PADI?',

@@ -19,13 +19,11 @@ import ExperiencePage from './pages/DetailPage/ExperiencePage/ExperiencePage.jsx
 import DestinationPage from './pages/DetailPage/DestinationPage/DestinationPage.jsx';
 import PolicyPage from './pages/PolicyPage/PolicyPage.jsx';
 import MapPage from './pages/MapPage/MapPage.jsx';
-import GearPage from './pages/GearPage/GearPage.jsx';
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage/TermsAndConditionsPage.jsx';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage.jsx';
 import FaqsPage from './pages/FaqsPage/FaqsPage.jsx';
 import UnderConstructionPage from './pages/UnderConstructionPage/UnderConstructionPage.jsx';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
-import TestPage from './pages/TestPage.jsx';
 
 /**
  * The main entry point for the React application.
@@ -54,12 +52,10 @@ const router = createBrowserRouter([
       { path: 'contacto', element: <ContactPage /> },
       { path: 'politicas', element: <PolicyPage /> },
       { path: 'mapa', element: <MapPage /> },
-      // { path: 'gear/*', element: <GearPage /> },
       { path: 'terminos-y-condiciones', element: <TermsAndConditionsPage /> },
       { path: 'privacidad', element: <PrivacyPolicyPage /> },
       { path: 'faqs', element: <FaqsPage /> },
       { path: 'proximamente', element: <UnderConstructionPage /> },
-      // { path: 'test', element: <TestPage /> },
 
       // --- Dynamic Detail Pages ---
       // These routes use URL parameters (e.g., :courseId) to render specific content.

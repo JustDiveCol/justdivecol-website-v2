@@ -1,6 +1,8 @@
 // src/data/content/experiences/_index.js
 import { coursesById } from '../courses/_index.js';
 import { experienciaSantaMartaSeptiembre2025 } from './experiencia-santa-marta-septiembre-2025.js';
+import { experienciaSantaMartaOctubre2025 } from './experiencia-santa-marta-octubre-2025.js';
+import { experienciaSantaMartaNoviembre2025 } from './experiencia-santa-marta-noviembre-2025.js';
 // --- As you create new trip files, import them here. ---
 // import { expMalpelo2026 } from './exp-malpelo-2026.js';
 
@@ -11,6 +13,8 @@ import { experienciaSantaMartaSeptiembre2025 } from './experiencia-santa-marta-s
  */
 export const experiencesById = {
   'experiencia-santa-marta-sept-2025': experienciaSantaMartaSeptiembre2025,
+  'experiencia-santa-marta-oct-2025': experienciaSantaMartaOctubre2025,
+  'experiencia-santa-marta-nov-2025': experienciaSantaMartaNoviembre2025,
   // 'experiencia-malpelo-2026': expMalpelo2026,
 };
 
@@ -23,9 +27,7 @@ export const allExperiences = Object.values(experiencesById);
  * An array containing only the experiences marked with status: 'published'.
  * This is the primary array used to display content on the live site.
  */
-export const publishedExperiences = allExperiences.filter(
-  (exp) => exp.status === 'published'
-);
+export const publishedExperiences = allExperiences.filter((exp) => exp.status === 'published');
 
 /**
  * Finds all published experiences for a specific destination ID.
