@@ -1,8 +1,6 @@
 // src/data/global/footerData.js
+import { ROUTES } from './constants';
 
-/**
- * Data structure containing the translation keys for the website's footer.
- */
 export const footerData = {
   // The main slogan displayed in the footer.
   sloganKey: 'footerSlogan',
@@ -19,11 +17,11 @@ export const footerData = {
   importantLinksTitle: 'footerLinksTitle',
 
   navLinks: [
-    { nameKey: 'policies', path: '/politicas' },
-    { nameKey: 'termsAndConditions', path: '/terminos-y-condiciones' },
-    { nameKey: 'privacy', path: '/privacidad' },
-    { nameKey: 'faqs', path: '/faqs' },
-    { nameKey: 'divesites', path: '/mapa' },
+    { nameKey: 'policy', path: ROUTES.policy },
+    { nameKey: 'terms', path: ROUTES.terms },
+    { nameKey: 'privacy', path: ROUTES.privacy },
+    { nameKey: 'faq', path: ROUTES.faq },
+    { nameKey: 'divesites', path: ROUTES.divesites },
     // { nameKey: 'gear', path: '/proximamente' },
   ],
 

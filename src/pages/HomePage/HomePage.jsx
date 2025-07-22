@@ -32,24 +32,16 @@ const HomePage = () => {
         imageUrl={homePageData.seo.imageUrl}
         url={homePageData.seo.url}
       />
-      <motion.div
-        variants={staggerContainer}
-        initial='initial'
-        animate='animate'>
+      <motion.div variants={staggerContainer} initial="initial" animate="animate">
         {/* The sections are rendered in their intended order for the homepage. */}
         <HeroSection />
         <ExperiencesSection />
         <SafetySection />
 
         {/* Conditionally render testimonials only if there are items to display. */}
-        {homePageData.testimonials?.items?.length > 0 && (
-          <TestimonialsSection />
-        )}
+        {homePageData.testimonials?.items?.length > 0 && <TestimonialsSection />}
 
-        <CtaComponent
-          sectionData={homePageData.finalCta}
-          translationNS='home'
-        />
+        <CtaComponent sectionData={homePageData.finalCta} translationNS="home" />
       </motion.div>
     </>
   );

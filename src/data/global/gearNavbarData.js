@@ -9,7 +9,7 @@ export const gearNavLinks = [
     path: '/gear/guide',
   },
   {
-    nameKey: 'gearStore',
+    nameKey: 'geargear',
     path: '/proximamente',
   },
   {

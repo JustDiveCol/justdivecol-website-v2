@@ -9,7 +9,6 @@ import { staggerContainer } from '../../hooks/animations';
 
 // UI and Section Components
 import SEOComponent from '../../components/ui/SEOComponent';
-import HeaderComponent from '../../components/HeaderComponent';
 import ExperiencesSection from './components/Sections/ExperiencesSection';
 import CalendarExperiencesSection from './components/Sections/CalendarExperiencesSection';
 import CoursesSection from './components/Sections/CoursesSection';
@@ -35,23 +34,12 @@ const ExperiencesPage = () => {
         url={seo.url}
       />
 
-      <motion.div
-        variants={staggerContainer}
-        initial='initial'
-        animate='animate'
-        exit='exit'>
-        {/* <HeaderComponent
-          sectionData={header}
-          translationNS='experiencesPage'
-        /> */}
+      <motion.div variants={staggerContainer} initial="initial" animate="animate" exit="exit">
         <CalendarExperiencesSection />
         <ExperiencesSection />
         <CoursesSection />
         <DestinationsSection />
-        <CtaComponent
-          sectionData={customTripCta}
-          translationNS='experiencesPage'
-        />
+        <CtaComponent sectionData={customTripCta} translationNS="experiencesPage" />
       </motion.div>
     </div>
   );

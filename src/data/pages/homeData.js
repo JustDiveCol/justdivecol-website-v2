@@ -1,70 +1,75 @@
 // src/data/pages/home.js
 import { experienceCategories } from '../global/sharedData.js';
 
-import home_hero_background from '../../assets/images/page-specific/home/home-hero-background.webp';
-import home_cta_background from '../../assets/images/page-specific/home/home-cta-background.webp';
+import heroBackground from '../../assets/images/page-specific/home/home-hero-background.webp';
+import ctaBackground from '../../assets/images/page-specific/home/home-cta-background.webp';
 
-import logo from '../../assets/images/logos/logo.png';
-// import padi from '../../assets/images/logos/padi.png';
+import { LOGO_MAIN } from '../global/assets.js';
+import { SHARED_TRANSLATION_KEYS, ROUTES, BUTTON_TYPES } from '../global/constants.js';
 
 export const homePageData = {
-  // SEO Section
+  // === SEO SECTION ===
   seo: {
     titleKey: 'homeSeoTitle',
     descriptionKey: 'homeSeoDesc',
     keywords: 'homeSeoKeywords',
-    imageUrl: home_hero_background,
-    url: '/',
+    imageUrl: heroBackground,
+    url: ROUTES.home,
   },
-  // Hero Section
+  // === HERO SECTION ===
   hero: {
-    imageUrl: home_hero_background,
+    imageUrl: heroBackground,
     titleKey: 'homeHeroTitle',
     subtitleKey: 'homeHeroSubtitle',
-    ctaTextKey: 'homeHeroCtaText',
+    ctaTextKey: SHARED_TRANSLATION_KEYS.experiencesTextButtonKey,
     ctaAction: {
-      type: 'internal',
-      path: '/experiencias',
+      type: BUTTON_TYPES.internal,
+      path: ROUTES.experiences,
     },
-    mainLogo: logo,
-    mainLogoAlt: 'homeHeroMainLogoAlt',
-    photoCreditKey: 'homeHeroPhotoCreditKey',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAlt: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
-  // Featured Experiences Section
+
+  // === EXPERIENCES SECTION ===
   featuredExperiences: {
     titleKey: 'homeExpTitle',
     subtitleKey: 'homeExpSubtitle',
-    // We map over the shared categories and add page-specific links
+
     categories: experienceCategories.map((cat) => ({
       ...cat,
-      link: cat.id === 'privados' ? '/contacto' : `/experiencias#${cat.id}`,
+      link: cat.id === 'custom' ? `${ROUTES.contact}` : `${ROUTES.experiences}#${cat.id}`,
     })),
   },
+
   // Safety Section
   safety: {
     titleKey: 'homeSafetyTitle',
     subtitleKey: 'homeSafetySubtitle',
     points: [
       {
-        id: 'guias',
+        id: 'guides',
         titleKey: 'homeSafetyPoint1Title',
         descriptionKey: 'homeSafetyPoint1Desc',
       },
       {
-        id: 'equipos',
+        id: 'gear',
         titleKey: 'homeSafetyPoint2Title',
         descriptionKey: 'homeSafetyPoint2Desc',
       },
       {
-        id: 'protocolos',
+        id: 'protocols',
         titleKey: 'homeSafetyPoint3Title',
         descriptionKey: 'homeSafetyPoint3Desc',
       },
     ],
-    ctaTextKey: 'homeSafetyCtaText',
+    ctaTextKey: SHARED_TRANSLATION_KEYS.safetyTextButtonKey,
     ctaAction: {
-      type: 'internal',
-      path: '/seguridad',
+      type: BUTTON_TYPES.internal,
+      path: ROUTES.safety,
     },
   },
   // Testimonials Section
@@ -99,21 +104,22 @@ export const homePageData = {
   },
   // Final CTA Section
   finalCta: {
-    backgroundImage: home_cta_background,
+    backgroundImage: ctaBackground,
     titleKey: 'homeFinalCtaTitle',
     subtitleKey: 'homeFinalCtaSubtitle',
-    ctaTextKey: 'homeFinalCtaText',
+    ctaTextKey: SHARED_TRANSLATION_KEYS.contactTextButtonKey,
     ctaAction: {
       type: 'whatsapp',
-      path: '',
-      whatsAppMessageKey: 'homeFinalCtaWhatsAppMessage',
+      whatsAppMessageKey: 'generalWhatsappMessage',
     },
-    ctaLink: '/contacto',
-    mainLogo: logo,
-    mainLogoAltKey: 'homeFinalCtaMainLogoAlt',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.mainLogo,
     // complementaryLogo: '',
     // complementaryLogoAltKey: '',
     // textOverlayKey: '',
-    photoCreditKey: 'homeFinalCtaPhotoCredit',
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefix,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
 };

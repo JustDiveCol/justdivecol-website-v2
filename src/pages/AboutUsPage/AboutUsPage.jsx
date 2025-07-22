@@ -40,13 +40,11 @@ export const AboutUsPage = () => {
 
       <motion.div // Typo corrected from <motion.di>
         variants={staggerContainer}
-        initial='initial'
-        animate='animate'
-        exit='exit'>
-        <HeaderComponent
-          sectionData={header}
-          translationNS='aboutUs'
-        />
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
+        <HeaderComponent sectionData={header} translationNS="aboutUs" />
 
         <HistorySection historyData={history} />
 
@@ -55,10 +53,7 @@ export const AboutUsPage = () => {
         <CommitmentSection commitmentData={commitment} />
 
         {/* The final CTA reuses data from the contact page for consistency. */}
-        <CtaComponent
-          sectionData={contactPageData.cta}
-          translationNS='contact'
-        />
+        <CtaComponent sectionData={contactPageData.cta} translationNS={['contact', 'common']} />
       </motion.div>
     </>
   );

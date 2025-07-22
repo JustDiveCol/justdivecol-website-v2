@@ -22,8 +22,7 @@ export default {
 
   // Experience Cards (from shared data)
   expCardCertificacionTitle: 'PADI Certifications',
-  expCardCertificacionCategory:
-    'Your Journey to the Underwater World Starts Here',
+  expCardCertificacionCategory: 'Your Journey to the Underwater World Starts Here',
   expCardCertificacionMainLogoAlt: 'JustDiveCol Main Logo',
   expCardCertificacionComplementaryLogoAlt: 'PADI Logo',
   expCardCertificacionPhotoCredit: 'Photo Credits: Camilo Beltran @JustDiveCol',
@@ -51,7 +50,7 @@ export default {
   homeSafetyPoint3Title: 'Strict International Safety Protocols',
   homeSafetyPoint3Desc:
     'We rigorously follow the strictest safety standards and protocols established by PADI and other international organizations, ensuring that every dive you undertake with us is safe, responsible, and mindful of your well-being at all times.',
-  homeSafetyCtaText: 'Learn About Our Safety Commitments',
+  homeSafetyCtaText: '',
 
   // Testimonials Section
   homeTestimonialsTitle: 'Voices from Our Unforgettable Underwater Adventures',
@@ -70,11 +69,10 @@ export default {
   homeTestimonial3Origin: 'Madrid, Spain',
 
   // Final CTA Section
-  homeFinalCtaTitle:
-    'Ready for your next great dive and to explore limitlessly?',
+  homeFinalCtaTitle: 'Ready for your next great dive and to explore limitlessly?',
   homeFinalCtaSubtitle:
     "The world's depths await to reveal their most astonishing secrets. Contact us today to start planning your unforgettable underwater journey. Your adventure begins with a conversation!",
-  homeFinalCtaText: "Let's talk about your experience",
+
   homeFinalCtaMainLogoAlt: 'JustDiveCol Main Logo',
   homeFinalCtaPhotoCredit: 'Photo Credits: Camilo Beltran @JustDiveCol',
   homeFinalCtaWhatsAppMessage:

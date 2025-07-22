@@ -1,31 +1,24 @@
 // src/data/pages/experiences.js
 import { experienceCategories } from '../global/sharedData';
 
-import experiences_header_background from '../../assets/images/page-specific/experiences/experiences-header-background.webp';
+import headerBackground from '../../assets/images/page-specific/experiences/experiences-header-background.webp';
 import experiences_cta_background from '../../assets/images/page-specific/experiences/experiences-cta-background.webp';
 
 import logo from '../../assets/images/logos/logo.png';
+import { ROUTES } from '../global/constants';
 // import padi from '../../assets/images/logos/padi.png';
 
 export const experiencesPageData = {
+  // === SEO SECTION ===
   seo: {
     titleKey: 'expSeoTitle',
     descriptionKey: 'expSeoDesc',
     keywords: 'expSeoKeywords',
-    imageUrl: experiences_header_background,
-    url: '/experiencias',
+    imageUrl: headerBackground,
+    url: ROUTES.experiences,
   },
-  header: {
-    backgroundImage: experiences_header_background,
-    titleKey: 'expHeaderTitle',
-    subtitleKey: 'expHeaderSubtitle',
-    mainLogo: logo,
-    mainLogoAltKey: 'expHeaderMainLogoAlt',
-    // complementaryLogo: '',
-    // complementaryLogoAltKey: '',
-    // textOverlayKey: '',
-    photoCreditKey: 'expHeaderPhotoCredit',
-  },
+
+  // === CALENDAR SECTION ===
   categories: experienceCategories.map((cat) => ({
     ...cat,
     link: `#${cat.id}`,
@@ -46,23 +39,23 @@ export const experiencesPageData = {
   },
   fullCatalog: {
     courses: {
-      sectionId: 'certificacion', // Matches the category id for anchor linking
+      sectionId: 'certification',
       titleKey: 'expCatalogCoursesTitle',
     },
     destinations: {
-      sectionId: 'exploracion', // Matches the category id
+      sectionId: 'destination',
       titleKey: 'expCatalogDestsTitle',
+      subtitleKey: 'expCatalogOtherDestsTitle',
     },
   },
   customTripCta: {
     backgroundImage: experiences_cta_background,
     titleKey: 'expCtaTitle',
     subtitleKey: 'expCtaSubtitle',
-    ctaTextKey: 'expCtaButton',
+    ctaTextKey: 'contactTextButton',
     ctaAction: {
       type: 'whatsapp',
-      path: '',
-      whatsAppMessageKey: 'expCtaWhatsAppMessage',
+      whatsAppMessageKey: 'generalWhatsappMessage',
     },
     mainLogo: logo,
     mainLogoAltKey: 'expCtaMainLogoAlt',

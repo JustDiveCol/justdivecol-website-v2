@@ -1,24 +1,18 @@
 // src/i18n/locales/es/aboutUs.js
 export default {
-  // ----- SEO -----
-  aboutSeoTitle:
-    'Sobre nosotros | JustDiveCol - Tu pasaporte al fascinante mundo submarino',
+  // === SEO SECTION ===
+  aboutSeoTitle: 'Sobre nosotros | JustDiveCol - Tu pasaporte al fascinante mundo submarino',
   aboutSeoDesc:
     'Explora nuestra esencia: la historia de JustDiveCol, nuestro equipo apasionado y cómo combinamos la aventura submarina con un compromiso inquebrantable por la seguridad y la conservación marina. ¡Sumérgete con confianza!',
   aboutSeoKeywords:
     'JustDiveCol, sobre nosotros, historia JustDiveCol, equipo de buceo, buceo seguro, conservación marina, aventura submarina, operador de buceo, comunidad de buceo, pasión por el océano, sostenibilidad marina, viajes de buceo Colombia',
 
-  // ----- Header -----
-  aboutHeaderTitle:
-    'Más que un operador: Somos una comunidad que vive el océano',
+  // === HEADER SECTION ===
+  aboutHeaderTitle: 'Más que un operador: Somos una comunidad que vive el océano',
   aboutHeaderSubtitle:
     'En JustDiveCol, cada miembro es un explorador de corazón. Compartimos, protegemos y celebramos la majestuosidad del mundo submarino para garantizar que cada inmersión sea, simplemente, inolvidable.',
-  aboutHeaderMainLogoAlt: 'Logotipo principal de JustDiveCol',
-  // aboutHeaderComplementaryLogoAlt: 'Logotipo complementario de JustDiveCol',
-  // aboutHeaderTextOverlay: 'Explorando el azul profundo',
-  aboutHeaderPhotoCredit: 'Créditos de la foto: Camilo Beltrán @JustDiveCol',
 
-  // ----- History -----
+  // === HISTORY SECTION ===
   aboutHistoryTitle: 'Nuestra historia: La pasión que emergió del Azul',
 
   aboutHistoryP1:
@@ -28,18 +22,12 @@ export default {
   aboutHistoryP3:
     'Hoy, JustDiveCol es una familia global en constante crecimiento. Te invitamos a unirte a nosotros para descubrir nuevos horizontes, vivir asombrosos encuentros submarinos y atesorar recuerdos imborrables bajo las olas.',
 
-  aboutHistoryImageMainLogoAlt: 'Logotipo principal de JustDiveCol',
-  // aboutHistoryImageComplementaryLogoAlt: '',
-  // aboutHistoryImageTextOverlay: '',
-  aboutHistoryImagePhotoCredit:
-    'Créditos de la foto: Camilo Beltrán @JustDiveCol',
-
-  // ----- Team -----
+  // === TEAM SECTION ===
   aboutTeamTitle: 'Los artífices de tus inmersiones inolvidables',
   aboutTeamSubtitle:
     'Conoce a nuestro equipo: un grupo apasionado, experto y totalmente comprometido con tu aprendizaje, seguridad y disfrute en cada expedición submarina.',
 
-  // ----- Camilo -----
+  // --- Camilo ---
   aboutTeamMember1Name: 'Camilo Beltrán',
   aboutTeamMember1Role: 'Fundador y navegante de sueños submarinos',
   aboutTeamMember1Bio:
@@ -51,7 +39,7 @@ export default {
   aboutTeamMember1Fact3:
     'Revisa su bitácora de buceo con más frecuencia que su agenda de reuniones, un claro reflejo de dónde reside su verdadera pasión.',
 
-  // ----- Alejandra -----
+  // --- Alejandra ---
   aboutTeamMember2Name: 'Alejandra Vargas',
   aboutTeamMember2Role: 'Timonel de nuevas ideas y rutas inolvidables',
   aboutTeamMember2Bio:
@@ -63,19 +51,18 @@ export default {
   aboutTeamMember2Fact3:
     'Siempre se hace trenzas antes de bucear: desenredar su cabello crespo después de varias inmersiones es un verdadero desafío.',
 
-  // ----- Pablo -----
+  // --- Pablo ---
   aboutTeamMember3Name: 'Pablo Orjuela',
   aboutTeamMember3Role: 'Aventurero, fotógrafo y narrador visual',
   aboutTeamMember3Bio:
     'Aunque es el miembro más reciente en el mundo del buceo, Pablo aporta su excepcional ojo artístico para capturar la magia submarina. Sus impresionantes imágenes y videos cuentan historias cautivadoras que te inspirarán a descubrir el océano con todos los sentidos.',
-  aboutTeamMember3Fact1:
-    'Su mayor sueño submarino: bucear junto a un gran tiburón blanco.',
+  aboutTeamMember3Fact1: 'Su mayor sueño submarino: bucear junto a un gran tiburón blanco.',
   aboutTeamMember3Fact2:
     'Compró su primera cámara para fotografiar el mar mucho antes de realizar su primera inmersión.',
   aboutTeamMember3Fact3:
     'En su última aventura terrestre, caminó aproximadamente 850 km / 528 miles para desafiar sus propios límites.',
 
-  // ------ Commitment ------
+  // === COMMITMENT SECTION ===
   aboutCommitmentTitle: 'Nuestro compromiso inquebrantable con el océano',
   aboutCommitmentSubtitle:
     'Creemos firmemente que cada inmersión es también una promesa: la de proteger y conservar este invaluable tesoro azul para las futuras generaciones.',

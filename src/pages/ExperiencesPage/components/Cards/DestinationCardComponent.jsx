@@ -8,74 +8,76 @@ import { formatDateRange } from '../../../../utils/formatters';
 import { fadeInUp } from '../../../../hooks/animations';
 import ImageComponent from '../../../../components/common/Image/ImageComponent';
 
-/**
- * Renders a card for a single destination, showing its image, name, description,
- * and a list of upcoming trips to that destination.
- *
- * @param {object} props - The component props.
- * @param {object} props.destinationData - The data object for the destination.
- * @param {string} props.destinationData.id - Unique identifier for the destination.
- * @param {string} props.destinationData.nameKey - Translation key for the destination's name.
- * @param {object} props.destinationData.card - Data specific to the card's appearance.
- * @param {string[]} props.destinationData.upcomingTrips - An array of trip data objects.
- */
-const DestinationCardComponent = ({ destinationData }) => {
-  const { t, i18n } = useTranslation(['destinations', 'common']);
+import { ROUTES } from '@/data/global/constants';
+
+const DestinationCardComponent = ({
+  destinationData,
+  translationNS = 'destinations',
+  maxWidth = 'max-w-xs',
+}) => {
+  const { t, i18n } = useTranslation([translationNS, 'common']);
   const { id, nameKey, card, upcomingTrips } = destinationData;
+
+  const hasTrips = upcomingTrips.length > 0;
 
   return (
     <motion.div
       variants={fadeInUp}
-      className='bg-brand-primary-medium rounded-lg overflow-hidden shadow-lg flex flex-col hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 w-full max-w-sm'>
-      <ImageComponent
-        imageData={destinationData.card}
-        translationNS={'destinations'}
-      />
-      <div className='p-6 flex flex-col flex-grow'>
-        <h3 className='text-2xl font-bold text-brand-white'>{t(nameKey)}</h3>
-        <p className='mt-2  text-brand-neutral flex-grow text-justify'>
-          {t(card.descriptionKey)}
-        </p>
-        <div className='mt-4 pt-4 border-t border-brand-primary-light/20'>
-          <h4 className='font-semibold text-brand-white mb-2'>
-            {t('common:upcomingDates')}
-          </h4>
-          {upcomingTrips.length > 0 ? (
-            <ul className='space-y-2'>
-              {upcomingTrips.map((trip) => (
-                <li key={trip.id}>
-                  <Link
-                    to={`/experiencias/${trip.id}`}
-                    className='block bg-brand-primary-dark p-3 rounded-md hover:bg-brand-primary-light transition-colors text-left'>
-                    <span className=' text-brand-neutral'>
-                      {formatDateRange(
-                        trip.details.startDate,
-                        trip.details.endDate,
-                        i18n.language,
-                        t
-                      )}
-                    </span>
-                    <span className='text-xs text-brand-cta-orange ml-2'>
-                      &rarr;
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            // Fallback message if there are no scheduled trips.
-            <p className=' text-sm text-brand-neutral/70'>
-              {t('common:noScheduledDates')}
+      className={`
+        bg-brand-primary-medium rounded-lg overflow-hidden shadow-lg
+        flex flex-col hover:shadow-2xl hover:scale-[1.02]
+        transition-all duration-300 w-full ${maxWidth} h-full
+      `}
+    >
+      <ImageComponent imageData={card} translationNS={translationNS} />
+
+      <div className="p-5 flex flex-col flex-grow">
+        {/* Siempre mostramos el título */}
+        <h3 className="text-2xl font-bold text-brand-white">{t(nameKey)}</h3>
+
+        {hasTrips && (
+          <>
+            {/* Solo mostramos la descripción si hay viajes */}
+            <p className="mt-2 text-brand-neutral flex-grow text-justify">
+              {t(card.descriptionKey)}
             </p>
-          )}
-        </div>
+
+            <div className="mt-1 pt-2 border-t border-brand-primary-light/20">
+              <h4 className="font-semibold text-brand-white mb-2">{t('common:upcomingDates')}</h4>
+              <ul className="space-y-2">
+                {upcomingTrips.map((trip) => (
+                  <li key={trip.id}>
+                    <Link
+                      to={`${ROUTES.experiences}${trip.id}`}
+                      className="block bg-brand-primary-dark p-1 rounded-md hover:bg-brand-primary-light transition-colors text-left"
+                    >
+                      <span className="text-brand-neutral">
+                        {formatDateRange(
+                          trip.details.startDate,
+                          trip.details.endDate,
+                          i18n.language,
+                          t
+                        )}
+                      </span>
+                      <span className="text-xs text-brand-cta-orange ml-2">&rarr;</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </>
+        )}
       </div>
+
+      {/* Siempre mostramos el botón */}
       <Link
-        to={`/destinos/${id}`}
-        className='block bg-brand-cta-orange text-center text-brand-white font-bold uppercase p-3 hover:bg-opacity-90 transition-colors mt-auto'>
-        {t('exploreDestination')}
+        to={`${ROUTES.destinations}${id}`}
+        className="block bg-brand-cta-orange text-center text-brand-white font-bold uppercase p-3 hover:bg-opacity-90 transition-colors mt-auto"
+      >
+        {t('common:exploreDestination')}
       </Link>
     </motion.div>
   );
 };
+
 export default DestinationCardComponent;

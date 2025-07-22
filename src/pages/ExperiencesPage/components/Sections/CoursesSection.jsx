@@ -20,21 +20,14 @@ const CoursesSection = () => {
   const { sectionId, titleKey } = experiencesPageData.fullCatalog.courses;
 
   return (
-    <section
-      id={sectionId}
-      className='py-20 px-4 scroll-mt-20'>
-      <div className='container mx-auto'>
-        <h2 className='text-3xl md:text-4xl font-bold text-brand-white text-center mb-12 uppercase'>
+    <section id={sectionId} className="py-8 px-4 scroll-mt-20">
+      <div className="container mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-brand-white text-center mb-12 uppercase">
           {t(titleKey)}
         </h2>
-        <motion.div
-          variants={staggerContainer}
-          className='flex flex-wrap justify-center gap-8'>
+        <motion.div variants={staggerContainer} className="flex flex-wrap justify-center gap-8">
           {coursesWithStatus.map((course) => (
-            <CourseCardComponent
-              key={course.id}
-              courseData={course}
-            />
+            <CourseCardComponent key={course.id} courseData={course} />
           ))}
         </motion.div>
       </div>

@@ -2,14 +2,15 @@ export default {
   home: 'Home',
   experiences: 'Experiences',
   about: 'About Us',
-  security: 'Safety',
+  safety: 'Safety',
   contact: 'Contact',
-  gear: 'Store',
+
+  store: 'Store',
   divesites: 'Dive Spots',
-  policies: 'Our Policies',
-  termsAndConditions: 'Terms and Conditions',
+  policy: 'Our Policies',
+  terms: 'Terms and Conditions',
   privacy: 'Privacy Policy',
-  faqs: 'FAQs',
+  faq: 'FAQs',
 
   footerLinksTitle: 'Explore & Learn',
 };

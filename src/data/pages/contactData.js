@@ -1,6 +1,8 @@
 // src/data/pages/contact.js
 import contact_header_background from '../../assets/images/page-specific/contact/contact-header-background.webp'; // Placeholder, replace with your image
 
+import { BUTTON_TYPES, SHARED_TRANSLATION_KEYS } from '../global/constants';
+
 import logo from '../../assets/images/logos/logo.png';
 
 export const contactPageData = {
@@ -59,16 +61,16 @@ export const contactPageData = {
     backgroundImage: contact_header_background,
     titleKey: 'contactCtaTitle',
     subtitleKey: 'contactCtaSubtitle',
-    ctaTextKey: 'contactCtaText',
+    ctaTextKey: SHARED_TRANSLATION_KEYS.contactTextButtonKey,
     ctaAction: {
-      type: 'internal',
-      path: '/experiencias',
+      type: BUTTON_TYPES.whatsapp,
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.generalWhatsappMessageKey,
     },
     mainLogo: logo,
     mainLogoAltKey: 'contactCtaMainLogoAlt',
-    // complementaryLogo: padi,
-    // complementaryLogoAltKey: 'contactCtaComplementaryLogoAlt',
-    // textOverlayKey: 'contactCtaTextOverlay',
-    photoCreditKey: 'contactCtaPhotoCredit',
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefix,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
 };

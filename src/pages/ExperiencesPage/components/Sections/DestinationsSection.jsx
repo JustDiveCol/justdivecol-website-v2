@@ -1,42 +1,136 @@
 // src/pages/ExperiencesPage/components/Sections/DestinationsSection.jsx
-import React from 'react';
-import { motion } from 'motion/react';
+import React, { useRef, useState, useLayoutEffect, useEffect } from 'react';
+import { motion, useAnimation, useMotionValue } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { experiencesPageData } from '../../../../data/pages/experiencesData';
 import { getDestinationsWithUpcomingTrips } from '../../../../data/content/destinations/_index';
-import { staggerContainer } from '../../../../hooks/animations';
 import DestinationCardComponent from '../Cards/DestinationCardComponent';
 
-/**
- * Renders the "Memorable Destinations" section of the Experiences page.
- * It fetches all published destinations and their associated upcoming trips.
- */
+const SCROLL_SPEED = 15; // px por segundo para autoscroll
+
+/** Componente reutilizable de carrusel */
+const CarouselSection = ({ title, items }) => {
+  const outerRef = useRef(null);
+  const innerRef = useRef(null);
+  const controls = useAnimation();
+  const x = useMotionValue(0);
+  const [constraints, setConstraints] = useState({ left: 0, right: 0 });
+  const resumeTimer = useRef(null);
+  const [shouldResume, setShouldResume] = useState(false);
+
+  // Mide y actualiza límites
+  const updateConstraints = () => {
+    const outer = outerRef.current;
+    const inner = innerRef.current;
+    if (!outer || !inner) return;
+    const maxDrag = inner.scrollWidth - outer.offsetWidth;
+    setConstraints((prev) => {
+      const newLeft = -maxDrag;
+      return prev.left === newLeft ? prev : { left: newLeft, right: 0 };
+    });
+  };
+
+  // Inicia el bucle desde la posición actual
+  const startAutoScroll = () => {
+    const currentX = x.get();
+    const { left } = constraints;
+    const distToLeft = Math.abs(left - currentX);
+    const distToStart = Math.abs(0 - left);
+    const totalDist = distToLeft + distToStart;
+    const duration = totalDist / SCROLL_SPEED;
+
+    controls.start({
+      x: [currentX, left, 0],
+      transition: { duration, ease: 'linear', repeat: Infinity },
+    });
+  };
+
+  // Montaje: medir y arrancar autoscroll
+  useLayoutEffect(() => {
+    updateConstraints();
+  }, []);
+
+  // Resize para recalcular
+  useEffect(() => {
+    window.addEventListener('resize', updateConstraints);
+    return () => window.removeEventListener('resize', updateConstraints);
+  }, []);
+
+  // Cuando constraints esté listo, lanzamos el scroll
+  useEffect(() => {
+    if (constraints.left < 0) startAutoScroll();
+  }, [constraints.left]);
+
+  // Manejo de interacción: pausa y programa reanudar mediante estado
+  const handleInteractionStart = () => {
+    controls.stop();
+    clearTimeout(resumeTimer.current);
+  };
+  const handleInteractionEnd = () => {
+    clearTimeout(resumeTimer.current);
+    resumeTimer.current = setTimeout(() => setShouldResume(true), 2000);
+  };
+
+  // Efecto que, tras 2s de inactividad, reanuda la animación
+  useEffect(() => {
+    if (shouldResume && constraints.left < 0) {
+      startAutoScroll();
+      setShouldResume(false);
+    }
+  }, [shouldResume]);
+
+  return (
+    <div className="mb-12">
+      <h3 className="text-2xl font-semibold text-brand-white mb-6">{title}</h3>
+      <div ref={outerRef} className="overflow-hidden">
+        <motion.div
+          ref={innerRef}
+          style={{ x }}
+          className="grid grid-flow-col auto-cols-max items-stretch gap-8"
+          drag="x"
+          dragConstraints={constraints}
+          dragElastic={0.1}
+          animate={controls}
+          onDragStart={handleInteractionStart}
+          onDragEnd={handleInteractionEnd}
+          onPointerDown={handleInteractionStart}
+          onPointerUp={handleInteractionEnd}
+        >
+          {items.map((dest) => (
+            <div key={dest.id} className="flex-shrink-0">
+              <DestinationCardComponent destinationData={dest} />
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
 const DestinationsSection = () => {
   const { t } = useTranslation('experiencesPage');
+  const all = getDestinationsWithUpcomingTrips();
+  const { sectionId } = experiencesPageData.fullCatalog.destinations;
 
-  // Fetches all published destinations and attaches a list of their respective upcoming trips.
-  const destinationsWithTrips = getDestinationsWithUpcomingTrips();
-
-  const { sectionId, titleKey } = experiencesPageData.fullCatalog.destinations;
+  // Separamos activos / inactivos
+  const active = all.filter((d) => d.upcomingTrips.length > 0);
+  const inactive = all.filter((d) => d.upcomingTrips.length === 0);
 
   return (
     <section
       id={sectionId}
-      className='py-20 px-4 border-t-2 border-brand-primary-light/20 scroll-mt-20'>
-      <div className='container mx-auto'>
-        <h2 className='text-3xl md:text-4xl font-bold text-brand-white text-center mb-12 uppercase'>
-          {t(titleKey)}
+      className="py-20 px-4 border-t-2 border-brand-primary-light/20 scroll-mt-20"
+    >
+      <div className="container mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-brand-white text-center mb-12 uppercase">
+          {t(experiencesPageData.fullCatalog.destinations.titleKey)}
         </h2>
-        <motion.div
-          variants={staggerContainer}
-          className='flex flex-wrap justify-center gap-8'>
-          {destinationsWithTrips.map((destination) => (
-            <DestinationCardComponent
-              key={destination.id}
-              destinationData={destination}
-            />
-          ))}
-        </motion.div>
+
+        {/* Carrusel de destinos con viajes activos */}
+        <CarouselSection title={t('experiencesPage:destinosConViajes')} items={active} />
+
+        {/* Carrusel de destinos sin viajes */}
+        <CarouselSection title={t('experiencesPage:destinosSinViajes')} items={inactive} />
       </div>
     </section>
   );

@@ -24,57 +24,84 @@ const ImageComponent = ({ className = '', imageData, translationNS }) => {
     complementaryLogo,
     complementaryLogoAltKey,
     textOverlayKey,
-    photoCreditKey,
+    photoCredit,
     variant,
   } = imageData;
 
   const variantClass = variantStyles[variant] || 'h-full';
-  const wrapperClass = `group relative w-full bg-cover bg-center select-none ${variantClass} ${className}`;
+  const wrapperClass = `
+    group relative w-full bg-cover bg-center select-none ${variantClass} ${className}
+  `;
+
+  // Handler único para prevenir drag
+  const preventDrag = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  };
 
   return (
     <div
-      onContextMenu={(e) => e.preventDefault()}
+      draggable={false}
+      onDragStart={preventDrag}
+      onContextMenu={preventDrag}
       className={wrapperClass}
-      style={{ backgroundImage: `url(${backgroundImage})` }}>
-      {/* Top-left text overlay: Adjusted text size for responsiveness */}
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        WebkitUserDrag: 'none', // para navegadores WebKit
+      }}
+    >
       {textOverlayKey && (
         <div
-          onContextMenu={(e) => e.preventDefault()}
-          className='select-none absolute top-2 left-2 text-brand-neutral text-sm sm:text-base md:text-lg lg:text-2xl font-bold drop-shadow-md opacity-80 uppercase z-20'>
+          draggable={false}
+          onDragStart={preventDrag}
+          onContextMenu={preventDrag}
+          className="select-none absolute top-2 left-2 text-brand-neutral text-sm sm:text-base md:text-lg lg:text-2xl font-bold drop-shadow-md opacity-80 uppercase z-20"
+        >
           {t(textOverlayKey)}
         </div>
       )}
 
-      {/* Top-right complementary logo: Adjusted width for responsiveness */}
       {complementaryLogo && (
         <div
-          onContextMenu={(e) => e.preventDefault()}
-          className='select-none absolute top-2 right-2 drop-shadow-md opacity-70 z-20 w-8 h-auto sm:w-10 md:w-12'>
+          draggable={false}
+          onDragStart={preventDrag}
+          onContextMenu={preventDrag}
+          className="select-none absolute top-2 right-2 drop-shadow-md opacity-70 z-20 w-8 h-auto sm:w-10 md:w-12"
+        >
           <img
             src={complementaryLogo}
             alt={t(complementaryLogoAltKey)}
-            className='w-full h-auto'
+            className="w-full h-auto"
+            draggable={false}
+            onDragStart={preventDrag}
+            style={{ WebkitUserDrag: 'none' }}
           />
         </div>
       )}
 
-      {/* Bottom-right main logo: Adjusted width for responsiveness */}
       {mainLogo && (
         <div
-          onContextMenu={(e) => e.preventDefault()}
-          className='select-none absolute bottom-2 right-2 drop-shadow-md opacity-70 z-20 w-16 h-auto sm:w-20 md:w-24'>
+          draggable={false}
+          onDragStart={preventDrag}
+          onContextMenu={preventDrag}
+          className="select-none absolute bottom-2 right-2 drop-shadow-md opacity-70 z-20 w-16 h-auto sm:w-20 md:w-24"
+        >
           <img
             src={mainLogo}
             alt={t(mainLogoAltKey)}
-            className='w-full h-auto'
+            className="w-full h-auto"
+            draggable={false}
+            onDragStart={preventDrag}
+            style={{ WebkitUserDrag: 'none' }}
           />
         </div>
       )}
 
-      {/* Footer alt text on hover: Adjusted padding and text size */}
-      {photoCreditKey && (
-        <div className='absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20'>
-          {t(photoCreditKey)}
+      {photoCredit && (
+        <div className="absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20">
+          {t(photoCredit.prefixKey, { ns: 'common' })}
+          {photoCredit.text}
         </div>
       )}
     </div>

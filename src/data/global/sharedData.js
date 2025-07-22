@@ -4,42 +4,51 @@ import experience_category_courses from '../../assets/images/page-specific/exper
 import experience_category_experiences from '../../assets/images/page-specific/experiences/experience-category-experiences.webp';
 import experience_category_private from '../../assets/images/page-specific/experiences/experience-category-private.webp';
 
-import logo from '../../assets/images/logos/logo.png';
-import padi from '../../assets/images/logos/padi.png';
+import { LOGO_MAIN, PADI_LOGO } from './assets';
+import { SHARED_TRANSLATION_KEYS } from './constants';
 
 // This data is shared between the Home page and the Experiences page
 export const experienceCategories = [
   {
-    id: 'certificacion',
+    id: 'certification',
     backgroundImage: experience_category_courses,
     titleKey: 'expCardCertificacionTitle',
     categoryKey: 'expCardCertificacionCategory',
-    mainLogo: logo,
+    mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: 'expCardCertificacionMainLogoAlt',
-    complementaryLogo: padi,
+    complementaryLogo: PADI_LOGO.padiLogo,
     complementaryLogoAltKey: 'expCardCertificacionComplementaryLogoAlt',
-    photoCreditKey: 'expCardCertificacionPhotoCredit',
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefix,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
   {
-    id: 'exploracion',
+    id: 'destination',
     backgroundImage: experience_category_experiences,
     titleKey: 'expCardExploracionTitle',
     categoryKey: 'expCardExploracionCategory',
-    mainLogo: logo,
+    mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: 'expCardExploracionMainLogoAlt',
     // complementaryLogo: padi,
     // complementaryLogoAltKey: 'expCardExploracionComplementaryLogoAlt',
-    photoCreditKey: 'expCardExploracionPhotoCredit',
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefix,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
   {
-    id: 'privados',
+    id: 'custom',
     backgroundImage: experience_category_private,
     titleKey: 'expCardPrivadosTitle',
     categoryKey: 'expCardPrivadosCategory',
-    mainLogo: logo,
+    mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: 'expCardPrivadosMainLogoAlt',
     // complementaryLogo: padi,
     // complementaryLogoAltKey: 'expCardPrivadosComplementaryLogoAlt',
-    photoCreditKey: 'expCardPrivadosPhotoCredit',
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefix,
+      text: '@giovannidiveservicesl',
+    },
   },
 ];

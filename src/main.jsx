@@ -6,6 +6,8 @@ import './i18n/i18n.js';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import { ROUTES } from './data/global/constants';
+
 import { LanguageProvider } from './context/LanguageContext';
 import App from './App.jsx';
 
@@ -48,24 +50,24 @@ const router = createBrowserRouter([
     children: [
       // --- Static Pages ---
       { index: true, element: <HomePage /> }, // The default page for the root path '/'.
-      { path: 'experiencias', element: <ExperiencesPage /> },
-      { path: 'nosotros', element: <AboutUsPage /> },
-      { path: 'seguridad', element: <SafetyPage /> },
-      { path: 'contacto', element: <ContactPage /> },
-      { path: 'politicas', element: <PolicyPage /> },
-      { path: 'mapa', element: <MapPage /> },
-      // { path: 'gear/*', element: <GearPage /> },
-      { path: 'terminos-y-condiciones', element: <TermsAndConditionsPage /> },
-      { path: 'privacidad', element: <PrivacyPolicyPage /> },
-      { path: 'faqs', element: <FaqsPage /> },
-      { path: 'proximamente', element: <UnderConstructionPage /> },
+      { path: ROUTES.experiences, element: <ExperiencesPage /> },
+      { path: ROUTES.about, element: <AboutUsPage /> },
+      { path: ROUTES.safety, element: <SafetyPage /> },
+      { path: ROUTES.contact, element: <ContactPage /> },
+      { path: ROUTES.policy, element: <PolicyPage /> },
+      { path: ROUTES.divesites, element: <MapPage /> },
+      { path: ROUTES.mainStore, element: <GearPage /> },
+      { path: ROUTES.terms, element: <TermsAndConditionsPage /> },
+      { path: ROUTES.privacy, element: <PrivacyPolicyPage /> },
+      { path: ROUTES.faq, element: <FaqsPage /> },
+      { path: ROUTES.underConstruction, element: <UnderConstructionPage /> },
       // { path: 'test', element: <TestPage /> },
 
       // --- Dynamic Detail Pages ---
       // These routes use URL parameters (e.g., :courseId) to render specific content.
-      { path: 'cursos/:courseId', element: <CoursePage /> },
-      { path: 'experiencias/:tripId', element: <ExperiencePage /> },
-      { path: 'destinos/:destinationId', element: <DestinationPage /> },
+      { path: ROUTES.certificationDetail, element: <CoursePage /> },
+      { path: ROUTES.experienceDetail, element: <ExperiencePage /> },
+      { path: ROUTES.destinationDetail, element: <DestinationPage /> },
 
       // --- Fallback Route ---
       // The wildcard '*' path catches any route that doesn't match the ones above, rendering the 404 page.

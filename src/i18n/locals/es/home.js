@@ -1,22 +1,18 @@
 // src/i18n/locales/es/home.js
 export default {
-  // SEO Section
-  homeSeoTitle:
-    'JustDiveCol - Cursos, certificaciones y experiencias de buceo inolvidables',
+  // === SEO SECTION ===
+  homeSeoTitle: 'JustDiveCol - Cursos, certificaciones y experiencias de buceo inolvidables',
   homeSeoDesc:
     'Sumérgete en una aventura submarina que trasciende fronteras. Como empresa especializada en turismo de buceo, ofrecemos certificaciones PADI de clase mundial y viajes personalizados a los destinos más asombrosos del mundo. ¡Tu exploración del gran azul comienza hoy mismo con JustDiveCol!',
   homeSeoKeywords:
     'buceo, cursos de buceo, certificaciones PADI, viajes de buceo, aventura submarina, JustDiveCol, explorar océanos, buceo seguro, buceo Colombia, buceo personalizado, open water, advanced open water, rescue diver, vida marina',
 
-  // Hero Section
+  // === HERO SECTION ===
   homeHeroTitle: 'Tu próxima gran aventura comienza bajo el agua',
   homeHeroSubtitle:
     'Explora las maravillas ocultas de los océanos con la seguridad y la pasión que nos distingue. Te invitamos a descubrir un mundo de belleza inigualable, vida fascinante y emociones que perduran mucho después de la inmersión.',
-  homeHeroCtaText: 'Descubre nuestras experiencias',
-  homeHeroMainLogoAlt: 'Logo principal de JustDiveCol',
-  homeHeroPhotoCreditKey: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
-  // Experiences Section
+  // === EXPERIENCES SECTION ===
   homeExpTitle: 'Experiencias que transforman tu visión del mundo',
   homeExpSubtitle:
     'No importa si estás dando tus primeras burbujas como principiante o si ya eres un buzo experimentado; en JustDiveCol tenemos una aventura submarina a la medida de tu espíritu explorador y tus sueños más audaces.',
@@ -24,21 +20,12 @@ export default {
   // Experience Cards (from shared data)
   expCardCertificacionTitle: 'Certificaciones PADI',
   expCardCertificacionCategory: 'Tu viaje al mundo submarino empieza Aquí',
-  expCardCertificacionMainLogoAlt: 'Logo principal de JustDiveCol',
-  expCardCertificacionComplementaryLogoAlt: 'Logo PADI',
-  expCardCertificacionPhotoCredit:
-    'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
   expCardExploracionTitle: 'Viajes de buceo y exploración',
   expCardExploracionCategory: 'Destinos que te dejarán sin aliento',
-  expCardExploracionMainLogoAlt: 'Logo principal de JustDiveCol',
-  expCardExploracionPhotoCredit:
-    'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
   expCardPrivadosTitle: 'Experiencias personalizadas',
   expCardPrivadosCategory: 'Diseña la aventura submarina perfecta para ti',
-  expCardPrivadosMainLogoAlt: 'Logo principal de JustDiveCol',
-  expCardPrivadosPhotoCredit: 'Créditos de la foto: @giovannidiveservices',
 
   // Safety Section
   homeSafetyTitle: 'Tu única misión: sumergirte y explorar con tranquilidad',
@@ -53,7 +40,6 @@ export default {
   homeSafetyPoint3Title: 'Protocolos de seguridad internacionales estrictos',
   homeSafetyPoint3Desc:
     'Seguimos rigurosamente los estándares y protocolos de seguridad más estrictos establecidos por PADI y otras organizaciones internacionales, asegurando que cada inmersión que realizas con nosotros sea segura, responsable y cuidando tu bienestar en todo momento.',
-  homeSafetyCtaText: 'Conoce nuestros compromisos de seguridad',
 
   // Testimonials Section
   homeTestimonialsTitle: 'Voces de nuestras aventuras submarinas inolvidables',
@@ -72,13 +58,10 @@ export default {
   homeTestimonial3Origin: 'Madrid, España',
 
   // Final CTA Section
-  homeFinalCtaTitle:
-    '¿Listo para tu próxima gran inmersión y para explorar sin límites?', // "Límites" con minúscula
+  homeFinalCtaTitle: '¿Listo para tu próxima gran inmersión y para explorar sin límites?',
   homeFinalCtaSubtitle:
     'Las profundidades del mundo te esperan para revelarte sus secretos más asombrosos. Contáctanos hoy mismo para empezar a planificar tu inolvidable viaje submarino. ¡Tu aventura comienza con una conversación!',
-  homeFinalCtaText: 'Hablemos de tu experiencia',
-  homeFinalCtaMainLogoAlt: 'Logo principal de JustDiveCol',
-  homeFinalCtaPhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
+
   homeFinalCtaWhatsAppMessage:
     'Hola, equipo de JustDiveCol. ¡Estoy listo/a para mi próxima gran inmersión! Me gustaría hablar sobre cómo puedo empezar a planificar mi aventura submarina. ¿Podrían asesorarme?',
 };

@@ -15,42 +15,39 @@ import ButtonComponent from '../../../../components/common/Button/ButtonComponen
  * It displays a title, subtitle, a grid of safety points, and a call-to-action button.
  */
 const SafetySection = () => {
-  const { t } = useTranslation('home');
+  const { t } = useTranslation(['home', 'common']);
   const { safety: data } = homePageData;
 
   return (
-    <section className='bg-brand-primary-medium py-20 px-4'>
+    <section className="bg-brand-primary-medium py-20 px-4">
       <motion.div
         variants={staggerContainer}
-        initial='initial'
-        whileInView='animate'
+        initial="initial"
+        whileInView="animate"
         viewport={{ once: true, amount: 0.2 }}
-        className='container mx-auto text-center text-brand-white'>
+        className="container mx-auto text-center text-brand-white"
+      >
         {/* Section title and subtitle */}
-        <motion.h2
-          variants={fadeInUp}
-          className='text-4xl md:text-5xl  font-bold uppercase'>
+        <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl  font-bold uppercase">
           {t(data.titleKey)}
         </motion.h2>
         <motion.p
           variants={fadeInUp}
-          className='mt-4 max-w-3xl mx-auto  text-lg text-brand-neutral'>
+          className="mt-4 max-w-3xl mx-auto  text-lg text-brand-neutral"
+        >
           {t(data.subtitleKey)}
         </motion.p>
 
         {/* Grid of safety feature cards */}
         <motion.div
           variants={staggerContainer}
-          initial='initial'
-          whileInView='animate'
+          initial="initial"
+          whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
-          className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-12'>
+          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12"
+        >
           {data.points.map((item) => (
-            <SafetyCardComponent
-              key={item.id}
-              item={item}
-              translationNS='home'
-            />
+            <SafetyCardComponent key={item.id} item={item} translationNS="home" />
           ))}
         </motion.div>
 
@@ -58,9 +55,9 @@ const SafetySection = () => {
         <ButtonComponent
           action={data.ctaAction}
           textKey={data.ctaTextKey}
-          translationNS='home'
-          className='text-lg px-8 py-4'
-          containerClassName='mt-16'
+          translationNS="common"
+          className="text-lg px-8 py-4"
+          containerClassName="mt-16"
           motionVariants={fadeInUp}
         />
       </motion.div>

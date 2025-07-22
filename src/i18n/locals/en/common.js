@@ -11,8 +11,7 @@ export default {
   datesNotAvailable: 'Dates Not Available',
 
   viewTripDetails: 'View experience details',
-  noScheduledDates:
-    'No dates scheduled yet. Contact us for a custom experience!',
+  noScheduledDates: 'No dates scheduled yet. Contact us for a custom experience!',
 
   durationFormat: '{{days}} Days / {{nights}} Nights',
   detailsDateLabel: 'Trip Dates',
@@ -40,4 +39,28 @@ export default {
   // ========== General UI States ==========
   loading: 'Loading Content...',
   day: 'Day',
+
+  // === Assets ===
+  mainLogoAlt: 'JustDiveCol Main Logo',
+  padiLogoAlt: 'PADI Logo',
+
+  // === Constants ===
+  commonPhotoCreditPrefix: 'Photo Credits: ',
+
+  experiencesTextButton: 'Discover Our Experiences',
+  safetyTextButton: 'Learn About Our Safety Commitments',
+
+  contactTextButton: "Let's talk about your next experience",
+
+  // --- Whatsapp Messages ---
+  generalWhatsappMessage:
+    "Hello, JustDiveCol team. I'd like to get some general information about your services. Could you please advise me?",
+  experienceWhatsappMessage:
+    "Hello, JustDiveCol. I'm interested in your experience: {{experienceName}}. Could you provide more details or help me book my spot?",
+  destinationWhatsappMessage:
+    "Hello, JustDiveCol. I'd like more information about dive trips to {{destinationName}}. I'm ready to explore this destination!",
+  certificationWhatsappMessage:
+    "Hello, JustDiveCol. I'm interested in the {{courseName}} certification course. Could you tell me about upcoming dates or requirements?",
+  customWhatsappMessage:
+    "Hello, JustDiveCol. I'd like to design a custom dive experience! I have an idea in mind and want to explore personalized options with you. Could you help me?",
 };

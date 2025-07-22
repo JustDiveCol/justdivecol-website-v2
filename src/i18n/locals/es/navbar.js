@@ -2,15 +2,16 @@
 export default {
   home: 'Inicio',
   experiences: 'Experiencias',
-  about: 'Nosotros',
-  security: 'Seguridad',
-  contact: 'Contacto',
-  gear: 'Tienda',
   divesites: 'Puntos de buceo',
-  policies: 'Nuestras políticas',
-  termsAndConditions: 'Términos y condiciones',
+  store: 'Tienda',
+  about: 'Nosotros',
+  safety: 'Seguridad',
+  contact: 'Contacto',
+
+  policy: 'Nuestras políticas',
+  terms: 'Términos y condiciones',
   privacy: 'Política de privacidad',
-  faqs: 'Preguntas frecuentes (FAQs)',
+  faq: 'Preguntas frecuentes (FAQs)',
 
   footerLinksTitle: 'Explora y conoce',
 };

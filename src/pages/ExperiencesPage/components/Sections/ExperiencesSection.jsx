@@ -19,19 +19,14 @@ const ExperiencesSection = () => {
   const { categories } = homePageData.featuredExperiences;
 
   return (
-    <section className='bg-brand-primary-dark py-20 px-4'>
-      <motion.div
-        variants={staggerContainer}
-        className='container mx-auto text-center'>
+    <section className="bg-brand-primary-dark py-8 px-4">
+      <motion.div variants={staggerContainer} className="container mx-auto text-center">
         <motion.div
           variants={staggerContainer}
-          className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center'>
+          className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
+        >
           {categories.map((card) => (
-            <SimpleCardComponent
-              key={card.id}
-              cardData={card}
-              translationNS={'home'}
-            />
+            <SimpleCardComponent key={card.id} cardData={card} translationNS={'home'} />
           ))}
         </motion.div>
       </motion.div>

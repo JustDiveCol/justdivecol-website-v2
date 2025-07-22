@@ -14,9 +14,9 @@ import {
 // Maps string identifiers from the data file to the actual imported icon components.
 // This allows the data layer to remain simple (e.g., "id: 'guias'").
 const iconMap = {
-  guias: <CertifiedIcon className='h-16 w-16' />,
-  equipos: <HelmetDivingIcon className='h-16 w-16' />,
-  protocolos: <ChecklistIcon className='h-16 w-16' />,
+  guides: <CertifiedIcon className="h-16 w-16" />,
+  gear: <HelmetDivingIcon className="h-16 w-16" />,
+  protocols: <ChecklistIcon className="h-16 w-16" />,
 };
 
 /**
@@ -33,12 +33,10 @@ const SafetyCardComponent = ({ item, translationNS }) => {
   const { t } = useTranslation(translationNS);
 
   return (
-    <motion.div
-      variants={fadeInUp}
-      className='flex flex-col items-center'>
-      <div className='text-brand-cta-green'>{iconMap[item.id]}</div>
-      <h3 className='mt-4 text-2xl font-semibold'>{t(item.titleKey)}</h3>
-      <p className='mt-2 text-brand-neutral'>{t(item.descriptionKey)}</p>
+    <motion.div variants={fadeInUp} className="flex flex-col items-center">
+      <div className="text-brand-cta-green">{iconMap[item.id]}</div>
+      <h3 className="mt-4 text-2xl font-semibold">{t(item.titleKey)}</h3>
+      <p className="mt-2 text-brand-neutral">{t(item.descriptionKey)}</p>
     </motion.div>
   );
 };
