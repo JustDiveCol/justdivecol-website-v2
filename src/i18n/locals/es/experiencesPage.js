@@ -1,5 +1,8 @@
 // src/i18n/locales/es/experiencesPage.js
 export default {
+  expWithTrips: 'Destinos disponibles',
+  expWithoutTrips: 'Otros destinos',
+
   // === SEO SECTION ===
   expSeoTitle: 'Experiencias de buceo | JustDiveCol - Cursos y viajes a medida',
   expSeoDesc:

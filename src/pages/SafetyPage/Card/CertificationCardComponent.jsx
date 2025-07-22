@@ -20,20 +20,19 @@ const CertificationCardComponent = ({ partnerData }) => {
   return (
     <motion.div
       variants={fadeInUp}
-      className='bg-brand-primary-medium p-8 rounded-lg shadow-xl flex flex-col text-center w-full max-w-sm'>
-      <div className='flex-shrink-0 h-24 flex items-center justify-center'>
+      className="bg-brand-primary-medium p-8 rounded-lg shadow-xl flex flex-col text-center w-full max-w-sm"
+    >
+      <div className="flex-shrink-0 h-24 flex items-center justify-center">
         <img
           src={logoUrl}
           alt={t(nameKey)}
-          className='max-h-20'
-          loading='lazy' // Defer loading of logos to improve initial page performance.
+          className="max-h-20"
+          loading="lazy" // Defer loading of logos to improve initial page performance.
         />
       </div>
-      <div className='mt-4 flex flex-col flex-grow'>
-        <h3 className='text-2xl  font-bold text-brand-white'>{t(nameKey)}</h3>
-        <p className='mt-2  text-brand-neutral/80 flex-grow'>
-          {t(descriptionKey)}
-        </p>
+      <div className="mt-4 flex flex-col flex-grow">
+        <h3 className="text-base-md font-bold text-brand-white">{t(nameKey)}</h3>
+        <p className="text-base-xs mt-2 text-brand-neutral/80 flex-grow">{t(descriptionKey)}</p>
       </div>
     </motion.div>
   );

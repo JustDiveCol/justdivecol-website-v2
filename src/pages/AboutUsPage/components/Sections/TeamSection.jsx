@@ -14,32 +14,30 @@ import TeamCardComponent from '../Cards/TeamCardComponent';
  * @param {string} props.teamData.subtitleKey - The translation key for the section subtitle.
  * @param {object[]} props.teamData.members - An array of team member data objects.
  */
-const TeamSection = ({ teamData }) => {
-  const { t } = useTranslation('aboutUs');
+const TeamSection = ({ translationNS, teamData }) => {
+  const { t } = useTranslation([translationNS, 'common']);
   return (
     <motion.section
       onContextMenu={(e) => e.preventDefault()}
       variants={staggerContainer}
-      className='select-none py-20 px-4 bg-brand-primary-medium'>
-      <div className='container mx-auto text-center'>
-        <motion.h2
-          variants={fadeInUp}
-          className='text-4xl md:text-5xl font-bold text-brand-white uppercase'>
+      className="select-none py-12 px-4 bg-brand-primary-medium"
+    >
+      <div className="container mx-auto text-center">
+        <motion.h2 variants={fadeInUp} className="heading-3 font-bold text-brand-white uppercase">
           {t(teamData.titleKey)}
         </motion.h2>
         <motion.p
           variants={fadeInUp}
-          className='mt-4 max-w-3xl mx-auto  text-lg text-brand-neutral'>
+          className="text-subtitle-sm mt-4 max-w-3xl mx-auto text-brand-neutral"
+        >
           {t(teamData.subtitleKey)}
         </motion.p>
         <motion.div
           variants={staggerContainer}
-          className='mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+          className="mt-8 flex flex-wrap justify-center gap-8"
+        >
           {teamData.members.map((member) => (
-            <TeamCardComponent
-              key={member.id}
-              memberData={member}
-            />
+            <TeamCardComponent key={member.id} memberData={member} translationNS={translationNS} />
           ))}
         </motion.div>
       </div>

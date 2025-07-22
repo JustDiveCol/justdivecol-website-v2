@@ -1,12 +1,12 @@
 // src/data/content/destinations/_index.js
 import { publishedExperiences } from '../experiences/_index.js';
-import { santaMartaDestination } from './santa-marta.js';
-import { providenciaDestination } from './providencia.js';
-import { islaFuerteDestination } from './isla-fuerte.js';
-import { malpeloDestination } from './malpelo.js';
-import { bcsDestination } from './bcs.js';
-import { capurganaDestination } from './capurgana.js';
-import { curacaoDestination } from './curacao.js';
+// import { santaMartaDestination } from './santa-marta.js';
+// import { providenciaDestination } from './providencia.js';
+// import { islaFuerteDestination } from './isla-fuerte.js';
+// import { malpeloDestination } from './malpelo.js';
+// import { bcsDestination } from './bcs.js';
+// import { capurganaDestination } from './capurgana.js';
+// import { curacaoDestination } from './curacao.js';
 
 // --- Import other destination data files here as you create them ---
 
@@ -15,13 +15,13 @@ import { curacaoDestination } from './curacao.js';
  * To add a new destination, import it above and add it to this object.
  */
 export const destinationsById = {
-  'santa-marta': santaMartaDestination,
-  providencia: providenciaDestination,
-  'isla-fuerte': islaFuerteDestination,
-  malpelo: malpeloDestination,
-  bcs: bcsDestination,
-  capurgana: capurganaDestination,
-  curacao: curacaoDestination,
+  // 'santa-marta': santaMartaDestination,
+  // providencia: providenciaDestination,
+  // 'isla-fuerte': islaFuerteDestination,
+  // malpelo: malpeloDestination,
+  // bcs: bcsDestination,
+  // capurgana: capurganaDestination,
+  // curacao: curacaoDestination,
 };
 
 // An array containing all destination objects.

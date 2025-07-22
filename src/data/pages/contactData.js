@@ -28,6 +28,8 @@ export const contactPageData = {
   contactInfo: {
     titleKey: 'contactInfoTitle',
     email: 'info@justdivecol.com', // This data doesn't need translation
+    emailSubjectKey: 'contactEmailSubject',
+    emailBodyKey: 'contactEmailBody',
     phone: '+57 311 522 0316', // This data doesn't need translation
     socials: [
       {

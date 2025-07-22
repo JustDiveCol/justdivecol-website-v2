@@ -17,6 +17,7 @@ import AboutUsPage from './pages/AboutUsPage/AboutUsPage.jsx';
 import SafetyPage from './pages/SafetyPage/SafetyPage.jsx';
 import ContactPage from './pages/ContactPage/ContactPage.jsx';
 import CoursePage from './pages/DetailPage/CoursePage/CoursePage.jsx';
+import CertificationPage from './pages/DetailPage/CertificationPage/CertificationPage.jsx';
 import ExperiencePage from './pages/DetailPage/ExperiencePage/ExperiencePage.jsx';
 import DestinationPage from './pages/DetailPage/DestinationPage/DestinationPage.jsx';
 import PolicyPage from './pages/PolicyPage/PolicyPage.jsx';
@@ -61,11 +62,12 @@ const router = createBrowserRouter([
       { path: ROUTES.privacy, element: <PrivacyPolicyPage /> },
       { path: ROUTES.faq, element: <FaqsPage /> },
       { path: ROUTES.underConstruction, element: <UnderConstructionPage /> },
-      // { path: 'test', element: <TestPage /> },
+      { path: 'test', element: <TestPage /> },
 
       // --- Dynamic Detail Pages ---
       // These routes use URL parameters (e.g., :courseId) to render specific content.
-      { path: ROUTES.certificationDetail, element: <CoursePage /> },
+      // { path: ROUTES.certificationDetail, element: <CoursePage /> },
+      { path: ROUTES.certificationDetail, element: <CertificationPage /> },
       { path: ROUTES.experienceDetail, element: <ExperiencePage /> },
       { path: ROUTES.destinationDetail, element: <DestinationPage /> },
 

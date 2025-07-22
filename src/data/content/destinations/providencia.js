@@ -1,74 +1,86 @@
 // src/data/content/destinations/providencia.js
 
-// Import all local images for this destination.
-import providencia_header_background from '../../../assets/images/page-specific/destinations/providencia/providencia-header-background.webp';
-import providencia_card from '../../../assets/images/page-specific/destinations/providencia/providencia-card.webp';
-import providencia_gallery_01 from '../../../assets/images/page-specific/destinations/providencia/providencia-gallery-01.webp';
-import providencia_gallery_02 from '../../../assets/images/page-specific/destinations/providencia/providencia-gallery-02.webp';
-import providencia_gallery_03 from '../../../assets/images/page-specific/destinations/providencia/providencia-gallery-03.webp';
-import providencia_gallery_04 from '../../../assets/images/page-specific/destinations/providencia/providencia-gallery-04.webp';
-import providencia_gallery_05 from '../../../assets/images/page-specific/destinations/providencia/providencia-gallery-05.webp';
-import providencia_gallery_06 from '../../../assets/images/page-specific/destinations/providencia/providencia-gallery-06.webp';
+import { destinationTemplate } from './destinationTemplate';
+import {
+  STATUS,
+  IMAGE_VARIANTS,
+  ROUTES,
+  CATEGORY_REGION,
+  SHARED_TRANSLATION_KEYS,
+  BUTTON_TYPES,
+} from '@/data/global/constants';
+import { LOGO_MAIN } from '@/data/global/assets';
 
-import logo from '../../../assets/images/logos/logo.png';
-import padi from '../../../assets/images/logos/padi.png';
+import headerBackground from '../../../assets/images/page-specific/destinations/providencia/header-background.webp';
+import cardImage from '../../../assets/images/page-specific/destinations/providencia/card-image.webp';
+import gallery01 from '../../../assets/images/page-specific/destinations/providencia/gallery-01.webp';
+import gallery02 from '../../../assets/images/page-specific/destinations/providencia/gallery-02.webp';
+import gallery03 from '../../../assets/images/page-specific/destinations/providencia/gallery-03.webp';
+import gallery04 from '../../../assets/images/page-specific/destinations/providencia/gallery-04.webp';
 
-/**
- * Data structure for the Providencia destination.
- * This object serves as the single source of truth for all content related to this destination.
- */
-export const providenciaDestination = {
+// Base example for Providencia destination
+const _providencia = {
+  ...destinationTemplate,
+
   // --- Metadata ---
-  id: 'providencia', // Unique identifier for the destination.
-  status: 'published', // 'published' or 'draft'.
-  nameKey: 'provName', // Translation key for the destination's name.
+  id: 'providencia',
+  slug: 'providencia',
+  status: STATUS.published,
+  type: 'destination',
+  coords: [-74.19505030742204, 11.232133282203762], // [lng, lat]
+  country: 'CO', // ISO country code
+  minZoom: 9,
+  maxZoom: 16,
+  nameKey: 'provName', // i18n key for "Providencia"
+  categoryKey: CATEGORY_REGION.regionCaribe, // e.g., Caribe colombiano
+  createdAt: '2025-07-22T18:33:06Z',
+  updatedAt: '2025-07-22T18:33:06Z',
 
-  // --- SEO Content ---
+  // --- SEO ---
   seo: {
     titleKey: 'provSeoTitle',
     descriptionKey: 'provSeoDesc',
     keywords: 'provSeoKeywords',
-    imageUrl: providencia_header_background,
-    url: '/destinos/',
+    imageUrl: headerBackground,
+    url: '', // will be assigned dynamically
   },
 
-  // --- Header Content ---
+  // --- Header ---
   header: {
-    backgroundImage: providencia_header_background,
+    backgroundImage: headerBackground,
     titleKey: 'provHeaderTitle',
     subtitleKey: 'provHeaderSubtitle',
-    mainLogo: logo,
-    mainLogoAltKey: 'provHeaderMainLogoAlt',
-    // complementaryLogo: padi,
-    // complementaryLogoAltKey: 'provHeaderComplementaryLogoAlt',
-    // textOverlayKey: 'provHeaderTextOverlay',
-    photoCreditKey: 'provHeaderPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      text: 'XYZ',
+    },
   },
 
-  // --- Card Description Content ---
+  // --- Description ---
   description: {
     titleKey: 'provDescTitle',
     paragraphs: ['provDescP1', 'provDescP2'],
   },
 
-  // --- Card Display ---
+  // --- Card ---
   card: {
-    backgroundImage: providencia_card,
-    mainLogo: logo,
-    mainLogoAltKey: 'provCardMainLogoAlt',
-    // complementaryLogo: padi,
-    // complementaryLogoAltKey: 'provCardComplementaryLogoAlt',
-    textOverlayKey: 'provCardTextOverlay',
-    photoCreditKey: 'provCardPhotoCredit',
-    variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
-
-    descriptionKey: 'provCardDescription',
-    link: '/destinos/santa-marta',
+    backgroundImage: cardImage,
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.mainLogo,
+    textOverlayKey: SHARED_TRANSLATION_KEYS.destinationsTextOverlayKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      text: 'XYZ',
+    },
+    variant: IMAGE_VARIANTS.horizontal,
+    linkPath: '', // will be assigned dynamically
   },
 
-  // --- Main Content ---
+  // Details
   details: {
-    titleKey: 'provDetailsTitle',
+    titleKey: SHARED_TRANSLATION_KEYS.destinationsDetailsTitleKey,
     items: [
       { labelKey: 'provDetailLabel1', valueKey: 'provDetailValue1' },
       { labelKey: 'provDetailLabel2', valueKey: 'provDetailValue2' },
@@ -78,42 +90,21 @@ export const providenciaDestination = {
     ],
   },
 
-  // --- Divesites ---
+  // --- Dive Sites ---
   diveSites: {
-    titleKey: 'provDiveSitesTitle',
+    titleKey: SHARED_TRANSLATION_KEYS.destinationsDiveSitesTitleKey,
     sites: [
-      {
-        id: 'barco-hundido',
-        nameKey: 'provDiveSite1Name',
-        descriptionKey: 'provDiveSite1Desc',
-      },
-      {
-        id: 'natalia',
-        nameKey: 'provDiveSite2Name',
-        descriptionKey: 'provDiveSite2Desc',
-      },
-      {
-        id: 'piedra-medio',
-        nameKey: 'provDiveSite3Name',
-        descriptionKey: 'provDiveSite3Desc',
-      },
-      {
-        id: 'isla-aguja',
-        nameKey: 'provDiveSite4Name',
-        descriptionKey: 'provDiveSite4Desc',
-      },
+      { id: 'barco-hundido', nameKey: 'provDiveSite1Name', descriptionKey: 'provDiveSite1Desc' },
+      { id: 'natalia', nameKey: 'provDiveSite2Name', descriptionKey: 'provDiveSite2Desc' },
+      { id: 'piedra-del-medio', nameKey: 'provDiveSite3Name', descriptionKey: 'provDiveSite3Desc' },
+      { id: 'isla-aguja', nameKey: 'provDiveSite4Name', descriptionKey: 'provDiveSite4Desc' },
     ],
   },
 
   // --- Unique Finds ---
   uniqueFinds: {
     titleKey: 'provUniqueFindsTitle',
-    items: [
-      'provUniqueFind1',
-      'provUniqueFind2',
-      'provUniqueFind3',
-      'provUniqueFind4',
-    ],
+    items: ['provFind1', 'provFind2', 'provFind3', 'provFind4'],
   },
 
   // --- Gallery ---
@@ -121,65 +112,68 @@ export const providenciaDestination = {
     titleKey: 'provGalleryTitle',
     images: [
       {
-        backgroundImage: providencia_gallery_01,
-        mainLogo: logo,
-        mainLogoAltKey: 'provGaleryImg1MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'provGaleryImg1ComplementaryLogoAlt',
-        // textOverlayKey: 'provGaleryImg1TextOverlay',
-        photoCreditKey: 'provGaleryImg1PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery01,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'provGal1Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
       {
-        backgroundImage: providencia_gallery_02,
-        mainLogo: logo,
-        mainLogoAltKey: 'provGaleryImg2MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'provGaleryImg2ComplementaryLogoAlt',
-        // textOverlayKey: 'provGaleryImg2TextOverlay',
-        photoCreditKey: 'provGaleryImg2PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery02,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'provGal2Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
       {
-        backgroundImage: providencia_gallery_03,
-        mainLogo: logo,
-        mainLogoAltKey: 'provGaleryImg3MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'provGaleryImg3ComplementaryLogoAlt',
-        // textOverlayKey: 'provGaleryImg3TextOverlay',
-        photoCreditKey: 'provGaleryImg3PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery03,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'provGal3Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
       {
-        backgroundImage: providencia_gallery_04,
-        mainLogo: logo,
-        mainLogoAltKey: 'provGaleryImg4MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'provGaleryImg4ComplementaryLogoAlt',
-        // textOverlayKey: 'provGaleryImg4TextOverlay',
-        photoCreditKey: 'provGaleryImg4PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
-      },
-      {
-        backgroundImage: providencia_gallery_05,
-        mainLogo: logo,
-        mainLogoAltKey: 'provGaleryImg5MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'provGaleryImg5ComplementaryLogoAlt',
-        // textOverlayKey: 'provGaleryImg5TextOverlay',
-        photoCreditKey: 'provGaleryImg5PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
-      },
-      {
-        backgroundImage: providencia_gallery_06,
-        mainLogo: logo,
-        mainLogoAltKey: 'provGaleryImg6MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'provGaleryImg6ComplementaryLogoAlt',
-        // textOverlayKey: 'provGaleryImg6TextOverlay',
-        photoCreditKey: 'provGaleryImg6PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery04,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'provGal4Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
     ],
   },
+  // --- CTA ---
+  cta: {
+    textKey: SHARED_TRANSLATION_KEYS.destinationCtaTextButtonKey,
+    translationNS: 'common',
+    action: {
+      type: BUTTON_TYPES.whatsapp,
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.destinationWhatsappMessageKey,
+      whatsAppMessageNS: 'common',
+    },
+  },
+
+  // Linked experiences (IDs)
+  experienceIds: [],
 };
+
+// Dynamically assign URL based on slug
+_providencia.seo.url = `${ROUTES.destinations}/${_providencia.slug}`;
+_providencia.card.linkPath = `${ROUTES.destinations}/${_providencia.slug}`;
+
+export const providenciaDestination = _providencia;

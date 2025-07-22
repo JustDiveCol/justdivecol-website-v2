@@ -29,17 +29,15 @@ export default {
 
   // Safety Section
   homeSafetyTitle: 'Tu única misión: sumergirte y explorar con tranquilidad',
-  homeSafetySubtitle:
-    'El buceo es una pasión que debe disfrutarse con total tranquilidad y confianza. Nosotros nos encargamos de cada detalle para tu seguridad, permitiéndote concentrarte solo en la magia del océano.',
-  homeSafetyPoint1Title: 'Guías e instructores expertos y certificados PADI',
+  homeSafetyPoint1Title: 'Guías expertos PADI', // Acortado
   homeSafetyPoint1Desc:
-    'Nuestro equipo está formado por profesionales PADI altamente cualificados, con años de experiencia liderando inmersiones seguras y memorables en diversos entornos submarinos. Tu seguridad está en manos expertas.',
-  homeSafetyPoint2Title: 'Equipos de primera calidad y mantenimiento riguroso',
+    'Tu seguridad está en manos de profesionales PADI altamente cualificados y con años de experiencia.', // Acortado
+  homeSafetyPoint2Title: 'Equipo de alta calidad', // Acortado
   homeSafetyPoint2Desc:
-    'Utilizamos solo equipos de buceo de marcas líderes en la industria, sometidos a un mantenimiento exhaustivo y revisiones periódicas con estándares de reloj suizo, para garantizar tu máxima seguridad y confort en cada inmersión.',
-  homeSafetyPoint3Title: 'Protocolos de seguridad internacionales estrictos',
+    'Usamos equipos líderes con mantenimiento riguroso para tu seguridad y confort.', // Acortado
+  homeSafetyPoint3Title: 'Protocolos estrictos', // Acortado
   homeSafetyPoint3Desc:
-    'Seguimos rigurosamente los estándares y protocolos de seguridad más estrictos establecidos por PADI y otras organizaciones internacionales, asegurando que cada inmersión que realizas con nosotros sea segura, responsable y cuidando tu bienestar en todo momento.',
+    'Seguimos estándares internacionales de seguridad PADI para inmersiones responsables.', // Acortado
 
   // Testimonials Section
   homeTestimonialsTitle: 'Voces de nuestras aventuras submarinas inolvidables',

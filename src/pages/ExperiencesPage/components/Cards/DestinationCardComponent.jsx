@@ -23,33 +23,34 @@ const DestinationCardComponent = ({
   return (
     <motion.div
       variants={fadeInUp}
-      className={`
-        bg-brand-primary-medium rounded-lg overflow-hidden shadow-lg
-        flex flex-col hover:shadow-2xl hover:scale-[1.02]
-        transition-all duration-300 w-full ${maxWidth} h-full
-      `}
+      className="w-[220px] sm:w-[250px] md:w-[280px] lg:w-[300px] xl:w-[320px] bg-brand-primary-medium rounded-lg overflow-hidden shadow-2xl flex flex-col hover:scale-[1.02] transition-all duration-300"
     >
       <ImageComponent imageData={card} translationNS={translationNS} />
 
-      <div className="p-5 flex flex-col flex-grow">
+      <div className="p-6 flex flex-col flex-grow justify-between">
         {/* Siempre mostramos el título */}
-        <h3 className="text-2xl font-bold text-brand-white">{t(nameKey)}</h3>
+        <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-brand-white">
+          {t(nameKey)}
+        </h3>
 
         {hasTrips && (
           <>
             {/* Solo mostramos la descripción si hay viajes */}
-            <p className="mt-2 text-brand-neutral flex-grow text-justify">
-              {t(card.descriptionKey)}
+            <p className="mt-2 text-brand-neutral text-[13px] sm:text-sm md:text-base flex-grow text-justify">
+              <span className="block sm:hidden">{t(card.descriptionKey).substring(0, 60)}...</span>
+              <span className="hidden sm:block">{t(card.descriptionKey)}</span>
             </p>
 
             <div className="mt-1 pt-2 border-t border-brand-primary-light/20">
-              <h4 className="font-semibold text-brand-white mb-2">{t('common:upcomingDates')}</h4>
+              <h4 className="text-sm sm:text-sm md:text-base lg:text-lg font-semibold text-brand-white mb-2">
+                {t('common:upcomingDates')}
+              </h4>
               <ul className="space-y-2">
                 {upcomingTrips.map((trip) => (
                   <li key={trip.id}>
                     <Link
                       to={`${ROUTES.experiences}${trip.id}`}
-                      className="block bg-brand-primary-dark p-1 rounded-md hover:bg-brand-primary-light transition-colors text-left"
+                      className="text-xs sm:text-xs md:text-sm lg:text-base block bg-brand-primary-dark p-1 rounded-md hover:bg-brand-primary-light transition-colors text-center"
                     >
                       <span className="text-brand-neutral">
                         {formatDateRange(
@@ -72,7 +73,7 @@ const DestinationCardComponent = ({
       {/* Siempre mostramos el botón */}
       <Link
         to={`${ROUTES.destinations}${id}`}
-        className="block bg-brand-cta-orange text-center text-brand-white font-bold uppercase p-3 hover:bg-opacity-90 transition-colors mt-auto"
+        className="block bg-brand-cta-orange text-center text-brand-white font-bold uppercase text-xs sm:text-sm md:text-base p-2 sm:p-3 hover:bg-opacity-90 transition-colors mt-auto"
       >
         {t('common:exploreDestination')}
       </Link>

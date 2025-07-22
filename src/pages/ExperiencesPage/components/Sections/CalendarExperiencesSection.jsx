@@ -22,8 +22,8 @@ import { CalendarIcon } from '../../../../assets/icons/SocialIcons.jsx';
  * Renders a paginated calendar section of all upcoming trips.
  * It filters and sorts all published experiences to create a chronological list.
  */
-const CalendarExperiencesSection = () => {
-  const { t } = useTranslation(['experiencesPage', 'common', 'contact']);
+const CalendarExperiencesSection = ({ translationNS }) => {
+  const { t } = useTranslation([translationNS, 'common', 'contact']);
   const [currentPage, setCurrentPage] = useState(0);
 
   // --- LÓGICA CENTRALIZADA DE FECHAS Y DURACIÓN ---
@@ -78,16 +78,18 @@ const CalendarExperiencesSection = () => {
   return (
     <section
       id="upcoming-trips-section"
-      className="relative py-20 px-4 bg-cover bg-center scroll-mt-20"
+      className="relative py-12 px-4 bg-cover bg-center scroll-mt-20"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="absolute inset-0 bg-brand-primary-dark/80"></div>
 
       <div className="relative container mx-auto text-center z-10">
-        <h1 className="text-4xl md:text-5xl font-bold text-brand-white uppercase">{t(titleKey)}</h1>
-        <p className="mt-4 max-w-2xl mx-auto text-lg text-brand-neutral">{t(subtitleKey)}</p>
+        <h1 className="heading-1 font-bold text-brand-white uppercase">{t(titleKey)}</h1>
+        <p className="text-subtitle-sm leading-tight mt-4 max-w-2xl mx-auto text-brand-neutral">
+          {t(subtitleKey)}
+        </p>
 
-        <div className="mt-12 max-w-4xl mx-auto relative">
+        <div className="mt-6 max-w-4xl mx-auto relative">
           {upcomingTrips.length > 0 ? (
             <>
               <AnimatePresence mode="wait">

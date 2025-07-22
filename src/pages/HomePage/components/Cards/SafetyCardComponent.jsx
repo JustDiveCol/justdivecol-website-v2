@@ -33,10 +33,17 @@ const SafetyCardComponent = ({ item, translationNS }) => {
   const { t } = useTranslation(translationNS);
 
   return (
-    <motion.div variants={fadeInUp} className="flex flex-col items-center">
-      <div className="text-brand-cta-green">{iconMap[item.id]}</div>
-      <h3 className="mt-4 text-2xl font-semibold">{t(item.titleKey)}</h3>
-      <p className="mt-2 text-brand-neutral">{t(item.descriptionKey)}</p>
+    <motion.div
+      variants={fadeInUp}
+      className="relative w-[30%] min-w-[150px] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg overflow-hidden shadow-2xl flex flex-col items-center justify-center p-6 bg-brand-primary-dark text-white"
+    >
+      <div className="text-brand-cta-green mb-4">{iconMap[item.id]}</div>
+      <h3 className="text-center text-xs sm:text-base md:text-xl lg:text-2xl font-bold uppercase tracking-wide">
+        {t(item.titleKey)}
+      </h3>
+      <p className="text-center text-xs sm:text-sm md:text-base lg:text-lg text-brand-neutral mt-2">
+        {t(item.descriptionKey)}
+      </p>
     </motion.div>
   );
 };

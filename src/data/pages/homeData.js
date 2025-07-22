@@ -21,13 +21,19 @@ export const homePageData = {
     imageUrl: heroBackground,
     titleKey: 'homeHeroTitle',
     subtitleKey: 'homeHeroSubtitle',
-    ctaTextKey: SHARED_TRANSLATION_KEYS.experiencesTextButtonKey,
-    ctaAction: {
-      type: BUTTON_TYPES.internal,
-      path: ROUTES.experiences,
-    },
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAlt: LOGO_MAIN.altKey,
+    ctaButton: {
+      textKey: SHARED_TRANSLATION_KEYS.experiencesTextButtonKey,
+      translationNS: 'common',
+      action: {
+        type: BUTTON_TYPES.internal,
+        path: ROUTES.experiences,
+      },
+      animateOnView: true,
+      className: '',
+      containerClassName: 'mt-8',
+    },
     photoCredit: {
       prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
       text: 'Camilo Beltran @JustDiveCol',
@@ -42,6 +48,7 @@ export const homePageData = {
     categories: experienceCategories.map((cat) => ({
       ...cat,
       link: cat.id === 'custom' ? `${ROUTES.contact}` : `${ROUTES.experiences}#${cat.id}`,
+      translationNS: 'home',
     })),
   },
 
@@ -66,10 +73,12 @@ export const homePageData = {
         descriptionKey: 'homeSafetyPoint3Desc',
       },
     ],
-    ctaTextKey: SHARED_TRANSLATION_KEYS.safetyTextButtonKey,
-    ctaAction: {
-      type: BUTTON_TYPES.internal,
-      path: ROUTES.safety,
+    ctaButton: {
+      textKey: SHARED_TRANSLATION_KEYS.safetyTextButtonKey,
+      action: {
+        type: 'internal',
+        path: ROUTES.safety,
+      },
     },
   },
   // Testimonials Section
@@ -107,16 +116,21 @@ export const homePageData = {
     backgroundImage: ctaBackground,
     titleKey: 'homeFinalCtaTitle',
     subtitleKey: 'homeFinalCtaSubtitle',
-    ctaTextKey: SHARED_TRANSLATION_KEYS.contactTextButtonKey,
-    ctaAction: {
-      type: 'whatsapp',
-      whatsAppMessageKey: 'generalWhatsappMessage',
+    ctaButton: {
+      textKey: SHARED_TRANSLATION_KEYS.contactTextButtonKey,
+      action: {
+        type: BUTTON_TYPES.whatsapp,
+        whatsAppMessageKey: SHARED_TRANSLATION_KEYS.generalWhatsappMessageKey,
+      },
+      className: 'mt-8',
+      animateOnView: true,
+      viewportOptions: {
+        once: true,
+        amount: 0.4,
+      },
     },
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.mainLogo,
-    // complementaryLogo: '',
-    // complementaryLogoAltKey: '',
-    // textOverlayKey: '',
     photoCredit: {
       prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefix,
       text: 'Camilo Beltran @JustDiveCol',

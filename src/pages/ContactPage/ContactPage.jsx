@@ -34,11 +34,7 @@ const ContactPage = () => {
   )}?text=${encodeURIComponent(prefilledText)}`;
 
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial='initial'
-      animate='animate'
-      exit='exit'>
+    <motion.div variants={staggerContainer} initial="initial" animate="animate" exit="exit">
       <SEOComponent
         title={t(seo.titleKey)}
         description={t(seo.descriptionKey)}
@@ -47,19 +43,15 @@ const ContactPage = () => {
         url={seo.url}
       />
 
-      <HeaderComponent
-        sectionData={header}
-        translationNS='contact'
-      />
+      <HeaderComponent sectionData={header} translationNS="contact" />
 
-      <motion.section
-        variants={fadeInUp}
-        className='py-20 px-4'>
-        <div className='container mx-auto grid md:grid-cols-2 gap-12 items-start'>
-          <ContactInfoSection contactInfoData={contactInfo} />
+      <motion.section variants={fadeInUp} className="py-12 px-4">
+        <div className="container mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <ContactInfoSection contactInfoData={contactInfo} translationNS="contact" />
           <WhatsAppCtaSection
             whatsAppActionData={whatsAppAction}
             whatsappUrl={whatsappUrl}
+            translationNS="contact"
           />
         </div>
       </motion.section>

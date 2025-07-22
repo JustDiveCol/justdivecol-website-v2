@@ -10,35 +10,36 @@ import TestimonialCardComponent from '../Cards/TestimonialCardComponent';
  * Renders the "Testimonials" section for the homepage.
  * It displays a title and a grid of customer testimonials.
  */
-const TestimonialsSection = () => {
-  const { t } = useTranslation('home');
+const TestimonialsSection = ({ translationNS }) => {
+  const { t } = useTranslation([translationNS, 'common']);
 
   const { titleKey, items } = homePageData.testimonials;
 
   return (
-    <section className='bg-gradient-to-b from-brand-primary-dark to-[#061a3a] py-20 px-4'>
+    <section className="bg-gradient-to-b from-brand-primary-dark to-[#061a3a] py-12 px-4">
       <motion.div
         variants={staggerContainer}
-        initial='initial'
-        whileInView='animate'
+        initial="initial"
+        whileInView="animate"
         viewport={{ once: true, amount: 0.2 }}
-        className='container mx-auto text-center'>
-        <motion.h2
-          variants={fadeInUp}
-          className='text-4xl md:text-5xl  font-bold text-brand-white uppercase'>
+        className="container mx-auto text-center"
+      >
+        <motion.h2 variants={fadeInUp} className="heading-2 text-brand-white">
           {t(titleKey)}
         </motion.h2>
 
         <motion.div
           variants={staggerContainer}
-          initial='initial'
-          whileInView='animate'
+          initial="initial"
+          whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
-          className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {items.map((testimonial) => (
             <TestimonialCardComponent
               key={testimonial.id}
               cardData={testimonial}
+              translationNS={translationNS}
             />
           ))}
         </motion.div>

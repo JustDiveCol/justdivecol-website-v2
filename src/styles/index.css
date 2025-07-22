@@ -75,37 +75,59 @@
 
 @layer components {
   .heading-1 {
-    @apply text-3xl sm:text-4xl md:text-5xl font-bold leading-tight;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-extrabold uppercase tracking-tight;
   }
 
   .heading-2 {
-    @apply text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug;
+    @apply text-2xl sm:text-4xl md:text-5xl leading-tight font-bold uppercase tracking-tight;
   }
 
   .heading-3 {
-    @apply text-xl sm:text-2xl md:text-3xl font-semibold;
-  }
-
-  .heading-4,
-  .heading-5,
-  .heading-6 {
-    @apply font-medium;
+    @apply text-2xl sm:text-3xl md:text-4xl leading-snug font-semibold uppercase tracking-tight;
   }
 
   .heading-4 {
-    @apply text-lg sm:text-xl;
+    @apply text-xl sm:text-2xl md:text-3xl leading-snug font-medium uppercase tracking-tight;
   }
 
   .heading-5 {
-    @apply text-base sm:text-lg;
+    @apply text-lg sm:text-xl md:text-2xl leading-normal font-medium uppercase tracking-wide;
   }
 
   .heading-6 {
-    @apply text-sm sm:text-base;
+    @apply text-base sm:text-lg leading-normal font-medium uppercase tracking-wide;
   }
 
-  .text-base {
+  .text-subtitle {
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed font-serif mt-4 max-w-4xl mx-auto text-brand-neutral;
+  }
+
+  .text-subtitle-sm {
+    @apply text-sm sm:text-sm md:text-base lg:text-lg leading-relaxed font-serif mt-4 max-w-4xl mx-auto text-brand-neutral;
+  }
+
+  .text-subtitle-base {
+    @apply text-base sm:text-base md:text-lg lg:text-xl leading-relaxed font-serif mt-4 max-w-4xl mx-auto text-brand-neutral;
+  }
+
+  .text-subtitle-2 {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-serif mt-4 max-w-4xl mx-auto text-brand-neutral;
+  }
+
+  .text-base-md {
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed;
+  }
+
+  .text-base-sm {
     @apply text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed;
+  }
+
+  .text-base-xs {
+    @apply text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed;
+  }
+
+  .text-button {
+    @apply text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide font-serif;
   }
 
   .text-muted {
@@ -122,6 +144,12 @@
 
   .form-button {
     @apply text-sm font-semibold rounded-md px-4 py-2 transition-colors duration-200;
+  }
+}
+
+@layer utilities {
+  .min-h-hero {
+    min-height: calc(100vh - 5rem);
   }
 }
 

@@ -1,8 +1,7 @@
 // src/i18n/locales/es/contact.js
 export default {
   // ----- SEO -----
-  contactSeoTitle:
-    'Contacto | JustDiveCol - Planifica tu próxima aventura submarina',
+  contactSeoTitle: 'Contacto | JustDiveCol - Planifica tu próxima aventura submarina',
   contactSeoDesc:
     '¿Listo para explorar el azul profundo? Contáctanos para diseñar tu viaje soñado, resolver tus dudas o simplemente compartir nuestra pasión por el increíble mundo submarino con JustDiveCol.',
   contactSeoKeywords:
@@ -18,6 +17,9 @@ export default {
 
   // ----- Contact Info -----
   contactInfoTitle: 'Nuestros canales de comunicación',
+
+  contactEmailSubject: 'Consulta desde el sitio web',
+  contactEmailBody: 'Hola, quisiera más información sobre los servicios de JustDiveCol.',
 
   // ----- WhatsApp Action -----
   contactWhatsAppTitle: 'Envíanos un mensaje directo por WhatsApp',

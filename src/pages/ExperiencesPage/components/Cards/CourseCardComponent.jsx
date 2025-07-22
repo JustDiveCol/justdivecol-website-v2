@@ -12,11 +12,11 @@ import ImageComponent from '../../../../components/common/Image/ImageComponent';
  * a snippet of the description, availability status, and duration.
  *
  * @param {object} props - The component props.
- * @param {object} props.courseData - The complete data object for the course.
+ * @param {object} props.certData - The complete data object for the course.
  */
-const CourseCardComponent = ({ courseData }) => {
-  const { t } = useTranslation(['courses', 'common']);
-  const { id, header, description, card, details, availability } = courseData;
+const CourseCardComponent = ({ certData, translationNS }) => {
+  const { t } = useTranslation([translationNS, 'common']);
+  const { id, header, card, details, availability } = certData;
 
   /**
    * Returns Tailwind CSS classes based on the course's availability status.
@@ -32,37 +32,30 @@ const CourseCardComponent = ({ courseData }) => {
   return (
     <motion.div
       variants={fadeInUp}
-      className='bg-brand-primary-medium rounded-lg overflow-hidden shadow-lg flex flex-col hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 w-full max-w-sm'>
-      <ImageComponent
-        imageData={card}
-        translationNS={'courses'}
-      />
-      <div className='p-6 flex flex-col flex-grow'>
-        <h3 className='text-2xl font-bold text-brand-white'>
-          {t(header.titleKey)}
-        </h3>
-        {/* Display a truncated version of the first paragraph of the description. */}
-        <p className='mt-2  text-brand-neutral flex-grow text-justify'>
-          {t(description.paragraphs[0]).substring(0, 100)}...
-        </p>
-        <div className='mt-6 pt-4 border-t border-brand-primary-light/20 flex justify-between items-center'>
+      className="relative w-[80%] sm:w-[70%] md:w-[45%] lg:w-[30%] max-w-sm bg-brand-primary-medium rounded-lg overflow-hidden shadow-2xl flex flex-col hover:scale-[1.02] transition-all duration-300"
+    >
+      <ImageComponent imageData={card} translationNS={'courses'} />
+      <div className="p-6 flex flex-col flex-grow justify-between">
+        <h3 className="heading-5 leading-tight font-bold text-brand-white">{t(header.titleKey)}</h3>
+        <div className="mt-6 pt-4 border-t border-brand-primary-light/20 flex justify-between items-center">
           <span
-            className={`font-bold text-center text-sm px-3 py-1 rounded-full ${getStatusStyles(
+            className={`font-bold text-center text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 py-1 rounded-full ${getStatusStyles(
               availability
-            )}`}>
+            )}`}
+          >
             {t(`common:${availability}`)}
           </span>
-          {/* Conditionally render the duration if it was found in the data. */}
           {details?.durationKey && (
-            <span className='text-sm text-center text-brand-neutral bg-brand-primary-light px-3 py-1 rounded-full'>
-              {t(details.durationKey, { ns: 'courses' })}
+            <span className="text-[10px] sm:text-xs md:text-sm text-center text-brand-neutral bg-brand-primary-light px-2 sm:px-3 py-1 rounded-full">
+              {t(details.durationKey)}
             </span>
           )}
         </div>
       </div>
       <Link
-        to={`/cursos/${id}`}
-        className='block bg-brand-cta-orange text-center text-brand-white font-bold uppercase p-3 hover:bg-opacity-90 transition-colors mt-auto'>
+        to={`/certification/${id}`}
+        className="block bg-brand-cta-orange text-center text-brand-white font-bold uppercase text-xs sm:text-sm md:text-base p-2 sm:p-3 hover:bg-opacity-90 transition-colors mt-auto"
+      >
         {t('common:viewDetails')}
       </Link>
     </motion.div>

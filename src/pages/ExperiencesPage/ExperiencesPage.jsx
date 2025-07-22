@@ -3,26 +3,26 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
-// Data sources and animations
-import { experiencesPageData } from '../../data/pages/experiencesData';
-import { staggerContainer } from '../../hooks/animations';
+// Data and animations
+import { experiencesPageData } from '@/data/pages/experiencesData';
+import { homePageData } from '@/data/pages/homeData';
+import { staggerContainer } from '@/hooks/animations';
 
-// UI and Section Components
-import SEOComponent from '../../components/ui/SEOComponent';
-import ExperiencesSection from './components/Sections/ExperiencesSection';
+// Components
+import SEOComponent from '@/components/ui/SEOComponent';
+import ExperiencesSection from '@/pages/HomePage/components/Sections/ExperiencesSection.jsx';
 import CalendarExperiencesSection from './components/Sections/CalendarExperiencesSection';
-import CoursesSection from './components/Sections/CoursesSection';
-import DestinationsSection from './components/Sections/DestinationsSection';
-import CtaComponent from '../../components/CtaComponent';
+import CoursesSection from '@/pages/ExperiencesPage/components/Sections/CoursesSection';
+import DestinationsSection from '@/pages/ExperiencesPage/components/Sections/DestinationsSection';
+import CtaComponent from '@/components/CtaComponent';
 
-/**
- * Renders the main "Experiences" page.
- * This component assembles all the sections that showcase the different
- * types of experiences offered, such as the calendar, courses, and destinations.
- */
+// Providers
+import CertificationSection from './components/Sections/CertificationsSection';
+
 const ExperiencesPage = () => {
   const { t } = useTranslation('experiencesPage');
   const { seo, customTripCta } = experiencesPageData;
+  const { titleKey, subtitleKey, categories } = homePageData.featuredExperiences;
 
   return (
     <div>
@@ -35,10 +35,18 @@ const ExperiencesPage = () => {
       />
 
       <motion.div variants={staggerContainer} initial="initial" animate="animate" exit="exit">
-        <CalendarExperiencesSection />
-        <ExperiencesSection />
-        <CoursesSection />
-        <DestinationsSection />
+        <CalendarExperiencesSection translationNS="experiencesPage" />
+
+        <ExperiencesSection
+          translationNS="home"
+          titleKey={titleKey}
+          subtitleKey={subtitleKey}
+          categories={categories}
+        />
+
+        <CertificationSection translationNS={'experiencesPage'} />
+        {/* <CoursesSection translationNS="experiencesPage" /> */}
+        <DestinationsSection translationNS="experiencesPage" />
         <CtaComponent sectionData={customTripCta} translationNS="experiencesPage" />
       </motion.div>
     </div>

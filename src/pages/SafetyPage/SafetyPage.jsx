@@ -24,26 +24,19 @@ export const SafetyPage = () => {
   const { seo, header, protocols, equipment, certifications } = data;
 
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial='initial'
-      animate='animate'
-      exit='exit'>
+    <motion.div variants={staggerContainer} initial="initial" animate="animate" exit="exit">
       <SEOComponent
         title={t(seo.titleKey)}
         description={t(seo.descriptionKey)}
         imageUrl={header.imageUrl}
-        url='/seguridad'
+        url="/seguridad"
       />
 
-      <HeaderComponent
-        sectionData={header}
-        translationNS='safety'
-      />
+      <HeaderComponent sectionData={header} translationNS="safety" />
 
-      <ProtocolsSection protocolsData={protocols} />
-      <EquipmentSection equipmentData={equipment} />
-      <CertificationsSection certificationsData={certifications} />
+      <ProtocolsSection protocolsData={protocols} translationNS={'safety'} />
+      <EquipmentSection equipmentData={equipment} translationNS={'safety'} />
+      <CertificationsSection certificationsData={certifications} translationNS={'safety'} />
     </motion.div>
   );
 };

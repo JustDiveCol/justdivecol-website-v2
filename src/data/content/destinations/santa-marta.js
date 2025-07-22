@@ -1,74 +1,86 @@
 // src/data/content/destinations/santa-marta.js
 
-// Import all local images for this destination.
-import santa_marta_header_background from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-header-background.webp';
-import santa_marta_card from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-card.webp';
-import santa_marta_gallery_01 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-01.webp';
-import santa_marta_gallery_02 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-02.webp';
-import santa_marta_gallery_03 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-03.webp';
-import santa_marta_gallery_04 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-04.webp';
-import santa_marta_gallery_05 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-05.webp';
-import santa_marta_gallery_06 from '../../../assets/images/page-specific/destinations/santa-marta/santa-marta-gallery-06.webp';
+import { destinationTemplate } from './destinationTemplate';
+import {
+  STATUS,
+  IMAGE_VARIANTS,
+  ROUTES,
+  CATEGORY_REGION,
+  SHARED_TRANSLATION_KEYS,
+  BUTTON_TYPES,
+} from '@/data/global/constants';
+import { LOGO_MAIN } from '@/data/global/assets';
 
-import logo from '../../../assets/images/logos/logo.png';
-import padi from '../../../assets/images/logos/padi.png';
+import headerBackground from '../../../assets/images/page-specific/destinations/santa-marta/header-background.webp';
+import cardImage from '../../../assets/images/page-specific/destinations/santa-marta/card-image.webp';
+import gallery01 from '../../../assets/images/page-specific/destinations/santa-marta/gallery-01.webp';
+import gallery02 from '../../../assets/images/page-specific/destinations/santa-marta/gallery-02.webp';
+import gallery03 from '../../../assets/images/page-specific/destinations/santa-marta/gallery-03.webp';
+import gallery04 from '../../../assets/images/page-specific/destinations/santa-marta/gallery-04.webp';
 
-/**
- * Data structure for the Santa Marta destination.
- * This object serves as the single source of truth for all content related to this destination.
- */
-export const santaMartaDestination = {
+// Base example for Santa Marta destination
+const _santaMarta = {
+  ...destinationTemplate,
+
   // --- Metadata ---
-  id: 'santa-marta', // Unique identifier for the destination.
-  status: 'published', // 'published' or 'draft'.
-  nameKey: 'smName', // Translation key for the destination's name.
+  id: 'santa-marta',
+  slug: 'santa-marta',
+  status: STATUS.published,
+  type: 'destination',
+  coords: [-74.19505030742204, 11.232133282203762], // [lng, lat]
+  country: 'CO', // ISO country code
+  minZoom: 9,
+  maxZoom: 16,
+  nameKey: 'smName', // i18n key for "Santa Marta"
+  categoryKey: CATEGORY_REGION.regionCaribe, // e.g., Caribe colombiano
+  createdAt: '2025-07-22T18:33:06Z',
+  updatedAt: '2025-07-22T18:33:06Z',
 
-  // --- SEO Content ---
+  // --- SEO ---
   seo: {
     titleKey: 'smSeoTitle',
     descriptionKey: 'smSeoDesc',
     keywords: 'smSeoKeywords',
-    imageUrl: santa_marta_header_background,
-    url: '/destinos/',
+    imageUrl: headerBackground,
+    url: '', // will be assigned dynamically
   },
 
-  // --- Header Content ---
+  // --- Header ---
   header: {
-    backgroundImage: santa_marta_header_background,
+    backgroundImage: headerBackground,
     titleKey: 'smHeaderTitle',
     subtitleKey: 'smHeaderSubtitle',
-    mainLogo: logo,
-    mainLogoAltKey: 'smHeaderMainLogoAlt',
-    // complementaryLogo: padi,
-    // complementaryLogoAltKey: 'smHeaderComplementaryLogoAlt',
-    // textOverlayKey: 'smHeaderTextOverlay',
-    photoCreditKey: 'smHeaderPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      text: 'XYZ',
+    },
   },
 
-  // --- Card Description Content ---
+  // --- Description ---
   description: {
     titleKey: 'smDescTitle',
     paragraphs: ['smDescP1', 'smDescP2'],
   },
 
-  // --- Card Display ---
+  // --- Card ---
   card: {
-    backgroundImage: santa_marta_card,
-    mainLogo: logo,
-    mainLogoAltKey: 'smCardMainLogoAlt',
-    // complementaryLogo: padi,
-    // complementaryLogoAltKey: 'smCardComplementaryLogoAlt',
-    textOverlayKey: 'smCardTextOverlay',
-    photoCreditKey: 'smCardPhotoCredit',
-    variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
-
-    descriptionKey: 'smCardDescription',
-    link: '/destinos/santa-marta',
+    backgroundImage: cardImage,
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.mainLogo,
+    textOverlayKey: SHARED_TRANSLATION_KEYS.destinationsTextOverlayKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      text: 'XYZ',
+    },
+    variant: IMAGE_VARIANTS.horizontal,
+    linkPath: '', // will be assigned dynamically
   },
 
-  // --- Main Content ---
+  // Details
   details: {
-    titleKey: 'smDetailsTitle',
+    titleKey: SHARED_TRANSLATION_KEYS.destinationsDetailsTitleKey,
     items: [
       { labelKey: 'smDetailLabel1', valueKey: 'smDetailValue1' },
       { labelKey: 'smDetailLabel2', valueKey: 'smDetailValue2' },
@@ -78,37 +90,21 @@ export const santaMartaDestination = {
     ],
   },
 
-  // --- Divesites ---
+  // --- Dive Sites ---
   diveSites: {
-    titleKey: 'smDiveSitesTitle',
+    titleKey: SHARED_TRANSLATION_KEYS.destinationsDiveSitesTitleKey,
     sites: [
-      {
-        id: 'barco-hundido',
-        nameKey: 'smDiveSite1Name',
-        descriptionKey: 'smDiveSite1Desc',
-      },
-      {
-        id: 'natalia',
-        nameKey: 'smDiveSite2Name',
-        descriptionKey: 'smDiveSite2Desc',
-      },
-      {
-        id: 'piedra-medio',
-        nameKey: 'smDiveSite3Name',
-        descriptionKey: 'smDiveSite3Desc',
-      },
-      {
-        id: 'isla-aguja',
-        nameKey: 'smDiveSite4Name',
-        descriptionKey: 'smDiveSite4Desc',
-      },
+      { id: 'barco-hundido', nameKey: 'smDiveSite1Name', descriptionKey: 'smDiveSite1Desc' },
+      { id: 'natalia', nameKey: 'smDiveSite2Name', descriptionKey: 'smDiveSite2Desc' },
+      { id: 'piedra-del-medio', nameKey: 'smDiveSite3Name', descriptionKey: 'smDiveSite3Desc' },
+      { id: 'isla-aguja', nameKey: 'smDiveSite4Name', descriptionKey: 'smDiveSite4Desc' },
     ],
   },
 
   // --- Unique Finds ---
   uniqueFinds: {
     titleKey: 'smUniqueFindsTitle',
-    items: ['smUniqueFind1', 'smUniqueFind2', 'smUniqueFind3', 'smUniqueFind4'],
+    items: ['smFind1', 'smFind2', 'smFind3', 'smFind4'],
   },
 
   // --- Gallery ---
@@ -116,65 +112,68 @@ export const santaMartaDestination = {
     titleKey: 'smGalleryTitle',
     images: [
       {
-        backgroundImage: santa_marta_gallery_01,
-        mainLogo: logo,
-        mainLogoAltKey: 'smGaleryImg1MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'smGaleryImg1ComplementaryLogoAlt',
-        // textOverlayKey: 'smGaleryImg1TextOverlay',
-        photoCreditKey: 'smGaleryImg1PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery01,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'smGal1Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
       {
-        backgroundImage: santa_marta_gallery_02,
-        mainLogo: logo,
-        mainLogoAltKey: 'smGaleryImg2MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'smGaleryImg2ComplementaryLogoAlt',
-        // textOverlayKey: 'smGaleryImg2TextOverlay',
-        photoCreditKey: 'smGaleryImg2PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery02,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'smGal2Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
       {
-        backgroundImage: santa_marta_gallery_03,
-        mainLogo: logo,
-        mainLogoAltKey: 'smGaleryImg3MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'smGaleryImg3ComplementaryLogoAlt',
-        // textOverlayKey: 'smGaleryImg3TextOverlay',
-        photoCreditKey: 'smGaleryImg3PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery03,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'smGal3Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
       {
-        backgroundImage: santa_marta_gallery_04,
-        mainLogo: logo,
-        mainLogoAltKey: 'smGaleryImg4MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'smGaleryImg4ComplementaryLogoAlt',
-        // textOverlayKey: 'smGaleryImg4TextOverlay',
-        photoCreditKey: 'smGaleryImg4PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
-      },
-      {
-        backgroundImage: santa_marta_gallery_05,
-        mainLogo: logo,
-        mainLogoAltKey: 'smGaleryImg5MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'smGaleryImg5ComplementaryLogoAlt',
-        // textOverlayKey: 'smGaleryImg5TextOverlay',
-        photoCreditKey: 'smGaleryImg5PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
-      },
-      {
-        backgroundImage: santa_marta_gallery_06,
-        mainLogo: logo,
-        mainLogoAltKey: 'smGaleryImg6MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'smGaleryImg6ComplementaryLogoAlt',
-        // textOverlayKey: 'smGaleryImg6TextOverlay',
-        photoCreditKey: 'smGaleryImg6PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery04,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'smGal4Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
     ],
   },
+  // --- CTA ---
+  cta: {
+    textKey: SHARED_TRANSLATION_KEYS.destinationCtaTextButtonKey,
+    translationNS: 'common',
+    action: {
+      type: BUTTON_TYPES.whatsapp,
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.destinationWhatsappMessageKey,
+      whatsAppMessageNS: 'common',
+    },
+  },
+
+  // Linked experiences (IDs)
+  experienceIds: [],
 };
+
+// Dynamically assign URL based on slug
+_santaMarta.seo.url = `${ROUTES.destinations}/${_santaMarta.slug}`;
+_santaMarta.card.linkPath = `${ROUTES.destinations}/${_santaMarta.slug}`;
+
+export const santaMartaDestination = _santaMarta;

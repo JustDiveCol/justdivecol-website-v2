@@ -1,6 +1,36 @@
 export const SHARED_TRANSLATION_KEYS = {
   photoCreditPrefixKey: 'commonPhotoCreditPrefix',
 
+  // --- Certifications ---
+  certificationsTextOverlayKey: 'certificationTextOverlay',
+
+  certificationsDefaultNoteKey: 'certificationsDefaultNote',
+
+  certificationsDetailsTitleKey: 'certificationsDetailsTitle',
+  certificationsRequirementsTitleKey: 'certificationsRequirementsTitle',
+  certificationsCurriculumTitleKey: 'certificationsCurriculumTitle',
+  certificationsIncludedTiteKey: 'certificationsIncludedTite',
+  certificationsGalleryTiteKey: 'certificationsGalleryTite',
+
+  // --- Destinations ---
+  destinationsTextOverlayKey: 'destinationsTextOverlay',
+  destinationsExtremeTextOverlayKey: 'destinationsExtremeTextOverlay',
+
+  destinationsDetailsTitleKey: 'destinationsDetailsTitle',
+  destinationsDiveSitesTitleKey: 'destinationsDiveSitesTitle',
+  destinationsGalleryTiteKey: 'destinationsGalleryTite',
+
+  // --- Experiences ---
+  experiencesDetailsTitleKey: 'experiencesDetailsTitle',
+  experiencesPaymentTitleKey: 'experiencesPaymentTitle',
+  experiencesItineraryTitleKey: 'experiencesItineraryTitle',
+  experiencesIncludedTitleKey: 'experiencesIncludedTitle',
+  experiencesNotIncludedTitleKey: 'experiencesNotIncludedTitle',
+  experiencesGalleryTitleKey: 'experiencesGalleryTitle',
+
+  experiencesDefaultNoteKey: 'experiencesDefaultNote',
+  experiencesDefaultPaymentNoteKey: 'experiencesDefaultPaymentNote',
+
   // --- Button Texts ---
   experiencesTextButtonKey: 'experiencesTextButton',
   divesitesTextButtonKey: 'divesitesTextButton',
@@ -28,17 +58,18 @@ export const SHARED_TRANSLATION_KEYS = {
 
 export const ROUTES = {
   home: '/',
-  experiences: '/experiences/',
-  divesites: 'divesites/',
-  about: '/about/',
-  safety: '/safety/',
-  contact: '/contact/',
-  destinations: '/destinations/',
+  experiences: '/experiences',
+  certifications: '/certifications',
+  divesites: 'divesites',
+  about: '/about',
+  safety: '/safety',
+  contact: '/contact',
+  destinations: '/destinations',
 
   mainStore: 'gear/*',
   store: '/gear',
 
-  certificationDetail: 'certifications/:certificationId',
+  certificationDetail: '/certifications/:certificationSlug',
   experienceDetail: 'experiences/:tripId',
   destinationDetail: 'destinations/:destinationId',
 
@@ -63,4 +94,39 @@ export const IMAGE_VARIANTS = {
   horizontal: 'horizontal',
   vertical: 'vertical',
   square: 'square',
+};
+
+export const LANGUAGES = {
+  ES: 'es',
+  EN: 'en',
+};
+
+export const STATUS = {
+  published: 'published',
+  draft: 'draft',
+};
+
+export const CERTIFICATION_CATEGORIES = {
+  owd: 'open-water-diver',
+  aowd: 'advanced-open-water-diver',
+};
+
+export const CERTIFICATION_IDS = {
+  owd: 'padi-open-water-diver',
+  aowd: 'padi-advanced-open-water-diver',
+};
+
+export const CATEGORY_REGION = {
+  regionCaribe: 'regionCaribe',
+};
+
+export const CURRENCY = {
+  COP: 'COP',
+  USD: 'USD',
+};
+
+export const AVAILABILITY = {
+  available: 'available',
+  last: 'last',
+  soldOut: 'soldOut',
 };

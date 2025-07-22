@@ -1,18 +1,16 @@
 // src/i18n/locales/es/safety.js
 export default {
   // SEO
-  safetySeoTitle:
-    'Compromiso con la seguridad | JustDiveCol - Tu bienestar en cada inmersión',
+  safetySeoTitle: 'Compromiso con la seguridad | JustDiveCol - Tu bienestar en cada inmersión',
   safetySeoDesc:
     'Descubre cómo nuestros rigurosos protocolos de seguridad, equipamiento de vanguardia y alianzas estratégicas garantizan una experiencia de buceo y aventura segura, placentera e inolvidable con JustDiveCol. Tu tranquilidad es nuestra máxima prioridad.',
   safetySeoKeywords:
     'seguridad buceo, protocolos de seguridad, buceo seguro, JustDiveCol, equipo de buceo, mantenimiento equipo buceo, instructores PADI, guías certificados, seguridad submarina, estándares PADI, DAN, bienestar buzo, prevención accidentes buceo, briefings buceo',
 
   // Header
-  safetyHeaderTitle:
-    'Seguridad sin concesiones: Tu tranquilidad es nuestra máxima prioridad',
+  safetyHeaderTitle: 'Seguridad sin concesiones: Tu tranquilidad es nuestra máxima prioridad',
   safetyHeaderSubtitle:
-    'En JustDiveCol, entendemos que una aventura verdaderamente inolvidable se construye sobre la base inquebrantable de la confianza. Por eso, la seguridad es el pilar fundamental e innegociable de cada experiencia que ofrecemos. Queremos que te sumerjas con absoluta paz mental.',
+    'En JustDiveCol, la seguridad es el pilar de tu aventura. Bucea con confianza y total paz mental.',
   safetyHeaderMainLogoAlt: 'Logo principal de JustDiveCol',
   safetyHeaderPhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
@@ -48,8 +46,7 @@ export default {
     'Cada una de tus inmersiones es monitoreada con computadoras de buceo modernas y precisas, que permiten manteneros dentro de los límites de seguridad, optimizar tu perfil de buceo y registrar cada detalle. La tecnología a tu servicio para una inmersión más inteligente y segura.',
 
   // Certifications
-  safetyCertsTitle:
-    'Compromiso con la excelencia, la sostenibilidad y las mejores prácticas',
+  safetyCertsTitle: 'Compromiso con la excelencia, la sostenibilidad y las mejores prácticas',
   safetyCertsSubtitle:
     'En JustDiveCol, no solo cumplimos, sino que excedemos los más altos estándares internacionales de seguridad y sostenibilidad en el buceo. Estamos orgullosamente afiliados a las principales organizaciones del sector, garantizando un servicio de clase mundial.',
   safetyPartner1Name: 'Estándares internacionales rigurosos',

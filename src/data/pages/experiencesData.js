@@ -52,10 +52,15 @@ export const experiencesPageData = {
     backgroundImage: experiences_cta_background,
     titleKey: 'expCtaTitle',
     subtitleKey: 'expCtaSubtitle',
-    ctaTextKey: 'contactTextButton',
-    ctaAction: {
-      type: 'whatsapp',
-      whatsAppMessageKey: 'generalWhatsappMessage',
+    ctaButton: {
+      textKey: 'contactTextButton',
+      translationNS: 'common',
+      action: {
+        type: 'whatsapp',
+        whatsAppMessageKey: 'generalWhatsappMessage',
+        whatsAppMessageNS: 'common',
+      },
+      containerClassName: 'pt-6',
     },
     mainLogo: logo,
     mainLogoAltKey: 'expCtaMainLogoAlt',

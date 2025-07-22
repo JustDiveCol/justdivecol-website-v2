@@ -1,32 +1,30 @@
 // src/components/common/SimpleCardComponent.jsx
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { fadeInUp } from '../../../hooks/animations';
+import { fadeInUp } from '@/hooks/animations';
 
-const SimpleCardComponent = ({ cardData, translationNS }) => {
-  const { t } = useTranslation(translationNS);
+const SimpleCardComponent = ({
+  backgroundImage,
+  titleKey,
+  categoryKey,
+  link,
+  mainLogo,
+  mainLogoAltKey,
+  complementaryLogo,
+  complementaryLogoAltKey,
+  photoCreditKey,
+  translationNS = 'common',
+}) => {
+  const { t } = useTranslation([translationNS, 'common']);
 
-  // Handler para bloquear el arrastre en elementos internos
   const preventDrag = (e) => {
     e.preventDefault();
     return false;
   };
 
-  const {
-    backgroundImage,
-    titleKey,
-    categoryKey,
-    link,
-    mainLogo,
-    mainLogoAltKey,
-    complementaryLogo,
-    complementaryLogoAltKey,
-    photoCreditKey,
-  } = cardData;
-
-  const isAnchorLink = link.startsWith('#');
+  const isAnchorLink = link?.startsWith('#');
 
   const handleScroll = (e) => {
     e.preventDefault();
@@ -37,7 +35,7 @@ const SimpleCardComponent = ({ cardData, translationNS }) => {
     }
   };
 
-  const cardContent = React.useMemo(
+  const cardContent = useMemo(
     () => (
       <div className="group relative h-full w-full">
         {/* Background image */}
@@ -54,7 +52,7 @@ const SimpleCardComponent = ({ cardData, translationNS }) => {
           <div className="absolute top-4 left-4 z-20 drop-shadow-md opacity-80">
             <img
               src={complementaryLogo}
-              alt={t(complementaryLogoAltKey)}
+              alt={complementaryLogoAltKey ? t(complementaryLogoAltKey) : ''}
               className="w-10 h-auto"
               draggable={false}
               onDragStart={preventDrag}
@@ -68,7 +66,7 @@ const SimpleCardComponent = ({ cardData, translationNS }) => {
           <div className="absolute top-4 right-4 z-20 drop-shadow-md opacity-80">
             <img
               src={mainLogo}
-              alt={t(mainLogoAltKey)}
+              alt={mainLogoAltKey ? t(mainLogoAltKey) : ''}
               className="w-16 h-auto"
               draggable={false}
               onDragStart={preventDrag}
@@ -77,26 +75,28 @@ const SimpleCardComponent = ({ cardData, translationNS }) => {
           </div>
         )}
 
-        {/* Footer credit (hover only) */}
+        {/* Footer credit */}
         {photoCreditKey && (
-          <div className="absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20">
+          <div className="absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20 text-left">
             {t(photoCreditKey)}
           </div>
         )}
 
-        {/* Content */}
-        <div className="relative z-20 h-full flex flex-col justify-end p-6 text-white">
-          <h3 className="text-xl uppercase tracking-widest text-brand-cta-orange font-bold">
+        {/* Text content */}
+        <div className="relative z-20 h-full flex flex-col items-center justify-end text-center px-4 pb-6 pt-8 text-white">
+          <h3 className="text-xs sm:text-base md:text-xl lg:text-3xl leading-snug font-bold uppercase tracking-wide text-brand-cta-orange">
             {t(titleKey)}
           </h3>
-          <p className="mt-2 text-lg md:text-lg">{t(categoryKey)}</p>
+          <p className="text-xs sm:text-xs md:text-base lg:text-lg leading-normal mt-2">
+            {t(categoryKey)}
+          </p>
         </div>
       </div>
     ),
     [
       backgroundImage,
-      categoryKey,
       titleKey,
+      categoryKey,
       mainLogo,
       mainLogoAltKey,
       complementaryLogo,
@@ -109,10 +109,11 @@ const SimpleCardComponent = ({ cardData, translationNS }) => {
   return (
     <motion.div
       variants={fadeInUp}
-      className="relative h-96 rounded-lg overflow-hidden shadow-2xl w-full"
+      className="relative w-[30%] min-w-[150px] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg aspect-[4/5] rounded-lg overflow-hidden shadow-2xl"
     >
       {isAnchorLink ? (
         <button
+          type="button"
           onClick={handleScroll}
           className="block h-full w-full text-left"
           draggable={false}

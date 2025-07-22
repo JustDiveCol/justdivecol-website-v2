@@ -17,17 +17,22 @@ const CarouselSection = ({ title, items }) => {
   const [constraints, setConstraints] = useState({ left: 0, right: 0 });
   const resumeTimer = useRef(null);
   const [shouldResume, setShouldResume] = useState(false);
+  const [shouldCenter, setShouldCenter] = useState(false);
 
   // Mide y actualiza límites
   const updateConstraints = () => {
     const outer = outerRef.current;
     const inner = innerRef.current;
     if (!outer || !inner) return;
+
     const maxDrag = inner.scrollWidth - outer.offsetWidth;
+    const newLeft = -maxDrag;
+
     setConstraints((prev) => {
-      const newLeft = -maxDrag;
       return prev.left === newLeft ? prev : { left: newLeft, right: 0 };
     });
+
+    setShouldCenter(maxDrag <= 0); // <--- ¡Aquí lo importante!
   };
 
   // Inicia el bucle desde la posición actual
@@ -81,12 +86,12 @@ const CarouselSection = ({ title, items }) => {
 
   return (
     <div className="mb-12">
-      <h3 className="text-2xl font-semibold text-brand-white mb-6">{title}</h3>
+      <h3 className="text-subtitle-2 font-semibold text-brand-white mb-6">{title}</h3>
       <div ref={outerRef} className="overflow-hidden">
         <motion.div
           ref={innerRef}
           style={{ x }}
-          className="grid grid-flow-col auto-cols-max items-stretch gap-8"
+          className={`flex items-stretch gap-8 ${shouldCenter ? 'justify-center' : ''}`}
           drag="x"
           dragConstraints={constraints}
           dragElastic={0.1}
@@ -107,8 +112,8 @@ const CarouselSection = ({ title, items }) => {
   );
 };
 
-const DestinationsSection = () => {
-  const { t } = useTranslation('experiencesPage');
+const DestinationsSection = ({ translationNS }) => {
+  const { t } = useTranslation([translationNS, 'common']);
   const all = getDestinationsWithUpcomingTrips();
   const { sectionId } = experiencesPageData.fullCatalog.destinations;
 
@@ -119,18 +124,18 @@ const DestinationsSection = () => {
   return (
     <section
       id={sectionId}
-      className="py-20 px-4 border-t-2 border-brand-primary-light/20 scroll-mt-20"
+      className="py-12 px-4 border-t-2 border-brand-primary-light/20 scroll-mt-20 text-center"
     >
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-brand-white text-center mb-12 uppercase">
+        <h2 className="heading-2 text-brand-white">
           {t(experiencesPageData.fullCatalog.destinations.titleKey)}
         </h2>
 
         {/* Carrusel de destinos con viajes activos */}
-        <CarouselSection title={t('experiencesPage:destinosConViajes')} items={active} />
+        <CarouselSection title={t('expWithTrips')} items={active} />
 
         {/* Carrusel de destinos sin viajes */}
-        <CarouselSection title={t('experiencesPage:destinosSinViajes')} items={inactive} />
+        <CarouselSection title={t('expWithoutTrips')} items={inactive} />
       </div>
     </section>
   );

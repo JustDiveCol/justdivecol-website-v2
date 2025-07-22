@@ -48,9 +48,9 @@ export const AboutUsPage = () => {
 
         <HistorySection historyData={history} />
 
-        <TeamSection teamData={team} />
+        <TeamSection teamData={team} translationNS={'aboutUs'} />
 
-        <CommitmentSection commitmentData={commitment} />
+        <CommitmentSection commitmentData={commitment} translationNS={'aboutUs'} />
 
         {/* The final CTA reuses data from the contact page for consistency. */}
         <CtaComponent sectionData={contactPageData.cta} translationNS={['contact', 'common']} />

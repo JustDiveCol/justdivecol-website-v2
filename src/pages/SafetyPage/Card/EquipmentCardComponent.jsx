@@ -19,14 +19,13 @@ export const EquipmentCardComponent = ({ itemData, icon }) => {
   return (
     <motion.div
       variants={fadeInUp}
-      className='bg-brand-primary-dark p-8 rounded-lg shadow-xl text-center'>
-      <div className='text-brand-cta-green inline-block mb-4'>{icon}</div>
-      <h3 className='text-2xl  font-bold text-brand-white'>
+      className="bg-brand-primary-dark p-6 rounded-lg shadow-xl text-center"
+    >
+      <div className="text-brand-cta-green inline-block mb-4">{icon}</div>
+      <h3 className="text-subtitle leading-tight font-bold text-brand-white">
         {t(itemData.nameKey)}
       </h3>
-      <p className='mt-2  text-brand-neutral/80'>
-        {t(itemData.descriptionKey)}
-      </p>
+      <p className="mt-4 text-base-xs text-brand-neutral/80">{t(itemData.descriptionKey)}</p>
     </motion.div>
   );
 };

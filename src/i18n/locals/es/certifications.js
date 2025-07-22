@@ -1,0 +1,250 @@
+// src/i18n/locales/es/courses.js
+export default {
+  // ===== Common =====
+
+  // ===== Open Water =====
+  // --- Metadata ---
+  // --- SEO ---
+  owdSeoTitle: 'Curso PADI Open Water Diver | Aprende a bucear con JustDiveCol',
+  owdSeoDesc:
+    'Conviértete en un buzo certificado con el curso PADI Open Water Diver de JustDiveCol. Es tu puerta de entrada al fascinante mundo submarino, donde aprenderás los fundamentos esenciales y obtendrás una certificación reconocida globalmente para explorar las profundidades con total confianza.',
+  owdSeoKeywords:
+    'curso PADI Open Water Diver, aprender a bucear, certificación de buceo, buzo certificado, JustDiveCol, fundamentos de buceo, primeras inmersiones, buceo recreativo, curso de buceo para principiantes, certificación mundial, bucear en Colombia',
+
+  // --- Header ---
+  owdHeaderTitle: 'PADI Open Water Diver: tu pasaporte al mundo azul',
+  owdHeaderSubtitle:
+    'Descubre el 70% del planeta que espera ser explorado por ti. ¡La aventura submarina te llama!',
+
+  // --- Description ---
+  owdDescTitle: 'Conviértete en buzo certificado: la aventura te espera',
+  owdDescP1:
+    'El curso PADI Open Water Diver es la certificación de buceo más reconocida y buscada en el mundo. Millones de personas ya han descubierto las maravillas del mundo acuático a través de esta experiencia transformadora. Es el emocionante primer paso hacia una vida de exploración submarina sin límites.',
+  owdDescP2:
+    'En JustDiveCol, te guiaremos paso a paso, desde los principios teóricos esenciales que puedes estudiar desde casa, hasta tus primeras e inolvidables inmersiones en el mar. Nuestro objetivo es que te conviertas en un buzo competente, seguro, responsable y profundamente apasionado por las profundidades. ¡Tu viaje comienza aquí!',
+
+  // --- Details ---
+  owdDetailDurationValue: '3 a 4 días (flexible)',
+
+  owdDetailLabel1: 'Profundidad máxima',
+  owdDetailValue1: '18 m / 60 ft',
+
+  // --- Curriculum ---
+  owdModule1Name: 'Módulos teóricos interactivos',
+  owdModule1Desc:
+    'A través de la innovadora plataforma PADI eLearning®, aprenderás los principios fundamentales del buceo a tu propio ritmo, desde la comodidad de tu hogar. ¡Es flexible y muy efectivo!',
+
+  owdModule2Name: 'Guía virtual personalizada',
+  owdModule2Desc:
+    'Complementamos tu estudio con 5 sesiones virtuales en vivo, donde uno de nuestros instructores expertos reforzará conceptos clave, resolverá todas tus dudas y te preparará a fondo para el siguiente paso en tu formación.',
+
+  owdModule3Name: 'Sesiones prácticas en aguas confinadas',
+  owdModule3Desc:
+    'En un entorno seguro y controlado, como una piscina, practicarás y dominarás todas las habilidades esenciales de buceo. Aquí construirás una confianza sólida antes de tu primera aventura en mar abierto.',
+
+  owdModule4Name: 'Emocionantes inmersiones en mar abierto',
+  owdModule4Desc:
+    '¡La culminación de tu aprendizaje! Realizarás cuatro inmersiones memorables en el océano, aplicando todo lo aprendido bajo la supervisión experta de tu instructor. Prepárate para asombrarte con la vida marina y los paisajes submarinos.',
+
+  // --- Requirements ---
+  owdReqItem1: 'Tener al menos 10 años (para Junior Open Water Diver).',
+  owdReqItem2:
+    'Sentirte cómodo en el agua y saber nadar (¡no es necesario ser un nadador olímpico!).',
+  owdReqItem3:
+    'Completar y aprobar un cuestionario médico o contar con la autorización de un médico, si es necesario.',
+  owdReqItem4:
+    'Comprometerte a participar activamente en todas las sesiones teóricas y prácticas del curso para garantizar tu máximo aprendizaje y seguridad.',
+
+  // --- Included ---
+  owdIncludeItem1: 'Certificación internacional PADI Open Water Diver.',
+  owdIncludeItem2: 'Acceso ilimitado a la plataforma PADI eLearning®.',
+  owdIncludeItem3: '5 sesiones virtuales en vivo con un instructor PADI dedicado.',
+  owdIncludeItem4:
+    '5 sesiones prácticas en aguas confinadas (piscina) para dominar tus habilidades.',
+  owdIncludeItem5: '4 inmersiones emocionantes en mar abierto (océano).',
+  owdIncludeItem6:
+    'Equipo completo de buceo de alta calidad (máscara, aletas, traje de neopreno, regulador, BCD, tanque).',
+  owdIncludeItem7:
+    'Acompañamiento personalizado de un instructor PADI altamente calificado, comprometido con tu progreso.',
+  owdIncludeItem8: 'Seguro de buceo completo durante toda la duración del curso.',
+
+  // --- Gallery ---
+  owdGaleryImg1Alt: '',
+  owdGaleryImg2Alt: '',
+  owdGaleryImg3Alt: '',
+  owdGaleryImg4Alt: '',
+
+  // ===== Advanced Open Water =====
+  // --- Metadata ---
+  // --- SEO ---
+  aowdSeoTitle: 'Curso PADI Advanced Open Water Diver | Expande tus límites con JustDiveCol',
+  aowdSeoDesc:
+    'Lleva tu buceo al siguiente nivel con el curso PADI Advanced Open Water Diver de JustDiveCol. Explora nuevas especialidades, gana una confianza incomparable en diversas condiciones y profundiza en el fascinante mundo submarino.',
+  aowdSeoKeywords:
+    'PADI Advanced Open Water Diver, curso de buceo avanzado, expandir límites buceo, JustDiveCol, nuevas especialidades buceo, confianza submarina, buceo profundo, navegación subacuática, buceo nocturno, control de flotabilidad, fotografía submarina, certificación de buceo',
+
+  // --- Header ---
+  aowdHeaderTitle: 'PADI Advanced Open Water Diver: tu siguiente nivel de aventura',
+  aowdHeaderSubtitle:
+    'Perfecciona tus habilidades, gana una confianza inquebrantable y explora nuevas dimensiones del buceo con JustDiveCol. ¡El océano te espera!',
+
+  // --- Description ---
+  aowdDescTitle: 'Expande tus horizontes: más confianza, más exploración',
+
+  aowdDescP1:
+    'El curso PADI Advanced Open Water Diver está diseñado para llevar tu experiencia de buceo mucho más allá de lo básico. No se trata solo de obtener una certificación "avanzada", sino de adquirir una mayor confianza, más experiencia práctica y la capacidad de explorar una mayor variedad de sitios de buceo y condiciones en cualquier parte del mundo.',
+  aowdDescP2:
+    'En JustDiveCol, te guiaremos a través de cinco emocionantes inmersiones de aventura que te permitirán descubrir nuevas pasiones bajo el agua y perfeccionar tus técnicas existentes. Cada inmersión te acercará más a convertirte en un buzo más seguro, competente y versátil, listo para cualquier desafío y maravilla que el vasto océano te presente.',
+
+  // --- Details ---
+  aowdDetailDurationValue: '2 a 3 días (flexible)',
+
+  aowdDetailLabel1: 'Profundidad máxima',
+  aowdDetailValue1: '30 m / 100 ft',
+
+  // --- Curriculum ---
+  aowdModule1Name: 'Inmersión profunda (Obligatoria)',
+  aowdModule1Desc:
+    'Descubre el fascinante mundo más allá de los 18 m / 60 ft. Aprenderás las consideraciones de seguridad, planificación, gestión del aire y efectos de la presión específicos para el buceo profundo, expandiendo tu rango de exploración de manera segura hasta los 30 m / 100 ft.',
+
+  aowdModule2Name: 'Navegación subacuática (Obligatoria)',
+  aowdModule2Desc:
+    'Conviértete en un experto en orientación bajo el agua. Perfeccionarás tus habilidades con la brújula y la navegación natural, permitiéndote moverte con confianza y precisión en cualquier entorno submarino, optimizando cada inmersión y descubriendo nuevos rincones.',
+
+  aowdModule3Name: 'Tres inmersiones de aventura a tu elección',
+  aowdModule3Desc:
+    'Personaliza tu curso eligiendo tres especialidades que verdaderamente despierten tu interés y curiosidad. Algunas opciones populares incluyen: buceo nocturno (Night Diver), control de flotabilidad de precisión (Peak Performance Buoyancy), identificación de peces (Fish ID), fotografía subacuática (Underwater Photographer), búsqueda y recuperación (Search and Recovery), y muchas más. ¡Cada una es una nueva habilidad emocionante y una nueva aventura esperando por ti bajo las olas!',
+
+  aowdCurriculumNote1:
+    'Gana créditos para especialidades PADI: cada inmersión de aventura que completes cuenta como la primera inmersión de la especialidad PADI correspondiente. ¡Un paso más cerca de tu próxima certificación de buzo especialista y una manera excelente de probar nuevas disciplinas!',
+
+  aowdObj1: '',
+  aowdObj2: '',
+  aowdObj3: '',
+  aowdObj4: '',
+  aowdObj5: '',
+  aowdObj6: '',
+
+  // --- Requirements ---
+  aowdReqItem1: 'Tener al menos 12 años de edad (para Junior Advanced Open Water Diver).',
+  aowdReqItem2:
+    'Estar certificado como PADI Open Water Diver o contar con una certificación equivalente reconocida.',
+  aowdReqItem3:
+    'Completar y aprobar un cuestionario médico o contar con la autorización de un médico, si es necesario, para garantizar tu bienestar.',
+  aowdReqItem4:
+    'Comprometerte a participar activamente en todas las sesiones teóricas, virtuales y prácticas del curso, para asegurar un aprendizaje completo y seguro.',
+
+  // --- Included ---
+  aowdIncludeItem1:
+    'Certificación internacional PADI Advanced Open Water Diver, reconocida mundialmente.',
+  aowdIncludeItem2:
+    'Acceso ilimitado a la plataforma PADI eLearning® (para el curso Advanced Open Water), para que estudies a tu ritmo.',
+  aowdIncludeItem3:
+    'Asesoría personalizada y sesiones informativas (briefings) con un instructor PADI experto durante todo el curso, resolviendo todas tus dudas.',
+  aowdIncludeItem4:
+    '5 emocionantes inmersiones de aventura en aguas abiertas (en el mar) que expandirán tus habilidades.',
+  aowdIncludeItem5:
+    'Alquiler de equipo de buceo completo y de primera calidad (máscara, aletas, traje de neopreno, regulador, BCD, tanque).',
+  aowdIncludeItem6:
+    'Acompañamiento personalizado y supervisión constante de un instructor PADI altamente cualificado, garantizando tu seguridad y progreso.',
+  aowdIncludeItem7:
+    'Seguro de buceo completo durante toda la duración del curso, para tu total tranquilidad.',
+
+  // --- Gallery ---
+  aowdGaleryImg1Alt: '',
+  aowdGaleryImg2Alt: '',
+  aowdGaleryImg3Alt: '',
+  aowdGaleryImg4Alt: '',
+
+  // ===== Rescue Diver =====
+  // --- Metadata ---
+
+  // --- SEO ---
+  rdSeoTitle: 'Curso PADI Rescue Diver | Conviértete en un héroe submarino con JustDiveCol',
+  rdSeoDesc:
+    'Desarrolla habilidades vitales de rescate y manejo de emergencias con el curso PADI Rescue Diver de JustDiveCol. Aprende a prevenir problemas y a responder eficazmente en el buceo, protegiéndote a ti y a tus compañeros en cualquier parte del mundo. ¡Marca la diferencia!',
+  rdSeoKeywords:
+    'curso PADI Rescue Diver, buzo de rescate, habilidades de rescate, manejo de emergencias buceo, prevención de problemas buceo, JustDiveCol, protección compañeros buceo, buzo confiable, liderazgo submarino, seguridad en buceo, primeros auxilios buceo, PADI Divemaster, PADI Instructor',
+
+  // --- Header ---
+  rdHeaderTitle: 'PADI Rescue Diver: tu poder para proteger vidas bajo el agua',
+  rdHeaderSubtitle:
+    'Conviértete en el buzo confiable y proactivo que todos querrán tener a su lado en cada inmersión. ¡Sé la seguridad que el océano necesita!',
+
+  // --- Description ---
+  rdDescTitle: 'De buzo a héroe: la confianza de saber actuar con propósito',
+  rdDescP1:
+    'El curso PADI Rescue Diver es un desafío inmensamente gratificante que te transformará en un buzo más seguro, más capaz y profundamente consciente de tu entorno. Aprenderás a prevenir problemas de buceo antes de que ocurran y, si es necesario, a manejar emergencias de manera eficaz y tranquila, tanto para tu propia seguridad como para la de tus compañeros. ¡Prepárate para marcar la diferencia!',
+  rdDescP2:
+    'En JustDiveCol, te capacitaremos a través de escenarios realistas y técnicas probadas, preparándote para responder eficazmente ante cualquier situación inesperada en el agua. Este curso no solo mejora tus habilidades técnicas de buceo, sino que también fomenta tu confianza, tu capacidad de liderazgo y un compromiso inquebrantable con la seguridad en el fascinante mundo submarino. ¡Prepárate para ser un buzo de rescate ejemplar y un verdadero líder bajo el agua!',
+
+  // --- Details ---
+  rdDetailDurationValue: '2 a 3 días (flexible)',
+
+  rdDetailLabel1: 'Habilidades clave',
+  rdDetailValue1: 'Prevención, gestión de emergencias, primeros auxilios, liderazgo efectivo',
+
+  // --- Curriculum ---
+  rdModule1Desc:
+    'Aprenderás a reconocer y manejar el estrés en otros buzos, cómo utilizar y organizar equipo de emergencia en diversas situaciones, y las consideraciones psicológicas cruciales del rescate. Utilizaremos la plataforma PADI eLearning® para que estudies a tu propio ritmo, con el apoyo constante de tu instructor.',
+
+  rdModule2Name: 'Autorrescate y manejo de buzos en pánico',
+  rdModule2Desc:
+    'Dominarás técnicas esenciales para manejar tus propias emergencias bajo el agua y en superficie con calma y eficacia. Aprenderás cómo aproximarte, calmar y asistir eficazmente a un buzo en estado de pánico, tanto en la superficie como en el fondo, transformándote en un pilar de seguridad.',
+
+  rdModule3Name: 'Respuesta ante buzos inconscientes y no reactivos',
+  rdModule3Desc:
+    'Practicarás la recuperación segura de buzos inconscientes desde el fondo, la provisión vital de respiraciones de rescate en el agua (in-water rescue breathing) y el remolque eficiente de un buzo no reactivo a la superficie, preparándote para las situaciones más críticas con confianza y destreza.',
+
+  rdModule4Name: 'Gestión de emergencias de buceo y primeros auxilios avanzados',
+  rdModule4Desc:
+    'Aprenderás a coordinar una respuesta de emergencia efectiva, a utilizar equipo de oxígeno de emergencia de manera profesional y a aplicar primeros auxilios de buceo para lesiones comunes y condiciones más serias. Este módulo es vital para la gestión de crisis, convirtiéndote en un líder en momentos cruciales.',
+
+  rdModule5Name: 'Escenarios de rescate realistas y simulacros prácticos',
+  rdModule5Desc:
+    'Participarás en intensos ejercicios de escenarios realistas que simulan diversas situaciones de emergencia en el buceo. Esto te permitirá aplicar y consolidar todas tus habilidades en un entorno práctico y bajo presión controlada, preparándote de manera integral para el mundo real y cualquier desafío que surja.',
+
+  rdCurriculumNote1:
+    'Este curso es un prerrequisito esencial y transformador para los buzos que desean avanzar al nivel profesional de PADI Divemaster, Instructor y más allá, abriendo las puertas a una carrera gratificante en el buceo y la enseñanza.',
+
+  rdObj1: '',
+  rdObj2: '',
+  rdObj3: '',
+  rdObj4: '',
+  rdObj5: '',
+
+  // --- Requirements ---
+  rdReqItem1: 'Tener al menos 12 años de edad (para Junior Rescue Diver).',
+  rdReqItem2:
+    'Estar certificado como PADI Advanced Open Water Diver o contar con una certificación equivalente reconocida.',
+  rdReqItem3:
+    'Haber completado un curso de Primeros Auxilios y RCP (como Emergency First Response® o equivalente) en los últimos 24 meses, para asegurar una base sólida en atención prehospitalaria.',
+  rdReqItem4:
+    'Completar y aprobar un cuestionario médico o contar con la autorización de un médico, si es necesario, garantizando tu plena aptitud para el curso.',
+  rdReqItem5:
+    'Comprometerte a participar activamente en todas las sesiones teóricas, virtuales y prácticas del curso, demostrando proactividad, responsabilidad y un deseo genuino de aprender.',
+
+  // --- Included ---
+  rdIncludeItem1:
+    'Certificación internacional PADI Rescue Diver, reconocida y valorada globalmente.',
+  rdIncludeItem2:
+    'Acceso ilimitado a la plataforma PADI eLearning® (para el curso Rescue Diver), facilitando tu estudio autónomo.',
+  rdIncludeItem3:
+    'Sesiones teóricas y prácticas guiadas por un instructor PADI experto, con feedback continuo y personalizado para tu máximo desarrollo.',
+  rdIncludeItem4:
+    'Prácticas extensivas y simulacros avanzados en aguas confinadas (piscina) y aguas abiertas (mar), para que domines cada técnica.',
+  rdIncludeItem5:
+    'Simulacros de escenarios de rescate realistas y desafiantes, replicando situaciones del mundo real para una preparación completa.',
+  rdIncludeItem6:
+    'Alquiler de equipo de buceo completo (excluyendo equipo personal si ya lo posees) y equipo específico de rescate necesario para el curso.',
+  rdIncludeItem7:
+    'Acompañamiento personalizado y supervisión constante de un instructor PADI altamente cualificado, comprometido con tu desarrollo y seguridad.',
+  rdIncludeItem8:
+    'Seguro de buceo completo durante toda la duración del curso, cubriendo específicamente incidentes relacionados con la actividad de buceo, para tu total tranquilidad.',
+
+  // --- Gallery ---
+  rdGaleryImg1Alt: '',
+  rdGaleryImg2Alt: '',
+  rdGaleryImg3Alt: '',
+  rdGaleryImg4Alt: '',
+};
