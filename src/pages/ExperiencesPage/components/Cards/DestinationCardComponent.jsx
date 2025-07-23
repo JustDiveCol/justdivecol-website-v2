@@ -16,7 +16,7 @@ const DestinationCardComponent = ({
   maxWidth = 'max-w-xs',
 }) => {
   const { t, i18n } = useTranslation([translationNS, 'common']);
-  const { id, nameKey, card, upcomingTrips } = destinationData;
+  const { id, nameKey, card, upcomingTrips, seo } = destinationData;
 
   const hasTrips = upcomingTrips.length > 0;
 
@@ -49,7 +49,7 @@ const DestinationCardComponent = ({
                 {upcomingTrips.map((trip) => (
                   <li key={trip.id}>
                     <Link
-                      to={`${ROUTES.experiences}${trip.id}`}
+                      to={seo.url}
                       className="text-xs sm:text-xs md:text-sm lg:text-base block bg-brand-primary-dark p-1 rounded-md hover:bg-brand-primary-light transition-colors text-center"
                     >
                       <span className="text-brand-neutral">
@@ -72,7 +72,7 @@ const DestinationCardComponent = ({
 
       {/* Siempre mostramos el botón */}
       <Link
-        to={`${ROUTES.destinations}${id}`}
+        to={seo.url}
         className="block bg-brand-cta-orange text-center text-brand-white font-bold uppercase text-xs sm:text-sm md:text-base p-2 sm:p-3 hover:bg-opacity-90 transition-colors mt-auto"
       >
         {t('common:exploreDestination')}

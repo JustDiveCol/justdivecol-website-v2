@@ -1,9 +1,12 @@
 // src/pages/ExperiencesPage/components/Sections/DestinationsSection.jsx
-import React, { useRef, useState, useLayoutEffect, useEffect } from 'react';
+import React, { useRef, useState, useLayoutEffect, useEffect, useMemo } from 'react';
 import { motion, useAnimation, useMotionValue } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { experiencesPageData } from '../../../../data/pages/experiencesData';
-import { getDestinationsWithUpcomingTrips } from '../../../../data/content/destinations/_index';
+
+import { useDestinations } from '@/data/content/destinations/DataProvider';
+import { useExperiences } from '@/data/content/experiences/DataProvider';
+
 import DestinationCardComponent from '../Cards/DestinationCardComponent';
 
 const SCROLL_SPEED = 15; // px por segundo para autoscroll
@@ -114,12 +117,36 @@ const CarouselSection = ({ title, items }) => {
 
 const DestinationsSection = ({ translationNS }) => {
   const { t } = useTranslation([translationNS, 'common']);
-  const all = getDestinationsWithUpcomingTrips();
   const { sectionId } = experiencesPageData.fullCatalog.destinations;
 
-  // Separamos activos / inactivos
-  const active = all.filter((d) => d.upcomingTrips.length > 0);
-  const inactive = all.filter((d) => d.upcomingTrips.length === 0);
+  const { destinations } = useDestinations(); // Obtiene todos los destinos del contexto
+  const { experiences } = useExperiences(); // Obtiene todas las experiencias del contexto para los trips
+
+  const destinationsWithUpcomingTrips = useMemo(() => {
+    return destinations.map((dest) => {
+      const upcomingTrips = [];
+      experiences.forEach((exp) => {
+        (exp.sessions || []).forEach((session) => {
+          // Verificar si la sesión está en alguna de las experiencias vinculadas al destino
+          // O si la sesión tiene un ID de destino que coincide con el destino actual
+          if (
+            (Array.isArray(exp.destinationIds) && exp.destinationIds.includes(dest.id)) || // Si la experiencia está vinculada al destino
+            session.destinationId === dest.id // Si la sesión individual está vinculada al destino (asumo que existe esta prop)
+          ) {
+            // Solo si la sesión está disponible o 'last' (puedes ajustar esta lógica si es diferente)
+            if (session.availability === 'available' || session.availability === 'last') {
+              upcomingTrips.push(session);
+            }
+          }
+        });
+      });
+
+      return { ...dest, upcomingTrips };
+    });
+  }, [destinations, experiences]); // Recalcular si destinos o experiencias cambian
+
+  const active = destinationsWithUpcomingTrips.filter((d) => d.upcomingTrips.length > 0);
+  const inactive = destinationsWithUpcomingTrips.filter((d) => d.upcomingTrips.length === 0);
 
   return (
     <section

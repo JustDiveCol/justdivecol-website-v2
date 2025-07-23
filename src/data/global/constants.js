@@ -60,7 +60,7 @@ export const ROUTES = {
   home: '/',
   experiences: '/experiences',
   certifications: '/certifications',
-  divesites: 'divesites',
+  divesites: '/divesites',
   about: '/about',
   safety: '/safety',
   contact: '/contact',
@@ -70,15 +70,15 @@ export const ROUTES = {
   store: '/gear',
 
   certificationDetail: '/certifications/:certificationSlug',
-  experienceDetail: 'experiences/:tripId',
-  destinationDetail: 'destinations/:destinationId',
+  experienceDetail: '/experiences/:experienceSlug/:sessionSlug',
+  destinationDetail: '/destinations/:destinationSlug',
 
-  policy: 'policy',
+  policy: '/policy',
   terms: '/terms',
   privacy: '/privacy',
   faq: '/faq',
 
-  underConstruction: 'underConstruction',
+  underConstruction: '/underConstruction',
   notFound: '/404',
 };
 

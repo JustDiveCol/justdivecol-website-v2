@@ -17,8 +17,8 @@ import { LOGO_MAIN } from '@/data/global/assets';
 import headerBackground from '../../../assets/images/page-specific/experiences/santa-marta/header-background.webp';
 import gallery01 from '../../../assets/images/page-specific/experiences/santa-marta/gallery-01.webp';
 import gallery02 from '../../../assets/images/page-specific/experiences/santa-marta/gallery-02.webp';
-import gallery03 from '../../../assets/images/page-specific/experiences/santa-marta/gallery-02.webp';
-import gallery04 from '../../../assets/images/page-specific/experiences/santa-marta/gallery-02.webp';
+import gallery03 from '../../../assets/images/page-specific/experiences/santa-marta/gallery-03.webp';
+import gallery04 from '../../../assets/images/page-specific/experiences/santa-marta/gallery-04.webp';
 
 // General Santa Marta experience with multiple sessions
 const _santaMartaExperience = {

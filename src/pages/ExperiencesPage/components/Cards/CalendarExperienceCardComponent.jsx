@@ -17,16 +17,21 @@ import { ROUTES } from '@/data/global/constants';
  * Used within the CalendarExperiencesSection.
  *
  * @param {object} props - The component props.
- * @param {object} props.tripData - The data object for a specific trip.
- * @param {string} props.tripData.id - The unique identifier for the trip.
- * @param {string} props.tripData.nameKey - The translation key for the trip's name.
- * @param {object} props.tripData.details - An object containing date information.
- * @param {string} props.tripData.details.startDate - The start date of the trip.
- * @param {string} props.tripData.details.endDate - The end date of the trip.
+ * @param {object} props.tripData - The data object for a specific trip (which is actually a session object).
+ * @param {string} props.tripData.id - The unique identifier for the trip (session).
+ * @param {string} props.tripData.slug - The slug for the session. // AÑADIDO: El slug de la sesión
+ * @param {string} props.tripData.startDate - The start date of the session.
+ * @param {string} props.tripData.endDate - The end date of the session.
+ * @param {object} props.tripData.experienceDetails - Contains details of the parent experience.
  */
 const CalendarExperienceCardComponent = ({ translationNS, tripData, status, duration }) => {
-  const { t, i18n } = useTranslation([translationNS, 'common']);
-  const { id, nameKey, details } = tripData;
+  const { t, i18n } = useTranslation([translationNS, 'common', 'experiences']);
+  // ¡CORREGIDO! Desestructuramos el 'slug' de la sesión también
+  const { id, slug: sessionSlug, startDate, endDate, experienceDetails } = tripData; // Renombramos 'slug' a 'sessionSlug' para claridad
+
+  // Acceso seguro a las propiedades de la experiencia padre
+  const experienceTitleKey = experienceDetails?.titleKey;
+  const experienceSlug = experienceDetails?.slug;
 
   const isInactive = status === 'soldOut' || status === 'completed';
 
@@ -42,12 +47,14 @@ const CalendarExperienceCardComponent = ({ translationNS, tripData, status, dura
           <div className="flex items-center space-x-3">
             <CalendarIcon className="h-6 w-6 text-brand-primary-dark" />
             <h3 className="text-base sm:text-base md:text-lg lg:text-xl uppercase tracking-wide leading-tight font-semibold text-brand-primary-dark">
-              {t(nameKey, { ns: 'experiences' })}
+              {experienceTitleKey
+                ? t(experienceTitleKey, { ns: 'experiences' })
+                : 'Experience Title Missing'}
             </h3>
           </div>
           <div className="w-full flex flex-col items-center sm:flex-row sm:items-center sm:justify-start sm:space-x-4 text-center sm:text-left mt-1 sm:mt-0">
             <p className="text-xs sm:text-xs md:text-sm lg:text-base tracking-wide leading-tight text-brand-primary-dark/90">
-              {formatDateRange(details.startDate, details.endDate, i18n.language, t)}
+              {formatDateRange(startDate, endDate, i18n.language, t)}
             </p>
             {duration && (
               <div className="text-xs sm:text-xs md:text-sm lg:text-base flex items-center text-brand-primary-dark/90 mt-1 sm:mt-0">
@@ -70,7 +77,7 @@ const CalendarExperienceCardComponent = ({ translationNS, tripData, status, dura
         </div>
       </div>
 
-      {/* --- CÓDIGO RESTAURADO: LADO DERECHO --- */}
+      {/* Lado Derecho */}
       <div className="mt-4 sm:mt-0">
         {isInactive ? (
           <AvailabilityBadgeComponent status={status} />
@@ -80,7 +87,6 @@ const CalendarExperienceCardComponent = ({ translationNS, tripData, status, dura
           </div>
         )}
       </div>
-      {/* --- FIN DEL CÓDIGO RESTAURADO --- */}
     </>
   );
 
@@ -89,7 +95,11 @@ const CalendarExperienceCardComponent = ({ translationNS, tripData, status, dura
       {isInactive ? (
         <div className={wrapperClasses}>{CardContent}</div>
       ) : (
-        <Link to={`${ROUTES.experiences}${id}`} className={wrapperClasses}>
+        // ¡CORREGIDO! Ahora usa sessionSlug para la parte de la sesión en la URL
+        <Link
+          to={`${ROUTES.experiences}/${experienceSlug}/${sessionSlug}`}
+          className={wrapperClasses}
+        >
           {CardContent}
         </Link>
       )}

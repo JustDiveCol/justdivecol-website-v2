@@ -10,8 +10,8 @@ import DestinationLayout from './Layout/DestinationLayout';
 import { staggerContainer } from '../../../hooks/animations';
 
 // Data fetching utilities
-import { destinationsById } from '../../../data/content/destinations/_index';
-import { publishedExperiences } from '../../../data/content/experiences/_index';
+import { useDestinations } from '@/data/content/destinations/DataProvider';
+import { useExperiences } from '@/data/content/experiences/DataProvider';
 
 /**
  * Renders the detail page for a specific destination.
@@ -19,8 +19,12 @@ import { publishedExperiences } from '../../../data/content/experiences/_index';
  * from the URL, handles loading/error states, and passes the data to the DestinationLayout.
  */
 const DestinationPage = () => {
-  const { destinationId } = useParams();
-  const { t } = useTranslation(['destinations', 'common']);
+  const { destinationSlug } = useParams();
+  const { t } = useTranslation(['destinationsPage', 'common']);
+
+  // Get data from Context Providers
+  const { destinations } = useDestinations();
+  const { experiences } = useExperiences();
 
   // State for managing destination data, trips, loading, and errors.
   const [destinationData, setDestinationData] = useState(null);
@@ -30,25 +34,29 @@ const DestinationPage = () => {
 
   // Effect to fetch all necessary data when the destinationId changes.
   useEffect(() => {
-    const baseDestination = destinationsById[destinationId];
+    setIsLoading(true); // Always reset loading state
+    setError(false); // Always reset error state
 
-    if (baseDestination) {
+    // Find the destination by its slug from the context data
+    const foundDestination = destinations.find((dest) => dest.slug === destinationSlug);
+
+    if (foundDestination) {
       const today = new Date();
       today.setHours(0, 0, 0, 0); // Set to the beginning of the day for accurate comparison.
 
       // Filter and sort all published experiences to find ones matching this destination.
-      const filteredUpcomingTrips = publishedExperiences
+      const filteredUpcomingTrips = experiences // Use experiences from context
         .filter(
           (trip) =>
-            trip.destinationId === destinationId &&
-            new Date(trip.details.endDate) >= today
+            (trip.destinationId === foundDestination.id &&
+              new Date(trip.details.endDate) >= today) ||
+            (Array.isArray(trip.destinationIds) &&
+              trip.destinationIds.includes(foundDestination.id) &&
+              new Date(trip.details.endDate) >= today)
         )
-        .sort(
-          (a, b) =>
-            new Date(a.details.startDate) - new Date(b.details.startDate)
-        );
+        .sort((a, b) => new Date(a.details.startDate) - new Date(b.details.startDate));
 
-      setDestinationData(baseDestination);
+      setDestinationData(foundDestination); // Use the found destination
       setUpcomingTrips(filteredUpcomingTrips);
     } else {
       // If no destination matches the ID, set an error state.
@@ -56,47 +64,33 @@ const DestinationPage = () => {
     }
 
     setIsLoading(false);
-  }, [destinationId]); // Rerun effect if the destinationId in the URL changes.
+  }, [destinationSlug, destinations, experiences]); // Rerun effect if slug, destinations, or experiences data changes.
 
   // --- Render based on component state ---
 
   if (isLoading) {
     return (
-      <div className='flex items-center justify-center min-h-screen text-brand-white text-2xl'>
+      <div className="flex items-center justify-center min-h-screen text-brand-white text-2xl">
         {t('common:loading')}...
       </div>
     );
   }
 
   if (error || !destinationData) {
-    return (
-      <Navigate
-        to='/404'
-        replace
-      />
-    );
+    return <Navigate to="/404" replace />;
   }
 
   return (
     <>
       <SEOComponent
-        title={t(destinationData.seo.titleKey, { ns: 'destinations' })}
-        description={t(destinationData.seo.descriptionKey, {
-          ns: 'destinations',
-        })}
+        title={t(destinationData.seo.titleKey, { ns: 'destinationsPage' })}
+        description={t(destinationData.seo.descriptionKey, { ns: 'destinationsPage' })}
         keywords={t(destinationData.seo.keywords)}
         imageUrl={destinationData.seo.imageUrl}
-        url={`${destinationData.seo.url}${destinationData.id}`}
+        url={destinationData.seo.url}
       />
-      <motion.div
-        variants={staggerContainer}
-        initial='hidden'
-        animate='animate'
-        exit='hidden'>
-        <DestinationLayout
-          destinationData={destinationData}
-          upcomingTrips={upcomingTrips}
-        />
+      <motion.div variants={staggerContainer} initial="initial" animate="animate" exit="exit">
+        <DestinationLayout destinationData={destinationData} upcomingTrips={upcomingTrips} />
       </motion.div>
     </>
   );

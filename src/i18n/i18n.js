@@ -19,7 +19,7 @@ import safetyEN from './locals/en/safety.js';
 import contactEN from './locals/en/contact.js';
 
 // Content Collections Namespaces
-import coursesEN from './locals/en/courses.js';
+
 import destinationsEN from './locals/en/destinations.js';
 import experiencesEN from './locals/en/experiences.js';
 import policiesEN from './locals/en/policies.js';
@@ -49,7 +49,6 @@ import aboutUsES from './locals/es/aboutUs.js';
 import safetyES from './locals/es/safety.js';
 import contactES from './locals/es/contact.js';
 
-import coursesES from './locals/es/courses.js';
 import destinationsES from './locals/es/destinations.js';
 import experiencesES from './locals/es/experiences.js';
 import policiesES from './locals/es/policies.js';
@@ -78,9 +77,9 @@ const resources = {
     aboutUs: aboutUsEN,
     safety: safetyEN,
     contact: contactEN,
-    courses: coursesEN,
-    destinations: destinationsEN,
-    experiences: experiencesEN,
+
+    // destinations: destinationsEN,
+    // experiences: experiencesEN,
     common: commonEN,
     policies: policiesEN,
     termsAndConditions: termsAndConditionsEN,
@@ -106,9 +105,9 @@ const resources = {
     aboutUs: aboutUsES,
     safety: safetyES,
     contact: contactES,
-    courses: coursesES,
-    destinations: destinationsES,
-    experiences: experiencesES,
+
+    // destinations: destinationsES,
+    // experiences: experiencesES,
     common: commonES,
     policies: policiesES,
     termsAndConditions: termsAndConditionsES,
@@ -141,7 +140,6 @@ i18n.use(initReactI18next).init({
     'aboutUs',
     'safety',
     'contact',
-    'courses',
     'destinations',
     'experiences',
     'common',

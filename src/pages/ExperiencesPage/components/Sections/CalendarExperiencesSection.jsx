@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 // Data sources and animations
-import { publishedExperiences } from '../../../../data/content/experiences/_index.js';
+import { useExperiences } from '@/data/content/experiences/DataProvider'; // CORRECTO: Usa el Provider
 import { experiencesPageData } from '../../../../data/pages/experiencesData.js';
 import { staggerContainer } from '../../../../hooks/animations.js';
 
@@ -15,7 +15,6 @@ import CalendarExperienceCardComponent from '../Cards/CalendarExperienceCardComp
 
 // Child Components
 import { ChevronLeftIcon, ChevronRightIcon } from '../../../../assets/icons/ChevronIcons.jsx';
-
 import { CalendarIcon } from '../../../../assets/icons/SocialIcons.jsx';
 
 /**
@@ -26,42 +25,67 @@ const CalendarExperiencesSection = ({ translationNS }) => {
   const { t } = useTranslation([translationNS, 'common', 'contact']);
   const [currentPage, setCurrentPage] = useState(0);
 
+  // Get all experiences from the Context Provider
+  const { experiences } = useExperiences(); // Correcto: Obtiene las experiencias enriquecidas
+
   // --- LÓGICA CENTRALIZADA DE FECHAS Y DURACIÓN ---
   const { upcomingTrips, pastTrips } = useMemo(() => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    // Usamos un nombre de variable descriptivo y consistente
-    const allTripsWithDetails = publishedExperiences.map((trip) => {
-      const startDate = new Date(trip.details.startDate);
-      const endDate = new Date(trip.details.endDate);
-      let finalStatus = trip.availability;
+    const allSessionsWithDetails = [];
 
-      if (endDate < today) {
-        finalStatus = 'completed';
-      }
+    // Iteramos sobre cada experiencia y luego sobre sus sesiones
+    // `experiences` ya viene enriquecido con la propiedad `sessions` de DataProvider.jsx
+    experiences.forEach((experience) => {
+      (experience.sessions || []).forEach((session) => {
+        // Accede a las sesiones de la experiencia
+        const startDate = new Date(session.startDate); // Las fechas están en la sesión
+        const endDate = new Date(session.endDate); // Las fechas están en la sesión
+        let finalStatus = session.availability; // La disponibilidad está en la sesión
 
-      // Calcula la duración en días y noches
-      const timeDiff = endDate.getTime() - startDate.getTime();
-      const dayDiff = Math.round(timeDiff / (1000 * 3600 * 24));
+        if (endDate < today) {
+          finalStatus = 'completed';
+        }
 
-      const days = dayDiff + 1;
-      const nights = days - 1;
+        // Calcula la duración en días y noches
+        const timeDiff = endDate.getTime() - startDate.getTime();
+        const dayDiff = Math.round(timeDiff / (1000 * 3600 * 24));
 
-      // Retorna el objeto del viaje con el status y la duración añadidos
-      return { ...trip, finalStatus, duration: { days, nights } };
+        const days = dayDiff + 1;
+        const nights = days - 1;
+
+        // Retorna el objeto de la sesión con el status y la duración añadidos,
+        // y también adjunta la experiencia padre para tener acceso a sus datos (título, descripción, etc.)
+        allSessionsWithDetails.push({
+          ...session, // Todas las propiedades de la sesión
+          finalStatus,
+          duration: { days, nights },
+          // Adjuntamos una referencia a la experiencia padre si la necesitas en la tarjeta
+          experienceDetails: {
+            id: experience.id,
+            slug: experience.slug,
+            titleKey: experience.titleKey,
+            subtitleKey: experience.subtitleKey,
+            header: experience.header, // Puedes pasar más datos si CalendarExperienceCardComponent los necesita
+            seo: experience.seo,
+            // Agrega cualquier otra propiedad de la experiencia que necesites en la tarjeta de sesión
+          },
+        });
+      });
     });
 
-    const upcoming = allTripsWithDetails
-      .filter((trip) => trip.finalStatus !== 'completed')
-      .sort((a, b) => new Date(a.details.startDate) - new Date(b.details.startDate));
+    // Filtramos y ordenamos las sesiones
+    const upcoming = allSessionsWithDetails
+      .filter((session) => session.finalStatus !== 'completed')
+      .sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
 
-    const past = allTripsWithDetails
-      .filter((trip) => trip.finalStatus === 'completed')
-      .sort((a, b) => new Date(b.details.startDate) - new Date(a.details.startDate));
+    const past = allSessionsWithDetails
+      .filter((session) => session.finalStatus === 'completed')
+      .sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
 
     return { upcomingTrips: upcoming, pastTrips: past };
-  }, []);
+  }, [experiences]); // Dependencia del useMemo: recalcular si las experiencias cambian
 
   // --- Lógica de paginación ---
   const ITEMS_PER_PAGE = 3;
@@ -96,8 +120,8 @@ const CalendarExperiencesSection = ({ translationNS }) => {
                 <motion.ul key={currentPage} variants={staggerContainer} className="space-y-4">
                   {currentUpcomingTrips.map((trip) => (
                     <CalendarExperienceCardComponent
-                      key={trip.id}
-                      tripData={trip}
+                      key={trip.id} // El ID de la sesión
+                      tripData={trip} // tripData ahora es el objeto de sesión enriquecido
                       status={trip.finalStatus}
                       duration={trip.duration}
                     />

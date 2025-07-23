@@ -1,3 +1,4 @@
+// src/pages/MapPage/components/MapComponent.jsx
 import React, { useEffect, useRef, useState, useMemo } from 'react';
 import maplibregl, { LngLatBounds } from 'maplibre-gl';
 import { motion } from 'motion/react';
@@ -10,13 +11,7 @@ import DiveFiltersComponent from './DiveFiltersComponent';
 import DiveSiteModalComponent from './DiveSiteModalComponent';
 
 // ========== Helpers ==========
-import { destinationsById } from '../../../data/content/destinations/_index';
-
-import {
-  getMapConfigByDestination,
-  getDivesitesByDestination,
-  allDivesites,
-} from '../../../data/content/divesites/_index';
+import { useDestinations } from '@/data/content/destinations/DataProvider';
 
 import { DIVE_TYPES, DIVE_DIFFICULTIES } from '../../../data/global/diveSiteOptions';
 
@@ -118,6 +113,17 @@ const MapComponent = ({ destinationId }) => {
   const isInitialMount = useRef(true);
   const { t } = useTranslation(['divesites', 'map', 'destinations']);
 
+  // Obtener todos los destinos del contexto
+  const { destinations } = useDestinations();
+
+  // Recrear destinationsById usando useMemo a partir de los destinos del contexto
+  const destinationsById = useMemo(() => {
+    return destinations.reduce((acc, dest) => {
+      acc[dest.id] = dest;
+      return acc;
+    }, {});
+  }, [destinations]); // Se recalcula si la lista de destinos cambia
+
   const [mapHeight, setMapHeight] = useState('500px');
   const [activeType, setActiveType] = useState('all');
   const [activeDifficulty, setActiveDifficulty] = useState('all');
@@ -128,17 +134,41 @@ const MapComponent = ({ destinationId }) => {
   const [selectedSiteId, setSelectedSiteId] = useState(null);
   const selectedSiteIdRef = useRef(null);
 
-  const {
-    center: initialCenter,
-    zoom: initialZoom,
-    minZoom,
-    maxZoom,
-  } = getMapConfigByDestination(destinationId);
+  // Obtener la configuración del mapa (centro, zoom) para el destino actual o valores por defecto
+  const mapConfig = useMemo(() => {
+    if (destinationId && destinationsById[destinationId]) {
+      const dest = destinationsById[destinationId];
 
-  const baseSites = useMemo(
-    () => (destinationId ? getDivesitesByDestination(destinationId) : allDivesites),
-    [destinationId]
-  );
+      return {
+        center: dest.coords || DEFAULT_CENTER,
+        zoom: dest.minZoom || DEFAULT_ZOOM,
+        minZoom: dest.minZoom,
+        maxZoom: dest.maxZoom,
+      };
+    }
+
+    return {
+      center: DEFAULT_CENTER,
+      zoom: DEFAULT_ZOOM,
+      minZoom: undefined, // Permitir que maplibre use sus valores por defecto si no están definidos
+      maxZoom: 16,
+    };
+  }, [destinationId, destinationsById]);
+
+  const { center: initialCenter, zoom: initialZoom, minZoom, maxZoom } = mapConfig;
+
+  // baseSites ahora se deriva de los diveSites adjuntos a los destinos del contexto
+  const baseSites = useMemo(() => {
+    if (destinationId) {
+      // Si se proporciona un destinationId, filtra los diveSites de ese destino específico
+      const currentDestination = destinationsById[destinationId];
+      return currentDestination ? currentDestination.diveSites || [] : [];
+    } else {
+      // Si no hay destinationId, recopila todos los diveSites de todos los destinos
+      // (destinations ya viene con diveSites adjuntos gracias a getEnrichedDestinations)
+      return destinations.flatMap((dest) => dest.diveSites || []);
+    }
+  }, [destinationId, destinations, destinationsById]); // Añadir destinations a las dependencias
 
   const typeFilterOptions = useMemo(() => {
     const relevantSites = baseSites.filter(
@@ -185,7 +215,7 @@ const MapComponent = ({ destinationId }) => {
       return [{ id: 'all', translationKey: 'map:allLabel' }, ...options];
     }
     return options;
-  }, [baseSites, activeType, activeDifficulty, destinationId]);
+  }, [baseSites, activeType, activeDifficulty, destinationId, destinationsById]);
 
   useEffect(() => {
     const calculateAndSetMapHeight = () => {

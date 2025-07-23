@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 // Animation variants and data
 import { staggerContainer } from '../../../../hooks/animations';
 import { paymentMethodsData } from '../../../../data/global/paymentMethodsData';
-import { publishedExperiences } from '../../../../data/content/experiences/_index';
 import { formatDateRange } from '../../../../utils/formatters';
 
 // Reusable section and card components
@@ -18,7 +17,7 @@ import PaymentCard from '../../common/Cards/PaymentCard';
 import ChecklistCard from '../../common/Cards/ChecklistCard';
 import CtaCard from '../../common/Cards/CtaCard';
 import UpcomingTripSection from '../../common/Sections/UpcomingTripSection';
-import UpcomingCoursesSection from '../../common/Sections/UpcomingCoursesSection';
+import UpcomingCertificationsSection from '../../common/Sections/UpcomingCertificationSection';
 import ItinerarySection from '../../common/Sections/ItinerarySection';
 import MapComponent from '../../../MapPage/components/MapComponent';
 import CurriculumCard from '../../common/Cards/CurriculumCard';
@@ -31,25 +30,24 @@ import CurriculumCard from '../../common/Cards/CurriculumCard';
  * @param {object} props.experienceData - The complete data object for the experience/trip.
  * @param {object[]} props.offeredCoursesData - An array of course data objects offered with this trip.
  */
-const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
+const ExperienceLayout = ({ experienceData, sessionData, offeredCertificationsData }) => {
   const { t, i18n } = useTranslation([
-    'experiences',
+    'experienceDetailPage',
     'common',
     'payment',
     'contact',
     'courses',
     'destinations',
+    'experiences',
   ]);
 
   const { dateRangeText, durationText } = useMemo(() => {
-    if (!experienceData?.details) {
-      return {};
+    if (!sessionData?.startDate || !sessionData?.endDate) {
+      // Dates are directly on sessionData
+      return { dateRangeText: '', durationText: '' }; // Return empty strings for safety
     }
 
-    const { startDate, endDate } = experienceData.details;
-    if (!startDate || !endDate) {
-      return {};
-    }
+    const { startDate, endDate } = sessionData; // Dates from sessionData (NEW)
 
     // Use your existing helper for the date range
     const dateRange = formatDateRange(startDate, endDate, i18n.language, t);
@@ -65,117 +63,106 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
     const duration = t('durationFormat', { ns: 'common', days, nights });
 
     return { dateRangeText: dateRange, durationText: duration };
-  }, [experienceData, t, i18n.language]);
+  }, [sessionData, t, i18n.language]);
 
-  if (!experienceData) {
+  if (!experienceData || !sessionData) {
     return (
-      <div className='flex items-center justify-center min-h-screen text-red-500 text-2xl'>
-        Experience data incomplete.
+      <div className="flex items-center justify-center min-h-screen text-red-500 text-2xl">
+        Experience or session data incomplete.
       </div>
     );
   }
 
-  const primaryCourseData = offeredCoursesData?.[0] || null;
+  const primaryCertificationData = offeredCertificationsData?.[0] || null;
 
-  const otherTripsToThisDestination = experienceData.destinationId
-    ? publishedExperiences.filter(
-        (trip) =>
-          trip.destinationId === experienceData.destinationId &&
-          trip.id !== experienceData.id && // Exclude the current trip.
-          new Date(trip.details.endDate) >= new Date().setHours(0, 0, 0, 0)
-      )
-    : [];
+  const otherTripsToThisDestination = [];
 
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial='hidden'
-      animate='show'
-      exit='hidden'>
-      <HeaderComponent
-        sectionData={experienceData.header}
-        translationNS='experiences'
-      />
+    <motion.div variants={staggerContainer} initial="initial" animate="animate" exit="exit">
+      <HeaderComponent sectionData={experienceData.header} translationNS="experienceDetailPage" />
 
-      <div className='container mx-auto p-4 md:p-8 grid lg:grid-cols-3 gap-8 items-start'>
+      <div className="container mx-auto p-4 md:p-8 grid lg:grid-cols-3 gap-8 items-start">
         {/* --- Main Content Column (Left) --- */}
-        <main className='lg:col-span-2 space-y-16 lg:sticky top-24 h-fit'>
+        <main className="lg:col-span-2 space-y-16 lg:sticky top-24 h-fit">
           {otherTripsToThisDestination.length > 0 && (
             <UpcomingTripSection
               availableTrips={otherTripsToThisDestination}
-              titleKey='expOtherTripsTitle'
-              translationNS='experiences'
+              titleKey="expOtherTripsTitle"
+              translationNS="experienceDetailPage"
             />
           )}
-          {/* Courses offered */}
-          {offeredCoursesData && offeredCoursesData.length > 0 && (
-            <UpcomingCoursesSection
-              availableCourses={offeredCoursesData}
-              titleKey={experienceData.offeredCourses.titleKey}
-              translationNS='experiences'
+          {/* Certifications offered */}
+          {offeredCertificationsData && offeredCertificationsData.length > 0 && (
+            <UpcomingCertificationsSection // Renamed component
+              availableCertifications={offeredCertificationsData} // Renamed prop
+              titleKey={
+                experienceData.offeredCertifications?.titleKey || 'offeredCertificationsTitle'
+              } // Access securely, provide fallback
+              translationNS="experienceDetailPage" // Use new namespace
             />
           )}
           {/* Description */}
           <DescriptionSection
             descriptionData={experienceData.description}
-            translationNS='experiences'
+            translationNS="experienceDetailPage"
           />
 
           {/* Itinerary */}
           {experienceData.itinerary && (
             <ItinerarySection
               itineraryData={experienceData.itinerary}
-              translationNS='experiences'
+              translationNS="experienceDetailPage"
             />
           )}
           <GallerySection
             galleryData={experienceData.gallery}
-            translationNS='experiences'
+            translationNS="experienceDetailPage"
           />
         </main>
 
         {/* --- Sidebar Column (Right) --- */}
-        <aside className='lg:col-span-1 space-y-8 lg:sticky top-24 h-fit'>
+        <aside className="lg:col-span-1 space-y-8 lg:sticky top-24 h-fit">
           {/* Details */}
           <DetailsCard
-            detailsData={experienceData.details}
+            detailsData={experienceData.details} // Details from experience base
+            // Important: Display session-specific details here like price, availability
+            sessionPrice={sessionData.price} // Pass session price
+            sessionCurrency={sessionData.currency} // Pass session currency
+            sessionAvailability={sessionData.availability} // Pass session availability
             dateRange={dateRangeText}
             duration={durationText}
-            translationNS='experiences'
+            translationNS="experienceDetailPage"
           />
           {/* Payment Plan */}
           <CurriculumCard
             detailsData={experienceData.paymentPlan}
-            translationNS='experiences'
+            translationNS="experienceDetailPage"
           />
 
           {/* Payment Options */}
-          <PaymentCard
-            paymentData={paymentMethodsData}
-            translationNS='payment'
-          />
+          <PaymentCard paymentData={paymentMethodsData} translationNS="payment" />
 
           {/* Included Experience */}
           <ChecklistCard
             checklistData={experienceData.whatIsIncluded}
-            translationNS='experiences'
-            type='included'
+            translationNS="experienceDetailPage"
+            type="included"
           />
 
           {/* Included Course */}
-          {primaryCourseData && (
+          {primaryCertificationData && (
             <ChecklistCard
-              checklistData={primaryCourseData.whatIsIncluded}
-              translationNS='courses'
-              type='included'
+              checklistData={primaryCertificationData.whatIsIncluded}
+              translationNS="certifications" // Namespace for certifications
+              type="included"
             />
           )}
 
           {/* Not Included */}
           <ChecklistCard
             checklistData={experienceData.whatIsNotIncluded}
-            translationNS='experiences'
-            type='excluded'
+            translationNS="experienceDetailPage"
+            type="excluded"
           />
 
           {/* CTA */}
@@ -183,22 +170,30 @@ const ExperienceLayout = ({ experienceData, offeredCoursesData }) => {
             ctaData={{
               titleKey: experienceData.cta.titleKey,
               buttonTextKey: experienceData.cta.buttonTextKey,
-              ctaAction: experienceData.cta.ctaAction,
+              // For CTA, you might want to link to the specific session for booking
+              ctaAction: {
+                // Adjust CTA to use session-specific contact
+                ...experienceData.cta.action, // Copy existing action type, etc.
+                whatsAppMessageKey: 'sessionWhatsappMessageKey', // A new key for session specific message
+                whatsAppMessageNS: 'common',
+                whatsAppMessageValues: {
+                  experienceTitle: t(experienceData.titleKey, { ns: 'experiences' }),
+                  sessionDates: dateRangeText, // Include the session dates
+                },
+              },
             }}
-            translationNS='experiences'
+            translationNS="experienceDetailPage"
           />
         </aside>
       </div>
 
       {/* Map */}
-      <section className='w-full bg-brand-primary-medium py-12 md:py-16 mt-16'>
-        <div className='container mx-auto px-4 md:px-8'>
-          <h3 className='text-3xl font-bold text-brand-white mb-4'>
-            {t('map:mapLabel')}
-          </h3>
+      <section className="w-full bg-brand-primary-medium py-12 md:py-16 mt-16">
+        <div className="container mx-auto px-4 md:px-8">
+          <h3 className="text-3xl font-bold text-brand-white mb-4">{t('map:mapLabel')}</h3>
 
-          <div className='bg-brand-primary-dark p-4 sm:p-6 rounded-2xl shadow-2xl'>
-            <div className='rounded-lg overflow-hidden'>
+          <div className="bg-brand-primary-dark p-4 sm:p-6 rounded-2xl shadow-2xl">
+            <div className="rounded-lg overflow-hidden">
               <MapComponent destinationId={experienceData.destinationId} />
             </div>
           </div>
