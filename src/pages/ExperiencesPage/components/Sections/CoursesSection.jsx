@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-import { experiencesPageData } from '../../../../data/pages/experiencesData';
+import { experiencesData } from '../../../../data/pages/experiencesData';
 
 import { useCertifications } from '@/data/content/certifications/DataProvider';
 import { useExperiences } from '@/data/content/experiences/DataProvider';
@@ -16,7 +16,7 @@ import CourseCardComponent from '../Cards/CourseCardComponent';
  */
 const CoursesSection = ({ translationNS }) => {
   const { t } = useTranslation([translationNS, 'common']);
-  const { sectionId, titleKey } = experiencesPageData.fullCatalog.courses;
+  const { sectionId, titleKey } = experiencesData.fullCatalog.courses;
 
   // Get all certifications and experiences with sessions
   const { certifications } = useCertifications();

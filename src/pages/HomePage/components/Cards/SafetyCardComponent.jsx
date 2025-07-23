@@ -10,6 +10,7 @@ import {
   HelmetDivingIcon,
   ChecklistIcon,
 } from '../../../../assets/icons/DiverIcons';
+import { NAMESPACES } from '@/data/global/constants';
 
 // Maps string identifiers from the data file to the actual imported icon components.
 // This allows the data layer to remain simple (e.g., "id: 'guias'").
@@ -30,7 +31,7 @@ const iconMap = {
  * @param {string} props.translationNS - The i18next namespace for the translations.
  */
 const SafetyCardComponent = ({ item, translationNS }) => {
-  const { t } = useTranslation(translationNS);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   return (
     <motion.div

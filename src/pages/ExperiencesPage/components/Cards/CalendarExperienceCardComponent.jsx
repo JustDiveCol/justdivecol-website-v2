@@ -10,7 +10,8 @@ import { ClockIcon } from '../../../../assets/icons/UtilIcons';
 import { fadeInUp } from '../../../../hooks/animations';
 
 import AvailabilityBadgeComponent from '../../../../components/common/Component/AvailabilityBadgeComponent';
-import { ROUTES } from '@/data/global/constants';
+import { NAMESPACES, ROUTES } from '@/data/global/constants';
+import { FOUNDERS_LOGO } from '@/data/global/assets'; // Correcto, ya importaste esto
 
 /**
  * A card component that displays a single upcoming trip in a calendar-like list.
@@ -19,23 +20,26 @@ import { ROUTES } from '@/data/global/constants';
  * @param {object} props - The component props.
  * @param {object} props.tripData - The data object for a specific trip (which is actually a session object).
  * @param {string} props.tripData.id - The unique identifier for the trip (session).
- * @param {string} props.tripData.slug - The slug for the session. // AÑADIDO: El slug de la sesión
+ * @param {string} props.tripData.slug - The slug for the session.
  * @param {string} props.tripData.startDate - The start date of the session.
  * @param {string} props.tripData.endDate - The end date of the session.
+ * @param {boolean} props.tripData.founders - Indicates if this session is for founders.
  * @param {object} props.tripData.experienceDetails - Contains details of the parent experience.
  */
 const CalendarExperienceCardComponent = ({ translationNS, tripData, status, duration }) => {
   const { t, i18n } = useTranslation([translationNS, 'common', 'experiences']);
-  // ¡CORREGIDO! Desestructuramos el 'slug' de la sesión también
-  const { id, slug: sessionSlug, startDate, endDate, experienceDetails } = tripData; // Renombramos 'slug' a 'sessionSlug' para claridad
+
+  const { id, slug: sessionSlug, startDate, endDate, experienceDetails, founders } = tripData;
 
   // Acceso seguro a las propiedades de la experiencia padre
-  const experienceTitleKey = experienceDetails?.titleKey;
+  const experienceNameKey = experienceDetails?.nameKey;
+  const experienceTitleKey = experienceDetails?.titleKey; // Este era el que usabas antes
   const experienceSlug = experienceDetails?.slug;
 
   const isInactive = status === 'soldOut' || status === 'completed';
 
-  const wrapperClasses = `group bg-brand-neutral/60 p-4 rounded-lg flex flex-col sm:flex-row items-center justify-between shadow-lg transition-all duration-300 w-full ${
+  // Añadimos 'relative' a wrapperClasses para que los elementos absolutos se posicionen respecto a la tarjeta.
+  const wrapperClasses = `group bg-brand-neutral/60 p-4 rounded-lg flex flex-col sm:flex-row items-center justify-between shadow-lg transition-all duration-300 w-full relative ${
     isInactive ? 'opacity-70 cursor-not-allowed' : 'hover:bg-brand-neutral'
   }`;
 
@@ -47,9 +51,7 @@ const CalendarExperienceCardComponent = ({ translationNS, tripData, status, dura
           <div className="flex items-center space-x-3">
             <CalendarIcon className="h-6 w-6 text-brand-primary-dark" />
             <h3 className="text-base sm:text-base md:text-lg lg:text-xl uppercase tracking-wide leading-tight font-semibold text-brand-primary-dark">
-              {experienceTitleKey
-                ? t(experienceTitleKey, { ns: 'experiences' })
-                : 'Experience Title Missing'}
+              {experienceTitleKey ? t(experienceTitleKey) : 'Experience Title Missing'}
             </h3>
           </div>
           <div className="w-full flex flex-col items-center sm:flex-row sm:items-center sm:justify-start sm:space-x-4 text-center sm:text-left mt-1 sm:mt-0">
@@ -77,13 +79,15 @@ const CalendarExperienceCardComponent = ({ translationNS, tripData, status, dura
         </div>
       </div>
 
-      {/* Lado Derecho */}
-      <div className="mt-4 sm:mt-0">
+      {/* Lado Derecho (sin el logo flotante, solo el badge/botón) */}
+      <div className="mt-2 sm:mt-0">
+        {' '}
+        {/* Eliminado flex-col items-end de aquí */}
         {isInactive ? (
           <AvailabilityBadgeComponent status={status} />
         ) : (
           <div className="bg-brand-cta-orange text-white font-bold text-sm uppercase py-2 px-5 rounded-md transition-transform duration-300 group-hover:scale-105">
-            {t('viewDetails')}
+            {t('viewDetails', { ns: NAMESPACES.COMMON })}
           </div>
         )}
       </div>
@@ -93,14 +97,34 @@ const CalendarExperienceCardComponent = ({ translationNS, tripData, status, dura
   return (
     <motion.li variants={fadeInUp}>
       {isInactive ? (
-        <div className={wrapperClasses}>{CardContent}</div>
+        <div className={wrapperClasses}>
+          {CardContent}
+          {/* Logo de Founders posicionado absolutamente si founders es true */}
+          {founders && (
+            <img
+              src={FOUNDERS_LOGO.foundersLogo}
+              alt={FOUNDERS_LOGO.altKey ? t(FOUNDERS_LOGO.altKey) : 'Founders Logo'}
+              className="absolute -top-4 -left-4 w-16 h-16 object-contain z-20" /* Posicionado flotante */
+              draggable="false"
+            />
+          )}
+        </div>
       ) : (
-        // ¡CORREGIDO! Ahora usa sessionSlug para la parte de la sesión en la URL
         <Link
           to={`${ROUTES.experiences}/${experienceSlug}/${sessionSlug}`}
           className={wrapperClasses}
+          draggable="false"
         >
           {CardContent}
+          {/* Logo de Founders posicionado absolutamente si founders es true */}
+          {founders && (
+            <img
+              src={FOUNDERS_LOGO.foundersLogo}
+              alt={FOUNDERS_LOGO.altKey ? t(FOUNDERS_LOGO.altKey) : 'Founders Logo'}
+              className="absolute -top-4 -left-4 w-16 h-16 object-contain z-20" /* Posicionado flotante */
+              draggable="false"
+            />
+          )}
         </Link>
       )}
     </motion.li>

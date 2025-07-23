@@ -4,11 +4,9 @@ import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 import { homePageData } from '@/data/pages/homeData.js';
-
-// Animation variants
 import { staggerContainer } from '@/hooks/animations.js';
+import { NAMESPACES } from '@/data/global/constants';
 
-// UI and Section Components
 import SEOComponent from '@/components/ui/SEOComponent.jsx';
 import HeroSection from '@/pages/HomePage/components/Sections/HeroSection.jsx';
 import ExperiencesSection from '@/pages/HomePage/components/Sections/ExperiencesSection.jsx';
@@ -16,12 +14,8 @@ import SafetySection from '@/pages/HomePage/components/Sections/SafetySection.js
 import TestimonialsSection from '@/pages/HomePage/components/Sections/TestimonialsSection.jsx';
 import CtaComponent from '@/components/CtaComponent.jsx';
 
-/**
- * Renders the main homepage of the website.
- * It assembles all the homepage sections in the correct order.
- */
 const HomePage = () => {
-  const { t } = useTranslation('home');
+  const { t } = useTranslation(NAMESPACES.HOME_PAGE);
 
   return (
     <>
@@ -33,22 +27,21 @@ const HomePage = () => {
         url={homePageData.seo.url}
       />
       <motion.div variants={staggerContainer} initial="initial" animate="animate">
-        {/* The sections are rendered in their intended order for the homepage. */}
-        <HeroSection translationNS={'home'} />
+        <HeroSection translationNS={NAMESPACES.HOME_PAGE} />
+
         <ExperiencesSection
-          translationNS="home"
+          translationNS={NAMESPACES.HOME_PAGE}
           titleKey={homePageData.featuredExperiences.titleKey}
           subtitleKey={homePageData.featuredExperiences.subtitleKey}
           categories={homePageData.featuredExperiences.categories}
         />
-        <SafetySection translationNS={'home'} />
+        <SafetySection translationNS={NAMESPACES.HOME_PAGE} />
 
-        {/* Conditionally render testimonials only if there are items to display. */}
         {homePageData.testimonials?.items?.length > 0 && (
-          <TestimonialsSection translationNS={'home'} />
+          <TestimonialsSection translationNS={NAMESPACES.HOME_PAGE} />
         )}
 
-        <CtaComponent sectionData={homePageData.finalCta} translationNS="home" />
+        <CtaComponent sectionData={homePageData.finalCta} translationNS={NAMESPACES.HOME_PAGE} />
       </motion.div>
     </>
   );

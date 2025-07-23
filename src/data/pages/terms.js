@@ -1,10 +1,10 @@
-// src/data/pages/termsAndConditionData.js
+// src/data/pages/terms.js
 
 import tyc_header_background from '../../assets/images/page-specific/tyc/tyc-header-background.webp';
 
 import logo from '../../assets/images/logos/logo.png';
 
-export const termsAndConditionData = {
+export const terms = {
   seo: {
     titleKey: 'tcaSeoTitle',
     descriptionKey: 'tcaSeoDesc',

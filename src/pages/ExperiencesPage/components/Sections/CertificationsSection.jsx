@@ -2,21 +2,22 @@
 import React, { useMemo } from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-import { experiencesPageData } from '../../../../data/pages/experiencesData';
+import { experiencesData } from '../../../../data/pages/experiencesData';
 
 import { useCertifications } from '@/data/content/certifications/DataProvider';
 import { useExperiences } from '@/data/content/experiences/DataProvider';
 import { staggerContainer } from '../../../../hooks/animations';
 
 import CertficationCardComponent from '../Cards/CertificationCardComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the "Courses & Certifications" section of the Experiences page.
  * It fetches all published courses and displays them as cards.
  */
 const CertificationSection = ({ translationNS }) => {
-  const { t } = useTranslation([translationNS, 'common']);
-  const { sectionId, titleKey } = experiencesPageData.fullCatalog.courses;
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
+  const { sectionId, titleKey } = experiencesData.fullCatalog.courses;
 
   // Get all certifications and experiences with sessions
   const { certifications } = useCertifications();
@@ -58,7 +59,11 @@ const CertificationSection = ({ translationNS }) => {
           className="mt-8 flex flex-wrap justify-center gap-6"
         >
           {certificationsWithStatus.map((cert) => (
-            <CertficationCardComponent key={cert.id} certData={cert} />
+            <CertficationCardComponent
+              key={cert.id}
+              certData={cert}
+              translationNS={NAMESPACES.CERTIFICATIONS_DETAIL}
+            />
           ))}
         </motion.div>
       </div>

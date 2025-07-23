@@ -1,5 +1,16 @@
 // src/i18n/locales/es/common.js
 export default {
+  // --- Availability ---
+
+  statusUpcoming: '¡Próximamente fechas!',
+  statusAvailable: 'Cupos disponibles',
+  statusLastSeats: '¡Últimos cupos disponibles!',
+  statusSoldOut: '¡Completamente reservado!',
+  statusCompleted: 'Finalizado',
+
+  // --- General ---
+  viewDetails: 'Ver detalles',
+
   // ========== Common General Phrases ==========
   learnMore: 'Descubre más',
   viewCalendar: 'Ver calendario de inmersiones',
@@ -19,17 +30,6 @@ export default {
   // ========== Destination Card Component (e.g., on Experiences page) ==========
   upcomingDates: 'Próximas fechas',
 
-  // Status when dates are not yet posted and might take some time
-  statusUpcoming: '¡Próximamente fechas!',
-  // Status when dates are posted and spots are available for booking now
-  statusAvailable: 'Cupos disponibles',
-  // Status when only a few spots remain
-  statusLastSeats: '¡Últimos cupos disponibles!',
-  // Status when all spots are booked
-  statusSoldOut: '¡Completamente reservado!',
-  // Status when an experience or course has concluded
-  statusCompleted: 'Finalizado',
-
   // ========== Accessibility (ARIA) Labels ==========
   ariaPrevious: 'Elemento anterior',
   ariaNext: 'Siguiente elemento',
@@ -46,17 +46,13 @@ export default {
 
   // === Constants ===
 
-  commonPhotoCreditPrefix: 'Créditos de la foto: ',
-
   // --- Button Text ---
-  experiencesTextButton: 'Explorar experiencias',
+
   divesitesTextButton: 'Ver puntos de buceo',
   aboutUsTextButton: 'Conocer JustDiveCol',
-  safetyTextButton: 'Compromiso de seguridad',
-  contactTextButton: 'Hablemos por WhatsApp',
+
   storeTextButton: 'Ir a la tienda',
 
-  experinceTextButton: '¡Quiero esta experiencia!',
   certificationTextButton: '¡Quiero certificarme!',
   destinationTextButton: '¡Explorar el destino!',
 
@@ -78,5 +74,4 @@ export default {
     'Hola, JustDiveCol. ¡Me gustaría diseñar una experiencia de buceo a medida! Tengo una idea en mente y quiero explorar opciones personalizadas con ustedes. ¿Podrían ayudarme?',
 
   // --- General Labels ---
-  viewDetails: 'Ver detalles',
 };

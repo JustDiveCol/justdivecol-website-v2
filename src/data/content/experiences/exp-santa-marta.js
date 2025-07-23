@@ -36,7 +36,7 @@ const _santaMartaExperience = {
   availability: AVAILABILITY.available,
   startDate: '',
   endDate: '',
-  price: 3500000,
+  price: 0,
   currency: CURRENCY.COP,
   createdAt: '2025-07-22T20:49:38Z',
   updatedAt: '2025-07-22T20:49:38Z',
@@ -59,7 +59,7 @@ const _santaMartaExperience = {
     mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
       prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
-      text: 'XYZ',
+      text: 'Camilo Beltran @JustDiveCol',
     },
   },
 
@@ -86,34 +86,7 @@ const _santaMartaExperience = {
         labelKey: 'expSmDetailLabel3',
         valueKey: 'expSmDetailValue3',
       },
-      {
-        labelKey: 'expSmDetailLabel4',
-        valueKey: 'expSmDetailValue4',
-      },
     ],
-  },
-
-  // --- Payment Plan ---
-  paymentPlan: {
-    titleKey: SHARED_TRANSLATION_KEYS.experiencesPaymentTitleKey,
-    modules: [
-      {
-        id: 'payment1',
-        nameKey: 'paymentPlanStep1Name',
-        descriptionKey: 'paymentPlanStep1Desc',
-      },
-      {
-        id: 'payment2',
-        nameKey: 'paymentPlanStep2Name',
-        descriptionKey: 'paymentPlanStep2Desc',
-      },
-      {
-        id: 'payment3',
-        nameKey: 'paymentPlanStep3Name',
-        descriptionKey: 'paymentPlanStep3Desc',
-      },
-    ],
-    notes: [SHARED_TRANSLATION_KEYS.experiencesDefaultPaymentNoteKey],
   },
 
   // --- Itinerary ---
@@ -141,11 +114,7 @@ const _santaMartaExperience = {
         descriptionKey: 'expSmItineraryDay4Desc',
       },
     ],
-    notes: [
-      SHARED_TRANSLATION_KEYS.experiencesDefaultNoteKey,
-      'expSmItineraryNote1',
-      'expSmItineraryNote2',
-    ],
+    notes: [],
   },
 
   // --- Included / Not included ---
@@ -183,7 +152,7 @@ const _santaMartaExperience = {
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
           prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
-          text: 'XYZ',
+          text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
       },
@@ -193,7 +162,7 @@ const _santaMartaExperience = {
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
           prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
-          text: 'XYZ',
+          text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
       },
@@ -203,7 +172,7 @@ const _santaMartaExperience = {
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
           prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
-          text: 'XYZ',
+          text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
       },

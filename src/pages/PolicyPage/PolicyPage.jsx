@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 // Data sources and animations
-import { policyPageData } from '../../data/pages/policyPageData';
+import { policyData } from '../../data/pages/policyData';
 import { staggerContainer } from '../../hooks/animations';
 
 // UI and Section Components
@@ -22,29 +22,18 @@ const PolicyPage = () => {
   return (
     <>
       <SEOComponent
-        title={t(policyPageData.seo.titleKey, { ns: 'policies' })}
-        description={t(policyPageData.seo.descriptionKey, { ns: 'policies' })}
-        keywords={t(policyPageData.seo.keywords)}
-        imageUrl={policyPageData.seo.imageUrl}
-        url={policyPageData.seo.url}
+        title={t(policyData.seo.titleKey, { ns: 'policies' })}
+        description={t(policyData.seo.descriptionKey, { ns: 'policies' })}
+        keywords={t(policyData.seo.keywords)}
+        imageUrl={policyData.seo.imageUrl}
+        url={policyData.seo.url}
       />
-      <motion.div
-        variants={staggerContainer}
-        initial='hidden'
-        animate='show'
-        exit='hidden'>
-        <HeaderComponent
-          sectionData={policyPageData.header}
-          translationNS='policies'
-        />
-        <div className='container mx-auto py-16 px-4'>
+      <motion.div variants={staggerContainer} initial="hidden" animate="show" exit="hidden">
+        <HeaderComponent sectionData={policyData.header} translationNS="policies" />
+        <div className="container mx-auto py-16 px-4">
           {/* Solo un mapeo de sections aquí */}
-          {policyPageData.sections.map((section) => (
-            <RenderComponent
-              key={section.id}
-              renderData={section}
-              translationNS={'policies'}
-            />
+          {policyData.sections.map((section) => (
+            <RenderComponent key={section.id} renderData={section} translationNS={'policies'} />
           ))}
         </div>
       </motion.div>

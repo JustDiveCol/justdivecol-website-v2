@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { contactPageData } from '../../../data/pages/contactData';
+import { NAMESPACES } from '@/data/global/constants';
 
 // Default animation variants
 const defaultMotionVariants = {
@@ -15,7 +16,7 @@ const defaultMotionVariants = {
 const ButtonComponent = ({
   action,
   textKey,
-  translationNS = 'common',
+  translationNS,
   className = '',
   containerClassName = '',
   motionVariants = defaultMotionVariants,
@@ -25,7 +26,9 @@ const ButtonComponent = ({
   animateOnView = false,
   viewportOptions,
 }) => {
-  const { t } = useTranslation(translationNS === 'common' ? 'common' : [translationNS, 'common']);
+  const { t } = useTranslation(
+    translationNS === NAMESPACES.COMMON ? NAMESPACES.COMMON : [translationNS, NAMESPACES.COMMON]
+  );
 
   // Handler para bloquear cualquier intento de drag
   const preventDrag = (e) => {

@@ -2,12 +2,13 @@
 import React, { useRef, useState, useLayoutEffect, useEffect, useMemo } from 'react';
 import { motion, useAnimation, useMotionValue } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-import { experiencesPageData } from '../../../../data/pages/experiencesData';
+import { experiencesData } from '../../../../data/pages/experiencesData';
 
 import { useDestinations } from '@/data/content/destinations/DataProvider';
 import { useExperiences } from '@/data/content/experiences/DataProvider';
 
 import DestinationCardComponent from '../Cards/DestinationCardComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 const SCROLL_SPEED = 15; // px por segundo para autoscroll
 
@@ -116,31 +117,49 @@ const CarouselSection = ({ title, items }) => {
 };
 
 const DestinationsSection = ({ translationNS }) => {
-  const { t } = useTranslation([translationNS, 'common']);
-  const { sectionId } = experiencesPageData.fullCatalog.destinations;
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
+  const { sectionId } = experiencesData.fullCatalog.destinations;
 
-  const { destinations } = useDestinations(); // Obtiene todos los destinos del contexto
-  const { experiences } = useExperiences(); // Obtiene todas las experiencias del contexto para los trips
+  const { destinations } = useDestinations();
+  const { experiences } = useExperiences();
 
   const destinationsWithUpcomingTrips = useMemo(() => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Para comparar solo la fecha, no la hora
+
     return destinations.map((dest) => {
       const upcomingTrips = [];
       experiences.forEach((exp) => {
-        (exp.sessions || []).forEach((session) => {
-          // Verificar si la sesión está en alguna de las experiencias vinculadas al destino
-          // O si la sesión tiene un ID de destino que coincide con el destino actual
-          if (
-            (Array.isArray(exp.destinationIds) && exp.destinationIds.includes(dest.id)) || // Si la experiencia está vinculada al destino
-            session.destinationId === dest.id // Si la sesión individual está vinculada al destino (asumo que existe esta prop)
-          ) {
-            // Solo si la sesión está disponible o 'last' (puedes ajustar esta lógica si es diferente)
-            if (session.availability === 'available' || session.availability === 'last') {
-              upcomingTrips.push(session);
+        // 'exp' es una experiencia base
+        if (exp.destinationId === dest.id) {
+          // Si la experiencia base está vinculada a este destino
+          (exp.sessions || []).forEach((session) => {
+            // 'session' es una sesión específica
+            const sessionEndDate = new Date(session.endDate);
+            // Solo si la sesión está en el futuro (o hoy) y tiene disponibilidad 'available' o 'last'
+            if (
+              sessionEndDate >= today &&
+              (session.availability === 'available' || session.availability === 'last')
+            ) {
+              upcomingTrips.push({
+                // <-- ¡AQUÍ ESTÁ EL CAMBIO! ENRIQUECER LA SESIÓN
+                ...session, // Copiar todas las propiedades de la sesión
+                // Adjuntar detalles de la experiencia padre si se necesitan en DestinationCardComponent
+                experienceDetails: {
+                  id: exp.id,
+                  slug: exp.slug,
+                  titleKey: exp.titleKey,
+                  subtitleKey: exp.subtitleKey,
+                  nameKey: exp.nameKey, // Asegúrate de que nameKey esté disponible
+                  header: exp.header,
+                  seo: exp.seo,
+                  // Añade cualquier otra propiedad de la experiencia padre que necesites en la tarjeta de destino para esta sesión
+                },
+              });
             }
-          }
-        });
+          });
+        }
       });
-
       return { ...dest, upcomingTrips };
     });
   }, [destinations, experiences]); // Recalcular si destinos o experiencias cambian
@@ -155,7 +174,7 @@ const DestinationsSection = ({ translationNS }) => {
     >
       <div className="container mx-auto">
         <h2 className="heading-2 text-brand-white">
-          {t(experiencesPageData.fullCatalog.destinations.titleKey)}
+          {t(experiencesData.fullCatalog.destinations.titleKey)}
         </h2>
 
         {/* Carrusel de destinos con viajes activos */}

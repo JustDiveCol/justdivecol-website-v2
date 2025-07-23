@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '@/hooks/animations';
+import { NAMESPACES } from '@/data/global/constants';
 
 const SimpleCardComponent = ({
   backgroundImage,
@@ -14,7 +15,7 @@ const SimpleCardComponent = ({
   mainLogoAltKey,
   complementaryLogo,
   complementaryLogoAltKey,
-  photoCreditKey,
+  photoCredit,
   translationNS = 'common',
 }) => {
   const { t } = useTranslation([translationNS, 'common']);
@@ -76,14 +77,15 @@ const SimpleCardComponent = ({
         )}
 
         {/* Footer credit */}
-        {photoCreditKey && (
-          <div className="absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20 text-left">
-            {t(photoCreditKey)}
+        {photoCredit && (
+          <div className="absolute bottom-0 left-0 w-full bg-brand-primary-dark/70 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-20 text-left">
+            {t(photoCredit.prefixKey, { ns: NAMESPACES.COMMON })}
+            {photoCredit.text}
           </div>
         )}
 
         {/* Text content */}
-        <div className="relative z-20 h-full flex flex-col items-center justify-end text-center px-4 pb-6 pt-8 text-white">
+        <div className="relative z-20 h-full flex flex-col items-center justify-end text-center px-4 pb-6 md:pb-14 pt-8 text-white">
           <h3 className="text-xs sm:text-base md:text-xl lg:text-3xl leading-snug font-bold uppercase tracking-wide text-brand-cta-orange">
             {t(titleKey)}
           </h3>
@@ -101,7 +103,7 @@ const SimpleCardComponent = ({
       mainLogoAltKey,
       complementaryLogo,
       complementaryLogoAltKey,
-      photoCreditKey,
+      photoCredit,
       t,
     ]
   );

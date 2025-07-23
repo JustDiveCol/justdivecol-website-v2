@@ -1,27 +1,28 @@
-// src/data/pages/privacyPolicyData.js
+// src/data/pages/privacyData.js
 
 import privacy_header_background from '../../assets/images/page-specific/privacy/privacy-header-background.webp';
 
-import logo from '../../assets/images/logos/logo.png';
+import { LOGO_MAIN } from '../global/assets';
+import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 
-export const privacyPolicyData = {
+export const privacyData = {
   seo: {
     titleKey: 'ppSeoTitle',
     descriptionKey: 'ppSeoDesc',
     keywords: 'ppSeoKeywords',
     imageUrl: privacy_header_background,
-    url: '/privacidad',
+    url: ROUTES.privacy,
   },
   header: {
     backgroundImage: privacy_header_background,
     titleKey: 'ppHeaderTitle',
     subtitleKey: 'ppHeaderSubtitle',
-    mainLogo: logo,
-    mainLogoAltKey: 'ppHeaderMainLogoAlt',
-    // complementaryLogo: '',
-    // complementaryLogoAltKey: 'ppHeaderComplementaryLogoAlt',
-    // textOverlayKey: 'ppHeaderTextOverlay',
-    photoCreditKey: 'ppHeaderPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
   sections: [
     {

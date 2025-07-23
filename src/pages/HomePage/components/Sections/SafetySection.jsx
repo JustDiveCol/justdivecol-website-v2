@@ -8,13 +8,14 @@ import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
 
 import SafetyCardComponent from '../Cards/SafetyCardComponent';
 import ButtonComponent from '../../../../components/common/Button/ButtonComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the "Safety" section for the homepage.
  * It displays a title, subtitle, a grid of safety points, and a call-to-action button.
  */
 const SafetySection = ({ translationNS }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
   const { safety: data } = homePageData;
 
   return (
@@ -43,7 +44,7 @@ const SafetySection = ({ translationNS }) => {
           className="mt-8 flex flex-wrap justify-center gap-6"
         >
           {data.points.map((item) => (
-            <SafetyCardComponent key={item.id} item={item} translationNS="home" />
+            <SafetyCardComponent key={item.id} item={item} translationNS={translationNS} />
           ))}
         </motion.div>
 

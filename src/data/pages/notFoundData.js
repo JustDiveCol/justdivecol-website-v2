@@ -2,7 +2,7 @@ import not_found_background from '../../assets/images/page-specific/not-found/no
 
 import logo from '../../assets/images/logos/logo.png';
 
-export const notFoundPageData = {
+export const notFoundData = {
   titleKey: 'notFoundTitle',
   subtitleKey: 'notFoundSubtitle',
   ctaTextKey: 'notFoundCtaText',

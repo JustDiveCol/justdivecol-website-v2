@@ -5,7 +5,13 @@ import heroBackground from '../../assets/images/page-specific/home/home-hero-bac
 import ctaBackground from '../../assets/images/page-specific/home/home-cta-background.webp';
 
 import { LOGO_MAIN } from '../global/assets.js';
-import { SHARED_TRANSLATION_KEYS, ROUTES, BUTTON_TYPES } from '../global/constants.js';
+import {
+  SHARED_TRANSLATION_KEYS,
+  ROUTES,
+  BUTTON_TYPES,
+  NAMESPACES,
+  CAT_TYPE,
+} from '../global/constants.js';
 
 export const homePageData = {
   // === SEO SECTION ===
@@ -25,7 +31,7 @@ export const homePageData = {
     mainLogoAlt: LOGO_MAIN.altKey,
     ctaButton: {
       textKey: SHARED_TRANSLATION_KEYS.experiencesTextButtonKey,
-      translationNS: 'common',
+      translationNS: NAMESPACES.COMMON,
       action: {
         type: BUTTON_TYPES.internal,
         path: ROUTES.experiences,
@@ -47,8 +53,8 @@ export const homePageData = {
 
     categories: experienceCategories.map((cat) => ({
       ...cat,
-      link: cat.id === 'custom' ? `${ROUTES.contact}` : `${ROUTES.experiences}#${cat.id}`,
-      translationNS: 'home',
+      link: cat.id === CAT_TYPE.CUSTOM ? `${ROUTES.contact}` : `${ROUTES.experiences}#${cat.id}`,
+      translationNS: NAMESPACES.HOME,
     })),
   },
 
@@ -76,7 +82,7 @@ export const homePageData = {
     ctaButton: {
       textKey: SHARED_TRANSLATION_KEYS.safetyTextButtonKey,
       action: {
-        type: 'internal',
+        type: BUTTON_TYPES.internal,
         path: ROUTES.safety,
       },
     },
@@ -132,7 +138,7 @@ export const homePageData = {
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.mainLogo,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefix,
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },

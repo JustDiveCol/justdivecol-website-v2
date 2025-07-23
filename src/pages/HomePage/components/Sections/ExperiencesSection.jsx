@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { staggerContainer, fadeInUp } from '@/hooks/animations';
 import SimpleCardComponent from '@/components/common/Card/SimpleCardComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders a flexible "Featured Experiences" section.
@@ -16,8 +17,8 @@ import SimpleCardComponent from '@/components/common/Card/SimpleCardComponent';
  * @param {string} props.subtitleKey - Key for the subtitle.
  * @param {Array} props.categories - Array of experience card data.
  */
-const ExperiencesSection = ({ translationNS = 'home', titleKey, subtitleKey, categories }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+const ExperiencesSection = ({ translationNS, titleKey, subtitleKey, categories }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   if (!Array.isArray(categories) || categories.length === 0) return null;
 

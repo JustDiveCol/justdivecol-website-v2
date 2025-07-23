@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../../hooks/animations';
 
 import { QuoteIcon, StarRating } from '../../../../assets/icons/NavbarIcons';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders a card displaying a customer testimonial.
@@ -19,7 +20,7 @@ import { QuoteIcon, StarRating } from '../../../../assets/icons/NavbarIcons';
  * @param {string} props.cardData.avatarUrl - The URL for the customer's avatar image.
  */
 const TestimonialCardComponent = ({ translationNS, cardData }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const { quoteKey, nameKey, originKey, rating, avatarUrl } = cardData;
 

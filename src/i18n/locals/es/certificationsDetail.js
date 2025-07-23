@@ -1,6 +1,6 @@
-// src/i18n/locales/es/courses.js
 export default {
   // ===== Common =====
+  certificationsTextOverlay: 'Certificaciones',
 
   // ===== Open Water =====
   // --- Metadata ---

@@ -6,9 +6,8 @@ import experiences_cta_background from '../../assets/images/page-specific/experi
 
 import logo from '../../assets/images/logos/logo.png';
 import { ROUTES } from '../global/constants';
-// import padi from '../../assets/images/logos/padi.png';
 
-export const experiencesPageData = {
+export const experiencesData = {
   // === SEO SECTION ===
   seo: {
     titleKey: 'expSeoTitle',
@@ -64,9 +63,6 @@ export const experiencesPageData = {
     },
     mainLogo: logo,
     mainLogoAltKey: 'expCtaMainLogoAlt',
-    // complementaryLogo: '',
-    // complementaryLogoAltKey: '',
-    // textOverlayKey: '',
     photoCreditKey: 'expCtaPhotoCredit',
   },
 };

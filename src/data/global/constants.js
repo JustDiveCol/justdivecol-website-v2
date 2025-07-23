@@ -2,7 +2,7 @@ export const SHARED_TRANSLATION_KEYS = {
   photoCreditPrefixKey: 'commonPhotoCreditPrefix',
 
   // --- Certifications ---
-  certificationsTextOverlayKey: 'certificationTextOverlay',
+  certificationsTextOverlayKey: 'certificationsTextOverlay',
 
   certificationsDefaultNoteKey: 'certificationsDefaultNote',
 
@@ -21,15 +21,17 @@ export const SHARED_TRANSLATION_KEYS = {
   destinationsGalleryTiteKey: 'destinationsGalleryTite',
 
   // --- Experiences ---
-  experiencesDetailsTitleKey: 'experiencesDetailsTitle',
-  experiencesPaymentTitleKey: 'experiencesPaymentTitle',
-  experiencesItineraryTitleKey: 'experiencesItineraryTitle',
-  experiencesIncludedTitleKey: 'experiencesIncludedTitle',
-  experiencesNotIncludedTitleKey: 'experiencesNotIncludedTitle',
-  experiencesGalleryTitleKey: 'experiencesGalleryTitle',
+  experiencesDetailsTitleKey: 'experiencesDetailsTitle', // OK
+  experiencesPaymentTitleKey: 'experiencesPaymentTitle', // OK
+  experiencesItineraryTitleKey: 'experiencesItineraryTitle', // OK
+  experiencesIncludedTitleKey: 'experiencesIncludedTitle', // OK
+  experiencesNotIncludedTitleKey: 'experiencesNotIncludedTitle', // OK
+  experiencesGalleryTitleKey: 'experiencesGalleryTitle', // OK
 
-  experiencesDefaultNoteKey: 'experiencesDefaultNote',
-  experiencesDefaultPaymentNoteKey: 'experiencesDefaultPaymentNote',
+  experiencesDefaultNoteKey: 'experiencesDefaultNote', // OK
+  experiencesDefaultPaymentNoteKey: 'experiencesDefaultPaymentNote', // OK
+  experiencesDefaultItineraryNoteKey1: 'experiencesDefaultItineraryNote1', // OK
+  experiencesDefaultItineraryNoteKey2: 'experiencesDefaultItineraryNote2', // OK
 
   // --- Button Texts ---
   experiencesTextButtonKey: 'experiencesTextButton',
@@ -129,4 +131,35 @@ export const AVAILABILITY = {
   available: 'available',
   last: 'last',
   soldOut: 'soldOut',
+  comingSoon: 'comingSoon',
+};
+
+export const CAT_TYPE = {
+  CERTIFICATION: 'certification',
+  DESTINATION: 'destination',
+  EXPERIENCE: 'experience',
+  CUSTOM: 'custom',
+};
+
+export const NAMESPACES = {
+  NAVBAR: 'navbar',
+  FOOTER: 'footer',
+  COMMON: 'common',
+  MAP: 'map',
+  PAYMENT: 'payment',
+  CONTACT: 'contact',
+  CERTIFICATIONS: 'certifications',
+  DESTINATIONS: 'destinations',
+  EXPERIENCES: 'experiences',
+  DIVESITES: 'divesites',
+  HOME_PAGE: 'homePage',
+  EXPERIENCES_PAGE: 'experiencesPage',
+  ABOUT_US_PAGE: 'aboutUsPage',
+  SAFETY_PAGE: 'safetyPage',
+  FAQS_PAGE: 'faqsPage',
+  NOT_FOUND_PAGE: 'notFoundPage',
+  POLICY_PAGE: 'policyPage',
+  PRIVACY_PAGE: 'privacyPage',
+  TERMS_PAGE: 'termsPage',
+  UNDER_CONSTRUCTION_PAGE: 'underConstructionPage',
 };

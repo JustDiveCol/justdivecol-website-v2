@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
-import { privacyPolicyData } from '../../data/pages/privacyPolicyData';
+import { privacyData } from '../../data/pages/privacyData';
 import { staggerContainer } from '../../hooks/animations';
 
 import SEOComponent from '../../components/ui/SEOComponent';
@@ -15,24 +15,17 @@ const PrivacyPolicyPage = () => {
   return (
     <>
       <SEOComponent
-        title={t(privacyPolicyData.seo.titleKey)}
-        description={t(privacyPolicyData.seo.descriptionKey)}
-        keywords={t(privacyPolicyData.seo.keywords)}
-        imageUrl={privacyPolicyData.seo.imageUrl}
-        url={privacyPolicyData.seo.url}
+        title={t(privacyData.seo.titleKey)}
+        description={t(privacyData.seo.descriptionKey)}
+        keywords={t(privacyData.seo.keywords)}
+        imageUrl={privacyData.seo.imageUrl}
+        url={privacyData.seo.url}
       />
-      <motion.div
-        variants={staggerContainer}
-        initial='hidden'
-        animate='show'
-        exit='hidden'>
-        <HeaderComponent
-          sectionData={privacyPolicyData.header}
-          translationNS='privacyPolicy'
-        />
-        <div className='container mx-auto py-16 px-4'>
+      <motion.div variants={staggerContainer} initial="hidden" animate="show" exit="hidden">
+        <HeaderComponent sectionData={privacyData.header} translationNS="privacyPolicy" />
+        <div className="container mx-auto py-16 px-4">
           {/* Solo un mapeo de sections aquí */}
-          {privacyPolicyData.sections.map((section) => (
+          {privacyData.sections.map((section) => (
             <RenderComponent
               key={section.id}
               renderData={section}

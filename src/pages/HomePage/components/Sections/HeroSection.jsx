@@ -5,12 +5,12 @@ import { useTranslation } from 'react-i18next';
 
 import ButtonComponent from '../../../../components/common/Button/ButtonComponent';
 
+import { NAMESPACES } from '@/data/global/constants';
 import { homePageData } from '../../../../data/pages/homeData';
-
 import { ChevronDownIcon } from '../../../../assets/icons/NavbarIcons';
 
 const HeroSection = ({ translationNS }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const {
     imageUrl,
@@ -24,7 +24,6 @@ const HeroSection = ({ translationNS }) => {
     photoCredit,
   } = homePageData.hero;
 
-  // Handler común para bloquear drag en imágenes/fondos
   const preventDrag = (e) => {
     e.preventDefault();
     return false;
@@ -43,14 +42,14 @@ const HeroSection = ({ translationNS }) => {
         WebkitUserDrag: 'none',
       }}
     >
-      {/* Overlay oscuro */}
+      {/* Dark Overlay */}
       <div
         className="absolute inset-0 bg-brand-primary-dark/70 pointer-events-none"
         draggable={false}
         onDragStart={preventDrag}
       />
 
-      {/* Texto overlay (opcional) */}
+      {/* Text overlay (optional) */}
       {textOverlay && (
         <div className="absolute top-4 left-4 text-white text-lg font-semibold drop-shadow-md opacity-80 uppercase z-30 select-none">
           {textOverlay}
@@ -62,7 +61,7 @@ const HeroSection = ({ translationNS }) => {
         <div className="absolute top-4 right-4 drop-shadow-xl opacity-80 z-30 w-12 h-auto select-none">
           <img
             src={complementaryLogo}
-            alt={t(complementaryLogoAlt, { ns: 'common' })}
+            alt={t(complementaryLogoAlt)}
             className="w-12 h-auto"
             draggable={false}
             onDragStart={preventDrag}
@@ -76,7 +75,7 @@ const HeroSection = ({ translationNS }) => {
         <div className="absolute bottom-4 right-4 drop-shadow-xl opacity-80 z-30 w-24 h-auto select-none">
           <img
             src={mainLogo}
-            alt={t(mainLogoAlt, { ns: 'common' })}
+            alt={t(mainLogoAlt)}
             className="w-24 h-auto"
             draggable={false}
             onDragStart={preventDrag}
@@ -128,7 +127,7 @@ const HeroSection = ({ translationNS }) => {
       {/* Photo credit al hover */}
       {photoCredit && (
         <div className="absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 select-text z-20">
-          {t(photoCredit.prefixKey, { ns: 'common' })}
+          {t(photoCredit.prefixKey, { ns: NAMESPACES.COMMON })}
           {photoCredit.text}
         </div>
       )}

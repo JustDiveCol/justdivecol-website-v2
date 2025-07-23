@@ -3,7 +3,7 @@ export default {
   // ===== Common =====
 
   // ===== Experience Santa Marta Sept 2025 =====
-  expsmsept25Name: 'CREYENTES / Certificación PADI Open Water Diver: Santa Marta ',
+  expsmsept25Name: 'CREYENTES / Certificación PADI Open Water Diver: Santa Marta',
   // --- SEO Content ---
   expsmsept25SeoTitle:
     'Certificación PADI Open Water en Santa Marta | Viaje de buceo inolvidable con JustDiveCol',
@@ -14,10 +14,6 @@ export default {
   expsmsept25HeaderTitle: 'Tu aventura submarina comienza aquí: ¡Certifícate en Santa Marta!',
   expsmsept25HeaderSubtitle:
     'Obtén tu certificación PADI Open Water en las mágicas aguas de Santa Marta. Una experiencia inolvidable que te abrirá las puertas al fascinante 70% del planeta.',
-  expsmsept25HeaderMainLogoAlt: 'Logo principal de JustDiveCol',
-  expsmsept25HeaderComplementaryLogoAlt: 'Logo PADI',
-  // expsmsept25HeaderTextOverlay: '',
-  expsmsept25HeaderPhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
   // --- Card Description Content ---
   expsmsept25DescTitle: 'Donde nace un nuevo explorador del mundo azul',
@@ -28,11 +24,6 @@ export default {
     'Más que un simple curso, este viaje es el inicio de una profunda pasión por el buceo, una que te impulsará a explorar el 70% del planeta con una nueva perspectiva. Prepárate para transformar tu percepción del mundo, descubriendo un universo rebosante de vida, color y misterio bajo la superficie. Con la seguridad y el acompañamiento experto de JustDiveCol, cada inmersión será un paso más hacia convertirte en un explorador responsable y apasionado del gran azul.',
 
   // --- Main Content ---
-  expsmsept25DetailsTitle: 'Detalles esenciales de tu experiencia de certificación',
-
-  expsmsept25DetailLabel1: 'Precio total de la experiencia',
-  expsmsept25DetailValue1: 'COP 3.500.000',
-
   expsmsept25DetailLabel2: 'Inmersiones incluidas',
   expsmsept25DetailValue2: '5 en Aguas Confinadas + 4 en Aguas Abiertas',
 

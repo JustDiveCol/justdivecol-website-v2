@@ -5,13 +5,14 @@ import { useTranslation } from 'react-i18next';
 import { homePageData } from '../../../../data/pages/homeData';
 import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
 import TestimonialCardComponent from '../Cards/TestimonialCardComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the "Testimonials" section for the homepage.
  * It displays a title and a grid of customer testimonials.
  */
 const TestimonialsSection = ({ translationNS }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const { titleKey, items } = homePageData.testimonials;
 

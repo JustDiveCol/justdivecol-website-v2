@@ -4,9 +4,10 @@ import { useTranslation } from 'react-i18next';
 
 import ButtonComponent from './common/Button/ButtonComponent';
 import { staggerContainer, fadeInUp } from '../hooks/animations';
+import { NAMESPACES } from '@/data/global/constants';
 
 const CtaComponent = ({ sectionData, translationNS }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const {
     backgroundImage,
@@ -84,7 +85,7 @@ const CtaComponent = ({ sectionData, translationNS }) => {
       {/* Photo credit (hover only) */}
       {photoCredit && (
         <div className="absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-text z-20 text-left">
-          {t(photoCredit.prefixKey, { ns: 'common' })}
+          {t(photoCredit.prefixKey, { ns: NAMESPACES.COMMON })}
           {photoCredit.text}
         </div>
       )}

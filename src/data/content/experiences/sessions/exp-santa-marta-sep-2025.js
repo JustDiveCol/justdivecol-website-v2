@@ -3,6 +3,7 @@ import {
   CERTIFICATION_CATEGORIES,
   CERTIFICATION_IDS,
   CURRENCY,
+  SHARED_TRANSLATION_KEYS,
 } from '@/data/global/constants';
 
 export const expSantaMartaSep2025Session = {
@@ -13,8 +14,32 @@ export const expSantaMartaSep2025Session = {
   endDate: '2025-09-29',
   price: 3500000,
   currency: CURRENCY.COP,
+  founders: true,
   capacity: 8,
   seatsAvailable: 8,
   availability: AVAILABILITY.available,
   certificationIds: [CERTIFICATION_IDS.owd],
+
+  // --- Payment Plan ---
+  paymentPlan: {
+    titleKey: SHARED_TRANSLATION_KEYS.experiencesPaymentTitleKey,
+    modules: [
+      {
+        id: 'payment1',
+        nameKey: 'expSmSep25PaymentPlanStep1Name',
+        descriptionKey: 'expSmSep25PaymentPlanStep1Desc',
+      },
+      {
+        id: 'payment2',
+        nameKey: 'expSmSep25PlanStep2Name',
+        descriptionKey: 'expSmSep25PaymentPlanStep2Desc',
+      },
+      {
+        id: 'payment3',
+        nameKey: 'expSmSep25PlanStep3Name',
+        descriptionKey: 'expSmSep25PaymentPlanStep3Desc',
+      },
+    ],
+    notes: [SHARED_TRANSLATION_KEYS.experiencesDefaultPaymentNoteKey],
+  },
 };

@@ -1,5 +1,5 @@
 // src/data/content/experiences/experienceTemplate.js
-import { STATUS, IMAGE_VARIANTS, ROUTES } from '@/data/global/constants';
+import { STATUS, IMAGE_VARIANTS, ROUTES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 // Defines the shape of an experience object
 export const experienceTemplate = {
@@ -8,6 +8,7 @@ export const experienceTemplate = {
   status: STATUS.draft, // 'published' | 'draft'
   type: 'experience',
   slug: '', // URL-friendly identifier
+  nameKey: '', // translation key for experience name
   titleKey: '', // translation key for display title
   subtitleKey: '', // translation key for subtitle (optional)
   destinationId: '', // ID of related destination
@@ -74,7 +75,10 @@ export const experienceTemplate = {
       // array of { day, titleKey, descriptionKey }
       // { day: 1, titleKey: '', descriptionKey: '' }
     ],
-    notes: [], // array of translation keys
+    notes: [
+      SHARED_TRANSLATION_KEYS.experiencesDefaultItineraryNoteKey1,
+      SHARED_TRANSLATION_KEYS.experiencesDefaultItineraryNoteKey2,
+    ], // array of translation keys
   },
 
   // --- Included / Not included ---

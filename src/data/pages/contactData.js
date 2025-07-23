@@ -1,9 +1,8 @@
 // src/data/pages/contact.js
 import contact_header_background from '../../assets/images/page-specific/contact/contact-header-background.webp'; // Placeholder, replace with your image
 
-import { BUTTON_TYPES, SHARED_TRANSLATION_KEYS } from '../global/constants';
-
-import logo from '../../assets/images/logos/logo.png';
+import { BUTTON_TYPES, NAMESPACES, ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
+import { LOGO_MAIN } from '../global/assets';
 
 export const contactPageData = {
   seo: {
@@ -11,26 +10,26 @@ export const contactPageData = {
     descriptionKey: 'contactSeoDesc',
     keywords: 'contactSeoKeywords',
     imageUrl: contact_header_background,
-    url: '/contacto',
+    url: ROUTES.contact,
   },
   header: {
     backgroundImage: contact_header_background,
     titleKey: 'contactHeaderTitle',
     subtitleKey: 'contactHeaderSubtitle',
-    mainLogo: logo,
-    mainLogoAltKey: 'contactHeaderMainLogoAlt',
-    // complementaryLogo: '',
-    // complementaryLogoAltKey: '',
-    // textOverlayKey: '',
-    photoCreditKey: 'contactHeaderPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
 
   contactInfo: {
     titleKey: 'contactInfoTitle',
-    email: 'info@justdivecol.com', // This data doesn't need translation
+    email: 'info@justdivecol.com',
     emailSubjectKey: 'contactEmailSubject',
     emailBodyKey: 'contactEmailBody',
-    phone: '+57 311 522 0316', // This data doesn't need translation
+    phone: '+57 311 522 0316',
     socials: [
       {
         name: 'Instagram',
@@ -46,17 +45,17 @@ export const contactPageData = {
         name: 'YouTube',
         link: 'https://www.youtube.com/@JustDiveCol',
         icon: 'youtube',
-      }, // Corrected link
+      },
     ],
   },
   whatsAppAction: {
     titleKey: 'contactWhatsAppTitle',
     descriptionKey: 'contactWhatsAppDesc',
-    ctaTextKey: 'contactWhatsAppButton',
+    ctaTextKey: SHARED_TRANSLATION_KEYS.contactTextButtonKey,
     ctaAction: {
-      type: 'whatsapp',
-      whatsAppMessageKey: 'contactWhatsAppMessage',
-      whatsAppMessageNS: 'contact',
+      type: BUTTON_TYPES.whatsapp,
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.generalWhatsappMessageKey,
+      whatsAppMessageNS: NAMESPACES.COMMON,
     },
   },
   cta: {
@@ -68,10 +67,10 @@ export const contactPageData = {
       type: BUTTON_TYPES.whatsapp,
       whatsAppMessageKey: SHARED_TRANSLATION_KEYS.generalWhatsappMessageKey,
     },
-    mainLogo: logo,
-    mainLogoAltKey: 'contactCtaMainLogoAlt',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefix,
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
-import { termsAndConditionData } from '../../data/pages/termsAndConditionsData';
+import { terms } from '../../data/pages/terms';
 import { staggerContainer } from '../../hooks/animations';
 
 import SEOComponent from '../../components/ui/SEOComponent';
@@ -15,24 +15,17 @@ const TermsAndConditionsPage = () => {
   return (
     <>
       <SEOComponent
-        title={t(termsAndConditionData.seo.titleKey)}
-        description={t(termsAndConditionData.seo.descriptionKey)}
-        keywords={t(termsAndConditionData.seo.keywords)}
-        imageUrl={termsAndConditionData.seo.imageUrl}
-        url={termsAndConditionData.seo.url}
+        title={t(terms.seo.titleKey)}
+        description={t(terms.seo.descriptionKey)}
+        keywords={t(terms.seo.keywords)}
+        imageUrl={terms.seo.imageUrl}
+        url={terms.seo.url}
       />
-      <motion.div
-        variants={staggerContainer}
-        initial='hidden'
-        animate='show'
-        exit='hidden'>
-        <HeaderComponent
-          sectionData={termsAndConditionData.header}
-          translationNS='termsAndConditions'
-        />
-        <div className='container mx-auto py-16 px-4'>
+      <motion.div variants={staggerContainer} initial="hidden" animate="show" exit="hidden">
+        <HeaderComponent sectionData={terms.header} translationNS="termsAndConditions" />
+        <div className="container mx-auto py-16 px-4">
           {/* Solo un mapeo de sections aquí */}
-          {termsAndConditionData.sections.map((section) => (
+          {terms.sections.map((section) => (
             <RenderComponent
               key={section.id}
               renderData={section}

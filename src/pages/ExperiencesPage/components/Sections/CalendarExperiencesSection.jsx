@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 // Data sources and animations
-import { useExperiences } from '@/data/content/experiences/DataProvider'; // CORRECTO: Usa el Provider
-import { experiencesPageData } from '../../../../data/pages/experiencesData.js';
-import { staggerContainer } from '../../../../hooks/animations.js';
+import { useExperiences } from '../../../../data/content/experiences/DataProvider';
+import { experiencesData } from '../../../../data/pages/experiencesData';
+import { staggerContainer } from '../../../../hooks/animations';
 
 import backgroundImage from '../../../../assets/images/page-specific/experiences/experiences-header-background.webp';
 
@@ -16,13 +16,14 @@ import CalendarExperienceCardComponent from '../Cards/CalendarExperienceCardComp
 // Child Components
 import { ChevronLeftIcon, ChevronRightIcon } from '../../../../assets/icons/ChevronIcons.jsx';
 import { CalendarIcon } from '../../../../assets/icons/SocialIcons.jsx';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders a paginated calendar section of all upcoming trips.
  * It filters and sorts all published experiences to create a chronological list.
  */
 const CalendarExperiencesSection = ({ translationNS }) => {
-  const { t } = useTranslation([translationNS, 'common', 'contact']);
+  const { t } = useTranslation([translationNS, 'common']);
   const [currentPage, setCurrentPage] = useState(0);
 
   // Get all experiences from the Context Provider
@@ -97,7 +98,7 @@ const CalendarExperiencesSection = ({ translationNS }) => {
     currentPage * ITEMS_PER_PAGE + ITEMS_PER_PAGE
   );
 
-  const { titleKey, subtitleKey, pastTitleKey } = experiencesPageData.upcomingTrips;
+  const { titleKey, subtitleKey, pastTitleKey } = experiencesData.upcomingTrips;
 
   return (
     <section
@@ -124,6 +125,7 @@ const CalendarExperiencesSection = ({ translationNS }) => {
                       tripData={trip} // tripData ahora es el objeto de sesión enriquecido
                       status={trip.finalStatus}
                       duration={trip.duration}
+                      translationNS={NAMESPACES.EXPERIENCES_DETAIL}
                     />
                   ))}
                 </motion.ul>
@@ -168,16 +170,16 @@ const CalendarExperiencesSection = ({ translationNS }) => {
                 <CalendarIcon className="h-12 w-12 text-brand-cta-orange" />
               </div>
               <h3 className="text-2xl font-bold text-brand-primary-dark">
-                {t(experiencesPageData.noUpcomingTrips.titleKey)}
+                {t(experiencesData.noUpcomingTrips.titleKey)}
               </h3>
               <p className="mt-2 text-brand-primary-dark max-w-md mx-auto">
-                {t(experiencesPageData.noUpcomingTrips.subtitleKey)}
+                {t(experiencesData.noUpcomingTrips.subtitleKey)}
               </p>
               <div className="mt-8">
                 <ButtonComponent
-                  action={experiencesPageData.noUpcomingTrips.ctaAction}
-                  textKey={experiencesPageData.noUpcomingTrips.ctaTextKey}
-                  translationNS={'experiencesPage'}
+                  action={experiencesData.noUpcomingTrips.ctaAction}
+                  textKey={experiencesData.noUpcomingTrips.ctaTextKey}
+                  translationNS={translationNS}
                 />
               </div>
             </div>
@@ -195,6 +197,7 @@ const CalendarExperiencesSection = ({ translationNS }) => {
                     tripData={trip}
                     status={trip.finalStatus}
                     duration={trip.duration}
+                    translationNS={NAMESPACES.EXPERIENCES_DETAIL}
                   />
                 ))}
               </motion.ul>

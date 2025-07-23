@@ -1,5 +1,13 @@
 // src/i18n/locales/es/experiencesPage.js
 export default {
+  // === Common ===
+
+  // --- Calendar Section ---
+  expAvailableTitle: 'Próximos viajes',
+  expAvailableSubtitle:
+    'Explora nuestro calendario de emocionantes experiencias y cursos programados. ¡Tu gran inmersión te espera!',
+  expPastTripsTitle: 'Nuestros recuerdos bajo el mar: experiencias pasadas',
+
   expWithTrips: 'Destinos disponibles',
   expWithoutTrips: 'Otros destinos',
 
@@ -9,16 +17,6 @@ export default {
     'Explora nuestro completo catálogo de certificaciones PADI y viajes de buceo inolvidables con JustDiveCol. Desde tus primeras inmersiones hasta aventuras personalizadas en los destinos más espectaculares del mundo, te conectamos profundamente con el océano y sus maravillas. ¡Tu próxima aventura comienza aquí!',
   expSeoKeywords:
     'experiencias de buceo, cursos PADI, certificaciones de buceo, viajes de buceo, buceo a medida, buceo personalizado, aventura submarina, explorar el océano, JustDiveCol, buceo para principiantes, buceo avanzado, destinos de buceo',
-
-  // === CALENDAR SECTION ===
-  expAvailableTitle: 'Próximos viajes',
-  expAvailableSubtitle:
-    'Explora nuestro calendario de emocionantes experiencias y cursos programados. ¡Tu gran inmersión te espera!',
-
-  expAvailableCtaMessage:
-    'Hola, equipo de JustDiveCol. Me gustaría conocer más sobre las experiencias de buceo que tienen disponibles en su calendario. ¿Podrían darme más detalles?',
-
-  expPastTripsTitle: 'Nuestros recuerdos bajo el mar: experiencias pasadas',
 
   // ----- NoUpcoming Information -----
   expNoUpcomingTripsTitle: '¡Nuevas experiencias están cocinándose en el azul!',

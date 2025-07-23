@@ -1,27 +1,28 @@
-// src/data/pages/policyPageData.js
+// src/data/pages/policyData.js
 
 import policy_header_background from '../../assets/images/page-specific/policy/policy-header-background.webp';
 
-import logo from '../../assets/images/logos/logo.png';
+import { LOGO_MAIN } from '../global/assets';
+import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 
-export const policyPageData = {
+export const policyData = {
   seo: {
     titleKey: 'policiesSeoTitle',
     descriptionKey: 'policiesSeoDesc',
     keywords: 'policiesSeoKeywords',
     imageUrl: policy_header_background,
-    url: '/politicas',
+    url: ROUTES.policy,
   },
   header: {
     backgroundImage: policy_header_background,
     titleKey: 'policiesHeaderTitle',
     subtitleKey: 'policiesHeaderSubtitle',
-    mainLogo: logo,
-    mainLogoAltKey: 'policiesHeaderMainLogoAlt',
-    // complementaryLogo: '',
-    // complementaryLogoAltKey: 'policiesHeaderComplementaryLogoAlt',
-    // textOverlayKey: 'policiesHeaderTextOverlay',
-    photoCreditKey: 'policiesHeaderPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
   sections: [
     {

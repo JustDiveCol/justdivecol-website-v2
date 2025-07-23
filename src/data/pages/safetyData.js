@@ -1,29 +1,30 @@
 // src/data/pages/safety.js
 
-import safety_header_background from '../../assets/images/page-specific/safety/safety-header-background.webp';
-import safety_logo_partner_1 from '../../assets/images/page-specific/safety/safety-logo-partner-1.webp';
-import safety_logo_partner_2 from '../../assets/images/page-specific/safety/safety-logo-partner-2.webp';
+import headerBackground from '../../assets/images/page-specific/safety/safety-header-background.webp';
+import logoPartner1 from '../../assets/images/page-specific/safety/safety-logo-partner-1.webp';
+import logoPartner2 from '../../assets/images/page-specific/safety/safety-logo-partner-2.webp';
 
-import logo from '../../assets/images/logos/logo.png';
+import { LOGO_MAIN } from '../global/assets';
+import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 
 export const safetyPageData = {
   seo: {
     titleKey: 'safetySeoTitle',
     descriptionKey: 'safetySeoDesc',
     keywords: 'safetySeoKeywords',
-    imageUrl: safety_header_background,
-    url: '/seguridad',
+    imageUrl: headerBackground,
+    url: ROUTES.safety,
   },
   header: {
-    backgroundImage: safety_header_background,
+    backgroundImage: headerBackground,
     titleKey: 'safetyHeaderTitle',
     subtitleKey: 'safetyHeaderSubtitle',
-    mainLogo: logo,
-    mainLogoAltKey: 'safetyHeaderMainLogoAlt',
-    // complementaryLogo: '',
-    // complementaryLogoAltKey: 'safetyHeaderComplementaryLogoAlt',
-    // textOverlayKey: 'safetyHeaderTextOverlay',
-    photoCreditKey: 'safetyHeaderPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
   protocols: {
     titleKey: 'safetyProtocolsTitle',
@@ -56,19 +57,19 @@ export const safetyPageData = {
     subtitleKey: 'safetyEquipmentSubtitle',
     items: [
       {
-        id: 'reguladores',
+        id: 'regulator',
         nameKey: 'safetyEquip1Name',
         descriptionKey: 'safetyEquip1Desc',
         icon: 'regulator',
       },
       {
-        id: 'bcds',
+        id: 'bcd',
         nameKey: 'safetyEquip2Name',
         descriptionKey: 'safetyEquip2Desc',
         icon: 'bcd',
       },
       {
-        id: 'computadores',
+        id: 'computer',
         nameKey: 'safetyEquip3Name',
         descriptionKey: 'safetyEquip3Desc',
         icon: 'computer',
@@ -83,13 +84,13 @@ export const safetyPageData = {
         id: 'buenas-practicas',
         nameKey: 'safetyPartner1Name',
         descriptionKey: 'safetyPartner1Desc',
-        logoUrl: safety_logo_partner_1,
+        logoUrl: logoPartner1,
       },
       {
         id: 'capacitacion',
         nameKey: 'safetyPartner2Name',
         descriptionKey: 'safetyPartner2Desc',
-        logoUrl: safety_logo_partner_2,
+        logoUrl: logoPartner2,
       },
     ],
   },

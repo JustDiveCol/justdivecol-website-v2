@@ -2,9 +2,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { AVAILABILITY, NAMESPACES } from '@/data/global/constants';
 
-const AvailabilityBadgeComponent = ({ status, className = '' }) => {
-  const { t } = useTranslation('common');
+const AvailabilityBadgeComponent = ({ translationNS, status, className = '' }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const statusMap = {
     available: {
@@ -62,13 +63,13 @@ const AvailabilityBadgeComponent = ({ status, className = '' }) => {
   }
   // Si animationType es 'none', no se añaden props de animación extra.
 
-  const sizeClass =
-    status === 'soldOut' ? 'px-4 py-2 text-sm' : 'px-3 py-1 text-xs';
+  const sizeClass = status === AVAILABILITY.soldOut ? 'px-4 py-2 text-sm' : 'px-3 py-1 text-xs';
 
   return (
     <motion.span
       {...animationProps}
-      className={`inline-block rounded-full font-semibold ${data.className} ${sizeClass} ${className}`}>
+      className={`inline-block rounded-full font-semibold ${data.className} ${sizeClass} ${className}`}
+    >
       {data.text}
     </motion.span>
   );

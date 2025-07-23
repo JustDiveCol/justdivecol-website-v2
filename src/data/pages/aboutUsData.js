@@ -1,11 +1,11 @@
 // src/data/pages/aboutUsData.js
 
-import about_us_header_background from '../../assets/images/page-specific/about-us/about-us-header-background.webp';
-import about_us_history_image from '../../assets/images/page-specific/about-us/about-us-history-image.webp';
+import headerBackground from '../../assets/images/page-specific/about-us/about-us-header-background.webp';
+import historyImage from '../../assets/images/page-specific/about-us/about-us-history-image.webp';
 
-import team_avatar_camilo_beltran from '../../assets/images/page-specific/about-us/team-avatar-camilo-beltran.webp';
-import team_avatar_alejandra_vargas from '../../assets/images/page-specific/about-us/team-avatar-alejandra-vargas.webp';
-import team_avatar_pablo_orjuela from '../../assets/images/page-specific/about-us/team-avatar-pablo-orjuela.webp';
+import memberImage1 from '../../assets/images/page-specific/about-us/team-avatar-camilo-beltran.webp';
+import memberImage2 from '../../assets/images/page-specific/about-us/team-avatar-alejandra-vargas.webp';
+import memberImage3 from '../../assets/images/page-specific/about-us/team-avatar-pablo-orjuela.webp';
 
 import { IMAGE_VARIANTS, ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 import { LOGO_MAIN } from '../global/assets';
@@ -16,19 +16,19 @@ export const aboutUsPageData = {
     titleKey: 'aboutSeoTitle',
     descriptionKey: 'aboutSeoDesc',
     keywords: 'aboutSeoKeywords',
-    imageUrl: about_us_header_background,
+    imageUrl: headerBackground,
     url: ROUTES.about,
   },
 
   // === HEADER SECTION ===
   header: {
-    backgroundImage: about_us_header_background,
+    backgroundImage: headerBackground,
     titleKey: 'aboutHeaderTitle',
     subtitleKey: 'aboutHeaderSubtitle',
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefix,
+      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },
@@ -38,7 +38,7 @@ export const aboutUsPageData = {
     titleKey: 'aboutHistoryTitle',
     paragraphs: ['aboutHistoryP1', 'aboutHistoryP2', 'aboutHistoryP3'],
     image: {
-      backgroundImage: about_us_history_image,
+      backgroundImage: historyImage,
       mainLogo: LOGO_MAIN.mainLogo,
       mainLogoAltKey: LOGO_MAIN.altKey,
       photoCredit: {
@@ -59,7 +59,7 @@ export const aboutUsPageData = {
         nameKey: 'aboutTeamMember1Name',
         roleKey: 'aboutTeamMember1Role',
         bioKey: 'aboutTeamMember1Bio',
-        imageUrl: team_avatar_camilo_beltran,
+        imageUrl: memberImage1,
         funFacts: ['aboutTeamMember1Fact1', 'aboutTeamMember1Fact2', 'aboutTeamMember1Fact3'],
       },
       {
@@ -67,7 +67,7 @@ export const aboutUsPageData = {
         nameKey: 'aboutTeamMember2Name',
         roleKey: 'aboutTeamMember2Role',
         bioKey: 'aboutTeamMember2Bio',
-        imageUrl: team_avatar_alejandra_vargas,
+        imageUrl: memberImage2,
         funFacts: ['aboutTeamMember2Fact1', 'aboutTeamMember2Fact2', 'aboutTeamMember2Fact3'],
       },
       {
@@ -75,7 +75,7 @@ export const aboutUsPageData = {
         nameKey: 'aboutTeamMember3Name',
         roleKey: 'aboutTeamMember3Role',
         bioKey: 'aboutTeamMember3Bio',
-        imageUrl: team_avatar_pablo_orjuela,
+        imageUrl: memberImage3,
         funFacts: ['aboutTeamMember3Fact1', 'aboutTeamMember3Fact2', 'aboutTeamMember3Fact3'],
       },
     ],
