@@ -8,9 +8,10 @@ import { staggerContainer } from '../../hooks/animations';
 import SEOComponent from '../../components/ui/SEOComponent';
 import HeaderComponent from '../../components/HeaderComponent';
 import RenderComponent from '../../components/common/Component/RenderComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 const PrivacyPolicyPage = () => {
-  const { t } = useTranslation('privacyPolicy');
+  const { t } = useTranslation([NAMESPACES.PRIVACY_PAGE, NAMESPACES.COMMON]);
 
   return (
     <>
@@ -22,14 +23,13 @@ const PrivacyPolicyPage = () => {
         url={privacyData.seo.url}
       />
       <motion.div variants={staggerContainer} initial="hidden" animate="show" exit="hidden">
-        <HeaderComponent sectionData={privacyData.header} translationNS="privacyPolicy" />
+        <HeaderComponent sectionData={privacyData.header} translationNS={NAMESPACES.PRIVACY_PAGE} />
         <div className="container mx-auto py-16 px-4">
-          {/* Solo un mapeo de sections aquí */}
           {privacyData.sections.map((section) => (
             <RenderComponent
               key={section.id}
               renderData={section}
-              translationNS={'privacyPolicy'}
+              translationNS={NAMESPACES.PRIVACY_PAGE}
             />
           ))}
         </div>

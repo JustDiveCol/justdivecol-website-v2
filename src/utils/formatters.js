@@ -1,5 +1,7 @@
 // src/utils/formatters.js
 
+import { SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
+
 /**
  * Formats a date range into a readable, multilingual string (e.g., "September 26 - 29, 2025" or "26 - 29 de septiembre de 2025").
  * It handles cases where the start and end dates are in the same month.
@@ -13,7 +15,7 @@
 export const formatDateRange = (start, end, lang, t) => {
   // If dates are invalid, return a translated fallback text.
   if (!start || !end) {
-    return t('common:datesNotAvailable');
+    return t(SHARED_TRANSLATION_KEYS.DATES_NOT_AVAILABLE);
   }
 
   // Use appropriate locales for each language ('es-CO' for Colombian Spanish).

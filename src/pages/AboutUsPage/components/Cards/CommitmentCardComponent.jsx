@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../../hooks/animations';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders a single "commitment" card with an icon, title, and description.
@@ -15,7 +16,7 @@ import { fadeInUp } from '../../../../hooks/animations';
  * @param {React.ReactNode} props.icon - The actual icon component to render.
  */
 const CommitmentCardComponent = ({ pointData, icon, translationNS }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   return (
     <motion.div

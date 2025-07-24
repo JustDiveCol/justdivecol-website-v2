@@ -12,6 +12,7 @@ import {
   getDiveConditionById,
   getDiveTagById,
 } from '../../../data/global/diveSiteOptions';
+import { SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 const DiveSiteModalComponent = ({ site, onClose, t }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -89,7 +90,6 @@ const DiveSiteModalComponent = ({ site, onClose, t }) => {
 
             {site.typeIds?.length > 0 && (
               <p className="text-xs text-brand-primary-light italic mb-2">
-                {console.log('Mapeando site.typeIds:', site.typeIds)}
                 {site.typeIds.map((typeId, idx) => {
                   const type = getDiveTypeById(typeId);
                   return (
@@ -113,7 +113,7 @@ const DiveSiteModalComponent = ({ site, onClose, t }) => {
                       onClick={() => setShowFullDescription(true)}
                       className="ml-1 underline text-brand-cta-orange hover:text-brand-primary-dark transition text-sm"
                     >
-                      {t('map:viewMoreLabel')}
+                      {t(SHARED_TRANSLATION_KEYS.VIEW_MORE_LABEL)}
                     </button>
                   )}
                 </p>
@@ -127,7 +127,7 @@ const DiveSiteModalComponent = ({ site, onClose, t }) => {
               {site.maxDepth && (
                 <li className="text-sm">
                   <span className="font-bold text-brand-primary-dark">
-                    {t('divesites:depthLabel')}:
+                    {t(SHARED_TRANSLATION_KEYS.DEPTH_LABEL)}:
                   </span>{' '}
                   <span className="text-brand-primary-light">{site.maxDepth}</span>
                 </li>
@@ -135,7 +135,7 @@ const DiveSiteModalComponent = ({ site, onClose, t }) => {
               {site.levelRequiredId && (
                 <li className="text-sm">
                   <span className="font-bold text-brand-primary-dark">
-                    {t('divesites:levelRequiredLabel')}:
+                    {t(SHARED_TRANSLATION_KEYS.LEVEL_REQUIRED_LABEL)}:
                   </span>{' '}
                   <span className="text-brand-primary-light">
                     {(() => {
@@ -148,7 +148,7 @@ const DiveSiteModalComponent = ({ site, onClose, t }) => {
               {site.difficultyId && (
                 <li className="text-sm">
                   <span className="font-bold text-brand-primary-dark">
-                    {t('divesites:difficultyLabel')}:
+                    {t(SHARED_TRANSLATION_KEYS.DIFFICULTY_LABEL)}:
                   </span>{' '}
                   <span className="text-brand-primary-light">
                     {(() => {
@@ -161,7 +161,7 @@ const DiveSiteModalComponent = ({ site, onClose, t }) => {
               {site.conditionsIds?.length > 0 && (
                 <li className="text-sm">
                   <span className="font-bold text-brand-primary-dark">
-                    {t('divesites:conditionsLabel')}:
+                    {t(SHARED_TRANSLATION_KEYS.CONDITIONS_LABEL)}:
                   </span>{' '}
                   <span className="text-brand-primary-light">
                     {site.conditionsIds.map((condId, idx) => {
@@ -200,7 +200,7 @@ const DiveSiteModalComponent = ({ site, onClose, t }) => {
             {site.tagsIds?.length > 0 && (
               <div className="mt-6">
                 <h4 className="text-sm font-bold text-brand-primary-dark mb-2">
-                  {t('divesites:tagsLabel') || 'Etiquetas'}
+                  {t(SHARED_TRANSLATION_KEYS.TAGS_LABEL)}
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {site.tagsIds.map((tagId) => {

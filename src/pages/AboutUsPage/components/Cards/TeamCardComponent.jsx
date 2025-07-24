@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../../hooks/animations';
 
 import { StarIcon } from '../../../../assets/icons/NavbarIcons';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Displays a card with information about a team member.
@@ -17,8 +18,8 @@ import { StarIcon } from '../../../../assets/icons/NavbarIcons';
  * @param {string} props.memberData.bioKey - The translation key for the member's biography.
  * @param {string[]} [props.memberData.funFacts] - An optional array of translation keys for fun facts.
  */
-const TeamCardComponent = ({ memberData, translationNS = 'about' }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+const TeamCardComponent = ({ memberData, translationNS }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const { imageUrl, nameKey, roleKey, bioKey, funFacts = [] } = memberData;
 
@@ -33,9 +34,6 @@ const TeamCardComponent = ({ memberData, translationNS = 'about' }) => {
         alt={t(nameKey)}
         className="w-32 h-32 rounded-full mt-6 object-cover border-4 border-brand-cta-green"
         loading="lazy"
-        draggable={false}
-        onDragStart={(e) => e.preventDefault()}
-        onContextMenu={(e) => e.preventDefault()}
       />
       {/* Name & Role */}
       <div className="mt-4 px-4">

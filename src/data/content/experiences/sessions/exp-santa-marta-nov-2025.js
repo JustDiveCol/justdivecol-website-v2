@@ -12,7 +12,7 @@ export const expSantaMartaNov2025Session = {
   slug: 'nov-2025', // ej. 'sept-2025'
   startDate: '2025-11-21',
   endDate: '2025-11-24',
-  price: 3500000,
+  price: 4000000,
   currency: CURRENCY.COP,
   founders: false,
   capacity: 8,
@@ -22,7 +22,7 @@ export const expSantaMartaNov2025Session = {
 
   // --- Payment Plan ---
   paymentPlan: {
-    titleKey: SHARED_TRANSLATION_KEYS.experiencesPaymentTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.EXPERIENCES_PAYMENT_TITLE,
     modules: [
       {
         id: 'payment1',
@@ -40,6 +40,6 @@ export const expSantaMartaNov2025Session = {
         descriptionKey: 'expSmNov25PaymentPlanStep3Desc',
       },
     ],
-    notes: [SHARED_TRANSLATION_KEYS.experiencesDefaultPaymentNoteKey],
+    notes: [SHARED_TRANSLATION_KEYS.EXPERIENCES_DEFAULT_PAYMENT_NOTE],
   },
 };

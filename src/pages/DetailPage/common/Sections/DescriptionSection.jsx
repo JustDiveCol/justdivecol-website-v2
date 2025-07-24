@@ -19,14 +19,10 @@ const DescriptionSection = ({ descriptionData, translationNS }) => {
 
   return (
     <section>
-      <h2 className='text-3xl font-bold text-brand-white mb-4'>
-        {t(descriptionData.titleKey)}
-      </h2>
-      <div className='space-y-4 text-lg text-brand-neutral/90'>
+      <h2 className="heading-4 font-bold text-brand-white mb-4">{t(descriptionData.titleKey)}</h2>
+      <div className="space-y-4 text-brand-neutral/90">
         {descriptionData.paragraphs.map((pKey) => (
-          <p
-            key={pKey}
-            className='text-justify'>
+          <p key={pKey} className="text-subtitle-sm text-justify">
             {t(pKey)}
           </p>
         ))}

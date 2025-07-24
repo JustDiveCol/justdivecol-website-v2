@@ -8,6 +8,7 @@ import {
   CATEGORY_REGION,
   SHARED_TRANSLATION_KEYS,
   BUTTON_TYPES,
+  NAMESPACES,
 } from '@/data/global/constants';
 import { LOGO_MAIN } from '@/data/global/assets';
 
@@ -53,7 +54,7 @@ const _providencia = {
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'XYZ',
     },
   },
@@ -69,9 +70,9 @@ const _providencia = {
     backgroundImage: cardImage,
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.mainLogo,
-    textOverlayKey: SHARED_TRANSLATION_KEYS.destinationsTextOverlayKey,
+    textOverlayKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_TEXT_OVERLAY,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'XYZ',
     },
     variant: IMAGE_VARIANTS.horizontal,
@@ -80,7 +81,7 @@ const _providencia = {
 
   // Details
   details: {
-    titleKey: SHARED_TRANSLATION_KEYS.destinationsDetailsTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_DETAILS_TITLE,
     items: [
       { labelKey: 'provDetailLabel1', valueKey: 'provDetailValue1' },
       { labelKey: 'provDetailLabel2', valueKey: 'provDetailValue2' },
@@ -92,7 +93,7 @@ const _providencia = {
 
   // --- Dive Sites ---
   diveSites: {
-    titleKey: SHARED_TRANSLATION_KEYS.destinationsDiveSitesTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_DIVE_SITES_TITLE,
     sites: [
       { id: 'barco-hundido', nameKey: 'provDiveSite1Name', descriptionKey: 'provDiveSite1Desc' },
       { id: 'natalia', nameKey: 'provDiveSite2Name', descriptionKey: 'provDiveSite2Desc' },
@@ -117,7 +118,7 @@ const _providencia = {
         mainLogoAltKey: LOGO_MAIN.altKey,
         altTextKey: 'provGal1Alt',
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'XYZ',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -128,7 +129,7 @@ const _providencia = {
         mainLogoAltKey: LOGO_MAIN.altKey,
         altTextKey: 'provGal2Alt',
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'XYZ',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -139,7 +140,7 @@ const _providencia = {
         mainLogoAltKey: LOGO_MAIN.altKey,
         altTextKey: 'provGal3Alt',
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'XYZ',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -150,7 +151,7 @@ const _providencia = {
         mainLogoAltKey: LOGO_MAIN.altKey,
         altTextKey: 'provGal4Alt',
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'XYZ',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -159,12 +160,12 @@ const _providencia = {
   },
   // --- CTA ---
   cta: {
-    textKey: SHARED_TRANSLATION_KEYS.destinationCtaTextButtonKey,
-    translationNS: 'common',
+    textKey: SHARED_TRANSLATION_KEYS.DESTINATION_CTA_BUTTON,
+    translationNS: NAMESPACES.COMMON,
     action: {
       type: BUTTON_TYPES.whatsapp,
-      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.destinationWhatsappMessageKey,
-      whatsAppMessageNS: 'common',
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.DESTINATION_WHATSAPP_MESSAGE,
+      whatsAppMessageNS: NAMESPACES.COMMON,
     },
   },
 

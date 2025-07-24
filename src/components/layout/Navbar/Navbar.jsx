@@ -8,9 +8,10 @@ import LanguageSwitcherComponent from '../../ui/LanguageSwitcherComponent';
 import logo from '../../../assets/images/logos/logo.png';
 
 import { MenuIcon, CloseIcon, ChevronDownIcon } from '../../../assets/icons/NavbarIcons';
+import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 const Navbar = () => {
-  const { t } = useTranslation('navbar');
+  const { t } = useTranslation(NAMESPACES.NAVBAR);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Para el menú móvil
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -98,9 +99,9 @@ const Navbar = () => {
     if (path === '/') {
       return location.pathname === '/';
     }
-    // Caso especial para "Gear": activo si la ruta empieza con /gear
-    if (path === '/gear/home') {
-      return location.pathname.startsWith('/gear');
+    // Caso especial para "Store": activo si la ruta empieza con /store
+    if (path === '/store/home') {
+      return location.pathname.startsWith('/store');
     }
     // Para todos los demás, usa la lógica normal
     return location.pathname.startsWith(path);
@@ -161,7 +162,7 @@ const Navbar = () => {
                 onClick={() => setIsMoreMenuOpen(!isMoreMenuOpen)}
                 className="flex items-center text-sm font-semibold uppercase tracking-wider hover:text-brand-cta-orange/80 transition-colors cursor-pointer"
               >
-                {t('moreLabel', 'Más')}
+                {t(SHARED_TRANSLATION_KEYS.MORE_LABEL)}
                 <ChevronDownIcon
                   className={`w-5 h-5 ml-1 transition-transform duration-200 ${
                     isMoreMenuOpen ? 'rotate-180' : ''

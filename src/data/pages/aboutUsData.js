@@ -28,7 +28,7 @@ export const aboutUsPageData = {
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },
@@ -42,7 +42,7 @@ export const aboutUsPageData = {
       mainLogo: LOGO_MAIN.mainLogo,
       mainLogoAltKey: LOGO_MAIN.altKey,
       photoCredit: {
-        prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefix,
+        prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
         text: 'Camilo Beltran @JustDiveCol',
       },
       variant: IMAGE_VARIANTS.vertical,

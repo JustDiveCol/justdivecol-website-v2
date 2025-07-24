@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import CertificationCard from '../Cards/CertificationCard';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders a section that displays a responsive, centered grid of available courses.
@@ -18,7 +19,7 @@ const UpcomingCertificationSection = ({
   noCertificationsMessageKey,
   translationNS,
 }) => {
-  const { t, i18n } = useTranslation([translationNS, 'certifications', 'common']);
+  const { t, i18n } = useTranslation([translationNS, NAMESPACES.CERTIFICATIONS, NAMESPACES.COMMON]);
 
   if (!titleKey || !availableCertifications) {
     return null;
@@ -29,7 +30,7 @@ const UpcomingCertificationSection = ({
       id="available-certifications-section"
       className="bg-brand-primary-medium p-6 rounded-lg shadow-lg scroll-mt-24"
     >
-      <h3 className="text-2xl font-bold text-brand-white mb-4">
+      <h3 className="text-lg sm:text-lg md:text-xl lg:text-2xl leading-tight font-bold text-brand-white mb-4">
         {t(titleKey, { ns: translationNS })}
       </h3>
       {availableCertifications.length > 0 ? (
@@ -39,7 +40,7 @@ const UpcomingCertificationSection = ({
             <CertificationCard
               key={certification.id}
               certData={certification}
-              translationNS="certifications"
+              translationNS={NAMESPACES.CERTIFICATIONS}
             />
           ))}
         </div>
@@ -47,7 +48,7 @@ const UpcomingCertificationSection = ({
         // Mensaje que se muestra si no hay cursos
         noCertificationsMessageKey && (
           <div>
-            <p className="text-sm text-brand-neutral/80 pt-4 border-t border-brand-primary-light/40">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-brand-neutral/80 pt-4 border-t border-brand-primary-light/40">
               {t(noCertificationsMessageKey, { ns: translationNS })}
             </p>
           </div>

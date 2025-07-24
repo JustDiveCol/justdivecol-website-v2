@@ -1,4 +1,5 @@
 // src/pages/DetailPage/common/Sections/DiveSitesSection.jsx
+import { SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -24,16 +25,14 @@ const DiveSitesSection = ({ diveSiteData, translationNS }) => {
 
   return (
     <section>
-      <h2 className='text-3xl font-bold text-brand-white mb-6'>
-        {t(diveSiteData.titleKey)}
+      <h2 className="heading-4 font-bold text-brand-white mb-6">
+        {t(SHARED_TRANSLATION_KEYS.DESTINATIONS_DIVE_SITES_TITLE)}
       </h2>
-      <div className='space-y-6'>
+      <div className="space-y-6">
         {diveSiteData.sites.map((site) => (
           <div key={site.id}>
-            <h3 className='text-2xl font-semibold text-brand-cta-green'>
-              {t(site.nameKey)}
-            </h3>
-            <p className='mt-1  text-brand-neutral/90 text-justify'>
+            <h3 className="text-subtitle font-semibold text-brand-cta-green">{t(site.nameKey)}</h3>
+            <p className="text-xs sm:text-xs md:text-sm lg:text-base leading-relaxed mt-1 text-brand-neutral/90 text-justify">
               {t(site.descriptionKey)}
             </p>
           </div>

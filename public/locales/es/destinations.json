@@ -1,1 +1,64 @@
-{}
+{
+  "destinationsTextOverlay": "Destino de buceo",
+  "destinationsExtremeTextOverlay": "Destino de buceo extremo",
+
+  "destinationsDetailsTitle": "Detalles del destino",
+  "destinationsDiveSitesTitle": "Puntos de buceo del destino",
+  "destinationsMapTitle": "Mapa de puntos de buceo",
+  "destinationsGalleryTitle": "Galería del destino",
+  "destinationsUniqueFindsTitle": "Hallazgos únicos del destino",
+  "destinationsAvailableTrip": "Experiencias disponibles en este destino",
+  "destinationsNotAvailableTrip": "No hay experiencias disponibles en este destino",
+  "destinationCtaTextButton": "¡Hablemos de este destino!",
+
+  "smName": "Santa Marta",
+  "smDescription": "Donde la imponente Sierra Nevada se encuentra con el misterio del Caribe, Santa Marta es un destino ideal para aprender a bucear, expandir tus habilidades y explorar el mundo submarino con JustDiveCol.",
+
+  "smSeoTitle": "Buceo en Santa Marta | Explora el vibrante Caribe Colombiano con JustDiveCol",
+  "smSeoDesc": "Sumérgete en las ricas y cálidas aguas de Santa Marta con JustDiveCol. Descubre una vibrante vida marina, impresionantes arrecifes de coral y sitios de buceo únicos en el corazón del Caribe Colombiano. ¡Tu próxima aventura submarina te espera!",
+  "smSeoKeywords": "buceo Santa Marta, bucear Caribe colombiano, arrecifes de coral Santa Marta, sitios de buceo Santa Marta, vida marina Santa Marta, JustDiveCol Santa Marta, Parque Tayrona buceo, cursos de buceo Santa Marta, buceo principiantes Santa Marta, buceo avanzado Santa Marta, pecios Santa Marta, turismo submarino Santa Marta, Taganga buceo",
+
+  "smHeaderTitle": "Santa Marta: donde la majestuosa sierra y el azul Caribe se encuentran para bucear",
+  "smHeaderSubtitle": "Sumérgete en la vibrante historia y los arrecifes llenos de vida del Caribe Colombiano. Un destino que cautiva tanto dentro como fuera del agua.",
+
+  "smDescTitle": "Un viaje al corazón fascinante del Caribe Colombiano",
+  "smDescP1": "Más allá de sus impresionantes arrecifes, Santa Marta es una ciudad vibrante con una riqueza histórica que se entrelaza con relatos de piratas, colonos y la milenaria cultura Tayrona. Su música contagiosa, su exquisita gastronomía y la calidez genuina de su gente son tan cautivadoras como la asombrosa vida marina que aguarda bajo sus olas.",
+  "smDescP2": "Explorar esta región es descubrir una mezcla única de influencias que han dado forma a este paraíso costeño. Desde el encanto del centro histórico hasta la majestuosidad de las playas del Parque Tayrona, cada rincón cuenta una historia fascinante y te invita a la aventura.",
+
+  "smDetailLabel1": "Nivel de buceo recomendado",
+  "smDetailValue1": "Todos los niveles (desde principiantes hasta buzos avanzados)",
+
+  "smDetailLabel2": "Temperatura del agua",
+  "smDetailValue2": "24-28 °C / 75-82 °F",
+
+  "smDetailLabel3": "Visibilidad promedio",
+  "smDetailValue3": "10-20 m / 35-65 ft",
+
+  "smDetailLabel4": "Mejor época para bucear",
+  "smDetailValue4": "Abril a Diciembre (con condiciones óptimas)",
+
+  "smDetailLabel5": "Consideraciones adicionales",
+  "smDetailValue5": "La visibilidad y las condiciones pueden variar estacionalmente. Recomendamos consultar el pronóstico local.",
+
+  "smDiveSite1Name": "Barco Hundido",
+  "smDiveSite1Desc": "Un antiguo barco mercante que yace apaciblemente entre los 21 m / 70 ft y 30 m / 100 ft de profundidad. Este fascinante pecio ofrece una experiencia única y cautivadora para buzos avanzados, siendo el hogar de una impresionante variedad de vida marina que lo ha convertido en su arrecife artificial.",
+
+  "smDiveSite2Name": "Natalia",
+  "smDiveSite2Desc": "Un misterioso yate hundido a unos 30 m / 100 ft en la pintoresca zona de El Rodadero. Su intrigante historia y la vibrante vida marina que lo habita lo convierten en un sitio de buceo exigente y extraordinariamente cautivador, ideal para aquellos buzos experimentados que buscan un reto y una exploración profunda.",
+
+  "smDiveSite3Name": "La Piedra del Medio",
+  "smDiveSite3Desc": "Parte de un impresionante sistema rocoso cercano a la costa, este sitio es un verdadero hervidero de rica biodiversidad. Es un lugar predilecto para encuentros cercanos con majestuosas tortugas marinas y una multitud de peces tropicales coloridos, siendo apto para diversos niveles de experiencia y ofreciendo siempre algo nuevo por descubrir.",
+
+  "smDiveSite4Name": "Isla Aguja",
+  "smDiveSite4Desc": "Un clásico indiscutible del buceo en Santa Marta, ideal para todos. Ofrece múltiples puntos de inmersión versátiles, aptos tanto para sesiones de entrenamiento y cursos como para emocionantes inmersiones de exploración profunda. Aquí encontrarás formaciones coralinas espectaculares y una vida marina abundante y diversa que te dejará sin aliento.",
+
+  "smUniqueFind1": "La increíble biodiversidad marina de la región, que incluye coloridos arrecifes, vibrantes corales y una asombrosa variedad de especies marinas que te esperan bajo el agua.",
+  "smUniqueFind2": "Las formaciones rocosas y coralinas únicas que adornan sus fondos marinos, creando paisajes submarinos que parecen de otro planeta y son perfectos para la fotografía.",
+  "smUniqueFind3": "La vibrante vida cultural y nocturna de Santa Marta y la cercana Taganga, ideal para complementar tus días de buceo con sabor local, música y gastronomía caribeña.",
+  "smUniqueFind4": "La oportunidad de obtener o avanzar en tu certificación de buceo PADI en un entorno espectacular y seguro, acompañado por instructores expertos y apasionados por el océano.",
+
+  "smGal1Alt": "",
+  "smGal2Alt": "",
+  "smGal3Alt": "",
+  "smGal4Alt": ""
+}

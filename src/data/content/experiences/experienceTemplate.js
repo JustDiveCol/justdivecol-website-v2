@@ -1,5 +1,6 @@
 // src/data/content/experiences/experienceTemplate.js
-import { STATUS, IMAGE_VARIANTS, ROUTES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
+import { LOGO_MAIN } from '@/data/global/assets';
+import { STATUS, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 // Defines the shape of an experience object
 export const experienceTemplate = {
@@ -35,6 +36,8 @@ export const experienceTemplate = {
   header: {
     backgroundImage: '',
     titleKey: '',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
     subtitleKey: '',
     photoCredit: {
       prefixKey: '',
@@ -75,10 +78,7 @@ export const experienceTemplate = {
       // array of { day, titleKey, descriptionKey }
       // { day: 1, titleKey: '', descriptionKey: '' }
     ],
-    notes: [
-      SHARED_TRANSLATION_KEYS.experiencesDefaultItineraryNoteKey1,
-      SHARED_TRANSLATION_KEYS.experiencesDefaultItineraryNoteKey2,
-    ], // array of translation keys
+    notes: [], // array of translation keys
   },
 
   // --- Included / Not included ---

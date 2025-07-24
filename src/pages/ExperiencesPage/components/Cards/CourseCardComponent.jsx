@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { fadeInUp } from '../../../../hooks/animations';
 import ImageComponent from '../../../../components/common/Image/ImageComponent';
+import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 /**
  * Renders a detailed card for a single course, showing its image, title,
@@ -15,7 +16,7 @@ import ImageComponent from '../../../../components/common/Image/ImageComponent';
  * @param {object} props.certData - The complete data object for the course.
  */
 const CourseCardComponent = ({ certData, translationNS }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
   const { id, header, card, details, availability } = certData;
 
   /**
@@ -43,7 +44,7 @@ const CourseCardComponent = ({ certData, translationNS }) => {
               availability
             )}`}
           >
-            {t(`common:${availability}`)}
+            {t(availability, { ns: NAMESPACES.COMMON })}
           </span>
           {details?.durationKey && (
             <span className="text-[10px] sm:text-xs md:text-sm text-center text-brand-neutral bg-brand-primary-light px-2 sm:px-3 py-1 rounded-full">
@@ -56,7 +57,7 @@ const CourseCardComponent = ({ certData, translationNS }) => {
         to={`/certification/${id}`}
         className="block bg-brand-cta-orange text-center text-brand-white font-bold uppercase text-xs sm:text-sm md:text-base p-2 sm:p-3 hover:bg-opacity-90 transition-colors mt-auto"
       >
-        {t('common:viewDetails')}
+        {t(SHARED_TRANSLATION_KEYS.VIEW_DETAILS_LABEL)}
       </Link>
     </motion.div>
   );

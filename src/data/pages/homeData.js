@@ -1,6 +1,4 @@
 // src/data/pages/home.js
-import { experienceCategories } from '../global/sharedData.js';
-
 import heroBackground from '../../assets/images/page-specific/home/home-hero-background.webp';
 import ctaBackground from '../../assets/images/page-specific/home/home-cta-background.webp';
 
@@ -30,7 +28,7 @@ export const homePageData = {
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAlt: LOGO_MAIN.altKey,
     ctaButton: {
-      textKey: SHARED_TRANSLATION_KEYS.experiencesTextButtonKey,
+      textKey: SHARED_TRANSLATION_KEYS.EXPERIENCES_TEXT_BUTTON,
       translationNS: NAMESPACES.COMMON,
       action: {
         type: BUTTON_TYPES.internal,
@@ -41,21 +39,9 @@ export const homePageData = {
       containerClassName: 'mt-8',
     },
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'Camilo Beltran @JustDiveCol',
     },
-  },
-
-  // === EXPERIENCES SECTION ===
-  featuredExperiences: {
-    titleKey: 'homeExpTitle',
-    subtitleKey: 'homeExpSubtitle',
-
-    categories: experienceCategories.map((cat) => ({
-      ...cat,
-      link: cat.id === CAT_TYPE.CUSTOM ? `${ROUTES.contact}` : `${ROUTES.experiences}#${cat.id}`,
-      translationNS: NAMESPACES.HOME,
-    })),
   },
 
   // Safety Section
@@ -80,7 +66,7 @@ export const homePageData = {
       },
     ],
     ctaButton: {
-      textKey: SHARED_TRANSLATION_KEYS.safetyTextButtonKey,
+      textKey: SHARED_TRANSLATION_KEYS.SAFETY_TEXT_BUTTON,
       action: {
         type: BUTTON_TYPES.internal,
         path: ROUTES.safety,
@@ -123,10 +109,10 @@ export const homePageData = {
     titleKey: 'homeFinalCtaTitle',
     subtitleKey: 'homeFinalCtaSubtitle',
     ctaButton: {
-      textKey: SHARED_TRANSLATION_KEYS.contactTextButtonKey,
+      textKey: SHARED_TRANSLATION_KEYS.CONTACT_TEXT_BUTTON,
       action: {
         type: BUTTON_TYPES.whatsapp,
-        whatsAppMessageKey: SHARED_TRANSLATION_KEYS.generalWhatsappMessageKey,
+        whatsAppMessageKey: SHARED_TRANSLATION_KEYS.GENERAL_WHATSAPP_MESSAGE,
       },
       className: 'mt-8',
       animateOnView: true,
@@ -138,7 +124,7 @@ export const homePageData = {
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.mainLogo,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },

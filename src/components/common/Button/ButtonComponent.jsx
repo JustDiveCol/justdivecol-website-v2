@@ -30,12 +30,6 @@ const ButtonComponent = ({
     translationNS === NAMESPACES.COMMON ? NAMESPACES.COMMON : [translationNS, NAMESPACES.COMMON]
   );
 
-  // Handler para bloquear cualquier intento de drag
-  const preventDrag = (e) => {
-    e.preventDefault();
-    return false;
-  };
-
   // Calcula el link final según el tipo de acción
   const finalLink = useMemo(() => {
     if (!action) return '/';
@@ -67,27 +61,12 @@ const ButtonComponent = ({
   const content = t(textKey, { ns: translationNS });
   const isInternalLink = action?.type === 'internal';
 
-  // Preparamos el elemento clickeable con bloqueo de drag
   const Clickable = isInternalLink ? (
-    <Link
-      to={finalLink}
-      className={baseButtonClasses}
-      draggable={false}
-      onDragStart={preventDrag}
-      style={{ WebkitUserDrag: 'none' }}
-    >
+    <Link to={finalLink} className={baseButtonClasses}>
       {content}
     </Link>
   ) : (
-    <a
-      href={finalLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={baseButtonClasses}
-      draggable={false}
-      onDragStart={preventDrag}
-      style={{ WebkitUserDrag: 'none' }}
-    >
+    <a href={finalLink} target="_blank" rel="noopener noreferrer" className={baseButtonClasses}>
       {content}
     </a>
   );

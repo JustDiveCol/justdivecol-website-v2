@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../hooks/animations';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders a card for a single safety protocol step, including its number,
@@ -15,8 +16,8 @@ import { fadeInUp } from '../../../hooks/animations';
  * @param {string} props.stepData.descriptionKey - The translation key for the step's description.
  * @param {number} props.index - The zero-based index of the step, used for display numbering.
  */
-const ProtocolCardComponent = ({ stepData, index }) => {
-  const { t } = useTranslation('safety');
+const ProtocolCardComponent = ({ translationNS, stepData, index }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
   const { id, nameKey, descriptionKey } = stepData;
 
   return (

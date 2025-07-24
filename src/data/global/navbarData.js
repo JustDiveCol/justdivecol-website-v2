@@ -9,24 +9,23 @@ export const navLinks = [
   { nameKey: 'about', path: ROUTES.about },
   { nameKey: 'safety', path: ROUTES.safety },
   { nameKey: 'contact', path: ROUTES.contact },
-  { nameKey: 'store', path: ROUTES.store },
 ];
 
-export const storeNavLinks = [
-  {
-    nameKey: 'gearHome',
-    path: '/gear/home',
-  },
-  {
-    nameKey: 'gearGuide',
-    path: '/gear/guide',
-  },
-  {
-    nameKey: 'geargear',
-    path: '/proximamente',
-  },
-  {
-    nameKey: 'gearFaqs',
-    path: '/gear/faqs',
-  },
-];
+// export const storeNavLinks = [
+//   {
+//     nameKey: 'gearHome',
+//     path: '/gear/home',
+//   },
+//   {
+//     nameKey: 'gearGuide',
+//     path: '/gear/guide',
+//   },
+//   {
+//     nameKey: 'geargear',
+//     path: '/proximamente',
+//   },
+//   {
+//     nameKey: 'gearFaqs',
+//     path: '/gear/faqs',
+//   },
+// ];

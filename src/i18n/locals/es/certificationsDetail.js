@@ -1,6 +1,5 @@
 export default {
   // ===== Common =====
-  certificationsTextOverlay: 'Certificaciones',
 
   // ===== Open Water =====
   // --- Metadata ---
@@ -69,10 +68,10 @@ export default {
   owdIncludeItem8: 'Seguro de buceo completo durante toda la duración del curso.',
 
   // --- Gallery ---
-  owdGaleryImg1Alt: '',
-  owdGaleryImg2Alt: '',
-  owdGaleryImg3Alt: '',
-  owdGaleryImg4Alt: '',
+  owdGalleryImg1Alt: '',
+  owdGalleryImg2Alt: '',
+  owdGalleryImg3Alt: '',
+  owdGalleryImg4Alt: '',
 
   // ===== Advanced Open Water =====
   // --- Metadata ---
@@ -151,10 +150,10 @@ export default {
     'Seguro de buceo completo durante toda la duración del curso, para tu total tranquilidad.',
 
   // --- Gallery ---
-  aowdGaleryImg1Alt: '',
-  aowdGaleryImg2Alt: '',
-  aowdGaleryImg3Alt: '',
-  aowdGaleryImg4Alt: '',
+  aowdGalleryImg1Alt: '',
+  aowdGalleryImg2Alt: '',
+  aowdGalleryImg3Alt: '',
+  aowdGalleryImg4Alt: '',
 
   // ===== Rescue Diver =====
   // --- Metadata ---
@@ -243,8 +242,8 @@ export default {
     'Seguro de buceo completo durante toda la duración del curso, cubriendo específicamente incidentes relacionados con la actividad de buceo, para tu total tranquilidad.',
 
   // --- Gallery ---
-  rdGaleryImg1Alt: '',
-  rdGaleryImg2Alt: '',
-  rdGaleryImg3Alt: '',
-  rdGaleryImg4Alt: '',
+  rdGalleryImg1Alt: '',
+  rdGalleryImg2Alt: '',
+  rdGalleryImg3Alt: '',
+  rdGalleryImg4Alt: '',
 };

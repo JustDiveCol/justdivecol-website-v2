@@ -96,8 +96,7 @@ export default {
   owdIncludedTitle: 'Tu curso incluye todo lo necesario para bucear',
   owdIncludeItem1: 'Certificación internacional PADI Open Water Diver.',
   owdIncludeItem2: 'Acceso ilimitado a la plataforma PADI eLearning®.',
-  owdIncludeItem3:
-    '5 sesiones virtuales en vivo con un instructor PADI dedicado.',
+  owdIncludeItem3: '5 sesiones virtuales en vivo con un instructor PADI dedicado.',
   owdIncludeItem4:
     '5 sesiones prácticas en aguas confinadas (piscina) para dominar tus habilidades.',
   owdIncludeItem5: '4 inmersiones emocionantes en mar abierto (océano).',
@@ -105,27 +104,26 @@ export default {
     'Equipo completo de buceo de alta calidad (máscara, aletas, traje de neopreno, regulador, BCD, tanque).',
   owdIncludeItem7:
     'Acompañamiento personalizado de un instructor PADI altamente calificado, comprometido con tu progreso.',
-  owdIncludeItem8:
-    'Seguro de buceo completo durante toda la duración del curso.',
+  owdIncludeItem8: 'Seguro de buceo completo durante toda la duración del curso.',
 
   // --- Gallery ---
   owdGalleryTitle: 'Momentos inolvidables de tu curso Open Water',
-  owdGaleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
-  // owdGaleryImg1ComplementaryLogoAlt: '',
-  // owdGaleryImg1TextOverlay: '',
-  owdGaleryImg1PhotoCredit: 'Créditos de la foto: Camilo Beltrán @JustDiveCol',
-  owdGaleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
-  // owdGaleryImg2ComplementaryLogoAlt: '',
-  // owdGaleryImg2TextOverlay: '',
-  owdGaleryImg2PhotoCredit: 'Créditos de la foto: XYZ',
-  owdGaleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
-  // owdGaleryImg3ComplementaryLogoAlt: '',
-  // owdGaleryImg3TextOverlay: '',
-  owdGaleryImg3PhotoCredit: 'Créditos de la foto: Camilo Beltrán @JustDiveCol',
-  owdGaleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
-  // owdGaleryImg4ComplementaryLogoAlt: '',
-  // owdGaleryImg4TextOverlay: '',
-  owdGaleryImg4PhotoCredit: 'Créditos de la foto: Camilo Beltrán @JustDiveCol',
+  owdGalleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
+  // owdGalleryImg1ComplementaryLogoAlt: '',
+  // owdGalleryImg1TextOverlay: '',
+  owdGalleryImg1PhotoCredit: 'Créditos de la foto: Camilo Beltrán @JustDiveCol',
+  owdGalleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
+  // owdGalleryImg2ComplementaryLogoAlt: '',
+  // owdGalleryImg2TextOverlay: '',
+  owdGalleryImg2PhotoCredit: 'Créditos de la foto: XYZ',
+  owdGalleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
+  // owdGalleryImg3ComplementaryLogoAlt: '',
+  // owdGalleryImg3TextOverlay: '',
+  owdGalleryImg3PhotoCredit: 'Créditos de la foto: Camilo Beltrán @JustDiveCol',
+  owdGalleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
+  // owdGalleryImg4ComplementaryLogoAlt: '',
+  // owdGalleryImg4TextOverlay: '',
+  owdGalleryImg4PhotoCredit: 'Créditos de la foto: Camilo Beltrán @JustDiveCol',
 
   // --- CTA ---
   owdCtaTitle: '¿No encuentras fechas que se ajusten a tu agenda?',
@@ -133,16 +131,14 @@ export default {
 
   // ===== Advanced Open Water =====
   // --- SEO Content ---
-  aowdSeoTitle:
-    'Curso PADI Advanced Open Water Diver | Expande tus límites con JustDiveCol',
+  aowdSeoTitle: 'Curso PADI Advanced Open Water Diver | Expande tus límites con JustDiveCol',
   aowdSeoDesc:
     'Lleva tu buceo al siguiente nivel con el curso PADI Advanced Open Water Diver de JustDiveCol. Explora nuevas especialidades, gana una confianza incomparable en diversas condiciones y profundiza en el fascinante mundo submarino.',
   aowdSeoKeywords:
     'PADI Advanced Open Water Diver, curso de buceo avanzado, expandir límites buceo, JustDiveCol, nuevas especialidades buceo, confianza submarina, buceo profundo, navegación subacuática, buceo nocturno, control de flotabilidad, fotografía submarina, certificación de buceo',
 
   // --- Header Content ---
-  aowdHeaderTitle:
-    'PADI Advanced Open Water Diver: tu siguiente nivel de aventura',
+  aowdHeaderTitle: 'PADI Advanced Open Water Diver: tu siguiente nivel de aventura',
   aowdHeaderSubtitle:
     'Perfecciona tus habilidades, gana una confianza inquebrantable y explora nuevas dimensiones del buceo con JustDiveCol. ¡El océano te espera!',
   aowdHeaderMainLogoAlt: 'Logo principal de JustDiveCol',
@@ -196,8 +192,7 @@ export default {
   // --- Requirements ---
   aowdReqsTitle: 'Requisitos para llevar tu buceo al siguiente nivel',
 
-  aowdReqItem1:
-    'Tener al menos 12 años de edad (para Junior Advanced Open Water Diver).',
+  aowdReqItem1: 'Tener al menos 12 años de edad (para Junior Advanced Open Water Diver).',
   aowdReqItem2:
     'Estar certificado como PADI Open Water Diver o contar con una certificación equivalente reconocida.',
   aowdReqItem3:
@@ -206,8 +201,7 @@ export default {
     'Comprometerte a participar activamente en todas las sesiones teóricas, virtuales y prácticas del curso, para asegurar un aprendizaje completo y seguro.',
 
   // --- Included ---
-  aowdIncludedTitle:
-    'Tu curso incluye todo lo que necesitas para tu siguiente gran aventura',
+  aowdIncludedTitle: 'Tu curso incluye todo lo que necesitas para tu siguiente gran aventura',
 
   aowdIncludeItem1:
     'Certificación internacional PADI Advanced Open Water Diver, reconocida mundialmente.',
@@ -227,25 +221,25 @@ export default {
   // --- Gallery ---
   aowdGalleryTitle: 'Momentos destacados de tu curso Advanced Open Water',
 
-  aowdGaleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
-  // aowdGaleryImg1ComplementaryLogoAlt: '',
-  // aowdGaleryImg1TextOverlay: '',
-  aowdGaleryImg1PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
+  aowdGalleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
+  // aowdGalleryImg1ComplementaryLogoAlt: '',
+  // aowdGalleryImg1TextOverlay: '',
+  aowdGalleryImg1PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
-  aowdGaleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
-  // aowdGaleryImg1ComplementaryLogoAlt: '',
-  // aowdGaleryImg1TextOverlay: '',
-  aowdGaleryImg2PhotoCredit: 'Créditos de la foto: PADI',
+  aowdGalleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
+  // aowdGalleryImg1ComplementaryLogoAlt: '',
+  // aowdGalleryImg1TextOverlay: '',
+  aowdGalleryImg2PhotoCredit: 'Créditos de la foto: PADI',
 
-  aowdGaleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
-  // aowdGaleryImg1ComplementaryLogoAlt: '',
-  // aowdGaleryImg1TextOverlay: '',
-  aowdGaleryImg3PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
+  aowdGalleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
+  // aowdGalleryImg1ComplementaryLogoAlt: '',
+  // aowdGalleryImg1TextOverlay: '',
+  aowdGalleryImg3PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
-  aowdGaleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
-  // aowdGaleryImg1ComplementaryLogoAlt: '',
-  // aowdGaleryImg1TextOverlay: '',
-  aowdGaleryImg4PhotoCredit: 'Créditos de la foto: PADI',
+  aowdGalleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
+  // aowdGalleryImg1ComplementaryLogoAlt: '',
+  // aowdGalleryImg1TextOverlay: '',
+  aowdGalleryImg4PhotoCredit: 'Créditos de la foto: PADI',
 
   // --- CTA ---
   aowdCtaTitle: '¿Las fechas disponibles no se ajustan a tu calendario?',
@@ -253,8 +247,7 @@ export default {
 
   // ===== Rescue Diver =====
   // --- SEO Content ---
-  rdSeoTitle:
-    'Curso PADI Rescue Diver | Conviértete en un héroe submarino con JustDiveCol',
+  rdSeoTitle: 'Curso PADI Rescue Diver | Conviértete en un héroe submarino con JustDiveCol',
   rdSeoDesc:
     'Desarrolla habilidades vitales de rescate y manejo de emergencias con el curso PADI Rescue Diver de JustDiveCol. Aprende a prevenir problemas y a responder eficazmente en el buceo, protegiéndote a ti y a tus compañeros en cualquier parte del mundo. ¡Marca la diferencia!',
   rdSeoKeywords:
@@ -291,8 +284,7 @@ export default {
   rdDetailValue1: '2 a 3 días (flexible)',
 
   rdDetailLabel2: 'Habilidades clave',
-  rdDetailValue2:
-    'Prevención, gestión de emergencias, primeros auxilios, liderazgo efectivo',
+  rdDetailValue2: 'Prevención, gestión de emergencias, primeros auxilios, liderazgo efectivo',
 
   // --- Curriculim Content ---
   rdCurriculumTitle: '¿Qué aprenderás en tu curso Rescue Diver?',
@@ -309,8 +301,7 @@ export default {
   rdModule3Desc:
     'Practicarás la recuperación segura de buzos inconscientes desde el fondo, la provisión vital de respiraciones de rescate en el agua (in-water rescue breathing) y el remolque eficiente de un buzo no reactivo a la superficie, preparándote para las situaciones más críticas con confianza y destreza.',
 
-  rdModule4Name:
-    'Gestión de emergencias de buceo y primeros auxilios avanzados',
+  rdModule4Name: 'Gestión de emergencias de buceo y primeros auxilios avanzados',
   rdModule4Desc:
     'Aprenderás a coordinar una respuesta de emergencia efectiva, a utilizar equipo de oxígeno de emergencia de manera profesional y a aplicar primeros auxilios de buceo para lesiones comunes y condiciones más serias. Este módulo es vital para la gestión de crisis, convirtiéndote en un líder en momentos cruciales.',
 
@@ -322,8 +313,7 @@ export default {
     'Este curso es un prerrequisito esencial y transformador para los buzos que desean avanzar al nivel profesional de PADI Divemaster, Instructor y más allá, abriendo las puertas a una carrera gratificante en el buceo y la enseñanza.',
 
   // --- Requirements ---
-  rdReqsTitle:
-    'Requisitos para iniciar tu camino como buzo de rescate profesional',
+  rdReqsTitle: 'Requisitos para iniciar tu camino como buzo de rescate profesional',
 
   rdReqItem1: 'Tener al menos 12 años de edad (para Junior Rescue Diver).',
   rdReqItem2:
@@ -336,8 +326,7 @@ export default {
     'Comprometerte a participar activamente en todas las sesiones teóricas, virtuales y prácticas del curso, demostrando proactividad, responsabilidad y un deseo genuino de aprender.',
 
   // --- Included ---
-  rdIncludedTitle:
-    'Tu curso de rescate incluye todo lo necesario para tu preparación integral',
+  rdIncludedTitle: 'Tu curso de rescate incluye todo lo necesario para tu preparación integral',
 
   rdIncludeItem1:
     'Certificación internacional PADI Rescue Diver, reconocida y valorada globalmente.',
@@ -357,28 +346,27 @@ export default {
     'Seguro de buceo completo durante toda la duración del curso, cubriendo específicamente incidentes relacionados con la actividad de buceo, para tu total tranquilidad.',
 
   // --- Gallery ---
-  rdGalleryTitle:
-    'Preparación y acción: momentos de tu entrenamiento Rescue Diver',
+  rdGalleryTitle: 'Preparación y acción: momentos de tu entrenamiento Rescue Diver',
 
-  rdGaleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
-  // rdGaleryImg1ComplementaryLogoAlt: '',
-  // rdGaleryImg1TextOverlay: '',
-  rdGaleryImg1PhotoCredit: 'Créditos de la foto: XYZ',
+  rdGalleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
+  // rdGalleryImg1ComplementaryLogoAlt: '',
+  // rdGalleryImg1TextOverlay: '',
+  rdGalleryImg1PhotoCredit: 'Créditos de la foto: XYZ',
 
-  rdGaleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
-  // rdGaleryImg2ComplementaryLogoAlt: '',
-  // rdGaleryImg2TextOverlay: '',
-  rdGaleryImg2PhotoCredit: 'Créditos de la foto: XYZ',
+  rdGalleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
+  // rdGalleryImg2ComplementaryLogoAlt: '',
+  // rdGalleryImg2TextOverlay: '',
+  rdGalleryImg2PhotoCredit: 'Créditos de la foto: XYZ',
 
-  rdGaleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
-  // rdGaleryImg3ComplementaryLogoAlt: '',
-  // rdGaleryImg3TextOverlay: '',
-  rdGaleryImg3PhotoCredit: 'Créditos de la foto: @atlantidabucea',
+  rdGalleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
+  // rdGalleryImg3ComplementaryLogoAlt: '',
+  // rdGalleryImg3TextOverlay: '',
+  rdGalleryImg3PhotoCredit: 'Créditos de la foto: @atlantidabucea',
 
-  rdGaleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
-  // rdGaleryImg4ComplementaryLogoAlt: '',
-  // rdGaleryImg4TextOverlay: '',
-  rdGaleryImg4PhotoCredit: 'Créditos de la foto: PADI',
+  rdGalleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
+  // rdGalleryImg4ComplementaryLogoAlt: '',
+  // rdGalleryImg4TextOverlay: '',
+  rdGalleryImg4PhotoCredit: 'Créditos de la foto: PADI',
 
   // --- CTA ---
   rdCtaTitle: '¿Las fechas disponibles no se ajustan a tu calendario?',

@@ -1,6 +1,5 @@
 import {
   AVAILABILITY,
-  CERTIFICATION_CATEGORIES,
   CERTIFICATION_IDS,
   CURRENCY,
   SHARED_TRANSLATION_KEYS,
@@ -10,9 +9,10 @@ export const expSantaMartaSep2025Session = {
   id: 'santa-marta-sept-2025',
   experienceId: 'exp-santa-marta',
   slug: 'sept-2025', // ej. 'sept-2025'
+  // titleKey: 'expSmSep25Title',
   startDate: '2025-09-26',
   endDate: '2025-09-29',
-  price: 3500000,
+  price: 4000000,
   currency: CURRENCY.COP,
   founders: true,
   capacity: 8,
@@ -22,7 +22,7 @@ export const expSantaMartaSep2025Session = {
 
   // --- Payment Plan ---
   paymentPlan: {
-    titleKey: SHARED_TRANSLATION_KEYS.experiencesPaymentTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.EXPERIENCES_PAYMENT_TITLE,
     modules: [
       {
         id: 'payment1',
@@ -40,6 +40,6 @@ export const expSantaMartaSep2025Session = {
         descriptionKey: 'expSmSep25PaymentPlanStep3Desc',
       },
     ],
-    notes: [SHARED_TRANSLATION_KEYS.experiencesDefaultPaymentNoteKey],
+    notes: [SHARED_TRANSLATION_KEYS.EXPERIENCES_DEFAULT_PAYMENT_NOTE],
   },
 };

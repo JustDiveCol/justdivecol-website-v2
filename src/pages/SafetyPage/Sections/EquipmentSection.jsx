@@ -8,6 +8,7 @@ import { EquipmentCardComponent } from '../Card/EquipmentCardComponent';
 
 // Icons
 import { DiverIcon, ScubaTanksIcon, ComputerIcon } from '../../../assets/icons/DiverIcons';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the "Equipment" section of the Safety page.
@@ -20,7 +21,7 @@ import { DiverIcon, ScubaTanksIcon, ComputerIcon } from '../../../assets/icons/D
  * @param {object[]} props.equipmentData.items - An array of equipment item objects.
  */
 const EquipmentSection = ({ translationNS, equipmentData }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   // Maps icon string identifiers from data to the actual imported icon components.
   const iconMap = {
@@ -52,7 +53,8 @@ const EquipmentSection = ({ translationNS, equipmentData }) => {
             <EquipmentCardComponent
               key={item.id}
               itemData={item}
-              icon={iconMap[item.icon]} // The resolved icon component is passed as a prop.
+              icon={iconMap[item.icon]}
+              translationNS={translationNS}
             />
           ))}
         </motion.div>

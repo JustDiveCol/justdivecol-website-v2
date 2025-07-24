@@ -12,6 +12,7 @@ import {
   SecurityIcon,
   HandshakeIcon,
 } from '../../../../assets/icons/NavbarIcons';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the "Our Commitment" section, displaying key brand values.
@@ -24,7 +25,7 @@ import {
  * @param {object[]} props.commitmentData.points - An array of commitment points.
  */
 const CommitmentSection = ({ translationNS, commitmentData }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   // This map links the 'icon' string from the data file to the actual Icon component.
   // This allows the data to remain simple (e.g., "icon: 'leaf'") while the component

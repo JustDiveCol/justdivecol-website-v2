@@ -22,7 +22,7 @@ export const expSantaMartaOct2025Session = {
 
   // --- Payment Plan ---
   paymentPlan: {
-    titleKey: SHARED_TRANSLATION_KEYS.experiencesPaymentTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.EXPERIENCES_PAYMENT_TITLE,
     modules: [
       {
         id: 'payment1',
@@ -40,6 +40,6 @@ export const expSantaMartaOct2025Session = {
         descriptionKey: 'expSmOct25PaymentPlanStep3Desc',
       },
     ],
-    notes: [SHARED_TRANSLATION_KEYS.experiencesDefaultPaymentNoteKey],
+    notes: [SHARED_TRANSLATION_KEYS.EXPERIENCES_DEFAULT_PAYMENT_NOTE],
   },
 };

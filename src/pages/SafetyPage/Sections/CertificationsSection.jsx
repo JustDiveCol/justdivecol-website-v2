@@ -9,6 +9,7 @@ import CertificationCardComponent from '../Card/CertificationCardComponent';
 
 // Icons
 import { ChevronLeftIcon, ChevronRightIcon } from '../../../assets/icons/ChevronIcons';
+import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 /**
  * Renders the "Certifications & Partners" section as a paginated carousel.
@@ -20,7 +21,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from '../../../assets/icons/Chevron
  * @param {object[]} props.certificationsData.partners - An array of partner data objects.
  */
 const CertificationsSection = ({ translationNS, certificationsData }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
   const [currentPage, setCurrentPage] = useState(0);
 
   // --- Carousel Logic ---
@@ -64,7 +65,11 @@ const CertificationsSection = ({ translationNS, certificationsData }) => {
               className="flex flex-wrap justify-center gap-10"
             >
               {currentPartners.map((partner) => (
-                <CertificationCardComponent key={partner.id} partnerData={partner} />
+                <CertificationCardComponent
+                  key={partner.id}
+                  partnerData={partner}
+                  translationNS={translationNS}
+                />
               ))}
             </motion.div>
           </AnimatePresence>
@@ -76,7 +81,7 @@ const CertificationsSection = ({ translationNS, certificationsData }) => {
             <button
               onClick={handlePrev}
               className="p-2 rounded-full bg-brand-primary-medium hover:bg-brand-cta-orange transition-colors text-white cursor-pointer"
-              aria-label={t('common:ariaPrevious')}
+              aria-label={t(SHARED_TRANSLATION_KEYS.ARIA_PREV_LABEL)}
             >
               <ChevronLeftIcon />
             </button>
@@ -90,14 +95,14 @@ const CertificationsSection = ({ translationNS, certificationsData }) => {
                       ? 'bg-brand-cta-orange'
                       : 'bg-brand-primary-light hover:bg-brand-neutral/50'
                   }`}
-                  aria-label={`${t('common:ariaGoToPage')} ${i + 1}`}
+                  aria-label={`${t(SHARED_TRANSLATION_KEYS.ARIA_GO_TO_PAGE_LABEL)} ${i + 1}`}
                 />
               ))}
             </div>
             <button
               onClick={handleNext}
               className="p-2 rounded-full bg-brand-primary-medium hover:bg-brand-cta-orange transition-colors text-white cursor-pointer"
-              aria-label={t('common:ariaNext')}
+              aria-label={t(SHARED_TRANSLATION_KEYS.ARIA_NEXT_LABEL)}
             >
               <ChevronRightIcon />
             </button>

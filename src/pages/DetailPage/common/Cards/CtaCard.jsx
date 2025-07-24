@@ -22,20 +22,11 @@ const CtaCard = ({ ctaData, translationNS }) => {
     return null;
   }
 
-  // Handler to block any dragging of the card container
-  const preventDrag = (e) => {
-    e.preventDefault();
-    return false;
-  };
-
   return (
     <div
       className="bg-brand-primary-light p-6 rounded-lg shadow-lg text-center select-text"
       role="region"
       aria-label={t(ctaData.titleKey)}
-      draggable={false}
-      onDragStart={preventDrag}
-      onContextMenu={preventDrag}
     >
       <h3 className="text-xl font-bold text-brand-white mb-6">{t(ctaData.titleKey)}</h3>
 

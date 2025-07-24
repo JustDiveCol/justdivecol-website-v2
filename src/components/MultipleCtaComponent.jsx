@@ -5,9 +5,10 @@ import { useTranslation } from 'react-i18next';
 
 import ButtonComponent from './common/Button/ButtonComponent';
 import { staggerContainer, fadeInUp } from '../hooks/animations';
+import { NAMESPACES } from '@/data/global/constants';
 
 const MultipleCtaComponent = ({ sectionData, translationNS }) => {
-  const { t } = useTranslation(translationNS);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const {
     backgroundImage,
@@ -22,31 +23,17 @@ const MultipleCtaComponent = ({ sectionData, translationNS }) => {
     photoCreditKey,
   } = sectionData;
 
-  // Bloquear drag en imágenes/fondos
-  const preventDrag = (e) => {
-    e.preventDefault();
-    return false;
-  };
-
   return (
     <section
       role="img"
       aria-label={`${t(titleKey)} — ${t(subtitleKey)}`}
-      onContextMenu={preventDrag}
-      draggable={false}
-      onDragStart={preventDrag}
       className="group relative bg-cover bg-center py-24 px-4 text-brand-white"
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        WebkitUserDrag: 'none',
       }}
     >
       {/* Overlay oscuro */}
-      <div
-        className="absolute inset-0 bg-brand-primary-dark/80 pointer-events-none"
-        draggable={false}
-        onDragStart={preventDrag}
-      />
+      <div className="absolute inset-0 bg-brand-primary-dark/80 pointer-events-none" />
 
       {/* Texto overlay (selectable) */}
       {textOverlayKey && (
@@ -58,28 +45,14 @@ const MultipleCtaComponent = ({ sectionData, translationNS }) => {
       {/* Complementary Logo */}
       {complementaryLogo && (
         <div className="absolute top-4 right-4 drop-shadow-md opacity-70 z-20">
-          <img
-            src={complementaryLogo}
-            alt={t(complementaryLogoAltKey)}
-            className="w-12 h-auto"
-            draggable={false}
-            onDragStart={preventDrag}
-            style={{ WebkitUserDrag: 'none' }}
-          />
+          <img src={complementaryLogo} alt={t(complementaryLogoAltKey)} className="w-12 h-auto" />
         </div>
       )}
 
       {/* Main Logo */}
       {mainLogo && (
         <div className="absolute bottom-4 right-4 drop-shadow-md opacity-70 z-20">
-          <img
-            src={mainLogo}
-            alt={t(mainLogoAltKey)}
-            className="w-24 h-auto"
-            draggable={false}
-            onDragStart={preventDrag}
-            style={{ WebkitUserDrag: 'none' }}
-          />
+          <img src={mainLogo} alt={t(mainLogoAltKey)} className="w-24 h-auto" />
         </div>
       )}
 

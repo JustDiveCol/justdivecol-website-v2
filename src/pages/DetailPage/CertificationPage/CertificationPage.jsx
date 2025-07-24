@@ -7,7 +7,9 @@ import { useTranslation } from 'react-i18next';
 import CertificationLayout from './Layout/CertificationLayout';
 import SEOComponent from '../../../components/ui/SEOComponent';
 import { useCertifications } from '@/data/content/certifications/DataProvider';
+import { useExperiences } from '@/data/content/experiences/DataProvider';
 import { staggerContainer } from '../../../hooks/animations';
+import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 /**
  * Renders the detail page for a specific certification.
@@ -16,9 +18,10 @@ import { staggerContainer } from '../../../hooks/animations';
  */
 const CertificationPage = () => {
   const { certificationSlug } = useParams(); // Get the dynamic certificationSlug from the URL.
-  const { t } = useTranslation(['certificationsPage', 'common']); // New namespace for translations
+  const { t } = useTranslation([NAMESPACES.CERTIFICATIONS, NAMESPACES.COMMON]); // New namespace for translations
 
   const { certifications } = useCertifications(); // Get all certifications from the Context
+  const { experiences } = useExperiences();
 
   // State for managing course data, associated trips, loading, and error status.
   const [certificationData, setCertificationData] = useState(null);
@@ -28,33 +31,65 @@ const CertificationPage = () => {
 
   // Effect to fetch course details when the component mounts or the courseId changes.
   useEffect(() => {
-    setIsLoading(true); // Set loading true at the start of the effect
-    setError(false); // Reset error
+    setIsLoading(true);
+    setError(false);
 
-    // Find the certification based on the slug
+    // 1. Find the certification based on the slug
     const foundCertification = certifications.find((cert) => cert.slug === certificationSlug);
 
     if (foundCertification) {
       setCertificationData(foundCertification);
-      // Lógica para obtener 'availableTrips' si es necesario.
-      // Necesitaríamos una forma de filtrar las experiencias/sesiones relacionadas con esta certificación.
-      // Esto podría hacerse aquí o en un hook personalizado si la lógica es compleja.
-      // Por ahora, lo dejaremos vacío o requerirá una nueva función.
-      setAvailableTrips([]); // Placeholder for now
+
+      // --- Lógica para calcular 'availableTrips' (sesiones de experiencia relacionadas) ---
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const filteredAvailableTrips = experiences.reduce((acc, exp) => {
+        (exp.sessions || []).forEach((session) => {
+          // Un viaje está disponible si la sesión está vinculada a esta certificación
+          // Y está en el futuro/hoy, Y tiene disponibilidad 'available' o 'last'.
+          const isRelatedToCert =
+            session.certificationIds && session.certificationIds.includes(foundCertification.id);
+          const sessionEndDate = new Date(session.endDate);
+          const isFutureOrToday = sessionEndDate >= today;
+          const isAvailableOrLast =
+            session.availability === 'available' || session.availability === 'last';
+
+          if (isRelatedToCert && isFutureOrToday && isAvailableOrLast) {
+            // Empujar la sesión enriquecida para que UpcomingTripSection la entienda
+            acc.push({
+              ...session,
+              experienceDetails: {
+                // Adjunta detalles de la experiencia padre
+                id: exp.id,
+                slug: exp.slug,
+                titleKey: exp.titleKey,
+                subtitleKey: exp.subtitleKey,
+                nameKey: exp.nameKey, // Para el nombre de la experiencia
+                header: exp.header,
+                seo: exp.seo,
+              },
+            });
+          }
+        });
+        return acc;
+      }, []);
+
+      setAvailableTrips(filteredAvailableTrips); // <-- ¡Actualizar el estado con los viajes filtrados!
     } else {
-      console.error('Certificación no encontrada para el slug:', certificationSlug);
       setError(true);
     }
 
     setIsLoading(false);
-  }, [certificationSlug, certifications]);
+    // Dependencias: el slug de la certificación, y los datos de certificaciones y experiencias (del contexto)
+  }, [certificationSlug, certifications, experiences]);
 
   // --- Render based on state ---
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen text-brand-white text-2xl">
-        {t('common:loading')}...
+        {t(SHARED_TRANSLATION_KEYS.LOADING_LABEL)}...
       </div>
     );
   }
@@ -66,9 +101,9 @@ const CertificationPage = () => {
   return (
     <>
       <SEOComponent
-        title={t(certificationData.seo.titleKey, { ns: 'certificationsPage' })} // Use new namespace
-        description={t(certificationData.seo.descriptionKey, { ns: 'certificationsPage' })} // Use new namespace
-        keywords={t(certificationData.seo.keywords, { ns: 'certificationsPage' })} // Use new namespace
+        title={t(certificationData.seo.titleKey, { ns: NAMESPACES.CERTIFICATIONS })} // Use new namespace
+        description={t(certificationData.seo.descriptionKey, { ns: NAMESPACES.CERTIFICATIONS })} // Use new namespace
+        keywords={t(certificationData.seo.keywords, { ns: NAMESPACES.CERTIFICATIONS })} // Use new namespace
         imageUrl={certificationData.seo.imageUrl}
         url={certificationData.seo.url} // The URL should already be complete from `attachCertificationUrls`
       />{' '}
@@ -78,7 +113,7 @@ const CertificationPage = () => {
         <CertificationLayout
           certificationData={certificationData}
           availableTrips={availableTrips}
-          translationNS={'certificationsPage'}
+          translationNS={NAMESPACES.CERTIFICATIONS}
         />{' '}
         {/* Pass renamed prop */}
       </motion.div>

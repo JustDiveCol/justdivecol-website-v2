@@ -8,6 +8,7 @@ import {
   CATEGORY_REGION,
   SHARED_TRANSLATION_KEYS,
   BUTTON_TYPES,
+  NAMESPACES,
 } from '@/data/global/constants';
 import { LOGO_MAIN } from '@/data/global/assets';
 
@@ -29,9 +30,10 @@ const _santaMarta = {
   type: 'destination',
   coords: [-74.19505030742204, 11.232133282203762], // [lng, lat]
   country: 'CO', // ISO country code
-  minZoom: 9,
+  minZoom: 10.5,
   maxZoom: 16,
   nameKey: 'smName', // i18n key for "Santa Marta"
+  descriptionKey: 'smDescription',
   categoryKey: CATEGORY_REGION.regionCaribe, // e.g., Caribe colombiano
   createdAt: '2025-07-22T18:33:06Z',
   updatedAt: '2025-07-22T18:33:06Z',
@@ -50,10 +52,8 @@ const _santaMarta = {
     backgroundImage: headerBackground,
     titleKey: 'smHeaderTitle',
     subtitleKey: 'smHeaderSubtitle',
-    mainLogo: LOGO_MAIN.mainLogo,
-    mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'XYZ',
     },
   },
@@ -67,11 +67,9 @@ const _santaMarta = {
   // --- Card ---
   card: {
     backgroundImage: cardImage,
-    mainLogo: LOGO_MAIN.mainLogo,
-    mainLogoAltKey: LOGO_MAIN.mainLogo,
-    textOverlayKey: SHARED_TRANSLATION_KEYS.destinationsTextOverlayKey,
+    textOverlayKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_TEXT_OVERLAY,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'XYZ',
     },
     variant: IMAGE_VARIANTS.horizontal,
@@ -80,7 +78,7 @@ const _santaMarta = {
 
   // Details
   details: {
-    titleKey: SHARED_TRANSLATION_KEYS.destinationsDetailsTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_DETAILS_TITLE,
     items: [
       { labelKey: 'smDetailLabel1', valueKey: 'smDetailValue1' },
       { labelKey: 'smDetailLabel2', valueKey: 'smDetailValue2' },
@@ -90,26 +88,15 @@ const _santaMarta = {
     ],
   },
 
-  // --- Dive Sites ---
-  diveSites: {
-    titleKey: SHARED_TRANSLATION_KEYS.destinationsDiveSitesTitleKey,
-    sites: [
-      { id: 'barco-hundido', nameKey: 'smDiveSite1Name', descriptionKey: 'smDiveSite1Desc' },
-      { id: 'natalia', nameKey: 'smDiveSite2Name', descriptionKey: 'smDiveSite2Desc' },
-      { id: 'piedra-del-medio', nameKey: 'smDiveSite3Name', descriptionKey: 'smDiveSite3Desc' },
-      { id: 'isla-aguja', nameKey: 'smDiveSite4Name', descriptionKey: 'smDiveSite4Desc' },
-    ],
-  },
-
   // --- Unique Finds ---
   uniqueFinds: {
-    titleKey: 'smUniqueFindsTitle',
-    items: ['smFind1', 'smFind2', 'smFind3', 'smFind4'],
+    titleKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_UNIQUE_FIDS_TITLE,
+    items: ['smUniqueFind1', 'smUniqueFind2', 'smUniqueFind3', 'smUniqueFind4'],
   },
 
   // --- Gallery ---
   gallery: {
-    titleKey: 'smGalleryTitle',
+    titleKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_GALLERY_TITLE,
     images: [
       {
         backgroundImage: gallery01,
@@ -117,7 +104,7 @@ const _santaMarta = {
         mainLogoAltKey: LOGO_MAIN.altKey,
         altTextKey: 'smGal1Alt',
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'XYZ',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -128,7 +115,7 @@ const _santaMarta = {
         mainLogoAltKey: LOGO_MAIN.altKey,
         altTextKey: 'smGal2Alt',
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'XYZ',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -139,7 +126,7 @@ const _santaMarta = {
         mainLogoAltKey: LOGO_MAIN.altKey,
         altTextKey: 'smGal3Alt',
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'XYZ',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -150,7 +137,7 @@ const _santaMarta = {
         mainLogoAltKey: LOGO_MAIN.altKey,
         altTextKey: 'smGal4Alt',
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'XYZ',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -159,12 +146,12 @@ const _santaMarta = {
   },
   // --- CTA ---
   cta: {
-    textKey: SHARED_TRANSLATION_KEYS.destinationCtaTextButtonKey,
-    translationNS: 'common',
+    textKey: SHARED_TRANSLATION_KEYS.DESTINATION_CTA_BUTTON,
+    translationNS: NAMESPACES.COMMON,
     action: {
       type: BUTTON_TYPES.whatsapp,
-      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.destinationWhatsappMessageKey,
-      whatsAppMessageNS: 'common',
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.DESTINATION_WHATSAPP_MESSAGE,
+      whatsAppMessageNS: NAMESPACES.COMMON,
     },
   },
 

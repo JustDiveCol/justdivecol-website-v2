@@ -1,5 +1,7 @@
 // src/utils/createButtonProps.js
 
+import { BUTTON_TYPES, NAMESPACES } from '@/data/global/constants';
+
 /**
  * Factory function to generate props for the ButtonComponent.
  *
@@ -20,7 +22,7 @@ export function createButtonProps(config) {
   const {
     type,
     textKey,
-    translationNS = 'common',
+    translationNS = NAMESPACES.COMMON,
     path,
     whatsAppMessageKey,
     whatsAppMessageValues,
@@ -31,9 +33,9 @@ export function createButtonProps(config) {
   } = config;
 
   const action = (() => {
-    if (type === 'whatsapp') {
+    if (type === BUTTON_TYPES.whatsapp) {
       return {
-        type: 'whatsapp',
+        type: BUTTON_TYPES.whatsapp,
         whatsAppMessageKey,
         whatsAppMessageValues,
         whatsAppMessageNS,

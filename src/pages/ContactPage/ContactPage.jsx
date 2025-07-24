@@ -12,6 +12,7 @@ import SEOComponent from '../../components/ui/SEOComponent.jsx';
 import HeaderComponent from '../../components/HeaderComponent.jsx';
 import ContactInfoSection from './components/Sections/ContactInfoSection.jsx';
 import WhatsAppCtaSection from './components/Sections/WhatsAppCtaSection.jsx';
+import { NAMESPACES } from '@/data/global/constants.js';
 
 /**
  * Renders the main "Contact Us" page.
@@ -19,7 +20,7 @@ import WhatsAppCtaSection from './components/Sections/WhatsAppCtaSection.jsx';
  * and assembles the various sections of the page.
  */
 const ContactPage = () => {
-  const { t } = useTranslation('contact');
+  const { t } = useTranslation([NAMESPACES.CONTACT, NAMESPACES.COMMON]);
 
   // Destructure page data for cleaner access in the JSX.
   const { seo, header, contactInfo, whatsAppAction } = data;
@@ -43,15 +44,15 @@ const ContactPage = () => {
         url={seo.url}
       />
 
-      <HeaderComponent sectionData={header} translationNS="contact" />
+      <HeaderComponent sectionData={header} translationNS={NAMESPACES.CONTACT} />
 
       <motion.section variants={fadeInUp} className="py-12 px-4">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-start">
-          <ContactInfoSection contactInfoData={contactInfo} translationNS="contact" />
+          <ContactInfoSection contactInfoData={contactInfo} translationNS={NAMESPACES.CONTACT} />
           <WhatsAppCtaSection
             whatsAppActionData={whatsAppAction}
             whatsappUrl={whatsappUrl}
-            translationNS="contact"
+            translationNS={NAMESPACES.CONTACT}
           />
         </div>
       </motion.section>

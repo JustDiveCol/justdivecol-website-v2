@@ -8,9 +8,10 @@ import { staggerContainer } from '../../hooks/animations';
 import SEOComponent from '../../components/ui/SEOComponent';
 import HeaderComponent from '../../components/HeaderComponent';
 import RenderComponent from '../../components/common/Component/RenderComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 const TermsAndConditionsPage = () => {
-  const { t } = useTranslation('termsAndConditions');
+  const { t } = useTranslation([NAMESPACES.TERMS_PAGE, NAMESPACES.COMMON]);
 
   return (
     <>
@@ -22,14 +23,13 @@ const TermsAndConditionsPage = () => {
         url={terms.seo.url}
       />
       <motion.div variants={staggerContainer} initial="hidden" animate="show" exit="hidden">
-        <HeaderComponent sectionData={terms.header} translationNS="termsAndConditions" />
+        <HeaderComponent sectionData={terms.header} translationNS={NAMESPACES.TERMS_PAGE} />
         <div className="container mx-auto py-16 px-4">
-          {/* Solo un mapeo de sections aquí */}
           {terms.sections.map((section) => (
             <RenderComponent
               key={section.id}
               renderData={section}
-              translationNS={'termsAndConditions'}
+              translationNS={NAMESPACES.TERMS_PAGE}
             />
           ))}
         </div>

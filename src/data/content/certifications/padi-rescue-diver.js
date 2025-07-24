@@ -7,6 +7,7 @@ import {
   CERTIFICATION_CATEGORIES,
   IMAGE_VARIANTS,
   LANGUAGES,
+  NAMESPACES,
   SHARED_TRANSLATION_KEYS,
   STATUS,
 } from '@/data/global/constants';
@@ -53,7 +54,7 @@ export const padiRescueDiverCertification = {
     complementaryLogo: PADI_LOGO.padiLogo,
     complementaryLogoAltKey: PADI_LOGO.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },
@@ -71,27 +72,24 @@ export const padiRescueDiverCertification = {
     mainLogoAltKey: LOGO_MAIN.altKey,
     complementaryLogo: PADI_LOGO.padiLogo,
     complementaryLogoAltKey: PADI_LOGO.altKey,
-    textOverlayKey: SHARED_TRANSLATION_KEYS.certificationsTextOverlayKey,
+    textOverlayKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_TEXT_OVERLAY,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
-      text: 'Camilo Beltran @JustDiveCol',
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+      text: 'PADI',
     },
     variant: IMAGE_VARIANTS.horizontal,
   },
 
   // --- Details ---
   details: {
-    titleKey: SHARED_TRANSLATION_KEYS.certificationsDetailsTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_DETAILS_TITLE,
     durationKey: 'rdDetailDurationValue',
-    items: [
-      { labelKey: 'rdDetailLabel1', valueKey: 'rdDetailValue1' },
-      { labelKey: 'rdDetailLabel2', valueKey: 'rdDetailValue2' },
-    ],
+    items: [{ labelKey: 'rdDetailLabel1', valueKey: 'rdDetailValue1' }],
   },
 
   // --- Curriculum ---
   curriculum: {
-    titleKey: SHARED_TRANSLATION_KEYS.certificationsCurriculumTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_CURRICULUM_TITLE,
     modules: [
       { id: 'prevention-and-rescue', nameKey: 'rdModule1Name', descriptionKey: 'rdModule1Desc' },
       {
@@ -103,20 +101,20 @@ export const padiRescueDiverCertification = {
       { id: 'emergency-management', nameKey: 'rdModule4Name', descriptionKey: 'rdModule4Desc' },
       { id: 'rescue-scenarios', nameKey: 'rdModule5Name', descriptionKey: 'rdModule5Desc' },
     ],
-    notes: [SHARED_TRANSLATION_KEYS.certificationsDefaultNoteKey, 'rdCurriculumNote1'],
+    notes: [SHARED_TRANSLATION_KEYS.CERTIFICATIONS_DEFAULT_NOTE, 'rdCurriculumNote1'],
     learningObjectives: ['rdObj1', 'rdObj2', 'rdObj3', 'rdObj4', 'rdObj5'],
     estimatedTimePerModule: { theory: 2 },
   },
 
   // --- Requirements ---
   requirements: {
-    titleKey: SHARED_TRANSLATION_KEYS.certificationsRequirementsTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_REQUIREMENTS_TITLE,
     items: ['rdReqItem1', 'rdReqItem2', 'rdReqItem3', 'rdReqItem4', 'rdReqItem5'],
   },
 
   // --- Included ---
   whatIsIncluded: {
-    titleKey: SHARED_TRANSLATION_KEYS.certificationsIncludedTiteKey,
+    titleKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_INCLUDED_TITLE,
     items: [
       'rdIncludeItem1',
       'rdIncludeItem2',
@@ -131,63 +129,63 @@ export const padiRescueDiverCertification = {
 
   // --- Gallery ---
   gallery: {
-    titleKey: SHARED_TRANSLATION_KEYS.certificationsGalleryTiteKey,
+    titleKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_GALLERY_TITLE,
     images: [
       {
         backgroundImage: gallery01,
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
-        altTextKey: 'rdGaleryImg1Alt',
+        altTextKey: 'rdGalleryImg1Alt',
       },
       {
         backgroundImage: gallery02,
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
-        altTextKey: 'rdGaleryImg2Alt',
+        altTextKey: 'rdGalleryImg2Alt',
       },
       {
         backgroundImage: gallery03,
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
-        altTextKey: 'rdGaleryImg3Alt',
+        altTextKey: 'rdGalleryImg3Alt',
       },
       {
         backgroundImage: gallery04,
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
-        altTextKey: 'rdGaleryImg4Alt',
+        altTextKey: 'rdGalleryImg4Alt',
       },
     ],
   },
 
   // --- CTA ---
   cta: {
-    textKey: SHARED_TRANSLATION_KEYS.certificationCtaTextButtonKey,
-    translationNS: 'common',
+    textKey: SHARED_TRANSLATION_KEYS.CERTIFICATION_CTA_BUTTON,
+    translationNS: NAMESPACES.COMMON,
     action: {
       type: BUTTON_TYPES.whatsapp,
-      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.certificationWhatsappMessageKey,
-      whatsAppMessageNS: 'common',
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.CERTIFICATION_WHATSAPP_MESSAGE,
+      whatsAppMessageNS: NAMESPACES.COMMON,
     },
   },
 };

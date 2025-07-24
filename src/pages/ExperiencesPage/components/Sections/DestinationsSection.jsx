@@ -8,7 +8,7 @@ import { useDestinations } from '@/data/content/destinations/DataProvider';
 import { useExperiences } from '@/data/content/experiences/DataProvider';
 
 import DestinationCardComponent from '../Cards/DestinationCardComponent';
-import { NAMESPACES } from '@/data/global/constants';
+import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 const SCROLL_SPEED = 15; // px por segundo para autoscroll
 
@@ -91,7 +91,7 @@ const CarouselSection = ({ title, items }) => {
   return (
     <div className="mb-12">
       <h3 className="text-subtitle-2 font-semibold text-brand-white mb-6">{title}</h3>
-      <div ref={outerRef} className="overflow-hidden">
+      <div ref={outerRef} className="overflow-hidden py-4">
         <motion.div
           ref={innerRef}
           style={{ x }}
@@ -107,7 +107,10 @@ const CarouselSection = ({ title, items }) => {
         >
           {items.map((dest) => (
             <div key={dest.id} className="flex-shrink-0">
-              <DestinationCardComponent destinationData={dest} />
+              <DestinationCardComponent
+                destinationData={dest}
+                translationNS={NAMESPACES.DESTINATIONS}
+              />
             </div>
           ))}
         </motion.div>
@@ -178,10 +181,18 @@ const DestinationsSection = ({ translationNS }) => {
         </h2>
 
         {/* Carrusel de destinos con viajes activos */}
-        <CarouselSection title={t('expWithTrips')} items={active} />
+        <CarouselSection
+          title={t(SHARED_TRANSLATION_KEYS.EXPERIENCE_WITH_TRIPS_TITLE)}
+          items={active}
+        />
 
         {/* Carrusel de destinos sin viajes */}
-        <CarouselSection title={t('expWithoutTrips')} items={inactive} />
+        {inactive.length > 0 && ( // <-- ¡Añadir esta condición!
+          <CarouselSection
+            title={t(SHARED_TRANSLATION_KEYS.EXPERIENCE_WITH_NO_TRIPS_TITLE)}
+            items={inactive}
+          />
+        )}
       </div>
     </section>
   );

@@ -19,7 +19,7 @@ export const contactPageData = {
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },
@@ -51,10 +51,10 @@ export const contactPageData = {
   whatsAppAction: {
     titleKey: 'contactWhatsAppTitle',
     descriptionKey: 'contactWhatsAppDesc',
-    ctaTextKey: SHARED_TRANSLATION_KEYS.contactTextButtonKey,
+    ctaTextKey: SHARED_TRANSLATION_KEYS.CONTACT_TEXT_BUTTON,
     ctaAction: {
       type: BUTTON_TYPES.whatsapp,
-      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.generalWhatsappMessageKey,
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.GENERAL_WHATSAPP_MESSAGE,
       whatsAppMessageNS: NAMESPACES.COMMON,
     },
   },
@@ -62,15 +62,15 @@ export const contactPageData = {
     backgroundImage: contact_header_background,
     titleKey: 'contactCtaTitle',
     subtitleKey: 'contactCtaSubtitle',
-    ctaTextKey: SHARED_TRANSLATION_KEYS.contactTextButtonKey,
+    ctaTextKey: SHARED_TRANSLATION_KEYS.CONTACT_TEXT_BUTTON,
     ctaAction: {
       type: BUTTON_TYPES.whatsapp,
-      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.generalWhatsappMessageKey,
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.GENERAL_WHATSAPP_MESSAGE,
     },
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },

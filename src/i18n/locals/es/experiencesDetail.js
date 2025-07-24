@@ -1,23 +1,7 @@
 export default {
   // === Common ===
-  experiencesDetailsTitle: '',
-  experiencesPaymentTitle: 'Tu plan de pagos',
-  experiencesItineraryTitle: '',
-  experiencesIncludedTitle: 'Tu inversión incluye',
-  experiencesNotIncludedTitle: 'Tu inversión NO incluye',
-  experiencesGalleryTitle: 'Momentos inolvidables de tu experiencia submarina',
-
-  experiencesDefaultItineraryNote1:
-    'Recomendamos programar tu vuelo de regreso para después del mediodía del último día, a fin de garantizar un margen de seguridad post-buceo adecuado (mínimo 18-24 horas sin volar después de la última inmersión).',
-  experiencesDefaultItineraryNote2:
-    'Para experiencias con menores de edad, es indispensable presentar una autorización notariada del acudiente legal o de ambos padres, según la normativa vigente, para asegurar la protección y el bienestar de los jóvenes exploradores.',
-  experiencesDefaultPaymentNote:
-    'Si tu reserva se realiza después de la fecha límite de un pago, el monto adeudado incluirá las cuotas previas. Por favor, contáctanos para el cálculo exacto y asistencia personalizada.',
-
   //  === Santa Marta ===
   // --- Metadata ---
-  expSmTitle: 'Certificación PADI Open Water Diver: Santa Marta',
-  expSmSubtitle: '',
 
   // --- SEO ---
   expSmSeoTitle:

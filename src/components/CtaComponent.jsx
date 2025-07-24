@@ -22,30 +22,17 @@ const CtaComponent = ({ sectionData, translationNS }) => {
     photoCredit,
   } = sectionData;
 
-  const preventDrag = (e) => {
-    e.preventDefault();
-    return false;
-  };
-
   return (
     <section
       role="img"
       aria-label={`${t(titleKey)} — ${t(subtitleKey)}`}
-      onContextMenu={preventDrag}
-      draggable={false}
-      onDragStart={preventDrag}
       className="group relative bg-cover bg-center py-24 px-4 text-brand-white"
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        WebkitUserDrag: 'none',
       }}
     >
       {/* Dark overlay */}
-      <div
-        className="absolute inset-0 bg-brand-primary-dark/80 pointer-events-none"
-        draggable={false}
-        onDragStart={preventDrag}
-      />
+      <div className="absolute inset-0 bg-brand-primary-dark/80 pointer-events-none" />
 
       {/* Text overlay (top-left) */}
       {textOverlayKey && (
@@ -59,11 +46,8 @@ const CtaComponent = ({ sectionData, translationNS }) => {
         <div className="absolute top-4 right-4 drop-shadow-md opacity-70 z-20">
           <img
             src={complementaryLogo}
-            alt={t(complementaryLogoAltKey, { ns: 'common' })}
+            alt={t(complementaryLogoAltKey, { ns: NAMESPACES.COMMON })}
             className="w-12 h-auto"
-            draggable={false}
-            onDragStart={preventDrag}
-            style={{ WebkitUserDrag: 'none' }}
           />
         </div>
       )}
@@ -73,11 +57,8 @@ const CtaComponent = ({ sectionData, translationNS }) => {
         <div className="absolute bottom-4 right-4 drop-shadow-md opacity-70 z-20">
           <img
             src={mainLogo}
-            alt={t(mainLogoAltKey, { ns: 'common' })}
+            alt={t(mainLogoAltKey, { ns: NAMESPACES.COMMON })}
             className="w-24 h-auto"
-            draggable={false}
-            onDragStart={preventDrag}
-            style={{ WebkitUserDrag: 'none' }}
           />
         </div>
       )}

@@ -12,15 +12,9 @@ const generateSitemap = async () => {
   const staticPages = navLinks.map((link) => link.path);
 
   // Dynamic pages
-  const destinationPages = allDestinationsLite.map(
-    (dest) => `/destinos/${dest.id}`
-  );
-  const experiencePages = publishedExperiencesLite.map(
-    (exp) => `/experiencias/${exp.id}`
-  );
-  const coursePages = publishedCoursesLite.map(
-    (course) => `/cursos/${course.id}`
-  );
+  const destinationPages = allDestinationsLite.map((dest) => `/destinos/${dest.id}`);
+  const experiencePages = publishedExperiencesLite.map((exp) => `/experiencias/${exp.id}`);
+  const coursePages = publishedCoursesLite.map((course) => `/cursos/${course.id}`);
 
   // All unique routes
   const allRoutes = [

@@ -62,7 +62,7 @@ const CertificationSection = ({ translationNS }) => {
             <CertficationCardComponent
               key={cert.id}
               certData={cert}
-              translationNS={NAMESPACES.CERTIFICATIONS_DETAIL}
+              translationNS={NAMESPACES.CERTIFICATIONS}
             />
           ))}
         </motion.div>

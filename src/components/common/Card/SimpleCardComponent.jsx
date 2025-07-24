@@ -16,14 +16,9 @@ const SimpleCardComponent = ({
   complementaryLogo,
   complementaryLogoAltKey,
   photoCredit,
-  translationNS = 'common',
+  translationNS,
 }) => {
-  const { t } = useTranslation([translationNS, 'common']);
-
-  const preventDrag = (e) => {
-    e.preventDefault();
-    return false;
-  };
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const isAnchorLink = link?.startsWith('#');
 
@@ -55,9 +50,6 @@ const SimpleCardComponent = ({
               src={complementaryLogo}
               alt={complementaryLogoAltKey ? t(complementaryLogoAltKey) : ''}
               className="w-10 h-auto"
-              draggable={false}
-              onDragStart={preventDrag}
-              style={{ WebkitUserDrag: 'none' }}
             />
           </div>
         )}
@@ -69,9 +61,6 @@ const SimpleCardComponent = ({
               src={mainLogo}
               alt={mainLogoAltKey ? t(mainLogoAltKey) : ''}
               className="w-16 h-auto"
-              draggable={false}
-              onDragStart={preventDrag}
-              style={{ WebkitUserDrag: 'none' }}
             />
           </div>
         )}
@@ -114,17 +103,11 @@ const SimpleCardComponent = ({
       className="relative w-[30%] min-w-[150px] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg aspect-[4/5] rounded-lg overflow-hidden shadow-2xl"
     >
       {isAnchorLink ? (
-        <button
-          type="button"
-          onClick={handleScroll}
-          className="block h-full w-full text-left"
-          draggable={false}
-          onDragStart={preventDrag}
-        >
+        <button type="button" onClick={handleScroll} className="block h-full w-full text-left">
           {cardContent}
         </button>
       ) : (
-        <Link to={link} className="block h-full w-full" draggable={false} onDragStart={preventDrag}>
+        <Link to={link} className="block h-full w-full">
           {cardContent}
         </Link>
       )}

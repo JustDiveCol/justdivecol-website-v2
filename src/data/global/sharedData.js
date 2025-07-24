@@ -19,7 +19,7 @@ export const experienceCategories = [
     complementaryLogo: PADI_LOGO.padiLogo,
     complementaryLogoAltKey: PADI_LOGO.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },
@@ -31,7 +31,7 @@ export const experienceCategories = [
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },
@@ -43,7 +43,7 @@ export const experienceCategories = [
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: '@giovannidiveservicesl',
     },
   },

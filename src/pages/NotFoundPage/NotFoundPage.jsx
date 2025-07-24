@@ -8,13 +8,14 @@ import { useTranslation } from 'react-i18next';
 import { notFoundData } from '../../data/pages/notFoundData';
 
 import ImageComponent from '../../components/common/Image/ImageComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the 404 "Not Found" error page.
  * This page is displayed when a user navigates to a non-existent route.
  */
 const NotFoundPage = () => {
-  const { t } = useTranslation('notFound');
+  const { t } = useTranslation([NAMESPACES.NOT_FOUND_PAGE, NAMESPACES.COMMON]);
   const { titleKey, subtitleKey, ctaTextKey } = notFoundData;
 
   return (
@@ -22,7 +23,7 @@ const NotFoundPage = () => {
     <div className="relative min-h-[calc(100vh-80px)] flex items-center justify-center text-center p-4 isolate overflow-hidden">
       {/* Background container with an image and a dark overlay. */}
       <div className="absolute inset-0 -z-10 h-full w-full">
-        <ImageComponent imageData={notFoundData.image} translationNS={'common'} />
+        <ImageComponent imageData={notFoundData.image} translationNS={NAMESPACES.COMMON} />
         <div className="absolute inset-0 bg-brand-primary-dark/50"></div>
       </div>
 

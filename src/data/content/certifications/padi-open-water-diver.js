@@ -7,6 +7,7 @@ import {
   CERTIFICATION_CATEGORIES,
   IMAGE_VARIANTS,
   LANGUAGES,
+  NAMESPACES,
   SHARED_TRANSLATION_KEYS,
   STATUS,
 } from '@/data/global/constants';
@@ -53,7 +54,7 @@ export const padiOpenWaterDiverCertification = {
     complementaryLogo: PADI_LOGO.padiLogo,
     complementaryLogoAltKey: PADI_LOGO.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },
@@ -71,9 +72,9 @@ export const padiOpenWaterDiverCertification = {
     mainLogoAltKey: LOGO_MAIN.altKey,
     complementaryLogo: PADI_LOGO.padiLogo,
     complementaryLogoAltKey: PADI_LOGO.altKey,
-    textOverlayKey: SHARED_TRANSLATION_KEYS.certificationsTextOverlayKey,
+    textOverlayKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_TEXT_OVERLAY,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'Camilo Beltran @JustDiveCol',
     },
     variant: IMAGE_VARIANTS.horizontal,
@@ -81,34 +82,34 @@ export const padiOpenWaterDiverCertification = {
 
   // --- Details ---
   details: {
-    titleKey: SHARED_TRANSLATION_KEYS.certificationsDetailsTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_DETAILS_TITLE,
     durationKey: 'owdDetailDurationValue',
     items: [{ labelKey: 'owdDetailLabel1', valueKey: 'owdDetailValue1' }],
   },
 
   // --- Curriculum ---
   curriculum: {
-    titleKey: SHARED_TRANSLATION_KEYS.certificationsCurriculumTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_CURRICULUM_TITLE,
     modules: [
       { id: 'theory', nameKey: 'owdModule1Name', descriptionKey: 'owdModule1Desc' },
       { id: 'advice', nameKey: 'owdModule2Name', descriptionKey: 'owdModule2Desc' },
       { id: 'confined-waters', nameKey: 'owdModule3Name', descriptionKey: 'owdModule3Desc' },
       { id: 'open-water', nameKey: 'owdModule4Name', descriptionKey: 'owdModule4Desc' },
     ],
-    notes: [SHARED_TRANSLATION_KEYS.certificationsDefaultNoteKey],
+    notes: [SHARED_TRANSLATION_KEYS.CERTIFICATIONS_DEFAULT_NOTE],
     learningObjectives: ['owdObj1', 'owdObj2', 'owdObj3', 'owdObj4', 'owdObj5'],
     estimatedTimePerModule: { theory: 2 },
   },
 
   // --- Requirements ---
   requirements: {
-    titleKey: SHARED_TRANSLATION_KEYS.certificationsRequirementsTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_REQUIREMENTS_TITLE,
     items: ['owdReqItem1', 'owdReqItem2', 'owdReqItem3', 'owdReqItem4'],
   },
 
   // --- Included ---
   whatIsIncluded: {
-    titleKey: SHARED_TRANSLATION_KEYS.certificationsIncludedTiteKey,
+    titleKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_INCLUDED_TITLE,
     items: [
       'owdIncludeItem1',
       'owdIncludeItem2',
@@ -123,63 +124,63 @@ export const padiOpenWaterDiverCertification = {
 
   // --- Gallery ---
   gallery: {
-    titleKey: SHARED_TRANSLATION_KEYS.certificationsGalleryTiteKey,
+    titleKey: SHARED_TRANSLATION_KEYS.CERTIFICATIONS_GALLERY_TITLE,
     images: [
       {
         backgroundImage: gallery01,
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
-        altTextKey: 'owdGaleryImg1Alt',
+        altTextKey: 'owdGalleryImg1Alt',
       },
       {
         backgroundImage: gallery02,
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
-        altTextKey: 'owdGaleryImg2Alt',
+        altTextKey: 'owdGalleryImg2Alt',
       },
       {
         backgroundImage: gallery03,
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
-        altTextKey: 'owdGaleryImg3Alt',
+        altTextKey: 'owdGalleryImg3Alt',
       },
       {
         backgroundImage: gallery04,
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
-        altTextKey: 'owdGaleryImg4Alt',
+        altTextKey: 'owdGalleryImg4Alt',
       },
     ],
   },
 
   // --- CTA ---
   cta: {
-    textKey: SHARED_TRANSLATION_KEYS.certificationCtaTextButtonKey,
-    translationNS: 'common',
+    textKey: SHARED_TRANSLATION_KEYS.CERTIFICATION_CTA_BUTTON,
+    translationNS: NAMESPACES.COMMON,
     action: {
       type: BUTTON_TYPES.whatsapp,
-      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.certificationWhatsappMessageKey,
-      whatsAppMessageNS: 'common',
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.CERTIFICATION_WHATSAPP_MESSAGE,
+      whatsAppMessageNS: NAMESPACES.COMMON,
     },
   },
 };

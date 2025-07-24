@@ -17,13 +17,14 @@ import HistorySection from './components/Sections/HistorySection.jsx';
 import TeamSection from './components/Sections/TeamSection.jsx';
 import CommitmentSection from './components/Sections/CommitmentSection.jsx';
 import CtaComponent from '../../components/CtaComponent.jsx';
+import { NAMESPACES } from '@/data/global/constants.js';
 
 /**
  * Renders the "About Us" page.
  * This component assembles all the sections that constitute the page.
  */
 export const AboutUsPage = () => {
-  const { t } = useTranslation('aboutUs');
+  const { t } = useTranslation([NAMESPACES.ABOUT_US_PAGE, NAMESPACES.COMMON]);
 
   // Destructure page-specific data for cleaner access in the JSX.
   const { seo, header, history, team, commitment } = aboutUsPageData;
@@ -44,16 +45,19 @@ export const AboutUsPage = () => {
         animate="animate"
         exit="exit"
       >
-        <HeaderComponent sectionData={header} translationNS="aboutUs" />
+        <HeaderComponent sectionData={header} translationNS={NAMESPACES.ABOUT_US_PAGE} />
 
-        <HistorySection historyData={history} />
+        <HistorySection historyData={history} translationNS={NAMESPACES.ABOUT_US_PAGE} />
 
-        <TeamSection teamData={team} translationNS={'aboutUs'} />
+        <TeamSection teamData={team} translationNS={NAMESPACES.ABOUT_US_PAGE} />
 
-        <CommitmentSection commitmentData={commitment} translationNS={'aboutUs'} />
+        <CommitmentSection commitmentData={commitment} translationNS={NAMESPACES.ABOUT_US_PAGE} />
 
         {/* The final CTA reuses data from the contact page for consistency. */}
-        <CtaComponent sectionData={contactPageData.cta} translationNS={['contact', 'common']} />
+        <CtaComponent
+          sectionData={contactPageData.cta}
+          translationNS={[NAMESPACES.CONTACT, NAMESPACES.COMMON]}
+        />
       </motion.div>
     </>
   );

@@ -24,30 +24,17 @@ const HeroSection = ({ translationNS }) => {
     photoCredit,
   } = homePageData.hero;
 
-  const preventDrag = (e) => {
-    e.preventDefault();
-    return false;
-  };
-
   return (
     <section
       role="img"
       aria-label={`${t(titleKey)} — ${t(subtitleKey)}`}
-      onContextMenu={preventDrag}
-      draggable={false}
-      onDragStart={preventDrag}
       className="group relative min-h-screen min-h-hero flex items-center text-brand-white bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `url(${imageUrl})`,
-        WebkitUserDrag: 'none',
       }}
     >
       {/* Dark Overlay */}
-      <div
-        className="absolute inset-0 bg-brand-primary-dark/70 pointer-events-none"
-        draggable={false}
-        onDragStart={preventDrag}
-      />
+      <div className="absolute inset-0 bg-brand-primary-dark/70 pointer-events-none" />
 
       {/* Text overlay (optional) */}
       {textOverlay && (
@@ -59,28 +46,14 @@ const HeroSection = ({ translationNS }) => {
       {/* Complementary Logo */}
       {complementaryLogo && (
         <div className="absolute top-4 right-4 drop-shadow-xl opacity-80 z-30 w-12 h-auto select-none">
-          <img
-            src={complementaryLogo}
-            alt={t(complementaryLogoAlt)}
-            className="w-12 h-auto"
-            draggable={false}
-            onDragStart={preventDrag}
-            style={{ WebkitUserDrag: 'none' }}
-          />
+          <img src={complementaryLogo} alt={t(complementaryLogoAlt)} className="w-12 h-auto" />
         </div>
       )}
 
       {/* Main Logo */}
       {mainLogo && (
         <div className="absolute bottom-4 right-4 drop-shadow-xl opacity-80 z-30 w-24 h-auto select-none">
-          <img
-            src={mainLogo}
-            alt={t(mainLogoAlt)}
-            className="w-24 h-auto"
-            draggable={false}
-            onDragStart={preventDrag}
-            style={{ WebkitUserDrag: 'none' }}
-          />
+          <img src={mainLogo} alt={t(mainLogoAlt)} className="w-24 h-auto" />
         </div>
       )}
 

@@ -1,25 +1,26 @@
-import map_image from '../../assets/images/backgrounds/map.webp';
+import headerBackground from '../../assets/images/page-specific/map/header-background.webp';
 
-import logo from '../../assets/images/logos/logo.png';
+import { LOGO_MAIN } from '../global/assets';
+import { SHARED_TRANSLATION_KEYS } from '../global/constants';
 
 export const mapData = {
   seo: {
     titleKey: 'mapSeoTitle',
     descriptionKey: 'mapSeoDesc',
     keywords: 'mapSeoKeywords',
-    imageUrl: map_image,
+    imageUrl: headerBackground,
     url: '/mapa',
   },
   header: {
-    backgroundImage: 'https://placehold.co/1920x600?text=Maps+Header',
+    backgroundImage: headerBackground,
     titleKey: 'mapHeaderTitle',
     subtitleKey: 'mapHeaderSubtitle',
-    mainLogo: logo,
-    mainLogoAltKey: 'mapHeaderMainLogoAlt',
-    // complementaryLogo: padi,
-    // complementaryLogoAltKey: 'mapHeaderComplementaryLogoAlt',
-    // textOverlayKey: 'mapHeaderTextOverlay',
-    photoCreditKey: 'mapHeaderPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+      text: '© OpenStreetMap',
+    },
   },
   allLabelKey: 'allLabel',
   clearFiltersLabelKey: 'clearFiltersLabel',

@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../hooks/animations';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders a card for a single piece of safety equipment, displaying its icon, name, and description.
@@ -13,8 +14,8 @@ import { fadeInUp } from '../../../hooks/animations';
  * @param {string} props.itemData.descriptionKey - The translation key for the equipment's description.
  * @param {React.ReactNode} props.icon - The actual icon component to render.
  */
-export const EquipmentCardComponent = ({ itemData, icon }) => {
-  const { t } = useTranslation('safety');
+export const EquipmentCardComponent = ({ translationNS, itemData, icon }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   return (
     <motion.div

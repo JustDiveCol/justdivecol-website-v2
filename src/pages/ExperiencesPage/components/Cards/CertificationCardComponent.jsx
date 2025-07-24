@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { fadeInUp } from '../../../../hooks/animations';
 import ImageComponent from '../../../../components/common/Image/ImageComponent';
-import { NAMESPACES } from '@/data/global/constants';
+import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 /**
  * Renders a detailed card for a single certification, showing its image, title,
@@ -85,7 +85,7 @@ const CertificationCardComponent = ({ certData, translationNS }) => {
         to={seo.url}
         className="block bg-brand-cta-orange text-center text-brand-white font-bold uppercase text-xs sm:text-sm md:text-base p-2 sm:p-3 hover:bg-opacity-90 transition-colors mt-auto"
       >
-        {t('common:viewDetails')}
+        {t(SHARED_TRANSLATION_KEYS.VIEW_DETAILS_LABEL)}
       </Link>
     </motion.div>
   );

@@ -9,13 +9,14 @@ import { useExperiences } from '@/data/content/experiences/DataProvider';
 import { staggerContainer } from '../../../../hooks/animations';
 
 import CourseCardComponent from '../Cards/CourseCardComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the "Courses & Certifications" section of the Experiences page.
  * It fetches all published courses and displays them as cards.
  */
 const CoursesSection = ({ translationNS }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
   const { sectionId, titleKey } = experiencesData.fullCatalog.courses;
 
   // Get all certifications and experiences with sessions

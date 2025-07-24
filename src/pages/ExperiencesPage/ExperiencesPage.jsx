@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 
 // Data and animations
 import { experiencesData } from '../../data/pages/experiencesData';
-import { homePageData } from '../../data/pages/homeData';
 import { staggerContainer } from '../../hooks/animations';
 
 // Components
@@ -22,7 +21,7 @@ import { NAMESPACES } from '../../data/global/constants';
 const ExperiencesPage = () => {
   const { t } = useTranslation([NAMESPACES.EXPERIENCES_PAGE, NAMESPACES.COMMON]);
   const { seo, customTripCta } = experiencesData;
-  const { titleKey, subtitleKey, categories } = homePageData.featuredExperiences;
+  const { titleKey, subtitleKey, categories } = experiencesData.featuredExperiences;
 
   return (
     <div>
@@ -35,18 +34,24 @@ const ExperiencesPage = () => {
       />
 
       <motion.div variants={staggerContainer} initial="initial" animate="animate" exit="exit">
-        <CalendarExperiencesSection translationNS={NAMESPACES.EXPERIENCES_PAGE} />
+        <CalendarExperiencesSection
+          translationNS={[NAMESPACES.EXPERIENCES_PAGE, NAMESPACES.EXPERIENCES]}
+        />
 
         <ExperiencesSection
-          translationNS={NAMESPACES.HOME_PAGE}
+          translationNS={[NAMESPACES.EXPERIENCES_PAGE, NAMESPACES.HOME_PAGE]}
           titleKey={titleKey}
           subtitleKey={subtitleKey}
           categories={categories}
         />
 
-        <CertificationSection translationNS={NAMESPACES.EXPERIENCES_PAGE} />
+        <CertificationSection
+          translationNS={[NAMESPACES.EXPERIENCES_PAGE, NAMESPACES.CERTIFICATIONS]}
+        />
 
-        <DestinationsSection translationNS={NAMESPACES.EXPERIENCES_PAGE} />
+        <DestinationsSection
+          translationNS={[NAMESPACES.EXPERIENCES_PAGE, NAMESPACES.DESTINATIONS]}
+        />
 
         <CtaComponent sectionData={customTripCta} translationNS={NAMESPACES.EXPERIENCES_PAGE} />
       </motion.div>

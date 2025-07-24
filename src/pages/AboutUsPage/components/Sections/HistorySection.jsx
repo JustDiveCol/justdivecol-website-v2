@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
 
 import ImageComponent from '../../../../components/common/Image/ImageComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the "Our History" section with a title, paragraphs, and a feature image.
@@ -15,8 +16,8 @@ import ImageComponent from '../../../../components/common/Image/ImageComponent';
  * @param {string[]} props.historyData.paragraphs - An array of translation keys for the paragraphs.
  * @param {string} props.historyData.imageUrl - The URL for the section's image.
  */
-const HistorySection = ({ historyData }) => {
-  const { t } = useTranslation('aboutUs');
+const HistorySection = ({ translationNS, historyData }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   return (
     <motion.section variants={staggerContainer} className="py-12 px-4 bg-brand-primary-dark">
@@ -42,7 +43,7 @@ const HistorySection = ({ historyData }) => {
                 <ImageComponent
                   className="rounded-2xl"
                   imageData={historyData.image}
-                  translationNS={'aboutUs'}
+                  translationNS={translationNS}
                 />
               </div>
             )}

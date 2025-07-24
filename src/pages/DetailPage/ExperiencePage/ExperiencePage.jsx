@@ -1,5 +1,5 @@
 // src/pages/DetailPage/ExperiencePage/ExperiencePage.jsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
@@ -11,38 +11,33 @@ import ExperienceLayout from './Layout/ExperienceLayout';
 
 // Data fetching utility
 import { useExperiences } from '@/data/content/experiences/DataProvider';
-import { useCertifications } from '@/data/content/certifications/DataProvider'; // Necesitarás las certificaciones para filtrar
+import { useCertifications } from '@/data/content/certifications/DataProvider';
+import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
-/**
- * Renders the detail page for a specific experience session.
- * It fetches the parent experience data, the specific session data, and any associated certifications
- * based on the 'experienceSlug' and 'sessionSlug' from the URL.
- * Handles loading/error states and passes the data to the ExperienceLayout.
- */
 const ExperiencePage = () => {
-  const { experienceSlug, sessionSlug } = useParams(); // Get slugs from the URL.
-  const { t } = useTranslation(['experienceDetailPage', 'common']); // Recommended new namespace for clarity
+  const { experienceSlug, sessionSlug } = useParams();
+  const { t } = useTranslation([
+    NAMESPACES.EXPERIENCES,
+    NAMESPACES.COMMON,
+    NAMESPACES.EXPERIENCE_DETAIL_PAGE,
+  ]);
 
-  // Get all experiences and certifications from the Context Providers
   const { experiences } = useExperiences();
   const { certifications } = useCertifications();
 
-  // State for managing experience data, courses, loading, and errors.
   const [experienceData, setExperienceData] = useState(null);
   const [sessionData, setSessionData] = useState(null);
   const [offeredCertificationsData, setOfferedCertificationsData] = useState([]);
+  const [otherTripsToThisDestination, setOtherTripsToThisDestination] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  // Effect to fetch all necessary data when the tripId changes.
   useEffect(() => {
-    setIsLoading(true); // Always reset loading state at the start of effect
-    setError(false); // Always reset error state
+    setIsLoading(true);
+    setError(false);
 
-    // 1. Find the parent experience using experienceSlug
     const foundExperience = experiences.find((exp) => exp.slug === experienceSlug);
 
-    // 2. Find the specific session using sessionSlug
     let foundSession = null;
     if (foundExperience) {
       foundSession = foundExperience.sessions.find((ses) => ses.slug === sessionSlug);
@@ -50,50 +45,91 @@ const ExperiencePage = () => {
 
     if (foundExperience && foundSession) {
       setExperienceData(foundExperience);
-      setSessionData(foundSession); // Set the specific session data
+      setSessionData(foundSession);
 
-      // 3. Filter certifications based on sessionData.certificationIds
       const associatedCertifications = certifications.filter(
         (cert) => foundSession.certificationIds && foundSession.certificationIds.includes(cert.id)
       );
       setOfferedCertificationsData(associatedCertifications);
+
+      // --- LÓGICA CLAVE REVISADA PARA otherTripsToThisDestination ---
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const filteredOtherTrips = experiences.reduce((acc, exp) => {
+        // Incluir experiencias que están en el mismo destino
+        const isSameDestination = exp.destinationId === foundExperience.destinationId;
+        // La condición para excluir solo debe ser si es la *misma sesión*
+        // o si es una experiencia *completamente diferente* en el mismo destino
+        const isCurrentExperience = exp.id === foundExperience.id; // TRUE si es la experiencia que estamos viendo
+        const hasSessions = exp.sessions && exp.sessions.length > 0;
+
+        if (isSameDestination && hasSessions) {
+          exp.sessions.forEach((session) => {
+            const sessionEndDate = new Date(session.endDate);
+            const isFutureOrToday = sessionEndDate >= today;
+            const isAvailableOrLast =
+              session.availability === 'available' || session.availability === 'last';
+            const isNotCurrentSession = session.id !== foundSession.id; // Excluir solo la sesión actual
+
+            if (isFutureOrToday && isAvailableOrLast && isNotCurrentSession) {
+              acc.push({
+                ...session,
+                experienceDetails: {
+                  id: exp.id,
+                  slug: exp.slug,
+                  titleKey: exp.titleKey,
+                  subtitleKey: exp.subtitleKey,
+                  nameKey: exp.nameKey,
+                  header: exp.header,
+                  seo: exp.seo,
+                },
+              });
+            }
+          });
+        }
+        return acc;
+      }, []);
+
+      setOtherTripsToThisDestination(filteredOtherTrips);
     } else {
-      // If experience or session not found, set error
       setError(true);
     }
     setIsLoading(false);
-  }, [experienceSlug, sessionSlug, experiences, certifications]);
+  }, [experienceSlug, sessionSlug, experiences, certifications]); // Las dependencias deben incluir 'experiences' y 'certifications'
 
   // --- Render based on component state ---
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen text-brand-white text-2xl">
-        {t('common:loading')}...
+        {t(SHARED_TRANSLATION_KEYS.LOADING_LABEL)}...
       </div>
     );
   }
 
-  // Check for error OR if either experienceData or sessionData is missing
   if (error || !experienceData || !sessionData) {
-    return <Navigate to="/404" replace />;
+    return <Navigate to={NAMESPACES.NOT_FOUND_PAGE} replace />;
   }
 
   return (
     <>
       <SEOComponent
-        // Use experienceData for SEO, as session data doesn't have its own SEO block
-        title={t(experienceData.seo.titleKey, { ns: 'experienceDetailPage' })} // New namespace
-        description={t(experienceData.seo.descriptionKey, { ns: 'experienceDetailPage' })} // New namespace
-        keywords={t(experienceData.seo.keywords, { ns: 'experienceDetailPage' })} // New namespace
+        title={t(experienceData.seo.titleKey, { ns: NAMESPACES.EXPERIENCE_DETAIL_PAGE })}
+        description={t(experienceData.seo.descriptionKey, {
+          ns: NAMESPACES.EXPERIENCE_DETAIL_PAGE,
+        })}
+        keywords={t(experienceData.seo.keywords, { ns: NAMESPACES.EXPERIENCE_DETAIL_PAGE })}
         imageUrl={experienceData.seo.imageUrl}
         url={sessionData.url}
       />
       <motion.div variants={staggerContainer} initial="initial" animate="animate" exit="exit">
         <ExperienceLayout
           experienceData={experienceData}
-          sessionData={sessionData} // Pass the specific session data
-          offeredCertificationsData={offeredCertificationsData} // Pass certifications
+          sessionData={sessionData}
+          offeredCertificationsData={offeredCertificationsData}
+          otherTripsToThisDestination={otherTripsToThisDestination}
+          isFounderTrip={sessionData.founders || false}
         />
       </motion.div>
     </>

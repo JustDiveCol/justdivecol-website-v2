@@ -8,8 +8,8 @@ export default {
     'Explora nuestro calendario de emocionantes experiencias y cursos programados. ¡Tu gran inmersión te espera!',
   expPastTripsTitle: 'Nuestros recuerdos bajo el mar: experiencias pasadas',
 
-  expWithTrips: 'Destinos disponibles',
-  expWithoutTrips: 'Otros destinos',
+  expWithTripsTitle: 'Destinos disponibles',
+  expWithoutTripsTitle: 'Otros destinos',
 
   // === SEO SECTION ===
   expSeoTitle: 'Experiencias de buceo | JustDiveCol - Cursos y viajes a medida',

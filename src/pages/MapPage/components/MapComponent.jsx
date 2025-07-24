@@ -30,6 +30,7 @@ import {
   ArtificialReefIcon,
   FlagIcon,
 } from '../../../assets/icons/MapsIcons';
+import { SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 // ========== Default Constants ==========
 const DEFAULT_CENTER = [-74.297333, 4.570868];
@@ -179,7 +180,7 @@ const MapComponent = ({ destinationId }) => {
     const presentTypeIds = new Set();
     relevantSites.forEach((site) => site.typeIds?.forEach((id) => presentTypeIds.add(id)));
     const filteredTypes = DIVE_TYPES.filter((type) => presentTypeIds.has(type.id));
-    return [{ id: 'all', translationKey: 'map:allLabel' }, ...filteredTypes];
+    return [{ id: 'all', translationKey: SHARED_TRANSLATION_KEYS.MAP_ALL_LABEL }, ...filteredTypes];
   }, [baseSites, activeDifficulty, activeDestination]);
 
   const difficultyFilterOptions = useMemo(() => {
@@ -192,7 +193,10 @@ const MapComponent = ({ destinationId }) => {
     const filteredDifficulties = DIVE_DIFFICULTIES.filter((diff) =>
       presentDifficultyIds.has(diff.id)
     );
-    return [{ id: 'all', translationKey: 'map:allLabel' }, ...filteredDifficulties];
+    return [
+      { id: 'all', translationKey: SHARED_TRANSLATION_KEYS.MAP_ALL_LABEL },
+      ...filteredDifficulties,
+    ];
   }, [baseSites, activeType, activeDestination]);
 
   const destinationOptions = useMemo(() => {
@@ -212,7 +216,7 @@ const MapComponent = ({ destinationId }) => {
       })
       .filter(Boolean);
     if (uniqueDestinationIds.size > 1) {
-      return [{ id: 'all', translationKey: 'map:allLabel' }, ...options];
+      return [{ id: 'all', translationKey: SHARED_TRANSLATION_KEYS.MAP_ALL_LABEL }, ...options];
     }
     return options;
   }, [baseSites, activeType, activeDifficulty, destinationId, destinationsById]);
@@ -256,7 +260,7 @@ const MapComponent = ({ destinationId }) => {
               tiles: ['https://a.tile.opentopomap.org/{z}/{x}/{y}.png'],
               tileSize: 256,
               attribution:
-                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors | © <a href="https://opentopomap.org" target="_blank" rel="noopener noreferrer">OpenTopoMap</a> (CC-BY-SA) | Data © <a href="https://justdivecol.com">JustDiveCol</a>',
             },
           },
           layers: [
@@ -462,9 +466,11 @@ const MapComponent = ({ destinationId }) => {
       >
         <div className="flex items-center">
           <InfoIcon className="w-5 h-5 mr-3" />
-          <div>
-            <strong className="font-bold">{t('mapDisclaimerTitle', { ns: 'map' })}</strong>
-            <span className="block sm:inline">{t('mapDisclaimerText', { ns: 'map' })}</span>
+          <div className="text-xs md:text-sm">
+            <strong className="font-bold">{t(SHARED_TRANSLATION_KEYS.MAP_DISCLAMER_TITLE)}</strong>
+            <span className="block sm:inline">
+              {t(SHARED_TRANSLATION_KEYS.MAP_DISCLAIMER_TEXT)}
+            </span>
           </div>
         </div>
       </div>

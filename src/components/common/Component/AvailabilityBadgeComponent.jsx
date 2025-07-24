@@ -2,32 +2,31 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { AVAILABILITY, NAMESPACES } from '@/data/global/constants';
+import { AVAILABILITY, NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 const AvailabilityBadgeComponent = ({ translationNS, status, className = '' }) => {
   const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const statusMap = {
     available: {
-      text: t('statusAvailable', 'Disponible'),
+      text: t(SHARED_TRANSLATION_KEYS.STATUS_AVAILABLE_TEXT),
       className: 'bg-brand-cta-green text-brand-primary-dark',
       animationType: 'pulse-infinite',
     },
     last: {
-      text: t('statusLastSeats', 'Últimos Cupos'),
+      text: t(SHARED_TRANSLATION_KEYS.STATUS_LAST_SEATS_TEXT),
       className: 'bg-brand-cta-yellow text-brand-primary-dark',
       animationType: 'pulse-infinite',
     },
     soldOut: {
-      text: t('statusSoldOut', 'Agotado'),
+      text: t(SHARED_TRANSLATION_KEYS.STATUS_LAST_SEATS_TEXT),
       className: 'bg-red-500 text-brand-primary-dark',
       animationType: 'pulse-finite',
     },
-    // --- Nuevo estado para viajes pasados ---
     completed: {
-      text: t('statusCompleted', 'Finalizado'),
+      text: t(SHARED_TRANSLATION_KEYS.STATUS_COMPLETE_TEXT),
       className: 'bg-gray-500 text-white',
-      animationType: 'none', // Sin animación
+      animationType: 'none',
     },
   };
 

@@ -3,6 +3,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import ImageComponent from '../../../../components/common/Image/ImageComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders a section with a title and a grid of images.
@@ -14,7 +15,7 @@ import ImageComponent from '../../../../components/common/Image/ImageComponent';
  * @param {string} props.translationNS - The i18next namespace for the translations.
  */
 const GallerySection = ({ galleryData, translationNS }) => {
-  const { t } = useTranslation(translationNS);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   // Do not render if there is no gallery data or no images.
   if (!galleryData || !galleryData.images || galleryData.images.length === 0) {
@@ -23,10 +24,8 @@ const GallerySection = ({ galleryData, translationNS }) => {
 
   return (
     <section>
-      <h2 className='text-3xl font-bold text-brand-white mb-6'>
-        {t(galleryData.titleKey)}
-      </h2>
-      <div className='grid grid-cols-2 gap-4'>
+      <h2 className="heading-4 font-bold text-brand-white mb-6">{t(galleryData.titleKey)}</h2>
+      <div className="grid grid-cols-2 gap-4">
         {galleryData.images.map((image, i) => (
           <ImageComponent
             key={i}

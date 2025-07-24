@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../hooks/animations';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Reusable Header component with background image, title, subtitle, and optional logos/credits.
@@ -13,7 +14,7 @@ import { fadeInUp } from '../hooks/animations';
  * @param {string} [props.heightClass='h-80'] - OPTIONAL: Tailwind class to override the default height (e.g., 'h-64').
  */
 const HeaderComponent = ({ sectionData, translationNS, heightClass = 'h-80' }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const {
     backgroundImage,
@@ -27,11 +28,6 @@ const HeaderComponent = ({ sectionData, translationNS, heightClass = 'h-80' }) =
     photoCredit,
   } = sectionData;
 
-  const preventDrag = (e) => {
-    e.preventDefault();
-    return false;
-  };
-
   return (
     <motion.div variants={fadeInUp}>
       <div className={`group relative ${heightClass}`}>
@@ -42,11 +38,7 @@ const HeaderComponent = ({ sectionData, translationNS, heightClass = 'h-80' }) =
           className="relative w-full h-full bg-cover bg-center flex items-center justify-center text-center text-brand-white"
           style={{
             backgroundImage: `url(${backgroundImage})`,
-            WebkitUserDrag: 'none',
           }}
-          draggable={false}
-          onDragStart={preventDrag}
-          onContextMenu={preventDrag}
         >
           {/* Overlay */}
           <div className="absolute inset-0 bg-brand-primary-dark/70 z-0 pointer-events-none" />
@@ -75,9 +67,6 @@ const HeaderComponent = ({ sectionData, translationNS, heightClass = 'h-80' }) =
                 src={complementaryLogo}
                 alt={t(complementaryLogoAltKey)}
                 className="w-12 h-auto"
-                draggable={false}
-                onDragStart={preventDrag}
-                style={{ WebkitUserDrag: 'none' }}
               />
             </div>
           )}
@@ -85,14 +74,7 @@ const HeaderComponent = ({ sectionData, translationNS, heightClass = 'h-80' }) =
           {/* Main Logo */}
           {mainLogo && (
             <div className="absolute bottom-4 right-4 z-20 drop-shadow-md opacity-70">
-              <img
-                src={mainLogo}
-                alt={t(mainLogoAltKey)}
-                className="w-24 h-auto"
-                draggable={false}
-                onDragStart={preventDrag}
-                style={{ WebkitUserDrag: 'none' }}
-              />
+              <img src={mainLogo} alt={t(mainLogoAltKey)} className="w-24 h-auto" />
             </div>
           )}
         </div>
@@ -100,7 +82,7 @@ const HeaderComponent = ({ sectionData, translationNS, heightClass = 'h-80' }) =
         {/* Photo Credit */}
         {photoCredit && (
           <div className="absolute bottom-0 left-0 w-full bg-brand-primary-dark/50 text-brand-white text-xs px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-text z-20 text-left">
-            {t(photoCredit.prefixKey, { ns: 'common' })}
+            {t(photoCredit.prefixKey, { ns: NAMESPACES.COMMON })}
             {photoCredit.text}
           </div>
         )}

@@ -21,7 +21,6 @@ import ExperiencePage from './pages/DetailPage/ExperiencePage/ExperiencePage.jsx
 import DestinationPage from './pages/DetailPage/DestinationPage/DestinationPage.jsx';
 import PolicyPage from './pages/PolicyPage/PolicyPage.jsx';
 import MapPage from './pages/MapPage/MapPage.jsx';
-import GearPage from './pages/GearPage/GearPage.jsx';
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage/TermsAndConditionsPage.jsx';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage.jsx';
 import FaqsPage from './pages/FaqsPage/FaqsPage.jsx';
@@ -56,7 +55,6 @@ const router = createBrowserRouter([
       { path: ROUTES.contact, element: <ContactPage /> },
       { path: ROUTES.policy, element: <PolicyPage /> },
       { path: ROUTES.divesites, element: <MapPage /> },
-      { path: ROUTES.mainStore, element: <GearPage /> },
       { path: ROUTES.terms, element: <TermsAndConditionsPage /> },
       { path: ROUTES.privacy, element: <PrivacyPolicyPage /> },
       { path: ROUTES.faq, element: <FaqsPage /> },

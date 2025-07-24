@@ -1,6 +1,6 @@
 // src/pages/ExperiencesPage/components/Sections/CalendarExperiencesSection.jsx
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react'; // Asegúrate de que AnimatePresence esté importado
 import { useTranslation } from 'react-i18next';
 
 // Data sources and animations
@@ -18,65 +18,94 @@ import { ChevronLeftIcon, ChevronRightIcon } from '../../../../assets/icons/Chev
 import { CalendarIcon } from '../../../../assets/icons/SocialIcons.jsx';
 import { NAMESPACES } from '@/data/global/constants';
 
+// --- COMPONENTE REUTILIZABLE: Controles de Paginación (sin cambios) ---
+const PaginationControls = ({ currentPage, totalPages, onPageChange }) => {
+  if (totalPages <= 1) return null;
+
+  return (
+    <div className="flex items-center justify-center mt-8 space-x-4">
+      <button
+        onClick={() => onPageChange('prev')}
+        className="p-2 rounded-full bg-brand-primary-dark hover:bg-brand-cta-orange transition-colors text-white cursor-pointer"
+        aria-label="Previous page"
+      >
+        <ChevronLeftIcon />
+      </button>
+      <div className="flex space-x-2">
+        {[...Array(totalPages)].map((_, i) => (
+          <button
+            key={i}
+            onClick={() => onPageChange(i)}
+            className={`w-3 h-3 rounded-full transition-colors ${
+              currentPage === i
+                ? 'bg-brand-cta-orange'
+                : 'bg-brand-primary-light hover:bg-brand-neutral/50'
+            }`}
+            aria-label={`Go to page ${i + 1}`}
+          />
+        ))}
+      </div>
+      <button
+        onClick={() => onPageChange('next')}
+        className="p-2 rounded-full bg-brand-primary-dark hover:bg-brand-cta-orange transition-colors text-white cursor-pointer"
+        aria-label="Next page"
+      >
+        <ChevronRightIcon />
+      </button>
+    </div>
+  );
+};
+
 /**
  * Renders a paginated calendar section of all upcoming trips.
  * It filters and sorts all published experiences to create a chronological list.
  */
 const CalendarExperiencesSection = ({ translationNS }) => {
-  const { t } = useTranslation([translationNS, 'common']);
-  const [currentPage, setCurrentPage] = useState(0);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
+  const [upcomingCurrentPage, setUpcomingCurrentPage] = useState(0);
+  const [pastCurrentPage, setPastCurrentPage] = useState(0);
 
-  // Get all experiences from the Context Provider
-  const { experiences } = useExperiences(); // Correcto: Obtiene las experiencias enriquecidas
+  const { experiences } = useExperiences();
 
-  // --- LÓGICA CENTRALIZADA DE FECHAS Y DURACIÓN ---
   const { upcomingTrips, pastTrips } = useMemo(() => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
     const allSessionsWithDetails = [];
 
-    // Iteramos sobre cada experiencia y luego sobre sus sesiones
-    // `experiences` ya viene enriquecido con la propiedad `sessions` de DataProvider.jsx
     experiences.forEach((experience) => {
       (experience.sessions || []).forEach((session) => {
-        // Accede a las sesiones de la experiencia
-        const startDate = new Date(session.startDate); // Las fechas están en la sesión
-        const endDate = new Date(session.endDate); // Las fechas están en la sesión
-        let finalStatus = session.availability; // La disponibilidad está en la sesión
+        const startDate = new Date(session.startDate);
+        const endDate = new Date(session.endDate);
+        let finalStatus = session.availability;
 
         if (endDate < today) {
           finalStatus = 'completed';
         }
 
-        // Calcula la duración en días y noches
         const timeDiff = endDate.getTime() - startDate.getTime();
         const dayDiff = Math.round(timeDiff / (1000 * 3600 * 24));
 
         const days = dayDiff + 1;
         const nights = days - 1;
 
-        // Retorna el objeto de la sesión con el status y la duración añadidos,
-        // y también adjunta la experiencia padre para tener acceso a sus datos (título, descripción, etc.)
         allSessionsWithDetails.push({
-          ...session, // Todas las propiedades de la sesión
+          ...session,
           finalStatus,
           duration: { days, nights },
-          // Adjuntamos una referencia a la experiencia padre si la necesitas en la tarjeta
           experienceDetails: {
             id: experience.id,
             slug: experience.slug,
             titleKey: experience.titleKey,
             subtitleKey: experience.subtitleKey,
-            header: experience.header, // Puedes pasar más datos si CalendarExperienceCardComponent los necesita
+            nameKey: experience.nameKey,
+            header: experience.header,
             seo: experience.seo,
-            // Agrega cualquier otra propiedad de la experiencia que necesites en la tarjeta de sesión
           },
         });
       });
     });
 
-    // Filtramos y ordenamos las sesiones
     const upcoming = allSessionsWithDetails
       .filter((session) => session.finalStatus !== 'completed')
       .sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
@@ -86,17 +115,55 @@ const CalendarExperiencesSection = ({ translationNS }) => {
       .sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
 
     return { upcomingTrips: upcoming, pastTrips: past };
-  }, [experiences]); // Dependencia del useMemo: recalcular si las experiencias cambian
+  }, [experiences]);
 
-  // --- Lógica de paginación ---
+  // --- Lógica de paginación para Próximos Viajes ---
   const ITEMS_PER_PAGE = 3;
-  const totalPages = Math.ceil(upcomingTrips.length / ITEMS_PER_PAGE);
-  const handleNext = () => setCurrentPage((prev) => (prev + 1) % totalPages);
-  const handlePrev = () => setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+  const upcomingTotalPages = Math.ceil(upcomingTrips.length / ITEMS_PER_PAGE);
+  const handleUpcomingPageChange = (action) => {
+    if (typeof action === 'number') {
+      setUpcomingCurrentPage(action);
+    } else if (action === 'next') {
+      setUpcomingCurrentPage((prev) => (prev + 1) % upcomingTotalPages);
+    } else if (action === 'prev') {
+      setUpcomingCurrentPage((prev) => (prev - 1 + upcomingTotalPages) % upcomingTotalPages);
+    }
+  };
   const currentUpcomingTrips = upcomingTrips.slice(
-    currentPage * ITEMS_PER_PAGE,
-    currentPage * ITEMS_PER_PAGE + ITEMS_PER_PAGE
+    upcomingCurrentPage * ITEMS_PER_PAGE,
+    upcomingCurrentPage * ITEMS_PER_PAGE + ITEMS_PER_PAGE
   );
+
+  // --- Lógica de paginación para Viajes Finalizados ---
+  const pastTotalPages = Math.ceil(pastTrips.length / ITEMS_PER_PAGE);
+  const handlePastPageChange = (action) => {
+    if (typeof action === 'number') {
+      setPastCurrentPage(action);
+    } else if (action === 'next') {
+      setPastCurrentPage((prev) => (prev + 1) % pastTotalPages);
+    } else if (action === 'prev') {
+      setPastCurrentPage((prev) => (prev - 1 + pastTotalPages) % pastTotalPages);
+    }
+  };
+  const currentPastTrips = pastTrips.slice(
+    pastCurrentPage * ITEMS_PER_PAGE,
+    pastCurrentPage * ITEMS_PER_PAGE + ITEMS_PER_PAGE
+  );
+
+  // --- Efectos para Resetear página actual si el número de páginas cambia ---
+  useEffect(() => {
+    if (upcomingCurrentPage >= upcomingTotalPages && upcomingTotalPages > 0) {
+      // Añadida condición > 0
+      setUpcomingCurrentPage(0);
+    }
+  }, [upcomingTrips, upcomingTotalPages]); // Eliminar upcomingCurrentPage de aquí
+
+  useEffect(() => {
+    if (pastCurrentPage >= pastTotalPages && pastTotalPages > 0) {
+      // Añadida condición > 0
+      setPastCurrentPage(0);
+    }
+  }, [pastTrips, pastTotalPages]); // Eliminar pastCurrentPage de aquí
 
   const { titleKey, subtitleKey, pastTitleKey } = experiencesData.upcomingTrips;
 
@@ -118,51 +185,28 @@ const CalendarExperiencesSection = ({ translationNS }) => {
           {upcomingTrips.length > 0 ? (
             <>
               <AnimatePresence mode="wait">
-                <motion.ul key={currentPage} variants={staggerContainer} className="space-y-4">
+                <motion.ul
+                  key={upcomingCurrentPage}
+                  variants={staggerContainer}
+                  className="space-y-4"
+                >
                   {currentUpcomingTrips.map((trip) => (
                     <CalendarExperienceCardComponent
-                      key={trip.id} // El ID de la sesión
-                      tripData={trip} // tripData ahora es el objeto de sesión enriquecido
+                      key={trip.id}
+                      tripData={trip}
                       status={trip.finalStatus}
                       duration={trip.duration}
-                      translationNS={NAMESPACES.EXPERIENCES_DETAIL}
+                      translationNS={NAMESPACES.EXPERIENCES}
                     />
                   ))}
                 </motion.ul>
               </AnimatePresence>
 
-              {totalPages > 1 && (
-                <div className="flex items-center justify-center mt-8 space-x-4">
-                  <button
-                    onClick={handlePrev}
-                    className="p-2 rounded-full bg-brand-primary-dark hover:bg-brand-cta-orange transition-colors text-white cursor-pointer"
-                    aria-label="Previous trips"
-                  >
-                    <ChevronLeftIcon />
-                  </button>
-                  <div className="flex space-x-2">
-                    {[...Array(totalPages)].map((_, i) => (
-                      <button
-                        key={i}
-                        onClick={() => setCurrentPage(i)}
-                        className={`w-3 h-3 rounded-full transition-colors ${
-                          currentPage === i
-                            ? 'bg-brand-cta-orange'
-                            : 'bg-brand-primary-light hover:bg-brand-neutral/50'
-                        }`}
-                        aria-label={`Go to page ${i + 1}`}
-                      />
-                    ))}
-                  </div>
-                  <button
-                    onClick={handleNext}
-                    className="p-2 rounded-full bg-brand-primary-dark hover:bg-brand-cta-orange transition-colors text-white cursor-pointer"
-                    aria-label="Next trips"
-                  >
-                    <ChevronRightIcon />
-                  </button>
-                </div>
-              )}
+              <PaginationControls
+                currentPage={upcomingCurrentPage}
+                totalPages={upcomingTotalPages}
+                onPageChange={handleUpcomingPageChange}
+              />
             </>
           ) : (
             <div className="mt-16 text-center bg-brand-neutral/60 p-8 rounded-lg">
@@ -190,17 +234,31 @@ const CalendarExperiencesSection = ({ translationNS }) => {
           <div className="mt-20">
             <h2 className="text-3xl font-bold text-brand-white uppercase">{t(pastTitleKey)}</h2>
             <div className="mt-8 max-w-4xl mx-auto relative">
-              <motion.ul className="space-y-4">
-                {pastTrips.map((trip) => (
-                  <CalendarExperienceCardComponent
-                    key={trip.id}
-                    tripData={trip}
-                    status={trip.finalStatus}
-                    duration={trip.duration}
-                    translationNS={NAMESPACES.EXPERIENCES_DETAIL}
-                  />
-                ))}
-              </motion.ul>
+              {/* Añadir AnimatePresence aquí para que las transiciones de página funcionen bien */}
+              <AnimatePresence mode="wait">
+                {/* La key en motion.ul DEBE cambiar para que AnimatePresence funcione */}
+                <motion.ul
+                  key={'past-' + pastCurrentPage}
+                  variants={staggerContainer}
+                  className="space-y-4"
+                >
+                  {/* currentPastTrips es el array de ítems de la página actual */}
+                  {currentPastTrips.map((trip) => (
+                    <CalendarExperienceCardComponent
+                      key={trip.id}
+                      tripData={trip}
+                      status={trip.finalStatus}
+                      duration={trip.duration}
+                      translationNS={NAMESPACES.EXPERIENCES}
+                    />
+                  ))}
+                </motion.ul>
+              </AnimatePresence>
+              <PaginationControls
+                currentPage={pastCurrentPage}
+                totalPages={pastTotalPages}
+                onPageChange={handlePastPageChange}
+              />
             </div>
           </div>
         )}

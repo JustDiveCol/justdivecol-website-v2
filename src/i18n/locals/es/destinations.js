@@ -9,7 +9,6 @@ export default {
   noUpcomingTripsCtaButton: 'Planificar mi viaje a este destino',
   noUpcomingTripsWhatsAppMessage:
     'Hola, JustDiveCol. Estoy interesado en un viaje de buceo a {{destinationName}} pero no veo fechas programadas. ¿Podríamos explorar opciones personalizadas para este destino?',
-  exploreDestination: 'Explorar este destino',
 
   // ----- Available Destination -----
   destinationAvailableTitle: 'Próximas expediciones a este paraíso submarino',
@@ -28,125 +27,6 @@ export default {
     'Hola, equipo de JustDiveCol. Estoy interesado/a en un viaje de buceo a [Nombre del Destino] pero no veo fechas programadas. ¿Podríamos explorar opciones personalizadas?',
 
   // =============== Santa Marta ===============
-  smName: 'Santa Marta',
-
-  // --- SEO Content ---
-  smSeoTitle:
-    'Buceo en Santa Marta | Explora el vibrante Caribe Colombiano con JustDiveCol',
-  smSeoDesc:
-    'Sumérgete en las ricas y cálidas aguas de Santa Marta con JustDiveCol. Descubre una vibrante vida marina, impresionantes arrecifes de coral y sitios de buceo únicos en el corazón del Caribe Colombiano. ¡Tu próxima aventura submarina te espera!',
-  smSeoKeywords:
-    'buceo Santa Marta, bucear Caribe colombiano, arrecifes de coral Santa Marta, sitios de buceo Santa Marta, vida marina Santa Marta, JustDiveCol Santa Marta, Parque Tayrona buceo, cursos de buceo Santa Marta, buceo principiantes Santa Marta, buceo avanzado Santa Marta, pecios Santa Marta, turismo submarino Santa Marta, Taganga buceo',
-
-  // --- Header Content ---
-  smHeaderTitle:
-    'Santa Marta: donde la majestuosa sierra y el azul Caribe se encuentran para bucear',
-  smHeaderSubtitle:
-    'Sumérgete en la vibrante historia y los arrecifes llenos de vida del Caribe Colombiano. Un destino que cautiva tanto dentro como fuera del agua.',
-  smHeaderMainLogoAlt: 'Logo principal de JustDiveCol',
-  // smHeaderComplementaryLogoAlt: '',
-  // smHeaderTextOverlay: '',
-  smHeaderPhotoCredit: 'Créditos de la foto: XYZ',
-
-  // --- Card Description Content ---
-  smDescTitle: 'Un viaje al corazón fascinante del Caribe Colombiano',
-  smDescP1:
-    'Más allá de sus impresionantes arrecifes, Santa Marta es una ciudad vibrante con una riqueza histórica que se entrelaza con relatos de piratas, colonos y la milenaria cultura Tayrona. Su música contagiosa, su exquisita gastronomía y la calidez genuina de su gente son tan cautivadoras como la asombrosa vida marina que aguarda bajo sus olas.',
-  smDescP2:
-    'Explorar esta región es descubrir una mezcla única de influencias que han dado forma a este paraíso costeño. Desde el encanto del centro histórico hasta la majestuosidad de las playas del Parque Tayrona, cada rincón cuenta una historia fascinante y te invita a la aventura.',
-
-  // --- Card Display ---
-  smCardDescription:
-    'Donde la imponente Sierra Nevada se encuentra con el misterio del Caribe, Santa Marta es un destino ideal para aprender a bucear, expandir tus habilidades y explorar el mundo submarino con JustDiveCol.',
-  smCardMainLogoAlt: 'Logo principal de JustDiveCol',
-  // smCardComplementaryLogoAlt: '',
-  smCardTextOverlay: 'Destino de buceo',
-  smCardPhotoCredit: 'Créditos de la foto: XYZ',
-
-  // --- Main Content ---
-  smDetailsTitle: 'Información clave para tu aventura de buceo',
-
-  smDetailLabel1: 'Nivel de buceo recomendado',
-  smDetailValue1:
-    'Todos los niveles (desde principiantes hasta buzos avanzados)',
-
-  smDetailLabel2: 'Temperatura del agua',
-  smDetailValue2: '24-28 °C / 75-82 °F',
-
-  smDetailLabel3: 'Visibilidad promedio',
-  smDetailValue3: '10-20 m / 35-65 ft',
-
-  smDetailLabel4: 'Mejor época para bucear',
-  smDetailValue4: 'Abril a Diciembre (con condiciones óptimas)',
-
-  smDetailLabel5: 'Consideraciones adicionales',
-  smDetailValue5:
-    'La visibilidad y las condiciones pueden variar estacionalmente. Recomendamos consultar el pronóstico local.',
-
-  // --- Divesites ---
-  smDiveSitesTitle:
-    'Sitios de buceo emblemáticos en Santa Marta y sus alrededores',
-
-  smDiveSite1Name: 'Barco Hundido',
-  smDiveSite1Desc:
-    'Un antiguo barco mercante que yace apaciblemente entre los 21 m / 70 ft y 30 m / 100 ft de profundidad. Este fascinante pecio ofrece una experiencia única y cautivadora para buzos avanzados, siendo el hogar de una impresionante variedad de vida marina que lo ha convertido en su arrecife artificial.',
-
-  smDiveSite2Name: 'Natalia',
-  smDiveSite2Desc:
-    'Un misterioso yate hundido a unos 30 m / 100 ft en la pintoresca zona de El Rodadero. Su intrigante historia y la vibrante vida marina que lo habita lo convierten en un sitio de buceo exigente y extraordinariamente cautivador, ideal para aquellos buzos experimentados que buscan un reto y una exploración profunda.',
-
-  smDiveSite3Name: 'La Piedra del Medio',
-  smDiveSite3Desc:
-    'Parte de un impresionante sistema rocoso cercano a la costa, este sitio es un verdadero hervidero de rica biodiversidad. Es un lugar predilecto para encuentros cercanos con majestuosas tortugas marinas y una multitud de peces tropicales coloridos, siendo apto para diversos niveles de experiencia y ofreciendo siempre algo nuevo por descubrir.',
-
-  smDiveSite4Name: 'Isla Aguja',
-  smDiveSite4Desc:
-    'Un clásico indiscutible del buceo en Santa Marta, ideal para todos. Ofrece múltiples puntos de inmersión versátiles, aptos tanto para sesiones de entrenamiento y cursos como para emocionantes inmersiones de exploración profunda. Aquí encontrarás formaciones coralinas espectaculares y una vida marina abundante y diversa que te dejará sin aliento.',
-
-  // --- Unique Finds ---
-  smUniqueFindsTitle: 'Experiencias imperdibles en Santa Marta',
-
-  smUniqueFind1:
-    'La increíble biodiversidad marina de la región, que incluye coloridos arrecifes, vibrantes corales y una asombrosa variedad de especies marinas que te esperan bajo el agua.',
-  smUniqueFind2:
-    'Las formaciones rocosas y coralinas únicas que adornan sus fondos marinos, creando paisajes submarinos que parecen de otro planeta y son perfectos para la fotografía.',
-  smUniqueFind3:
-    'La vibrante vida cultural y nocturna de Santa Marta y la cercana Taganga, ideal para complementar tus días de buceo con sabor local, música y gastronomía caribeña.',
-  smUniqueFind4:
-    'La oportunidad de obtener o avanzar en tu certificación de buceo PADI en un entorno espectacular y seguro, acompañado por instructores expertos y apasionados por el océano.',
-
-  // --- Gallery ---
-  smGalleryTitle: 'Momentos inolvidables en este destino paradisiaco',
-
-  smGaleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
-  // smGaleryImg1ComplementaryLogoAlt: '',
-  // smGaleryImg1TextOverlay: '',
-  smGaleryImg1PhotoCredit: 'Créditos de la foto: XYZ',
-
-  smGaleryImg2PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
-  // smGaleryImg2ComplementaryLogoAlt: '',
-  // smGaleryImg2TextOverlay: '',
-  smGaleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
-
-  smGaleryImg3PhotoCredit: 'Créditos de la foto: XYZ',
-  // smGaleryImg3ComplementaryLogoAlt: '',
-  // smGaleryImg3TextOverlay: '',
-  smGaleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
-
-  smGaleryImg4PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
-  // smGaleryImg4ComplementaryLogoAlt: '',
-  // smGaleryImg4TextOverlay: '',
-  smGaleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
-
-  smGaleryImg5PhotoCredit: 'Créditos de la foto: XYZ',
-  // smGaleryImg5ComplementaryLogoAlt: '',
-  // smGaleryImg5TextOverlay: '',
-  smGaleryImg5MainLogoAlt: 'Logo principal de JustDiveCol',
-
-  smGaleryImg6PhotoCredit: 'Créditos de la foto: XYZ',
-  // smGaleryImg6ComplementaryLogoAlt: '',
-  // smGaleryImg6TextOverlay: '',
-  smGaleryImg6MainLogoAlt: 'Logo principal de JustDiveCol',
 
   // =============== Providencia ===============
   provName: 'Providencia',
@@ -160,8 +40,7 @@ export default {
     'buceo Providencia, mar de siete colores, barrera coralina Providencia, arrecifes vírgenes Caribe, buceo Caribe colombiano, JustDiveCol Providencia, Reserva de la Biosfera Seaflower, vida marina Providencia, cultura raizal, pecios Providencia, buceo principiantes Providencia, buceo avanzado Providencia, santuario natural Providencia',
 
   // --- Header Content ---
-  provHeaderTitle:
-    'Providencia: donde el mar de siete colores te llama a bucear',
+  provHeaderTitle: 'Providencia: donde el mar de siete colores te llama a bucear',
   provHeaderSubtitle:
     'Descubre el tesoro escondido del Caribe, sus arrecifes prístinos y una cultura auténtica que te envolverá. ¡Una experiencia submarina y cultural inigualable!',
   provHeaderMainLogoAlt: 'Logo principal de JustDiveCol',
@@ -170,8 +49,7 @@ export default {
   provHeaderPhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
   // --- Card Description Content ---
-  provDescTitle:
-    'Sumérgete en la esencia de providencia: un santuario natural y cultural',
+  provDescTitle: 'Sumérgete en la esencia de providencia: un santuario natural y cultural',
   provDescP1:
     'Más allá de sus espectaculares paisajes submarinos, Providencia y su hermana Santa Catalina son islas con una historia rica y compleja, forjada por piratas, colonos ingleses y la inquebrantable cultura raizal. Esta herencia se manifiesta en su vibrante lengua creole, su contagiosa música y una gastronomía que deleita el paladar, ofreciendo una experiencia tan cautivadora en tierra como la asombrosa vida marina que aguarda bajo sus cristalinas aguas.',
   provDescP2:
@@ -189,8 +67,7 @@ export default {
   provDetailsTitle: 'Información clave para tu aventura en Providencia',
 
   provDetailLabel1: 'Nivel de buceo recomendado',
-  provDetailValue1:
-    'Todos los niveles (desde principiantes hasta buzos expertos)',
+  provDetailValue1: 'Todos los niveles (desde principiantes hasta buzos expertos)',
 
   provDetailLabel2: 'Temperatura del agua',
   provDetailValue2: '26-29 °C / 79-84 °F',
@@ -199,16 +76,14 @@ export default {
   provDetailValue3: '20-35 m / 65-115 ft',
 
   provDetailLabel4: 'Mejor época para bucear',
-  provDetailValue4:
-    'Marzo a Mayo y Septiembre a Noviembre (condiciones óptimas)',
+  provDetailValue4: 'Marzo a Mayo y Septiembre a Noviembre (condiciones óptimas)',
 
   provDetailLabel5: 'Consideraciones adicionales',
   provDetailValue5:
     'Generalmente corrientes suaves a moderadas. La visibilidad puede variar ligeramente con las estaciones.',
 
   // --- Divesites ---
-  provDiveSitesTitle:
-    'Sitios de buceo emblemáticos en Providencia y sus alrededores',
+  provDiveSitesTitle: 'Sitios de buceo emblemáticos en Providencia y sus alrededores',
 
   provDiveSite1Name: 'El Planchón (Pecio de Providencia)',
   provDiveSite1Desc:
@@ -241,35 +116,35 @@ export default {
   // --- Gallery ---
   provGalleryTitle: 'Momentos inolvidables en este destino paradisíaco',
 
-  provGaleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
-  // provGaleryImg1ComplementaryLogoAlt: '',
-  // provGaleryImg1TextOverlay: '',
-  provGaleryImg1PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
+  provGalleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
+  // provGalleryImg1ComplementaryLogoAlt: '',
+  // provGalleryImg1TextOverlay: '',
+  provGalleryImg1PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
-  provGaleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
-  // provGaleryImg2ComplementaryLogoAlt: '',
-  // provGaleryImg2TextOverlay: '',
-  provGaleryImg2PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
+  provGalleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
+  // provGalleryImg2ComplementaryLogoAlt: '',
+  // provGalleryImg2TextOverlay: '',
+  provGalleryImg2PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
-  provGaleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
-  // provGaleryImg3ComplementaryLogoAlt: '',
-  // provGaleryImg3TextOverlay: '',
-  provGaleryImg3PhotoCredit: 'Créditos de la foto: XYZ',
+  provGalleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
+  // provGalleryImg3ComplementaryLogoAlt: '',
+  // provGalleryImg3TextOverlay: '',
+  provGalleryImg3PhotoCredit: 'Créditos de la foto: XYZ',
 
-  provGaleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
-  // provGaleryImg4ComplementaryLogoAlt: '',
-  // provGaleryImg4TextOverlay: '',
-  provGaleryImg4PhotoCredit: 'Créditos de la foto: XYZ',
+  provGalleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
+  // provGalleryImg4ComplementaryLogoAlt: '',
+  // provGalleryImg4TextOverlay: '',
+  provGalleryImg4PhotoCredit: 'Créditos de la foto: XYZ',
 
-  provGaleryImg5MainLogoAlt: 'Logo principal de JustDiveCol',
-  // provGaleryImg5ComplementaryLogoAlt: '',
-  // provGaleryImg5TextOverlay: '',
-  provGaleryImg5PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
+  provGalleryImg5MainLogoAlt: 'Logo principal de JustDiveCol',
+  // provGalleryImg5ComplementaryLogoAlt: '',
+  // provGalleryImg5TextOverlay: '',
+  provGalleryImg5PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
-  provGaleryImg6MainLogoAlt: 'Logo principal de JustDiveCol',
-  // provGaleryImg6ComplementaryLogoAlt: '',
-  // provGaleryImg6TextOverlay: '',
-  provGaleryImg6PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
+  provGalleryImg6MainLogoAlt: 'Logo principal de JustDiveCol',
+  // provGalleryImg6ComplementaryLogoAlt: '',
+  // provGalleryImg6TextOverlay: '',
+  provGalleryImg6PhotoCredit: 'Créditos de la foto: Camilo Beltran @JustDiveCol',
 
   // =============== Isla Fuerte ===============
   ifName: 'Isla Fuerte',
@@ -292,8 +167,7 @@ export default {
   ifHeaderPhotoCredit: 'Créditos de la foto: XYZ',
 
   // --- Card Description Content ---
-  ifDescTitle:
-    'Descubre la magia única de Isla Fuerte: bajo el mar y en tierra firme',
+  ifDescTitle: 'Descubre la magia única de Isla Fuerte: bajo el mar y en tierra firme',
   ifDescP1:
     'Ubicada frente a las pintorescas costas de Córdoba, Isla Fuerte es un verdadero tesoro escondido del Caribe Colombiano. Esta pequeña y encantadora isla ofrece una combinación inigualable de naturaleza exuberante y una atmósfera de paz absoluta. Sus paisajes terrestres, adornados con árboles centenarios y una rica avifauna, complementan a la perfección la magia que aguarda bajo sus aguas turquesas.',
   ifDescP2:
@@ -311,8 +185,7 @@ export default {
   ifDetailsTitle: 'Información clave para tu expedición a Isla Fuerte',
 
   ifDetailLabel1: 'Nivel de buceo recomendado',
-  ifDetailValue1:
-    'Todos los niveles (desde principiantes hasta buzos certificados)',
+  ifDetailValue1: 'Todos los niveles (desde principiantes hasta buzos certificados)',
 
   ifDetailLabel2: 'Temperatura del agua',
   ifDetailValue2: '28 °C / 82 °F',
@@ -328,8 +201,7 @@ export default {
     'Ideal para buceo relajado y la exploración de fenómenos naturales únicos. Las corrientes son usualmente suaves.',
 
   // --- Divesites ---
-  ifDiveSitesTitle:
-    'Sitios de buceo emblemáticos en Isla Fuerte y sus alrededores',
+  ifDiveSitesTitle: 'Sitios de buceo emblemáticos en Isla Fuerte y sus alrededores',
 
   ifDiveSite1Name: 'Bajo Bushnell',
   ifDiveSite1Desc:
@@ -348,8 +220,7 @@ export default {
     'Este sitio permite explorar el borde final del arrecife insular, conformado por grandes bloques coralinos que crean un recorrido sinuoso y lleno de vida. Es común encontrarse con majestuosas rayas y los curiosos tiburones bobos (nurse sharks), de los cuales el lugar toma su nombre. La profundidad promedio es de 21 m / 70 ft, ideal para inmersiones tranquilas y de observación de la rica vida marina.',
 
   // --- Unique Finds ---
-  ifUniqueFindsTitle:
-    'Experiencias imperdibles en Isla Fuerte (más allá del buceo)',
+  ifUniqueFindsTitle: 'Experiencias imperdibles en Isla Fuerte (más allá del buceo)',
   ifUniqueFind1:
     'La Ceiba Milenaria: Un árbol monumental, el símbolo viviente de la isla, que se dice data del descubrimiento de América. Su tronco de dimensiones impresionantes y su aura mística lo convierten en un lugar digno de admirar y sentir la historia.',
   ifUniqueFind2:
@@ -362,42 +233,41 @@ export default {
   // --- Gallery ---
   ifGalleryTitle: 'Momentos inolvidables en este destino paradisiaco',
 
-  ifGaleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
-  // ifGaleryImg1ComplementaryLogoAlt: '',
-  // ifGaleryImg1TextOverlay: '',
-  ifGaleryImg1PhotoCredit: 'Créditos de la foto: XYZ',
+  ifGalleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
+  // ifGalleryImg1ComplementaryLogoAlt: '',
+  // ifGalleryImg1TextOverlay: '',
+  ifGalleryImg1PhotoCredit: 'Créditos de la foto: XYZ',
 
-  ifGaleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
-  // ifGaleryImg2ComplementaryLogoAlt: '',
-  // ifGaleryImg2TextOverlay: '',
-  ifGaleryImg2PhotoCredit: 'Créditos de la foto: XYZ',
+  ifGalleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
+  // ifGalleryImg2ComplementaryLogoAlt: '',
+  // ifGalleryImg2TextOverlay: '',
+  ifGalleryImg2PhotoCredit: 'Créditos de la foto: XYZ',
 
-  ifGaleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
-  // ifGaleryImg3ComplementaryLogoAlt: '',
-  // ifGaleryImg3TextOverlay: '',
-  ifGaleryImg3PhotoCredit: 'Créditos de la foto: XYZ',
+  ifGalleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
+  // ifGalleryImg3ComplementaryLogoAlt: '',
+  // ifGalleryImg3TextOverlay: '',
+  ifGalleryImg3PhotoCredit: 'Créditos de la foto: XYZ',
 
-  ifGaleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
-  // ifGaleryImg4ComplementaryLogoAlt: '',
-  // ifGaleryImg4TextOverlay: '',
-  ifGaleryImg4PhotoCredit: 'Créditos de la foto: XYZ',
+  ifGalleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
+  // ifGalleryImg4ComplementaryLogoAlt: '',
+  // ifGalleryImg4TextOverlay: '',
+  ifGalleryImg4PhotoCredit: 'Créditos de la foto: XYZ',
 
-  ifGaleryImg5MainLogoAlt: 'Logo principal de JustDiveCol',
-  // ifGaleryImg5ComplementaryLogoAlt: '',
-  // ifGaleryImg5TextOverlay: '',
-  ifGaleryImg5PhotoCredit: 'Créditos de la foto: XYZ',
+  ifGalleryImg5MainLogoAlt: 'Logo principal de JustDiveCol',
+  // ifGalleryImg5ComplementaryLogoAlt: '',
+  // ifGalleryImg5TextOverlay: '',
+  ifGalleryImg5PhotoCredit: 'Créditos de la foto: XYZ',
 
-  ifGaleryImg6MainLogoAlt: 'Logo principal de JustDiveCol',
-  // ifGaleryImg6ComplementaryLogoAlt: '',
-  // ifGaleryImg6TextOverlay: '',
-  ifGaleryImg6PhotoCredit: 'Créditos de la foto: XYZ',
+  ifGalleryImg6MainLogoAlt: 'Logo principal de JustDiveCol',
+  // ifGalleryImg6ComplementaryLogoAlt: '',
+  // ifGalleryImg6TextOverlay: '',
+  ifGalleryImg6PhotoCredit: 'Créditos de la foto: XYZ',
 
   // =============== Malpelo ===============
   malpName: 'Malpelo',
 
   // --- SEO Content ---
-  malpSeoTitle:
-    'Buceo en Malpelo | Meca mundial de tiburones y megafauna pelágica con JustDiveCol',
+  malpSeoTitle: 'Buceo en Malpelo | Meca mundial de tiburones y megafauna pelágica con JustDiveCol',
   malpSeoDesc:
     'Sumérgete en Malpelo, un santuario de fauna y flora reconocido por la UNESCO en el Pacífico Colombiano con JustDiveCol. Experimenta el buceo extremo con masivas congregaciones de tiburones martillo, galápagos y otras especies pelágicas. Tu aventura oceánica definitiva te espera en este paraíso indomable.',
   malpSeoKeywords:
@@ -435,12 +305,10 @@ export default {
     'Avanzado o Experto (imprescindible experiencia en buceo con corrientes, buceo profundo y condiciones oceánicas remotas)',
 
   malpDetailLabel2: 'Temperatura del agua',
-  malpDetailValue2:
-    '18-26 °C / 64-79 °F (con termoclinas variables y marcadas)',
+  malpDetailValue2: '18-26 °C / 64-79 °F (con termoclinas variables y marcadas)',
 
   malpDetailLabel3: 'Visibilidad promedio',
-  malpDetailValue3:
-    '15-30 m / 50-100 ft (variable según la temporada y corrientes)',
+  malpDetailValue3: '15-30 m / 50-100 ft (variable según la temporada y corrientes)',
 
   malpDetailLabel4: 'Mejor época para avistamientos',
   malpDetailValue4:
@@ -451,8 +319,7 @@ export default {
     'Solo expediciones de vida a bordo (Liveaboard). Fuertes corrientes y condiciones oceánicas desafiantes son la norma. Esta es una experiencia de buceo extrema para los más audaces.',
 
   // --- Divesites ---
-  malpDiveSitesTitle:
-    'Sitios de buceo emblemáticos en Malpelo: el santuario pelágico',
+  malpDiveSitesTitle: 'Sitios de buceo emblemáticos en Malpelo: el santuario pelágico',
 
   malpDiveSite1Name: 'La Nevera',
   malpDiveSite1Desc:
@@ -485,33 +352,33 @@ export default {
   // --- Gallery ---
   malpGalleryTitle: 'Momentos épicos capturados en Malpelo',
 
-  malpGaleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
-  // malpGaleryImg1ComplementaryLogoAlt: '',
-  // malpGaleryImg1TextOverlay: '',
-  malpGaleryImg1PhotoCredit: 'Créditos de la foto: XYZ',
+  malpGalleryImg1MainLogoAlt: 'Logo principal de JustDiveCol',
+  // malpGalleryImg1ComplementaryLogoAlt: '',
+  // malpGalleryImg1TextOverlay: '',
+  malpGalleryImg1PhotoCredit: 'Créditos de la foto: XYZ',
 
-  malpGaleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
-  // malpGaleryImg2ComplementaryLogoAlt: '',
-  // malpGaleryImg2TextOverlay: '',
-  malpGaleryImg2PhotoCredit: 'Créditos de la foto: XYZ',
+  malpGalleryImg2MainLogoAlt: 'Logo principal de JustDiveCol',
+  // malpGalleryImg2ComplementaryLogoAlt: '',
+  // malpGalleryImg2TextOverlay: '',
+  malpGalleryImg2PhotoCredit: 'Créditos de la foto: XYZ',
 
-  malpGaleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
-  // malpGaleryImg3ComplementaryLogoAlt: '',
-  // malpGaleryImg3TextOverlay: '',
-  malpGaleryImg3PhotoCredit: 'Créditos de la foto: XYZ',
+  malpGalleryImg3MainLogoAlt: 'Logo principal de JustDiveCol',
+  // malpGalleryImg3ComplementaryLogoAlt: '',
+  // malpGalleryImg3TextOverlay: '',
+  malpGalleryImg3PhotoCredit: 'Créditos de la foto: XYZ',
 
-  malpGaleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
-  // malpGaleryImg4ComplementaryLogoAlt: '',
-  // malpGaleryImg4TextOverlay: '',
-  malpGaleryImg4PhotoCredit: 'Créditos de la foto: XYZ',
+  malpGalleryImg4MainLogoAlt: 'Logo principal de JustDiveCol',
+  // malpGalleryImg4ComplementaryLogoAlt: '',
+  // malpGalleryImg4TextOverlay: '',
+  malpGalleryImg4PhotoCredit: 'Créditos de la foto: XYZ',
 
-  malpGaleryImg5MainLogoAlt: 'Logo principal de JustDiveCol',
-  // malpGaleryImg5ComplementaryLogoAlt: '',
-  // malpGaleryImg5TextOverlay: '',
-  malpGaleryImg5PhotoCredit: 'Créditos de la foto: XYZ',
+  malpGalleryImg5MainLogoAlt: 'Logo principal de JustDiveCol',
+  // malpGalleryImg5ComplementaryLogoAlt: '',
+  // malpGalleryImg5TextOverlay: '',
+  malpGalleryImg5PhotoCredit: 'Créditos de la foto: XYZ',
 
-  malpGaleryImg6MainLogoAlt: 'Logo principal de JustDiveCol',
-  // malpGaleryImg6ComplementaryLogoAlt: '',
-  // malpGaleryImg6TextOverlay: '',
-  malpGaleryImg6PhotoCredit: 'Créditos de la foto: XYZ',
+  malpGalleryImg6MainLogoAlt: 'Logo principal de JustDiveCol',
+  // malpGalleryImg6ComplementaryLogoAlt: '',
+  // malpGalleryImg6TextOverlay: '',
+  malpGalleryImg6PhotoCredit: 'Créditos de la foto: XYZ',
 };

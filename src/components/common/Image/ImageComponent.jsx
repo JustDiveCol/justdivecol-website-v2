@@ -34,68 +34,28 @@ const ImageComponent = ({ className = '', imageData, translationNS }) => {
     group relative w-full bg-cover bg-center select-none ${variantClass} ${className}
   `;
 
-  // Handler único para prevenir drag
-  const preventDrag = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
-  };
-
   return (
     <div
-      draggable={false}
-      onDragStart={preventDrag}
-      onContextMenu={preventDrag}
       className={wrapperClass}
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        WebkitUserDrag: 'none', // para navegadores WebKit
       }}
     >
       {textOverlayKey && (
-        <div
-          draggable={false}
-          onDragStart={preventDrag}
-          onContextMenu={preventDrag}
-          className="select-none absolute top-2 left-2 text-brand-neutral text-sm sm:text-base md:text-lg lg:text-2xl font-bold drop-shadow-md opacity-80 uppercase z-20"
-        >
+        <div className="select-none absolute top-2 left-2 text-brand-neutral text-sm sm:text-base md:text-lg lg:text-2xl font-bold drop-shadow-md opacity-80 uppercase z-20">
           {t(textOverlayKey, { ns: translationNS })}
         </div>
       )}
 
       {complementaryLogo && (
-        <div
-          draggable={false}
-          onDragStart={preventDrag}
-          onContextMenu={preventDrag}
-          className="select-none absolute top-2 right-2 drop-shadow-md opacity-70 z-20 w-8 h-auto sm:w-10 md:w-12"
-        >
-          <img
-            src={complementaryLogo}
-            alt={t(complementaryLogoAltKey)}
-            className="w-full h-auto"
-            draggable={false}
-            onDragStart={preventDrag}
-            style={{ WebkitUserDrag: 'none' }}
-          />
+        <div className="select-none absolute top-2 right-2 drop-shadow-md opacity-70 z-20 w-8 h-auto sm:w-10 md:w-12">
+          <img src={complementaryLogo} alt={t(complementaryLogoAltKey)} className="w-full h-auto" />
         </div>
       )}
 
       {mainLogo && (
-        <div
-          draggable={false}
-          onDragStart={preventDrag}
-          onContextMenu={preventDrag}
-          className="select-none absolute bottom-2 right-2 drop-shadow-md opacity-70 z-20 w-16 h-auto sm:w-20 md:w-24"
-        >
-          <img
-            src={mainLogo}
-            alt={t(mainLogoAltKey)}
-            className="w-full h-auto"
-            draggable={false}
-            onDragStart={preventDrag}
-            style={{ WebkitUserDrag: 'none' }}
-          />
+        <div className="select-none absolute bottom-2 right-2 drop-shadow-md opacity-70 z-20 w-16 h-auto sm:w-20 md:w-24">
+          <img src={mainLogo} alt={t(mainLogoAltKey)} className="w-full h-auto" />
         </div>
       )}
 

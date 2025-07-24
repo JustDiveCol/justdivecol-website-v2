@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 import { homePageData } from '@/data/pages/homeData.js';
+import { experiencesData } from '@/data/pages/experiencesData';
 import { staggerContainer } from '@/hooks/animations.js';
 import { NAMESPACES } from '@/data/global/constants';
 
@@ -17,31 +18,34 @@ import CtaComponent from '@/components/CtaComponent.jsx';
 const HomePage = () => {
   const { t } = useTranslation(NAMESPACES.HOME_PAGE);
 
+  const { seo, testimonials, finalCta } = homePageData;
+  const { featuredExperiences } = experiencesData;
+
   return (
     <>
       <SEOComponent
-        title={t(homePageData.seo.titleKey)}
-        description={t(homePageData.seo.descriptionKey)}
-        keywords={t(homePageData.seo.keywords)}
-        imageUrl={homePageData.seo.imageUrl}
-        url={homePageData.seo.url}
+        title={t(seo.titleKey)}
+        description={t(seo.descriptionKey)}
+        keywords={t(seo.keywords)}
+        imageUrl={seo.imageUrl}
+        url={seo.url}
       />
       <motion.div variants={staggerContainer} initial="initial" animate="animate">
         <HeroSection translationNS={NAMESPACES.HOME_PAGE} />
 
         <ExperiencesSection
-          translationNS={NAMESPACES.HOME_PAGE}
-          titleKey={homePageData.featuredExperiences.titleKey}
-          subtitleKey={homePageData.featuredExperiences.subtitleKey}
-          categories={homePageData.featuredExperiences.categories}
+          translationNS={[NAMESPACES.HOME_PAGE, NAMESPACES.EXPERIENCES_PAGE]}
+          titleKey={featuredExperiences.titleKey}
+          subtitleKey={featuredExperiences.subtitleKey}
+          categories={featuredExperiences.categories}
         />
         <SafetySection translationNS={NAMESPACES.HOME_PAGE} />
 
-        {homePageData.testimonials?.items?.length > 0 && (
+        {testimonials?.items?.length > 0 && (
           <TestimonialsSection translationNS={NAMESPACES.HOME_PAGE} />
         )}
 
-        <CtaComponent sectionData={homePageData.finalCta} translationNS={NAMESPACES.HOME_PAGE} />
+        <CtaComponent sectionData={finalCta} translationNS={NAMESPACES.HOME_PAGE} />
       </motion.div>
     </>
   );

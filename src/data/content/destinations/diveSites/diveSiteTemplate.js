@@ -6,6 +6,7 @@ export const diveSiteTemplate = {
   // --- Basic metadata ---
   id: '', // unique identifier for the dive site, e.g., 'bajo-del-pescador'
   destinationId: '', // ID of the related destination, e.g., 'santa-marta'
+  isTopSite: false,
   nameKey: '', // translation key for the dive site name
   descriptionP1Key: '', // translation key for first paragraph description
   descriptionP2Key: '', // optional second paragraph description key

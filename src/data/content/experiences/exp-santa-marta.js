@@ -11,6 +11,7 @@ import {
   AVAILABILITY,
   SHARED_TRANSLATION_KEYS,
   BUTTON_TYPES,
+  NAMESPACES,
 } from '@/data/global/constants';
 import { LOGO_MAIN } from '@/data/global/assets';
 
@@ -58,7 +59,7 @@ const _santaMartaExperience = {
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
-      prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'Camilo Beltran @JustDiveCol',
     },
   },
@@ -71,7 +72,7 @@ const _santaMartaExperience = {
 
   // --- Detailed content ---
   details: {
-    titleKey: SHARED_TRANSLATION_KEYS.experiencesDetailsTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.EXPERIENCES_DETAILS_TITLE,
     descriptionKey: 'expSmDetailsDesc',
     items: [
       {
@@ -91,7 +92,7 @@ const _santaMartaExperience = {
 
   // --- Itinerary ---
   itinerary: {
-    titleKey: SHARED_TRANSLATION_KEYS.experiencesItineraryTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.EXPERIENCES_ITINERARY_TITLE,
     days: [
       {
         day: 1,
@@ -114,16 +115,19 @@ const _santaMartaExperience = {
         descriptionKey: 'expSmItineraryDay4Desc',
       },
     ],
-    notes: [],
+    notes: [
+      SHARED_TRANSLATION_KEYS.EXPERIENCES_DEFAULT_ITINERARY_NOTE_1,
+      SHARED_TRANSLATION_KEYS.EXPERIENCES_DEFAULT_ITINERARY_NOTE_2,
+    ],
   },
 
   // --- Included / Not included ---
   whatIsIncluded: {
-    titleKey: SHARED_TRANSLATION_KEYS.experiencesIncludedTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.EXPERIENCES_INCLUDED_TITLE,
     items: ['expSmIncludeItem1', 'expSmIncludeItem2', 'expSmIncludeItem3', 'expSmIncludeItem4'],
   },
   whatIsNotIncluded: {
-    titleKey: SHARED_TRANSLATION_KEYS.experiencesNotIncludedTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.EXPERIENCES_NOT_INCLUDED_TITLE,
     items: [
       'expSmNotIncludeItem1',
       'expSmNotIncludeItem2',
@@ -134,14 +138,14 @@ const _santaMartaExperience = {
 
   // --- Optional gallery ---
   gallery: {
-    titleKey: SHARED_TRANSLATION_KEYS.experiencesGalleryTitleKey,
+    titleKey: SHARED_TRANSLATION_KEYS.EXPERIENCES_GALLERY_TITLE,
     images: [
       {
         backgroundImage: gallery01,
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'XYZ',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -151,7 +155,7 @@ const _santaMartaExperience = {
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -161,7 +165,7 @@ const _santaMartaExperience = {
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -171,7 +175,7 @@ const _santaMartaExperience = {
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         photoCredit: {
-          prefixKey: SHARED_TRANSLATION_KEYS.photoCreditPrefixKey,
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
           text: 'Camilo Beltran @JustDiveCol',
         },
         variant: IMAGE_VARIANTS.horizontal,
@@ -181,12 +185,12 @@ const _santaMartaExperience = {
 
   // --- CTA ---
   cta: {
-    textKey: SHARED_TRANSLATION_KEYS.experinceCtaTextButtonKey,
-    translationNS: 'common',
+    textKey: SHARED_TRANSLATION_KEYS.EXPERIENCE_CTA_BUTTON,
+    translationNS: NAMESPACES.COMMON,
     action: {
       type: BUTTON_TYPES.whatsapp,
-      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.experienceWhatsappMessageKey,
-      whatsAppMessageNS: 'common',
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.EXPERIENCE_WHATSAPP_MESSAGE,
+      whatsAppMessageNS: NAMESPACES.COMMON,
     },
   },
 

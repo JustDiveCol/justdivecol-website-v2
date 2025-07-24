@@ -465,18 +465,11 @@ export default {
   elNataliaSmXXPhotoCredit: 'Créditos: XYZ',
 
   // --- Common Labels for Dive Site Details ---
-  depthLabel: 'Profundidad máxima',
-  levelRequiredLabel: 'Nivel Requerido',
-  difficultyLabel: 'Dificultad',
-  typeLabel: 'Tipo',
-  conditionsLabel: 'Condiciones',
-  tagsLabel: 'Etiquetas',
 
   // --- Translations for DIVE_LEVELS (from diveSiteOptions.js) ---
   noneLevelKey: 'Ninguno', // No se requiere cambio, es una negación directa
   openWaterDiverLevelKey: 'Buzo de Aguas Abiertas (Open Water Diver)',
-  advancedOpenWaterDiverLevelKey:
-    'Buzo Avanzado de Aguas Abiertas (Advanced Open Water Diver)',
+  advancedOpenWaterDiverLevelKey: 'Buzo Avanzado de Aguas Abiertas (Advanced Open Water Diver)',
   technicalDiverLevelKey: 'Buzo Técnico', // Mantener conciso y profesional
   anyLevelKey: 'Todos los niveles',
 
@@ -576,13 +569,4 @@ export default {
 
   // Other common translations that might be used across content types
   colombiaCountryKey: 'Colombia', // If used directly in dive site data
-
-  showingSitesCountFull: 'Mostrando {{filtered}} de {{total}} sitios de buceo',
-
-  noMatchingSites:
-    'No se encontraron sitios de buceo que coincidan con los filtros.',
-
-  destinationLabel: 'Destino',
-
-  noOptionsAvailable: 'No hay opciones disponibles',
 };

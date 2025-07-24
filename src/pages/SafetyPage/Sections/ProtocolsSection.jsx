@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 // Animations and Child Components
 import { staggerContainer, fadeInUp } from '../../../hooks/animations';
 import ProtocolCardComponent from '../Card/ProtocolCardComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the "Safety Protocols" section of the Safety page.
@@ -17,7 +18,7 @@ import ProtocolCardComponent from '../Card/ProtocolCardComponent';
  * @param {object[]} props.protocolsData.steps - An array of protocol step objects.
  */
 const ProtocolsSection = ({ translationNS, protocolsData }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
   return (
     <motion.section variants={staggerContainer} className="py-12 px-4 bg-brand-primary-dark">
       <div className="container mx-auto">
@@ -34,7 +35,12 @@ const ProtocolsSection = ({ translationNS, protocolsData }) => {
         {/* List of Protocol Steps */}
         <motion.div variants={staggerContainer} className="max-w-4xl mx-auto space-y-8">
           {protocolsData.steps.map((step, index) => (
-            <ProtocolCardComponent key={step.id} stepData={step} index={index} />
+            <ProtocolCardComponent
+              key={step.id}
+              stepData={step}
+              index={index}
+              translationNS={translationNS}
+            />
           ))}
         </motion.div>
       </div>

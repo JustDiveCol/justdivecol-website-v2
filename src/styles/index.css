@@ -232,3 +232,10 @@
   /* must exceed your tallest answer */
   max-height: 500px;
 }
+
+img,
+a {
+  -webkit-user-drag: none; /* For WebKit browsers (Chrome, Safari) */
+  user-drag: none; /* Standard W3C property */
+  -moz-user-select: none; /* Optional: Prevents text selection with drag in Firefox */
+}

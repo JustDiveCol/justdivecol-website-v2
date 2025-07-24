@@ -3,6 +3,8 @@
 import tyc_header_background from '../../assets/images/page-specific/tyc/tyc-header-background.webp';
 
 import logo from '../../assets/images/logos/logo.png';
+import { LOGO_MAIN } from '../global/assets';
+import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 
 export const terms = {
   seo: {
@@ -10,18 +12,18 @@ export const terms = {
     descriptionKey: 'tcaSeoDesc',
     keywords: 'tcaSeoKeywords',
     imageUrl: tyc_header_background,
-    url: '/terminos-y-condiciones',
+    url: ROUTES.terms,
   },
   header: {
     backgroundImage: tyc_header_background,
     titleKey: 'tcaHeaderTitle',
     subtitleKey: 'tcaHeaderSubtitle',
-    mainLogo: logo,
-    mainLogoAltKey: 'tcaHeaderMainLogoAlt',
-    // complementaryLogo: '',
-    // complementaryLogoAltKey: 'tcaHeaderComplementaryLogoAlt',
-    // textOverlayKey: 'tcaHeaderTextOverlay',
-    photoCreditKey: 'tcaHeaderPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
   sections: [
     {

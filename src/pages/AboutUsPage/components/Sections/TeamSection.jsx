@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
 import TeamCardComponent from '../Cards/TeamCardComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the "Meet the Team" section of the page.
@@ -15,7 +16,7 @@ import TeamCardComponent from '../Cards/TeamCardComponent';
  * @param {object[]} props.teamData.members - An array of team member data objects.
  */
 const TeamSection = ({ translationNS, teamData }) => {
-  const { t } = useTranslation([translationNS, 'common']);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
   return (
     <motion.section
       onContextMenu={(e) => e.preventDefault()}

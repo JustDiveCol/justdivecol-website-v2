@@ -1,1 +1,12 @@
-{}
+{
+  "destinationLabel": "Destino",
+  "typeLabel": "Tipo",
+  "noOptionsAvailable": "No hay opciones disponibles",
+  "difficultyLabel": "Dificultad",
+  "showingSitesCountFull": "Mostrando {{filtered}} de {{total}} sitios de buceo",
+  "noMatchingSites": "No se encontraron sitios de buceo que coincidan con los filtros.",
+  "depthLabel": "Profundidad máxima",
+  "levelRequiredLabel": "Nivel Requerido",
+  "conditionsLabel": "Condiciones",
+  "tagsLabel": "Etiquetas"
+}

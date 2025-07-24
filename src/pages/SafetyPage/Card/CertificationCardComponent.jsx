@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../hooks/animations';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders a card for a single certification or partner organization.
@@ -13,8 +14,8 @@ import { fadeInUp } from '../../../hooks/animations';
  * @param {string} props.partnerData.descriptionKey - The translation key for the partner's description.
  * @param {string} props.partnerData.logoUrl - The URL for the partner's logo.
  */
-const CertificationCardComponent = ({ partnerData }) => {
-  const { t } = useTranslation('safety');
+const CertificationCardComponent = ({ translationNS, partnerData }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
   const { nameKey, descriptionKey, logoUrl } = partnerData;
 
   return (

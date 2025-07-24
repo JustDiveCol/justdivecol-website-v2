@@ -19,7 +19,9 @@ export const santaMartaDivesites = [
     ...diveSiteTemplate,
     id: 'bajo-del-pescador',
     destinationId: 'santa-marta',
+    isTopSite: true,
     nameKey: 'bajoDelPescadorName',
+    descriptionKey: 'bajoDelPescadorDesc',
     descriptionP1Key: 'bajoDelPescadorDescP1',
     descriptionP2Key: 'bajoDelPescadorDescP2',
 
