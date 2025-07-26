@@ -1,8 +1,8 @@
 // src/data/pages/experiences.js
 import { experienceCategories } from '../global/sharedData';
 
-import headerBackground from '../../assets/images/page-specific/experiences/experiences-header-background.webp';
-import ctaBackground from '../../assets/images/page-specific/experiences/experiences-cta-background.webp';
+import headerBackground from '../../assets/images/page-specific/experiences/header-background.webp';
+import ctaBackground from '../../assets/images/page-specific/experiences/cta-background.webp';
 
 import {
   BUTTON_TYPES,

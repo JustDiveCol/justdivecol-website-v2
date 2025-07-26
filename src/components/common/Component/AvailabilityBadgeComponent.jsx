@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { AVAILABILITY, NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
+import { SOLD_OUT_LOGO } from '@/data/global/assets';
 
 const AvailabilityBadgeComponent = ({ translationNS, status, className = '' }) => {
   const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
@@ -19,7 +20,7 @@ const AvailabilityBadgeComponent = ({ translationNS, status, className = '' }) =
       animationType: 'pulse-infinite',
     },
     soldOut: {
-      text: t(SHARED_TRANSLATION_KEYS.STATUS_LAST_SEATS_TEXT),
+      text: t(SHARED_TRANSLATION_KEYS.STATUS_SOLD_OUT_TEXT),
       className: 'bg-red-500 text-brand-primary-dark',
       animationType: 'pulse-finite',
     },
@@ -62,15 +63,26 @@ const AvailabilityBadgeComponent = ({ translationNS, status, className = '' }) =
   }
   // Si animationType es 'none', no se añaden props de animación extra.
 
-  const sizeClass = status === AVAILABILITY.soldOut ? 'px-4 py-2 text-sm' : 'px-3 py-1 text-xs';
+  const sizeClass = '';
 
   return (
-    <motion.span
-      {...animationProps}
-      className={`inline-block rounded-full font-semibold ${data.className} ${sizeClass} ${className}`}
-    >
-      {data.text}
-    </motion.span>
+    // Si el estado es 'soldOut', se muestra la imagen.
+    // Si no, se muestra el badge de texto.
+    status === AVAILABILITY.soldOut ? (
+      <motion.img
+        {...animationProps} // Aplica las animaciones de pulse-finite
+        src={SOLD_OUT_LOGO.soldOutLogo}
+        alt={t(SOLD_OUT_LOGO.altKey)}
+        className={`inline-block w-24 object-contain z-10 ${className}`}
+      />
+    ) : (
+      <motion.span
+        {...animationProps}
+        className={`inline-block rounded-full font-semibold ${data.className} px-3 py-1 text-xs ${className}`}
+      >
+        {data.text}
+      </motion.span>
+    )
   );
 };
 

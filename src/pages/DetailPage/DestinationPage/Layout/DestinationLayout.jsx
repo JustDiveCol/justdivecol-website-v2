@@ -142,6 +142,7 @@ const DestinationLayout = ({ destinationData, upcomingTrips, topDiveSites }) => 
             }}
             translationNS={NAMESPACES.DESTINATIONS} // Usar el namespace del contenido de destino
           />
+
           {/* UpcomingTripSection ahora espera sesiones enriquecidas y su titleKey puede ser específico de la página */}
           <UpcomingTripSection
             availableTrips={upcomingTrips} // Pasa las sesiones enriquecidas

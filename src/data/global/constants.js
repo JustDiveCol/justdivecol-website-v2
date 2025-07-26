@@ -25,7 +25,6 @@ export const SHARED_TRANSLATION_KEYS = {
   STATUS_COMPLETE_TEXT: 'common:statusCompleted',
   STATUS_UPCOMING_TEXT: 'common:statusUpcoming',
 
-
   // --- Contact ---
   GENERAL_WHATSAPP_MESSAGE: 'contact:generalWhatsappMessage',
   EXPERIENCE_WHATSAPP_MESSAGE: 'contact:experienceWhatsappMessage',
@@ -72,14 +71,16 @@ export const SHARED_TRANSLATION_KEYS = {
   EXPERIENCES_INCLUDED_TITLE: 'experiences:experiencesIncludedTitle',
   EXPERIENCES_NOT_INCLUDED_TITLE: 'experiences:experiencesNotIncludedTitle',
   EXPERIENCES_GALLERY_TITLE: 'experiences:experiencesGalleryTitle',
+  EXPERIENCES_OTHER_TITLE: 'experiences:experiencesOtherTripsTitle',
 
   EXPERIENCES_DEFAULT_NOTE: 'experiences:experiencesDefaultNote',
   EXPERIENCES_DEFAULT_PAYMENT_NOTE: 'experiences:experiencesDefaultPaymentNote',
   EXPERIENCES_DEFAULT_ITINERARY_NOTE_1: 'experiences:experiencesDefaultItineraryNote1',
   EXPERIENCES_DEFAULT_ITINERARY_NOTE_2: 'experiences:experiencesDefaultItineraryNote2',
 
-  EXPERIENCE_CTA_BUTTON: 'experiences:experinceCtaTextButton',
-  
+  EXPERIENCES_CTA_TEXT_BUTTON: 'experiences:experinceCtaTextButton',
+  EXPERIENCES_CTA_WHATSAPP_MESSAGE: 'experiences:experinceCtaWhatsappMessage',
+
   EXPERIENCE_WITH_TRIPS_TITLE: 'experiencesPage:expWithTripsTitle',
   EXPERIENCE_WITH_NO_TRIPS_TITLE: 'experiencesPage:expWithoutTripsTitle',
 
@@ -114,9 +115,10 @@ export const ROUTES = {
   safety: '/safety',
   contact: '/contact',
   destinations: '/destinations',
+  map: '/map',
 
-  mainStore: 'gear/*',
-  store: '/gear',
+  mainStore: 'store/*',
+  store: '/store',
 
   certificationDetail: '/certifications/:certificationSlug',
   experienceDetail: '/experiences/:experienceSlug/:sessionSlug',
@@ -158,15 +160,18 @@ export const STATUS = {
 export const CERTIFICATION_CATEGORIES = {
   owd: 'open-water-diver',
   aowd: 'advanced-open-water-diver',
+  rd: 'rescue-diver',
 };
 
 export const CERTIFICATION_IDS = {
   owd: 'padi-open-water-diver',
   aowd: 'padi-advanced-open-water-diver',
+  rd: 'padi-rescue-diver',
 };
 
 export const CATEGORY_REGION = {
   regionCaribe: 'regionCaribe',
+  regionPacifico: 'regionPacifico',
 };
 
 export const CURRENCY = {

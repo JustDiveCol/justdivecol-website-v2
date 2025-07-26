@@ -1,6 +1,6 @@
 // src/data/content/experiences/experienceTemplate.js
 import { LOGO_MAIN } from '@/data/global/assets';
-import { STATUS, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
+import { STATUS } from '@/data/global/constants';
 
 // Defines the shape of an experience object
 export const experienceTemplate = {

@@ -22,21 +22,12 @@ import ItinerarySection from '../../common/Sections/ItinerarySection';
 import MapComponent from '../../../MapPage/components/MapComponent';
 import CurriculumCard from '../../common/Cards/CurriculumCard';
 import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
-import { FOUNDERS_LOGO } from '@/data/global/assets';
+import { CREYENTES_LOGO } from '@/data/global/assets';
 import { ChevronDownIcon } from '@/assets/icons/ChevronIcons';
+import ButtonComponent from '@/components/common/Button/ButtonComponent';
 
 const FOOTER_HEIGHT_THRESHOLD = 700;
 
-/**
- * The main layout component for the experience detail page.
- * It assembles all necessary sections and cards to display experience information.
- *
- * @param {object} props - The component props.
- * @param {object} props.experienceData - The complete data object for the experience/trip.
- * @param {object} props.sessionData - The complete data object for the specific session. // Prop from ExperiencePage
- * @param {object[]} props.offeredCertificationsData - An array of certification data objects offered with this session. // Prop from ExperiencePage
- * @param {object[]} props.otherTripsToThisDestination - An array of other upcoming sessions to the same destination. // <-- NEW PROP HERE
- */
 const ExperienceLayout = ({
   experienceData,
   sessionData,
@@ -59,29 +50,22 @@ const ExperienceLayout = ({
 
   useEffect(() => {
     const checkScrollEnd = () => {
-      // CORRECTO: Referencia al documento para el scroll de la página completa
       const scrollHeight = document.documentElement.scrollHeight;
       const scrollTop = document.documentElement.scrollTop;
       const clientHeight = document.documentElement.clientHeight;
 
-      // El indicador desaparece cuando el usuario está dentro del rango del footer
       const isScrolledIntoFooterArea =
         scrollTop + clientHeight >= scrollHeight - FOOTER_HEIGHT_THRESHOLD;
-      setShowScrollIndicator(!isScrolledIntoFooterArea); // Mostrar si NO está en el área del footer
+      setShowScrollIndicator(!isScrolledIntoFooterArea);
     };
 
-    // La principal área de scroll de la página es generalmente el 'window' o el 'document.documentElement'
-    // Si tu layout tiene overflow-y: auto en el main, escucha ese elemento.
-    // Asumo que el scroll principal es el de la ventana.
     window.addEventListener('scroll', checkScrollEnd);
-    // Ejecutar al montar para establecer el estado inicial
     checkScrollEnd();
 
-    // Limpiar el event listener al desmontar el componente
     return () => {
       window.removeEventListener('scroll', checkScrollEnd);
     };
-  }, []); // Se ejecuta solo una vez al montar
+  }, []);
 
   const { dateRangeText, durationText } = useMemo(() => {
     if (!sessionData?.startDate || !sessionData?.endDate) {
@@ -119,6 +103,15 @@ const ExperienceLayout = ({
   const headerDataForComponent = {
     ...experienceData.header,
     titleKey: mainTitleKey,
+  };
+
+  const buttonAction = {
+    type: experienceData.cta.action.type,
+    whatsAppMessageKey: experienceData.cta.action.whatsAppMessageKey,
+    whatsAppMessageNS: experienceData.cta.action.whatsAppMessageNS,
+    whatsAppMessageValues: {
+      experienceName: t(experienceData.titleKey, { ns: NAMESPACES.EXPERIENCES }),
+    },
   };
 
   return (
@@ -174,10 +167,10 @@ const ExperienceLayout = ({
             duration: 2.5, // Duración de la animación (ajusta entre 1 y 2 segundos)
             ease: [0.6, 0.05, 0.01, 0.9], // Una curva de ease más dramática para el efecto de zoom/movimiento
           }}
-          src={FOUNDERS_LOGO.foundersLogo}
+          src={CREYENTES_LOGO.creyentesLogo}
           alt={
-            FOUNDERS_LOGO.altKey
-              ? t(FOUNDERS_LOGO.altKey, { ns: NAMESPACES.COMMON })
+            CREYENTES_LOGO.altKey
+              ? t(CREYENTES_LOGO.altKey, { ns: NAMESPACES.COMMON })
               : 'Founders Logo'
           }
           className="fixed z-50 w-20 h-20 object-contain" // Solo 'fixed' y dimensiones, el posicionamiento lo hace 'initial' y 'animate'
@@ -228,14 +221,6 @@ const ExperienceLayout = ({
             duration={durationText}
             translationNS={NAMESPACES.EXPERIENCES}
           />
-          {/* Payment Plan */}
-          <CurriculumCard
-            detailsData={sessionData.paymentPlan}
-            translationNS={NAMESPACES.EXPERIENCES}
-          />
-
-          {/* Payment Options */}
-          <PaymentCard paymentData={paymentMethodsData} translationNS={NAMESPACES.PAYMENT} />
 
           {/* Included Experience */}
           <ChecklistCard
@@ -260,27 +245,19 @@ const ExperienceLayout = ({
             type="excluded"
           />
 
-          {/* CTA */}
-          <CtaCard
-            ctaData={{
-              titleKey: experienceData.cta.titleKey,
-              buttonTextKey: experienceData.cta.buttonTextKey,
-              ctaAction: {
-                ...experienceData.cta.action,
-                whatsAppMessageKey: 'sessionWhatsappMessageKey',
-                whatsAppMessageNS: NAMESPACES.COMMON,
-                whatsAppMessageValues: {
-                  experienceTitle: t(experienceData.titleKey, { ns: NAMESPACES.EXPERIENCES }),
-                  sessionDates: dateRangeText,
-                },
-              },
-            }}
+          {/* Payment Plan */}
+          <CurriculumCard
+            detailsData={sessionData.paymentPlan}
             translationNS={NAMESPACES.EXPERIENCES}
           />
+
+          {/* Payment Options */}
+          <PaymentCard paymentData={paymentMethodsData} translationNS={NAMESPACES.PAYMENT} />
+
           {otherTripsToThisDestination && otherTripsToThisDestination.length > 0 && (
             <UpcomingTripSection
               availableTrips={otherTripsToThisDestination}
-              titleKey="expOtherTripsTitle"
+              titleKey={SHARED_TRANSLATION_KEYS.EXPERIENCES_OTHER_TITLE}
               translationNS={NAMESPACES.EXPERIENCES}
             />
           )}
@@ -301,6 +278,40 @@ const ExperienceLayout = ({
           </div>
         </div>
       </section>
+
+      {/* CTA */}
+      <motion.div
+        // Estado inicial: invisible y abajo
+        initial={{ opacity: 0, y: 100 }}
+        // Animación final con bucle: aparece y rebota suavemente
+        animate={{
+          opacity: 1, // Se vuelve visible
+          y: [0, -10, 0], // Sube y baja 10px desde su posición final
+        }}
+        transition={{
+          // Animación de 'y' (rebote): se repite
+          y: {
+            duration: 1,
+            ease: 'easeInOut',
+            repeat: Infinity,
+            repeatType: 'mirror',
+          },
+          // Animación de 'opacity' (aparición): solo una vez
+          opacity: {
+            duration: 0.5,
+            ease: 'easeOut',
+          },
+        }}
+        className="fixed bottom-16 right-6 z-50 md:right-12"
+      >
+        <ButtonComponent
+          action={buttonAction}
+          textKey={experienceData.cta.buttonTextKey}
+          translationNS={[experienceData.cta.translationNS, NAMESPACES.EXPERIENCES]}
+          containerClassName="mt-6"
+          className=""
+        />
+      </motion.div>
     </motion.div>
   );
 };

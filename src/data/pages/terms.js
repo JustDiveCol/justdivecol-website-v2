@@ -1,8 +1,7 @@
 // src/data/pages/terms.js
 
-import tyc_header_background from '../../assets/images/page-specific/tyc/tyc-header-background.webp';
+import headerBackground from '../../assets/images/page-specific/terms/header-background.webp';
 
-import logo from '../../assets/images/logos/logo.png';
 import { LOGO_MAIN } from '../global/assets';
 import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 
@@ -11,11 +10,11 @@ export const terms = {
     titleKey: 'tcaSeoTitle',
     descriptionKey: 'tcaSeoDesc',
     keywords: 'tcaSeoKeywords',
-    imageUrl: tyc_header_background,
+    imageUrl: headerBackground,
     url: ROUTES.terms,
   },
   header: {
-    backgroundImage: tyc_header_background,
+    backgroundImage: headerBackground,
     titleKey: 'tcaHeaderTitle',
     subtitleKey: 'tcaHeaderSubtitle',
     mainLogo: LOGO_MAIN.mainLogo,

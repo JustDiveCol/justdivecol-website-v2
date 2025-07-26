@@ -1,6 +1,6 @@
 // src/data/pages/policyData.js
 
-import policy_header_background from '../../assets/images/page-specific/policy/policy-header-background.webp';
+import headerBackground from '../../assets/images/page-specific/policy/header-background.webp';
 
 import { LOGO_MAIN } from '../global/assets';
 import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
@@ -10,11 +10,11 @@ export const policyData = {
     titleKey: 'policiesSeoTitle',
     descriptionKey: 'policiesSeoDesc',
     keywords: 'policiesSeoKeywords',
-    imageUrl: policy_header_background,
+    imageUrl: headerBackground,
     url: ROUTES.policy,
   },
   header: {
-    backgroundImage: policy_header_background,
+    backgroundImage: headerBackground,
     titleKey: 'policiesHeaderTitle',
     subtitleKey: 'policiesHeaderSubtitle',
     mainLogo: LOGO_MAIN.mainLogo,

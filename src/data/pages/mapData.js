@@ -1,7 +1,7 @@
 import headerBackground from '../../assets/images/page-specific/map/header-background.webp';
 
 import { LOGO_MAIN } from '../global/assets';
-import { SHARED_TRANSLATION_KEYS } from '../global/constants';
+import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 
 export const mapData = {
   seo: {
@@ -9,7 +9,7 @@ export const mapData = {
     descriptionKey: 'mapSeoDesc',
     keywords: 'mapSeoKeywords',
     imageUrl: headerBackground,
-    url: '/mapa',
+    url: ROUTES.map,
   },
   header: {
     backgroundImage: headerBackground,

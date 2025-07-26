@@ -1,6 +1,6 @@
 // src/data/content/destinations/destinationTemplate.js
-import { LOGO_MAIN } from '@/data/global/assets';
-import { STATUS, IMAGE_VARIANTS, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
+
+import { STATUS, IMAGE_VARIANTS } from '@/data/global/constants';
 
 // Defines the shape of a destination object
 export const destinationTemplate = {

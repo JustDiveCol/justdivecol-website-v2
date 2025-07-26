@@ -18,6 +18,8 @@ import gallery01 from '../../../assets/images/page-specific/destinations/santa-m
 import gallery02 from '../../../assets/images/page-specific/destinations/santa-marta/gallery-02.webp';
 import gallery03 from '../../../assets/images/page-specific/destinations/santa-marta/gallery-03.webp';
 import gallery04 from '../../../assets/images/page-specific/destinations/santa-marta/gallery-04.webp';
+import gallery05 from '../../../assets/images/page-specific/destinations/santa-marta/gallery-05.webp';
+import gallery06 from '../../../assets/images/page-specific/destinations/santa-marta/gallery-06.webp';
 
 // Base example for Santa Marta destination
 const _santaMarta = {
@@ -35,8 +37,8 @@ const _santaMarta = {
   nameKey: 'smName', // i18n key for "Santa Marta"
   descriptionKey: 'smDescription',
   categoryKey: CATEGORY_REGION.regionCaribe, // e.g., Caribe colombiano
-  createdAt: '2025-07-22T18:33:06Z',
-  updatedAt: '2025-07-22T18:33:06Z',
+  createdAt: '2025-07-24T20:25:19Z',
+  updatedAt: '2025-07-24T20:25:19Z',
 
   // --- SEO ---
   seo: {
@@ -52,6 +54,8 @@ const _santaMarta = {
     backgroundImage: headerBackground,
     titleKey: 'smHeaderTitle',
     subtitleKey: 'smHeaderSubtitle',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
       prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
       text: 'XYZ',
@@ -67,6 +71,8 @@ const _santaMarta = {
   // --- Card ---
   card: {
     backgroundImage: cardImage,
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
     textOverlayKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_TEXT_OVERLAY,
     photoCredit: {
       prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
@@ -133,6 +139,28 @@ const _santaMarta = {
       },
       {
         backgroundImage: gallery04,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'smGal4Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
+      },
+      {
+        backgroundImage: gallery05,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'smGal4Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
+      },
+      {
+        backgroundImage: gallery06,
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         altTextKey: 'smGal4Alt',

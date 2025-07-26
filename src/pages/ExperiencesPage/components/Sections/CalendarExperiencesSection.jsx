@@ -8,7 +8,7 @@ import { useExperiences } from '../../../../data/content/experiences/DataProvide
 import { experiencesData } from '../../../../data/pages/experiencesData';
 import { staggerContainer } from '../../../../hooks/animations';
 
-import backgroundImage from '../../../../assets/images/page-specific/experiences/experiences-header-background.webp';
+import backgroundImage from '../../../../assets/images/page-specific/experiences/header-background.webp';
 
 import ButtonComponent from '../../../../components/common/Button/ButtonComponent.jsx';
 import CalendarExperienceCardComponent from '../Cards/CalendarExperienceCardComponent.jsx';

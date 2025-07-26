@@ -31,8 +31,8 @@ export const padiAdvancedOpenWaterDiverCertification = {
   type: 'certification',
   category: CERTIFICATION_CATEGORIES.aowd,
   languages: [LANGUAGES.ES, LANGUAGES.EN],
-  createdAt: '2025-07-22T17:31:03Z',
-  updatedAt: '2025-07-22T17:31:03Z',
+  createdAt: '2025-07-24T20:25:19Z',
+  updatedAt: '2025-07-24T20:25:19Z',
   prerequisites: [],
 
   // --- SEO ---

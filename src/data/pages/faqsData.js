@@ -1,7 +1,7 @@
 // src/data/pages/faqsData.js
-import headerBackground from '../../assets/images/page-specific/faqs/faqs-header-background.webp';
+import headerBackground from '../../assets/images/page-specific/faqs/header-background.webp';
 import { LOGO_MAIN } from '../global/assets';
-import { SHARED_TRANSLATION_KEYS } from '../global/constants';
+import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 
 export const faqsData = {
   seo: {
@@ -9,7 +9,7 @@ export const faqsData = {
     descriptionKey: 'faqsSeoDesc',
     keywords: 'faqsSeoKeywords',
     imageUrl: headerBackground,
-    url: '/faqs',
+    url: ROUTES.faq,
   },
   header: {
     backgroundImage: headerBackground,

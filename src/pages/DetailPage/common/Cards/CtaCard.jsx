@@ -1,42 +1,53 @@
 // src/pages/DetailPage/common/Cards/CtaCard.jsx
+
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'motion/react';
 
 import ButtonComponent from '../../../../components/common/Button/ButtonComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
-/**
- * Renders a call-to-action (CTA) card with a title and a prominent button.
- * The button can act as an internal React Router Link or a standard external anchor tag.
- *
- * @param {object} props - The component props.
- * @param {object} props.ctaData - The data object for the CTA.
- * @param {string} props.ctaData.titleKey - The translation key for the card's title.
- * @param {string} props.ctaData.buttonTextKey - The translation key for the button's text.
- * @param {object} props.ctaData.ctaAction - The action object for ButtonComponent.
- * @param {string} props.translationNS - The i18next namespace for translations.
- */
 const CtaCard = ({ ctaData, translationNS }) => {
-  const { t } = useTranslation(translationNS);
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
-  if (!ctaData || !ctaData.titleKey || !ctaData.buttonTextKey || !ctaData.ctaAction) {
+  if (!ctaData || !ctaData.buttonTextKey || !ctaData.ctaAction) {
     return null;
   }
 
   return (
-    <div
-      className="bg-brand-primary-light p-6 rounded-lg shadow-lg text-center select-text"
-      role="region"
-      aria-label={t(ctaData.titleKey)}
+    // El botón flotante debe estar fuera del flujo normal del documento
+    <motion.div
+      // Estado inicial: invisible y abajo
+      initial={{ opacity: 0, y: 100 }}
+      // Animación final con bucle: aparece y rebota suavemente
+      animate={{
+        opacity: 1, // Se vuelve visible
+        y: [0, -10, 0], // Sube y baja 10px desde su posición final
+      }}
+      transition={{
+        // Animación de 'y' (rebote): se repite
+        y: {
+          duration: 1,
+          ease: 'easeInOut',
+          repeat: Infinity,
+          repeatType: 'mirror',
+        },
+        // Animación de 'opacity' (aparición): solo una vez
+        opacity: {
+          duration: 0.5,
+          ease: 'easeOut',
+        },
+      }}
+      className="fixed bottom-16 right-6 z-50 md:right-12"
     >
-      <h3 className="text-xl font-bold text-brand-white mb-6">{t(ctaData.titleKey)}</h3>
-
       <ButtonComponent
-        action={ctaData.ctaAction}
+        action={ctaData.action}
         textKey={ctaData.buttonTextKey}
         translationNS={translationNS}
-        className="text-sm"
+        roundedClass="rounded-full"
+        className="text-base-xs font-bold uppercase"
       />
-    </div>
+    </motion.div>
   );
 };
 

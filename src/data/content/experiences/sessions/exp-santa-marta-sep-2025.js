@@ -12,7 +12,7 @@ export const expSantaMartaSep2025Session = {
   // titleKey: 'expSmSep25Title',
   startDate: '2025-09-26',
   endDate: '2025-09-29',
-  price: 4000000,
+  price: 3500000,
   currency: CURRENCY.COP,
   founders: true,
   capacity: 8,

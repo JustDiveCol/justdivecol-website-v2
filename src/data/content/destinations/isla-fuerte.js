@@ -1,74 +1,90 @@
 // src/data/content/destinations/isla-fuerte.js
 
-// Import all local images for this destination.
-import isla_fuerte_header_background from '../../../assets/images/page-specific/destinations/isla-fuerte/isla-fuerte-header-background.webp';
-import isla_fuerte_card from '../../../assets/images/page-specific/destinations/isla-fuerte/isla-fuerte-card.webp';
-import isla_fuerte_gallery_01 from '../../../assets/images/page-specific/destinations/isla-fuerte/isla-fuerte-gallery-01.webp';
-import isla_fuerte_gallery_02 from '../../../assets/images/page-specific/destinations/isla-fuerte/isla-fuerte-gallery-02.webp';
-import isla_fuerte_gallery_03 from '../../../assets/images/page-specific/destinations/isla-fuerte/isla-fuerte-gallery-03.webp';
-import isla_fuerte_gallery_04 from '../../../assets/images/page-specific/destinations/isla-fuerte/isla-fuerte-gallery-04.webp';
-import isla_fuerte_gallery_05 from '../../../assets/images/page-specific/destinations/isla-fuerte/isla-fuerte-gallery-05.webp';
-import isla_fuerte_gallery_06 from '../../../assets/images/page-specific/destinations/isla-fuerte/isla-fuerte-gallery-06.webp';
+import { destinationTemplate } from './destinationTemplate';
+import {
+  STATUS,
+  IMAGE_VARIANTS,
+  ROUTES,
+  CATEGORY_REGION,
+  SHARED_TRANSLATION_KEYS,
+  BUTTON_TYPES,
+  NAMESPACES,
+} from '@/data/global/constants';
+import { LOGO_MAIN } from '@/data/global/assets';
 
-import logo from '../../../assets/images/logos/logo.png';
-import padi from '../../../assets/images/logos/padi.png';
+import headerBackground from '../../../assets/images/page-specific/destinations/isla-fuerte/header-background.webp';
+import cardImage from '../../../assets/images/page-specific/destinations/isla-fuerte/card-image.webp';
+import gallery01 from '../../../assets/images/page-specific/destinations/isla-fuerte/gallery-01.webp';
+import gallery02 from '../../../assets/images/page-specific/destinations/isla-fuerte/gallery-02.webp';
+import gallery03 from '../../../assets/images/page-specific/destinations/isla-fuerte/gallery-03.webp';
+import gallery04 from '../../../assets/images/page-specific/destinations/isla-fuerte/gallery-04.webp';
+import gallery05 from '../../../assets/images/page-specific/destinations/isla-fuerte/gallery-05.webp';
+import gallery06 from '../../../assets/images/page-specific/destinations/isla-fuerte/gallery-06.webp';
 
-/**
- * Data structure for the isla-fuerte destination.
- * This object serves as the single source of truth for all content related to this destination.
- */
-export const islaFuerteDestination = {
+// Base example for Isla Fuerte destination
+const _islaFuerte = {
+  ...destinationTemplate,
+
   // --- Metadata ---
-  id: 'isla-fuerte', // Unique identifier for the destination.
-  status: 'published', // 'published' or 'draft'.
-  nameKey: 'ifName', // Translation key for the destination's name.
+  id: 'isla-fuerte',
+  slug: 'isla-fuerte',
+  status: STATUS.published,
+  type: 'destination',
+  coords: [-76.18084146986835, 9.388325391303937], // [lng, lat]
+  country: 'CO', // ISO country code
+  minZoom: 10.5,
+  maxZoom: 15,
+  nameKey: 'ifName', // i18n key for "Isla Fuerte"
+  descriptionKey: 'ifDescription',
+  categoryKey: CATEGORY_REGION.regionCaribe, // e.g., Caribe colombiano
+  createdAt: '2025-07-24T20:58:49Z',
+  updatedAt: '2025-07-24T20:58:49Z',
 
-  // --- SEO Content ---
+  // --- SEO ---
   seo: {
     titleKey: 'ifSeoTitle',
     descriptionKey: 'ifSeoDesc',
     keywords: 'ifSeoKeywords',
-    imageUrl: isla_fuerte_header_background,
-    url: '/destinos/',
+    imageUrl: headerBackground,
+    url: '', // will be assigned dynamically
   },
 
-  // --- Header Content ---
+  // --- Header ---
   header: {
-    backgroundImage: isla_fuerte_header_background,
+    backgroundImage: headerBackground,
     titleKey: 'ifHeaderTitle',
     subtitleKey: 'ifHeaderSubtitle',
-    mainLogo: logo,
-    mainLogoAltKey: 'ifHeaderMainLogoAlt',
-    // complementaryLogo: padi,
-    // complementaryLogoAltKey: 'ifHeaderComplementaryLogoAlt',
-    // textOverlayKey: 'ifHeaderTextOverlay',
-    photoCreditKey: 'ifHeaderPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+      text: 'XYZ',
+    },
   },
 
-  // --- Card Description Content ---
+  // --- Description ---
   description: {
     titleKey: 'ifDescTitle',
     paragraphs: ['ifDescP1', 'ifDescP2'],
   },
 
-  // --- Card Display ---
+  // --- Card ---
   card: {
-    backgroundImage: isla_fuerte_card,
-    mainLogo: logo,
-    mainLogoAltKey: 'ifCardMainLogoAlt',
-    // complementaryLogo: padi,
-    // complementaryLogoAltKey: 'ifCardComplementaryLogoAlt',
-    textOverlayKey: 'ifCardTextOverlay',
-    photoCreditKey: 'ifCardPhotoCredit',
-    variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
-
-    descriptionKey: 'ifCardDescription',
-    link: '/destinos/santa-marta',
+    backgroundImage: cardImage,
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    textOverlayKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_TEXT_OVERLAY,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+      text: 'XYZ',
+    },
+    variant: IMAGE_VARIANTS.horizontal,
+    linkPath: '', // will be assigned dynamically
   },
 
-  // --- Main Content ---
+  // Details
   details: {
-    titleKey: 'ifDetailsTitle',
+    titleKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_DETAILS_TITLE,
     items: [
       { labelKey: 'ifDetailLabel1', valueKey: 'ifDetailValue1' },
       { labelKey: 'ifDetailLabel2', valueKey: 'ifDetailValue2' },
@@ -78,103 +94,101 @@ export const islaFuerteDestination = {
     ],
   },
 
-  // --- Divesites ---
-  diveSites: {
-    titleKey: 'ifDiveSitesTitle',
-    sites: [
-      {
-        id: 'barco-hundido',
-        nameKey: 'ifDiveSite1Name',
-        descriptionKey: 'ifDiveSite1Desc',
-      },
-      {
-        id: 'natalia',
-        nameKey: 'ifDiveSite2Name',
-        descriptionKey: 'ifDiveSite2Desc',
-      },
-      {
-        id: 'piedra-medio',
-        nameKey: 'ifDiveSite3Name',
-        descriptionKey: 'ifDiveSite3Desc',
-      },
-      {
-        id: 'isla-aguja',
-        nameKey: 'ifDiveSite4Name',
-        descriptionKey: 'ifDiveSite4Desc',
-      },
-    ],
-  },
-
   // --- Unique Finds ---
   uniqueFinds: {
-    titleKey: 'ifUniqueFindsTitle',
+    titleKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_UNIQUE_FIDS_TITLE,
     items: ['ifUniqueFind1', 'ifUniqueFind2', 'ifUniqueFind3', 'ifUniqueFind4'],
   },
 
   // --- Gallery ---
   gallery: {
-    titleKey: 'ifGalleryTitle',
+    titleKey: SHARED_TRANSLATION_KEYS.DESTINATIONS_GALLERY_TITLE,
     images: [
       {
-        backgroundImage: isla_fuerte_gallery_01,
-        mainLogo: logo,
-        mainLogoAltKey: 'ifGalleryImg1MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'ifGalleryImg1ComplementaryLogoAlt',
-        // textOverlayKey: 'ifGalleryImg1TextOverlay',
-        photoCreditKey: 'ifGalleryImg1PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery01,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'ifGal1Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
       {
-        backgroundImage: isla_fuerte_gallery_02,
-        mainLogo: logo,
-        mainLogoAltKey: 'ifGalleryImg2MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'ifGalleryImg2ComplementaryLogoAlt',
-        // textOverlayKey: 'ifGalleryImg2TextOverlay',
-        photoCreditKey: 'ifGalleryImg2PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery02,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'ifGal2Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
       {
-        backgroundImage: isla_fuerte_gallery_03,
-        mainLogo: logo,
-        mainLogoAltKey: 'ifGalleryImg3MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'ifGalleryImg3ComplementaryLogoAlt',
-        // textOverlayKey: 'ifGalleryImg3TextOverlay',
-        photoCreditKey: 'ifGalleryImg3PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery03,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'ifGal3Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
       {
-        backgroundImage: isla_fuerte_gallery_04,
-        mainLogo: logo,
-        mainLogoAltKey: 'ifGalleryImg4MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'ifGalleryImg4ComplementaryLogoAlt',
-        // textOverlayKey: 'ifGalleryImg4TextOverlay',
-        photoCreditKey: 'ifGalleryImg4PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery04,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'ifGal4Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
       {
-        backgroundImage: isla_fuerte_gallery_05,
-        mainLogo: logo,
-        mainLogoAltKey: 'ifGalleryImg5MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'ifGalleryImg5ComplementaryLogoAlt',
-        // textOverlayKey: 'ifGalleryImg5TextOverlay',
-        photoCreditKey: 'ifGalleryImg5PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery05,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'ifGal4Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
       {
-        backgroundImage: isla_fuerte_gallery_06,
-        mainLogo: logo,
-        mainLogoAltKey: 'ifGalleryImg6MainLogoAlt',
-        // complementaryLogo: padi,
-        // complementaryLogoAltKey 'ifGalleryImg6ComplementaryLogoAlt',
-        // textOverlayKey: 'ifGalleryImg6TextOverlay',
-        photoCreditKey: 'ifGalleryImg6PhotoCredit',
-        variant: 'horizontal', // fullscreen, header, horizontal, vertical, square
+        backgroundImage: gallery06,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'ifGal4Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
       },
     ],
   },
+  // --- CTA ---
+  cta: {
+    textKey: SHARED_TRANSLATION_KEYS.DESTINATION_CTA_BUTTON,
+    translationNS: NAMESPACES.COMMON,
+    action: {
+      type: BUTTON_TYPES.whatsapp,
+      whatsAppMessageKey: SHARED_TRANSLATION_KEYS.DESTINATION_WHATSAPP_MESSAGE,
+      whatsAppMessageNS: NAMESPACES.COMMON,
+    },
+  },
+
+  // Linked experiences (IDs)
+  experienceIds: [],
 };
+
+// Dynamically assign URL based on slug
+_islaFuerte.seo.url = `${ROUTES.destinations}/${_islaFuerte.slug}`;
+_islaFuerte.card.linkPath = `${ROUTES.destinations}/${_islaFuerte.slug}`;
+
+export const islaFuerteDestination = _islaFuerte;

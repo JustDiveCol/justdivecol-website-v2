@@ -10,17 +10,22 @@ import ImageComponent from '../../../../components/common/Image/ImageComponent';
 
 import { NAMESPACES, ROUTES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
-const DestinationCardComponent = ({ destinationData, translationNS }) => {
+const DestinationCardComponent = ({ destinationData, translationNS, cardVariant }) => {
   const { t, i18n } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
-  const { id, nameKey, descriptionKey, card, upcomingTrips } = destinationData;
+  const { nameKey, descriptionKey, card, upcomingTrips } = destinationData;
 
   const hasTrips = upcomingTrips.length > 0;
+
+  const baseWidthClasses = 'w-[240px] sm:w-[270px] md:w-[320px] lg:w-[350px] xl:w-[380px]';
+  const smallerWidthClasses = 'w-[180px] sm:w-[210px] md:w-[260px] lg:w-[280px] xl:w-[300px]'; // Ejemplos de clases más pequeñas
+
+  const widthClasses = cardVariant === 'inactive' ? smallerWidthClasses : baseWidthClasses;
 
   return (
     <motion.div
       variants={fadeInUp}
-      className="w-[240px] sm:w-[270px] md:w-[320px] lg:w-[350px] xl:w-[380px] bg-brand-primary-medium rounded-lg overflow-hidden shadow-2xl flex flex-col hover:scale-[1.02] transition-all duration-300"
+      className={`${widthClasses} bg-brand-primary-medium rounded-lg overflow-hidden shadow-2xl flex flex-col hover:scale-[1.02] transition-all duration-300`}
     >
       <ImageComponent imageData={card} translationNS={translationNS} />{' '}
       <div className="p-6 flex flex-col flex-grow justify-between">

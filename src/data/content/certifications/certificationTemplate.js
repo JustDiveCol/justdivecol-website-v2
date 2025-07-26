@@ -1,5 +1,4 @@
-import { LOGO_MAIN, PADI_LOGO } from '@/data/global/assets';
-import { IMAGE_VARIANTS, ROUTES, STATUS } from '@/data/global/constants';
+import { IMAGE_VARIANTS, STATUS } from '@/data/global/constants';
 
 // date -u +"%Y-%m-%dT%H:%M:%SZ"
 

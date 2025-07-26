@@ -18,7 +18,6 @@ export const footerData = {
     { nameKey: 'privacy', path: ROUTES.privacy },
     { nameKey: 'faqs', path: ROUTES.faq },
     { nameKey: 'divesites', path: ROUTES.divesites },
-    // { nameKey: 'gear', path: '/proximamente' },
   ],
 
   policiesLinkText: 'footerLinkText',

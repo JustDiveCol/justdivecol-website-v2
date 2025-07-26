@@ -1,7 +1,8 @@
 // src/data/pages/underConstructionData.js
-import under_construction_background from '../../assets/images/page-specific/under-construction/under-construction-background.webp';
+import background from '../../assets/images/page-specific/under-construction/background.webp';
 
-import logo from '../../assets/images/logos/logo.png';
+import { LOGO_MAIN } from '../global/assets';
+import { IMAGE_VARIANTS } from '../global/constants';
 
 export const underConstructionData = {
   seo: {
@@ -12,16 +13,12 @@ export const underConstructionData = {
   titleKey: 'underConstructionTitle',
   subtitleKey: 'underConstructionSubtitle',
   ctaTextKey: 'underConstructionCtaText',
-  ctaLink: '/', // Link back to the homepage
+  ctaLink: '/',
 
   image: {
-    backgroundImage: under_construction_background,
-    mainLogo: logo,
-    mainLogoAltKey: 'notFoundMainLogoAlt',
-    // complementaryLogo,
-    // complementaryLogoAltKey: 'notFoundComplementaryLogoAlt',
-    // textOverlayKey: 'notFoundTextOverlay',
-    // photoCreditKey: notFoundPhotoCredit,
-    variant: 'fullscreen', // fullscreen, header, horizontal, vertical, square
+    backgroundImage: background,
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    variant: IMAGE_VARIANTS.fullscreen,
   },
 };

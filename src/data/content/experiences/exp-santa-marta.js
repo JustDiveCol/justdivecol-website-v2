@@ -39,8 +39,8 @@ const _santaMartaExperience = {
   endDate: '',
   price: 0,
   currency: CURRENCY.COP,
-  createdAt: '2025-07-22T20:49:38Z',
-  updatedAt: '2025-07-22T20:49:38Z',
+  createdAt: '2025-07-24T20:25:19Z',
+  updatedAt: '2025-07-24T20:25:19Z',
 
   // --- SEO metadata; url to be computed dynamically ---
   seo: {
@@ -185,12 +185,12 @@ const _santaMartaExperience = {
 
   // --- CTA ---
   cta: {
-    textKey: SHARED_TRANSLATION_KEYS.EXPERIENCE_CTA_BUTTON,
+    buttonTextKey: SHARED_TRANSLATION_KEYS.EXPERIENCES_CTA_TEXT_BUTTON,
     translationNS: NAMESPACES.COMMON,
     action: {
       type: BUTTON_TYPES.whatsapp,
       whatsAppMessageKey: SHARED_TRANSLATION_KEYS.EXPERIENCE_WHATSAPP_MESSAGE,
-      whatsAppMessageNS: NAMESPACES.COMMON,
+      whatsAppMessageNS: NAMESPACES.CONTACT,
     },
   },
 

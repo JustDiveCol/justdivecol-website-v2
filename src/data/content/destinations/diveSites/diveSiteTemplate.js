@@ -28,12 +28,15 @@ export const diveSiteTemplate = {
   photos: [
     // array of { backgroundImage, mainLogo, mainLogoAltKey, photoCreditKey, variant }
     // {
-    //   backgroundImage: '',
-    //   mainLogo: '',
-    //   mainLogoAltKey: '',
-    //   photoCreditKey: '',
+    //   backgroundImage: 'https://placehold.co/600x400/3498db/ffffff?text=Bajo+del+Pescador',
+    //   mainLogo: LOGO_MAIN.mainLogo,
+    //   mainLogoAltKey: LOGO_MAIN.altKey,
+    //   photoCredit: {
+    //     prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+    //     text: 'XYZ',
+    //   },
     //   variant: IMAGE_VARIANTS.horizontal,
-    // }
+    // },
   ],
 
   // --- Optional video ---

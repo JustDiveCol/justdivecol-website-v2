@@ -1,6 +1,6 @@
 // src/data/pages/privacyData.js
 
-import privacy_header_background from '../../assets/images/page-specific/privacy/privacy-header-background.webp';
+import headerBackground from '../../assets/images/page-specific/privacy/header-background.webp';
 
 import { LOGO_MAIN } from '../global/assets';
 import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
@@ -10,11 +10,11 @@ export const privacyData = {
     titleKey: 'ppSeoTitle',
     descriptionKey: 'ppSeoDesc',
     keywords: 'ppSeoKeywords',
-    imageUrl: privacy_header_background,
+    imageUrl: headerBackground,
     url: ROUTES.privacy,
   },
   header: {
-    backgroundImage: privacy_header_background,
+    backgroundImage: headerBackground,
     titleKey: 'ppHeaderTitle',
     subtitleKey: 'ppHeaderSubtitle',
     mainLogo: LOGO_MAIN.mainLogo,

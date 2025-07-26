@@ -1,8 +1,8 @@
 // src/data/pages/safety.js
 
-import headerBackground from '../../assets/images/page-specific/safety/safety-header-background.webp';
-import logoPartner1 from '../../assets/images/page-specific/safety/safety-logo-partner-1.webp';
-import logoPartner2 from '../../assets/images/page-specific/safety/safety-logo-partner-2.webp';
+import headerBackground from '../../assets/images/page-specific/safety/header-background.webp';
+import logoPartner1 from '../../assets/images/page-specific/safety/logo-partner-1.webp';
+import logoPartner2 from '../../assets/images/page-specific/safety/logo-partner-2.webp';
 
 import { LOGO_MAIN } from '../global/assets';
 import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';

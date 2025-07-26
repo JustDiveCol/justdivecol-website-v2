@@ -1,6 +1,6 @@
 {
   "offeredCertificationsTitle": "Certificaciones disponibles",
-  "expOtherTripsTitle": "Otras experiencias de buceo",
+  "experiencesOtherTripsTitle": "Otras experiencias de buceo",
 
   "experiencesDetailsTitle": "Detalles de tu experiencia",
   "experiencesPaymentTitle": "Tu plan de pagos",
@@ -8,6 +8,8 @@
   "experiencesIncludedTitle": "Tu inversión incluye",
   "experiencesNotIncludedTitle": "Tu inversión no incluye",
   "experiencesGalleryTitle": "Momentos inolvidables de tu experiencia submarina",
+
+  "experinceCtaTextButton": "Reservar",
 
   "experiencesDefaultNote": "",
 

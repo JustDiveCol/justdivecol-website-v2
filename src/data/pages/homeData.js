@@ -1,15 +1,9 @@
 // src/data/pages/home.js
-import heroBackground from '../../assets/images/page-specific/home/home-hero-background.webp';
-import ctaBackground from '../../assets/images/page-specific/home/home-cta-background.webp';
+import heroBackground from '../../assets/images/page-specific/home/hero-background.webp';
+import ctaBackground from '../../assets/images/page-specific/home/cta-background.webp';
 
 import { LOGO_MAIN } from '../global/assets.js';
-import {
-  SHARED_TRANSLATION_KEYS,
-  ROUTES,
-  BUTTON_TYPES,
-  NAMESPACES,
-  CAT_TYPE,
-} from '../global/constants.js';
+import { SHARED_TRANSLATION_KEYS, ROUTES, BUTTON_TYPES, NAMESPACES } from '../global/constants.js';
 
 export const homePageData = {
   // === SEO SECTION ===

@@ -19,6 +19,7 @@ const ButtonComponent = ({
   translationNS,
   className = '',
   containerClassName = '',
+  roundedClass = 'rounded-md',
   motionVariants = defaultMotionVariants,
   motionInitial,
   motionAnimate,
@@ -53,9 +54,9 @@ const ButtonComponent = ({
 
   const baseButtonClasses = `
     inline-block bg-brand-cta-orange text-brand-white font-bold uppercase
-    text-button px-8 py-4 rounded-md shadow-lg transition-transform duration-300
+    text-button px-8 py-4 shadow-lg transition-transform duration-300
     hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2
-    focus:ring-brand-cta-yellow
+    focus:ring-brand-cta-yellow ${roundedClass}
     ${className}
   `;
   const content = t(textKey, { ns: translationNS });

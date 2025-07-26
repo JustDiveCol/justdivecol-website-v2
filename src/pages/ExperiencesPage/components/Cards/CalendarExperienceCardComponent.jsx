@@ -11,7 +11,7 @@ import { fadeInUp } from '../../../../hooks/animations';
 
 import AvailabilityBadgeComponent from '../../../../components/common/Component/AvailabilityBadgeComponent';
 import { NAMESPACES, ROUTES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
-import { FOUNDERS_LOGO } from '@/data/global/assets'; // Correcto, ya importaste esto
+import { CREYENTES_LOGO } from '@/data/global/assets'; // Correcto, ya importaste esto
 
 /**
  * A card component that displays a single upcoming trip in a calendar-like list.
@@ -30,7 +30,6 @@ const CalendarExperienceCardComponent = ({ translationNS, tripData, status, dura
   const { t, i18n } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const {
-    id,
     slug: sessionSlug,
     startDate,
     endDate,
@@ -112,8 +111,8 @@ const CalendarExperienceCardComponent = ({ translationNS, tripData, status, dura
           {/* Logo de Founders posicionado absolutamente si founders es true */}
           {founders && (
             <img
-              src={FOUNDERS_LOGO.foundersLogo}
-              alt={FOUNDERS_LOGO.altKey ? t(FOUNDERS_LOGO.altKey) : 'Founders Logo'}
+              src={CREYENTES_LOGO.creyentesLogo}
+              alt={CREYENTES_LOGO.altKey ? t(CREYENTES_LOGO.altKey) : 'Founders Logo'}
               className="absolute -top-4 -left-4 w-16 h-16 object-contain z-20" /* Posicionado flotante */
             />
           )}
@@ -127,8 +126,8 @@ const CalendarExperienceCardComponent = ({ translationNS, tripData, status, dura
           {/* Logo de Founders posicionado absolutamente si founders es true */}
           {founders && (
             <img
-              src={FOUNDERS_LOGO.foundersLogo}
-              alt={FOUNDERS_LOGO.altKey ? t(FOUNDERS_LOGO.altKey) : 'Founders Logo'}
+              src={CREYENTES_LOGO.creyentesLogo}
+              alt={CREYENTES_LOGO.altKey ? t(CREYENTES_LOGO.altKey) : 'Founders Logo'}
               className="absolute -top-4 -left-4 w-16 h-16 object-contain z-20" /* Posicionado flotante */
             />
           )}

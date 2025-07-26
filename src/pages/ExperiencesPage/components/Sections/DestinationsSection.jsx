@@ -13,7 +13,7 @@ import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 const SCROLL_SPEED = 15; // px por segundo para autoscroll
 
 /** Componente reutilizable de carrusel */
-const CarouselSection = ({ title, items }) => {
+const CarouselSection = ({ title, items, cardVariant }) => {
   const outerRef = useRef(null);
   const innerRef = useRef(null);
   const controls = useAnimation();
@@ -110,6 +110,7 @@ const CarouselSection = ({ title, items }) => {
               <DestinationCardComponent
                 destinationData={dest}
                 translationNS={NAMESPACES.DESTINATIONS}
+                cardVariant={cardVariant}
               />
             </div>
           ))}
@@ -184,6 +185,7 @@ const DestinationsSection = ({ translationNS }) => {
         <CarouselSection
           title={t(SHARED_TRANSLATION_KEYS.EXPERIENCE_WITH_TRIPS_TITLE)}
           items={active}
+          cardVariant="active"
         />
 
         {/* Carrusel de destinos sin viajes */}
@@ -191,6 +193,7 @@ const DestinationsSection = ({ translationNS }) => {
           <CarouselSection
             title={t(SHARED_TRANSLATION_KEYS.EXPERIENCE_WITH_NO_TRIPS_TITLE)}
             items={inactive}
+            cardVariant="inactive"
           />
         )}
       </div>

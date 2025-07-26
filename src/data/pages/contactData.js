@@ -1,5 +1,5 @@
 // src/data/pages/contact.js
-import contact_header_background from '../../assets/images/page-specific/contact/contact-header-background.webp'; // Placeholder, replace with your image
+import headerBackground from '../../assets/images/page-specific/contact/header-background.webp'; // Placeholder, replace with your image
 
 import { BUTTON_TYPES, NAMESPACES, ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 import { LOGO_MAIN } from '../global/assets';
@@ -9,11 +9,11 @@ export const contactPageData = {
     titleKey: 'contactSeoTitle',
     descriptionKey: 'contactSeoDesc',
     keywords: 'contactSeoKeywords',
-    imageUrl: contact_header_background,
+    imageUrl: headerBackground,
     url: ROUTES.contact,
   },
   header: {
-    backgroundImage: contact_header_background,
+    backgroundImage: headerBackground,
     titleKey: 'contactHeaderTitle',
     subtitleKey: 'contactHeaderSubtitle',
     mainLogo: LOGO_MAIN.mainLogo,
@@ -59,7 +59,7 @@ export const contactPageData = {
     },
   },
   cta: {
-    backgroundImage: contact_header_background,
+    backgroundImage: headerBackground,
     titleKey: 'contactCtaTitle',
     subtitleKey: 'contactCtaSubtitle',
     ctaTextKey: SHARED_TRANSLATION_KEYS.CONTACT_TEXT_BUTTON,

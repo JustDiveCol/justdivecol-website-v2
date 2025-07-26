@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'; // Importar useTranslation
 import { formatDateRange } from '../../../../utils/formatters';
 import { NAMESPACES, ROUTES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants'; // Importar NAMESPACES y ROUTES
-import { FOUNDERS_LOGO } from '@/data/global/assets';
+import { CREYENTES_LOGO } from '@/data/global/assets';
 
 /**
  * Renders a card that summarizes an upcoming trip (session) and links to its detail page.
@@ -51,10 +51,10 @@ const TripsCard = ({ tripData }) => {
       {/* Founders Logo - static position */}
       {founders && (
         <img
-          src={FOUNDERS_LOGO.foundersLogo}
+          src={CREYENTES_LOGO.creyentesLogo}
           alt={
-            FOUNDERS_LOGO.altKey
-              ? t(FOUNDERS_LOGO.altKey, { ns: NAMESPACES.COMMON })
+            CREYENTES_LOGO.altKey
+              ? t(CREYENTES_LOGO.altKey, { ns: NAMESPACES.COMMON })
               : 'Founders Logo'
           }
           className="absolute -top-4 -right-4 w-16 h-16 object-contain z-20"

@@ -18,6 +18,8 @@ import gallery01 from '../../../assets/images/page-specific/destinations/provide
 import gallery02 from '../../../assets/images/page-specific/destinations/providencia/gallery-02.webp';
 import gallery03 from '../../../assets/images/page-specific/destinations/providencia/gallery-03.webp';
 import gallery04 from '../../../assets/images/page-specific/destinations/providencia/gallery-04.webp';
+import gallery05 from '../../../assets/images/page-specific/destinations/providencia/gallery-05.webp';
+import gallery06 from '../../../assets/images/page-specific/destinations/providencia/gallery-06.webp';
 
 // Base example for Providencia destination
 const _providencia = {
@@ -28,10 +30,10 @@ const _providencia = {
   slug: 'providencia',
   status: STATUS.published,
   type: 'destination',
-  coords: [-74.19505030742204, 11.232133282203762], // [lng, lat]
+  coords: [-81.37393037398746, 13.352018701427312], // [lng, lat]
   country: 'CO', // ISO country code
-  minZoom: 9,
-  maxZoom: 16,
+  minZoom: 10,
+  maxZoom: 15,
   nameKey: 'provName', // i18n key for "Providencia"
   categoryKey: CATEGORY_REGION.regionCaribe, // e.g., Caribe colombiano
   createdAt: '2025-07-22T18:33:06Z',
@@ -147,6 +149,28 @@ const _providencia = {
       },
       {
         backgroundImage: gallery04,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'provGal4Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
+      },
+      {
+        backgroundImage: gallery05,
+        mainLogo: LOGO_MAIN.mainLogo,
+        mainLogoAltKey: LOGO_MAIN.altKey,
+        altTextKey: 'provGal4Alt',
+        photoCredit: {
+          prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+          text: 'XYZ',
+        },
+        variant: IMAGE_VARIANTS.horizontal,
+      },
+      {
+        backgroundImage: gallery06,
         mainLogo: LOGO_MAIN.mainLogo,
         mainLogoAltKey: LOGO_MAIN.altKey,
         altTextKey: 'provGal4Alt',

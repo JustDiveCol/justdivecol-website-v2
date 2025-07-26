@@ -1,11 +1,11 @@
 // src/data/pages/aboutUsData.js
 
-import headerBackground from '../../assets/images/page-specific/about-us/about-us-header-background.webp';
-import historyImage from '../../assets/images/page-specific/about-us/about-us-history-image.webp';
+import headerBackground from '../../assets/images/page-specific/about-us/header-background.webp';
+import historyImage from '../../assets/images/page-specific/about-us/history-image.webp';
 
-import memberImage1 from '../../assets/images/page-specific/about-us/team-avatar-camilo-beltran.webp';
-import memberImage2 from '../../assets/images/page-specific/about-us/team-avatar-alejandra-vargas.webp';
-import memberImage3 from '../../assets/images/page-specific/about-us/team-avatar-pablo-orjuela.webp';
+import memberImage1 from '../../assets/images/page-specific/about-us/member-1-image.webp';
+import memberImage2 from '../../assets/images/page-specific/about-us/member-2-image.webp';
+import memberImage3 from '../../assets/images/page-specific/about-us/member-3-image.webp';
 
 import { IMAGE_VARIANTS, ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 import { LOGO_MAIN } from '../global/assets';
