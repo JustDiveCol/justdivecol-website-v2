@@ -1,3 +1,1 @@
-export const publishedExperiencesLite = [
-  { id: 'experiencia-santa-marta-sept-2025' },
-];
+export const publishedExperiencesLite = [{ id: 'exp-santa-marta' }];

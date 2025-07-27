@@ -3,27 +3,17 @@ import fs from 'fs';
 import { allDestinationsLite } from '../src/data/sitemap/destinations-lite.js';
 import { publishedExperiencesLite } from '../src/data/sitemap/experiences-lite.js';
 import { publishedCoursesLite } from '../src/data/sitemap/courses-lite.js';
-import { navLinks } from '../src/data/global/navbarData.js'; // este parece no tener problemas
+import { staticPaths } from '../src/data/sitemap/static-paths.js';
 
 const BASE_URL = 'https://www.justdivecol.com';
 
 const generateSitemap = async () => {
-  // Static pages from navbar
-  const staticPages = navLinks.map((link) => link.path);
+  const destinationPages = allDestinationsLite.map((dest) => `/destinations/${dest.id}`);
+  const experiencePages = publishedExperiencesLite.map((exp) => `/experiences/${exp.id}`);
+  const coursePages = publishedCoursesLite.map((course) => `/certifications/${course.id}`);
 
-  // Dynamic pages
-  const destinationPages = allDestinationsLite.map((dest) => `/destinos/${dest.id}`);
-  const experiencePages = publishedExperiencesLite.map((exp) => `/experiencias/${exp.id}`);
-  const coursePages = publishedCoursesLite.map((course) => `/cursos/${course.id}`);
+  const allRoutes = [...staticPaths, ...destinationPages, ...experiencePages, ...coursePages];
 
-  // All unique routes
-  const allRoutes = [
-    ...staticPages,
-    ...destinationPages,
-    ...experiencePages,
-    ...coursePages,
-    '/politicas',
-  ];
   const uniqueRoutes = [...new Set(allRoutes)];
 
   const sitemapContent = `
@@ -44,7 +34,7 @@ const generateSitemap = async () => {
   `;
 
   fs.writeFileSync('public/sitemap.xml', sitemapContent.trim());
-  console.log('sitemap.xml generated successfully!');
+  console.log('✅ sitemap.xml generated successfully!');
 };
 
 generateSitemap();
