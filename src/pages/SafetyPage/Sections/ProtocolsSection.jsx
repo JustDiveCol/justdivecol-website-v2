@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 // Animations and Child Components
 import { staggerContainer, fadeInUp } from '../../../hooks/animations';
 import ProtocolCardComponent from '../Card/ProtocolCardComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the "Safety Protocols" section of the Safety page.
@@ -16,34 +17,29 @@ import ProtocolCardComponent from '../Card/ProtocolCardComponent';
  * @param {string} props.protocolsData.subtitleKey - The translation key for the section subtitle.
  * @param {object[]} props.protocolsData.steps - An array of protocol step objects.
  */
-const ProtocolsSection = ({ protocolsData }) => {
-  const { t } = useTranslation('safety');
+const ProtocolsSection = ({ translationNS, protocolsData }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
   return (
-    <motion.section
-      variants={staggerContainer}
-      className='py-20 px-4 bg-brand-primary-dark'>
-      <div className='container mx-auto'>
+    <motion.section variants={staggerContainer} className="py-12 px-4 bg-brand-primary-dark">
+      <div className="container mx-auto">
         {/* Section Header */}
-        <motion.div
-          variants={fadeInUp}
-          className='text-center mb-12'>
-          <h2 className='text-4xl md:text-5xl  font-bold text-brand-white uppercase'>
+        <motion.div variants={fadeInUp} className="text-center mb-12">
+          <h2 className="heading-2 font-bold text-brand-white uppercase">
             {t(protocolsData.titleKey)}
           </h2>
-          <p className='mt-4 max-w-3xl mx-auto  text-lg text-brand-neutral'>
+          <p className="text-subtitle-sm mt-4 max-w-3xl mx-auto text-brand-neutral">
             {t(protocolsData.subtitleKey)}
           </p>
         </motion.div>
 
         {/* List of Protocol Steps */}
-        <motion.div
-          variants={staggerContainer}
-          className='max-w-4xl mx-auto space-y-8'>
+        <motion.div variants={staggerContainer} className="max-w-4xl mx-auto space-y-8">
           {protocolsData.steps.map((step, index) => (
             <ProtocolCardComponent
               key={step.id}
               stepData={step}
               index={index}
+              translationNS={translationNS}
             />
           ))}
         </motion.div>

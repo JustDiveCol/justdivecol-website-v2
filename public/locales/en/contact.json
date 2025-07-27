@@ -1,0 +1,21 @@
+{
+  "contactSeoTitle": "Contact | JustDiveCol - Plan Your Next Underwater Adventure",
+  "contactSeoDesc": "Ready to explore the deep blue? Contact us to design your dream trip, answer your questions, or simply share our passion for the incredible underwater world with JustDiveCol.",
+  "contactSeoKeywords": "contact, JustDiveCol, underwater adventure, plan a dive trip, diving questions, passion for the ocean, WhatsApp diving, JustDiveCol communication, dive customer service",
+  "contactHeaderTitle": "Let's Talk About Your Next Great Adventure",
+  "contactHeaderSubtitle": "We're here to answer your questions, help you plan that dream trip, or simply share our passion for the ocean. Your adventure begins with a conversation!",
+  "contactInfoTitle": "Our Communication Channels",
+  "contactEmailSubject": "Inquiry from the Website",
+  "contactEmailBody": "Hello, I would like more information about JustDiveCol's services.",
+  "contactWhatsAppTitle": "Send Us a Message on WhatsApp",
+  "contactWhatsAppDesc": "Have a quick question, need personalized advice, or prefer a more direct conversation? Click the button to chat with our team. We're ready to help you plan your perfect dive!",
+  "courseInquiryMessage": "Hello, JustDiveCol team. I would like to receive more information about the {{courseName}} course.",
+  "contactFollowUs": "Follow Us on Our Social Media",
+  "contactCtaTitle": "Ready for the Big Plunge? We're Waiting for You!",
+  "contactCtaSubtitle": "The wonders of the deep await you. Tell us your underwater dream, and we'll make it a reality. Your next unforgettable adventure begins with a simple conversation!",
+  "generalWhatsappMessage": "Hello, JustDiveCol. I would like to get some general information about your services. Could you assist me?",
+  "experienceWhatsappMessage": "Hello, JustDiveCol. I'm interested in your experience: {{experienceName}}. Could you give me more details or help me book my spot?",
+  "destinationWhatsappMessage": "Hello, JustDiveCol. I would like more information about the dive trips to {{destinationName}}. I'm ready to explore this destination!",
+  "certificationWhatsappMessage": "Hello, JustDiveCol. I'm interested in the {{courseName}} certification course. Could you inform me about upcoming dates or requirements?",
+  "customWhatsappMessage": "Hello, JustDiveCol. I would like to design a tailor-made diving experience! I have an idea in mind and want to explore personalized options with you. Could you help me?"
+}

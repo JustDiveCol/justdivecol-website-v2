@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
 
 import ImageComponent from '../../../../components/common/Image/ImageComponent';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders the "Our History" section with a title, paragraphs, and a feature image.
@@ -15,13 +16,11 @@ import ImageComponent from '../../../../components/common/Image/ImageComponent';
  * @param {string[]} props.historyData.paragraphs - An array of translation keys for the paragraphs.
  * @param {string} props.historyData.imageUrl - The URL for the section's image.
  */
-const HistorySection = ({ historyData }) => {
-  const { t } = useTranslation('aboutUs');
+const HistorySection = ({ translationNS, historyData }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   return (
-    <motion.section
-      variants={staggerContainer}
-      className='py-20 px-4 bg-brand-primary-dark'>
+    <motion.section variants={staggerContainer} className="py-12 px-4 bg-brand-primary-dark">
       {(() => {
         const hasImage = historyData.image && historyData.image.backgroundImage;
         return (
@@ -29,23 +28,22 @@ const HistorySection = ({ historyData }) => {
             variants={fadeInUp}
             className={`container mx-auto grid ${
               hasImage ? 'md:grid-cols-2' : 'md:grid-cols-1'
-            } gap-12 items-center`}>
+            } gap-12 items-center`}
+          >
             <div>
-              <h2 className='text-3xl md:text-4xl font-bold text-brand-white mb-6'>
-                {t(historyData.titleKey)}
-              </h2>
-              <div className='space-y-4 text-lg text-brand-neutral/90 text-justify'>
+              <h2 className="heading-3 font-bold text-brand-white">{t(historyData.titleKey)}</h2>
+              <div className="text-subtitle-sm mt-4 text-brand-neutral text-justify">
                 {historyData.paragraphs.map((pKey) => (
                   <p key={pKey}>{t(pKey)}</p>
                 ))}
               </div>
             </div>
             {hasImage && (
-              <div>
+              <div className="px-4">
                 <ImageComponent
-                  className='rounded-2xl'
+                  className="rounded-2xl"
                   imageData={historyData.image}
-                  translationNS={'aboutUs'}
+                  translationNS={translationNS}
                 />
               </div>
             )}

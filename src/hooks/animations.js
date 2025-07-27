@@ -104,3 +104,24 @@ export const viewVariants = {
     transition: { duration: 0.3, ease: 'easeIn' },
   },
 };
+
+export const buttonVariants = {
+  // Animación de entrada: el botón aparece desde abajo.
+  hidden: {
+    opacity: 1,
+    y: 100,
+    transition: {
+      duration: 0.8, // Duración de la animación de entrada
+      ease: 'easeOut',
+    },
+  },
+  // Animación de rebote: un pulso sutil que se ejecuta en bucle.
+  bounce: {
+    y: [0, -5, 0], // Mueve el botón 5px hacia arriba y luego lo regresa.
+    transition: {
+      duration: 1.5,
+      repeat: Infinity, // Repite la animación indefinidamente
+      ease: 'easeInOut',
+    },
+  },
+};

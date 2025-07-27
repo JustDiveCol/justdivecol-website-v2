@@ -1,26 +1,26 @@
 // src/data/pages/faqsData.js
-import faqs_header_background from '../../assets/images/page-specific/faqs/faqs-header-background.webp';
-
-import logo from '../../assets/images/logos/logo.png';
+import headerBackground from '../../assets/images/page-specific/faqs/header-background.webp';
+import { LOGO_MAIN } from '../global/assets';
+import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 
 export const faqsData = {
   seo: {
     titleKey: 'faqsSeoTitle',
     descriptionKey: 'faqsSeoDesc',
     keywords: 'faqsSeoKeywords',
-    imageUrl: faqs_header_background,
-    url: '/faqs',
+    imageUrl: headerBackground,
+    url: ROUTES.faq,
   },
   header: {
-    backgroundImage: faqs_header_background,
+    backgroundImage: headerBackground,
     titleKey: 'faqsHeaderTitle',
     subtitleKey: 'faqsHeaderSubtitle',
-    mainLogo: logo,
-    mainLogoAltKey: 'faqsHeaderMainLogoAlt',
-    // complementaryLogo: '',
-    // complementaryLogoAltKey: 'faqsHeaderComplementaryLogoAlt',
-    // textOverlayKey: 'faqsHeaderTextOverlay',
-    photoCreditKey: 'faqsHeaderPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
   faqs: [
     {

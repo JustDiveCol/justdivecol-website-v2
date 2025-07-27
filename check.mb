@@ -1,0 +1,116 @@
+src
+├── pages
+│   ├── DetailPage
+│   │   ├── ExperiencePage
+│   │   │   ├── ExperiencePage.jsx
+│   │   │   └── Layout
+│   │   │       └── ExperienceLayout.jsx
+│   │   └── common
+│   │       ├── Cards
+│   │       │   ├── CertificationCard.jsx
+│   │       │   ├── ChecklistCard.jsx
+│   │       │   ├── CtaCard.jsx
+│   │       │   ├── CurriculumCard.jsx
+│   │       │   ├── DetailsCard.jsx
+│   │       │   ├── PaymentCard.jsx
+│   │       │   └── TripsCard.jsx
+│   │       └── Sections
+│   │           ├── CurriculumSection.jsx
+│   │           ├── DescriptionSection.jsx
+│   │           ├── DiveSitesSection.jsx
+│   │           ├── GallerySection.jsx
+│   │           ├── ItinerarySection.jsx
+│   │           ├── UpcomingCertificationSection.jsx
+│   │           └── UpcomingTripSection.jsx
+│   ├── ExperiencesPage
+│   │   ├── ExperiencesPage.jsx
+│   │   └── components
+│   │       ├── Cards
+│   │       │   ├── CalendarExperienceCardComponent.jsx
+│   │       │   ├── CertificationCardComponent.jsx
+│   │       │   ├── CourseCardComponent.jsx
+│   │       │   └── DestinationCardComponent.jsx
+│   │       └── Sections
+│   │           ├── CalendarExperiencesSection.jsx
+│   │           ├── CertificationsSection.jsx
+│   │           ├── CoursesSection.jsx
+│   │           └── DestinationsSection.jsx
+│   ├── FaqsPage
+│   │   └── FaqsPage.jsx
+│   ├── GearPage
+│   │   ├── GearPage.jsx
+│   │   ├── components
+│   │   │   └── GearNavbarComponent.jsx
+│   │   ├── pages
+│   │   │   ├── GearFaqsPage
+│   │   │   │   └── GearFaqsPage.jsx
+│   │   │   ├── GearGuidePage
+│   │   │   │   ├── GearGuidePage.jsx
+│   │   │   │   ├── components
+│   │   │   │   │   ├── GearGuideStepContentComponent.jsx
+│   │   │   │   │   ├── GearGuideStepImageLeftComponent.jsx
+│   │   │   │   │   └── GearGuideStepImageRightComponent.jsx
+│   │   │   │   └── sections
+│   │   │   │       ├── CategoryProductsSection.jsx
+│   │   │   │       ├── GearGuideProductsSection.jsx
+│   │   │   │       └── GearGuideStepSection.jsx
+│   │   │   ├── GearHomePage
+│   │   │   │   ├── GearHomePage.jsx
+│   │   │   │   └── sections
+│   │   │   │       ├── GearHomeCardsSection.jsx
+│   │   │   │       ├── GearHomeContentSection.jsx
+│   │   │   │       └── GearHomeHeroSection.jsx
+│   │   │   └── GearStorePage
+│   │   │       ├── GearStorePage.jsx
+│   │   │       ├── components
+│   │   │       │   └── ProductCardComponent.jsx
+│   │   │       └── sections
+│   │   │           ├── ProductListingSection.jsx
+│   │   │           └── StoreBannerSection.jsx
+│   │   └── sections
+│   │       └── GearCtaSection.jsx
+│   ├── HomePage
+│   │   ├── HomePage.jsx
+│   │   └── components
+│   │       ├── Cards
+│   │       │   ├── SafetyCardComponent.jsx
+│   │       │   └── TestimonialCardComponent.jsx
+│   │       └── Sections
+│   │           ├── ExperiencesSection.jsx
+│   │           ├── HeroSection.jsx
+│   │           ├── SafetySection.jsx
+│   │           └── TestimonialsSection.jsx
+│   ├── MapPage
+│   │   ├── MapPage.jsx
+│   │   └── components
+│   │       ├── DiveFiltersComponent.jsx
+│   │       ├── DiveSiteModalComponent.jsx
+│   │       └── MapComponent.jsx
+│   ├── NotFoundPage
+│   │   └── NotFoundPage.jsx
+│   ├── PolicyPage
+│   │   └── PolicyPage.jsx
+│   ├── PrivacyPolicyPage
+│   │   └── PrivacyPolicyPage.jsx
+│   ├── SafetyPage
+│   │   ├── Card
+│   │   │   ├── CertificationCardComponent.jsx
+│   │   │   ├── EquipmentCardComponent.jsx
+│   │   │   └── ProtocolCardComponent.jsx
+│   │   ├── SafetyPage.jsx
+│   │   └── Sections
+│   │       ├── CertificationsSection.jsx
+│   │       ├── EquipmentSection.jsx
+│   │       └── ProtocolsSection.jsx
+│   ├── TermsAndConditionsPage
+│   │   └── TermsAndConditionsPage.jsx
+│   ├── TestPage.jsx
+│   └── UnderConstructionPage
+│       └── UnderConstructionPage.jsx
+├── sections
+│   └── FaqsContentSection.jsx
+├── styles
+│   └── index.css
+└── utils
+    ├── createButtonProps.js
+    └── formatters.js

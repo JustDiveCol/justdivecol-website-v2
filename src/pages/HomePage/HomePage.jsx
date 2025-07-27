@@ -3,53 +3,49 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
-import { homePageData } from '../../data/pages/homeData.js';
+import { homePageData } from '@/data/pages/homeData.js';
+import { experiencesData } from '@/data/pages/experiencesData';
+import { staggerContainer } from '@/hooks/animations.js';
+import { NAMESPACES } from '@/data/global/constants';
 
-// Animation variants
-import { staggerContainer } from '../../hooks/animations.js';
+import SEOComponent from '@/components/ui/SEOComponent.jsx';
+import HeroSection from '@/pages/HomePage/components/Sections/HeroSection.jsx';
+import ExperiencesSection from '@/pages/HomePage/components/Sections/ExperiencesSection.jsx';
+import SafetySection from '@/pages/HomePage/components/Sections/SafetySection.jsx';
+import TestimonialsSection from '@/pages/HomePage/components/Sections/TestimonialsSection.jsx';
+import CtaComponent from '@/components/CtaComponent.jsx';
 
-// UI and Section Components
-import SEOComponent from '../../components/ui/SEOComponent.jsx';
-import HeroSection from './components/Sections/HeroSection.jsx';
-import ExperiencesSection from './components/Sections/ExperiencesSection.jsx';
-import SafetySection from './components/Sections/SafetySection.jsx';
-import TestimonialsSection from './components/Sections/TestimonialsSection.jsx';
-import CtaComponent from '../../components/CtaComponent.jsx';
-
-/**
- * Renders the main homepage of the website.
- * It assembles all the homepage sections in the correct order.
- */
 const HomePage = () => {
-  const { t } = useTranslation('home');
+  const { t } = useTranslation(NAMESPACES.HOME_PAGE);
+
+  const { seo, testimonials, finalCta } = homePageData;
+  const { featuredExperiences } = experiencesData;
 
   return (
     <>
       <SEOComponent
-        title={t(homePageData.seo.titleKey)}
-        description={t(homePageData.seo.descriptionKey)}
-        keywords={t(homePageData.seo.keywords)}
-        imageUrl={homePageData.seo.imageUrl}
-        url={homePageData.seo.url}
+        title={t(seo.titleKey)}
+        description={t(seo.descriptionKey)}
+        keywords={t(seo.keywords)}
+        imageUrl={seo.imageUrl}
+        url={seo.url}
       />
-      <motion.div
-        variants={staggerContainer}
-        initial='initial'
-        animate='animate'>
-        {/* The sections are rendered in their intended order for the homepage. */}
-        <HeroSection />
-        <ExperiencesSection />
-        <SafetySection />
+      <motion.div variants={staggerContainer} initial="initial" animate="animate">
+        <HeroSection translationNS={NAMESPACES.HOME_PAGE} />
 
-        {/* Conditionally render testimonials only if there are items to display. */}
-        {homePageData.testimonials?.items?.length > 0 && (
-          <TestimonialsSection />
+        <ExperiencesSection
+          translationNS={[NAMESPACES.HOME_PAGE, NAMESPACES.EXPERIENCES_PAGE]}
+          titleKey={featuredExperiences.titleKey}
+          subtitleKey={featuredExperiences.subtitleKey}
+          categories={featuredExperiences.categories}
+        />
+        <SafetySection translationNS={NAMESPACES.HOME_PAGE} />
+
+        {testimonials?.items?.length > 0 && (
+          <TestimonialsSection translationNS={NAMESPACES.HOME_PAGE} />
         )}
 
-        <CtaComponent
-          sectionData={homePageData.finalCta}
-          translationNS='home'
-        />
+        <CtaComponent sectionData={finalCta} translationNS={NAMESPACES.HOME_PAGE} />
       </motion.div>
     </>
   );

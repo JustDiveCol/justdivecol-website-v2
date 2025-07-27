@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../../hooks/animations';
 
 import { StarIcon } from '../../../../assets/icons/NavbarIcons';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Displays a card with information about a team member.
@@ -17,44 +18,50 @@ import { StarIcon } from '../../../../assets/icons/NavbarIcons';
  * @param {string} props.memberData.bioKey - The translation key for the member's biography.
  * @param {string[]} [props.memberData.funFacts] - An optional array of translation keys for fun facts.
  */
-const TeamCardComponent = ({ memberData }) => {
-  const { t } = useTranslation('aboutUs');
+const TeamCardComponent = ({ memberData, translationNS }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
+
+  const { imageUrl, nameKey, roleKey, bioKey, funFacts = [] } = memberData;
 
   return (
     <motion.div
       variants={fadeInUp}
-      className='bg-brand-primary-dark p-6 rounded-lg shadow-xl text-center flex flex-col h-full'>
+      className="w-[90%] sm:w-[45%] lg:w-[30%] max-w-xs sm:max-w-sm md:max-w-md bg-brand-primary-dark rounded-lg shadow-2xl flex flex-col items-center text-center text-brand-white overflow-hidden"
+    >
+      {/* Profile Image */}
       <img
-        src={memberData.imageUrl}
-        alt={t(memberData.nameKey)}
-        className='w-32 h-32 rounded-full mx-auto object-cover border-4 border-brand-cta-green'
-        loading='lazy'
+        src={imageUrl}
+        alt={t(nameKey)}
+        className="w-32 h-32 rounded-full mt-6 object-cover border-4 border-brand-cta-green"
+        loading="lazy"
       />
-      <h3 className='mt-4 text-2xl font-bold text-brand-white'>
-        {t(memberData.nameKey)}
-      </h3>
-      <p className='text-md font-semibold text-brand-cta-orange uppercase tracking-wider'>
-        {t(memberData.roleKey)}
+      {/* Name & Role */}
+      <div className="mt-4 px-4">
+        <h3 className="text-sm sm:text-base md:text-xl lg:text-2xl font-bold uppercase tracking-wide text-brand-white">
+          {t(nameKey)}
+        </h3>
+        <p className="text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider text-brand-cta-orange mt-1">
+          {t(roleKey)}
+        </p>
+      </div>
+      {/* Bio */}
+      <p className="mt-4 px-6 text-xs sm:text-sm text-brand-neutral/80 text-justify leading-relaxed flex-grow">
+        {t(bioKey)}
       </p>
-      <p className='mt-4  text-brand-neutral/80 flex-grow text-justify'>
-        {t(memberData.bioKey)}
-      </p>
-
-      {/* Conditionally render the 'fun facts' section if it exists in the data. */}
-      {memberData.funFacts && (
-        <div className='mt-6 border-t border-brand-primary-light/20 pt-4 text-left'>
-          <ul className='space-y-2'>
-            {memberData.funFacts.map((factKey) => (
-              <li
-                key={factKey}
-                className='flex items-start text-sm'>
-                <StarIcon className='h-4 w-4 mr-2 flex-shrink-0 text-brand-cta-yellow' />
-                <span className='text-brand-neutral/90 ml-2'>{t(factKey)}</span>
+      {/* Fun Facts (optional) */}
+      {funFacts.length > 0 && (
+        <div className="mt-6 w-full border-t border-brand-primary-light/20 px-6 pt-4 text-left">
+          <ul className="space-y-2">
+            {funFacts.map((factKey) => (
+              <li key={factKey} className="flex items-start text-xs text-brand-neutral/90">
+                <StarIcon className="w-4 h-4 mt-0.5 text-brand-cta-yellow flex-shrink-0" />
+                <span className="ml-2">{t(factKey)}</span>
               </li>
             ))}
           </ul>
         </div>
       )}
+      <div className="h-6" /> {/* Spacer to prevent tight crop */}
     </motion.div>
   );
 };

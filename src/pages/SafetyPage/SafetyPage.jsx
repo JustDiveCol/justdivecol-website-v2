@@ -13,6 +13,7 @@ import HeaderComponent from '../../components/HeaderComponent.jsx';
 import ProtocolsSection from './Sections/ProtocolsSection.jsx';
 import EquipmentSection from './Sections/EquipmentSection.jsx';
 import CertificationsSection from './Sections/CertificationsSection.jsx';
+import { NAMESPACES, ROUTES } from '@/data/global/constants.js';
 
 /**
  * Renders the main "Safety" page.
@@ -20,30 +21,27 @@ import CertificationsSection from './Sections/CertificationsSection.jsx';
  * equipment, and certifications.
  */
 export const SafetyPage = () => {
-  const { t } = useTranslation('safety');
+  const { t } = useTranslation([NAMESPACES.SAFETY_PAGE, NAMESPACES.COMMON]);
   const { seo, header, protocols, equipment, certifications } = data;
 
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial='initial'
-      animate='animate'
-      exit='exit'>
+    <motion.div variants={staggerContainer} initial="initial" animate="animate" exit="exit">
       <SEOComponent
         title={t(seo.titleKey)}
         description={t(seo.descriptionKey)}
-        imageUrl={header.imageUrl}
-        url='/seguridad'
+        keywords={t(seo.keywords)}
+        imageUrl={seo.imageUrl}
+        url={seo.url}
       />
 
-      <HeaderComponent
-        sectionData={header}
-        translationNS='safety'
-      />
+      <HeaderComponent sectionData={header} translationNS={NAMESPACES.SAFETY_PAGE} />
 
-      <ProtocolsSection protocolsData={protocols} />
-      <EquipmentSection equipmentData={equipment} />
-      <CertificationsSection certificationsData={certifications} />
+      <ProtocolsSection protocolsData={protocols} translationNS={NAMESPACES.SAFETY_PAGE} />
+      <EquipmentSection equipmentData={equipment} translationNS={NAMESPACES.SAFETY_PAGE} />
+      <CertificationsSection
+        certificationsData={certifications}
+        translationNS={NAMESPACES.SAFETY_PAGE}
+      />
     </motion.div>
   );
 };

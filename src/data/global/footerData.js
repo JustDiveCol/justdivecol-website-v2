@@ -1,30 +1,23 @@
 // src/data/global/footerData.js
+import { ROUTES } from './constants';
 
-/**
- * Data structure containing the translation keys for the website's footer.
- */
 export const footerData = {
-  // The main slogan displayed in the footer.
   sloganKey: 'footerSlogan',
 
-  // A closing or secondary message.
   closingMessageKey: 'footerClosingMessage',
 
-  // The copyright text. The year is added automatically in the component.
   copyrightKey: 'footerCopyright',
 
-  // The credits line, e.g., "Designed and built by...".
   creditsKey: 'footerCredits',
 
   importantLinksTitle: 'footerLinksTitle',
 
   navLinks: [
-    { nameKey: 'policies', path: '/politicas' },
-    { nameKey: 'termsAndConditions', path: '/terminos-y-condiciones' },
-    { nameKey: 'privacy', path: '/privacidad' },
-    { nameKey: 'faqs', path: '/faqs' },
-    { nameKey: 'divesites', path: '/mapa' },
-    // { nameKey: 'gear', path: '/proximamente' },
+    { nameKey: 'policy', path: ROUTES.policy },
+    { nameKey: 'terms', path: ROUTES.terms },
+    { nameKey: 'privacy', path: ROUTES.privacy },
+    { nameKey: 'faqs', path: ROUTES.faq },
+    { nameKey: 'divesites', path: ROUTES.divesites },
   ],
 
   policiesLinkText: 'footerLinkText',

@@ -1,0 +1,217 @@
+{
+  "destinationLabel": "Destino",
+  "typeLabel": "Tipo",
+  "noOptionsAvailable": "No hay opciones disponibles",
+  "difficultyLabel": "Dificultad",
+  "showingSitesCountFull": "Mostrando {{filtered}} de {{total}} sitios de buceo",
+  "noMatchingSites": "No se encontraron sitios que coincidan con los filtros.",
+  "depthLabel": "Profundidad máxima",
+  "levelRequiredLabel": "Nivel requerido",
+  "conditionsLabel": "Condiciones",
+  "tagsLabel": "Etiquetas",
+
+  "bajoDelPescadorSmName": "Bajo del Pescador - PNN Tayrona",
+  "bajoDelPescadorSmDescriptionP1": "Un oasis para buzos principiantes y Open Water en el Parque Tayrona. Este arrecife somero destaca por sus saludables corales duros, peces tropicales y la posible presencia de tortugas. Con aguas tranquilas y excelente visibilidad, es el lugar ideal para una inmersión relajada y segura, accesible desde bote.",
+
+  "barcazaProfundaSmName": "Barcaza Profunda",
+  "barcazaProfundaSmDescriptionP1": "Frente al Morro Chico, la Barcaza Caribe es una inmersión técnica para buzos avanzados. Este pecio hundido a 32-40 metros se ha transformado en un arrecife artificial, cubierto de corales y vida marina. Su profundidad y las condiciones dinámicas del entorno lo convierten en un desafío gratificante para quienes buscan explorar un naufragio con la certificación adecuada.",
+
+  "barcoHundidoSmName": "Barco Hundido (El Naufragio del Rodadero)",
+  "barcoHundidoSmDescriptionP1": "Frente al Morro de Santa Marta, un impresionante naufragio artificial de 33 metros yace a 30 metros de profundidad. Ideal para buzos Advanced Open Water, el pecio está cubierto de ostras y corales, albergando una gran diversidad de peces. Con el entrenamiento adecuado, puedes explorar sus bodegas, haciendo de esta inmersión una aventura desafiante y gratificante.",
+
+  "cagaPajaroSmName": "Caga Pájaro - PNN Tayrona",
+  "cagaPajaroSmDescriptionP1": "En el corazón del Parque Tayrona, Caga Pájaro es un dinámico sitio para buzos Open Water. Con una profundidad máxima de 18 metros, te sumerge en un laberinto de formaciones rocosas y grietas, hogar de peces de arrecife, morenas y vida macro. Las condiciones tranquilas y buena visibilidad lo hacen perfecto para una inmersión cómoda y segura, ideal para la fotografía submarina.",
+
+  "calderonSmName": "Calderon",
+  "calderonSmDescriptionP1": "Una joya submarina cerca de Santa Marta, ideal para principiantes y buzos Open Water. Este arrecife vibrante, con una profundidad máxima de 18 metros, destaca por su abundancia de corales duros y blandos, así como una fascinante vida macro. Con corrientes suaves y buena visibilidad, ofrece una experiencia de buceo cómoda y segura, perfecta para la fotografía submarina.",
+
+  "calichanSmName": "Calichán - PNN Tayrona",
+  "calichanSmDescriptionP1": "Calichán es un sitio versátil en el Parque Tayrona. La zona somera (5-12 metros) es ideal para principiantes. Para buzos avanzados, la zona profunda desciende hasta 40 metros, revelando un arrecife mesofótico con corales únicos. Ambas secciones destacan por su excepcional biodiversidad y oportunidades para la fotografía submarina.",
+
+  "cantilGranateSmName": "El Cantíl de Granate - PNN Tayrona",
+  "cantilGranateSmDescriptionP1": "Déjate asombrar por El Cantíl de Granate, una espectacular pared coralina en el Parque Tayrona que desciende de 2 a 30 metros. Este muro está colonizado por vibrantes corales y es perfecto para buzos Open Water. Presenta un pintoresco pasadizo, enormes corales cerebro y la presencia de langostas y rayas. Es un sitio popular para buceos nocturnos, donde la magia y las oportunidades fotográficas son constantes.",
+
+  "elCoroSmName": "El Coro - PNN Tayrona",
+  "elCoroSmDescriptionP1": "El Coro es un sitio para buzos avanzados en el PNN Tayrona, famoso por sus fuertes corrientes oceánicas. Dos pináculos rocosos se elevan desde los 40 metros, creando un paisaje épico. Estas formaciones albergan una diversa vida marina y, ocasionalmente, tiburones de arrecife. Es una inmersión exigente y gratificante, ideal para quienes buscan adrenalina y un encuentro con la vida salvaje.",
+
+  "elMorroChicoSmName": "El Morro Chico",
+  "elMorroChicoSmDescriptionP1": "El Morro Chico es un dinámico arrecife en Santa Marta, ideal para buzos Open Water. Con profundidades de 5 a 30 metros, este sitio ofrece un emocionante buceo de deriva a través de corales blandos y pendientes rocosas. Las corrientes y la resaca lo convierten en una inmersión de dificultad media, pero la rica vida marina hace que valga la pena.",
+
+  "elRemansoSmName": "El Remanso - PNN Tayrona",
+  "elRemansoSmDescriptionP1": "El Remanso es un refugio tranquilo en el PNN Tayrona, ideal para principiantes y bautismos. Con profundidades de 5 a 12 metros, sus aguas protegidas no tienen corrientes ni oleaje. Este arrecife costero somero es perfecto para observar la fauna típica del Caribe, y sus condiciones serenas lo hacen excepcional para buceos nocturnos.",
+
+  "elTorinSmName": "El Torín - PNN Tayrona",
+  "elTorinSmDescriptionP1": "El Torín es un arrecife prístino y protegido en el PNN Tayrona, ideal para buzos Open Water. A 18 metros de profundidad promedio, destaca por su excepcional claridad de agua y sus saludables corales. Las condiciones tranquilas lo hacen perfecto para apreciar la biodiversidad y las fascinantes formas de sus corales. Es una experiencia de tranquilidad y belleza pura en el Caribe colombiano.",
+
+  "incaIncaSmName": "Inca Inca",
+  "incaIncaSmDescriptionP1": "Inca Inca es un arrecife somero y tranquilo en Santa Marta, ideal para principiantes y snorkel. Con profundidades de 4 a 12 metros, sus aguas calmadas y claras son como una piscina natural. Es perfecto para bautismos y cursos, permitiendo disfrutar de corales ramificados y una gran cantidad de peces de arrecife.",
+
+  "laAntenaSmName": "La Antena",
+  "laAntenaSmDescriptionP1": "La Antena es un sitio accesible cerca de Taganga, ideal para buzos Open Water. Con una profundidad de 18 metros, sus estructuras artificiales y arrecifes rocosos se han transformado en un hogar vibrante para la vida marina, incluyendo nudibranquios y vida macro. Las corrientes suaves permiten una exploración relajada, perfecta para la fotografía submarina.",
+
+  "laPeceraSmName": "La Pecera - PNN Tayrona",
+  "laPeceraSmDescriptionP1": "La Pecera es un 'acuario natural' en el PNN Tayrona, ideal para buzos de todos los niveles. Ubicada en la Ensenada de Granate, este arrecife vibrante destaca por sus corales. Con profundidades de 6 a 18 metros, sus aguas tranquilas y excelente visibilidad te permiten ver una gran diversidad de peces tropicales y, con suerte, tortugas carey.",
+
+  "laPiedraDelChivoSmName": "La Piedra del Chivo - PNN Tayrona",
+  "laPiedraDelChivoSmDescriptionP1": "La Piedra del Chivo es un arrecife rocoso en el PNN Tayrona, ideal para principiantes y Open Water. A 15 metros de profundidad, su ambiente sereno y aguas calmadas son perfectos para la fotografía macro. El sitio alberga una variada comunidad de peces, nudibranquios y pequeños invertebrados.",
+
+  "laPiedraDelMedioSmName": "La Piedra del Medio - PNN Tayrona",
+  "laPiedraDelMedioSmDescriptionP1": "La Piedra del Medio es un pináculo en el PNN Tayrona, ideal para buzos Open Water y avanzados. Descendiendo hasta 25 metros, es un imán de biodiversidad con un arrecife tapizado de corales. Las corrientes moderadas atraen cardúmenes de barracudas y jureles, lo que añade dinamismo a la inmersión.",
+
+  "laTravesiaSmName": "La Travesía - PNN Tayrona",
+  "laTravesiaSmDescriptionP1": "La Travesía es un dinámico sitio de buceo de deriva en el PNN Tayrona, ideal para buzos Advanced Open Water. Con profundidades de hasta 25 metros, sus paredes y cañones ofrecen un paisaje lleno de acción. Las corrientes moderadas a fuertes atraen gran cantidad de vida pelágica. Es una inmersión vibrante para quienes buscan adrenalina.",
+
+  "laVueltaNegraSmName": "La Vuelta Negra - PNN Tayrona",
+  "laVueltaNegraSmDescriptionP1": "La Vuelta Negra es un sitio dinámico y misterioso en el PNN Tayrona, ideal para buzos intermedios. A 25 metros de profundidad, su topografía de pináculos y cañones crea un paisaje único. Este 'biodiversity hotspot' ofrece arrecifes llenos de peces y cardúmenes, que se aprecian entre la luz y la sombra. Las corrientes moderadas añaden un toque emocionante.",
+
+  "langostasSmName": "Langostas - PNN Tayrona",
+  "langostasSmDescriptionP1": "Langostas es un arrecife vibrante en el PNN Tayrona, ideal para buzos Open Water. Con una profundidad de 20 metros, destaca por sus formaciones rocosas y la asombrosa abundancia de langostas. Es un laberinto de grietas y cuevas, refugio de peces y fascinante vida macro. Ofrece una experiencia cómoda y gratificante para la fotografía submarina.",
+
+  "lasBarcazasSmName": "Las Barcazas (Punta Betín)",
+  "lasBarcazasSmDescriptionP1": "Las Barcazas en Punta Betín son un sitio histórico donde naufragios y biodiversidad se unen. Múltiples barcazas hundidas se han transformado en arrecifes artificiales. Buzos Open Water pueden explorar dos pecios entre 6 y 15 metros, mientras que los avanzados enfrentan una tercera barcaza a 35 metros. Las estructuras cubiertas de corales albergan peces de arrecife y rayas.",
+
+  "losCarrosSmName": "Los Carros - PNN Tayrona",
+  "losCarrosSmDescriptionP1": "Este sitio es una inmersión tranquila en un arrecife rocoso, ideal para buzos principiantes y Open Water. El paisaje submarino está formado por formaciones que recuerdan a una calle transitada, donde la vida marina se mueve entre grietas y parches de arena. Es un lugar perfecto para la fotografía macro, ya que se pueden encontrar nudibranquios y otras pequeñas criaturas.",
+
+  "sisiguacaSmName": "Sisiguaca",
+  "sisiguacaSmDescriptionP1": "Sisiguaca es un vibrante sitio en el PNN Tayrona, ideal para buzos Open Water. Con una profundidad de 20 metros, ofrece un laberinto de formaciones rocosas y cañones. Su arrecife saludable, cubierto de corales, sirve de refugio a cardúmenes de peces y morenas. Las corrientes moderadas añaden emoción y atraen a especies pelágicas. Es un lugar predilecto para la fotografía submarina.",
+
+  "morritoLargoSmName": "Morrito Largo - PNN Tayrona",
+  "morritoLargoSmDescriptionP1": "Morrito Largo es un pináculo rocoso en el PNN Tayrona, un sitio épico para buzos avanzados y técnicos. Su pared desciende hasta 40 metros y es famosa por sus fuertes corrientes, que alimentan impresionantes corales negros y gorgonias. Es una aventura desafiante e inolvidable, perfecta para los exploradores más audaces y para la fotografía submarina profunda.",
+
+  "morroGairaSmName": "Morro de Gaira",
+  "morroGairaSmDescriptionP1": "El Morro de Gaira es un sitio versátil para buzos Open Water. Con una profundidad de hasta 25 metros, este arrecife ofrece múltiples rutas y la cara sur es la mejor conservada. Alberga una exuberante comunidad coralina y una abundante vida de peces. Las inmersiones pueden ser de ida y regreso o de deriva ligera, ideales para la fotografía submarina.",
+
+  "morroSantaMartaSmName": "Morro de Santa Marta",
+  "morroSantaMartaSmDescriptionP1": "El Morro de Santa Marta es un buceo desafiante para avanzados que ofrece paredes profundas hasta 30 metros o más. Las fuertes corrientes atraen fauna pelágica como atunes y barracudas. El sitio combina una terraza arrecifal somera con una pendiente abrupta, donde la aventura cobra vida. Es un lugar con historia (primera cárcel de Colombia) y mucha biodiversidad.",
+
+  "oceanoSmName": "Océano - PNN Tayrona",
+  "oceanoSmDescriptionP1": "Océano es un sitio de buceo avanzado en el PNN Tayrona para quienes buscan adrenalina. Con una profundidad de más de 30 metros, sus fuertes corrientes atraen grandes cardúmenes y especies pelágicas, como barracudas y tiburones. La topografía rocosa sirve de refugio a la fauna mayor. Es un buceo exigente con visibilidad variable, pero la experiencia de ser uno con la fuerza del océano es inolvidable.",
+
+  "panelesSmName": "Panelés (Dos Morritos) - PNN Tayrona",
+  "panelesSmDescriptionP1": "Panelés, o 'Dos Morritos', es un sitio desafiante para buzos expertos y técnicos en el PNN Tayrona. Sus pináculos rocosos son azotados por corrientes oceánicas intensas, creando un ecosistema muy denso. A una profundidad de hasta 30 metros, este sitio es un epicentro de vida pelágica. La inmersión es una aventura extrema que te permite 'volar' entre formaciones submarinas.",
+
+  "paraisoSmName": "Paraíso - PNN Tayrona",
+  "paraisoSmDescriptionP1": "Paraíso es un refugio submarino en el PNN Tayrona, ideal para buzos de todos los niveles. Este arrecife tranquilo y colorido, con una profundidad de hasta 15 metros, ofrece aguas calmadas y excelente visibilidad. Sus corales duros y blandos albergan una vibrante vida de peces tropicales y vida macro. Es un 'biodiversity hotspot' y el lugar perfecto para una inmersión relajada y fotogénica.",
+
+  "pasoDelAngelSmName": "Paso del Ángel - PNN Tayrona",
+  "pasoDelAngelSmDescriptionP1": "Paso del Ángel es un espectacular sitio de buceo de deriva en el PNN Tayrona, ideal para buzos intermedios y avanzados. Famoso por su biodiversidad, su pendiente arrecifal desciende hasta 40 metros. Las corrientes moderadas a fuertes atraen gran vida marina. Es un lugar predilecto para la fotografía macro y, en condiciones ideales, la aventura se puede extender hacia La Travesía.",
+
+  "playacaSmName": "Playaca",
+  "playacaSmDescriptionP1": "Playaca es un sitio tranquilo en el PNN Tayrona, ideal para principiantes y buzos Open Water. Con una profundidad máxima de 18 metros, sus aguas calmadas y excelente visibilidad lo hacen perfecto para una inmersión relajada. El arrecife saludable, con corales duros y blandos, alberga una abundante vida de peces y organismos macro.",
+
+  "puntaAgujaSmName": "Punta Aguja - PNN Tayrona",
+  "puntaAgujaSmDescriptionP1": "Punta Aguja, el corazón del buceo en el PNN Tayrona, es un pináculo rocoso para buzos de todos los niveles. Con profundidades de hasta 30 metros, su topografía incluye paredes y cañones. Es un imán de biodiversidad, con arrecifes exuberantes, cardúmenes de peces y la posibilidad de avistar barracudas o tortugas. Las corrientes variables añaden dinamismo a la inmersión en este 'biodiversity hotspot'.",
+
+  "puntaCabezaNegrosSmName": "Punta Cabeza de Negros - PNN Tayrona",
+  "puntaCabezaNegrosSmDescriptionP1": "Punta Cabeza de Negros es un sitio vibrante en el PNN Tayrona, ideal para buzos Open Water. Sus formaciones rocosas y paredes descienden hasta 25 metros. El arrecife, con corales duros y blandos, es hogar de peces, morenas y langostas. Las corrientes moderadas añaden un elemento dinámico, lo que enriquece este 'biodiversity hotspot' y lo convierte en un lugar excelente para la fotografía submarina.",
+
+  "puntaGairaSmName": "Punta Gaira / Playa Blanca",
+  "puntaGairaSmDescriptionP1": "Punta Gaira, asociada a Playa Blanca, es un sitio ideal para principiantes y snorkelistas. Con una profundidad de hasta 15 metros, ofrece aguas tranquilas y corrientes mínimas. Su arrecife saludable, con corales duros y blandos, alberga una gran diversidad de peces de arrecife y fascinante vida macro. Es un lugar seguro y muy agradable para una primera inmersión o para disfrutar de una experiencia relajada.",
+
+  "puntaGranateSmName": "Punta Granate - PNN Tayrona",
+  "puntaGranateSmDescriptionP1": "Punta Granate es un sitio versátil en el PNN Tayrona, ideal para buzos de todos los niveles. Ofrece zonas tranquilas para principiantes y áreas más profundas con corrientes moderadas. En sus 20 metros de profundidad, encontrarás 'parches de coral' llenos de vida, desde peces ángel y langostas hasta anémonas gigantes. Las aguas abiertas atraen bancos de jureles y macarelas, haciendo de este sitio un 'biodiversity hotspot' dinámico y sorprendente.",
+
+  "puntaVenadoSmName": "Punta Venado - PNN Tayrona",
+  "puntaVenadoSmDescriptionP1": "Punta Venado es un excepcional arrecife en el PNN Tayrona, famoso por su buceo nocturno. De día es un arrecife somero, pero al anochecer se transforma, revelando una multitud de crustáceos, moluscos y peces nocturnos. Con poca profundidad (hasta 18 metros) y escasa corriente, es un sitio seguro para buzos intermedios. Es el lugar ideal para fotografiar la vida marina en su faceta más enigmática.",
+
+  "salichanSmName": "Salichán - PNN Tayrona",
+  "salichanSmDescriptionP1": "Salichán es un sitio de buceo avanzado en el PNN Tayrona, donde una pendiente arrecifal desciende hasta 35 metros. Ideal para buzos Advanced Open Water, es un 'biodiversity hotspot' con un arrecife saludable y corales profundos. Las corrientes moderadas enriquecen el ecosistema y atraen especies pelágicas. Es un lugar perfecto para la fotografía submarina y una aventura memorable.",
+
+  "salideroSmName": "Salidero - PNN Tayrona",
+  "salideroSmDescriptionP1": "Salidero es un desafiante sitio de buceo de deriva en el PNN Tayrona, exclusivo para buzos avanzados. Su canal de corriente, en la punta sur de Isla Aguja, crea fuertes flujos que atraen a barracudas y cardúmenes de peces. Con una profundidad máxima de 14 metros, el sitio destaca por sus impresionantes corales cerebro y cuerno de alce. Es una experiencia de adrenalina pura, donde la biodiversidad y la fuerza de la naturaleza se combinan.",
+
+  "elNataliaSmName": "Yate Hundido “El Natalia”",
+  "elNataliaSmDescriptionP1": "El Yate Hundido 'El Natalia' es un pecio para buzos avanzados en la bahía de Gaira. Descansando a 32 metros, este yate se ha convertido en un arrecife artificial, cubierto de esponjas y vida macro. Dentro y alrededor del casco, se encuentran bancos de roncadores y corvinas. Es un sitio casi virgen, perfecto para la fotografía submarina y para una exploración exclusiva.",
+
+  "noneLevelKey": "Ninguno",
+  "openWaterDiverLevelKey": "Buzo de Aguas Abiertas (Open Water Diver)",
+  "advancedOpenWaterDiverLevelKey": "Buzo Avanzado de Aguas Abiertas (Advanced Open Water Diver)",
+  "technicalDiverLevelKey": "Buzo Técnico",
+  "anyLevelKey": "Todos los niveles",
+
+  "easyDifficultyKey": "Fácil",
+  "mediumDifficultyKey": "Medio",
+  "hardDifficultyKey": "Difícil",
+  "expertDifficultyKey": "Experto",
+
+  "reefTypeKey": "Arrecife",
+  "wreckTypeKey": "Pecio",
+  "wallTypeKey": "Pared",
+  "pinnacleTypeKey": "Pináculo",
+  "cavernTypeKey": "Caverna",
+  "caveTypeKey": "Cueva",
+  "driftTypeKey": "Deriva",
+  "muckTypeKey": "Arenal",
+  "blueHoleTypeKey": "Blue Hole",
+  "cenoteTypeKey": "Cenote",
+  "freshwaterTypeKey": "Agua Dulce",
+  "artificialReefTypeKey": "Arrecife Artificial",
+
+  "currentConditionKey": "Corriente",
+  "mildCurrentConditionKey": "Corriente Leve",
+  "moderateCurrentConditionKey": "Corriente Moderada",
+  "strongCurrentConditionKey": "Corriente Fuerte",
+  "deepConditionKey": "Profundo",
+  "visibilityConditionKey": "Visibilidad",
+  "variableVisibilityConditionKey": "Visibilidad Variable",
+  "goodVisibilityConditionKey": "Buena Visibilidad",
+  "limitedVisibilityConditionKey": "Visibilidad Limitada",
+  "thermoclineConditionKey": "Termoclina",
+  "surgeConditionKey": "Oleaje",
+  "surfaceConditionKey": "Superficie",
+  "roughSurfaceConditionKey": "Superficie Agitada",
+  "calmSurfaceConditionKey": "Superficie En Calma",
+  "entryConditionKey": "Entrada",
+  "boatEntryConditionKey": "Entrada en Barco",
+  "shoreEntryConditionKey": "Entrada desde la Orilla",
+  "nightConditionKey": "Nocturno",
+
+  "marineLifeTagCategory": "Vida Marina",
+  "diveCharacteristicsTagCategory": "Características de buceo",
+  "featuresTagCategory": "Características",
+  "locationTagCategory": "Ubicación",
+
+  "sharksTag": "tiburones",
+  "turtlesTag": "tortugas",
+  "mantaRaysTag": "mantarrayas",
+  "whaleSharksTag": "tiburones ballena",
+  "nudibranchsTag": "nudibranquios",
+  "macroLifeTag": "vida macro",
+  "schoolingFishTag": "cardúmenes de peces",
+  "barracudaTag": "barracudas",
+  "octopusTag": "pulpos",
+  "dolphinsTag": "delfines",
+  "seahorsesTag": "caballitos de mar",
+  "frogfishTag": "pez rana",
+  "reefFishTag": "peces de arrecife",
+  "pelagicsTag": "pelágicos",
+
+  "photographyTag": "fotografía",
+  "nightDiveTag": "buceo nocturno",
+  "driftDiveTag": "buceo a la deriva",
+  "deepDiveTag": "buceo profundo",
+  "technicalDiveTag": "buceo técnico",
+  "beginnerFriendlyTag": "apto para principiantes",
+  "advancedOnlyTag": "solo avanzados",
+  "historicalTag": "histórico",
+  "biodiversityHotspotTag": "punto de biodiversidad",
+  "conservationAreaTag": "área de conservación",
+  "coldWaterTag": "agua fría",
+  "warmWaterTag": "agua cálida",
+
+  "swimThroughsTag": "pasadizos",
+  "canyonsTag": "cañones",
+  "cavesTag": "cuevas",
+  "overhangsTag": "salientes",
+  "softCoralsTag": "corales blandos",
+  "hardCoralsTag": "corales duros",
+  "anemonesTag": "anémonas",
+
+  "caribbeanTag": "Caribe",
+  "pacificTag": "Pacífico",
+  "redSeaTag": "Mar Rojo",
+  "indianOceanTag": "Océano Índico",
+  "tropicalTag": "tropical",
+  "temperateTag": "templado"
+}

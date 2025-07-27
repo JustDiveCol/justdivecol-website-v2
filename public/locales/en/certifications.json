@@ -1,0 +1,171 @@
+{
+  "certificationsTextOverlay": "Certifications",
+  "certificationsDefaultNote": "Upon completing your PADI certification, you will obtain a globally recognized and valid credential. This will allow you to dive with confidence, backed by the most prestigious diving training standard in the world.",
+  "certificationsDetailsTitle": "Certification Details",
+  "certificationsRequirementsTitle": "Certification Requirements",
+  "certificationsCurriculumTitle": "Certification Curriculum",
+  "certificationsIncludedTitle": "Your Certification Includes",
+  "certificationsGalleryTitle": "Moments from Your Dive Course",
+  "certificationsAvailableTrip": "Adventures for Your Certification",
+  "certificationsNotAvailableTrip": "No Adventures Available",
+  "certificationCtaTextButton": "I Want to Know More!",
+
+  "owdSeoTitle": "PADI Open Water Diver Course | Learn to Dive with JustDiveCol",
+  "owdSeoDesc": "Become a certified diver with JustDiveCol's PADI Open Water Diver course. It's your gateway to the fascinating underwater world to explore the depths with complete confidence.",
+  "owdSeoKeywords": "PADI Open Water Diver course, learn to dive, diving certification, certified diver, JustDiveCol, diving fundamentals, first dives, recreational diving, beginner dive course, global certification, diving in Colombia, diving adventure",
+
+  "owdHeaderTitle": "PADI Open Water Diver: Your Passport to the Blue World",
+  "owdHeaderSubtitle": "Discover the 70% of the planet waiting to be explored by you. The underwater adventure calls!",
+
+  "owdDescTitle": "Become a Certified Diver: Adventure Awaits",
+  "owdDescP1": "The PADI Open Water Diver course is the most recognized diving certification in the world. Millions of people have discovered the wonders of the aquatic world through this transformative experience. It's the exciting first step toward a life of limitless underwater exploration.",
+  "owdDescP2": "At JustDiveCol, we will guide you step by step, from the theoretical principles you can study from home to your first unforgettable dives in the sea. Our goal is for you to become a competent, safe, and passionate diver. Your journey begins here!",
+
+  "owdDetailDurationValue": "3 to 4 days",
+
+  "owdDetailLabel1": "Maximum Depth",
+  "owdDetailValue1": "18 m / 60 ft",
+
+  "owdModule1Name": "Interactive Theoretical Modules",
+  "owdModule1Desc": "You will learn the principles of diving at your own pace through the PADI eLearning® platform, from the comfort of your home. It's flexible and very effective!",
+
+  "owdModule2Name": "Personalized Virtual Guidance",
+  "owdModule2Desc": "We complement your study with 5 live virtual sessions. One of our expert instructors will reinforce key concepts, answer all your questions, and thoroughly prepare you for the next step.",
+
+  "owdModule3Name": "Practical Sessions in Confined Water",
+  "owdModule3Desc": "In a safe and controlled environment, such as a pool, you will practice and master all the essential diving skills. Here you will build solid confidence before your first open water adventure.",
+
+  "owdModule4Name": "Exciting Open Water Dives",
+  "owdModule4Desc": "The culmination of your learning: you will make four memorable dives in the ocean, applying everything you've learned under the supervision of your instructor. Get ready to be amazed by the marine life.",
+
+  "owdReqItem1": "Be at least 10 years old (for Junior Open Water Diver).",
+  "owdReqItem2": "Be comfortable in the water and know how to swim.",
+  "owdReqItem3": "Complete and approve a medical questionnaire or have a doctor's authorization.",
+  "owdReqItem4": "Commit to actively participating in all sessions to ensure your maximum learning.",
+
+  "owdIncludeItem1": "International PADI Open Water Diver certification.",
+  "owdIncludeItem2": "Unlimited access to the PADI eLearning® platform.",
+  "owdIncludeItem3": "5 live virtual sessions with a dedicated PADI instructor.",
+  "owdIncludeItem4": "5 practical sessions in confined water.",
+  "owdIncludeItem5": "4 exciting open water dives.",
+  "owdIncludeItem6": "Complete set of high-quality dive equipment.",
+  "owdIncludeItem7": "Personalized guidance from a highly qualified PADI instructor.",
+  "owdIncludeItem8": "Comprehensive dive insurance for the entire duration of the course.",
+
+  "owdGalleryImg1Alt": "",
+  "owdGalleryImg2Alt": "",
+  "owdGalleryImg3Alt": "",
+  "owdGalleryImg4Alt": "",
+
+  "aowdSeoTitle": "PADI Advanced Open Water Diver Course | Expand Your Limits with JustDiveCol",
+  "aowdSeoDesc": "Take your diving to the next level with JustDiveCol's PADI Advanced Open Water Diver course. Explore new specialties, gain unparalleled confidence, and delve deeper into the fascinating underwater world.",
+  "aowdSeoKeywords": "PADI Advanced Open Water Diver, advanced dive course, expand diving limits, JustDiveCol, new dive specialties, underwater confidence, deep diving, underwater navigation, night diving, buoyancy control, underwater photography, dive certification, diving adventure",
+
+  "aowdHeaderTitle": "PADI Advanced Open Water Diver: Your Next Level of Adventure",
+  "aowdHeaderSubtitle": "Refine your skills, gain unwavering confidence, and explore new dimensions of diving with JustDiveCol. The ocean awaits you!",
+
+  "aowdDescTitle": "Expand Your Horizons: More Confidence, More Exploration",
+
+  "aowdDescP1": "The PADI Advanced Open Water Diver course is designed to take your diving experience far beyond the basics. It's not just about getting an 'advanced' certification, but about gaining greater confidence, more practical experience, and the ability to explore a wider variety of dive sites anywhere in the world.",
+  "aowdDescP2": "At JustDiveCol, we will guide you through five exciting adventure dives that will allow you to discover new passions and refine your techniques. Each dive will bring you closer to becoming a safer, more competent, and versatile diver, ready for any challenge and wonder the vast ocean presents.",
+
+  "aowdDetailDurationValue": "2 to 3 days",
+
+  "aowdDetailLabel1": "Maximum Depth",
+  "aowdDetailValue1": "30 m / 100 ft",
+
+  "aowdModule1Name": "Deep Dive (Mandatory)",
+  "aowdModule1Desc": "Discover the fascinating world beyond 18 m. You will learn the specific safety and planning considerations for deep diving, safely expanding your exploration range to 30 m.",
+
+  "aowdModule2Name": "Underwater Navigation (Mandatory)",
+  "aowdModule2Desc": "Become an expert in underwater orientation. You will refine your skills with a compass, allowing you to move with confidence and precision in any underwater environment.",
+
+  "aowdModule3Name": "Three Adventure Dives of Your Choice",
+  "aowdModule3Desc": "Personalize your course by choosing three specialties that truly spark your interest. Popular options include: night diving, peak performance buoyancy, underwater photography, and many more. Each one is a new adventure waiting for you!",
+
+  "aowdCurriculumNote1": "Earn credit toward PADI specialties: each adventure dive you complete counts as the first dive of the corresponding PADI specialty. One step closer to your next specialty diver certification!",
+
+  "aowdObj1": "",
+  "aowdObj2": "",
+  "aowdObj3": "",
+  "aowdObj4": "",
+  "aowdObj5": "",
+  "aowdObj6": "",
+
+  "aowdReqItem1": "Be at least 12 years old.",
+  "aowdReqItem2": "Be certified as a PADI Open Water Diver or have an equivalent recognized certification.",
+  "aowdReqItem3": "Complete and approve a medical questionnaire or have a doctor's authorization.",
+  "aowdReqItem4": "Commit to actively participating in all sessions to ensure a complete and safe learning experience.",
+
+  "aowdIncludeItem1": "International PADI Advanced Open Water Diver certification.",
+  "aowdIncludeItem2": "Unlimited access to the PADI eLearning® platform.",
+  "aowdIncludeItem3": "Personalized guidance and briefings with an expert PADI instructor.",
+  "aowdIncludeItem4": "5 exciting adventure dives in open water.",
+  "aowdIncludeItem5": "Complete set of top-quality dive equipment.",
+  "aowdIncludeItem6": "Constant guidance and supervision from a qualified PADI instructor.",
+  "aowdIncludeItem7": "Comprehensive dive insurance for the entire duration of the course.",
+
+  "aowdGalleryImg1Alt": "",
+  "aowdGalleryImg2Alt": "",
+  "aowdGalleryImg3Alt": "",
+  "aowdGalleryImg4Alt": "",
+
+  "rdSeoTitle": "PADI Rescue Diver Course | Become an Underwater Hero with JustDiveCol",
+  "rdSeoDesc": "Develop vital rescue and emergency management skills with JustDiveCol's PADI Rescue Diver course. Learn to prevent problems and respond effectively, protecting yourself and your buddies. Make a difference!",
+  "rdSeoKeywords": "PADI Rescue Diver course, rescue diver, rescue skills, dive emergency management, dive problem prevention, JustDiveCol, protecting dive buddies, reliable diver, underwater leadership, diving safety, dive first aid, PADI Divemaster, PADI Instructor",
+
+  "rdHeaderTitle": "PADI Rescue Diver: Your Power to Protect Lives Underwater",
+  "rdHeaderSubtitle": "Become the reliable diver everyone wants by their side. Be the safety the ocean needs!",
+
+  "rdDescTitle": "From Diver to Hero: The Confidence to Act with Purpose",
+  "rdDescP1": "The PADI Rescue Diver course is an immensely rewarding challenge that will transform you into a safer, more capable diver. You'll learn to prevent diving problems before they occur and, if necessary, to manage emergencies effectively, for both your own safety and that of your buddies. Prepare to make a difference!",
+  "rdDescP2": "At JustDiveCol, we will train you through realistic scenarios and proven techniques, preparing you to respond effectively to any unexpected situation in the water. This course not only improves your technical skills but also fosters your confidence, leadership, and an unwavering commitment to safety. Get ready to be an exemplary rescue diver!",
+
+  "rdDetailDurationValue": "2 to 3 days",
+
+  "rdDetailLabel1": "Key Skills",
+  "rdDetailValue1": "Prevention, emergency management, first aid, leadership",
+
+  "rdModule1Name": "Knowledge Development: Prevention and Rescue",
+  "rdModule1Desc": "You will learn to recognize stress in other divers and how to use emergency equipment. We will use the PADI eLearning® platform so you can study at your own pace, with the support of your instructor.",
+
+  "rdModule2Name": "Self-Rescue and Management of Panicked Divers",
+  "rdModule2Desc": "You will master essential techniques to manage your own emergencies and to effectively assist a panicked diver, both on the surface and underwater. You will transform into a pillar of safety.",
+
+  "rdModule3Name": "Response to Unconscious and Unresponsive Divers",
+  "rdModule3Desc": "You will practice the safe recovery of unconscious divers from the bottom, the vital provision of in-water rescue breathing, and the efficient towing of an unresponsive diver to the surface. You will prepare for the most critical situations with confidence.",
+
+  "rdModule4Name": "Dive Emergency Management and First Aid",
+  "rdModule4Desc": "You will learn to coordinate an effective emergency response, use emergency oxygen equipment, and apply dive first aid for common injuries. This module is vital for crisis management.",
+
+  "rdModule5Name": "Realistic Rescue Scenarios and Practical Drills",
+  "rdModule5Desc": "You will participate in intense exercises that simulate various emergency situations. This will allow you to apply and consolidate all your skills in a practical and controlled-pressure environment.",
+
+  "rdCurriculumNote1": "This course is an essential prerequisite for divers who wish to advance to the professional level of PADI Divemaster and Instructor, opening the doors to a rewarding career in diving.",
+
+  "rdObj1": "",
+  "rdObj2": "",
+  "rdObj3": "",
+  "rdObj4": "",
+  "rdObj5": "",
+
+  "rdReqItem1": "Be at least 12 years old.",
+  "rdReqItem2": "Be certified as a PADI Advanced Open Water Diver or have an equivalent recognized certification.",
+  "rdReqItem3": "Have completed a First Aid and CPR course within the last 24 months.",
+  "rdReqItem4": "Complete and approve a medical questionnaire or have a doctor's authorization.",
+  "rdReqItem5": "Commit to actively participating in all course sessions, demonstrating proactivity and responsibility.",
+
+  "rdIncludeItem1": "International PADI Rescue Diver certification.",
+  "rdIncludeItem2": "Unlimited access to the PADI eLearning® platform.",
+  "rdIncludeItem3": "Theoretical and practical sessions with an expert PADI instructor.",
+  "rdIncludeItem4": "Extensive practices and drills in confined and open water.",
+  "rdIncludeItem5": "Realistic rescue scenario simulations.",
+  "rdIncludeItem6": "Rental of a complete set of dive equipment and necessary rescue gear.",
+  "rdIncludeItem7": "Constant guidance and supervision from a qualified PADI instructor.",
+  "rdIncludeItem8": "Comprehensive dive insurance for the entire duration of the course.",
+
+  "rdGalleryImg1Alt": "",
+  "rdGalleryImg2Alt": "",
+  "rdGalleryImg3Alt": "",
+  "rdGalleryImg4Alt": ""
+}

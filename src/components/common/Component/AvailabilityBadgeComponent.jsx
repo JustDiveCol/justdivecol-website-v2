@@ -2,31 +2,32 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { AVAILABILITY, NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
+import { SOLD_OUT_LOGO } from '@/data/global/assets';
 
-const AvailabilityBadgeComponent = ({ status, className = '' }) => {
-  const { t } = useTranslation('common');
+const AvailabilityBadgeComponent = ({ translationNS, status, className = '' }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const statusMap = {
     available: {
-      text: t('statusAvailable', 'Disponible'),
+      text: t(SHARED_TRANSLATION_KEYS.STATUS_AVAILABLE_TEXT),
       className: 'bg-brand-cta-green text-brand-primary-dark',
       animationType: 'pulse-infinite',
     },
     last: {
-      text: t('statusLastSeats', 'Últimos Cupos'),
+      text: t(SHARED_TRANSLATION_KEYS.STATUS_LAST_SEATS_TEXT),
       className: 'bg-brand-cta-yellow text-brand-primary-dark',
       animationType: 'pulse-infinite',
     },
     soldOut: {
-      text: t('statusSoldOut', 'Agotado'),
+      text: t(SHARED_TRANSLATION_KEYS.STATUS_SOLD_OUT_TEXT),
       className: 'bg-red-500 text-brand-primary-dark',
       animationType: 'pulse-finite',
     },
-    // --- Nuevo estado para viajes pasados ---
     completed: {
-      text: t('statusCompleted', 'Finalizado'),
+      text: t(SHARED_TRANSLATION_KEYS.STATUS_COMPLETE_TEXT),
       className: 'bg-gray-500 text-white',
-      animationType: 'none', // Sin animación
+      animationType: 'none',
     },
   };
 
@@ -62,15 +63,26 @@ const AvailabilityBadgeComponent = ({ status, className = '' }) => {
   }
   // Si animationType es 'none', no se añaden props de animación extra.
 
-  const sizeClass =
-    status === 'soldOut' ? 'px-4 py-2 text-sm' : 'px-3 py-1 text-xs';
+  const sizeClass = '';
 
   return (
-    <motion.span
-      {...animationProps}
-      className={`inline-block rounded-full font-semibold ${data.className} ${sizeClass} ${className}`}>
-      {data.text}
-    </motion.span>
+    // Si el estado es 'soldOut', se muestra la imagen.
+    // Si no, se muestra el badge de texto.
+    status === AVAILABILITY.soldOut ? (
+      <motion.img
+        {...animationProps} // Aplica las animaciones de pulse-finite
+        src={SOLD_OUT_LOGO.soldOutLogo}
+        alt={t(SOLD_OUT_LOGO.altKey)}
+        className={`inline-block w-24 object-contain z-10 ${className}`}
+      />
+    ) : (
+      <motion.span
+        {...animationProps}
+        className={`inline-block rounded-full font-semibold ${data.className} px-3 py-1 text-xs ${className}`}
+      >
+        {data.text}
+      </motion.span>
+    )
   );
 };
 

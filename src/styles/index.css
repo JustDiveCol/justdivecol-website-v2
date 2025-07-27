@@ -31,17 +31,17 @@
    🔧 2. BASE LAYER OVERRIDES
    ========================================================================== */
 @layer base {
-  /* Ensures consistent default border colors. */
+  html,
+  body {
+    font-family: var(--font-sans);
+  }
+
   *,
   ::after,
   ::before,
   ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
 
-  /* --- Global Font Rules --- */
-  /* Apply sans-serif font to all heading elements */
+  /* Headings use Montserrat */
   h1,
   h2,
   h3,
@@ -51,7 +51,7 @@
     font-family: var(--font-sans);
   }
 
-  /* Apply serif font to paragraph and other text elements */
+  /* Body text uses Lora */
   p,
   span,
   small,
@@ -62,6 +62,94 @@
   select,
   textarea {
     font-family: var(--font-serif);
+  }
+
+  a {
+    @apply transition-colors;
+  }
+
+  small {
+    font-size: 0.875rem;
+  }
+}
+
+@layer components {
+  .heading-1 {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-extrabold uppercase tracking-tight;
+  }
+
+  .heading-2 {
+    @apply text-2xl sm:text-4xl md:text-5xl leading-tight font-bold uppercase tracking-tight;
+  }
+
+  .heading-3 {
+    @apply text-2xl sm:text-3xl md:text-4xl leading-snug font-semibold uppercase tracking-tight;
+  }
+
+  .heading-4 {
+    @apply text-xl sm:text-2xl md:text-3xl leading-snug font-medium uppercase tracking-tight;
+  }
+
+  .heading-5 {
+    @apply text-lg sm:text-xl md:text-2xl leading-normal font-medium uppercase tracking-wide;
+  }
+
+  .heading-6 {
+    @apply text-base sm:text-lg leading-normal font-medium uppercase tracking-wide;
+  }
+
+  .text-subtitle {
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed font-serif mt-4 max-w-4xl mx-auto text-brand-neutral;
+  }
+
+  .text-subtitle-sm {
+    @apply text-sm sm:text-sm md:text-base lg:text-lg leading-relaxed font-serif mt-4 max-w-4xl mx-auto text-brand-neutral;
+  }
+
+  .text-subtitle-base {
+    @apply text-base sm:text-base md:text-lg lg:text-xl leading-relaxed font-serif mt-4 max-w-4xl mx-auto text-brand-neutral;
+  }
+
+  .text-subtitle-2 {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-serif mt-4 max-w-4xl mx-auto text-brand-neutral;
+  }
+
+  .text-base-md {
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed;
+  }
+
+  .text-base-sm {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed;
+  }
+
+  .text-base-xs {
+    @apply text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed;
+  }
+
+  .text-button {
+    @apply text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide font-serif;
+  }
+
+  .text-muted {
+    @apply text-sm italic;
+  }
+
+  .text-link {
+    @apply underline underline-offset-2 transition-colors duration-200;
+  }
+
+  .form-input {
+    @apply px-4 py-2 rounded-md border border-gray-600 bg-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-cta-orange;
+  }
+
+  .form-button {
+    @apply text-sm font-semibold rounded-md px-4 py-2 transition-colors duration-200;
+  }
+}
+
+@layer utilities {
+  .min-h-hero {
+    min-height: calc(100vh - 5rem);
   }
 }
 
@@ -143,4 +231,11 @@
 .transition-max.open {
   /* must exceed your tallest answer */
   max-height: 500px;
+}
+
+img,
+a {
+  -webkit-user-drag: none; /* For WebKit browsers (Chrome, Safari) */
+  user-drag: none; /* Standard W3C property */
+  -moz-user-select: none; /* Optional: Prevents text selection with drag in Firefox */
 }

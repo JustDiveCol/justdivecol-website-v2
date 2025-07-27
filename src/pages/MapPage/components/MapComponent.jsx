@@ -1,3 +1,4 @@
+// src/pages/MapPage/components/MapComponent.jsx
 import React, { useEffect, useRef, useState, useMemo } from 'react';
 import maplibregl, { LngLatBounds } from 'maplibre-gl';
 import { motion } from 'motion/react';
@@ -10,13 +11,7 @@ import DiveFiltersComponent from './DiveFiltersComponent';
 import DiveSiteModalComponent from './DiveSiteModalComponent';
 
 // ========== Helpers ==========
-import { destinationsById } from '../../../data/content/destinations/_index';
-
-import {
-  getMapConfigByDestination,
-  getDivesitesByDestination,
-  allDivesites,
-} from '../../../data/content/divesites/_index';
+import { useDestinations } from '@/data/content/destinations/DataProvider';
 
 import { DIVE_TYPES, DIVE_DIFFICULTIES } from '../../../data/global/diveSiteOptions';
 
@@ -35,6 +30,7 @@ import {
   ArtificialReefIcon,
   FlagIcon,
 } from '../../../assets/icons/MapsIcons';
+import { SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 // ========== Default Constants ==========
 const DEFAULT_CENTER = [-74.297333, 4.570868];
@@ -118,6 +114,17 @@ const MapComponent = ({ destinationId }) => {
   const isInitialMount = useRef(true);
   const { t } = useTranslation(['divesites', 'map', 'destinations']);
 
+  // Obtener todos los destinos del contexto
+  const { destinations } = useDestinations();
+
+  // Recrear destinationsById usando useMemo a partir de los destinos del contexto
+  const destinationsById = useMemo(() => {
+    return destinations.reduce((acc, dest) => {
+      acc[dest.id] = dest;
+      return acc;
+    }, {});
+  }, [destinations]); // Se recalcula si la lista de destinos cambia
+
   const [mapHeight, setMapHeight] = useState('500px');
   const [activeType, setActiveType] = useState('all');
   const [activeDifficulty, setActiveDifficulty] = useState('all');
@@ -128,17 +135,41 @@ const MapComponent = ({ destinationId }) => {
   const [selectedSiteId, setSelectedSiteId] = useState(null);
   const selectedSiteIdRef = useRef(null);
 
-  const {
-    center: initialCenter,
-    zoom: initialZoom,
-    minZoom,
-    maxZoom,
-  } = getMapConfigByDestination(destinationId);
+  // Obtener la configuración del mapa (centro, zoom) para el destino actual o valores por defecto
+  const mapConfig = useMemo(() => {
+    if (destinationId && destinationsById[destinationId]) {
+      const dest = destinationsById[destinationId];
 
-  const baseSites = useMemo(
-    () => (destinationId ? getDivesitesByDestination(destinationId) : allDivesites),
-    [destinationId]
-  );
+      return {
+        center: dest.coords || DEFAULT_CENTER,
+        zoom: dest.minZoom || DEFAULT_ZOOM,
+        minZoom: dest.minZoom,
+        maxZoom: dest.maxZoom,
+      };
+    }
+
+    return {
+      center: DEFAULT_CENTER,
+      zoom: DEFAULT_ZOOM,
+      minZoom: undefined, // Permitir que maplibre use sus valores por defecto si no están definidos
+      maxZoom: 16,
+    };
+  }, [destinationId, destinationsById]);
+
+  const { center: initialCenter, zoom: initialZoom, minZoom, maxZoom } = mapConfig;
+
+  // baseSites ahora se deriva de los diveSites adjuntos a los destinos del contexto
+  const baseSites = useMemo(() => {
+    if (destinationId) {
+      // Si se proporciona un destinationId, filtra los diveSites de ese destino específico
+      const currentDestination = destinationsById[destinationId];
+      return currentDestination ? currentDestination.diveSites || [] : [];
+    } else {
+      // Si no hay destinationId, recopila todos los diveSites de todos los destinos
+      // (destinations ya viene con diveSites adjuntos gracias a getEnrichedDestinations)
+      return destinations.flatMap((dest) => dest.diveSites || []);
+    }
+  }, [destinationId, destinations, destinationsById]); // Añadir destinations a las dependencias
 
   const typeFilterOptions = useMemo(() => {
     const relevantSites = baseSites.filter(
@@ -149,7 +180,7 @@ const MapComponent = ({ destinationId }) => {
     const presentTypeIds = new Set();
     relevantSites.forEach((site) => site.typeIds?.forEach((id) => presentTypeIds.add(id)));
     const filteredTypes = DIVE_TYPES.filter((type) => presentTypeIds.has(type.id));
-    return [{ id: 'all', translationKey: 'map:allLabel' }, ...filteredTypes];
+    return [{ id: 'all', translationKey: SHARED_TRANSLATION_KEYS.MAP_ALL_LABEL }, ...filteredTypes];
   }, [baseSites, activeDifficulty, activeDestination]);
 
   const difficultyFilterOptions = useMemo(() => {
@@ -162,7 +193,10 @@ const MapComponent = ({ destinationId }) => {
     const filteredDifficulties = DIVE_DIFFICULTIES.filter((diff) =>
       presentDifficultyIds.has(diff.id)
     );
-    return [{ id: 'all', translationKey: 'map:allLabel' }, ...filteredDifficulties];
+    return [
+      { id: 'all', translationKey: SHARED_TRANSLATION_KEYS.MAP_ALL_LABEL },
+      ...filteredDifficulties,
+    ];
   }, [baseSites, activeType, activeDestination]);
 
   const destinationOptions = useMemo(() => {
@@ -182,10 +216,10 @@ const MapComponent = ({ destinationId }) => {
       })
       .filter(Boolean);
     if (uniqueDestinationIds.size > 1) {
-      return [{ id: 'all', translationKey: 'map:allLabel' }, ...options];
+      return [{ id: 'all', translationKey: SHARED_TRANSLATION_KEYS.MAP_ALL_LABEL }, ...options];
     }
     return options;
-  }, [baseSites, activeType, activeDifficulty, destinationId]);
+  }, [baseSites, activeType, activeDifficulty, destinationId, destinationsById]);
 
   useEffect(() => {
     const calculateAndSetMapHeight = () => {
@@ -226,7 +260,7 @@ const MapComponent = ({ destinationId }) => {
               tiles: ['https://a.tile.opentopomap.org/{z}/{x}/{y}.png'],
               tileSize: 256,
               attribution:
-                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors | © <a href="https://opentopomap.org" target="_blank" rel="noopener noreferrer">OpenTopoMap</a> (CC-BY-SA) | Data © <a href="https://justdivecol.com">JustDiveCol</a>',
             },
           },
           layers: [
@@ -432,9 +466,11 @@ const MapComponent = ({ destinationId }) => {
       >
         <div className="flex items-center">
           <InfoIcon className="w-5 h-5 mr-3" />
-          <div>
-            <strong className="font-bold">{t('mapDisclaimerTitle', { ns: 'map' })}</strong>
-            <span className="block sm:inline">{t('mapDisclaimerText', { ns: 'map' })}</span>
+          <div className="text-xs md:text-sm">
+            <strong className="font-bold">{t(SHARED_TRANSLATION_KEYS.MAP_DISCLAMER_TITLE)}</strong>
+            <span className="block sm:inline">
+              {t(SHARED_TRANSLATION_KEYS.MAP_DISCLAIMER_TEXT)}
+            </span>
           </div>
         </div>
       </div>

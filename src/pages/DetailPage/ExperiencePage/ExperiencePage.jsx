@@ -1,5 +1,5 @@
 // src/pages/DetailPage/ExperiencePage/ExperiencePage.jsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
@@ -10,76 +10,126 @@ import SEOComponent from '../../../components/ui/SEOComponent';
 import ExperienceLayout from './Layout/ExperienceLayout';
 
 // Data fetching utility
-import { getExperienceDetails } from '../../../data/content/experiences/_index';
+import { useExperiences } from '@/data/content/experiences/DataProvider';
+import { useCertifications } from '@/data/content/certifications/DataProvider';
+import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
-/**
- * Renders the detail page for a specific experience (trip).
- * It fetches experience data and any associated courses based on the 'tripId'
- * from the URL, handles loading/error states, and passes the data to the ExperienceLayout.
- */
 const ExperiencePage = () => {
-  const { tripId } = useParams(); // Get the dynamic tripId from the URL.
-  const { t } = useTranslation(['experiences', 'common']);
+  const { experienceSlug, sessionSlug } = useParams();
+  const { t } = useTranslation([
+    NAMESPACES.EXPERIENCES,
+    NAMESPACES.COMMON,
+    NAMESPACES.EXPERIENCE_DETAIL_PAGE,
+  ]);
 
-  // State for managing experience data, courses, loading, and errors.
+  const { experiences } = useExperiences();
+  const { certifications } = useCertifications();
+
   const [experienceData, setExperienceData] = useState(null);
-  const [offeredCoursesData, setOfferedCoursesData] = useState([]);
+  const [sessionData, setSessionData] = useState(null);
+  const [offeredCertificationsData, setOfferedCertificationsData] = useState([]);
+  const [otherTripsToThisDestination, setOtherTripsToThisDestination] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  // Effect to fetch all necessary data when the tripId changes.
   useEffect(() => {
-    // The utility returns both trip data and any courses offered with it.
-    const fetchedData = getExperienceDetails(tripId);
+    setIsLoading(true);
+    setError(false);
 
-    if (fetchedData && fetchedData.tripData) {
-      setExperienceData(fetchedData.tripData);
-      setOfferedCoursesData(fetchedData.offeredCoursesData || []); // Ensure offeredCoursesData is always an array.
+    const foundExperience = experiences.find((exp) => exp.slug === experienceSlug);
+
+    let foundSession = null;
+    if (foundExperience) {
+      foundSession = foundExperience.sessions.find((ses) => ses.slug === sessionSlug);
+    }
+
+    if (foundExperience && foundSession) {
+      setExperienceData(foundExperience);
+      setSessionData(foundSession);
+
+      const associatedCertifications = certifications.filter(
+        (cert) => foundSession.certificationIds && foundSession.certificationIds.includes(cert.id)
+      );
+      setOfferedCertificationsData(associatedCertifications);
+
+      // --- LÓGICA CLAVE REVISADA PARA otherTripsToThisDestination ---
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const filteredOtherTrips = experiences.reduce((acc, exp) => {
+        // Incluir experiencias que están en el mismo destino
+        const isSameDestination = exp.destinationId === foundExperience.destinationId;
+        // La condición para excluir solo debe ser si es la *misma sesión*
+        // o si es una experiencia *completamente diferente* en el mismo destino
+        const isCurrentExperience = exp.id === foundExperience.id; // TRUE si es la experiencia que estamos viendo
+        const hasSessions = exp.sessions && exp.sessions.length > 0;
+
+        if (isSameDestination && hasSessions) {
+          exp.sessions.forEach((session) => {
+            const sessionEndDate = new Date(session.endDate);
+            const isFutureOrToday = sessionEndDate >= today;
+            const isAvailableOrLast =
+              session.availability === 'available' || session.availability === 'last';
+            const isNotCurrentSession = session.id !== foundSession.id; // Excluir solo la sesión actual
+
+            if (isFutureOrToday && isAvailableOrLast && isNotCurrentSession) {
+              acc.push({
+                ...session,
+                experienceDetails: {
+                  id: exp.id,
+                  slug: exp.slug,
+                  titleKey: exp.titleKey,
+                  subtitleKey: exp.subtitleKey,
+                  nameKey: exp.nameKey,
+                  header: exp.header,
+                  seo: exp.seo,
+                },
+              });
+            }
+          });
+        }
+        return acc;
+      }, []);
+
+      setOtherTripsToThisDestination(filteredOtherTrips);
     } else {
-      // If no data is found for the given tripId, set an error state.
       setError(true);
     }
     setIsLoading(false);
-  }, [tripId]); // Rerun this effect if the tripId in the URL changes.
+  }, [experienceSlug, sessionSlug, experiences, certifications]); // Las dependencias deben incluir 'experiences' y 'certifications'
 
   // --- Render based on component state ---
 
   if (isLoading) {
     return (
-      <div className='flex items-center justify-center min-h-screen text-brand-white text-2xl'>
-        {t('common:loading')}...
+      <div className="flex items-center justify-center min-h-screen text-brand-white text-2xl">
+        {t(SHARED_TRANSLATION_KEYS.LOADING_LABEL)}...
       </div>
     );
   }
 
-  if (error || !experienceData) {
-    return (
-      <Navigate
-        to='/404'
-        replace
-      />
-    );
+  if (error || !experienceData || !sessionData) {
+    return <Navigate to={NAMESPACES.NOT_FOUND_PAGE} replace />;
   }
 
   return (
     <>
       <SEOComponent
-        title={t(experienceData.seo.titleKey, { ns: 'experiences' })}
+        title={t(experienceData.seo.titleKey, { ns: NAMESPACES.EXPERIENCE_DETAIL_PAGE })}
         description={t(experienceData.seo.descriptionKey, {
-          ns: 'experiences',
+          ns: NAMESPACES.EXPERIENCE_DETAIL_PAGE,
         })}
-        keywords={t(experienceData.seo.keywords, { ns: 'experiences' })}
+        keywords={t(experienceData.seo.keywords, { ns: NAMESPACES.EXPERIENCE_DETAIL_PAGE })}
         imageUrl={experienceData.seo.imageUrl}
-        url={`${experienceData.seo.url}${experienceData.id}`}
+        url={sessionData.url}
       />
-      <motion.div
-        variants={staggerContainer}
-        initial='hidden'
-        animate='animate'
-        exit='hidden'>
+      <motion.div variants={staggerContainer} initial="initial" animate="animate" exit="exit">
         <ExperienceLayout
           experienceData={experienceData}
-          offeredCoursesData={offeredCoursesData}
+          sessionData={sessionData}
+          offeredCertificationsData={offeredCertificationsData}
+          otherTripsToThisDestination={otherTripsToThisDestination}
+          isFounderTrip={sessionData.founders || false}
         />
       </motion.div>
     </>

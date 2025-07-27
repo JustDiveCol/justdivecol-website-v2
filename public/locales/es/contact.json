@@ -1,0 +1,29 @@
+{
+  "contactSeoTitle": "Contacto | JustDiveCol - Planifica tu próxima aventura submarina",
+  "contactSeoDesc": "¿Listo para explorar el azul profundo? Contáctanos para diseñar tu viaje soñado, resolver tus dudas o simplemente compartir nuestra pasión por el increíble mundo submarino con JustDiveCol.",
+  "contactSeoKeywords": "contacto, JustDiveCol, aventura submarina, planificar viaje de buceo, dudas buceo, pasión por el océano, WhatsApp buceo, comunicación JustDiveCol, servicio al cliente buceo",
+
+  "contactHeaderTitle": "Hablemos de tu próxima gran aventura",
+  "contactHeaderSubtitle": "Estamos aquí para responder a tus preguntas, ayudarte a planificar ese viaje soñado o simplemente compartir nuestra pasión por el océano. ¡Tu aventura comienza con una conversación!",
+
+  "contactInfoTitle": "Nuestros canales de comunicación",
+
+  "contactEmailSubject": "Consulta desde el sitio web",
+  "contactEmailBody": "Hola, quisiera más información sobre los servicios de JustDiveCol.",
+
+  "contactWhatsAppTitle": "Envíanos un mensaje por WhatsApp",
+  "contactWhatsAppDesc": "¿Tienes una pregunta rápida, necesitas asesoría o prefieres una conversación más directa? Haz clic en el botón para chatear con nuestro equipo. ¡Estamos listos para ayudarte a planificar tu inmersión perfecta!",
+
+  "courseInquiryMessage": "Hola, equipo de JustDiveCol. Me gustaría recibir más información sobre el curso {{courseName}}.",
+
+  "contactFollowUs": "Síguenos en nuestras redes sociales",
+
+  "contactCtaTitle": "¿Listo para el gran salto? ¡Te estamos esperando!",
+  "contactCtaSubtitle": "Las maravillas de las profundidades te aguardan. Cuéntanos tu sueño submarino y lo haremos realidad. ¡Tu próxima aventura inolvidable comienza con una simple conversación!",
+
+  "generalWhatsappMessage": "Hola, JustDiveCol. Me gustaría obtener más información general sobre sus servicios. ¿Podrían asesorarme?",
+  "experienceWhatsappMessage": "Hola, JustDiveCol. Me interesa su experiencia: {{experienceName}}. ¿Podrían darme más detalles o ayudarme a reservar mi cupo?",
+  "destinationWhatsappMessage": "Hola, JustDiveCol. Me gustaría más información sobre los viajes de buceo a {{destinationName}}. ¡Estoy listo/a para explorar este destino!",
+  "certificationWhatsappMessage": "Hola, JustDiveCol. Me interesa el curso de certificación {{courseName}}. ¿Podrían informarme sobre próximas fechas o requisitos?",
+  "customWhatsappMessage": "Hola, JustDiveCol. ¡Me gustaría diseñar una experiencia de buceo a medida! Tengo una idea en mente y quiero explorar opciones personalizadas con ustedes. ¿Podrían ayudarme?"
+}

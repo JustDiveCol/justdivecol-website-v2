@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { fadeInUp } from '../../../../hooks/animations';
 
 import { QuoteIcon, StarRating } from '../../../../assets/icons/NavbarIcons';
+import { NAMESPACES } from '@/data/global/constants';
 
 /**
  * Renders a card displaying a customer testimonial.
@@ -18,34 +19,35 @@ import { QuoteIcon, StarRating } from '../../../../assets/icons/NavbarIcons';
  * @param {number} props.cardData.rating - The star rating, from 1 to 5.
  * @param {string} props.cardData.avatarUrl - The URL for the customer's avatar image.
  */
-const TestimonialCardComponent = ({ cardData }) => {
-  const { t } = useTranslation('home');
+const TestimonialCardComponent = ({ translationNS, cardData }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   const { quoteKey, nameKey, originKey, rating, avatarUrl } = cardData;
 
   return (
     <motion.div
       variants={fadeInUp}
-      className='bg-gradient-to-br from-brand-primary-medium/50 to-brand-primary-dark p-8 rounded-lg shadow-2xl flex flex-col border border-brand-primary-light/10'>
-      <div className='flex-shrink-0'>
-        <QuoteIcon className='h-10 w-10 text-brand-cta-green/50' />
+      className="bg-gradient-to-br from-brand-primary-medium/50 to-brand-primary-dark p-6 rounded-lg shadow-2xl flex flex-col border border-brand-primary-light/10"
+    >
+      <div className="flex-shrink-0">
+        <QuoteIcon className="h-10 w-10 text-brand-cta-green/50" />
       </div>
 
-      <p className='mt-6 text-left  text-brand-neutral/90 flex-grow text-lg'>
+      <p className="mt-4 text-left  text-brand-neutral/90 flex-grow text-base-xs">
         "{t(quoteKey)}"
       </p>
 
-      <div className='mt-6 border-t border-brand-primary-light/20 pt-6 flex items-center space-x-4'>
+      <div className="mt-4 border-t border-brand-primary-light/20 pt-4 flex items-center space-x-4">
         <img
           src={avatarUrl}
           alt={t(nameKey)}
-          className='h-14 w-14 rounded-full object-cover border-2 border-brand-cta-green'
-          loading='lazy' // Defer image loading to improve initial page performance.
+          className="h-14 w-14 rounded-full object-cover border-2 border-brand-cta-green"
+          loading="lazy"
         />
-        <div className='text-left'>
+        <div className="text-left">
           <StarRating rating={rating} />
-          <h4 className='mt-1 font-bold text-brand-white'>{t(nameKey)}</h4>
-          <p className=' text-sm text-brand-neutral/80'>{t(originKey)}</p>
+          <h4 className="mt-1 font-bold text-brand-white">{t(nameKey)}</h4>
+          <p className=" text-sm text-brand-neutral/80">{t(originKey)}</p>
         </div>
       </div>
     </motion.div>

@@ -1,45 +1,50 @@
 // src/data/global/shared.js
 
-import experience_category_courses from '../../assets/images/page-specific/experiences/experience-category-courses.webp';
-import experience_category_experiences from '../../assets/images/page-specific/experiences/experience-category-experiences.webp';
-import experience_category_private from '../../assets/images/page-specific/experiences/experience-category-private.webp';
+import categoryCertification from '../../assets/images/page-specific/experiences/category-certification.webp';
+import categoryDestination from '../../assets/images/page-specific/experiences/category-experiences.webp';
+import categoryCustom from '../../assets/images/page-specific/experiences/category-private.webp';
 
-import logo from '../../assets/images/logos/logo.png';
-import padi from '../../assets/images/logos/padi.png';
+import { LOGO_MAIN, PADI_LOGO } from './assets';
+import { SHARED_TRANSLATION_KEYS } from './constants';
 
 // This data is shared between the Home page and the Experiences page
 export const experienceCategories = [
   {
-    id: 'certificacion',
-    backgroundImage: experience_category_courses,
+    id: 'certification',
+    backgroundImage: categoryCertification,
     titleKey: 'expCardCertificacionTitle',
     categoryKey: 'expCardCertificacionCategory',
-    mainLogo: logo,
-    mainLogoAltKey: 'expCardCertificacionMainLogoAlt',
-    complementaryLogo: padi,
-    complementaryLogoAltKey: 'expCardCertificacionComplementaryLogoAlt',
-    photoCreditKey: 'expCardCertificacionPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    complementaryLogo: PADI_LOGO.padiLogo,
+    complementaryLogoAltKey: PADI_LOGO.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
   {
-    id: 'exploracion',
-    backgroundImage: experience_category_experiences,
+    id: 'destination',
+    backgroundImage: categoryDestination,
     titleKey: 'expCardExploracionTitle',
     categoryKey: 'expCardExploracionCategory',
-    mainLogo: logo,
-    mainLogoAltKey: 'expCardExploracionMainLogoAlt',
-    // complementaryLogo: padi,
-    // complementaryLogoAltKey: 'expCardExploracionComplementaryLogoAlt',
-    photoCreditKey: 'expCardExploracionPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+      text: 'Camilo Beltran @JustDiveCol',
+    },
   },
   {
-    id: 'privados',
-    backgroundImage: experience_category_private,
+    id: 'custom',
+    backgroundImage: categoryCustom,
     titleKey: 'expCardPrivadosTitle',
     categoryKey: 'expCardPrivadosCategory',
-    mainLogo: logo,
-    mainLogoAltKey: 'expCardPrivadosMainLogoAlt',
-    // complementaryLogo: padi,
-    // complementaryLogoAltKey: 'expCardPrivadosComplementaryLogoAlt',
-    photoCreditKey: 'expCardPrivadosPhotoCredit',
+    mainLogo: LOGO_MAIN.mainLogo,
+    mainLogoAltKey: LOGO_MAIN.altKey,
+    photoCredit: {
+      prefixKey: SHARED_TRANSLATION_KEYS.PHOTO_CREDIT_PREFIX,
+      text: '@giovannidiveservicesl',
+    },
   },
 ];

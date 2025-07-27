@@ -1,42 +1,201 @@
 // src/pages/ExperiencesPage/components/Sections/DestinationsSection.jsx
-import React from 'react';
-import { motion } from 'motion/react';
+import React, { useRef, useState, useLayoutEffect, useEffect, useMemo } from 'react';
+import { motion, useAnimation, useMotionValue } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-import { experiencesPageData } from '../../../../data/pages/experiencesData';
-import { getDestinationsWithUpcomingTrips } from '../../../../data/content/destinations/_index';
-import { staggerContainer } from '../../../../hooks/animations';
+import { experiencesData } from '../../../../data/pages/experiencesData';
+
+import { useDestinations } from '@/data/content/destinations/DataProvider';
+import { useExperiences } from '@/data/content/experiences/DataProvider';
+
 import DestinationCardComponent from '../Cards/DestinationCardComponent';
+import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
-/**
- * Renders the "Memorable Destinations" section of the Experiences page.
- * It fetches all published destinations and their associated upcoming trips.
- */
-const DestinationsSection = () => {
-  const { t } = useTranslation('experiencesPage');
+const SCROLL_SPEED = 15; // px por segundo para autoscroll
 
-  // Fetches all published destinations and attaches a list of their respective upcoming trips.
-  const destinationsWithTrips = getDestinationsWithUpcomingTrips();
+/** Componente reutilizable de carrusel */
+const CarouselSection = ({ title, items, cardVariant }) => {
+  const outerRef = useRef(null);
+  const innerRef = useRef(null);
+  const controls = useAnimation();
+  const x = useMotionValue(0);
+  const [constraints, setConstraints] = useState({ left: 0, right: 0 });
+  const resumeTimer = useRef(null);
+  const [shouldResume, setShouldResume] = useState(false);
+  const [shouldCenter, setShouldCenter] = useState(false);
 
-  const { sectionId, titleKey } = experiencesPageData.fullCatalog.destinations;
+  // Mide y actualiza límites
+  const updateConstraints = () => {
+    const outer = outerRef.current;
+    const inner = innerRef.current;
+    if (!outer || !inner) return;
+
+    const maxDrag = inner.scrollWidth - outer.offsetWidth;
+    const newLeft = -maxDrag;
+
+    setConstraints((prev) => {
+      return prev.left === newLeft ? prev : { left: newLeft, right: 0 };
+    });
+
+    setShouldCenter(maxDrag <= 0); // <--- ¡Aquí lo importante!
+  };
+
+  // Inicia el bucle desde la posición actual
+  const startAutoScroll = () => {
+    const currentX = x.get();
+    const { left } = constraints;
+    const distToLeft = Math.abs(left - currentX);
+    const distToStart = Math.abs(0 - left);
+    const totalDist = distToLeft + distToStart;
+    const duration = totalDist / SCROLL_SPEED;
+
+    controls.start({
+      x: [currentX, left, 0],
+      transition: { duration, ease: 'linear', repeat: Infinity },
+    });
+  };
+
+  // Montaje: medir y arrancar autoscroll
+  useLayoutEffect(() => {
+    updateConstraints();
+  }, []);
+
+  // Resize para recalcular
+  useEffect(() => {
+    window.addEventListener('resize', updateConstraints);
+    return () => window.removeEventListener('resize', updateConstraints);
+  }, []);
+
+  // Cuando constraints esté listo, lanzamos el scroll
+  useEffect(() => {
+    if (constraints.left < 0) startAutoScroll();
+  }, [constraints.left]);
+
+  // Manejo de interacción: pausa y programa reanudar mediante estado
+  const handleInteractionStart = () => {
+    controls.stop();
+    clearTimeout(resumeTimer.current);
+  };
+  const handleInteractionEnd = () => {
+    clearTimeout(resumeTimer.current);
+    resumeTimer.current = setTimeout(() => setShouldResume(true), 2000);
+  };
+
+  // Efecto que, tras 2s de inactividad, reanuda la animación
+  useEffect(() => {
+    if (shouldResume && constraints.left < 0) {
+      startAutoScroll();
+      setShouldResume(false);
+    }
+  }, [shouldResume]);
+
+  return (
+    <div className="mb-12">
+      <h3 className="text-subtitle-2 font-semibold text-brand-white mb-6">{title}</h3>
+      <div ref={outerRef} className="overflow-hidden py-4">
+        <motion.div
+          ref={innerRef}
+          style={{ x }}
+          className={`flex items-stretch gap-8 ${shouldCenter ? 'justify-center' : ''}`}
+          drag="x"
+          dragConstraints={constraints}
+          dragElastic={0.1}
+          animate={controls}
+          onDragStart={handleInteractionStart}
+          onDragEnd={handleInteractionEnd}
+          onPointerDown={handleInteractionStart}
+          onPointerUp={handleInteractionEnd}
+        >
+          {items.map((dest) => (
+            <div key={dest.id} className="flex-shrink-0">
+              <DestinationCardComponent
+                destinationData={dest}
+                translationNS={NAMESPACES.DESTINATIONS}
+                cardVariant={cardVariant}
+              />
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+const DestinationsSection = ({ translationNS }) => {
+  const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
+  const { sectionId } = experiencesData.fullCatalog.destinations;
+
+  const { destinations } = useDestinations();
+  const { experiences } = useExperiences();
+
+  const destinationsWithUpcomingTrips = useMemo(() => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Para comparar solo la fecha, no la hora
+
+    return destinations.map((dest) => {
+      const upcomingTrips = [];
+      experiences.forEach((exp) => {
+        // 'exp' es una experiencia base
+        if (exp.destinationId === dest.id) {
+          // Si la experiencia base está vinculada a este destino
+          (exp.sessions || []).forEach((session) => {
+            // 'session' es una sesión específica
+            const sessionEndDate = new Date(session.endDate);
+            // Solo si la sesión está en el futuro (o hoy) y tiene disponibilidad 'available' o 'last'
+            if (
+              sessionEndDate >= today &&
+              (session.availability === 'available' || session.availability === 'last')
+            ) {
+              upcomingTrips.push({
+                // <-- ¡AQUÍ ESTÁ EL CAMBIO! ENRIQUECER LA SESIÓN
+                ...session, // Copiar todas las propiedades de la sesión
+                // Adjuntar detalles de la experiencia padre si se necesitan en DestinationCardComponent
+                experienceDetails: {
+                  id: exp.id,
+                  slug: exp.slug,
+                  titleKey: exp.titleKey,
+                  subtitleKey: exp.subtitleKey,
+                  nameKey: exp.nameKey, // Asegúrate de que nameKey esté disponible
+                  header: exp.header,
+                  seo: exp.seo,
+                  // Añade cualquier otra propiedad de la experiencia padre que necesites en la tarjeta de destino para esta sesión
+                },
+              });
+            }
+          });
+        }
+      });
+      return { ...dest, upcomingTrips };
+    });
+  }, [destinations, experiences]); // Recalcular si destinos o experiencias cambian
+
+  const active = destinationsWithUpcomingTrips.filter((d) => d.upcomingTrips.length > 0);
+  const inactive = destinationsWithUpcomingTrips.filter((d) => d.upcomingTrips.length === 0);
 
   return (
     <section
       id={sectionId}
-      className='py-20 px-4 border-t-2 border-brand-primary-light/20 scroll-mt-20'>
-      <div className='container mx-auto'>
-        <h2 className='text-3xl md:text-4xl font-bold text-brand-white text-center mb-12 uppercase'>
-          {t(titleKey)}
+      className="py-12 px-4 border-t-2 border-brand-primary-light/20 scroll-mt-20 text-center"
+    >
+      <div className="container mx-auto">
+        <h2 className="heading-2 text-brand-white">
+          {t(experiencesData.fullCatalog.destinations.titleKey)}
         </h2>
-        <motion.div
-          variants={staggerContainer}
-          className='flex flex-wrap justify-center gap-8'>
-          {destinationsWithTrips.map((destination) => (
-            <DestinationCardComponent
-              key={destination.id}
-              destinationData={destination}
-            />
-          ))}
-        </motion.div>
+
+        {/* Carrusel de destinos con viajes activos */}
+        <CarouselSection
+          title={t(SHARED_TRANSLATION_KEYS.EXPERIENCE_WITH_TRIPS_TITLE)}
+          items={active}
+          cardVariant="active"
+        />
+
+        {/* Carrusel de destinos sin viajes */}
+        {inactive.length > 0 && ( // <-- ¡Añadir esta condición!
+          <CarouselSection
+            title={t(SHARED_TRANSLATION_KEYS.EXPERIENCE_WITH_NO_TRIPS_TITLE)}
+            items={inactive}
+            cardVariant="inactive"
+          />
+        )}
       </div>
     </section>
   );

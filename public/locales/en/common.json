@@ -1,0 +1,27 @@
+{
+  "viewCalendar": "View Dive Calendar",
+  "photoCreditPrefix": "Photo Credits: ",
+  "experiencesTextButton": "Explore Adventures",
+  "divesitesTextButton": "View Dive Sites",
+  "aboutUsTextButton": "Get to Know JustDiveCol",
+  "safetyTextButton": "Our Commitment to Safety",
+  "contactTextButton": "Let's Chat on WhatsApp",
+  "storeTextButton": "Go to the Store",
+  "viewDetails": "View Details",
+  "day": "Day",
+  "loading": "Loading",
+  "upcomingDates": "Upcoming Dates",
+  "exploreDestination": "Explore This Destination",
+  "ariaPrevious": "Previous item",
+  "ariaGoToPage": "Go to page",
+  "ariaNext": "Next item",
+  "moreLabel": "More",
+  "durationFormat": "{{days}} Days / {{nights}} Nights",
+  "datesNotAvailable": "Dates Not Available",
+
+  "statusUpcoming": "Upcoming Dates",
+  "statusAvailable": "Spots Available",
+  "statusLastSeats": "Last Spots!",
+  "statusSoldOut": "Sold Out!",
+  "statusCompleted": "Completed"
+}
