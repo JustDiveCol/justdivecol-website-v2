@@ -2,7 +2,7 @@
   "name": "justdivecol-website-v2",
   "homepage": "https://www.justdivecol.com",
   "private": true,
-  "version": "2.2.2",
+  "version": "3.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
