@@ -3,27 +3,27 @@
   "destinationsExtremeTextOverlay": "Destino de buceo extremo",
 
   "destinationsDetailsTitle": "Detalles del destino",
-  "destinationsDiveSitesTitle": "Puntos de buceo del destino",
+  "destinationsDiveSitesTitle": "Puntos de buceo",
   "destinationsMapTitle": "Mapa de puntos de buceo",
   "destinationsGalleryTitle": "Galería del destino",
-  "destinationsUniqueFindsTitle": "Hallazgos únicos del destino",
-  "destinationsAvailableTrip": "Experiencias disponibles en este destino",
-  "destinationsNotAvailableTrip": "No hay experiencias disponibles en este destino",
+  "destinationsUniqueFindsTitle": "Hallazgos únicos",
+  "destinationsAvailableTrip": "Aventuras disponibles en este destino",
+  "destinationsNotAvailableTrip": "No hay aventuras disponibles en este destino",
   "destinationCtaTextButton": "¡Hablemos de este destino!",
 
   "smName": "Santa Marta",
   "smDescription": "Donde la imponente Sierra Nevada se encuentra con el misterio del Caribe, Santa Marta es un destino ideal para aprender a bucear, expandir tus habilidades y explorar el mundo submarino con JustDiveCol.",
 
-  "smSeoTitle": "Buceo en Santa Marta | Explora el vibrante Caribe Colombiano con JustDiveCol",
-  "smSeoDesc": "Sumérgete en las ricas y cálidas aguas de Santa Marta con JustDiveCol. Descubre una vibrante vida marina, impresionantes arrecifes de coral y sitios de buceo únicos en el corazón del Caribe Colombiano. ¡Tu próxima aventura submarina te espera!",
-  "smSeoKeywords": "buceo Santa Marta, bucear Caribe colombiano, arrecifes de coral Santa Marta, sitios de buceo Santa Marta, vida marina Santa Marta, JustDiveCol Santa Marta, Parque Tayrona buceo, cursos de buceo Santa Marta, buceo principiantes Santa Marta, buceo avanzado Santa Marta, pecios Santa Marta, turismo submarino Santa Marta, Taganga buceo",
+  "smSeoTitle": "Buceo en Santa Marta | Explora el vibrante Caribe colombiano con JustDiveCol",
+  "smSeoDesc": "Sumérgete en las ricas y cálidas aguas de Santa Marta con JustDiveCol. Descubre una vibrante vida marina, impresionantes arrecifes y sitios de buceo únicos en el Caribe colombiano. ¡Tu próxima aventura submarina te espera!",
+  "smSeoKeywords": "buceo santa marta, bucear caribe colombiano, arrecifes de coral santa marta, sitios de buceo santa marta, vida marina santa marta, justdivecol santa marta, parque tayrona buceo, cursos de buceo santa marta, buceo principiantes santa marta, buceo avanzado santa marta, pecios santa marta, turismo submarino santa marta, taganga buceo",
 
-  "smHeaderTitle": "Santa Marta: donde la majestuosa sierra y el azul Caribe se encuentran para bucear",
-  "smHeaderSubtitle": "Sumérgete en la vibrante historia y los arrecifes llenos de vida del Caribe Colombiano. Un destino que cautiva tanto dentro como fuera del agua.",
+  "smHeaderTitle": "Santa Marta: donde la majestuosa sierra y el azul caribe se encuentran",
+  "smHeaderSubtitle": "Sumérgete en la vibrante historia y los arrecifes llenos de vida del Caribe colombiano. Un destino que cautiva tanto dentro como fuera del agua.",
 
-  "smDescTitle": "Un viaje al corazón fascinante del Caribe Colombiano",
-  "smDescP1": "Más allá de sus impresionantes arrecifes, Santa Marta es una ciudad vibrante con una riqueza histórica que se entrelaza con relatos de piratas, colonos y la milenaria cultura Tayrona. Su música contagiosa, su exquisita gastronomía y la calidez genuina de su gente son tan cautivadoras como la asombrosa vida marina que aguarda bajo sus olas.",
-  "smDescP2": "Explorar esta región es descubrir una mezcla única de influencias que han dado forma a este paraíso costeño. Desde el encanto del centro histórico hasta la majestuosidad de las playas del Parque Tayrona, cada rincón cuenta una historia fascinante y te invita a la aventura.",
+  "smDescTitle": "Un viaje al corazón del Caribe colombiano",
+  "smDescP1": "Más allá de sus impresionantes arrecifes, Santa Marta es una ciudad vibrante con una riqueza histórica que se entrelaza con relatos de piratas y la cultura Tayrona. Su música, gastronomía y la calidez de su gente son tan cautivadoras como la asombrosa vida marina que aguarda bajo sus olas.",
+  "smDescP2": "Explorar esta región es descubrir una mezcla única de influencias que han dado forma a este paraíso costeño. Desde el encanto del centro histórico hasta la majestuosidad del Parque Tayrona, cada rincón cuenta una historia y te invita a la aventura.",
 
   "smDetailLabel1": "Nivel de buceo recomendado",
   "smDetailValue1": "Todos los niveles (desde principiantes hasta buzos avanzados)",
@@ -41,16 +41,16 @@
   "smDetailValue5": "La visibilidad y las condiciones pueden variar estacionalmente. Recomendamos consultar el pronóstico local.",
 
   "smDiveSite1Name": "Barco Hundido",
-  "smDiveSite1Desc": "Un antiguo barco mercante que yace apaciblemente entre los 21 m / 70 ft y 30 m / 100 ft de profundidad. Este fascinante pecio ofrece una experiencia única y cautivadora para buzos avanzados, siendo el hogar de una impresionante variedad de vida marina que lo ha convertido en su arrecife artificial.",
+  "smDiveSite1Desc": "Un antiguo barco mercante que yace entre los 21 m y 30 m de profundidad. Este pecio ofrece una experiencia única para buzos avanzados, siendo el hogar de una impresionante variedad de vida marina que lo ha convertido en su arrecife artificial.",
 
   "smDiveSite2Name": "Natalia",
-  "smDiveSite2Desc": "Un misterioso yate hundido a unos 30 m / 100 ft en la pintoresca zona de El Rodadero. Su intrigante historia y la vibrante vida marina que lo habita lo convierten en un sitio de buceo exigente y extraordinariamente cautivador, ideal para aquellos buzos experimentados que buscan un reto y una exploración profunda.",
+  "smDiveSite2Desc": "Un misterioso yate hundido a unos 30 m en la zona de El Rodadero. Su intrigante historia y la vibrante vida marina que lo habita lo convierten en un sitio de buceo cautivador, ideal para buzos experimentados que buscan una exploración profunda.",
 
   "smDiveSite3Name": "La Piedra del Medio",
-  "smDiveSite3Desc": "Parte de un impresionante sistema rocoso cercano a la costa, este sitio es un verdadero hervidero de rica biodiversidad. Es un lugar predilecto para encuentros cercanos con majestuosas tortugas marinas y una multitud de peces tropicales coloridos, siendo apto para diversos niveles de experiencia y ofreciendo siempre algo nuevo por descubrir.",
+  "smDiveSite3Desc": "Parte de un impresionante sistema rocoso, este sitio es un verdadero hervidero de rica biodiversidad. Es un lugar predilecto para encuentros cercanos con majestuosas tortugas marinas y peces tropicales, ofreciendo siempre algo nuevo por descubrir.",
 
   "smDiveSite4Name": "Isla Aguja",
-  "smDiveSite4Desc": "Un clásico indiscutible del buceo en Santa Marta, ideal para todos. Ofrece múltiples puntos de inmersión versátiles, aptos tanto para sesiones de entrenamiento y cursos como para emocionantes inmersiones de exploración profunda. Aquí encontrarás formaciones coralinas espectaculares y una vida marina abundante y diversa que te dejará sin aliento.",
+  "smDiveSite4Desc": "Un clásico indiscutible del buceo en Santa Marta, ideal para todos. Ofrece múltiples puntos de inmersión versátiles, aptos tanto para cursos como para emocionantes aventuras de exploración profunda. Aquí encontrarás formaciones coralinas espectaculares y vida marina abundante.",
 
   "smUniqueFind1": "La increíble biodiversidad marina de la región, que incluye coloridos arrecifes, vibrantes corales y una asombrosa variedad de especies marinas que te esperan bajo el agua.",
   "smUniqueFind2": "Las formaciones rocosas y coralinas únicas que adornan sus fondos marinos, creando paisajes submarinos que parecen de otro planeta y son perfectos para la fotografía.",
@@ -60,5 +60,104 @@
   "smGal1Alt": "",
   "smGal2Alt": "",
   "smGal3Alt": "",
-  "smGal4Alt": ""
+  "smGal4Alt": "",
+
+  "provName": "Providencia",
+
+  "provSeoTitle": "Buceo en Providencia | Descubre el mar de los siete colores con JustDiveCol",
+  "provSeoDesc": "Sumérgete en las aguas cristalinas de Providencia, el tesoro escondido del Caribe. Explora arrecifes vírgenes, una vida marina excepcional y una cultura auténtica. ¡Tu aventura de buceo te espera con JustDiveCol!",
+  "provSeoKeywords": "buceo providencia, mar de siete colores, barrera coralina providencia, arrecifes vírgenes caribe, buceo caribe colombiano, justdivecol providencia, reserva de la biosfera seaflower, vida marina providencia, cultura raizal, pecios providencia, buceo principiantes providencia, buceo avanzado providencia, santuario natural providencia",
+
+  "provHeaderTitle": "Providencia: donde el mar de siete colores te llama a bucear",
+  "provHeaderSubtitle": "Descubre el tesoro escondido del Caribe, sus arrecifes prístinos y una cultura auténtica. ¡Una experiencia submarina y cultural inigualable!",
+
+  "provDescTitle": "Sumérgete en la esencia de providencia: un santuario natural y cultural",
+  "provDescP1": "Más allá de sus espectaculares paisajes submarinos, Providencia y su hermana Santa Catalina son islas con una historia rica y compleja. Su herencia se manifiesta en su vibrante lengua creole, su música y una gastronomía que deleita el paladar, ofreciendo una experiencia tan cautivadora en tierra como la asombrosa vida marina que aguarda bajo sus aguas.",
+  "provDescP2": "Explorar Providencia es sumergirse en una forma de vida sostenible. Cada rincón, desde sus coloridas casas de madera hasta sus playas vírgenes, narra la historia de un pueblo que ha sabido preservar su identidad y su entorno, convirtiéndola en un destino inigualable para quienes buscan autenticidad y aventura con JustDiveCol.",
+
+  "provDetailLabel1": "Nivel de buceo recomendado",
+  "provDetailValue1": "Todos los niveles (desde principiantes hasta buzos expertos)",
+
+  "provDetailLabel2": "Temperatura del agua",
+  "provDetailValue2": "26-29 °C / 79-84 °F",
+
+  "provDetailLabel3": "Visibilidad promedio",
+  "provDetailValue3": "20-35 m / 65-115 ft",
+
+  "provDetailLabel4": "Mejor época para bucear",
+  "provDetailValue4": "Marzo a Mayo y Septiembre a Noviembre (condiciones óptimas)",
+
+  "provDetailLabel5": "Consideraciones adicionales",
+  "provDetailValue5": "Generalmente corrientes suaves a moderadas. La visibilidad puede variar ligeramente con las estaciones.",
+
+  "provUniqueFind1": "El corazón de la tercera barrera coralina más grande del mundo, un ecosistema marino excepcionalmente conservado y rebosante de vida. Es un verdadero santuario submarino.",
+  "provUniqueFind2": "La inmersión en una auténtica cultura anglo-caribeña, con su singular idioma creole, música vibrante y arquitectura tradicional, ofreciendo una conexión profunda con el alma de la isla.",
+  "provUniqueFind3": "Aguas famosas por su increíble gama de tonalidades de azul y verde, un espectáculo visual inolvidable conocido mundialmente como el 'mar de los siete colores'.",
+  "provUniqueFind4": "Un ambiente sereno, tranquilo y una profunda conexión con la naturaleza, lejos de las multitudes. Es el destino ideal para la relajación total y la exploración consciente.",
+
+  "ifName": "Isla Fuerte",
+
+  "ifSeoTitle": "Buceo en Isla Fuerte | Edén submarino inexplorado con JustDiveCol",
+  "ifSeoDesc": "Descubre Isla Fuerte, un destino de buceo virgen y asombroso en el Caribe colombiano. Explora arrecifes prístinos, pecios fascinantes y fenómenos naturales únicos. Sumérgete en un paraíso de biodiversidad y tranquilidad.",
+  "ifSeoKeywords": "buceo isla fuerte, caribe colombiano inexplorado, edén submarino, arrecifes prístinos, volcán de lodo submarino, pecios isla fuerte, biodiversidad marina, justdivecol isla fuerte, buceo tranquilo, ceiba milenaria, avistamiento perezosos, manglares, túnel del tiempo",
+
+  "ifHeaderTitle": "Isla Fuerte: tu edén submarino inexplorado en el caribe",
+  "ifHeaderSubtitle": "Sumérgete en aguas cristalinas, descubre arrecifes vibrantes y fenómenos únicos en este paraíso de biodiversidad. ¡Una joya escondida te espera!",
+
+  "ifDescTitle": "Descubre la magia única de isla fuerte: bajo el mar y en tierra firme",
+  "ifDescP1": "Ubicada frente a las costas de Córdoba, Isla Fuerte es un verdadero tesoro escondido del Caribe colombiano. Esta encantadora isla ofrece una combinación inigualable de naturaleza exuberante y una atmósfera de paz absoluta. Sus paisajes terrestres, adornados con árboles centenarios, complementan a la perfección la magia que aguarda bajo sus aguas turquesas.",
+  "ifDescP2": "Explorar Isla Fuerte es sumergirse en un ritmo de vida pausado. Más allá del buceo, podrás disfrutar de caminatas ecológicas, el avistamiento de aves y perezosos, y compartir con una comunidad local que ha sabido preservar su esencia. Cada visita se convierte en una experiencia auténtica y memorable con JustDiveCol.",
+
+  "ifDetailLabel1": "Nivel de buceo recomendado",
+  "ifDetailValue1": "Todos los niveles (desde principiantes hasta buzos certificados)",
+
+  "ifDetailLabel2": "Temperatura del agua",
+  "ifDetailValue2": "28 °C / 82 °F",
+
+  "ifDetailLabel3": "Visibilidad promedio",
+  "ifDetailValue3": "15-30 m / 50-100 ft",
+
+  "ifDetailLabel4": "Mejor época para bucear",
+  "ifDetailValue4": "Abril a Diciembre (condiciones generalmente óptimas)",
+
+  "ifDetailLabel5": "Consideraciones adicionales",
+  "ifDetailValue5": "Ideal para buceo relajado y la exploración de fenómenos naturales únicos. Las corrientes son usualmente suaves.",
+
+  "ifUniqueFind1": "La Ceiba Milenaria: un árbol monumental que se dice data del descubrimiento de América. Su tronco de dimensiones impresionantes y su aura mística lo convierten en un lugar digno de admirar.",
+  "ifUniqueFind2": "Avistamiento de Osos Perezosos: la isla alberga una población de adorables perezosos. Son visibles en los senderos, ofreciendo un encuentro cercano y tierno con la fauna terrestre.",
+  "ifUniqueFind3": "Manglares: ecosistemas vitales y hermosos que brindan refugio a diversas especies. Ofrecen túneles para explorar en kayak o paddleboard, sumergiéndote en un mundo de tranquilidad.",
+  "ifUniqueFind4": "El Túnel del Tiempo: una formación rocosa natural que se sumerge misteriosamente en el mar. Ideal para nadadores y snorkelers, este túnel está lleno de luz y vida.",
+
+  "malpName": "Malpelo",
+
+  "malpSeoTitle": "Buceo en Malpelo | Meca mundial de tiburones y megafauna con JustDiveCol",
+  "malpSeoDesc": "Sumérgete en Malpelo, un santuario de fauna reconocido por la UNESCO en el Pacífico colombiano. Experimenta el buceo extremo con masivas congregaciones de tiburones martillo, galápagos y otras especies pelágicas. Tu aventura oceánica definitiva te espera.",
+  "malpSeoKeywords": "buceo malpelo, tiburones martillo, vida pelágica, santuario unesco, pacífico colombiano, buceo extremo, tiburones galápagos, tiburón ballena, buceo liveaboard, corrientes oceánicas, justdivecol malpelo, isla malpelo, buceo técnico, megafauna marina",
+
+  "malpHeaderTitle": "Malpelo: donde los gigantes del pacífico te esperan",
+  "malpHeaderSubtitle": "Experimenta buceo extremo y encuentros épicos con tiburones en este santuario de vida salvaje, patrimonio de la humanidad UNESCO. ¡La adrenalina te llama!",
+
+  "malpDescTitle": "El epicentro mundial de la vida pelágica en el pacífico",
+  "malpDescP1": "Situada a unos 500 kilómetros de la costa colombiana, la Isla Malpelo es un monumento natural y santuario de fauna y flora, reconocido como patrimonio de la Humanidad por la UNESCO. Esta imponente roca oceánica es un punto de encuentro para algunas de las mayores congregaciones de vida pelágica del planeta, atrayendo a buzos de élite de todo el mundo en busca de encuentros épicos que solo JustDiveCol puede facilitar.",
+  "malpDescP2": "Malpelo es una experiencia de buceo extrema y profundamente gratificante. Su aislamiento y las poderosas corrientes oceánicas crean un ecosistema único que favorece una abundancia sin igual de especies. Es un lugar donde la naturaleza salvaje se muestra en su máxima expresión, ofreciendo un espectáculo submarino que desafía y asombra por igual a quienes tienen el privilegio de explorarlo. ¡Prepárate para lo inesperado!",
+
+  "malpDetailLabel1": "Nivel de buceo recomendado",
+  "malpDetailValue1": "Avanzado o Experto (imprescindible experiencia en buceo con corrientes, buceo profundo y condiciones oceánicas remotas)",
+
+  "malpDetailLabel2": "Temperatura del agua",
+  "malpDetailValue2": "18-26 °C / 64-79 °F (con termoclinas variables y marcadas)",
+
+  "malpDetailLabel3": "Visibilidad promedio",
+  "malpDetailValue3": "15-30 m / 50-100 ft (variable según la temporada y corrientes)",
+
+  "malpDetailLabel4": "Mejor época para avistamientos",
+  "malpDetailValue4": "Enero a Mayo: Masivas congregaciones de tiburones martillo y galápagos. Julio a Noviembre: Altas probabilidades de avistar tiburón ballena y rayas.",
+
+  "malpDetailLabel5": "Consideraciones adicionales",
+  "malpDetailValue5": "Solo expediciones de vida a bordo (Liveaboard). Fuertes corrientes y condiciones oceánicas desafiantes son la norma. Esta es una aventura de buceo extrema para los más audaces.",
+
+  "malpUniqueFind1": "Grandes agregaciones de tiburones: reconocido globalmente por las masivas concentraciones de tiburones martillo, galápagos y, ocasionalmente, tiburones seda y ballena. ¡Un espectáculo natural sin igual!",
+  "malpUniqueFind2": "Buceo en corrientes intensas: desafiantes inmersiones en corrientes oceánicas que revelan la magnitud y diversidad de la vida pelágica.",
+  "malpUniqueFind3": "El Cangrejo Endémico de Malpelo: la rara observación del cangrejo rojo, una especie terrestre única y endémica de la isla, un encuentro fascinante que a menudo pasa desapercibido.",
+  "malpUniqueFind4": "Santuario de fauna y flora (patrimonio UNESCO): una isla volcánica remota y rigurosamente protegida, reconocida por su excepcional biodiversidad marina y terrestre."
 }

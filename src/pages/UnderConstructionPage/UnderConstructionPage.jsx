@@ -17,14 +17,16 @@ import { NAMESPACES, ROUTES } from '@/data/global/constants';
 const UnderConstructionPage = () => {
   const { t } = useTranslation([NAMESPACES.UNDER_CONSTRUCTION_PAGE, NAMESPACES.COMMON]);
 
+  const { seo } = underConstructionData;
+
   return (
     <>
       <SEOComponent
-        title={t(underConstructionData.seo.titleKey)}
-        description={t(underConstructionData.seo.descriptionKey, {
-          ns: NAMESPACES.COMMON,
-        })}
-        url={ROUTES.underConstruction} // Add url for completeness
+        title={t(seo.titleKey)}
+        description={t(seo.descriptionKey)}
+        keywords={t(seo.keywords)}
+        imageUrl={seo.imageUrl}
+        url={seo.url}
       />
       {/* Main container that centers content and fills the screen height. */}
       {/* 'isolate' creates a new stacking context for the z-index to work correctly. */}

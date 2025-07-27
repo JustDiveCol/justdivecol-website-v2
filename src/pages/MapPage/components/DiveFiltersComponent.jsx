@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SearchIcon } from '../../../assets/icons/NavbarIcons';
-import { SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
+import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 const DiveFilters = ({
   t,
@@ -36,11 +36,11 @@ const DiveFilters = ({
                   onClick={() => setActiveDestination(dest.id)}
                   className={`cursor-pointer px-3 py-1 rounded-full text-xs border transition font-medium ${
                     activeDestination === dest.id
-                      ? 'text-brand-cta-yellow bg-brand-white border-brand-cta-yellow'
-                      : 'text-brand-white bg-brand-cta-yellow border-brand-white hover:bg-brand-neutral/10'
+                      ? 'bg-brand-cta-yellow text-brand-primary-dark border-brand-cta-white'
+                      : 'bg-transparent text-brand-white border-brand-white hover:bg-brand-white/20'
                   }`}
                 >
-                  {t(dest.translationKey, { ns: 'destinations' })}
+                  {t(dest.translationKey, { ns: NAMESPACES.DESTINATIONS })}
                 </button>
               ))}
             </div>
@@ -63,8 +63,8 @@ const DiveFilters = ({
                       onClick={() => setActiveType(type.id)}
                       className={`cursor-pointer px-3 py-1 rounded-full text-xs border transition font-medium ${
                         activeType === type.id
-                          ? 'text-brand-cta-green bg-brand-white border-brand-cta-green'
-                          : 'text-brand-white bg-brand-cta-green border-brand-white hover:bg-brand-neutral/10'
+                          ? 'bg-brand-cta-green text-brand-primary-dark border-brand-cta-white'
+                          : 'bg-transparent text-brand-white border-brand-white hover:bg-brand-white/20'
                       }`}
                     >
                       {t(type.translationKey)}
@@ -91,8 +91,8 @@ const DiveFilters = ({
                       onClick={() => setActiveDifficulty(diff.id)}
                       className={`cursor-pointer px-3 py-1 rounded-full text-xs border transition font-medium ${
                         activeDifficulty === diff.id
-                          ? 'text-brand-cta-orange bg-brand-white border-brand-cta-orange'
-                          : 'text-brand-white bg-brand-cta-orange border-brand-white hover:bg-brand-neutral/10'
+                          ? 'bg-brand-cta-orange text-brand-primary-dark border-brand-cta-white'
+                          : 'bg-transparent text-brand-white border-brand-white hover:bg-brand-white/20'
                       }`}
                     >
                       {t(diff.translationKey)}

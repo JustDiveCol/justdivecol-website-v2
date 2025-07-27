@@ -18,22 +18,24 @@ import { NAMESPACES } from '@/data/global/constants';
  * It dynamically displays sections and points from a dedicated data file.
  */
 const PolicyPage = () => {
-  const { t } = useTranslation([NAMESPACES.POLICY_PAGE, NAMESPACES.COMMON]); // Use the 'policies' namespace.
+  const { t } = useTranslation([NAMESPACES.POLICY_PAGE, NAMESPACES.COMMON]);
+
+  const { seo, header, sections } = policyData;
 
   return (
     <>
       <SEOComponent
-        title={t(policyData.seo.titleKey)}
-        description={t(policyData.seo.descriptionKey)}
-        keywords={t(policyData.seo.keywords)}
-        imageUrl={policyData.seo.imageUrl}
-        url={policyData.seo.url}
+        title={t(seo.titleKey)}
+        description={t(seo.descriptionKey)}
+        keywords={t(seo.keywords)}
+        imageUrl={seo.imageUrl}
+        url={seo.url}
       />
       <motion.div variants={staggerContainer} initial="hidden" animate="show" exit="hidden">
-        <HeaderComponent sectionData={policyData.header} translationNS={NAMESPACES.POLICY_PAGE} />
+        <HeaderComponent sectionData={header} translationNS={NAMESPACES.POLICY_PAGE} />
         <div className="container mx-auto py-16 px-4">
           {/* Solo un mapeo de sections aquí */}
-          {policyData.sections.map((section) => (
+          {sections.map((section) => (
             <RenderComponent
               key={section.id}
               renderData={section}

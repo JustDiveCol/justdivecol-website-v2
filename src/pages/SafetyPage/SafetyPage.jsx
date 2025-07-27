@@ -29,8 +29,9 @@ export const SafetyPage = () => {
       <SEOComponent
         title={t(seo.titleKey)}
         description={t(seo.descriptionKey)}
-        imageUrl={header.imageUrl}
-        url={ROUTES.safety}
+        keywords={t(seo.keywords)}
+        imageUrl={seo.imageUrl}
+        url={seo.url}
       />
 
       <HeaderComponent sectionData={header} translationNS={NAMESPACES.SAFETY_PAGE} />

@@ -1,0 +1,87 @@
+{
+  "offeredCertificationsTitle": "Available Certifications",
+  "experiencesOtherTripsTitle": "Other Diving Experiences",
+
+  "experiencesDetailsTitle": "Details of Your Adventure",
+  "experiencesPaymentTitle": "Your Payment Plan",
+  "experiencesItineraryTitle": "Itinerary of Your Adventure",
+  "experiencesIncludedTitle": "What Your Investment Includes",
+  "experiencesNotIncludedTitle": "What Your Investment Does Not Include",
+  "experiencesGalleryTitle": "Unforgettable Moments of Your Underwater Experience",
+
+  "experinceCtaTextButton": "Book Now",
+
+  "experiencesDefaultNote": "",
+
+  "experiencesDefaultPaymentNote": "If your reservation is made after a payment deadline, the amount due will include the previous installments. Please contact us for the exact calculation.",
+  "experiencesDefaultItineraryNote1": "We recommend scheduling your return flight for after noon on the last day, ensuring the appropriate post-diving safety margin (minimum 18-24 hours without flying).",
+  "experiencesDefaultItineraryNote2": "For adventures with minors, it is essential to present a notarized authorization from the legal guardian or both parents, according to current regulations, to ensure the protection of young explorers.",
+
+  "expSmTitle": "PADI Open Water Diver Certification: Tayrona",
+  "expSmSubtitle": "",
+
+  "expSmSeoTitle": "PADI Open Water Certification in Tayrona | Diving Adventure with JustDiveCol",
+  "expSmSeoDesc": "Get your PADI Open Water dive license in Tayrona with JustDiveCol. Learn the fundamentals in the waters of the Colombian Caribbean and start your exciting underwater experience with confidence. Your adventure awaits you!",
+  "expSmKeywords": "diving tayrona, dive certification, padi course, open water diver, underwater experience, colombian caribbean diving, justdivecol, beginner diving, diving classes",
+
+  "expSmHeaderTitle": "Your Underwater Adventure Starts Here: Get Certified in Tayrona!",
+  "expSmHeaderSubtitle": "Get your PADI Open Water certification in the magical waters of Tayrona. An unforgettable experience that will open the doors to the fascinating 70% of the planet.",
+
+  "expSmDescTitle": "Where a New Explorer of the Blue World Is Born",
+  "expSmDescP1": "Imagine your first breath underwater, in the vibrant and crystal-clear waters of the Colombian Caribbean. This adventure has been designed for you to dive in with complete confidence. We will guide you step by step through the region's protected bays, a true underwater paradise waiting to be discovered by you. The experience of a lifetime awaits you!",
+  "expSmDescP2": "More than just a course, this trip is the beginning of a deep passion for diving, one that will drive you to explore 70% of the planet with a new perspective. Prepare to transform your perception of the world, discovering a universe teeming with life, color, and mystery. With JustDiveCol's safety and guidance, each dive will be a step toward becoming a responsible and passionate explorer.",
+
+  "expSmDetailsDesc": "",
+  "expSmDetailLabel1": "Dives Included",
+  "expSmDetailValue1": "5 in Confined Water + 4 in Open Water",
+  "expSmDetailLabel2": "Minimum Level Required",
+  "expSmDetailValue2": "None (You just need a desire to explore!)",
+  "expSmDetailLabel3": "Minimum Age",
+  "expSmDetailValue3": "10 years old (special conditions apply)",
+
+  "expSmItineraryDay1Title": "Arrival and Fundamentals in Confined Water",
+  "expSmItineraryDay1Desc": "Arrive in Santa Marta, your gateway to the Caribbean. After lunch, we start your adventure with the first skills session in a controlled environment. Here you will become comfortable with the dive gear and the basic principles of breathing underwater with confidence.",
+  "expSmItineraryDay2Title": "To the Sea! Your First Dives",
+  "expSmItineraryDay2Desc": "We will prepare for your first two dives in the spectacular waters of Tayrona and its reefs. Discover the majestic marine life in its natural habitat. You'll have the afternoon free to relax and process your new experiences.",
+  "expSmItineraryDay3Title": "Completing Your Certification and Celebration",
+  "expSmItineraryDay3Desc": "We will perform the last two dives needed to complete your certification. In the evening, we will celebrate your extraordinary achievement with a festive and memorable graduation ceremony.",
+  "expSmItineraryDay4Title": "Farewell to a New Underwater Explorer",
+  "expSmItineraryDay4Desc": "Enjoy a final breakfast as a proud PADI certified diver. Remember the incredible moments you experienced and take with you a lifelong passion for the ocean and a world of future adventures.",
+
+  "expSmIncludeItem1": "Accommodation for 3 nights and 4 days in a selected hotel (double/triple comfort rooms).",
+  "expSmIncludeItem2": "Full meal plan: delicious dinners (3), breakfasts (3), and daily snacks.",
+  "expSmIncludeItem3": "All necessary transfers: airport-hotel-airport and to all dive/course activities.",
+  "expSmIncludeItem4": "Professional photographic coverage of your dives and key moments, so you can treasure the memories.",
+
+  "expSmNotIncludeItem1": "Domestic or international airfare to and from Santa Marta.",
+  "expSmNotIncludeItem2": "Alcoholic beverages, unspecified drinks, and additional meals.",
+  "expSmNotIncludeItem3": "Tips for guides, instructors, and support staff.",
+  "expSmNotIncludeItem4": "Other personal expenses not explicitly mentioned.",
+
+  "expSmSep25PaymentPlanStep1Name": "50% (deadline: August 15, 2025)",
+  "expSmSep25PaymentPlanStep1Desc": "Secure your spot and receive the PADI study materials.",
+
+  "expSmSep25PlanStep2Name": "25% (deadline: September 5, 2025)",
+  "expSmSep25PaymentPlanStep2Desc": "Cover the next payment.",
+
+  "expSmSep25PlanStep3Name": "25% (deadline: September 19, 2025)",
+  "expSmSep25PaymentPlanStep3Desc": "Settle the remaining balance to complete your booking. Adventure ready!",
+
+  "expSmOct25PaymentPlanStep1Name": "50% (deadline: September 12, 2025)",
+  "expSmOct25PaymentPlanStep1Desc": "Secure your spot and receive the PADI study materials.",
+
+  "expSmOct25PlanStep2Name": "25% (deadline: October 3, 2025)",
+  "expSmOct25PaymentPlanStep2Desc": "Cover the next payment.",
+
+  "expSmOct25PlanStep3Name": "25% (deadline: October 17, 2025)",
+  "expSmOct25PaymentPlanStep3Desc": "Settle the remaining balance to complete your booking. Adventure ready!",
+
+  "expSmNov25PaymentPlanStep1Name": "50% (deadline: October 10, 2025)",
+  "expSmNov25PaymentPlanStep1Desc": "Secure your spot and receive the PADI study materials.",
+
+  "expSmNov25PlanStep2Name": "25% (deadline: October 31, 2025)",
+  "expSmNov25PlanStep2Desc": "Cover the next payment.",
+
+  "expSmNov25PlanStep3Name": "25% (deadline: November 14, 2025)",
+  "expSmNov25PlanStep3Desc": "Settle the remaining balance to complete your booking. Adventure ready!"
+}

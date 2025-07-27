@@ -7,16 +7,16 @@ import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 
 export const privacyData = {
   seo: {
-    titleKey: 'ppSeoTitle',
-    descriptionKey: 'ppSeoDesc',
-    keywords: 'ppSeoKeywords',
+    titleKey: 'privacySeoTitle',
+    descriptionKey: 'privacySeoDesc',
+    keywords: 'privacySeoKeywords',
     imageUrl: headerBackground,
     url: ROUTES.privacy,
   },
   header: {
     backgroundImage: headerBackground,
-    titleKey: 'ppHeaderTitle',
-    subtitleKey: 'ppHeaderSubtitle',
+    titleKey: 'privacyHeaderTitle',
+    subtitleKey: 'privacyHeaderSubtitle',
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
@@ -27,106 +27,106 @@ export const privacyData = {
   sections: [
     {
       id: 'information-we-collect',
-      titleKey: 'ppSection1Title',
+      titleKey: 'privacySection1Title',
       points: [
         {
-          pointKey: 'ppSection1Point1',
+          pointKey: 'privacySection1Point1',
         },
         {
-          pointKey: 'ppSection1Point2',
+          pointKey: 'privacySection1Point2',
         },
         {
-          pointKey: 'ppSection1Point3',
+          pointKey: 'privacySection1Point3',
         },
       ],
     },
     {
       id: 'how-we-use-your-information',
-      titleKey: 'ppSection2Title',
+      titleKey: 'privacySection2Title',
       points: [
         {
-          pointKey: 'ppSection2Point1',
+          pointKey: 'privacySection2Point1',
         },
         {
-          pointKey: 'ppSection2Point2',
+          pointKey: 'privacySection2Point2',
         },
         {
-          pointKey: 'ppSection2Point3',
+          pointKey: 'privacySection2Point3',
         },
         {
-          pointKey: 'ppSection2Point4',
+          pointKey: 'privacySection2Point4',
         },
       ],
     },
     {
       id: 'how-we-share-your-information',
-      titleKey: 'ppSection3Title',
+      titleKey: 'privacySection3Title',
       points: [
         {
-          pointKey: 'ppSection3Point1',
+          pointKey: 'privacySection3Point1',
         },
         {
-          pointKey: 'ppSection3Point2',
+          pointKey: 'privacySection3Point2',
         },
         {
-          pointKey: 'ppSection3Point3',
+          pointKey: 'privacySection3Point3',
         },
       ],
     },
     {
       id: 'your-rights-and-choices',
-      titleKey: 'ppSection4Title',
+      titleKey: 'privacySection4Title',
       points: [
         {
-          pointKey: 'ppSection4Point1',
+          pointKey: 'privacySection4Point1',
         },
         {
-          pointKey: 'ppSection4Point2',
+          pointKey: 'privacySection4Point2',
         },
         {
-          pointKey: 'ppSection4Point3',
+          pointKey: 'privacySection4Point3',
         },
       ],
     },
     {
       id: 'data-security',
-      titleKey: 'ppSection5Title',
+      titleKey: 'privacySection5Title',
       points: [
         {
-          pointKey: 'ppSection5Point1',
+          pointKey: 'privacySection5Point1',
         },
         {
-          pointKey: 'ppSection5Point2',
+          pointKey: 'privacySection5Point2',
         },
       ],
     },
     {
       id: 'data-retention',
-      titleKey: 'ppSection6Title',
+      titleKey: 'privacySection6Title',
       points: [
         {
-          pointKey: 'ppSection6Point1',
+          pointKey: 'privacySection6Point1',
         },
       ],
     },
     {
       id: 'changes-to-this-privacy-policy',
-      titleKey: 'ppSection7Title',
+      titleKey: 'privacySection7Title',
       points: [
         {
-          pointKey: 'ppSection7Point1',
+          pointKey: 'privacySection7Point1',
         },
         {
-          pointKey: 'ppSection7Point2',
+          pointKey: 'privacySection7Point2',
         },
       ],
     },
     {
       id: 'contact',
-      titleKey: 'ppSection8Title',
+      titleKey: 'privacySection8Title',
       points: [
         {
-          pointKey: 'ppSection8Point1',
+          pointKey: 'privacySection8Point1',
         },
       ],
     },

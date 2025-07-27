@@ -1,16 +1,16 @@
 {
   "home": "Home",
-  "experiences": "Experiences",
+  "experiences": "Diving Adventures",
+  "divesites": "Dive Sites",
+  "store": "Store",
   "about": "About Us",
   "safety": "Safety",
   "contact": "Contact",
 
-  "store": "Store",
-  "divesites": "Dive Spots",
   "policy": "Our Policies",
   "terms": "Terms and Conditions",
   "privacy": "Privacy Policy",
-  "faq": "FAQs",
+  "faqs": "FAQs",
 
-  "footerLinksTitle": "Explore & Learn"
+  "footerLinksTitle": "Explore and Connect"
 }

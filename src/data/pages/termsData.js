@@ -5,18 +5,18 @@ import headerBackground from '../../assets/images/page-specific/terms/header-bac
 import { LOGO_MAIN } from '../global/assets';
 import { ROUTES, SHARED_TRANSLATION_KEYS } from '../global/constants';
 
-export const terms = {
+export const termsData = {
   seo: {
-    titleKey: 'tcaSeoTitle',
-    descriptionKey: 'tcaSeoDesc',
-    keywords: 'tcaSeoKeywords',
+    titleKey: 'termsSeoTitle',
+    descriptionKey: 'termsSeoDesc',
+    keywords: 'termsSeoKeywords',
     imageUrl: headerBackground,
     url: ROUTES.terms,
   },
   header: {
     backgroundImage: headerBackground,
-    titleKey: 'tcaHeaderTitle',
-    subtitleKey: 'tcaHeaderSubtitle',
+    titleKey: 'termsHeaderTitle',
+    subtitleKey: 'termsHeaderSubtitle',
     mainLogo: LOGO_MAIN.mainLogo,
     mainLogoAltKey: LOGO_MAIN.altKey,
     photoCredit: {
@@ -27,88 +27,88 @@ export const terms = {
   sections: [
     {
       id: 'acceptance-terms',
-      titleKey: 'tcaSection1Title',
+      titleKey: 'termsSection1Title',
       points: [
         {
-          pointKey: 'tcaSection1Point1',
+          pointKey: 'termsSection1Point1',
         },
         {
-          pointKey: 'tcaSection1Point2',
+          pointKey: 'termsSection1Point2',
         },
       ],
     },
     {
       id: 'service-usage',
-      titleKey: 'tcaSection2Title',
+      titleKey: 'termsSection2Title',
       points: [
         {
-          pointKey: 'tcaSection2Point1',
+          pointKey: 'termsSection2Point1',
         },
         {
-          pointKey: 'tcaSection2Point2',
+          pointKey: 'termsSection2Point2',
         },
         {
-          pointKey: 'tcaSection2Point3',
+          pointKey: 'termsSection2Point3',
         },
       ],
     },
     {
       id: 'intellectual-property',
-      titleKey: 'tcaSection3Title',
+      titleKey: 'termsSection3Title',
       points: [
         {
-          pointKey: 'tcaSection3Point1',
+          pointKey: 'termsSection3Point1',
         },
         {
-          pointKey: 'tcaSection3Point2',
+          pointKey: 'termsSection3Point2',
         },
       ],
     },
     {
       id: 'limitation-of-liability',
-      titleKey: 'tcaSection4Title',
+      titleKey: 'termsSection4Title',
       points: [
         {
-          pointKey: 'tcaSection4Point1',
+          pointKey: 'termsSection4Point1',
         },
         {
-          pointKey: 'tcaSection4Point2',
+          pointKey: 'termsSection4Point2',
         },
         {
-          pointKey: 'tcaSection4Point3',
+          pointKey: 'termsSection4Point3',
         },
       ],
     },
     {
       id: 'third-party-links',
-      titleKey: 'tcaSection5Title',
+      titleKey: 'termsSection5Title',
       points: [
         {
-          pointKey: 'tcaSection5Point1',
+          pointKey: 'termsSection5Point1',
         },
         {
-          pointKey: 'tcaSection5Point2',
+          pointKey: 'termsSection5Point2',
         },
       ],
     },
     {
       id: 'governing-law-and-jurisdiction',
-      titleKey: 'tcaSection6Title',
+      titleKey: 'termsSection6Title',
       points: [
         {
-          pointKey: 'tcaSection6Point1',
+          pointKey: 'termsSection6Point1',
         },
         {
-          pointKey: 'tcaSection6Point2',
+          pointKey: 'termsSection6Point2',
         },
       ],
     },
     {
       id: 'severability',
-      titleKey: 'tcaSection7Title',
+      titleKey: 'termsSection7Title',
       points: [
         {
-          pointKey: 'tcaSection7Point1',
+          pointKey: 'termsSection7Point1',
         },
       ],
     },

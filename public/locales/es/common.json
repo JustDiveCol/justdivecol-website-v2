@@ -1,10 +1,10 @@
 {
   "viewCalendar": "Ver calendario de inmersiones",
   "photoCreditPrefix": "Créditos de la foto: ",
-  "experiencesTextButton": "Explorar experiencias",
+  "experiencesTextButton": "Explorar aventuras",
   "divesitesTextButton": "Ver puntos de buceo",
   "aboutUsTextButton": "Conocer JustDiveCol",
-  "safetyTextButton": "Compromiso de seguridad",
+  "safetyTextButton": "Nuestro compromiso de seguridad",
   "contactTextButton": "Hablemos por WhatsApp",
   "storeTextButton": "Ir a la tienda",
   "viewDetails": "Ver detalles",
@@ -16,12 +16,12 @@
   "ariaGoToPage": "Ir a la página",
   "ariaNext": "Siguiente elemento",
   "moreLabel": "Más",
-  "durationFormat": "{{days}} Días / {{nights}} Noches",
+  "durationFormat": "{{days}} días / {{nights}} noches",
   "datesNotAvailable": "Fechas no disponibles",
 
-  "statusUpcoming": "¡Próximamente fechas!",
+  "statusUpcoming": "Próximamente fechas",
   "statusAvailable": "Cupos disponibles",
-  "statusLastSeats": "¡Últimos cupos disponibles!",
+  "statusLastSeats": "¡Últimos cupos!",
   "statusSoldOut": "¡Completamente reservado!",
   "statusCompleted": "Finalizado"
 }

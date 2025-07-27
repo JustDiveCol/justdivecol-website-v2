@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { navLinks } from '../../../data/global/navbarData';
 import LanguageSwitcherComponent from '../../ui/LanguageSwitcherComponent';
@@ -11,12 +11,11 @@ import { MenuIcon, CloseIcon, ChevronDownIcon } from '../../../assets/icons/Navb
 import { NAMESPACES, SHARED_TRANSLATION_KEYS } from '@/data/global/constants';
 
 const Navbar = () => {
-  const { t } = useTranslation(NAMESPACES.NAVBAR);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Para el menú móvil
-  const [isScrolled, setIsScrolled] = useState(false);
+  const { t, i18n } = useTranslation(NAMESPACES.NAVBAR);
   const location = useLocation();
 
-  // --- Lógica para el menú "Priority+" en escritorio ---
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [visibleLinks, setVisibleLinks] = useState(navLinks);
   const [hiddenLinks, setHiddenLinks] = useState([]);
   const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
@@ -27,60 +26,71 @@ const Navbar = () => {
   const moreRef = useRef(null);
   const linkRefs = useRef({});
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (!navContainerRef.current || window.innerWidth < 768) {
-        setVisibleLinks(navLinks);
-        setHiddenLinks([]);
-        return;
-      }
+  const GAP = 24;
+  const MORE_BUTTON_WIDTH = 80;
+
+  const calculateVisibleLinks = () => {
+    if (!navContainerRef.current || window.innerWidth < 768) {
+      setVisibleLinks(navLinks);
+      setHiddenLinks([]);
+      return;
+    }
+
+    requestAnimationFrame(() => {
       const containerWidth = navContainerRef.current.offsetWidth;
       const logoWidth = logoRef.current?.offsetWidth || 0;
       const langWidth = langRef.current?.offsetWidth || 0;
-      const moreButtonWidth = 80;
-      const gap = 24;
-      const availableSpace = containerWidth - logoWidth - langWidth - gap * 2;
+      const availableSpace =
+        containerWidth - logoWidth - langWidth - MORE_BUTTON_WIDTH - GAP * (navLinks.length + 3);
+
       let currentWidth = 0;
       const newVisible = [];
       const newHidden = [];
+
       navLinks.forEach((link) => {
-        const linkWidth = linkRefs.current[link.nameKey]?.offsetWidth || 0;
-        if (currentWidth + linkWidth + gap < availableSpace) {
+        const ref = linkRefs.current[link.nameKey];
+        const linkWidth = ref?.offsetWidth || 0;
+
+        if (currentWidth + linkWidth + GAP < availableSpace) {
           newVisible.push(link);
-          currentWidth += linkWidth + gap;
+          currentWidth += linkWidth + GAP;
         } else {
           newHidden.push(link);
         }
       });
-      if (newHidden.length > 0) {
-        let spaceForMore = availableSpace - moreButtonWidth;
-        let widthWithMore = 0;
-        const finalVisible = [];
-        newVisible.forEach((link) => {
-          const linkWidth = linkRefs.current[link.nameKey]?.offsetWidth || 0;
-          if (widthWithMore + linkWidth + gap < spaceForMore) {
-            finalVisible.push(link);
-            widthWithMore += linkWidth + gap;
-          } else {
-            newHidden.unshift(link);
-          }
-        });
-        setVisibleLinks(finalVisible);
-      } else {
+
+      if (
+        JSON.stringify(newVisible) !== JSON.stringify(visibleLinks) ||
+        JSON.stringify(newHidden) !== JSON.stringify(hiddenLinks)
+      ) {
         setVisibleLinks(newVisible);
+        setHiddenLinks(newHidden);
       }
-      setHiddenLinks(newHidden);
-    };
-    const observer = new ResizeObserver(handleResize);
-    if (navContainerRef.current) {
-      observer.observe(navContainerRef.current);
-    }
-    const timeoutId = setTimeout(handleResize, 100);
+    });
+  };
+
+  useEffect(() => {
+    const observer = new ResizeObserver(calculateVisibleLinks);
+    const resizeHandler = () => calculateVisibleLinks();
+
+    if (navContainerRef.current) observer.observe(navContainerRef.current);
+    window.addEventListener('resize', resizeHandler);
+
+    const timeout = setTimeout(calculateVisibleLinks, 100);
+
     return () => {
       observer.disconnect();
-      clearTimeout(timeoutId);
+      window.removeEventListener('resize', resizeHandler);
+      clearTimeout(timeout);
     };
   }, []);
+
+  useEffect(() => {
+    const delayedResize = setTimeout(() => {
+      calculateVisibleLinks();
+    }, 0);
+    return () => clearTimeout(delayedResize);
+  }, [i18n.language, location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -88,22 +98,14 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Cierra los menús al cambiar de ruta
   useEffect(() => {
     setIsMenuOpen(false);
     setIsMoreMenuOpen(false);
   }, [location]);
 
   const isLinkActive = (path) => {
-    // Caso especial para "Home"
-    if (path === '/') {
-      return location.pathname === '/';
-    }
-    // Caso especial para "Store": activo si la ruta empieza con /store
-    if (path === '/store/home') {
-      return location.pathname.startsWith('/store');
-    }
-    // Para todos los demás, usa la lógica normal
+    if (path === '/') return location.pathname === '/';
+    if (path === '/store/home') return location.pathname.startsWith('/store');
     return location.pathname.startsWith(path);
   };
 
@@ -126,12 +128,11 @@ const Navbar = () => {
           <img src={logo} alt="JustDiveCol Logo" className="h-12 w-auto" />
         </NavLink>
 
-        {/* --- Menú de Escritorio (Priority+) --- */}
+        {/* Escritorio */}
         <div
           ref={navContainerRef}
           className="hidden md:flex flex-grow justify-end space-x-6 items-center"
         >
-          {/* Renderiza los enlaces visibles */}
           {visibleLinks.map((link) => {
             const isActive = isLinkActive(link.path);
             return (
@@ -155,7 +156,6 @@ const Navbar = () => {
             );
           })}
 
-          {/* Renderiza el menú "Más" si hay enlaces ocultos */}
           {hiddenLinks.length > 0 && (
             <div className="relative" ref={moreRef}>
               <button
@@ -179,7 +179,7 @@ const Navbar = () => {
                   >
                     <div className="py-1">
                       {hiddenLinks.map((link) => {
-                        const isActive = isLinkActive(link.path); // <-- Lógica aplicada aquí
+                        const isActive = isLinkActive(link.path);
                         return (
                           <NavLink
                             key={link.nameKey}
@@ -206,7 +206,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Botón del Menú Móvil */}
+        {/* Móvil */}
         <div className="md:hidden flex items-center">
           <LanguageSwitcherComponent />
           <button
@@ -219,7 +219,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Panel del Menú Móvil */}
+      {/* Panel móvil */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div

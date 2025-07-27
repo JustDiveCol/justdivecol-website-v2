@@ -13,19 +13,21 @@ import { NAMESPACES } from '@/data/global/constants';
 const PrivacyPolicyPage = () => {
   const { t } = useTranslation([NAMESPACES.PRIVACY_PAGE, NAMESPACES.COMMON]);
 
+  const { seo, header, sections } = privacyData;
+
   return (
     <>
       <SEOComponent
-        title={t(privacyData.seo.titleKey)}
-        description={t(privacyData.seo.descriptionKey)}
-        keywords={t(privacyData.seo.keywords)}
-        imageUrl={privacyData.seo.imageUrl}
-        url={privacyData.seo.url}
+        title={t(seo.titleKey)}
+        description={t(seo.descriptionKey)}
+        keywords={t(seo.keywords)}
+        imageUrl={seo.imageUrl}
+        url={seo.url}
       />
       <motion.div variants={staggerContainer} initial="hidden" animate="show" exit="hidden">
-        <HeaderComponent sectionData={privacyData.header} translationNS={NAMESPACES.PRIVACY_PAGE} />
+        <HeaderComponent sectionData={header} translationNS={NAMESPACES.PRIVACY_PAGE} />
         <div className="container mx-auto py-16 px-4">
-          {privacyData.sections.map((section) => (
+          {sections.map((section) => (
             <RenderComponent
               key={section.id}
               renderData={section}

@@ -1,9 +1,7 @@
 {
   "paymentTitle": "Métodos de pago flexibles",
-
   "paymentMethod1Name": "Link de pago seguro",
-  "paymentMethod1Desc": "Para tu comodidad, te enviaremos un link de pago personalizado. Paga fácilmente con tarjeta de crédito nacional (Visa, Mastercard), débito (PSE), o directamente desde Bancolombia o Nequi. Un proceso sencillo y protegido.",
-
+  "paymentMethod1Desc": "Para tu comodidad, te enviaremos un link de pago personalizado. Paga fácilmente con tarjeta de crédito (Visa, Mastercard), débito (PSE), o directamente desde Bancolombia o Nequi. Es un proceso sencillo y totalmente protegido.",
   "paymentMethod2Name": "Transferencia bancaria directa",
-  "paymentMethod2Desc": "Si prefieres, transfiere directamente a nuestra cuenta de ahorros en Bold. Te daremos los datos bancarios al confirmar tu reserva. ¡Simple y directo para asegurar tu aventura!"
+  "paymentMethod2Desc": "Si prefieres, puedes hacer una transferencia directa a nuestra cuenta de ahorros Bold. Te proporcionaremos los datos bancarios al confirmar tu reserva. Simple y directo para asegurar tu aventura."
 }
