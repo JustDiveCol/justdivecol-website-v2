@@ -1,0 +1,163 @@
+{
+  "destinationsTextOverlay": "Dive Destination",
+  "destinationsExtremeTextOverlay": "Extreme Dive Destination",
+
+  "destinationsDetailsTitle": "Destination Details",
+  "destinationsDiveSitesTitle": "Dive Sites",
+  "destinationsMapTitle": "Dive Site Map",
+  "destinationsGalleryTitle": "Destination Gallery",
+  "destinationsUniqueFindsTitle": "Unique Discoveries",
+  "destinationsAvailableTrip": "Adventures Available at This Destination",
+  "destinationsNotAvailableTrip": "No Adventures Available at This Destination",
+  "destinationCtaTextButton": "Let's Talk About This Destination!",
+
+  "smName": "Santa Marta",
+  "smDescription": "Where the majestic Sierra Nevada meets the mystery of the Caribbean, Santa Marta is an ideal destination for learning to dive, expanding your skills, and exploring the underwater world with JustDiveCol.",
+
+  "smSeoTitle": "Diving in Santa Marta | Explore the Vibrant Colombian Caribbean with JustDiveCol",
+  "smSeoDesc": "Dive into the rich, warm waters of Santa Marta with JustDiveCol. Discover vibrant marine life, stunning reefs, and unique dive sites in the Colombian Caribbean. Your next underwater adventure awaits!",
+  "smSeoKeywords": "diving Santa Marta, dive Colombian Caribbean, Santa Marta coral reefs, Santa Marta dive sites, Santa Marta marine life, JustDiveCol Santa Marta, Tayrona Park diving, Santa Marta dive courses, beginner diving Santa Marta, advanced diving Santa Marta, Santa Marta wrecks, underwater tourism Santa Marta, Taganga diving",
+
+  "smHeaderTitle": "Santa Marta: Where the Majestic Sierra and the Blue Caribbean Meet",
+  "smHeaderSubtitle": "Dive into the vibrant history and reefs teeming with life in the Colombian Caribbean. A destination that captivates both in and out of the water.",
+
+  "smDescTitle": "A Journey to the Heart of the Colombian Caribbean",
+  "smDescP1": "Beyond its impressive reefs, Santa Marta is a vibrant city with a rich history intertwined with tales of pirates and the Tayrona culture. Its music, gastronomy, and the warmth of its people are as captivating as the astonishing marine life waiting beneath its waves.",
+  "smDescP2": "Exploring this region is discovering a unique blend of influences that have shaped this coastal paradise. From the charm of the historic center to the majesty of Tayrona Park, every corner tells a story and invites you to adventure.",
+
+  "smDetailLabel1": "Recommended Dive Level",
+  "smDetailValue1": "All Levels (from beginners to advanced divers)",
+
+  "smDetailLabel2": "Water Temperature",
+  "smDetailValue2": "24-28 °C / 75-82 °F",
+
+  "smDetailLabel3": "Average Visibility",
+  "smDetailValue3": "10-20 m / 35-65 ft",
+
+  "smDetailLabel4": "Best Time to Dive",
+  "smDetailValue4": "April to December (with optimal conditions)",
+
+  "smDetailLabel5": "Additional Considerations",
+  "smDetailValue5": "Visibility and conditions can vary seasonally. We recommend checking the local forecast.",
+
+  "smDiveSite1Name": "Sunken Ship",
+  "smDiveSite1Desc": "An old merchant ship that lies between 21m and 30m deep. This wreck offers a unique experience for advanced divers, being home to an impressive variety of marine life that has turned it into an artificial reef.",
+
+  "smDiveSite2Name": "Natalia",
+  "smDiveSite2Desc": "A mysterious yacht sunk about 30m deep in the El Rodadero area. Its intriguing history and the vibrant marine life that inhabits it make it a captivating dive site, ideal for experienced divers seeking a deep exploration.",
+
+  "smDiveSite3Name": "La Piedra del Medio",
+  "smDiveSite3Desc": "Part of an impressive rocky system, this site is a true hotbed of rich biodiversity. It's a favorite spot for close encounters with majestic sea turtles and colorful tropical fish, always offering something new to discover.",
+
+  "smDiveSite4Name": "Isla Aguja",
+  "smDiveSite4Desc": "An undisputed classic for diving in Santa Marta, ideal for everyone. It offers multiple versatile dive sites, suitable for both courses and exciting adventures of deep exploration. Here you will find spectacular coral formations and abundant marine life.",
+
+  "smUniqueFind1": "The incredible marine biodiversity of the region, including colorful reefs, vibrant corals, and an astonishing variety of marine species waiting for you underwater.",
+  "smUniqueFind2": "The unique rock and coral formations that adorn its seabeds, creating underwater landscapes that look like they're from another planet and are perfect for photography.",
+  "smUniqueFind3": "The vibrant cultural and nightlife of Santa Marta and nearby Taganga, ideal for complementing your diving days with local flavor, music, and Caribbean gastronomy.",
+  "smUniqueFind4": "The opportunity to get or advance your PADI diving certification in a spectacular and safe environment, accompanied by expert instructors who are passionate about the ocean.",
+
+  "smGal1Alt": "",
+  "smGal2Alt": "",
+  "smGal3Alt": "",
+  "smGal4Alt": "",
+
+  "provName": "Providencia",
+
+  "provSeoTitle": "Diving in Providencia | Discover the Sea of Seven Colors with JustDiveCol",
+  "provSeoDesc": "Dive into the crystal-clear waters of Providencia, the Caribbean's hidden treasure. Explore pristine reefs, exceptional marine life, and an authentic culture. Your diving adventure awaits with JustDiveCol!",
+  "provSeoKeywords": "diving providencia, sea of seven colors, providencia coral reef, pristine caribbean reefs, colombian caribbean diving, justdivecol providencia, seaflower biosphere reserve, providencia marine life, raizal culture, providencia wrecks, beginner diving providencia, advanced diving providencia, natural sanctuary providencia",
+
+  "provHeaderTitle": "Providencia: Where the Sea of Seven Colors Calls You to Dive",
+  "provHeaderSubtitle": "Discover the Caribbean's hidden treasure, its pristine reefs, and an authentic culture. An unparalleled underwater and cultural experience!",
+
+  "provDescTitle": "Dive into the Essence of Providencia: A Natural and Cultural Sanctuary",
+  "provDescP1": "Beyond its spectacular underwater landscapes, Providencia and its sister island Santa Catalina are rich and complex in history. This heritage is manifested in its vibrant Creole language, its music, and a gastronomy that delights the palate, offering an experience as captivating on land as the astonishing marine life that awaits beneath its waters.",
+  "provDescP2": "Exploring Providencia is immersing yourself in a sustainable way of life. Every corner, from its colorful wooden houses to its pristine beaches, tells the story of a people who have preserved their identity and environment, making it an unrivaled destination for those seeking authenticity and adventure with JustDiveCol.",
+
+  "provDetailLabel1": "Recommended Dive Level",
+  "provDetailValue1": "All Levels (from beginners to expert divers)",
+
+  "provDetailLabel2": "Water Temperature",
+  "provDetailValue2": "26-29 °C / 79-84 °F",
+
+  "provDetailLabel3": "Average Visibility",
+  "provDetailValue3": "20-35 m / 65-115 ft",
+
+  "provDetailLabel4": "Best Time to Dive",
+  "provDetailValue4": "March to May and September to November (optimal conditions)",
+
+  "provDetailLabel5": "Additional Considerations",
+  "provDetailValue5": "Generally mild to moderate currents. Visibility may vary slightly with the seasons.",
+
+  "provUniqueFind1": "The heart of the world's third-largest barrier reef, an exceptionally preserved marine ecosystem teeming with life. It is a true underwater sanctuary.",
+  "provUniqueFind2": "Immersion in an authentic Anglo-Caribbean culture, with its unique Creole language, vibrant music, and traditional architecture, offering a deep connection to the island's soul.",
+  "provUniqueFind3": "Waters famous for their incredible range of blue and green hues, an unforgettable visual spectacle known worldwide as the 'sea of seven colors'.",
+  "provUniqueFind4": "A serene, tranquil environment and a deep connection to nature, far from the crowds. It is the ideal destination for total relaxation and mindful exploration.",
+
+  "ifName": "Isla Fuerte",
+
+  "ifSeoTitle": "Diving in Isla Fuerte | An Unexplored Underwater Eden with JustDiveCol",
+  "ifSeoDesc": "Discover Isla Fuerte, a pristine and astonishing dive destination in the Colombian Caribbean. Explore pristine reefs, fascinating wrecks, and unique natural phenomena. Dive into a paradise of biodiversity and tranquility.",
+  "ifSeoKeywords": "diving Isla Fuerte, unexplored Colombian Caribbean, underwater eden, pristine reefs, underwater mud volcano, Isla Fuerte wrecks, marine biodiversity, JustDiveCol Isla Fuerte, tranquil diving, ceiba milenaria, sloth spotting, mangroves, Túnel del Tiempo",
+
+  "ifHeaderTitle": "Isla Fuerte: Your Unexplored Underwater Eden in the Caribbean",
+  "ifHeaderSubtitle": "Dive into crystal-clear waters, discover vibrant reefs, and unique phenomena in this paradise of biodiversity. A hidden gem awaits you!",
+
+  "ifDescTitle": "Discover the Unique Magic of Isla Fuerte: Under the Sea and on Land",
+  "ifDescP1": "Located off the picturesque coasts of Córdoba, Isla Fuerte is a true hidden treasure of the Colombian Caribbean. This charming island offers an unrivaled combination of lush nature and an atmosphere of absolute peace. Its terrestrial landscapes, adorned with centenary trees, perfectly complement the magic that awaits beneath its turquoise waters.",
+  "ifDescP2": "Exploring Isla Fuerte is immersing yourself in a leisurely pace of life. Beyond diving, you can enjoy enriching ecological walks, bird and sloth spotting, and share with a local community that has preserved its essence. Each visit becomes an authentic and memorable experience with JustDiveCol.",
+
+  "ifDetailLabel1": "Recommended Dive Level",
+  "ifDetailValue1": "All Levels (from beginners to certified divers)",
+
+  "ifDetailLabel2": "Water Temperature",
+  "ifDetailValue2": "28 °C / 82 °F",
+
+  "ifDetailLabel3": "Average Visibility",
+  "ifDetailValue3": "15-30 m / 50-100 ft",
+
+  "ifDetailLabel4": "Best Time to Dive",
+  "ifDetailValue4": "April to December (generally optimal conditions)",
+
+  "ifDetailLabel5": "Additional Considerations",
+  "ifDetailValue5": "Ideal for relaxed diving and exploring unique natural phenomena. Currents are usually gentle.",
+
+  "ifUniqueFind1": "The Millenary Ceiba: a monumental tree that is said to date back to the discovery of America. Its impressively sized trunk and mystical aura make it a place worthy of admiration.",
+  "ifUniqueFind2": "Sloth Spotting: the island is home to a population of adorable sloths. They are visible on the trails, offering a close and tender encounter with the terrestrial fauna.",
+  "ifUniqueFind3": "Mangroves: vital and beautiful ecosystems that provide refuge for diverse species. They offer natural tunnels to explore by kayak or paddleboard, immersing you in a world of tranquility.",
+  "ifUniqueFind4": "The Tunnel of Time: a natural rock formation that mysteriously submerges into the sea. Ideal for swimmers and snorkelers, this tunnel is full of light and life.",
+
+  "malpName": "Malpelo",
+
+  "malpSeoTitle": "Diving in Malpelo | World Mecca for Sharks and Megafauna with JustDiveCol",
+  "malpSeoDesc": "Dive into Malpelo, a UNESCO-recognized wildlife sanctuary in the Colombian Pacific. Experience extreme diving with massive congregations of hammerhead sharks, Galápagos sharks, and other pelagic species. Your ultimate oceanic adventure awaits.",
+  "malpSeoKeywords": "diving Malpelo, hammerhead sharks, pelagic life, UNESCO sanctuary, Colombian Pacific, extreme diving, Galápagos sharks, whale shark, liveaboard diving, ocean currents, JustDiveCol Malpelo, Malpelo Island, technical diving, marine megafauna",
+
+  "malpHeaderTitle": "Malpelo: Where the Giants of the Pacific Await",
+  "malpHeaderSubtitle": "Experience extreme diving and epic encounters with sharks in this wildlife sanctuary, a UNESCO World Heritage site. Adrenaline is calling you!",
+
+  "malpDescTitle": "The World Epicenter for Pelagic Life in the Pacific",
+  "malpDescP1": "Located about 500 kilometers off the Colombian coast, Malpelo Island is a natural monument and wildlife sanctuary, recognized as a UNESCO World Heritage site. This imposing oceanic rock is a meeting point for some of the largest congregations of pelagic life on the planet, attracting elite divers from all over the world in search of epic encounters that only JustDiveCol can facilitate.",
+  "malpDescP2": "Malpelo is an extreme and deeply rewarding diving experience. Its isolation and powerful ocean currents create a unique ecosystem that supports an unparalleled abundance of species. It is a place where wild nature is displayed in its purest form, offering an underwater spectacle that challenges and astonishes those who have the privilege of exploring it. Prepare for the unexpected!",
+
+  "malpDetailLabel1": "Recommended Dive Level",
+  "malpDetailValue1": "Advanced or Expert (essential to have experience in diving with currents, deep diving, and remote oceanic conditions)",
+
+  "malpDetailLabel2": "Water Temperature",
+  "malpDetailValue2": "18-26 °C / 64-79 °F (with variable and marked thermoclines)",
+
+  "malpDetailLabel3": "Average Visibility",
+  "malpDetailValue3": "15-30 m / 50-100 ft (variable depending on season and currents)",
+
+  "malpDetailLabel4": "Best Time for Sightings",
+  "malpDetailValue4": "January to May: Massive congregations of hammerhead and Galápagos sharks. July to November: High probability of spotting whale sharks and rays.",
+
+  "malpDetailLabel5": "Additional Considerations",
+  "malpDetailValue5": "Liveaboard expeditions only. Strong currents and challenging ocean conditions are the norm. This is an extreme diving adventure for the boldest.",
+
+  "malpUniqueFind1": "Large Shark Aggregations: globally recognized for massive concentrations of hammerhead, Galápagos, and occasionally silky and whale sharks. A natural spectacle like no other!",
+  "malpUniqueFind2": "Intense Current Diving: challenging dives in ocean currents that reveal the magnitude and diversity of pelagic life.",
+  "malpUniqueFind3": "The Malpelo Endemic Crab: the rare sighting of the red crab, a unique terrestrial species endemic to the island, a fascinating encounter that often goes unnoticed.",
+  "malpUniqueFind4": "Wildlife Sanctuary (UNESCO Heritage): a remote and rigorously protected volcanic island, recognized by UNESCO for its exceptional marine and terrestrial biodiversity."
+}

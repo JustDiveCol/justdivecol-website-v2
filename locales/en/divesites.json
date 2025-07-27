@@ -1,0 +1,217 @@
+{
+  "destinationLabel": "Destination",
+  "typeLabel": "Type",
+  "noOptionsAvailable": "No options available",
+  "difficultyLabel": "Difficulty",
+  "showingSitesCountFull": "Showing {{filtered}} of {{total}} dive sites",
+  "noMatchingSites": "No sites were found that match the filters.",
+  "depthLabel": "Maximum Depth",
+  "levelRequiredLabel": "Required Level",
+  "conditionsLabel": "Conditions",
+  "tagsLabel": "Tags",
+
+  "bajoDelPescadorSmName": "Bajo del Pescador - Tayrona National Park",
+  "bajoDelPescadorSmDescriptionP1": "An oasis for beginner and Open Water divers in Tayrona Park. This shallow reef stands out for its healthy hard corals, tropical fish, and the possible presence of turtles. With calm waters and excellent visibility, it's the ideal spot for a relaxed and safe boat-accessible dive.",
+
+  "barcazaProfundaSmName": "Barcaza Profunda",
+  "barcazaProfundaSmDescriptionP1": "In front of Morro Chico, the Barcaza Caribe is a technical dive for advanced divers. This wreck, sunk to 32-40 meters, has transformed into an artificial reef, covered in corals and marine life. Its depth and dynamic conditions make it a rewarding challenge for those seeking to explore a shipwreck with the proper certification.",
+
+  "barcoHundidoSmName": "Barco Hundido (El Naufragio del Rodadero)",
+  "barcoHundidoSmDescriptionP1": "In front of Morro de Santa Marta, an impressive 33-meter artificial wreck lies at a depth of 30 meters. Ideal for Advanced Open Water divers, the wreck is covered in oysters and corals, hosting a great diversity of fish. With the right training, you can explore its holds, making this dive a challenging and rewarding adventure.",
+
+  "cagaPajaroSmName": "Caga Pájaro - Tayrona National Park",
+  "cagaPajaroSmDescriptionP1": "In the heart of Tayrona Park, Caga Pájaro is a dynamic site for Open Water divers. With a maximum depth of 18 meters, it immerses you in a labyrinth of rock formations and cracks, home to reef fish, moray eels, and surprising macro life. The calm conditions and good visibility make it perfect for a comfortable and safe dive, ideal for underwater photography.",
+
+  "calderonSmName": "Calderon",
+  "calderonSmDescriptionP1": "An underwater jewel near Santa Marta, ideal for beginners and Open Water divers. This vibrant reef, with a maximum depth of 18 meters, stands out for its abundance of hard and soft corals, as well as fascinating macro life and nudibranchs. With gentle currents and good visibility, it offers a comfortable and safe diving experience, perfect for underwater photography.",
+
+  "calichanSmName": "Calichán - Tayrona National Park",
+  "calichanSmDescriptionP1": "Calichán is a versatile site in Tayrona Park that suits all levels. The shallow area (5-12 meters) is ideal for beginners, with a calm reef in tranquil waters. For advanced divers, the deep area descends to 40 meters, revealing a mesophotic reef with unique corals. Both sections stand out for their exceptional biodiversity and opportunities for underwater photography.",
+
+  "cantilGranateSmName": "El Cantíl de Granate - Tayrona National Park",
+  "cantilGranateSmDescriptionP1": "Be amazed by El Cantíl de Granate, a spectacular vertical coral wall in Tayrona Park that descends from 2 to 30 meters. This wall is colonized by vibrant corals and is perfect for Open Water divers with good buoyancy. It features a picturesque passageway, huge brain corals, and the presence of lobsters and rays. It's a popular site for night dives, where magic and photographic opportunities are constant.",
+
+  "elCoroSmName": "El Coro - Tayrona National Park",
+  "elCoroSmDescriptionP1": "El Coro is a site for advanced divers in Tayrona National Park, famous for its strong ocean currents. Two rocky pinnacles rise from 40 meters deep, creating an epic underwater landscape. These formations host diverse marine life and, occasionally, reef sharks. It's a demanding and rewarding dive, ideal for those seeking adrenaline and an encounter with wildlife at its finest.",
+
+  "elMorroChicoSmName": "El Morro Chico",
+  "elMorroChicoSmDescriptionP1": "El Morro Chico is a dynamic reef in Santa Marta, ideal for Open Water divers. With depths of 5 to 30 meters, this site offers an exciting drift dive through soft coral plains and rocky slopes. The currents and surge make it a medium-difficulty dive, but the rich marine life makes it worthwhile.",
+
+  "elRemansoSmName": "El Remanso - Tayrona National Park",
+  "elRemansoSmDescriptionP1": "El Remanso is a tranquil refuge in Tayrona National Park, ideal for beginners and discovery dives. With depths of 5 to 12 meters, its protected waters have no currents or swell, creating a safe environment. This shallow coastal reef is perfect for observing typical Caribbean fauna, and its serene conditions make it exceptional for night dives.",
+
+  "elTorinSmName": "El Torín - Tayrona National Park",
+  "elTorinSmDescriptionP1": "El Torín is a pristine and protected reef in Tayrona National Park, ideal for Open Water divers. At an average depth of 18 meters, it stands out for its exceptional water clarity and healthy corals. The calm conditions make it perfect for appreciating the biodiversity and fascinating shapes of its corals. It is an experience of pure tranquility and beauty in the Colombian Caribbean.",
+
+  "incaIncaSmName": "Inca Inca",
+  "incaIncaSmDescriptionP1": "Inca Inca is a shallow and calm reef in Santa Marta, ideal for beginners and snorkelers. With depths of 4 to 12 meters, its calm and clear waters are like a natural pool. It's perfect for discovery dives and courses, allowing you to enjoy branching corals and a large number of reef fish.",
+
+  "laAntenaSmName": "La Antena",
+  "laAntenaSmDescriptionP1": "La Antena is an accessible site near Taganga, ideal for Open Water divers. With a depth of 18 meters, its artificial structures and rocky reefs have transformed into a vibrant home for marine life, including nudibranchs and macro life. The gentle currents allow for a relaxed exploration, perfect for underwater photography.",
+
+  "laPeceraSmName": "La Pecera - Tayrona National Park",
+  "laPeceraSmDescriptionP1": "La Pecera is a true 'natural aquarium' in Tayrona National Park, ideal for divers of all levels. Located in the Ensenada de Granate, this vibrant reef stands out for its impressive corals. With depths of 6 to 18 meters, its calm waters and excellent visibility allow you to see a great diversity of tropical fish and, with luck, hawksbill turtles.",
+
+  "laPiedraDelChivoSmName": "La Piedra del Chivo - Tayrona National Park",
+  "laPiedraDelChivoSmDescriptionP1": "La Piedra del Chivo is a rocky reef in Tayrona National Park, ideal for beginners and Open Water divers. At 15 meters deep, its serene environment and calm waters are perfect for macro photography. The site hosts a varied community of fish, nudibranchs, and small invertebrates.",
+
+  "laPiedraDelMedioSmName": "La Piedra del Medio - Tayrona National Park",
+  "laPiedraDelMedioSmDescriptionP1": "La Piedra del Medio is an iconic pinnacle in Tayrona National Park, ideal for Open Water and advanced divers. Descending to 25 meters, it is a magnet for biodiversity with a reef carpeted in corals. The moderate currents attract schools of barracuda and jacks, adding dynamism to the dive.",
+
+  "laTravesiaSmName": "La Travesía - Tayrona National Park",
+  "laTravesiaSmDescriptionP1": "La Travesía is a dynamic drift dive site in Tayrona National Park, ideal for Advanced Open Water divers. With depths of up to 25 meters, its walls and underwater canyons offer an action-packed landscape. The moderate to strong currents attract a large amount of pelagic life. It is a vibrant dive for those seeking adrenaline.",
+
+  "laVueltaNegraSmName": "La Vuelta Negra - Tayrona National Park",
+  "laVueltaNegraSmDescriptionP1": "La Vuelta Negra is a dynamic and mysterious site in Tayrona National Park, ideal for intermediate divers. At 25 meters deep, its topography of pinnacles and canyons creates a unique landscape. This 'biodiversity hotspot' offers reefs full of fish and schools that are appreciated in the light and shadow. The moderate currents add an exciting touch.",
+
+  "langostasSmName": "Langostas - Tayrona National Park",
+  "langostasSmDescriptionP1": "Langostas is a vibrant reef in Tayrona National Park, ideal for Open Water divers. With a depth of 20 meters, the site stands out for its rock formations and the amazing abundance of lobsters. It is a labyrinth of cracks and caves, a refuge for fish and fascinating macro life. It offers a comfortable and rewarding experience for underwater photography.",
+
+  "lasBarcazasSmName": "Las Barcazas (Punta Betín)",
+  "lasBarcazasSmDescriptionP1": "Las Barcazas at Punta Betín are a historical site where shipwrecks and biodiversity meet. Multiple sunken barges have transformed into artificial reefs. Open Water divers can explore two wrecks between 6 and 15 meters, while advanced divers can tackle a third barge at 35 meters. The coral-covered structures host reef fish and rays.",
+
+  "losCarrosSmName": "Los Carros - Tayrona National Park",
+  "losCarrosSmDescriptionP1": "This site is a calm dive on a rocky reef, ideal for beginner and Open Water divers. The underwater landscape is made up of formations that resemble a busy street, where marine life moves between cracks and sand patches. It is a perfect place for macro photography, as you can find nudibranchs and other small creatures.",
+
+  "sisiguacaSmName": "Sisiguaca",
+  "sisiguacaSmDescriptionP1": "Sisiguaca is a vibrant site in Tayrona National Park, ideal for Open Water divers. With a depth of 20 meters, it offers a labyrinth of rock formations and canyons. Its healthy, coral-covered reef serves as a refuge for schools of fish and moray eels. Moderate currents add excitement and attract pelagic species. It is a favorite spot for underwater photography.",
+
+  "morritoLargoSmName": "Morrito Largo - Tayrona National Park",
+  "morritoLargoSmDescriptionP1": "Morrito Largo is a rocky pinnacle in Tayrona National Park, an epic site for advanced and technical divers. Its wall descends to 40 meters and is famous for its strong currents, which feed impressive black corals and gorgonians. It is a challenging and unforgettable adventure, perfect for the boldest explorers and for deep underwater photography.",
+
+  "morroGairaSmName": "Morro de Gaira",
+  "morroGairaSmDescriptionP1": "El Morro de Gaira is a versatile site for Open Water divers. With a depth of up to 25 meters, this reef offers multiple routes and the south face is the best preserved. It hosts a lush coral community and an abundant life of fish. The dives can be out-and-back or a light drift, ideal for underwater photography.",
+
+  "morroSantaMartaSmName": "Morro de Santa Marta",
+  "morroSantaMartaSmDescriptionP1": "El Morro de Santa Marta is a challenging dive for advanced divers that offers deep walls up to 30 meters or more. Strong currents attract pelagic fauna like tuna and barracudas. The site combines a shallow reef terrace with a steep slope, where the adventure comes to life. It's a place with history and a lot of biodiversity.",
+
+  "oceanoSmName": "Océano - Tayrona National Park",
+  "oceanoSmDescriptionP1": "Océano is an advanced dive site in Tayrona National Park for those seeking adrenaline. With a depth of over 30 meters, its strong currents attract large schools and pelagic species, such as barracudas and sharks. The rocky topography serves as a refuge for larger fauna. It is a demanding dive with variable visibility, but the experience of being one with the force of the ocean is unforgettable.",
+
+  "panelesSmName": "Panelés (Dos Morritos) - Tayrona National Park",
+  "panelesSmDescriptionP1": "Panelés, or 'Dos Morritos,' is a challenging site for expert and technical divers in Tayrona National Park. Its rocky pinnacles are lashed by intense ocean currents, creating a very dense ecosystem. At a depth of up to 30 meters, this site is an epicenter of pelagic life. The dive is an extreme adventure that allows you to 'fly' between underwater formations.",
+
+  "paraisoSmName": "Paraíso - Tayrona National Park",
+  "paraisoSmDescriptionP1": "Paraíso is an underwater refuge in Tayrona National Park, ideal for divers of all levels. This calm and colorful reef, with a depth of up to 15 meters, offers calm waters and excellent visibility. Its hard and soft corals host a vibrant life of tropical fish and macro life. It is a 'biodiversity hotspot' and the perfect place for a relaxed and photogenic dive.",
+
+  "pasoDelAngelSmName": "Paso del Ángel - Tayrona National Park",
+  "pasoDelAngelSmDescriptionP1": "Paso del Ángel is a spectacular drift dive site in Tayrona National Park, ideal for intermediate and advanced divers. Famous for its biodiversity, its reef slope descends to 40 meters. The moderate to strong currents attract great marine life, including angelfish, moray eels, and lobsters. It is a favorite spot for macro photography and, in ideal conditions, the adventure can extend to La Travesía.",
+
+  "playacaSmName": "Playaca",
+  "playacaSmDescriptionP1": "Playaca is a calm site in Tayrona National Park, ideal for beginners and Open Water divers. With a maximum depth of 18 meters, its calm waters and excellent visibility make it perfect for a relaxed dive. The healthy reef, with hard and soft corals, hosts an abundant life of fish and macro organisms.",
+
+  "puntaAgujaSmName": "Punta Aguja - Tayrona National Park",
+  "puntaAgujaSmDescriptionP1": "Punta Aguja, the heart of diving in Tayrona National Park, is a rocky pinnacle for divers of all levels. With depths of up to 30 meters, its topography includes walls and canyons. It is a magnet for biodiversity, with lush reefs, schools of fish, and the possibility of spotting barracudas or turtles. The variable currents add dynamism to the dive in this 'biodiversity hotspot.'",
+
+  "puntaCabezaNegrosSmName": "Punta Cabeza de Negros - Tayrona National Park",
+  "puntaCabezaNegrosSmDescriptionP1": "Punta Cabeza de Negros is a vibrant dive site in Tayrona National Park, ideal for Open Water divers. Its rock formations and walls descend to 25 meters, creating a fascinating underwater relief. The reef, with hard and soft corals, is home to fish, moray eels, and lobsters. The moderate currents add a dynamic element, which enriches this 'biodiversity hotspot' and makes it an excellent place for underwater photography.",
+
+  "puntaGairaSmName": "Punta Gaira / Playa Blanca",
+  "puntaGairaSmDescriptionP1": "Punta Gaira, associated with Playa Blanca, is an ideal site for beginners and snorkelers. With a depth of up to 15 meters, it offers calm waters and minimal currents. Its healthy reef, with hard and soft corals, hosts a great diversity of reef fish and fascinating macro life. It is a safe and very pleasant place for a first dive or to enjoy a relaxed experience.",
+
+  "puntaGranateSmName": "Punta Granate - Tayrona National Park",
+  "puntaGranateSmDescriptionP1": "Punta Granate is a versatile site in Tayrona National Park, ideal for divers of all levels. It offers calm areas for beginners and deeper areas with moderate currents. At 20 meters deep, you'll find 'coral patches' full of life, from angelfish and lobsters to giant anemones. The open waters attract schools of jacks and mackerel, making this site a dynamic and surprising 'biodiversity hotspot.'",
+
+  "puntaVenadoSmName": "Punta Venado - Tayrona National Park",
+  "puntaVenadoSmDescriptionP1": "Punta Venado is an exceptional reef in Tayrona National Park, famous for its night diving. By day it is a shallow reef, but at night it transforms, revealing a multitude of crustaceans, mollusks, and nocturnal fish. With a shallow depth (up to 18 meters) and little current, it is a safe site for intermediate divers. It is the ideal place to photograph marine life in its most enigmatic phase.",
+
+  "salichanSmName": "Salichán - Tayrona National Park",
+  "salichanSmDescriptionP1": "Salichán is an advanced dive site in Tayrona National Park, where a reef slope descends to 35 meters. Ideal for Advanced Open Water divers, it is a 'biodiversity hotspot' with a healthy reef and deep corals. The moderate currents enrich the ecosystem and attract pelagic species like barracudas. It is a perfect place for underwater photography and a memorable adventure.",
+
+  "salideroSmName": "Salidero - Tayrona National Park",
+  "salideroSmDescriptionP1": "Salidero is a challenging drift dive site in Tayrona National Park, exclusive to advanced divers. Its current channel creates strong flows that attract barracudas and schools of fish. With a maximum depth of 14 meters, the site stands out for its impressive brain and elkhorn corals. It is an experience of pure adrenaline, where biodiversity and the force of nature combine.",
+
+  "elNataliaSmName": "Sunken Yacht “El Natalia”",
+  "elNataliaSmDescriptionP1": "The sunken yacht 'El Natalia' is a 'secret' wreck for advanced divers in Gaira Bay. Resting at 32 meters, this yacht has become an artificial reef, covered in sponges and macro life. Inside and around the hull, you'll find schools of grunt and croakers. It's a pristine site, perfect for underwater photography and an exclusive exploration.",
+
+  "noneLevelKey": "None",
+  "openWaterDiverLevelKey": "Open Water Diver",
+  "advancedOpenWaterDiverLevelKey": "Advanced Open Water Diver",
+  "technicalDiverLevelKey": "Technical Diver",
+  "anyLevelKey": "All Levels",
+
+  "easyDifficultyKey": "Easy",
+  "mediumDifficultyKey": "Medium",
+  "hardDifficultyKey": "Hard",
+  "expertDifficultyKey": "Expert",
+
+  "reefTypeKey": "Reef",
+  "wreckTypeKey": "Wreck",
+  "wallTypeKey": "Wall",
+  "pinnacleTypeKey": "Pinnacle",
+  "cavernTypeKey": "Cavern",
+  "caveTypeKey": "Cave",
+  "driftTypeKey": "Drift",
+  "muckTypeKey": "Muck",
+  "blueHoleTypeKey": "Blue Hole",
+  "cenoteTypeKey": "Cenote",
+  "freshwaterTypeKey": "Freshwater",
+  "artificialReefTypeKey": "Artificial Reef",
+
+  "currentConditionKey": "Current",
+  "mildCurrentConditionKey": "Mild Current",
+  "moderateCurrentConditionKey": "Moderate Current",
+  "strongCurrentConditionKey": "Strong Current",
+  "deepConditionKey": "Deep",
+  "visibilityConditionKey": "Visibility",
+  "variableVisibilityConditionKey": "Variable Visibility",
+  "goodVisibilityConditionKey": "Good Visibility",
+  "limitedVisibilityConditionKey": "Limited Visibility",
+  "thermoclineConditionKey": "Thermocline",
+  "surgeConditionKey": "Surge",
+  "surfaceConditionKey": "Surface",
+  "roughSurfaceConditionKey": "Rough Surface",
+  "calmSurfaceConditionKey": "Calm Surface",
+  "entryConditionKey": "Entry",
+  "boatEntryConditionKey": "Boat Entry",
+  "shoreEntryConditionKey": "Shore Entry",
+  "nightConditionKey": "Night",
+
+  "marineLifeTagCategory": "Marine Life",
+  "diveCharacteristicsTagCategory": "Dive Characteristics",
+  "featuresTagCategory": "Features",
+  "locationTagCategory": "Location",
+
+  "sharksTag": "sharks",
+  "turtlesTag": "turtles",
+  "mantaRaysTag": "manta rays",
+  "whaleSharksTag": "whale sharks",
+  "nudibranchsTag": "nudibranchs",
+  "macroLifeTag": "macro life",
+  "schoolingFishTag": "schooling fish",
+  "barracudaTag": "barracuda",
+  "octopusTag": "octopus",
+  "dolphinsTag": "dolphins",
+  "seahorsesTag": "seahorses",
+  "frogfishTag": "frogfish",
+  "reefFishTag": "reef fish",
+  "pelagicsTag": "pelagics",
+
+  "photographyTag": "photography",
+  "nightDiveTag": "night dive",
+  "driftDiveTag": "drift dive",
+  "deepDiveTag": "deep dive",
+  "technicalDiveTag": "technical dive",
+  "beginnerFriendlyTag": "beginner friendly",
+  "advancedOnlyTag": "advanced only",
+  "historicalTag": "historical",
+  "biodiversityHotspotTag": "biodiversity hotspot",
+  "conservationAreaTag": "conservation area",
+  "coldWaterTag": "cold water",
+  "warmWaterTag": "warm water",
+
+  "swimThroughsTag": "swim-throughs",
+  "canyonsTag": "canyons",
+  "cavesTag": "caves",
+  "overhangsTag": "overhangs",
+  "softCoralsTag": "soft corals",
+  "hardCoralsTag": "hard corals",
+  "anemonesTag": "anemones",
+
+  "caribbeanTag": "Caribbean",
+  "pacificTag": "Pacific",
+  "redSeaTag": "Red Sea",
+  "indianOceanTag": "Indian Ocean",
+  "tropicalTag": "tropical",
+  "temperateTag": "temperate"
+}

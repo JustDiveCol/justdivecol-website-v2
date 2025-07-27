@@ -2,70 +2,168 @@
       
             <url>
               <loc>https://www.justdivecol.com/</loc>
-              <lastmod>2025-07-22T02:05:03.516Z</lastmod>
+              <lastmod>2025-07-27T16:02:23.985Z</lastmod>
               <changefreq>monthly</changefreq>
               <priority>0.8</priority>
             </url>
           
             <url>
-              <loc>https://www.justdivecol.com/experiencias</loc>
-              <lastmod>2025-07-22T02:05:03.517Z</lastmod>
+              <loc>https://www.justdivecol.com/experiences</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
               <changefreq>monthly</changefreq>
               <priority>0.8</priority>
             </url>
           
             <url>
-              <loc>https://www.justdivecol.com/mapa</loc>
-              <lastmod>2025-07-22T02:05:03.517Z</lastmod>
+              <loc>https://www.justdivecol.com/certifications</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
               <changefreq>monthly</changefreq>
               <priority>0.8</priority>
             </url>
           
             <url>
-              <loc>https://www.justdivecol.com/nosotros</loc>
-              <lastmod>2025-07-22T02:05:03.517Z</lastmod>
+              <loc>https://www.justdivecol.com/divesites</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
               <changefreq>monthly</changefreq>
               <priority>0.8</priority>
             </url>
           
             <url>
-              <loc>https://www.justdivecol.com/seguridad</loc>
-              <lastmod>2025-07-22T02:05:03.517Z</lastmod>
+              <loc>https://www.justdivecol.com/about</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
               <changefreq>monthly</changefreq>
               <priority>0.8</priority>
             </url>
           
             <url>
-              <loc>https://www.justdivecol.com/contacto</loc>
-              <lastmod>2025-07-22T02:05:03.517Z</lastmod>
+              <loc>https://www.justdivecol.com/safety</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
               <changefreq>monthly</changefreq>
               <priority>0.8</priority>
             </url>
           
             <url>
-              <loc>https://www.justdivecol.com/destinos/santa-marta</loc>
-              <lastmod>2025-07-22T02:05:03.517Z</lastmod>
+              <loc>https://www.justdivecol.com/contact</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
               <changefreq>monthly</changefreq>
               <priority>0.8</priority>
             </url>
           
             <url>
-              <loc>https://www.justdivecol.com/experiencias/experiencia-santa-marta-sept-2025</loc>
-              <lastmod>2025-07-22T02:05:03.517Z</lastmod>
+              <loc>https://www.justdivecol.com/destinations</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
               <changefreq>monthly</changefreq>
               <priority>0.8</priority>
             </url>
           
             <url>
-              <loc>https://www.justdivecol.com/cursos/padi-open-water-diver</loc>
-              <lastmod>2025-07-22T02:05:03.517Z</lastmod>
+              <loc>https://www.justdivecol.com/map</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
               <changefreq>monthly</changefreq>
               <priority>0.8</priority>
             </url>
           
             <url>
-              <loc>https://www.justdivecol.com/politicas</loc>
-              <lastmod>2025-07-22T02:05:03.517Z</lastmod>
+              <loc>https://www.justdivecol.com/store</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/policy</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/terms</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/privacy</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/faq</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/underConstruction</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/404</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/destinations/santa-marta</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/destinations/providencia</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/destinations/malpelo</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/destinations/isla-fuerte</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/experiences/exp-santa-marta</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/certifications/padi-open-water-diver</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/certifications/padi-advanced-open-water-diver</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://www.justdivecol.com/certifications/padi-rescue-diver</loc>
+              <lastmod>2025-07-27T16:02:23.986Z</lastmod>
               <changefreq>monthly</changefreq>
               <priority>0.8</priority>
             </url>
