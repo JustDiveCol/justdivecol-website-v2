@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { privacyData } from '../../data/pages/privacyData';
 import { staggerContainer } from '../../hooks/animations';
 
-import SEOComponent from '../../components/ui/SEOComponent';
+import SEOComponent from '../../components/shared/SEOComponent';
 import HeaderComponent from '../../components/HeaderComponent';
 import RenderComponent from '../../components/common/Component/RenderComponent';
 import { NAMESPACES } from '@/data/global/constants';

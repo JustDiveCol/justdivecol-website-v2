@@ -1,4 +1,4 @@
-// src/pages/HomePage/components/Cards/SafetyCardComponent.jsx
+// src/pages/HomePage/components/Cards/FoundationsCardComponent.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
@@ -21,22 +21,22 @@ const iconMap = {
 };
 
 /**
- * Renders a card highlighting a single safety feature.
+ * Renders a card highlighting a single Foundations feature.
  *
  * @param {object} props - The component props.
- * @param {object} props.item - The data object for the safety point.
+ * @param {object} props.item - The data object for the Foundations point.
  * @param {string} props.item.id - The unique ID used as a key and for the icon map.
  * @param {string} props.item.titleKey - The translation key for the card's title.
  * @param {string} props.item.descriptionKey - The translation key for the card's description.
  * @param {string} props.translationNS - The i18next namespace for the translations.
  */
-const SafetyCardComponent = ({ item, translationNS }) => {
+const FoundationsCardComponent = ({ item, translationNS }) => {
   const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
 
   return (
     <motion.div
       variants={fadeInUp}
-      className="relative w-[30%] min-w-[150px] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg overflow-hidden shadow-2xl flex flex-col items-center justify-center p-6 bg-brand-primary-dark text-white"
+      className="relative w-[30%] min-w-[250px] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg overflow-hidden shadow-2xl flex flex-col items-center justify-center p-6 bg-brand-primary-dark text-white"
     >
       <div className="text-brand-cta-green mb-4">{iconMap[item.id]}</div>
       <h3 className="text-center text-xs sm:text-base md:text-xl lg:text-2xl font-bold uppercase tracking-wide">
@@ -49,4 +49,4 @@ const SafetyCardComponent = ({ item, translationNS }) => {
   );
 };
 
-export default SafetyCardComponent;
+export default FoundationsCardComponent;

@@ -1,4 +1,4 @@
-// src/pages/HomePage/components/Sections/SafetySection.jsx
+// src/pages/HomePage/components/Sections/FoundationsSection.jsx
 import React from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { homePageData } from '../../../../data/pages/homeData';
 import { staggerContainer, fadeInUp } from '../../../../hooks/animations';
 
-import SafetyCardComponent from '../Cards/SafetyCardComponent';
+import FoundationsCardComponent from '../Cards/FoundationsCardComponent';
 import ButtonComponent from '../../../../components/common/Button/ButtonComponent';
 import { NAMESPACES } from '@/data/global/constants';
 
@@ -14,7 +14,7 @@ import { NAMESPACES } from '@/data/global/constants';
  * Renders the "Safety" section for the homepage.
  * It displays a title, subtitle, a grid of safety points, and a call-to-action button.
  */
-const SafetySection = ({ translationNS }) => {
+const FoundationsSection = ({ translationNS }) => {
   const { t } = useTranslation([translationNS, NAMESPACES.COMMON]);
   const { safety: data } = homePageData;
 
@@ -41,10 +41,10 @@ const SafetySection = ({ translationNS }) => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
-          className="mt-8 flex flex-wrap justify-center gap-6"
+          className="mt-8 flex flex-wrap justify-center gap-4"
         >
           {data.points.map((item) => (
-            <SafetyCardComponent key={item.id} item={item} translationNS={translationNS} />
+            <FoundationsCardComponent key={item.id} item={item} translationNS={translationNS} />
           ))}
         </motion.div>
 
@@ -55,4 +55,4 @@ const SafetySection = ({ translationNS }) => {
   );
 };
 
-export default SafetySection;
+export default FoundationsSection;

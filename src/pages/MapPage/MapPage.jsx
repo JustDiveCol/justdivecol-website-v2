@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 
 import MapComponent from './components/MapComponent';
-import SEOComponent from '../../components/ui/SEOComponent';
+import SEOComponent from '../../components/shared/SEOComponent';
 import HeaderComponent from '../../components/HeaderComponent';
 
 import { mapData } from '../../data/pages/mapData';

@@ -1,5 +1,6 @@
 // src/pages/HomePage/HomePage.jsx
 import React from 'react';
+
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
@@ -8,10 +9,10 @@ import { experiencesData } from '@/data/pages/experiencesData';
 import { staggerContainer } from '@/hooks/animations.js';
 import { NAMESPACES } from '@/data/global/constants';
 
-import SEOComponent from '@/components/ui/SEOComponent.jsx';
+import SEOComponent from '@/components/shared/SEOComponent.jsx';
 import HeroSection from '@/pages/HomePage/components/Sections/HeroSection.jsx';
 import ExperiencesSection from '@/pages/HomePage/components/Sections/ExperiencesSection.jsx';
-import SafetySection from '@/pages/HomePage/components/Sections/SafetySection.jsx';
+import FoundationsSection from '@/pages/HomePage/components/Sections/FoundationsSection.jsx';
 import TestimonialsSection from '@/pages/HomePage/components/Sections/TestimonialsSection.jsx';
 import CtaComponent from '@/components/CtaComponent.jsx';
 
@@ -39,7 +40,7 @@ const HomePage = () => {
           subtitleKey={featuredExperiences.subtitleKey}
           categories={featuredExperiences.categories}
         />
-        <SafetySection translationNS={NAMESPACES.HOME_PAGE} />
+        <FoundationsSection translationNS={NAMESPACES.HOME_PAGE} />
 
         {testimonials?.items?.length > 0 && (
           <TestimonialsSection translationNS={NAMESPACES.HOME_PAGE} />

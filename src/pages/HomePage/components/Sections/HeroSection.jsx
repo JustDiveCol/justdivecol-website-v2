@@ -58,7 +58,7 @@ const HeroSection = ({ translationNS }) => {
       )}
 
       {/* Contenido principal: texto y botón */}
-      <div className="relative z-20 p-4">
+      <div className="container relative z-20 p-4 mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

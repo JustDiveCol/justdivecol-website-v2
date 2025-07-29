@@ -8,7 +8,7 @@ import { safetyPageData as data } from '../../data/pages/safetyData.js';
 import { staggerContainer } from '../../hooks/animations.js';
 
 // UI and Section Components
-import SEOComponent from '../../components/ui/SEOComponent.jsx';
+import SEOComponent from '../../components/shared/SEOComponent.jsx';
 import HeaderComponent from '../../components/HeaderComponent.jsx';
 import ProtocolsSection from './Sections/ProtocolsSection.jsx';
 import EquipmentSection from './Sections/EquipmentSection.jsx';

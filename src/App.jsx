@@ -8,7 +8,7 @@ import Navbar from './components/layout/Navbar/Navbar';
 import Footer from './components/layout/Footer/Footer';
 
 // UI Components
-import RouteScrollManagerComponent from './components/ui/RouteScrollManagerComponent';
+import RouteScrollManagerComponent from './components/layout/RouteScrollManagerComponent';
 import FloatingActionsComponent from './components/ui/FloatingActionsComponent';
 
 // Providers

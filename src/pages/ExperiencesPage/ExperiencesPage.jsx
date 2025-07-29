@@ -8,7 +8,7 @@ import { experiencesData } from '../../data/pages/experiencesData';
 import { staggerContainer } from '../../hooks/animations';
 
 // Components
-import SEOComponent from '../../components/ui/SEOComponent';
+import SEOComponent from '../../components/shared/SEOComponent';
 import ExperiencesSection from '../HomePage/components/Sections/ExperiencesSection';
 import CalendarExperiencesSection from './components/Sections/CalendarExperiencesSection';
 import DestinationsSection from '../ExperiencesPage/components/Sections/DestinationsSection';

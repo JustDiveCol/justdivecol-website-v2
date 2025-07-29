@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 // UI, Layout, and Animation
 import { staggerContainer } from '../../../hooks/animations';
-import SEOComponent from '../../../components/ui/SEOComponent';
+import SEOComponent from '../../../components/shared/SEOComponent';
 import ExperienceLayout from './Layout/ExperienceLayout';
 
 // Data fetching utility

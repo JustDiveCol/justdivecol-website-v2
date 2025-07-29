@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 // Data sources and assets
 import { underConstructionData } from '../../data/pages/underConstructionData';
-import SEOComponent from '../../components/ui/SEOComponent';
+import SEOComponent from '../../components/shared/SEOComponent';
 
 import ImageComponent from '../../components/common/Image/ImageComponent';
 import { NAMESPACES, ROUTES } from '@/data/global/constants';

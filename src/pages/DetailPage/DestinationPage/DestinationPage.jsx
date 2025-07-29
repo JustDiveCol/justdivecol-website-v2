@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 // UI, Layout, and Animation
-import SEOComponent from '../../../components/ui/SEOComponent';
+import SEOComponent from '../../../components/shared/SEOComponent';
 import DestinationLayout from './Layout/DestinationLayout';
 import { staggerContainer } from '../../../hooks/animations';
 

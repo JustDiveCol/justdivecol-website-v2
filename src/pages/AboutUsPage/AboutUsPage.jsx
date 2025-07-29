@@ -11,7 +11,7 @@ import { contactPageData } from '../../data/pages/contactData.js';
 import { staggerContainer } from '../../hooks/animations.js';
 
 // UI and Section Components
-import SEOComponent from '../../components/ui/SEOComponent.jsx';
+import SEOComponent from '../../components/shared/SEOComponent.jsx';
 import HeaderComponent from '../../components/HeaderComponent.jsx';
 import HistorySection from './components/Sections/HistorySection.jsx';
 import TeamSection from './components/Sections/TeamSection.jsx';

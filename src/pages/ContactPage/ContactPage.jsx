@@ -8,7 +8,7 @@ import { contactPageData as data } from '../../data/pages/contactData.js';
 import { staggerContainer, fadeInUp } from '../../hooks/animations.js';
 
 // UI and Section Components
-import SEOComponent from '../../components/ui/SEOComponent.jsx';
+import SEOComponent from '../../components/shared/SEOComponent.jsx';
 import HeaderComponent from '../../components/HeaderComponent.jsx';
 import ContactInfoSection from './components/Sections/ContactInfoSection.jsx';
 import WhatsAppCtaSection from './components/Sections/WhatsAppCtaSection.jsx';
@@ -49,6 +49,7 @@ const ContactPage = () => {
       <motion.section variants={fadeInUp} className="py-12 px-4">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-start">
           <ContactInfoSection contactInfoData={contactInfo} translationNS={NAMESPACES.CONTACT} />
+
           <WhatsAppCtaSection
             whatsAppActionData={whatsAppAction}
             whatsappUrl={whatsappUrl}

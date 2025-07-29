@@ -9,7 +9,7 @@ import { notFoundData } from '../../data/pages/notFoundData';
 
 import ImageComponent from '../../components/common/Image/ImageComponent';
 import { NAMESPACES, ROUTES } from '@/data/global/constants';
-import SEOComponent from '@/components/ui/SEOComponent';
+import SEOComponent from '@/components/shared/SEOComponent';
 
 /**
  * Renders the 404 "Not Found" error page.

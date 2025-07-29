@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 import CertificationLayout from './Layout/CertificationLayout';
-import SEOComponent from '../../../components/ui/SEOComponent';
+import SEOComponent from '../../../components/shared/SEOComponent';
 import { useCertifications } from '@/data/content/certifications/DataProvider';
 import { useExperiences } from '@/data/content/experiences/DataProvider';
 import { staggerContainer } from '../../../hooks/animations';

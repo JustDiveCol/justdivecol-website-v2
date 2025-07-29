@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { faqsData } from '../../data/pages/faqsData';
 import { staggerContainer } from '../../hooks/animations';
 
-import SEOComponent from '../../components/ui/SEOComponent';
+import SEOComponent from '../../components/shared/SEOComponent';
 import HeaderComponent from '../../components/HeaderComponent';
 import FaqsContentSection from '../../sections/FaqsContentSection';
 import { NAMESPACES } from '@/data/global/constants';
